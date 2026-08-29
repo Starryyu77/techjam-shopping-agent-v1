@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shopping Copilot — Live State Machine</title>
+<link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="dot"></span> Shopping Copilot</div>
+  <div class="sub">TechJam 2026 · PS4 · offline rules engine · 50k catalog</div>
+  <button id="resetBtn" class="reset">New session</button>
+</header>
+<main class="grid">
+  <section class="chat card">
+    <div class="card-title">Conversation</div>
+    <div id="messages" class="messages"></div>
+    <form id="composer" class="composer">
+      <input id="input" autocomplete="off" placeholder="e.g. I'm looking for running shoes, must be breathable" />
+      <button type="submit">Send</button>
+    </form>
+    <div class="samples">
+      <span>Try:</span>
+      <button data-s="I'm looking for running shoes, must be breathable">buying</button>
+      <button data-s="I'm looking for a jacket, but I'm still exploring">browsing</button>
+      <button data-s="Actually, ignore my earlier preference. I need waterproof.">override</button>
+      <button data-s="Not cotton, budget under 80 dollars">negate</button>
+    </div>
+  </section>
+
+  <section class="state card">
+    <div class="card-title">Internal dialogue state <span class="live">live</span></div>
+    <div class="strategy">
+      <div class="pill" id="pillIntent">intent —</div>
+      <div class="pill" id="pillStrategy">strategy —</div>
+      <div class="pill" id="pillTurn">turn 0/10</div>
+      <div class="pill" id="pillPool">candidates —</div>
+    </div>
+    <div class="slots">
+      <div class="slotgroup hard"><h4>Hard constraints</h4><div id="hard" class="chips"></div></div>
+      <div class="slotgroup soft"><h4>Soft preferences</h4><div id="soft" class="chips"></div></div>
+      <div class="slotgroup neg"><h4>Negative constraints</h4><div id="neg" class="chips"></div></div>
+      <div class="slotgroup cat"><h4>Category</h4><div id="cat" class="chips"></div></div>
+    </div>
+    <div class="card-title" style="margin-top:18px">Top recommendations</div>
+    <ol id="recs" class="recs"></ol>
+  </section>
+</main>
+<script src="/app.js"></script>
+</body>
+</html>
