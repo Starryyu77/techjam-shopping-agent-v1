@@ -1,0 +1,9 @@
+# Official scoring path: Python standard library ONLY (no third-party deps).
+# The rules-only agent that produces the reported scores needs nothing here.
+#
+# OPTIONAL development extras (NOT required for official scoring):
+#   torch>=2.2          # local cross-encoder reranker (experiment, default OFF)
+#   transformers>=4.40  # local cross-encoder reranker (experiment, default OFF)
+#
+# Install optional extras only for development experiments:
+#   pip install "torch>=2.2" "transformers>=4.40"
