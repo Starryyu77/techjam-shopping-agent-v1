@@ -24,6 +24,11 @@ python demo/build_dashboard.py                 # regenerate demo/static/dashboar
 python demo/server.py --port 8000              # http://127.0.0.1:8000  and  /dashboard
 ```
 
+## Links
+
+- **Public GitHub:** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Demo video (YouTube):** paste after upload (storyboard in `demo/VIDEO_SCRIPT.md`)
+
 ## Deliverables map
 
 | Path | What |

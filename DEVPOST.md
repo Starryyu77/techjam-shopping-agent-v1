@@ -65,3 +65,10 @@ loop with rule+LLM dual scoring, and an interactive state-visualization demo.
 ## Built with
 
 Python, SQLite FTS5. (Optional/dev: PyTorch, Transformers, llama.cpp, Qwen3-8B.)
+
+## Links
+
+- **Code (public GitHub):** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Demo video (YouTube):** <PASTE YOUTUBE URL AFTER UPLOAD — see demo/VIDEO_SCRIPT.md>
+- **Try it offline:** `python demo/server.py` then open http://127.0.0.1:8000 (chat + live state) and /dashboard (metrics)
+- **Reproduce the score:** `python evaluate_official.py --official-root <official-kit>` → TechnicalScore ≈ 0.867 on the public set
