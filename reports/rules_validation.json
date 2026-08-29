@@ -1,0 +1,407 @@
+{
+  "metrics": {
+    "turns": 30,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9333333333333333,
+    "dialogue_act_accuracy": 0.8333333333333334,
+    "clarity_accuracy": 0.8666666666666667,
+    "slot_precision": 0.782608695652174,
+    "slot_recall": 0.782608695652174,
+    "slot_f1": 0.782608695652174,
+    "rollout_state_exact": 0.5,
+    "no_mutation_preservation": 1.0,
+    "composite": 0.81231884057971
+  },
+  "badcases": [
+    {
+      "session_id": "rw_validation_009",
+      "turn": 2,
+      "user_message": "One more thing: the material should be sterling silver.",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "sterling silver",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "sterling silver",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "color",
+            "value": "silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_009",
+      "turn": 3,
+      "user_message": "For the point you asked about, I prefer multicolor.",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "sterling silver"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "multicolor",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "multicolor",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_010",
+      "turn": 4,
+      "user_message": "这批 recommendations 不合适，但 keep 我之前的条件。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "REJECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "clarity_level": "L3",
+        "confidence": 0.45,
+        "summary": "The rule parser could not determine a safe state update",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_010",
+      "turn": 5,
+      "user_message": "先 stop，不要再继续推荐了。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "STOP",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": "stopped",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "clarity_level": "L3",
+        "confidence": 0.45,
+        "summary": "The rule parser could not determine a safe state update",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_021",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，材质要不锈钢。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "stainless steel",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "stainless steel",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_022",
+      "turn": 2,
+      "user_message": "For the point you asked about, I prefer blue.",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "blue",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "blue",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_validation_027",
+      "turn": 4,
+      "user_message": "I changed my mind about material: not cotton; use stainless steel instead.",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gold"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "stainless steel",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "stainless steel",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    }
+  ],
+  "split": "validation",
+  "backend": "rules"
+}

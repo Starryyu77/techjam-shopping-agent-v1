@@ -1,0 +1,2993 @@
+{
+  "metrics": {
+    "turns": 90,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9,
+    "dialogue_act_accuracy": 0.8222222222222222,
+    "clarity_accuracy": 0.7111111111111111,
+    "slot_precision": 0.273972602739726,
+    "slot_recall": 0.2898550724637681,
+    "slot_f1": 0.2816901408450705,
+    "rollout_state_exact": 0.1,
+    "no_mutation_preservation": 0.8888888888888888,
+    "composite": 0.6159780907668232
+  },
+  "badcases": [
+    {
+      "session_id": "rw_dev_001",
+      "turn": 1,
+      "user_message": "我想买衣服，主要拿来送礼，这是硬要求。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User wants to buy clothes for a gift, which is a hard requirement.",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_001",
+      "turn": 2,
+      "user_message": "再补一个条件：材质要棉。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "Adding a material constraint of '棉'.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "棉",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_001",
+      "turn": 5,
+      "user_message": "重新开始：我要衣服，而且主要拿来送礼。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User wants to start over and is looking for clothes primarily for gifting.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_003",
+      "turn": 1,
+      "user_message": "我想买首饰，主要拿来送礼，这是硬要求。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Jewelry",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User wants to buy jewelry as a gift, which is a hard requirement.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "首饰",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "use_case",
+            "value": "送礼",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_003",
+      "turn": 2,
+      "user_message": "再补一个条件：材质要缎面。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "satin",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "添加材质要求为缎面",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "缎面",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_003",
+      "turn": 3,
+      "user_message": "刚才那个问题的话，希望它柔软。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "缎面"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "用户希望首饰柔软",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "柔软",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_003",
+      "turn": 4,
+      "user_message": "请排除上班的，其他条件照旧。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "柔软",
+            "缎面"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEGATE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "work",
+              "bucket": "negative",
+              "grounded": false
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEGATE",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "排除上班相关的选项",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "上班",
+            "operation": "remove",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_004",
+      "turn": 1,
+      "user_message": "I'm looking for clothing; it is mainly for gift. That's a firm requirement.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User is looking for clothing as a gift, with the requirement being firm.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "clothing",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_005",
+      "turn": 1,
+      "user_message": "我想找鞋; 主要用来 gift, that's a must.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User wants to find shoes primarily for a gift, which is a must.",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_005",
+      "turn": 4,
+      "user_message": "Please exclude 上班，其他条件保留。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEGATE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "work",
+              "bucket": "negative",
+              "grounded": false
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEGATE",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "Excluding '上班' from use_case",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "上班",
+            "operation": "remove",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_005",
+      "turn": 5,
+      "user_message": "我选 title 以“UIN Women's Walking Travel Shoes Slip On Canvas Casual”开头的那款。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B08T1Z77KP",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User selects a specific product by title.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "shoes",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "material",
+            "value": "rubber",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "other",
+            "value": "title: \"UIN Women's Walking Travel Shoes Slip On Canvas Casual\"",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": "\"UIN Women's Walking Travel Shoes Slip On Canvas Casual\"",
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 1,
+      "user_message": "我想买首饰，主要拿来送礼，这是硬要求。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Jewelry",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User wants to buy jewelry as a gift, which is a hard requirement.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "首饰",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "use_case",
+            "value": "送礼",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 2,
+      "user_message": "再补一个条件：材质要925 银。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "sterling silver",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "添加材质要求为925银",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "925银",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 3,
+      "user_message": "刚才那个问题的话，颜色想要银色。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "925银"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "silver",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "用户指定了颜色为银色。",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "银色",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 4,
+      "user_message": "刚才那批都不合适，但保留我已经说过的条件。",
+      "state_before": {
+        "category": "首饰",
+        "hard_constraints": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "银色"
+          ],
+          "material": [
+            "925银"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "REJECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Reset the shopping state while retaining previously mentioned conditions.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_007",
+      "turn": 1,
+      "user_message": "I'm looking for clothing; the material should be polyester. That's a firm requirement.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "User is looking for clothing with polyester material as a firm requirement.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_007",
+      "turn": 5,
+      "user_message": "Starting again: I need clothing, and the material should be polyester.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Starting a new shopping goal for clothing with polyester material.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_013",
+      "turn": 1,
+      "user_message": "我想随便看看衣服，具体细节还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "confidence": 0.9,
+        "summary": "User is exploring clothes without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_013",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，材质要聚酯纤维。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "材质要求为聚酯纤维",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "聚酯纤维",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_013",
+      "turn": 3,
+      "user_message": "关于颜色我没偏好，别把它当成筛选条件。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "聚酯纤维"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [
+            "color"
+          ],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "用户明确表示对颜色没有偏好，并要求不要将其作为筛选条件。",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "",
+            "operation": "no_preference",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_013",
+      "turn": 4,
+      "user_message": "刚才那批都不合适，但保留我已经说过的条件。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "聚酯纤维"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [
+          "color"
+        ],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "REJECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "Reset the shopping state while retaining previously mentioned conditions.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_014",
+      "turn": 1,
+      "user_message": "I'm browsing for shoes, but I haven't decided on the details yet.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User is starting a shopping goal for shoes but hasn't decided on specific details yet.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_014",
+      "turn": 2,
+      "user_message": "For the point you asked about, it needs to be lightweight.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User specifies the item needs to be lightweight.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "lightweight",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_014",
+      "turn": 5,
+      "user_message": "Starting again: I need shoes, and it needs to be lightweight.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Resetting the shopping session to start over with the requirement for lightweight shoes.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 1,
+      "user_message": "我先 browse 一下首饰，details 还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L4",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Jewelry",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User starts browsing jewelry without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 2,
+      "user_message": "For your question，主要用来 gift。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User specifies the use case as a gift.",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 5,
+      "user_message": "我选 title 以“Amazon Collection 18k Gold over Fine Silver Plated Bronze”开头的那款。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B06XSB5S1D",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User selects a specific item by title.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "jewelry",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "other",
+            "value": "Amazon Collection 18k Gold over Fine Silver Plated Bronze",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": "Amazon Collection 18k Gold over Fine Silver Plated Bronze",
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_016",
+      "turn": 1,
+      "user_message": "我想随便看看衣服，具体细节还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "confidence": 0.9,
+        "summary": "User is exploring clothes without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_016",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，材质要氨纶。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "spandex",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "Adding material constraint: 氨纶",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "氨纶",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_017",
+      "turn": 1,
+      "user_message": "I'm browsing for shoes, but I haven't decided on the details yet.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User is starting a shopping goal for shoes but hasn't decided on specific details yet.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_017",
+      "turn": 2,
+      "user_message": "For the point you asked about, it needs to be lightweight.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User specifies the item needs to be lightweight.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "lightweight",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_017",
+      "turn": 3,
+      "user_message": "I have no preference about style; don't use it as a filter.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "lightweight"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [
+            "style"
+          ],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User explicitly states no preference for style, removing it as a filter.",
+        "constraints": [
+          {
+            "attribute": "style",
+            "value": "",
+            "operation": "no_preference",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 1,
+      "user_message": "我想随便看看首饰，具体细节还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L4",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Jewelry",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "confidence": 0.9,
+        "summary": "User is exploring jewelry without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，主要拿来送礼。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User specifies the use case as '送礼' (gifting).",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "送礼",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 3,
+      "user_message": "再补一个条件：材质要925 银。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "sterling silver",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Adding a material constraint of 925 silver.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "925 silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 5,
+      "user_message": "我决定选标题以“FashionJunkie4Life Extra Long Sterling Silver 3.5mm”开头的那款。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "color": [
+            "silver"
+          ],
+          "material": [
+            "925 silver"
+          ],
+          "use_case": [
+            "送礼"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B078XPK8PF",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User selects a specific item by title.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "jewelry",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "送礼",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "material",
+            "value": "925 silver",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "color",
+            "value": "silver",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "brand",
+            "value": "FashionJunkie4Life",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "size",
+            "value": "3.5mm",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": "FashionJunkie4Life Extra Long Sterling Silver 3.5mm",
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_019",
+      "turn": 1,
+      "user_message": "I'm browsing for clothing, but I haven't decided on the details yet.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "confidence": 0.85,
+        "summary": "User is exploring clothing options without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_019",
+      "turn": 2,
+      "user_message": "For the point you asked about, the material should be polyester.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User specifies the material as polyester in response to a previous question.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 1,
+      "user_message": "我先 browse 一下鞋，details 还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User starts browsing shoes without specific details.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 2,
+      "user_message": "For your question，最好是 soft。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NOOP",
+        "clarity_level": "L4",
+        "confidence": 0.5,
+        "summary": "The user's message is unclear and does not provide actionable shopping intent.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 5,
+      "user_message": "重新开始：我要鞋，而且 最好是 soft。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "User wants to start over and is looking for shoes with a soft feel.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 1,
+      "user_message": "我想找衣服; material 要 cotton, that's a must.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User specifies material as cotton, which is a must-have.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "cotton",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 2,
+      "user_message": "再补一个 requirement：最好是 breathable。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "breathable",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "Adding a requirement for breathable material",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "breathable",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 4,
+      "user_message": "关于 material 我 changed my mind：not cotton，use fabric instead。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "breathable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "fabric",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User changed their mind about material, removing cotton and replacing it with fabric.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "fabric",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "material",
+            "value": "cotton",
+            "operation": "remove",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 5,
+      "user_message": "我选 title 以“Aslaylme Leopard Baby Girl Clothes Denim Short Set with”开头的那款。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B07P6X51G1",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User selects a specific item by title prefix.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "clothes",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "brand",
+            "value": "Aslaylme",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "style",
+            "value": "Leopard",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "baby girl",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "material",
+            "value": "denim",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "feature",
+            "value": "short set",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": "Aslaylme Leopard Baby Girl Clothes Denim Short Set with",
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 1,
+      "user_message": "我想买鞋，材质要棉，这是硬要求。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "User wants to buy shoes with cotton material as a hard requirement.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "cotton",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 2,
+      "user_message": "再补一个条件：希望它穿戴舒适。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "comfortable",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.95,
+        "summary": "Adding a soft preference for comfort in wear",
+        "constraints": [
+          {
+            "attribute": "feature",
+            "value": "comfort",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 3,
+      "user_message": "关于材质我改主意了：不要棉，改成人造皮革。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfort"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "faux leather",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User changed the material requirement from cotton to synthetic leather.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "synthetic leather",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "material",
+            "value": "cotton",
+            "operation": "remove",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 4,
+      "user_message": "刚才那个问题的话，主要拿来海边。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "synthetic leather"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfort"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "beach",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User specifies the use case as '海边' (beach).",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "beach",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 5,
+      "user_message": "我决定选标题以“Reef Women's Reef Knots and Bolts Sandal-Tan/Coral-11”开头的那款。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {
+          "material": [
+            "synthetic leather"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfort"
+          ],
+          "use_case": [
+            "beach"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B00KY5RBXK",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User selects a specific product by title.",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "sandals",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "brand",
+            "value": "Reef",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "color",
+            "value": "Tan/Coral",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "size",
+            "value": "11",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "style",
+            "value": "sandals",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "feature",
+            "value": "comfort",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "beach",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "material",
+            "value": "synthetic leather",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": "Reef Women's Reef Knots and Bolts Sandal-Tan/Coral-11",
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_029",
+      "turn": 1,
+      "user_message": "I'm browsing for shoes, but I haven't decided on the details yet.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L4",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L2",
+        "confidence": 0.9,
+        "summary": "User is starting a shopping goal for shoes but hasn't decided on specific details yet.",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_029",
+      "turn": 2,
+      "user_message": "I have no preference about material; don't use it as a filter.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L2",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [
+            "material"
+          ],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NO_PREFERENCE",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "User explicitly states no preference for material and wants it excluded as a filter.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "",
+            "operation": "no_preference",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_029",
+      "turn": 3,
+      "user_message": "For the point you asked about, I prefer black.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [
+          "material"
+        ],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "black",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "confidence": 0.95,
+        "summary": "User specifies color preference as black.",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "black",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    }
+  ],
+  "split": "dev",
+  "backend": "model"
+}

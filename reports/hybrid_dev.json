@@ -1,0 +1,1424 @@
+{
+  "metrics": {
+    "turns": 90,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9777777777777777,
+    "dialogue_act_accuracy": 0.8111111111111111,
+    "clarity_accuracy": 0.9222222222222223,
+    "slot_precision": 0.6428571428571429,
+    "slot_recall": 0.6521739130434783,
+    "slot_f1": 0.6474820143884892,
+    "rollout_state_exact": 0.4666666666666667,
+    "no_mutation_preservation": 1.0,
+    "composite": 0.7790927258193444
+  },
+  "badcases": [
+    {
+      "session_id": "rw_dev_001",
+      "turn": 5,
+      "user_message": "重新开始：我要衣服，而且主要拿来送礼。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Reset the shopping session",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_003",
+      "turn": 3,
+      "user_message": "刚才那个问题的话，希望它柔软。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "satin"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "feature",
+            "value": "soft",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_005",
+      "turn": 5,
+      "user_message": "我选 title 以“UIN Women's Walking Travel Shoes Slip On Canvas Casual”开头的那款。",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {
+          "use_case": [
+            "work"
+          ]
+        },
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B08T1Z77KP",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "shoes",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "use_case",
+            "value": "walking",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "use_case",
+            "value": "travel",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "style",
+            "value": "casual",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 2,
+      "user_message": "再补一个条件：材质要925 银。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "sterling silver",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Adding a material constraint of 925 silver.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "925 silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_006",
+      "turn": 3,
+      "user_message": "刚才那个问题的话，颜色想要银色。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "925 silver"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "silver",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_007",
+      "turn": 5,
+      "user_message": "Starting again: I need clothing, and the material should be polyester.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Clothing",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "clothing",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_013",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，材质要聚酯纤维。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_014",
+      "turn": 2,
+      "user_message": "For the point you asked about, it needs to be lightweight.",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "feature",
+            "value": "lightweight",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_014",
+      "turn": 5,
+      "user_message": "Starting again: I need shoes, and it needs to be lightweight.",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "shoes",
+            "operation": "set",
+            "hardness": "hard"
+          },
+          {
+            "attribute": "feature",
+            "value": "lightweight",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 1,
+      "user_message": "我先 browse 一下首饰，details 还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L4",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Jewelry",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "jewelry",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 2,
+      "user_message": "For your question，主要用来 gift。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_015",
+      "turn": 5,
+      "user_message": "我选 title 以“Amazon Collection 18k Gold over Fine Silver Plated Bronze”开头的那款。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B06XSB5S1D",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "gold",
+            "operation": "set",
+            "hardness": "soft"
+          },
+          {
+            "attribute": "color",
+            "value": "silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_016",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，材质要氨纶。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "spandex",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "spandex",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_017",
+      "turn": 2,
+      "user_message": "For the point you asked about, it needs to be lightweight.",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "lightweight",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "feature",
+            "value": "lightweight",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 2,
+      "user_message": "刚才那个问题的话，主要拿来送礼。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "gift",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "gift",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_018",
+      "turn": 3,
+      "user_message": "再补一个条件：材质要925 银。",
+      "state_before": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "gift"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "sterling silver",
+              "bucket": "soft",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Adding a material constraint of 925 silver.",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "925 silver",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "model"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_019",
+      "turn": 2,
+      "user_message": "For the point you asked about, the material should be polyester.",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "polyester",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "polyester",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 1,
+      "user_message": "我先 browse 一下鞋，details 还没想清楚。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "clarity_level": "L3",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "shoes",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 2,
+      "user_message": "For your question，最好是 soft。",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "feature",
+            "value": "soft",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_020",
+      "turn": 5,
+      "user_message": "重新开始：我要鞋，而且 最好是 soft。",
+      "state_before": {
+        "category": null,
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "category",
+              "value": "Shoes",
+              "bucket": "hard",
+              "grounded": true
+            },
+            {
+              "attribute": "feature",
+              "value": "soft",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "RESET",
+        "clarity_level": "L1",
+        "confidence": 1.0,
+        "summary": "Reset the shopping session",
+        "constraints": [],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 4,
+      "user_message": "关于 material 我 changed my mind：not cotton，use fabric instead。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "breathable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "fabric",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "fabric",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_025",
+      "turn": 5,
+      "user_message": "我选 title 以“Aslaylme Leopard Baby Girl Clothes Denim Short Set with”开头的那款。",
+      "state_before": {
+        "category": "clothing",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "SELECT",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": "B07P6X51G1",
+          "status": "selected",
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "category",
+            "value": "clothing",
+            "operation": "set",
+            "hardness": "hard"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 3,
+      "user_message": "关于材质我改主意了：不要棉，改成人造皮革。",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "material",
+              "value": "faux leather",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [
+            {
+              "attribute": "material",
+              "value": "cotton",
+              "bucket": "hard",
+              "grounded": false
+            }
+          ],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "material",
+            "value": "leather",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_026",
+      "turn": 4,
+      "user_message": "刚才那个问题的话，主要拿来海边。",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "use_case",
+              "value": "beach",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "use_case",
+            "value": "beach",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    },
+    {
+      "session_id": "rw_dev_029",
+      "turn": 3,
+      "user_message": "For the point you asked about, I prefer black.",
+      "state_before": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [
+          "material"
+        ],
+        "status": "active"
+      },
+      "expected": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "clarity_level": "L1",
+        "state_delta": {
+          "set": [
+            {
+              "attribute": "color",
+              "value": "black",
+              "bucket": "hard",
+              "grounded": true
+            }
+          ],
+          "remove": [],
+          "mark_no_preference": [],
+          "select_parent_asin": null,
+          "status": null,
+          "reset": false
+        }
+      },
+      "predicted": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ADD",
+        "clarity_level": "L1",
+        "confidence": 0.9,
+        "summary": "Structured shopping requirements detected",
+        "constraints": [
+          {
+            "attribute": "color",
+            "value": "black",
+            "operation": "set",
+            "hardness": "soft"
+          }
+        ],
+        "selected_rank": null,
+        "selected_title": null,
+        "source": "rules"
+      },
+      "error": null
+    }
+  ],
+  "split": "dev",
+  "backend": "hybrid"
+}
