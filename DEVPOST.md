@@ -2,6 +2,34 @@
 
 > Problem Statement 4: AI Conversational Search and Recommendations (TikTok TechJam 2026)
 
+## TL;DR for judges
+
+**Official public-set evaluator (unmodified), scored path uses the Python
+standard library only — no network, no API keys, no GPU:**
+
+| Hit Rate@10 | MRR | MTTC | Efficiency | **TechnicalScore** |
+| ---: | ---: | ---: | ---: | ---: |
+| 0.995 | 0.644 | 2.22 | 0.878 | **0.867** |
+
+≈ **6×** the official BM25 baseline (0.139). Deterministic across runs.
+
+**Three differentiators**
+1. **Explicit dialogue state machine with erase-and-rewrite intent override** —
+   the superseded slot is removed, not appended (handles the hard 15% override
+   scenarios; Override HR = 1.000).
+2. **Recall proven saturated (200/200), then a banded popularity tiebreaker** —
+   lifts the ranking tail without sacrificing precision (took TS 0.826 → 0.867;
+   cross-validated as best on both split halves, so it generalizes).
+3. **Two honest negative results kept as evidence** — a full local cross-encoder
+   reranker that our lightweight rules beat, and a generalization-scope probe —
+   demonstrating engineering judgment, not just a score.
+
+**Reproduce in one command** (system Python, zero pip install):
+```bash
+git clone -b feature/aggressive-v2 https://github.com/Starryyu77/techjam-shopping-agent-v1.git
+python evaluate_official.py --official-root <path-to-official-kit>   # -> TechnicalScore 0.867
+```
+
 ## Inspiration
 
 Real conversational commerce is a translation problem, not a search problem. A
