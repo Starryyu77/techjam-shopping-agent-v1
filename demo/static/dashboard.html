@@ -28,32 +28,32 @@ tr.base td{color:var(--muted)}tr.base td.ts{color:var(--muted)}
 <div class=sub>TechJam 2026 · Problem Statement 4 · unmodified official public-set evaluator · 200 sessions · offline rules engine</div>
 
 <div class=kpis>
-  <div class="kpi hl"><div class=v>0.826</div><div class=l>Technical Score</div></div>
-  <div class=kpi><div class=v>0.970</div><div class=l>Hit Rate@10</div></div>
-  <div class=kpi><div class=v>0.613</div><div class=l>MRR</div></div>
-  <div class=kpi><div class=v>3.15</div><div class=l>MTTC</div></div>
-  <div class=kpi><div class=v>0.784</div><div class=l>Efficiency</div></div>
+  <div class="kpi hl"><div class=v>0.867</div><div class=l>Technical Score</div></div>
+  <div class=kpi><div class=v>0.995</div><div class=l>Hit Rate@10</div></div>
+  <div class=kpi><div class=v>0.644</div><div class=l>MRR</div></div>
+  <div class=kpi><div class=v>2.21</div><div class=l>MTTC</div></div>
+  <div class=kpi><div class=v>0.878</div><div class=l>Efficiency</div></div>
 </div>
 
 <div class=card><h3>Configuration comparison</h3>
 <table><thead><tr><th>Configuration</th><th>Hit Rate@10</th><th>MRR</th><th>MTTC</th><th>Technical Score</th></tr></thead>
-<tbody><tr><td>Rules V1.2 (submitted)</td><td>0.970</td><td>0.613</td><td>3.155</td><td class='ts'>0.826</td></tr>
+<tbody><tr><td>Rules V1.3 (submitted, popularity tiebreak)</td><td>0.995</td><td>0.644</td><td>2.215</td><td class='ts'>0.867</td></tr>
+<tr><td>Rules V1.2 (constraint-only)</td><td>0.970</td><td>0.613</td><td>3.155</td><td class='ts'>0.826</td></tr>
 <tr><td>Rules + cross-encoder (all)</td><td>0.970</td><td>0.606</td><td>3.095</td><td class='ts'>0.825</td></tr>
-<tr><td>Rules + CE (buying-only)</td><td>0.965</td><td>0.616</td><td>3.195</td><td class='ts'>0.823</td></tr>
 <tr class='base'><td>Official weak BM25 baseline</td><td>0.125</td><td>0.068</td><td>9.810</td><td class='ts'>0.139</td></tr></tbody></table>
 <div class=note style="margin-top:12px">We evaluated a full local cross-encoder reranker (globally and gated to the Buying track) and kept it OFF by default: on this task's composite it is flat-to-slightly-negative and occasionally lowers Hit Rate. Carefully engineered lightweight rules win — the light-execution outcome the problem statement rewards.</div>
 </div>
 
-<div class=card><h3>Per-scenario (submitted config)</h3><div class=scen><div class='scard'><h4>buying</h4><div class='big'>0.975</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.579 · MTTC 2.42 · n=80</div></div>
-<div class='scard'><h4>browsing</h4><div class='big'>0.963</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.614 · MTTC 3.35 · n=80</div></div>
-<div class='scard'><h4>intent override</h4><div class='big'>0.967</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.699 · MTTC 4.60 · n=30</div></div>
-<div class='scard'><h4>boundary</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.622 · MTTC 3.10 · n=10</div></div></div></div>
+<div class=card><h3>Per-scenario (submitted config)</h3><div class=scen><div class='scard'><h4>buying</h4><div class='big'>0.988</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.623 · MTTC 1.73 · n=80</div></div>
+<div class='scard'><h4>browsing</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.627 · MTTC 2.11 · n=80</div></div>
+<div class='scard'><h4>intent override</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.741 · MTTC 3.90 · n=30</div></div>
+<div class='scard'><h4>boundary</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.660 · MTTC 1.90 · n=10</div></div></div></div>
 
-<div class=card><h3>Best-rank distribution (submitted config)</h3><div class='bar'><div class='barlabel'>rank 1</div><div class='track'><div class='fill' style='width:48.0%;background:#4dd4ac'></div></div><div class='barval'>96</div></div>
-<div class='bar'><div class='barlabel'>rank 2</div><div class='track'><div class='fill' style='width:11.0%;background:#6ea8fe'></div></div><div class='barval'>22</div></div>
-<div class='bar'><div class='barlabel'>rank 3-5</div><div class='track'><div class='fill' style='width:18.0%;background:#b18cff'></div></div><div class='barval'>36</div></div>
-<div class='bar'><div class='barlabel'>rank 6-10</div><div class='track'><div class='fill' style='width:20.0%;background:#f0a35e'></div></div><div class='barval'>40</div></div>
-<div class='bar'><div class='barlabel'>miss</div><div class='track'><div class='fill' style='width:3.0%;background:#ff6b6b'></div></div><div class='barval'>6</div></div>
+<div class=card><h3>Best-rank distribution (submitted config)</h3><div class='bar'><div class='barlabel'>rank 1</div><div class='track'><div class='fill' style='width:48.5%;background:#4dd4ac'></div></div><div class='barval'>97</div></div>
+<div class='bar'><div class='barlabel'>rank 2</div><div class='track'><div class='fill' style='width:15.5%;background:#6ea8fe'></div></div><div class='barval'>31</div></div>
+<div class='bar'><div class='barlabel'>rank 3-5</div><div class='track'><div class='fill' style='width:23.5%;background:#b18cff'></div></div><div class='barval'>47</div></div>
+<div class='bar'><div class='barlabel'>rank 6-10</div><div class='track'><div class='fill' style='width:12.0%;background:#f0a35e'></div></div><div class='barval'>24</div></div>
+<div class='bar'><div class='barlabel'>miss</div><div class='track'><div class='fill' style='width:0.5%;background:#ff6b6b'></div></div><div class='barval'>1</div></div>
 <div class=note style="margin-top:12px">Diagnosis of every public-set miss showed a <b>ranking</b> problem, not recall: the target was always retrievable but hard to lift above look-alikes when the customer disclosed only a generic constraint. This reshaped our retrieval strategy toward constraint-aware reranking rather than deeper recall.</div>
 </div>
 

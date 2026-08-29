@@ -20,9 +20,9 @@ _REPORTS = _REPO_ROOT / "reports"
 
 # Ordered configurations to display (label, filename). Missing files are skipped.
 _CONFIGS = [
-    ("Rules V1.2 (submitted)", "official_public_rules_v1_2.json"),
+    ("Rules V1.3 (submitted, popularity tiebreak)", "official_public_rules_v1_3.json"),
+    ("Rules V1.2 (constraint-only)", "official_public_rules_v1_2.json"),
     ("Rules + cross-encoder (all)", "official_public_rules_ce_p2a.json"),
-    ("Rules + CE (buying-only)", "official_public_rules_ce_buying.json"),
 ]
 
 _BASELINE = {"label": "Official weak BM25 baseline", "hit_rate_at_10": 0.125, "mrr": 0.068, "mttc": 9.81, "recommended_technical_score": 0.139}

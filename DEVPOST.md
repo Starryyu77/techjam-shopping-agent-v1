@@ -34,9 +34,11 @@ OFF for official scoring.
 
 ## Results
 
-On the unmodified official public-set evaluator: **Hit Rate@10 = 0.970,
-MRR = 0.613, MTTC = 3.155, TechnicalScore = 0.826** — versus the official weak
-BM25 baseline at 0.139 (≈6× better).
+On the unmodified official public-set evaluator: **Hit Rate@10 = 0.995,
+MRR = 0.644, MTTC = 2.215, TechnicalScore = 0.867** — versus the official weak
+BM25 baseline at 0.139 (≈6× better). Recall is 100% saturated (target in pool for
+200/200 sessions), so every gain came from smarter *ranking*: a banded
+popularity tiebreaker that lifts the tail without sacrificing precision.
 
 ## What makes it different
 

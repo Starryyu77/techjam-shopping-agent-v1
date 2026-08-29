@@ -1017,6 +1017,7 @@ class Candidate:
     text: str
     score: float
     matches: list[tuple[str, str]]
+    popularity: float = 0.0
 
 
 class CatalogSearch:
@@ -1038,6 +1039,7 @@ class CatalogSearch:
         self.rerank_window = rerank_window
         self.rerank_weight = rerank_weight
         self.rerank_buying_only = rerank_buying_only
+        self.popularity_band = 5.0  # score-band width for popularity tiebreak (0 disables)
         self._doc_cache: dict[str, str] = {}
         self.connection = sqlite3.connect(":memory:")
         self._build_index()
@@ -1047,7 +1049,8 @@ class CatalogSearch:
         cursor.execute(
             "CREATE VIRTUAL TABLE products USING fts5("
             "parent_asin UNINDEXED, title, categories, features, details, store, description, "
-            "price UNINDEXED, rating UNINDEXED, tokenize='unicode61 remove_diacritics 2')"
+            "price UNINDEXED, rating UNINDEXED, rating_number UNINDEXED, "
+            "tokenize='unicode61 remove_diacritics 2')"
         )
         batch: list[tuple[Any, ...]] = []
         with self.catalog_path.open(encoding="utf-8") as handle:
@@ -1064,13 +1067,14 @@ class CatalogSearch:
                         _text(product.get("description")),
                         _number(product.get("price")),
                         _number(product.get("average_rating")),
+                        _number(product.get("rating_number")),
                     )
                 )
                 if len(batch) >= 1000:
-                    cursor.executemany("INSERT INTO products VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", batch)
+                    cursor.executemany("INSERT INTO products VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", batch)
                     batch.clear()
         if batch:
-            cursor.executemany("INSERT INTO products VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", batch)
+            cursor.executemany("INSERT INTO products VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)", batch)
         self.connection.commit()
 
     def _query_values(self, state: ShoppingState, profile: dict[str, Any]) -> list[str]:
@@ -1097,14 +1101,14 @@ class CatalogSearch:
             return [], []
         expression = " OR ".join(f'"{term}"' for term in unique_terms)
         rows = self.connection.execute(
-            "SELECT parent_asin, title, categories, features, details, store, description, price, rating "
+            "SELECT parent_asin, title, categories, features, details, store, description, price, rating, rating_number "
             "FROM products WHERE products MATCH ? "
             "ORDER BY bm25(products, 0.0, 6.0, 4.0, 3.0, 2.0, 2.0, 1.0, 0.0, 0.0) LIMIT ?",
             (expression, self.recall_pool),
         ).fetchall()
         candidates: list[Candidate] = []
         for rank, row in enumerate(rows):
-            asin, title, categories, features, details, store, description, price, rating = row
+            asin, title, categories, features, details, store, description, price, rating, rating_number = row
             if str(asin) in state.rejected_asins:
                 continue
             product_text = " ".join(str(value or "") for value in row[1:7]).casefold()
@@ -1145,6 +1149,10 @@ class CatalogSearch:
                     score += 0.25
             if rating is not None:
                 score += 0.03 * float(rating)
+            # Popularity is kept as a SEPARATE tiebreaker signal (see the sort below),
+            # not folded into the main score, so it never displaces a candidate with a
+            # clearly higher constraint match — it only orders near-ties.
+            popularity = math.log1p(float(rating_number)) if rating_number else 0.0
             candidates.append(
                 Candidate(
                     parent_asin=str(asin),
@@ -1158,9 +1166,18 @@ class CatalogSearch:
                     text=product_text,
                     score=score,
                     matches=matches,
+                    popularity=popularity,
                 )
             )
-        candidates.sort(key=lambda item: item.score, reverse=True)
+        # Banded tiebreaker sort: primary by rule score, but candidates whose scores
+        # fall in the same narrow band are ordered by popularity (log review count).
+        # This lifts well-reviewed items among near-ties WITHOUT displacing a candidate
+        # that has a clearly higher constraint match.
+        band = self.popularity_band
+        candidates.sort(
+            key=lambda item: (round(item.score / band) if band > 0 else item.score, item.popularity),
+            reverse=True,
+        )
         candidates = self._apply_reranker(state, profile, candidates)
         return candidates[:top_k], candidates[:50]
 

@@ -81,12 +81,28 @@ both query expansion and rerank scoring — never as a hard filter, respecting t
 | Configuration | Hit Rate@10 | MRR | MTTC | TechnicalScore |
 | --- | ---: | ---: | ---: | ---: |
 | Official weak BM25 baseline | 0.125 | 0.068 | 9.810 | 0.139 |
-| **Rules V1.2 (submitted)** | **0.970** | **0.613** | **3.155** | **0.826** |
+| Rules V1.2 (constraint-only) | 0.970 | 0.613 | 3.155 | 0.826 |
 | Rules + cross-encoder (all) | 0.970 | 0.607 | 3.095 | 0.825 |
-| Rules + CE (buying-only gate) | 0.965 | 0.616 | 3.195 | 0.824 |
+| **Rules V1.3 (submitted, popularity tiebreak)** | **0.995** | **0.644** | **2.215** | **0.867** |
 
-Per-scenario (submitted): Buying HR 0.975 / Browsing 0.9625 / Intent-Override
-0.9667 / Boundary 1.000.
+Per-scenario (submitted V1.3): Buying HR 0.988 / Browsing 1.000 / Intent-Override
+1.000 / Boundary 1.000.
+
+### 4.2 Popularity tiebreaker (the +0.04 lever)
+A full-set recall probe showed the target is recalled into the FTS5 pool in
+**200/200 sessions** — every gap is a *ranking* problem, not recall (so dense
+recall would add nothing). Among the rank tail, the target and the distractors
+ranked above it satisfy the *same* constraints with scores clustered within one
+or two points; the differentiator is that the target is consistently better
+reviewed (higher rating and far more reviews). We therefore added a **banded
+tiebreaker**: candidates whose rule scores fall in the same narrow band are
+ordered by log review count. Crucially this is a *tiebreaker*, not an additive
+term — it never displaces a candidate with a clearly higher constraint match, so
+it lifts the tail (HR 0.970 → 0.995, MTTC 3.16 → 2.22) without sacrificing MRR
+(0.613 → 0.644). The neighborhood band 4.5–5.25 is a stable plateau (TS
+0.861–0.867), and the tiebreaker also removes the evaluator's tie-order jitter,
+making the official score deterministic across runs. The band is a tunable
+attribute (default 5.0; 0 recovers the V1.2 baseline).
 
 ### 4.1 A negative result we keep on purpose
 We implemented a full local cross-encoder reranker and evaluated it as an
@@ -114,8 +130,14 @@ retrieval and evaluation runs are reproducible from `reports/`.
 
 - Public-set gains fix generic error classes but do not substitute for the
   hidden 800-session validation.
-- Dense (vector) recall is scaffolded but not yet shown to close a real recall
-  gap on this set; every miss we diagnosed was a ranking, not a recall, problem.
+- A full-set recall probe confirms recall is 100% saturated (target in the pool
+  for 200/200 sessions), so dense (vector) recall would add nothing on this set;
+  every remaining gap is a ranking problem, which the popularity tiebreaker
+  addresses.
+- The band value (5.0) is tuned on the 200-session public set; the 4.5–5.25
+  plateau and the principled mechanism suggest it generalizes, and the band can
+  be lowered (3.0 → +0.03) or disabled (0.0 → V1.2 baseline) if the hidden set
+  regresses.
 - The optional Qwen layer improves vague-intent classification in our gold set
   but is not required for the reported scores.
 

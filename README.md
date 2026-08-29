@@ -1,8 +1,8 @@
 # Conversational Shopping Copilot — TechJam 2026 (PS4)
 
 An offline, CPU-only, multi-turn shopping agent over a frozen 50,000-product
-Amazon catalog. **Official public-set: Hit Rate@10 0.970 · MRR 0.613 · MTTC 3.155
-· TechnicalScore 0.826** (unmodified official evaluator; ≈6× the 0.139 BM25
+Amazon catalog. **Official public-set: Hit Rate@10 0.995 · MRR 0.644 · MTTC 2.215
+· TechnicalScore 0.867** (unmodified official evaluator; ≈6× the 0.139 BM25
 baseline). The scored path uses the **Python standard library only** — no
 network, no API keys, no paid model.
 
@@ -216,10 +216,11 @@ V1 还没有向量召回、交叉编码器或学习排序。先用 Gold 数据�
 | 版本 | Hit Rate@10 | MRR | MTTC | 技术分参考值 |
 | --- | ---: | ---: | ---: | ---: |
 | 修正前 Rules V1 | 0.550 | 0.262 | 6.740 | 0.439 |
-| 修正后 Rules V1.1 | **0.950** | **0.628** | **3.495** | **0.814** |
-| 细品类 Rules V1.2 | **0.970** | 0.613 | **3.155** | **0.826** |
+| 修正后 Rules V1.1 | 0.950 | 0.628 | 3.495 | 0.814 |
+| 细品类 Rules V1.2 | 0.970 | 0.613 | 3.155 | 0.826 |
+| 人气 tiebreaker Rules V1.3 | **0.995** | **0.644** | **2.215** | **0.867** |
 
-完整结果见 `reports/official_public_rules_v1_2.json`。公开集提升只说明这些通用错误已被修正，不能代替隐藏集验证。
+V1.3 关键改动：全集召回探针确认目标 200/200 都在 FTS5 池内（失分全是排序问题，dense 召回无收益）；在“约束匹配数相同、规则分聚簇”的近似平局中，按 log(评论数) 做**分带 tiebreaker**，只重排近似平局、不挤下明确高分候选，因此 HR 升到 0.995、MTTC 降到 2.22，同时 MRR 不降反升。band 4.5–5.25 为稳定 plateau，且该 tiebreaker 消除了评测器随机 session 的平局抖动（官方分跨多次运行完全一致）。band 可调（默认 5.0，设 0 回退 V1.2 基线）。完整结果见 `reports/official_public_rules_v1_3.json`。公开集提升不代替隐藏集验证。
 
 ## 验证
 
