@@ -1,3 +1,47 @@
+# Conversational Shopping Copilot — TechJam 2026 (PS4)
+
+An offline, CPU-only, multi-turn shopping agent over a frozen 50,000-product
+Amazon catalog. **Official public-set: Hit Rate@10 0.970 · MRR 0.613 · MTTC 3.155
+· TechnicalScore 0.826** (unmodified official evaluator; ≈6× the 0.139 BM25
+baseline). The scored path uses the **Python standard library only** — no
+network, no API keys, no paid model.
+
+## Quickstart (any OS)
+
+```bash
+# Point at the official frozen catalog (participant kit). If the official repo is
+# a sibling checkout (../techjam-conversational-search), this is auto-detected.
+export TECHJAM_CATALOG=/path/to/techjam-conversational-search/data/catalog.jsonl
+
+# Score with the unmodified official evaluator (offline, rules).
+python evaluate_official.py --official-root /path/to/techjam-conversational-search --intent-backend rules
+
+# Interactive offline chat.
+python chat.py --intent-backend rules
+
+# Live demo: chat + state-machine visualization + evaluation dashboard.
+python demo/build_dashboard.py                 # regenerate demo/static/dashboard.html
+python demo/server.py --port 8000              # http://127.0.0.1:8000  and  /dashboard
+```
+
+## Deliverables map
+
+| Path | What |
+| --- | --- |
+| `submission/agent.py` | Official-contract entry point (offline rules default; scorable) |
+| `shopping_agent.py` | State machine + FTS5 hybrid retrieval + rule rerank + question policy |
+| `reranker.py` | Optional local cross-encoder (default OFF; kept as reproducible experiment) |
+| `REPORT.md` | Architecture, models/cost/latency, results, negative CE finding, methodology |
+| `DEVPOST.md` | Submission narrative |
+| `demo/` | Offline web demo, evaluation dashboard, and video script |
+| `prompt_lab.py` | Leakage-safe dev/validation prompt self-evolution loop |
+| `reports/` | Evaluation artifacts for every configuration |
+
+> The Chinese sections below are the original V1 development notes (Windows dev
+> setup, model experiments). The scored path never needs the model or network.
+
+---
+
 # 真实世界购物 Agent V1
 
 V1 已把两个方案接成一条可运行链路：
