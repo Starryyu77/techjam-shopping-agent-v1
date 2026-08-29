@@ -89,6 +89,10 @@ def make_handler(demo: DemoState):
                 return self._send_file(_STATIC / "app.js", "application/javascript")
             if self.path == "/style.css":
                 return self._send_file(_STATIC / "style.css", "text/css")
+            if self.path in ("/dashboard", "/dashboard.html"):
+                dash = _STATIC / "dashboard.html"
+                if dash.is_file():
+                    return self._send_file(dash, "text/html; charset=utf-8")
             self._send_json({"error": "not found"}, 404)
 
         def do_POST(self):
