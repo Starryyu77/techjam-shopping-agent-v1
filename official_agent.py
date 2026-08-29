@@ -32,6 +32,7 @@ class Agent:
         model_name: str = "qwen3-8b",
         model_timeout: float = 30.0,
         intent_backend: str = "hybrid",
+        use_reranker: bool = False,
     ) -> None:
         self._agent = RealWorldShoppingAgent(
             catalog_path,
@@ -39,6 +40,7 @@ class Agent:
             model_name=model_name,
             model_timeout=model_timeout,
             intent_backend=intent_backend,
+            use_reranker=use_reranker,
         )
 
     def reset(self, session_id: str, user_profile: dict[str, Any]) -> None:

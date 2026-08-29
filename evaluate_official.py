@@ -8,7 +8,22 @@ from pathlib import Path
 from official_agent import Agent
 
 
-DEFAULT_OFFICIAL_ROOT = Path(r"D:\TikTok-TechJam\track4\techjam-conversational-search")
+def _default_official_root() -> Path:
+    # Prefer an env override, then a local sibling checkout, then the original
+    # Windows dev path. Keeps the repo runnable on any machine (Mac/Linux/CI)
+    # without editing source, while preserving the teammate's setup.
+    import os
+
+    env = os.environ.get("TECHJAM_OFFICIAL_ROOT")
+    if env:
+        return Path(env)
+    sibling = Path(__file__).resolve().parent.parent / "techjam-conversational-search"
+    if (sibling / "evaluator" / "local_evaluator.py").is_file():
+        return sibling
+    return Path(r"D:\TikTok-TechJam\track4\techjam-conversational-search")
+
+
+DEFAULT_OFFICIAL_ROOT = _default_official_root()
 
 
 def build_parser() -> argparse.ArgumentParser:
@@ -27,6 +42,7 @@ def build_parser() -> argparse.ArgumentParser:
     parser.add_argument("--endpoint", default="http://127.0.0.1:8080/v1")
     parser.add_argument("--model-name", default="qwen3-8b")
     parser.add_argument("--model-timeout", type=float, default=30.0)
+    parser.add_argument("--use-reranker", action="store_true")
     return parser
 
 
@@ -52,6 +68,7 @@ def main() -> None:
         model_name=args.model_name,
         model_timeout=args.model_timeout,
         intent_backend=args.intent_backend,
+        use_reranker=args.use_reranker,
     )
     try:
         result = evaluate(agent, samples, catalog_ids, categories, products)

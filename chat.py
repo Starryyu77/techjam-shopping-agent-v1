@@ -7,9 +7,24 @@ from pathlib import Path
 from shopping_agent import ModelUnavailable, RealWorldShoppingAgent
 
 
-DEFAULT_CATALOG = Path(
-    r"D:\TikTok-TechJam\track4\techjam-conversational-search\data\catalog.jsonl"
-)
+def _default_catalog() -> Path:
+    import os
+
+    env = os.environ.get("TECHJAM_CATALOG")
+    if env:
+        return Path(env)
+    sibling = (
+        Path(__file__).resolve().parent.parent
+        / "techjam-conversational-search"
+        / "data"
+        / "catalog.jsonl"
+    )
+    if sibling.is_file():
+        return sibling
+    return Path(r"D:\TikTok-TechJam\track4\techjam-conversational-search\data\catalog.jsonl")
+
+
+DEFAULT_CATALOG = _default_catalog()
 DEFAULT_MODEL_ENDPOINT = "http://127.0.0.1:8080/v1"
 
 

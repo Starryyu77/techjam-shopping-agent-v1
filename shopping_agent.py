@@ -14,6 +14,13 @@ from pathlib import Path
 from typing import Any
 
 
+def sigmoid(value: float) -> float:
+    if value >= 0:
+        return 1.0 / (1.0 + math.exp(-value))
+    exp_v = math.exp(value)
+    return exp_v / (1.0 + exp_v)
+
+
 DOMAIN_INTENTS = {"ITEM", "VAGUE", "BENEFIT", "IRRELEVANT"}
 DIALOGUE_ACTS = {
     "NEW",
@@ -1013,10 +1020,25 @@ class Candidate:
 
 
 class CatalogSearch:
-    def __init__(self, catalog_path: str | Path) -> None:
+    def __init__(
+        self,
+        catalog_path: str | Path,
+        *,
+        reranker: Any | None = None,
+        recall_pool: int = 800,
+        rerank_window: int = 40,
+        rerank_weight: float = 6.0,
+        rerank_buying_only: bool = True,
+    ) -> None:
         self.catalog_path = Path(catalog_path)
         if not self.catalog_path.is_file():
             raise FileNotFoundError(self.catalog_path)
+        self.reranker = reranker
+        self.recall_pool = recall_pool
+        self.rerank_window = rerank_window
+        self.rerank_weight = rerank_weight
+        self.rerank_buying_only = rerank_buying_only
+        self._doc_cache: dict[str, str] = {}
         self.connection = sqlite3.connect(":memory:")
         self._build_index()
 
@@ -1077,9 +1099,8 @@ class CatalogSearch:
         rows = self.connection.execute(
             "SELECT parent_asin, title, categories, features, details, store, description, price, rating "
             "FROM products WHERE products MATCH ? "
-            "ORDER BY bm25(products, 0.0, 6.0, 4.0, 3.0, 2.0, 2.0, 1.0, 0.0, 0.0) LIMIT 300",
-            # ponytail: 300 is enough for this V1; add ANN only after measured recall demands it.
-            (expression,),
+            "ORDER BY bm25(products, 0.0, 6.0, 4.0, 3.0, 2.0, 2.0, 1.0, 0.0, 0.0) LIMIT ?",
+            (expression, self.recall_pool),
         ).fetchall()
         candidates: list[Candidate] = []
         for rank, row in enumerate(rows):
@@ -1140,7 +1161,63 @@ class CatalogSearch:
                 )
             )
         candidates.sort(key=lambda item: item.score, reverse=True)
+        candidates = self._apply_reranker(state, profile, candidates)
         return candidates[:top_k], candidates[:50]
+
+    def _rerank_query(self, state: ShoppingState, profile: dict[str, Any]) -> str:
+        parts: list[str] = []
+        if state.category:
+            parts.append(state.category)
+        for mapping in (state.hard_constraints, state.soft_preferences):
+            for items in mapping.values():
+                parts.extend(items)
+        parts.extend(value for value, _hardness in state.retrieval_evidence)
+        if len(parts) <= 1:
+            parts.extend(str(item) for item in profile.get("preference_tags", []))
+        return " ".join(parts).strip()
+
+    def _rerank_document(self, candidate: Candidate) -> str:
+        cached = self._doc_cache.get(candidate.parent_asin)
+        if cached is not None:
+            return cached
+        doc = " ".join(
+            [candidate.title or "", candidate.categories or "", (candidate.features or "")[:200]]
+        )[:400]
+        self._doc_cache[candidate.parent_asin] = doc
+        return doc
+
+    def _apply_reranker(
+        self,
+        state: ShoppingState,
+        profile: dict[str, Any],
+        candidates: list[Candidate],
+    ) -> list[Candidate]:
+        # Cross-encoder is an ADDITIVE semantic signal on the rule-ranked head.
+        # Degrades to the pure rule ordering when the model is unavailable
+        # (CPU-only / network-disabled scoring host), preserving the baseline.
+        reranker = self.reranker
+        if reranker is None or not getattr(reranker, "available", False):
+            return candidates
+        if len(candidates) < 2:
+            return candidates
+        # Dual-track gate: the cross-encoder reliably sharpens ranking only when
+        # concrete constraints exist (Buying track). On open-ended Browsing the
+        # generic query misleads it, so we defer to the rule ordering there.
+        # This mirrors the problem statement's Buying-vs-Browsing routing.
+        if self.rerank_buying_only and not state.hard_constraints:
+            return candidates
+        query = self._rerank_query(state, profile)
+        if not query:
+            return candidates
+        window = candidates[: self.rerank_window]
+        docs = [self._rerank_document(item) for item in window]
+        scores = reranker.score(query, docs)
+        if not scores or len(scores) != len(window):
+            return candidates
+        for item, raw in zip(window, scores):
+            item.score += self.rerank_weight * sigmoid(raw)
+        candidates.sort(key=lambda item: item.score, reverse=True)
+        return candidates
 
     def close(self) -> None:
         self.connection.close()
@@ -1263,6 +1340,8 @@ class RealWorldShoppingAgent:
         model_timeout: float = 30.0,
         intent_backend: str = "hybrid",
         intent_parser: Any | None = None,
+        reranker: Any | None = None,
+        use_reranker: bool = False,
     ) -> None:
         if intent_parser is None:
             if intent_backend not in {"rules", "model", "hybrid"}:
@@ -1280,7 +1359,14 @@ class RealWorldShoppingAgent:
             else:
                 intent_parser = HybridIntentParser(model=model_parser)
         self.intent_parser = intent_parser
-        self.search = CatalogSearch(catalog_path)
+        if reranker is None and use_reranker:
+            try:
+                from reranker import CrossEncoderReranker
+
+                reranker = CrossEncoderReranker()
+            except Exception:
+                reranker = None
+        self.search = CatalogSearch(catalog_path, reranker=reranker)
         self.policy = CandidateQuestionPolicy()
         self.sessions: dict[str, ShoppingState] = {}
         self.profiles: dict[str, dict[str, Any]] = {}
