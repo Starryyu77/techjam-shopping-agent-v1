@@ -88,6 +88,7 @@ function renderRecs(recs) {
   ol.innerHTML = "";
   (recs || []).forEach((r, i) => {
     const li = document.createElement("li");
+    if (r.sponsored) li.className = "sponsored";
     const price = r.price != null ? "$" + r.price : "";
     const store = r.store ? esc(r.store) : "";
     const meta = [store, price].filter(Boolean).join(" · ");
@@ -95,10 +96,13 @@ function renderRecs(recs) {
     const reasons = (r.reasons || [])
       .map((x) => '<span class="why">' + esc(x) + "</span>")
       .join("");
+    const adBadge = r.sponsored
+      ? '<span class="adbadge">Sponsored' + (r.advertiser ? " · " + esc(r.advertiser) : "") + "</span>"
+      : "";
     li.innerHTML =
-      '<span class="rank">' + (i + 1) + "</span>" +
+      '<span class="rank">' + (r.sponsored ? "Ad" : i + 1) + "</span>" +
       '<span class="rbody">' +
-        '<span class="t">' + esc(r.title || r.parent_asin) + "</span>" +
+        '<span class="t">' + esc(r.title || r.parent_asin) + adBadge + "</span>" +
         (meta ? '<span class="meta">' + meta + "</span>" : "") +
         '<span class="asin">' + esc(r.parent_asin) + "</span>" +
         (reasons ? '<span class="reasons">' + reasons + "</span>" : "") +
@@ -106,6 +110,20 @@ function renderRecs(recs) {
       score;
     ol.appendChild(li);
   });
+}
+
+// "Thinking…" indicator so LLM/processing latency reads as work, not a freeze.
+function showThinking() {
+  const div = document.createElement("div");
+  div.className = "msg bot thinking";
+  div.id = "thinkingMsg";
+  div.innerHTML = '<span class="dots"><span></span><span></span><span></span></span> thinking…';
+  $("messages").appendChild(div);
+  $("messages").scrollTop = $("messages").scrollHeight;
+}
+function hideThinking() {
+  const t = $("thinkingMsg");
+  if (t) t.remove();
 }
 
 async function reset() {
@@ -130,7 +148,13 @@ async function send(text) {
   if (!sessionId || !text.trim()) return;
   turn = Math.min(turn + 1, 10);
   addMessage(text, "user");
-  const data = await post("/api/respond", { session_id: sessionId, message: text, turn });
+  showThinking();
+  let data;
+  try {
+    data = await post("/api/respond", { session_id: sessionId, message: text, turn });
+  } finally {
+    hideThinking();
+  }
   addMessage(data.message || "(no message)", "bot", data.ask_attribute);
   renderState(data.state || {}, data.intent, data.ask_attribute, data.candidate_count);
   renderRecs(data.recommendations);
