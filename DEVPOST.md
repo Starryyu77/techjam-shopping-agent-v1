@@ -26,7 +26,7 @@ standard library only — no network, no API keys, no GPU:**
 
 **Reproduce in one command** (system Python, zero pip install):
 ```bash
-git clone -b feature/aggressive-v2 https://github.com/Starryyu77/techjam-shopping-agent-v1.git
+git clone https://github.com/Starryyu77/techjam-shopping-agent-v1.git
 python evaluate_official.py --official-root <path-to-official-kit>   # -> TechnicalScore 0.867
 ```
 
@@ -124,7 +124,7 @@ HTML/CSS/JS.
 
 ## Links
 
-- **Code (public GitHub):** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Code (public GitHub):** https://github.com/Starryyu77/techjam-shopping-agent-v1
 - **Live judge-facing Tour:** https://shopping-copilot-techjam.pages.dev/
 - **Demo video (YouTube):** <PASTE YOUTUBE URL AFTER UPLOAD — see demo/VIDEO_SCRIPT.md>
 - **Try it offline:** `python demo/server.py --port 8000`, then open http://127.0.0.1:8000 for the Guided Evidence Tour; the optional legacy chat is at `/sandbox`.

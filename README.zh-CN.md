@@ -35,8 +35,7 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 ### 1. 克隆仓库
 
 ```bash
-git clone -b feature/aggressive-v2 \
-  https://github.com/Starryyu77/techjam-shopping-agent-v1.git
+git clone https://github.com/Starryyu77/techjam-shopping-agent-v1.git
 cd techjam-shopping-agent-v1
 ```
 
@@ -142,7 +141,7 @@ python scripts/build_demo_evidence.py \
 
 - **在线 Tour：**https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages 回退：**https://starryyu77.github.io/techjam-shopping-agent-v1/
-- **公开源码分支：**https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **公开源码仓库：**https://github.com/Starryyu77/techjam-shopping-agent-v1
 - **Demo 视频：**等待最终录制并上传公开 YouTube
 
 ## License 与上游数据

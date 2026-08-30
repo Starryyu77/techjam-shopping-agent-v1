@@ -46,8 +46,7 @@ not evidence about the organizer's 800 private sessions.
 ### 1. Clone
 
 ```bash
-git clone -b feature/aggressive-v2 \
-  https://github.com/Starryyu77/techjam-shopping-agent-v1.git
+git clone https://github.com/Starryyu77/techjam-shopping-agent-v1.git
 cd techjam-shopping-agent-v1
 ```
 
@@ -159,7 +158,7 @@ and the legacy chat UI live outside that scored path.
 
 - **Live Tour:** https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages fallback:** https://starryyu77.github.io/techjam-shopping-agent-v1/
-- **Source branch:** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Source repository:** https://github.com/Starryyu77/techjam-shopping-agent-v1
 - **Demo video:** pending final recording and public YouTube upload
 
 ## License and upstream data

@@ -10,7 +10,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 _STATIC = _REPO_ROOT / "demo" / "static"
 _EVIDENCE = _REPO_ROOT / "demo" / "evidence"
 _REPO_URL = "https://github.com/Starryyu77/techjam-shopping-agent-v1"
-_BRANCH_URL = _REPO_URL + "/tree/feature/aggressive-v2"
+_SOURCE_URL = _REPO_URL
 
 
 def build_static_site(output: Path) -> None:
@@ -37,9 +37,9 @@ def build_static_site(output: Path) -> None:
         'src="/tour.js"': 'src="./tour.js"',
         'href="/tour"': 'href="./"',
         'href="/evidence"': 'href="./?step=4"',
-        '<a href="/sandbox">Sandbox</a>': f'<a href="{_BRANCH_URL}" target="_blank" rel="noopener">Source</a>',
-        'href="/report"': f'href="{_REPO_URL}/blob/feature/aggressive-v2/REPORT.md"',
-        'href="/reproduce"': f'href="{_BRANCH_URL}#setup-and-run-any-os-macos--linux--windows"',
+        '<a href="/sandbox">Sandbox</a>': f'<a href="{_SOURCE_URL}" target="_blank" rel="noopener">Source</a>',
+        'href="/report"': f'href="{_REPO_URL}/blob/main/REPORT.md"',
+        'href="/reproduce"': f'href="{_SOURCE_URL}#quick-start"',
     }
     for source, target in replacements.items():
         html = html.replace(source, target)
