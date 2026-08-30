@@ -73,28 +73,51 @@ class DemoState:
         self.ad_campaigns: list[dict] = []
         self._seed_demo_campaigns()
 
+    def _pick_ad_product(self, term: str):
+        """Pick a catalog product that PLAUSIBLY matches the advertiser's target term.
+
+        Substring LIKE alone grabs nonsense (a tin box whose blurb mentions
+        "headphone"). We rank by how prominently the term appears in the title:
+        title starting with the term > term as an early word > later mention, and
+        only accept a genuinely relevant hit.
+        """
+        term = (term or "").strip().lower()
+        if not term:
+            return None
+        rows = self.agent.search.connection.execute(
+            "SELECT parent_asin, title, store, price FROM products "
+            "WHERE lower(title) LIKE ? AND price IS NOT NULL LIMIT 200",
+            (f"%{term}%",),
+        ).fetchall()
+        best, best_rank = None, 1e9
+        for asin, title, store, price in rows:
+            low = (title or "").lower()
+            pos = low.find(term)
+            if pos < 0:
+                continue
+            # earlier = more prominent; strongly prefer term within the first ~25 chars.
+            rank = pos + (0 if pos < 25 else 500)
+            if rank < best_rank:
+                best, best_rank = (asin, title, store, price), rank
+        # reject weak matches (term only appears deep in a long title)
+        if best is None or best_rank >= 500:
+            return None
+        return best
+
     def _seed_demo_campaigns(self) -> None:
         # Pull a few real catalog products to act as demo "sponsored" inventory.
         seeds = [
-            ("running shoes", ["running", "shoe", "sneaker", "gym", "athletic"]),
-            ("jacket", ["jacket", "coat", "outerwear", "waterproof"]),
-            ("t-shirt", ["shirt", "tee", "t-shirt", "cotton"]),
+            ("Sneaker", ["running", "shoe", "sneaker", "gym", "athletic", "trainer"], "PaceLab", 1.20),
+            ("Jacket", ["jacket", "coat", "outerwear", "waterproof"], "NorthPeak", 0.95),
+            ("T-Shirt", ["shirt", "tee", "t-shirt", "cotton", "top"], "PureThread", 0.60),
         ]
-        for label, keywords in seeds:
-            row = self.agent.search.connection.execute(
-                "SELECT parent_asin, title, store, price FROM products "
-                "WHERE lower(title) LIKE ? AND price IS NOT NULL ORDER BY price LIMIT 1",
-                (f"%{label.split()[0]}%",),
-            ).fetchone()
-            if row:
+        for term, keywords, advertiser, bid in seeds:
+            best = self._pick_ad_product(term)
+            if best:
                 self.ad_campaigns.append({
-                    "id": uuid.uuid4().hex[:8],
-                    "advertiser": {"running shoes": "PaceLab", "jacket": "NorthPeak",
-                                   "t-shirt": "PureThread"}.get(label, "BrandX"),
-                    "keywords": keywords,
-                    "bid": {"running shoes": 1.20, "jacket": 0.95, "t-shirt": 0.60}.get(label, 0.50),
-                    "active": True,
-                    "parent_asin": row[0], "title": row[1], "store": row[2], "price": row[3],
+                    "id": uuid.uuid4().hex[:8], "advertiser": advertiser,
+                    "keywords": keywords, "bid": bid, "active": True,
+                    "parent_asin": best[0], "title": best[1], "store": best[2], "price": best[3],
                     "impressions": 0,
                 })
 
@@ -215,7 +238,34 @@ class DemoState:
             return self._chat_reply(session_id, "clarify", text, top_k)
 
         # 3) Genuine shopping message -> the UNCHANGED scoring agent.
-        return self.agent.respond(session_id, message, top_k=top_k)
+        res = self.agent.respond(session_id, message, top_k=top_k)
+        # Demo-only polish: the scoring agent (correctly) returns a terse
+        # "not confident enough" line for off-topic / unparseable input. We keep
+        # its state/recommendations exactly, but present a friendlier redirect so
+        # the demo reads like an assistant. This does NOT change the scored path.
+        intent = res.get("intent", {}) or {}
+        di = intent.get("domain_intent")
+        msg_l = (res.get("message") or "")
+        terse = "not confident enough" in msg_l or "还不能确定" in msg_l
+        if di == "IRRELEVANT" or terse:
+            if has_category:
+                res["message"] = (
+                    "That's a bit outside what I can help with, but I've kept your "
+                    "shopping in progress. Tell me another preference and I'll refine, "
+                    "or say 'just recommend something'."
+                    if en else
+                    "这个我帮不上忙，不过你的购物进度我保留着。告诉我别的偏好我就继续筛，"
+                    "或者直接说“你推荐吧”。"
+                )
+            else:
+                res["message"] = (
+                    "I'm best at finding products. Tell me a category and any "
+                    "preferences — or say 'just recommend something' and I'll start."
+                    if en else
+                    "我最擅长帮你找商品。告诉我一个品类加上偏好——或者直接说“你推荐吧”，"
+                    "我就开始。"
+                )
+        return res
 
     def _chat_reply(self, session_id: str, act: str, text: str, top_k: int) -> dict:
         prev = self.agent.last_results.get(session_id, [])
@@ -325,13 +375,13 @@ def make_handler(demo: DemoState):
             if self.path == "/api/ads":
                 # Create a new demo campaign. Advertiser targets keywords with a bid.
                 title_like = str(payload.get("target", "")).strip()
-                row = demo.agent.search.connection.execute(
-                    "SELECT parent_asin, title, store, price FROM products "
-                    "WHERE lower(title) LIKE ? AND price IS NOT NULL ORDER BY price LIMIT 1",
-                    (f"%{title_like.lower()}%",),
-                ).fetchone() if title_like else None
+                row = demo._pick_ad_product(title_like) if title_like else None
                 if not row:
-                    return self._send_json({"error": "no catalog product matched target"}, 400)
+                    return self._send_json(
+                        {"error": f"no clearly-matching catalog product for target '{title_like}'. "
+                                  "Try a term that appears in product titles, e.g. jacket, sneaker, hoodie, watch, bag."},
+                        400,
+                    )
                 campaign = {
                     "id": uuid.uuid4().hex[:8],
                     "advertiser": str(payload.get("advertiser", "DemoBrand"))[:40],
