@@ -43,9 +43,26 @@ def _resolve_catalog(cli: str | None) -> Path:
 
 
 class DemoState:
-    def __init__(self, catalog: Path) -> None:
-        # Rules backend keeps the demo fully offline and deterministic.
-        self.agent = RealWorldShoppingAgent(str(catalog), intent_backend="rules")
+    def __init__(
+        self,
+        catalog: Path,
+        *,
+        intent_backend: str = "rules",
+        model_endpoint: str | None = None,
+        model_name: str = "qwen3-8b",
+    ) -> None:
+        # Default: rules backend keeps the demo fully offline and deterministic.
+        # Optional: intent_backend="hybrid" + model_endpoint enables the local LLM
+        # intent layer for open natural language. HybridIntentParser degrades to
+        # rules automatically if the model is unavailable, so the demo never breaks.
+        self.agent = RealWorldShoppingAgent(
+            str(catalog),
+            intent_backend=intent_backend,
+            model_endpoint=model_endpoint,
+            model_name=model_name,
+        )
+        self.intent_backend = intent_backend
+        self.model_endpoint = model_endpoint
 
     def title_of(self, asin: str) -> str:
         row = self.agent.search.connection.execute(
@@ -154,12 +171,26 @@ def main() -> None:
     parser.add_argument("--catalog", default=None)
     parser.add_argument("--host", default="127.0.0.1")
     parser.add_argument("--port", type=int, default=8000)
+    parser.add_argument("--intent-backend", default=os.environ.get("DEMO_INTENT_BACKEND", "rules"),
+                        choices=["rules", "hybrid", "model"],
+                        help="rules (offline default) | hybrid (rules + LLM fallback) | model")
+    parser.add_argument("--model-endpoint", default=os.environ.get("DEMO_MODEL_ENDPOINT"),
+                        help="localhost OpenAI-compatible endpoint, e.g. http://127.0.0.1:8100/v1/chat/completions")
+    parser.add_argument("--model-name", default=os.environ.get("DEMO_MODEL_NAME", "qwen3-8b"))
     args = parser.parse_args()
     catalog = _resolve_catalog(args.catalog)
     if not catalog.is_file():
         raise SystemExit(f"catalog not found: {catalog} (set --catalog or TECHJAM_CATALOG)")
     print(f"Loading catalog {catalog} ...", flush=True)
-    demo = DemoState(catalog)
+    demo = DemoState(
+        catalog,
+        intent_backend=args.intent_backend,
+        model_endpoint=args.model_endpoint,
+        model_name=args.model_name,
+    )
+    print(f"Intent backend: {args.intent_backend}"
+          + (f" (LLM @ {args.model_endpoint})" if args.model_endpoint else " (offline rules)"),
+          flush=True)
     # Single-threaded: the in-memory SQLite connection is thread-affine, and a
     # demo needs no concurrency. Requests are serialized, which is fine here.
     server = HTTPServer((args.host, args.port), make_handler(demo))
