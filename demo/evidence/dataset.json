@@ -1,0 +1,46 @@
+{
+  "source": "Amazon Reviews 2023",
+  "category": "Clothing_Shoes_and_Jewelry",
+  "catalog_size": 50000,
+  "public_sessions": 200,
+  "private_sessions": 800,
+  "max_turns": 10,
+  "catalog_read_only": true,
+  "scored_identifier": "parent_asin",
+  "scenario_mix": {
+    "buying": {
+      "count": 80,
+      "percentage": 40,
+      "description": "Hard constraint disclosed early"
+    },
+    "browsing": {
+      "count": 80,
+      "percentage": 40,
+      "description": "Customer begins vague"
+    },
+    "intent_override": {
+      "count": 30,
+      "percentage": 15,
+      "description": "Earlier preference replaced on turn 3-4"
+    },
+    "boundary": {
+      "count": 10,
+      "percentage": 5,
+      "description": "User has no preference for requested attribute"
+    }
+  },
+  "visible_fields": [
+    "parent_asin",
+    "title",
+    "features",
+    "description",
+    "price",
+    "categories",
+    "details",
+    "average_rating",
+    "rating_number",
+    "store"
+  ],
+  "scoring_formula": "TechnicalScore = 0.50 × HitRate@10 + 0.30 × MRR + 0.20 × Efficiency",
+  "efficiency_formula": "Efficiency = clip((11 - MTTC) / 10, 0, 1)"
+}

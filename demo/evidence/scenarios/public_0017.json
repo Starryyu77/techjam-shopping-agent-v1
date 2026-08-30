@@ -1,0 +1,389 @@
+{
+  "sample_id": "public_0017",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B089RXP8K2",
+  "target_title": "Travelambo Womens Wallet RFID Blocking Bifold Multi Card Case Wallet with Zipper Pocket",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Wallets, Card Cases & Money Organizers",
+    "Wallets"
+  ],
+  "target_price": 13.59,
+  "target_rating": 4.5,
+  "target_rating_number": 67491,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Card Cases & Money Organizers Wallets. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Card Cases & Money Organizers Wallets",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Card Cases & Money Organizers Wallets",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081TWX2LR",
+          "title": "Timberland Men's Leather RFID Blocking Passcase Security Wallet",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07HFVBK9Z",
+          "title": "APHISON Womens Wallets RFID Blocking Leather Clutch Long Wallet for Women Card Holder Phone Organizer Ladies Travel Purs",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0873CNY44",
+          "title": "STAY FINE Top Grain Leather Trifold Wallet for Men | Ultra Strong Stitching | Handcrafted Argentinian Leather | RFID Blo",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09GKNS3DB",
+          "title": "Hawanik Slim Bifold Wallet for AirTag with Spring Money Clip, Mens Minimalist Bifold Wallet with Built-in Holder for Air",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00PUBC598",
+          "title": "Big Skinny Men's Super Skinny Bi-Fold Slim Wallet, Holds Up to 30 Cards",
+          "price": 20.36,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08HCNGM1G",
+          "title": "Womens RFID Blocking Genuine Leather Wallets Detachable Wristlet Clutch Vintage Wallet Multi Card Holder Travel Purse Bl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06XJ5ZTN5",
+          "title": "S-ZONE Women RFID Blocking Genuine Leather Wallet Trifold Card Organizer Purse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WN1Z5WT",
+          "title": "KOOSOM Money Clip Slim Wallets for Men Front Pocket RFID Wallet Minimalist Card Holder,Dark Blue",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07PJ74236",
+          "title": "YALUXE Women's RFID Blocking Small Compact Leather Wallet Ladies Mini Purse with ID Window",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07XB1LWHG",
+          "title": "SHUIBIAN Women's RFID Blocking Genuine Leather Clutch Wallet Multi Card Holder Organizer Ladies Purse with Zipper Pocket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Card Cases & Money Organizers Wallets",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081TWX2LR",
+          "title": "Timberland Men's Leather RFID Blocking Passcase Security Wallet",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07HFVBK9Z",
+          "title": "APHISON Womens Wallets RFID Blocking Leather Clutch Long Wallet for Women Card Holder Phone Organizer Ladies Travel Purs",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0873CNY44",
+          "title": "STAY FINE Top Grain Leather Trifold Wallet for Men | Ultra Strong Stitching | Handcrafted Argentinian Leather | RFID Blo",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09GKNS3DB",
+          "title": "Hawanik Slim Bifold Wallet for AirTag with Spring Money Clip, Mens Minimalist Bifold Wallet with Built-in Holder for Air",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00PUBC598",
+          "title": "Big Skinny Men's Super Skinny Bi-Fold Slim Wallet, Holds Up to 30 Cards",
+          "price": 20.36,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08HCNGM1G",
+          "title": "Womens RFID Blocking Genuine Leather Wallets Detachable Wristlet Clutch Vintage Wallet Multi Card Holder Travel Purse Bl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06XJ5ZTN5",
+          "title": "S-ZONE Women RFID Blocking Genuine Leather Wallet Trifold Card Organizer Purse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WN1Z5WT",
+          "title": "KOOSOM Money Clip Slim Wallets for Men Front Pocket RFID Wallet Minimalist Card Holder,Dark Blue",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07PJ74236",
+          "title": "YALUXE Women's RFID Blocking Small Compact Leather Wallet Ladies Mini Purse with ID Window",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07XB1LWHG",
+          "title": "SHUIBIAN Women's RFID Blocking Genuine Leather Clutch Wallet Multi Card Holder Organizer Ladies Purse with Zipper Pocket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: red; Leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Card Cases & Money Organizers Wallets",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "red"
+          ],
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ],
+            "color": [
+              "red"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00CORDTWI",
+          "title": "Visconti Bermuda RB100 Multi Color Womens Soft Leather Large Wallet/Purse/Clutch (Red)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B9ZYDDZ1",
+          "title": "Buffway Slim Minimalist Front Pocket RFID Blocking Leather Wallets for Men Women",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B089RXP8K2",
+          "title": "Travelambo Womens Wallet RFID Blocking Bifold Multi Card Case Wallet with Zipper Pocket",
+          "price": 13.59,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0C31KQH8P",
+          "title": "SERMAN BRANDS RFID Blocking Slim Bifold Genuine Leather Minimalist Front Pocket Wallets for Men with Money Clip Thin Men",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08GPGX2QG",
+          "title": "SENDEFN Wallets for Women Genuine Leather Credit Card Holder with RFID Blocking Large Capacity Wristlet",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B081TWX2LR",
+          "title": "Timberland Men's Leather RFID Blocking Passcase Security Wallet",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C3CRDQQG",
+          "title": "Zitahli Mens-Wallet-Slim-Leather-RFID Blocking Wallet for Men Minimalist Bifold Credit Card Holder with Gift Box",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BNYK4FJX",
+          "title": "Zitahli Wallet Men-Magnetic Money Clip-Slim and Minimalist Card Case-ID Window Front Pocket Wallet Gift Boxing Black",
+          "price": 17.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HFVBK9Z",
+          "title": "APHISON Womens Wallets RFID Blocking Leather Clutch Long Wallet for Women Card Holder Phone Organizer Ladies Travel Purs",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0873CNY44",
+          "title": "STAY FINE Top Grain Leather Trifold Wallet for Men | Ultra Strong Stitching | Handcrafted Argentinian Leather | RFID Blo",
+          "price": 29.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Travelambo Womens Wallet RFID Blocking Bifold Multi Card Case Wallet with Zipper Pocket",
+    "hard_constraints": [
+      "leather",
+      "color: red"
+    ],
+    "soft_preferences": [
+      "Leather",
+      "Leather lining"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material"
+    ]
+  }
+}

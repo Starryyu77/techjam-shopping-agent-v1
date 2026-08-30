@@ -1,0 +1,363 @@
+{
+  "sample_id": "public_0089",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B0BXMCZLZV",
+  "target_title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Panties",
+    "Briefs"
+  ],
+  "target_price": null,
+  "target_rating": 4.3,
+  "target_rating_number": 13028,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Panties Briefs. Elastic closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Panties Briefs",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Panties Briefs"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07X9V6HZX",
+          "title": "POKARLA Women's High Waisted Cotton Underwear Soft Breathable Panties Stretch Briefs Regular & Plus Size 5-Pack",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BXMCZLZV",
+          "title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08BJS2JMQ",
+          "title": "Jockey Women's Underwear Seamfree Breathe French Cut - 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B002B23SK4",
+          "title": "Warner's Women's Petite No Wedgies No Worries Modern Brief Panty",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B077ZK6163",
+          "title": "Amazon Brand - Arabella Women's Seamless Hi Cut Brief Panty, 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CVRVG72",
+          "title": "Finihen Women Underwear Leak Proof Panties Big Girls Protective Undies Women Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T5ZMVFN",
+          "title": "CLISAKUUM Women's Underwear Cotton Breathable Stretchy Hipster Cheeky Underwear For Women Multi-pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08B53WF9L",
+          "title": "Senllori Women Cotton Underwear Mid-High Waist Briefs Plus Size Ladies Panties Multipack",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Panties Briefs",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07X9V6HZX",
+          "title": "POKARLA Women's High Waisted Cotton Underwear Soft Breathable Panties Stretch Briefs Regular & Plus Size 5-Pack",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BXMCZLZV",
+          "title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08BJS2JMQ",
+          "title": "Jockey Women's Underwear Seamfree Breathe French Cut - 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B002B23SK4",
+          "title": "Warner's Women's Petite No Wedgies No Worries Modern Brief Panty",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B077ZK6163",
+          "title": "Amazon Brand - Arabella Women's Seamless Hi Cut Brief Panty, 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CVRVG72",
+          "title": "Finihen Women Underwear Leak Proof Panties Big Girls Protective Undies Women Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T5ZMVFN",
+          "title": "CLISAKUUM Women's Underwear Cotton Breathable Stretchy Hipster Cheeky Underwear For Women Multi-pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08B53WF9L",
+          "title": "Senllori Women Cotton Underwear Mid-High Waist Briefs Plus Size Ladies Panties Multipack",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: nylon.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Panties Briefs",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "nylon"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "nylon"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07X9V6HZX",
+          "title": "POKARLA Women's High Waisted Cotton Underwear Soft Breathable Panties Stretch Briefs Regular & Plus Size 5-Pack",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BXMCZLZV",
+          "title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07QDMXPLD",
+          "title": "ATTRACO Women's Underwear Soft Lace Hipster Panties Stretch Nylon Mid-Rise Briefs 4 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B077TNDGRQ",
+          "title": "ATTRACO Women's Underwear Soft Lace Hipster Panties Stretch Nylon Mid-Rise Briefs 4 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08BJS2JMQ",
+          "title": "Jockey Women's Underwear Seamfree Breathe French Cut - 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B002B23SK4",
+          "title": "Warner's Women's Petite No Wedgies No Worries Modern Brief Panty",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B077ZK6163",
+          "title": "Amazon Brand - Arabella Women's Seamless Hi Cut Brief Panty, 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08CVRVG72",
+          "title": "Finihen Women Underwear Leak Proof Panties Big Girls Protective Undies Women Briefs",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+    "hard_constraints": [
+      "nylon",
+      "100% Nylon"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Elastic closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Elastic closure",
+      "new_value": "nylon",
+      "message": "Actually, ignore my earlier preference. What I need is: nylon."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "fit",
+      "durability"
+    ]
+  }
+}

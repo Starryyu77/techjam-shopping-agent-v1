@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0199",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B089M57PSQ",
+  "target_title": "Boboking 100% Cotton Little Boys Briefs Soft Dinosaur Truck Toddler Underwear",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boys",
+    "Clothing",
+    "Underwear",
+    "Briefs"
+  ],
+  "target_price": 22.99,
+  "target_rating": 4.8,
+  "target_rating_number": 8314,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Underwear Briefs. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Underwear Briefs",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Underwear Briefs",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B089M57PSQ",
+          "title": "Boboking 100% Cotton Little Boys Briefs Soft Dinosaur Truck Toddler Underwear",
+          "price": 22.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B34ZFDTM",
+          "title": "True Religion Mens Boxer Briefs – Trunks Underwear for Men Pack, 6-Pack",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08JHP7NJ3",
+          "title": "Little bety Baby Soft Cotton Boys Underwear Dinosaur Truck Toddler Kids Briefs Assorted",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07TX7G1NZ",
+          "title": "OPIBOO Women's Cotton Underwear,Soft Underwear Women Briefs,Ladies Comfort Breathable Underwear Briefs Panties (Multicol",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06XQL9ZZ7",
+          "title": "Hanes Mens Tagless No Ride Up Briefs with Comfort Flex Waistband 7-Pack(2252P7) (4X Plus, White)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Y9TCR1P",
+          "title": "Swbreety Men’s Cotton Jockstrap Low Rise Bulge Thong Stretch Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BH113WW9",
+          "title": "Hanes Boxer Briefs, Cool Dri Moisture-Wicking Underwear, Cotton No-Ride-up for Men, Multi-Packs Available",
+          "price": 25.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07Z6J5N6Y",
+          "title": "Amazon Essentials Women's Cotton Bikini Brief Underwear (Available in Plus Size), Multipacks",
+          "price": 12.72,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BT8T2FQ3",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+          "price": 18.48,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Boboking 100% Cotton Little Boys Briefs Soft Dinosaur Truck Toddler Underwear",
+    "hard_constraints": [
+      "cotton",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Machine Wash",
+      "100% Cotton Size:3T (2-3), 4T (3-4), 5 (5-6), 6 (6-7), 8 (7-8), 10 (9-10), 12 (10-12)"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

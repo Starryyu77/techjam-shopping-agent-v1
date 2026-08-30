@@ -1,0 +1,507 @@
+{
+  "sample_id": "public_0013",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B0C65TFM9F",
+  "target_title": "Vionic Women's Gemma",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 9763,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers. YOUR NEW FAVORITE SLIPPERS: Slip into divine comfort with Gemma, a plush mule-style spa slipper with an adjustable hook-and-loop closure across the vamp",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "comfortable",
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers",
+          "soft_preferences": {
+            "feature": [
+              "adjustable",
+              "comfortable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WK5D8T9",
+          "title": "Lulex Moccasins for Men House Slippers Indoor Outdoor Plush Mens Bedroom Shoes with Hard Sole",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08D8MYFWK",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08D8KKJYM",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "comfortable",
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable",
+              "comfortable"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WK5D8T9",
+          "title": "Lulex Moccasins for Men House Slippers Indoor Outdoor Plush Mens Bedroom Shoes with Hard Sole",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08D8MYFWK",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08D8KKJYM",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Rubber sole; Textile Upper. Textile Covered EVA Footbed. Rubber Outsole.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "comfortable",
+            "adjustable"
+          ],
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable",
+              "comfortable"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08MV1VVKR",
+          "title": "NineCiFun Women's Slip on Fuzzy House Slippers Memory Foam Slippers Scuff Outdoor Indoor Warm Plush Bedroom Shoes with F",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WK5D8T9",
+          "title": "Lulex Moccasins for Men House Slippers Indoor Outdoor Plush Mens Bedroom Shoes with Hard Sole",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08D8MYFWK",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08D8KKJYM",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Rubber sole.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable",
+              "comfortable"
+            ]
+          }
+        },
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08MV1VVKR",
+          "title": "NineCiFun Women's Slip on Fuzzy House Slippers Memory Foam Slippers Scuff Outdoor Indoor Warm Plush Bedroom Shoes with F",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BY1MFJBZ",
+          "title": "ONCAI Women’s-House-Slippers-Winter-Fluffy-Slipper-for-Women Knitted Fleece Memory Foam Slip-on Cozy Warm Outdoor Lady F",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B083GJLR7H",
+          "title": "MERRIMAC Men's Cozy Knit Moccasin Slippers Coral Fleece Lined House Shoes With Removable Insole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CYV9MSH",
+          "title": "LIGHTEN Unisex Garden Clogs Shoes Slippers for Men Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08CY151NM",
+          "title": "Mishansha Men’s Women‘s Comfy Slippers House Shoes Slip on Memory Foam Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07ZSDWSZZ",
+          "title": "Snug Leaves Women's Fuzzy Woolen Memory Foam Slippers with Dual Side Elastic Gores",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Vionic Women's Gemma",
+    "hard_constraints": [
+      "Rubber sole",
+      "Textile Upper. Textile Covered EVA Footbed. Rubber Outsole"
+    ],
+    "soft_preferences": [
+      "Received APMA (American Podiatric Medical Association) Seal of Acceptance",
+      "YOUR NEW FAVORITE SLIPPERS: Slip into divine comfort with Gemma, a plush mule-style spa slipper with an adjustable hook-and-loop closure across the vamp"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "YOUR NEW FAVORITE SLIPPERS: Slip into divine comfort with Gemma, a plush mule-style spa slipper with an adjustable hook-and-loop closure across the vamp",
+      "new_value": "Rubber sole",
+      "message": "Actually, ignore my earlier preference. What I need is: Rubber sole."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "comfort",
+      "material"
+    ]
+  }
+}

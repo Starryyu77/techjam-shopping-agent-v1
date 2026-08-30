@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0114",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07H34Z5V6",
+  "target_title": "Athlefit Women's Wedge Sneakers Hidden Heel Platform Wedge Booties Hidden Wedgie Sneakers",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "target_price": 45.99,
+  "target_rating": 4.3,
+  "target_rating_number": 8602,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Fashion Sneakers. A key requirement is: Rubber sole.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes",
+          "hard_constraints": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01HSMYV8E",
+          "title": "Saucony Women's Cohesion 10 Running Shoe",
+          "price": 49.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07H34Z5V6",
+          "title": "Athlefit Women's Wedge Sneakers Hidden Heel Platform Wedge Booties Hidden Wedgie Sneakers",
+          "price": 45.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BKR754VG",
+          "title": "Roxy Women's Minnow Slip on Sneaker Shoe",
+          "price": 35.36,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00LI6P44W",
+          "title": "K-Swiss Men's Classic Vn Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00XV4NPEU",
+          "title": "Saucony Originals Men's Jazz Low Pro Classic Retro Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00TT6TY6M",
+          "title": "Skechers Sport Women's Elite Synergy Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YFGYH68",
+          "title": "Concept 3 by Skechers Men's Xavien Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07D8Y7KX9",
+          "title": "Tommy Hilfiger Women's Essential Nautical Low-Top Sneakers",
+          "price": 96.71,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B003B345O0",
+          "title": "Skechers Sport Women's Hot Ticket Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Athlefit Women's Wedge Sneakers Hidden Heel Platform Wedge Booties Hidden Wedgie Sneakers",
+    "hard_constraints": [
+      "Rubber sole",
+      "Great go-to shoes with multicolor choice and steady design suitable for all age"
+    ],
+    "soft_preferences": [
+      "Take a natural step forward with a clean look, for sure go with your daily t-shirt and jeans, jackets,casual midi dress,any outfit you have",
+      "Anti slip and durable rubber sole and cushioned insole keeps your balance at all time so you can enjoy any type of activity,walking,playing"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "style",
+      "comfort",
+      "material"
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0066",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BFLFSB2Y",
+  "target_title": "GRAPENT Women's Plus Size Sequin 3/4 Sleeves Evening Gown Party Long Maxi Dress",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses",
+    "Formal"
+  ],
+  "target_price": 63.99,
+  "target_rating": 4.0,
+  "target_rating_number": 3419,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Dresses Formal. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {
+          "style": [
+            "formal"
+          ],
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ],
+            "style": [
+              "formal"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B098NC175C",
+          "title": "XUIBOL Womens Maxi Formal Dress,Shinny Sequin Slip Backless Long Party Evening Gown Maxi Wedding Dresses Brown",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFLFSB2Y",
+          "title": "GRAPENT Women's Plus Size Sequin 3/4 Sleeves Evening Gown Party Long Maxi Dress",
+          "price": 63.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B016FNPXR0",
+          "title": "Vanilla Bay Women's Strapless Full Length Maxi Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0185HDV0A",
+          "title": "KOH KOH Womens Long Sleeve V-Neck High Slit Cocktail Evening Gown Maxi Dress",
+          "price": 34.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07S82FG4N",
+          "title": "Clothink Women White Floral Print Gauze Panel Multi Layer Sleeveless Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09BCX1RXZ",
+          "title": "Wgooyheya Women One Shoulder Hollow Slit Long Dress Elegant Sleeveless High Waist Party Ruched Maxi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Z33FZ9W",
+          "title": "YiZYiF Chiffon Applique One Shoulder Long Bridesmaids Party Dress",
+          "price": 33.45,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07H7CQTF7",
+          "title": "Mmondschein Women's Vintage Halter Wedding Bridesmaid Evening Long Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09263SC1G",
+          "title": "Lovinchic Women's Casual V Neck Maxi Dress Flowy Button Down Long Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RWZDSM1",
+          "title": "meilun Women's Maxi Bandage Dress Fishtail Bodycon Formal Evening Dresses",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "GRAPENT Women's Plus Size Sequin 3/4 Sleeves Evening Gown Party Long Maxi Dress",
+    "hard_constraints": [
+      "polyester",
+      "96% Polyester, 4% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "performance"
+    ]
+  }
+}

@@ -1,0 +1,367 @@
+{
+  "sample_id": "public_0139",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B09SGYPW3M",
+  "target_title": "OFEEFAN Womens Tops Ruffle Short Sleeve V Neck T-Shirts Casual Loose Fit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "T-Shirts"
+  ],
+  "target_price": 24.99,
+  "target_rating": 4.3,
+  "target_rating_number": 4110,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses T-Shirts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GVGG7VS",
+          "title": "GADEWAKE Womens Casual Floral Print Color Block Short Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B088FGHKZJ",
+          "title": "BLACKMYTH Women Cute Graphic T Shirts Summer Tops",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08998MZTY",
+          "title": "GAMISOTE Women's Cold Shoulder T Shirts Funny Graphic Cutout High Neck Short Sleeve Tees Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B095P8KSH3",
+          "title": "BALENNZ Womens Short Sleeve Shirts - Athletic Crewneck Summer Casual Tops Loose Fit Basic Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B099DPVWF9",
+          "title": "HEOXYZ Women's Short Sleeve Leopard Color Block Shirts Casual Round Neck Striped Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08HPM5PX1",
+          "title": "FOWSMON Womens Basic Long Sleeve T Shirt Comfy Layer Scoop Neck Tee Shirts Solid Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08XJZCW18",
+          "title": "Aiopr Women’s Plus Size T Shirts V Neck Henley Casual Summer Solid Loose Pocket Tees Tunic Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B091PYS9P3",
+          "title": "ZIWOCH Women's Graphic Tees Funny Summer Short Sleeve Crewneck Tops Nope Not Today Tshirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GVGG7VS",
+          "title": "GADEWAKE Womens Casual Floral Print Color Block Short Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B088FGHKZJ",
+          "title": "BLACKMYTH Women Cute Graphic T Shirts Summer Tops",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08998MZTY",
+          "title": "GAMISOTE Women's Cold Shoulder T Shirts Funny Graphic Cutout High Neck Short Sleeve Tees Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B095P8KSH3",
+          "title": "BALENNZ Womens Short Sleeve Shirts - Athletic Crewneck Summer Casual Tops Loose Fit Basic Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B099DPVWF9",
+          "title": "HEOXYZ Women's Short Sleeve Leopard Color Block Shirts Casual Round Neck Striped Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08HPM5PX1",
+          "title": "FOWSMON Womens Basic Long Sleeve T Shirt Comfy Layer Scoop Neck Tee Shirts Solid Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08XJZCW18",
+          "title": "Aiopr Women’s Plus Size T Shirts V Neck Henley Casual Summer Solid Loose Pocket Tees Tunic Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B091PYS9P3",
+          "title": "ZIWOCH Women's Graphic Tees Funny Summer Short Sleeve Crewneck Tops Nope Not Today Tshirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: fabric; Fabric: 35%Rayon,60% Polyester and 5% Spandex,very soft and comfortable for spring and summer.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "fabric",
+            "polyester",
+            "spandex"
+          ],
+          "feature": [
+            "soft",
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "fabric",
+              "polyester",
+              "spandex"
+            ],
+            "feature": [
+              "comfortable",
+              "soft"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09SGYPW3M",
+          "title": "OFEEFAN Womens Tops Ruffle Short Sleeve V Neck T-Shirts Casual Loose Fit",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09WR1NZ48",
+          "title": "Graphic Tees for Women Short Sleeve Tshirts,Womens Summer Tops Crewneck Shirt Blouse",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B074K2QX3M",
+          "title": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0882N8H6Y",
+          "title": "Sedimond Women's Cold Shoulder Casual Short Sleeve Tunic Tops Loose Blouse Shirt S-2XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08B4CVDQ4",
+          "title": "CUNLIN Womens T Shirts for Women Leopard Polka Dot Striped Color Block Plain Basic Tees Tops XS-3XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "OFEEFAN Womens Tops Ruffle Short Sleeve V Neck T-Shirts Casual Loose Fit",
+    "hard_constraints": [
+      "fabric",
+      "Fabric: 35%Rayon,60% Polyester and 5% Spandex,very soft and comfortable for spring and summer"
+    ],
+    "soft_preferences": [
+      "Cute ruffle sleeve tops for spring summer and fall, pull on and down closure",
+      "Care: Machine or hand wash in cold water, no bleach, no dry clean, hang or line dry, low iron if need"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort",
+      "durability"
+    ]
+  }
+}

@@ -1,0 +1,711 @@
+{
+  "sample_id": "public_0076",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07XT6PLTB",
+  "target_title": "Proud Army Girlfriend US Flag Dog Tags Pride Military Lovers Zip Hoodie",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Women",
+    "Hoodies"
+  ],
+  "target_price": 36.85,
+  "target_rating": 5.0,
+  "target_rating_number": 3,
+  "hit": true,
+  "first_hit_turn": 6,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 6,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Hoodies, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Hoodies"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07NW1L9TR",
+          "title": "Nautica Women's Go-to Signature Cotton Full-Zip Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WRDLKK1",
+          "title": "FINWANLO Sweatshirt Dress Women Pullover Hoodie Dresses Long Sleeve Casual Hooded Tunic Tops with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07FLZKLSD",
+          "title": "Kimmery Woman Long Sleeve Heaps Collar Double Pockets Loose Fitting Tunic",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08GK28TC9",
+          "title": "Temofon Women's Sweatshirt Zip Up Long Sleeve Solid Color Hoodies Casual Sweatshirts with Pocket S-XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HLZZH2W",
+          "title": "Bob Ross No Mistakes Just Happy Accidents 100% Authentic Graphic Hoodie/Pullover for Men and Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07KRGX1ZD",
+          "title": "COPPEN Womens Coat Side Button Fluffy Tail Tops Hooded Loose Warm Pullover Sweater",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09J1BYL98",
+          "title": "FNAF Party Lightweight Hoodie Women Hoodie Cat Ear Hooded Sweatshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B071LCVJ59",
+          "title": "Natural Underwear Mickey Minnie Mouse Hoodies Magic Kingdom Hooded Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08VR8ZKFV",
+          "title": "ARMADIO Women's zip up hoodie l workout hoodie for women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07NW1L9TR",
+          "title": "Nautica Women's Go-to Signature Cotton Full-Zip Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WRDLKK1",
+          "title": "FINWANLO Sweatshirt Dress Women Pullover Hoodie Dresses Long Sleeve Casual Hooded Tunic Tops with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07FLZKLSD",
+          "title": "Kimmery Woman Long Sleeve Heaps Collar Double Pockets Loose Fitting Tunic",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08GK28TC9",
+          "title": "Temofon Women's Sweatshirt Zip Up Long Sleeve Solid Color Hoodies Casual Sweatshirts with Pocket S-XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HLZZH2W",
+          "title": "Bob Ross No Mistakes Just Happy Accidents 100% Authentic Graphic Hoodie/Pullover for Men and Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07KRGX1ZD",
+          "title": "COPPEN Womens Coat Side Button Fluffy Tail Tops Hooded Loose Warm Pullover Sweater",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09J1BYL98",
+          "title": "FNAF Party Lightweight Hoodie Women Hoodie Cat Ear Hooded Sweatshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B071LCVJ59",
+          "title": "Natural Underwear Mickey Minnie Mouse Hoodies Magic Kingdom Hooded Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08VR8ZKFV",
+          "title": "ARMADIO Women's zip up hoodie l workout hoodie for women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; color: grey.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ],
+          "color": [
+            "gray"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07JVQWCCH",
+          "title": "Women Cardigan Clearance,Sunyastor Long Sleeve Zip Up Down Hooded Fluffy Coat Outwear Hooded Draped Pockets Jacket Parka",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07NW1L9TR",
+          "title": "Nautica Women's Go-to Signature Cotton Full-Zip Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07H33Y11B",
+          "title": "HomeTop Women's Cozy Cashmere Cotton Closed Toe House Slippers with Cute Bow Accent",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B017AS63UA",
+          "title": "Match Men's Cargo Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07FLZKLSD",
+          "title": "Kimmery Woman Long Sleeve Heaps Collar Double Pockets Loose Fitting Tunic",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08JGCSHXP",
+          "title": "Amorbella Womens Cotton Thermal Underwear Long Johns Base Layer Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08GK28TC9",
+          "title": "Temofon Women's Sweatshirt Zip Up Long Sleeve Solid Color Hoodies Casual Sweatshirts with Pocket S-XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08BS13RKM",
+          "title": "LongBay Men's Comfy Cotton Knit Slippers Breathable Memory Foam Slip On Clogs",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "For that, what matters is: Imported.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ],
+          "color": [
+            "gray"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07NW1L9TR",
+          "title": "Nautica Women's Go-to Signature Cotton Full-Zip Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BCL6WT2B",
+          "title": "Death Metal Rainbow Sarcastic Graphic Tshirt for Adults Men & Women Metal Shirt",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B071LCVJ59",
+          "title": "Natural Underwear Mickey Minnie Mouse Hoodies Magic Kingdom Hooded Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01N6E9OO9",
+          "title": "Champion Men's Double Dry Cotton Short Sleeve Raglan T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0746S4MPY",
+          "title": "Champion Men's Reverse Weave Left Chest C Pullover, Kelly Green, SMALL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CTHJS1K",
+          "title": "CafePress I'd Rather Be Watching Gunsmoke Graphic Shirt",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0788L9M7W",
+          "title": "Men's Short Sleeve Oxford Button Down Casual Shirt Light Gray XX-Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BVFSTPH4",
+          "title": "Germinate Cropped Half Quarter Zip Up Hoodie Women Pullover Lightweight Cotton Zipper White Crop Sweatshirt Sweater Jack",
+          "price": 9.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "I don't have an additional preference for style.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ],
+          "color": [
+            "gray"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07NW1L9TR",
+          "title": "Nautica Women's Go-to Signature Cotton Full-Zip Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BCL6WT2B",
+          "title": "Death Metal Rainbow Sarcastic Graphic Tshirt for Adults Men & Women Metal Shirt",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B071LCVJ59",
+          "title": "Natural Underwear Mickey Minnie Mouse Hoodies Magic Kingdom Hooded Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01N6E9OO9",
+          "title": "Champion Men's Double Dry Cotton Short Sleeve Raglan T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0746S4MPY",
+          "title": "Champion Men's Reverse Weave Left Chest C Pullover, Kelly Green, SMALL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CTHJS1K",
+          "title": "CafePress I'd Rather Be Watching Gunsmoke Graphic Shirt",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0788L9M7W",
+          "title": "Men's Short Sleeve Oxford Button Down Casual Shirt Light Gray XX-Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BVFSTPH4",
+          "title": "Germinate Cropped Half Quarter Zip Up Hoodie Women Pullover Lightweight Cotton Zipper White Crop Sweatshirt Sweater Jack",
+          "price": 9.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 6,
+      "user_message": "For that, what matters is: Solid colors: 80% Cotton, 20% Polyester; Heather Grey: 78% Cotton, 22% Poly; Dark Heather: 50% Cotton, 50% Polyester.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Hoodies",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "polyester"
+          ],
+          "color": [
+            "gray"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B079786GXZ",
+          "title": "Viking Odin's Ravens Huginn & Muninn Graphic Pullover Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07FMWFLJH",
+          "title": "I Dig Trilobites Trilobite Fossil Paleontology Pullover Hoodie",
+          "price": 37.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B079JLLMTY",
+          "title": "Olympic National Park Washington Hoodie Hooded Sweatshirt",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07XT6PLTB",
+          "title": "Proud Army Girlfriend US Flag Dog Tags Pride Military Lovers Zip Hoodie",
+          "price": 36.85,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07DNXYK7D",
+          "title": "Corn Snake Hoodie Love Snakes Reptile Gift",
+          "price": 35.65,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07BPBR7ZS",
+          "title": "Hare Rama Hare Krishna Pullover Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07FHF73YF",
+          "title": "Breckenridge Colorado Flag Mountains Hoodie Souvenir Gift",
+          "price": 28.25,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07DW2THB1",
+          "title": "Funny Pig Lover Did Someone Say Guinea Pig Pullover Hoodie",
+          "price": 31.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CPHMGZY",
+          "title": "ASPCA We Are Their Voice Logo Hoodie",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0777Z9JTC",
+          "title": "Official Sheep Box Logo Hoodie",
+          "price": 34.75,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Proud Army Girlfriend US Flag Dog Tags Pride Military Lovers Zip Hoodie",
+    "hard_constraints": [
+      "cotton",
+      "color: grey"
+    ],
+    "soft_preferences": [
+      "Solid colors: 80% Cotton, 20% Polyester; Heather Grey: 78% Cotton, 22% Poly; Dark Heather: 50% Cotton, 50% Polyester",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "performance",
+      "fit"
+    ]
+  }
+}

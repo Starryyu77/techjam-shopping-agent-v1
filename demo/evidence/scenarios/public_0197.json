@@ -1,0 +1,500 @@
+{
+  "sample_id": "public_0197",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07FDNP55K",
+  "target_title": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Tool Set,1PCS Head Hammer",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Shoe, Jewelry & Watch Accessories",
+    "Watch Accessories",
+    "Repair Tools & Kits"
+  ],
+  "target_price": 11.99,
+  "target_rating": 4.5,
+  "target_rating_number": 23103,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watch Accessories Repair Tools & Kits. VALUE KIT FOR MONEY SAVING - This watch band link remover is great for removing and inserting spring bars straps, and widely used in up to 30mm wide watch band replace, watch repai",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watch Accessories Repair Tools & Kits",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watch Accessories Repair Tools & Kits"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FDNP55K",
+          "title": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Too",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01M16LHXS",
+          "title": "Dowswin Watch Back replacement tool kit,Watch Adjustable Opener Back Case Press Closer and Watch Case Back Remover Repai",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00F0FT5G0",
+          "title": "Watch Repair Tool Kit, Danibos Watch Repair Tool Set Case Opener Watch Link Remover Spring Bar Tool Set. (24pcs)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08KWDV78S",
+          "title": "Dura Straps Watch Band Loop Rings(Pack of 4) Holder Keeper for Silicone Leather Rubber or Resin Belt | Durable Fastener ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08R7PX4CB",
+          "title": "BAIHUI Rubber Watch Band Strap Loops 18mm / 20mm / 22mm / 24mm Rubber Silicone Watch Band Watch Strap Free Loops Replace",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B001CY5Z12",
+          "title": "Android Tool KIT Watch Tool Kit Watch Watch Repair Kit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08FXQDLBD",
+          "title": "Watch Hand Pusher, Multi Sizes Watch Hand Pusher Set, Watch Hand Presser, for Fitting Watch Hands for Watchmakers Watch ",
+          "price": 5.24,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07VXXFKKC",
+          "title": "Tool Kit 16-piece Deluxe Watch Repair",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01F5CD42I",
+          "title": "TR318 Spring Bar Tool Jeweler Tool with Two Stainless Steel Spring Bar Pins for Watch Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B084MJCPZ6",
+          "title": "GOTOTOP 3pcs Watch Hand Pressers Pusher Fitting Set Kit Metal Watchmakers Wristwatch Repair Tool Watch Strap Repair Tool",
+          "price": 6.22,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: Easy to use: Size your watch band yourself with this small, simple tool effectively without wiggling; Fit for different sizes,Fit bands up to 30mm wide ,6 replacement pins and an adjustable base allow for use with different band thicknesses.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watch Accessories Repair Tools & Kits",
+        "hard_constraints": {
+          "size": [
+            "S"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "hard_constraints": {
+            "size": [
+              "S"
+            ]
+          },
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FDNP55K",
+          "title": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Too",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08R7PX4CB",
+          "title": "BAIHUI Rubber Watch Band Strap Loops 18mm / 20mm / 22mm / 24mm Rubber Silicone Watch Band Watch Strap Free Loops Replace",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09J2G6MKP",
+          "title": "Watch Movement Holder,2Pcs Watch Movement Clamp Set,Chromium Vanadium Steel Adjustable Jaw Watch Clamp Movement Holder,W",
+          "price": 11.39,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08WKZNFG2",
+          "title": "BeltBro Titan No Buckle Elastic Belt For Men — Fits 1.5 Inch Belt Loops, Comfortable and Easy To Use",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08L13H7SY",
+          "title": "BULLIANT Men's Belt, Reversible Belt 1.25\" For Mens Casual Golf Dress pants shirts,One Reverse For 2 Sides",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C2JBR98W",
+          "title": "Just Love Women Plush Pajama Pants",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B89SD66J",
+          "title": "Leggings Depot High Waisted Floral & Space Print Leggings for Women - Regular, Plus, 1X3X, 3X5X",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B014UPAHO4",
+          "title": "The Boot Buddy - Shoe Cleaner & Boot Brush: Effortlessly Clean Muddy Boots, Shoes, Soccer Cleats, Hiking Boots, Golf Sho",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BBGHSP2S",
+          "title": "Jouica Women's Summer Casual Spaghetti Strap Sundress Dress Cold Shoulder Ruffle Sleeves Dresses with Pocket",
+          "price": 30.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "I don't have an additional preference for material.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Watch Accessories Repair Tools & Kits",
+        "hard_constraints": {
+          "size": [
+            "S"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "size": [
+              "S"
+            ]
+          },
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FDNP55K",
+          "title": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Too",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08R7PX4CB",
+          "title": "BAIHUI Rubber Watch Band Strap Loops 18mm / 20mm / 22mm / 24mm Rubber Silicone Watch Band Watch Strap Free Loops Replace",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09J2G6MKP",
+          "title": "Watch Movement Holder,2Pcs Watch Movement Clamp Set,Chromium Vanadium Steel Adjustable Jaw Watch Clamp Movement Holder,W",
+          "price": 11.39,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08WKZNFG2",
+          "title": "BeltBro Titan No Buckle Elastic Belt For Men — Fits 1.5 Inch Belt Loops, Comfortable and Easy To Use",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08L13H7SY",
+          "title": "BULLIANT Men's Belt, Reversible Belt 1.25\" For Mens Casual Golf Dress pants shirts,One Reverse For 2 Sides",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C2JBR98W",
+          "title": "Just Love Women Plush Pajama Pants",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B89SD66J",
+          "title": "Leggings Depot High Waisted Floral & Space Print Leggings for Women - Regular, Plus, 1X3X, 3X5X",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B014UPAHO4",
+          "title": "The Boot Buddy - Shoe Cleaner & Boot Brush: Effortlessly Clean Muddy Boots, Shoes, Soccer Cleats, Hiking Boots, Golf Sho",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BBGHSP2S",
+          "title": "Jouica Women's Summer Casual Spaghetti Strap Sundress Dress Cold Shoulder Ruffle Sleeves Dresses with Pocket",
+          "price": 30.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: What is in the package?EFIXTK watch band tool kit comes with a watch band link pin remover with 6 extra tips, a plastic watch holder, a dual head hammer, 4 pin punches,20pcs cotter.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watch Accessories Repair Tools & Kits",
+        "hard_constraints": {
+          "size": [
+            "S"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        },
+        "retained": {
+          "hard_constraints": {
+            "size": [
+              "S"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FDNP55K",
+          "title": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Too",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08R7PX4CB",
+          "title": "BAIHUI Rubber Watch Band Strap Loops 18mm / 20mm / 22mm / 24mm Rubber Silicone Watch Band Watch Strap Free Loops Replace",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09J2G6MKP",
+          "title": "Watch Movement Holder,2Pcs Watch Movement Clamp Set,Chromium Vanadium Steel Adjustable Jaw Watch Clamp Movement Holder,W",
+          "price": 11.39,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08WKZNFG2",
+          "title": "BeltBro Titan No Buckle Elastic Belt For Men — Fits 1.5 Inch Belt Loops, Comfortable and Easy To Use",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08L13H7SY",
+          "title": "BULLIANT Men's Belt, Reversible Belt 1.25\" For Mens Casual Golf Dress pants shirts,One Reverse For 2 Sides",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B89SD66J",
+          "title": "Leggings Depot High Waisted Floral & Space Print Leggings for Women - Regular, Plus, 1X3X, 3X5X",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B014UPAHO4",
+          "title": "The Boot Buddy - Shoe Cleaner & Boot Brush: Effortlessly Clean Muddy Boots, Shoes, Soccer Cleats, Hiking Boots, Golf Sho",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0949GR8H9",
+          "title": "LETURE PU Leather Small Jewelry Box, Travel Portable Jewelry Case for Ring, Pendant, Earring, Necklace, Bracelet Organiz",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01H6DGA16",
+          "title": "Supplim Women's Body Shaper Waist Cincher Underbust Corset Bodysuit Shapewear",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Watch Band Strap Link Pins Remover Repair Tool,24 in 1 Kit with 6 Extra Tips Replacement,20PCS Cotter Pin,Spring Bar Tool Set,1PCS Head Hammer",
+    "hard_constraints": [
+      "What is in the package?EFIXTK watch band tool kit comes with a watch band link pin remover with 6 extra tips, a plastic watch holder, a dual head hammer, 4 pin punches,20pcs cotter",
+      "Easy to use: Size your watch band yourself with this small, simple tool effectively without wiggling"
+    ],
+    "soft_preferences": [
+      "Fit for different sizes,Fit bands up to 30mm wide ,6 replacement pins and an adjustable base allow for use with different band thicknesses",
+      "VALUE KIT FOR MONEY SAVING - This watch band link remover is great for removing and inserting spring bars straps, and widely used in up to 30mm wide watch band replace, watch repai"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "VALUE KIT FOR MONEY SAVING - This watch band link remover is great for removing and inserting spring bars straps, and widely used in up to 30mm wide watch band replace, watch repai",
+      "new_value": "What is in the package?EFIXTK watch band tool kit comes with a watch band link pin remover with 6 extra tips, a plastic watch holder, a dual head hammer, 4 pin punches,20pcs cotter",
+      "message": "Actually, ignore my earlier preference. What I need is: What is in the package?EFIXTK watch band tool kit comes with a watch band link pin remover with 6 extra tips, a plastic watch holder, a dual head hammer, 4 pin punches,20pcs cotter."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

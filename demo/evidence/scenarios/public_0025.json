@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0025",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BRS1DHVQ",
+  "target_title": "PRETTYGARDEN Women's Loose Solid Off Shoulder Elastic Waist Stretchy Long Romper Jumpsuit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jumpsuits, Rompers & Overalls",
+    "Rompers"
+  ],
+  "target_price": 37.99,
+  "target_rating": 4.3,
+  "target_rating_number": 51633,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Rompers & Overalls Rompers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Rompers & Overalls Rompers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Rompers & Overalls Rompers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BRS1DHVQ",
+          "title": "PRETTYGARDEN Women's Loose Solid Off Shoulder Elastic Waist Stretchy Long Romper Jumpsuit",
+          "price": 37.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BKG4BQWV",
+          "title": "HannahZone Women's Sexy Sparkly Jumpsuits Clubwear Long Sleeve Elegant Party Rompers High Waisted Wide Leg Pants",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08548KQG6",
+          "title": "BTFBM Women 2023 Summer Fashion V Neck Wrap Rompers Swiss Dot Pocketed Elastic Waist Short Sleeve Beach Shorts Jumpsuit",
+          "price": 40.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08RNTCWRP",
+          "title": "LILLUSORY Women's Casual Summer Short Sleeve Off Shoulder Loose Soild Drawstring Waist Long Romper Jumpsuits with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07C2PBDQH",
+          "title": "DDSOL Women Sexy V Neck Floral Rompers Spaghetti Strap Summer Jumpsuit Playsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07DN8XWVN",
+          "title": "MIHOLL Women's Summer Striped Jumpsuit Casual Loose Short Sleeve Jumpsuit Rompers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07QZR2FRK",
+          "title": "Soesdemo Women’s Summer Spaghetti Strap V Neck Embroidered Rompers Loose Casual Short Jumpsuit Playsuit with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RMFZPX9",
+          "title": "Soesdemo Women’s Summer Spaghetti Strap V Neck Embroidered Rompers Loose Casual Short Jumpsuit Playsuit with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082SGQR23",
+          "title": "Kalftine Summer Beach Rompers Playsuits for Women Casual Loungewear Vacation Clothes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07FNGN37G",
+          "title": "SUNNYME Women's Rompers Off Shoulder Summer Strapless Short Jumpsuits Playsuits",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "PRETTYGARDEN Women's Loose Solid Off Shoulder Elastic Waist Stretchy Long Romper Jumpsuit",
+    "hard_constraints": [
+      "spandex",
+      "65%Polyester30%Viscose5%Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Hook and Eye closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort",
+      "style"
+    ]
+  }
+}

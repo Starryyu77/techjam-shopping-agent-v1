@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0156",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0C3KZXV4B",
+  "target_title": "adidas Alliance II Sackpack, Shadow Navy/Snowglobe/Dash Grey, One Size",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Gym Bags",
+    "Drawstring Bags"
+  ],
+  "target_price": 20.0,
+  "target_rating": 4.7,
+  "target_rating_number": 562,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Gym Bags Drawstring Bags. A key requirement is: Easy cinch opening with durable cording.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Gym Bags Drawstring Bags",
+        "hard_constraints": {
+          "feature": [
+            "durable"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Gym Bags Drawstring Bags",
+          "hard_constraints": {
+            "feature": [
+              "durable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C3KZXV4B",
+          "title": "adidas Alliance II Sackpack, Shadow Navy/Snowglobe/Dash Grey, One Size",
+          "price": 20.0,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00P28B5WW",
+          "title": "adidas Burst Sackpack, Onix/Frozen Blue, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07HLRJB5W",
+          "title": "Trailmaker Classic Mesh Backpack - (17 Inch) with FREE Drawstring Bag. By Bell Pass Ventures (Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B082SV421C",
+          "title": "Freewander Cute Pink Pig Gifts for Ladies Girls Kids Gifts,Pink Pig Print Drawstring Bag Home Travel Storage Shoulder Ba",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07DZTNWHQ",
+          "title": "Teeoff Foldaway Sport Gym Sack Pack Cinch Sack Sports Backpack Storage Bag (Orange)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C5RLJDSF",
+          "title": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+          "price": 7.69,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07QMS8TX8",
+          "title": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+          "price": 19.19,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01MQUDPPO",
+          "title": "Iflex Scrubs for Women, Yoga-Inspired Knit Waistband Scrub Pants CK002",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BV2C1V44",
+          "title": "maamgic Mens Athletic Gym Shorts 5.5\" Elastic Waist Casual Pajama Pocket Jogger Men Workout Short Pants",
+          "price": 22.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "adidas Alliance II Sackpack, Shadow Navy/Snowglobe/Dash Grey, One Size",
+    "hard_constraints": [
+      "Easy cinch opening with durable cording",
+      "color: grey"
+    ],
+    "soft_preferences": [
+      "Zippered valuables pocket to hold your phone and small stuff",
+      "Bold 3-stripe brand read"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "style"
+    ]
+  }
+}

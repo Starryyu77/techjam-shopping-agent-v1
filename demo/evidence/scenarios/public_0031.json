@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0031",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BQDTGHMZ",
+  "target_title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jeans"
+  ],
+  "target_price": 25.16,
+  "target_rating": 4.4,
+  "target_rating_number": 49008,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Jeans. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Jeans",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09WTM3QKQ",
+          "title": "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean |High Waist| Stretch Fabric| - Portland Indigo Blue Wash",
+          "price": 26.59,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B084P5KDM4",
+          "title": "Andongnywell Womens Juniors Classic High Waist Jeans Stretch Skinny Denim Pants Cotton High Rise Push-Up Jean",
+          "price": 12.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07TVDN6JH",
+          "title": "Sarin Mathews Womens Shirts Casual Tee Shirts Short Sleeve Patchwork Color Block Loose Fits Tunic Tops Blouses",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BVFNRYFP",
+          "title": "Democracy Women's Ab Solution Jegging",
+          "price": 54.6,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0C1KNGLPX",
+          "title": "Levi's Women's Classic Bootcut Jeans",
+          "price": 37.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078MQRQ38",
+          "title": "Levi's Women's Straight 505 Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07PQQQ8ZL",
+          "title": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+          "price": 9.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+    "hard_constraints": [
+      "cotton",
+      "78% Cotton, 20% Polyester, 2% Elastane"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

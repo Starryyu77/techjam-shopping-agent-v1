@@ -1,0 +1,160 @@
+{
+  "sample_id": "public_0093",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07PYB8F1G",
+  "target_title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Panties",
+    "Briefs"
+  ],
+  "target_price": 10.47,
+  "target_rating": 4.3,
+  "target_rating_number": 52150,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Panties Briefs. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Panties Briefs",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Panties Briefs",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07X9V6HZX",
+          "title": "POKARLA Women's High Waisted Cotton Underwear Soft Breathable Panties Stretch Briefs Regular & Plus Size 5-Pack",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CVRVG72",
+          "title": "Finihen Women Underwear Leak Proof Panties Big Girls Protective Undies Women Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07JCMHH58",
+          "title": "OPIBOO Women's Cotton High Waisted Underwear Double-Layer Waistband Panties Soft Full Coverage Breathable Briefs 5 Packs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B093SJ5NK2",
+          "title": "Jockey Women's Underwear Elance Breathe French Cut - 3 Pack, Arbor Grey Floral/Violet Mist/Turquoise, 8",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B000VCGC4U",
+          "title": "Fruit of the Loom Women's Hi-Cut Panties 6-Pack Brief Panties",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08DRTD95Y",
+          "title": "Women’s Invisible Seamless Stretch High Leg Brief - All Day Comfort & No Visible Panty Lines that Smooths & Shapes Under",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00008ID1A",
+          "title": "Jockey Women's Underwear Plus Size Elance Brief - 3 Pack, white, 11",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07XXMJ4JV",
+          "title": "OLIKEME Women's Soft Cotton Underwear Panties,Ladies Mid-Waist Comfortable Hipster Hipster Underwear Women 2 Pack,Multic",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+    "hard_constraints": [
+      "cotton",
+      "Solid: 100% Cotton; Heathers: 75% Cotton, 25% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "performance",
+      "fit",
+      "comfort",
+      "durability"
+    ]
+  }
+}

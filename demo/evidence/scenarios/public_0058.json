@@ -1,0 +1,385 @@
+{
+  "sample_id": "public_0058",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08L83YQTZ",
+  "target_title": "JTANIB Women Packable Rain Jacket Waterproof Lightweight Raincoat Hooded for Hiking Outdoor Travel",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Coats, Jackets & Vests",
+    "Trench, Rain & Anoraks",
+    "Raincoats"
+  ],
+  "target_price": 31.99,
+  "target_rating": 4.3,
+  "target_rating_number": 1032,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 6,
+  "reciprocal_rank": 0.16666666666666666,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Rain & Anoraks Raincoats. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Raincoats",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Rain & Anoraks Raincoats",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07PR8GZS5",
+          "title": "UUANG Raincoats Waterproof Rain Jacket Active Outdoor Detachable Hooded Women's Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0871R9JDP",
+          "title": "UUANG Raincoats Waterproof Rain Jacket Active Outdoor Detachable Hooded Women's Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07KSRCVKF",
+          "title": "Womens Rain Poncho Waterproof Raincoat with Hood Zipper Outdoor Hiking Biking",
+          "price": 21.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07X99HVSX",
+          "title": "bedee Women's Raincoats Windbreaker RainJackets Lightweight Waterproof Ourdoor Hooded Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00JALSVUG",
+          "title": "Woman Within Women's Plus Size Hooded Slicker Raincoat",
+          "price": 54.72,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08242X27K",
+          "title": "4HOW Women‘s Raincoat Lightweight Waterproof Rain Jackets Hooded Windbreaker Trench Coat Outdoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07BCP8DG5",
+          "title": "Rokka&Rolla Women's Lightweight Rain Jacket Hooded Anorak Windbreaker Long Trench Raincoat",
+          "price": 39.53,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07K46GBFM",
+          "title": "LOMON Rain Coats for Women, Lightweight Waterproof Hooded Raincoat Active Outdoor Rain Jacket Windbreaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TGGTKYL",
+          "title": "Common District Womens Waterproof Lightweight Rain Jacket Active Outdoor Hideaway Hooded Raincoat XS-4XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B088P43333",
+          "title": "JOGERBRO Womens Hooded Rain Jacket Gardening Hiking Waterproof Coats",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Raincoats",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07PR8GZS5",
+          "title": "UUANG Raincoats Waterproof Rain Jacket Active Outdoor Detachable Hooded Women's Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0871R9JDP",
+          "title": "UUANG Raincoats Waterproof Rain Jacket Active Outdoor Detachable Hooded Women's Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07KSRCVKF",
+          "title": "Womens Rain Poncho Waterproof Raincoat with Hood Zipper Outdoor Hiking Biking",
+          "price": 21.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07X99HVSX",
+          "title": "bedee Women's Raincoats Windbreaker RainJackets Lightweight Waterproof Ourdoor Hooded Trench Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00JALSVUG",
+          "title": "Woman Within Women's Plus Size Hooded Slicker Raincoat",
+          "price": 54.72,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08242X27K",
+          "title": "4HOW Women‘s Raincoat Lightweight Waterproof Rain Jackets Hooded Windbreaker Trench Coat Outdoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07BCP8DG5",
+          "title": "Rokka&Rolla Women's Lightweight Rain Jacket Hooded Anorak Windbreaker Long Trench Raincoat",
+          "price": 39.53,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07K46GBFM",
+          "title": "LOMON Rain Coats for Women, Lightweight Waterproof Hooded Raincoat Active Outdoor Rain Jacket Windbreaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TGGTKYL",
+          "title": "Common District Womens Waterproof Lightweight Rain Jacket Active Outdoor Hideaway Hooded Raincoat XS-4XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B088P43333",
+          "title": "JOGERBRO Womens Hooded Rain Jacket Gardening Hiking Waterproof Coats",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Polyester; Imported.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Raincoats",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00R4TNC3M",
+          "title": "Anne Klein Women's Single-Breasted Trench Coat with Clasp Closure",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07RQV43L5",
+          "title": "Kenneth Cole Women's Belted Soft Shell Rain Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09BN7KM2L",
+          "title": "GZDMFS Women's Rain Jacket Hooded Long Windbreaker Waterproof Lightweight Raincoats Casual Outdoor Trench Coat",
+          "price": 39.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B007AAL354",
+          "title": "Mens Realistic Robin Hood Costume",
+          "price": 43.42,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08L83YQTZ",
+          "title": "JTANIB Women Packable Rain Jacket Waterproof Lightweight Raincoat Hooded for Hiking Outdoor Travel",
+          "price": 31.99,
+          "is_target": true
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08PGTZN4N",
+          "title": "Aeromax Jr. Astronaut Suit",
+          "price": 26.48,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B089QYV4SD",
+          "title": "Women Light Rain Jacket Waterproof Active Outdoor Trench Raincoat with Hood Lightweight Plus Size for Girls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07KSRCVKF",
+          "title": "Womens Rain Poncho Waterproof Raincoat with Hood Zipper Outdoor Hiking Biking",
+          "price": 21.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B073BV7R19",
+          "title": "Calvin Klein Men's Winter Coats-Sherpa-Lined Hooded Soft Shell Jacket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 6,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "JTANIB Women Packable Rain Jacket Waterproof Lightweight Raincoat Hooded for Hiking Outdoor Travel",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "durability",
+      "fit",
+      "comfort"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0132",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08X2X83DW",
+  "target_title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": 15.3,
+  "target_rating": 4.4,
+  "target_rating_number": 7674,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0845Z58ZX",
+          "title": "Men Home Slippers Plaid Cotton Linen Indoor Shoes Silent Flip Flops Cozy Flax Linen Moisture-Wicking House Shoes Open To",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07JFXJJCW",
+          "title": "RUQIJI Leather Ballet Shoes for Girls/Toddlers/Kids/Women, Full Sole Leather Ballet Slippers/Dance Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0876VKK4K",
+          "title": "KUBUA Mens Slippers Warm Winter Flats Shoes For Womens Indoor House Slip on With Cotton Outdoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083GJLR7H",
+          "title": "MERRIMAC Men's Cozy Knit Moccasin Slippers Coral Fleece Lined House Shoes With Removable Insole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07H33Y11B",
+          "title": "HomeTop Women's Cozy Cashmere Cotton Closed Toe House Slippers with Cute Bow Accent",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CY151NM",
+          "title": "Mishansha Men’s Women‘s Comfy Slippers House Shoes Slip on Memory Foam Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08S7216DR",
+          "title": "CATHY Womens 2022 Summer Casual Shorts Lightweight Comfy Pajama Shorts Elastic Waist Drawstring Short Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08S71Y3X8",
+          "title": "CATHY Womens 2022 Summer Casual Shorts Lightweight Comfy Pajama Shorts Elastic Waist Drawstring Short Pants",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+    "hard_constraints": [
+      "cotton",
+      "80% Cotton, 20% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Rubber sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "warmth",
+      "style"
+    ]
+  }
+}

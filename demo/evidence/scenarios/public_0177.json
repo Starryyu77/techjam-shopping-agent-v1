@@ -1,0 +1,468 @@
+{
+  "sample_id": "public_0177",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07HV9WW6Q",
+  "target_title": "ANIXAY Women's Short/Long Sleeve Henley Button up T Shirt Casual Basic Tops Blouse",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses"
+  ],
+  "target_price": 24.99,
+  "target_rating": 4.1,
+  "target_rating_number": 8010,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tops Tees & Blouses. Button closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tops Tees & Blouses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Tops Tees & Blouses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07QSRJR2K",
+          "title": "COPPEN Women Blouse Loose Button Long Shirt Dress Cotton Summer Tops T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B099JC3CDX",
+          "title": "HOLATOK Women's Retro World Map Geometric Pattern Lapel Casual Long Sleeve Button Down Shirt Loose Top Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09WZK371F",
+          "title": "On the Plus Side Printed Long Sleeve Chiffon Button Up Plus Size Rodie Oversize Tunic",
+          "price": 90.0,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CGWKQ6S",
+          "title": "BUGTRAP Women's Tie Dye Short Sleeve U Neck T-Shirt Pleated Casual Flowy Tunics Tops(1)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09NC92ZY7",
+          "title": "UYISJ Native Indians Sweatshirts for Women Vintage Feather Graphic Shirts Long Sleeve Loose Fit Tees Crewneck Pullover T",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07XKGWK4G",
+          "title": "Kidsform Denim Dresses for Women Long Sleeve Blouse Dress Button Down Jean Shirt Dress Tunic Tops Chambray Cotton t-Shir",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09DS4GVMP",
+          "title": "Womens Button Down Shirts V Neck Long Sleeve Balloon Blouse Casual Oversized Tops",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WJLB71H",
+          "title": "Womens Long Sleeve Shirts Leopard Print Button Down Blouse Cute Tops L",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09YKTXT6B",
+          "title": "O A T NEW YORK womens Contemporary Butter Yellow Ruche Front Blouse, Comfortable & Designer Clothing",
+          "price": 43.16,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09M84R91V",
+          "title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+          "price": 21.14,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Tops Tees & Blouses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07QSRJR2K",
+          "title": "COPPEN Women Blouse Loose Button Long Shirt Dress Cotton Summer Tops T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B099JC3CDX",
+          "title": "HOLATOK Women's Retro World Map Geometric Pattern Lapel Casual Long Sleeve Button Down Shirt Loose Top Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09WZK371F",
+          "title": "On the Plus Side Printed Long Sleeve Chiffon Button Up Plus Size Rodie Oversize Tunic",
+          "price": 90.0,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CGWKQ6S",
+          "title": "BUGTRAP Women's Tie Dye Short Sleeve U Neck T-Shirt Pleated Casual Flowy Tunics Tops(1)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09NC92ZY7",
+          "title": "UYISJ Native Indians Sweatshirts for Women Vintage Feather Graphic Shirts Long Sleeve Loose Fit Tees Crewneck Pullover T",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07XKGWK4G",
+          "title": "Kidsform Denim Dresses for Women Long Sleeve Blouse Dress Button Down Jean Shirt Dress Tunic Tops Chambray Cotton t-Shir",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09DS4GVMP",
+          "title": "Womens Button Down Shirts V Neck Long Sleeve Balloon Blouse Casual Oversized Tops",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WJLB71H",
+          "title": "Womens Long Sleeve Shirts Leopard Print Button Down Blouse Cute Tops L",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09YKTXT6B",
+          "title": "O A T NEW YORK womens Contemporary Butter Yellow Ruche Front Blouse, Comfortable & Designer Clothing",
+          "price": 43.16,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09M84R91V",
+          "title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+          "price": 21.14,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; Cotton, Rayon.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tops Tees & Blouses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07HV9WW6Q",
+          "title": "ANIXAY Women's Short/Long Sleeve Henley Button up T Shirt Casual Basic Tops Blouse",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07JP5ZBFD",
+          "title": "Amazon Essentials Women's Short-Sleeve Polo Shirt (Available in Plus Size)",
+          "price": 19.0,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07H1693W1",
+          "title": "PRETTODAY Women's Long Sleeve Waffle Knit Henley Tops Thermal Button Up Tunics Round Neck Pullovers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07QS3H343",
+          "title": "Goodthreads Women's Lightweight Poplin Long Sleeve Button Front Tunic Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Z83KDSL",
+          "title": "Kyerivs Women's Check Plaid Shirts V Neck Roll Up/Long Sleeve Casual Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B082XN9W4G",
+          "title": "Caitefaso Women Loose Button Down Tank Tops Long Ribbed Summer Sleeveless Henley Shirts Tunic Tees",
+          "price": 12.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07QRZPG8R",
+          "title": "Goodthreads Women's Lightweight Poplin Long-Sleeve Oversized Boyfriend Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B075KWDCN3",
+          "title": "FANSIC Womens Casual Long Sleeve Blouse Tops,3/4 Sleeves Adjustable Drawstring Sides Shirring Henley Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07N4S11SS",
+          "title": "Goodthreads Women's Lightweight Cotton Long Sleeve Boyfriend Tunic",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07L92G3DL",
+          "title": "Harrms Womens Dress Shirts, Basic Long/Half Sleeve Slim Fit Casual Button Up Shirt Stretch Formal Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tops Tees & Blouses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07HV9WW6Q",
+          "title": "ANIXAY Women's Short/Long Sleeve Henley Button up T Shirt Casual Basic Tops Blouse",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B099JC3CDX",
+          "title": "HOLATOK Women's Retro World Map Geometric Pattern Lapel Casual Long Sleeve Button Down Shirt Loose Top Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01H605IX0",
+          "title": "Champion Women's Loose Fit Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RWDPWG9",
+          "title": "America's Finest Apparel Philadelphia Sugar Skull BB - Women's Tank",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0994DQB69",
+          "title": "AEROPOSTALE Womens Casual Ls Button Up Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RGT1NJH",
+          "title": "Womens Tank Tops Sexy V Neck Sleeveless Shirts Summer Clothes Waffle Knit Blouse Oversized Tees",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B4BRW7JT",
+          "title": "KORSIS Summer Dresses For Women Casual T Shirt Dresses Swing Flowy Beach Vacation Sundress with Pockets",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07TVDN6JH",
+          "title": "Sarin Mathews Womens Shirts Casual Tee Shirts Short Sleeve Patchwork Color Block Loose Fits Tunic Tops Blouses",
+          "price": 24.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "ANIXAY Women's Short/Long Sleeve Henley Button up T Shirt Casual Basic Tops Blouse",
+    "hard_constraints": [
+      "cotton",
+      "Cotton, Rayon"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Button closure",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style",
+      "fit",
+      "comfort",
+      "material"
+    ]
+  }
+}

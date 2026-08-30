@@ -1,0 +1,387 @@
+{
+  "sample_id": "public_0027",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0858VDFDW",
+  "target_title": "Riders by Lee Indigo Women's Ultra Soft Denim Capri",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jeans"
+  ],
+  "target_price": 24.99,
+  "target_rating": 4.3,
+  "target_rating_number": 11491,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Jeans. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Jeans",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09WTM3QKQ",
+          "title": "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean |High Waist| Stretch Fabric| - Portland Indigo Blue Wash",
+          "price": 26.59,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B084P5KDM4",
+          "title": "Andongnywell Womens Juniors Classic High Waist Jeans Stretch Skinny Denim Pants Cotton High Rise Push-Up Jean",
+          "price": 12.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07TVDN6JH",
+          "title": "Sarin Mathews Womens Shirts Casual Tee Shirts Short Sleeve Patchwork Color Block Loose Fits Tunic Tops Blouses",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BVFNRYFP",
+          "title": "Democracy Women's Ab Solution Jegging",
+          "price": 54.6,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0C1KNGLPX",
+          "title": "Levi's Women's Classic Bootcut Jeans",
+          "price": 37.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078MQRQ38",
+          "title": "Levi's Women's Straight 505 Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07PQQQ8ZL",
+          "title": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+          "price": 9.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09WTM3QKQ",
+          "title": "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean |High Waist| Stretch Fabric| - Portland Indigo Blue Wash",
+          "price": 26.59,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B084P5KDM4",
+          "title": "Andongnywell Womens Juniors Classic High Waist Jeans Stretch Skinny Denim Pants Cotton High Rise Push-Up Jean",
+          "price": 12.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07TVDN6JH",
+          "title": "Sarin Mathews Womens Shirts Casual Tee Shirts Short Sleeve Patchwork Color Block Loose Fits Tunic Tops Blouses",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BVFNRYFP",
+          "title": "Democracy Women's Ab Solution Jegging",
+          "price": 54.6,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0C1KNGLPX",
+          "title": "Levi's Women's Classic Bootcut Jeans",
+          "price": 37.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078MQRQ38",
+          "title": "Levi's Women's Straight 505 Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07PQQQ8ZL",
+          "title": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+          "price": 9.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 73% Cotton, 25% Polyester, 2% Spandex; Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "polyester",
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester",
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0858VDFDW",
+          "title": "Riders by Lee Indigo Women's Ultra Soft Denim Capri",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01DYHXCXW",
+          "title": "roswear Women's Ripped Denim Destroyed Mid Rise Stretchy Bermuda Shorts Jeans",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0132KADWE",
+          "title": "Riders by Lee Indigo Women's Midrise Bootcut Jean",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09WTM3QKQ",
+          "title": "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean |High Waist| Stretch Fabric| - Portland Indigo Blue Wash",
+          "price": 26.59,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B073H78ZW2",
+          "title": "Gloria Vanderbilt womens Classic Amanda High Rise Tapered Jeans, Raw Sienna, 8 Short US",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07H7BWMQF",
+          "title": "Lacozy Women's Off Shoulder Long Sleeve Oversized Pullover Sweater Knit Jumper Loose Tunic Tops",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BVFNRYFP",
+          "title": "Democracy Women's Ab Solution Jegging",
+          "price": 54.6,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BG4G4R72",
+          "title": "Lee Women's Plus Size Relaxed Fit Straight Leg Jean",
+          "price": 41.02,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B06ZYX4PD5",
+          "title": "Tengo Womens High Waist Microstretch Cotton Denim Shorts",
+          "price": 28.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Riders by Lee Indigo Women's Ultra Soft Denim Capri",
+    "hard_constraints": [
+      "cotton",
+      "73% Cotton, 25% Polyester, 2% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper fly with button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "fit",
+      "material"
+    ]
+  }
+}

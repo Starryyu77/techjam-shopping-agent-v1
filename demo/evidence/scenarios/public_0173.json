@@ -1,0 +1,357 @@
+{
+  "sample_id": "public_0173",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07THT4G8N",
+  "target_title": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Athletic",
+    "Water Shoes"
+  ],
+  "target_price": 13.99,
+  "target_rating": 4.3,
+  "target_rating_number": 14398,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Water Shoes, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07CBYVNG4",
+          "title": "Dreamcity Men's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07H2X4BV6",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B083BR2SJK",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RM3F5QX",
+          "title": "FEIFAN Womens Water Shoes Beach Swim Barefoot Adult Aqua Shoes for Walking Yoga Kayaking",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07JJPBLMR",
+          "title": "ALEADER Women's Modern",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07S728273",
+          "title": "VIFUUR Womens Mens Water Shoes Adjustable Aqua Socks for Outdoor Swimming Beach Surfing Zipper",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07C2NMP9X",
+          "title": "AMAWEI Kids Water Shoes for Boys Girls Slip on Swim Shoes Lightweight Quick Dry Comfotable Beach Sports Aqua Sock for Po",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07R3WXLBK",
+          "title": "KARAZZO Mens Womens Water Shoes Aqua Shoes Socks Quick-Dry Lightweight Barefoot Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09Z8P644K",
+          "title": "FROGG TOGGS Men's Skipper Water Draining Quick Dry Sport Shoe",
+          "price": 24.75,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B019QNIKQ2",
+          "title": "AimTrend Women's Water Pool Beach Aqua Shoes",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07CBYVNG4",
+          "title": "Dreamcity Men's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07H2X4BV6",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B083BR2SJK",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RM3F5QX",
+          "title": "FEIFAN Womens Water Shoes Beach Swim Barefoot Adult Aqua Shoes for Walking Yoga Kayaking",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07JJPBLMR",
+          "title": "ALEADER Women's Modern",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07S728273",
+          "title": "VIFUUR Womens Mens Water Shoes Adjustable Aqua Socks for Outdoor Swimming Beach Surfing Zipper",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07C2NMP9X",
+          "title": "AMAWEI Kids Water Shoes for Boys Girls Slip on Swim Shoes Lightweight Quick Dry Comfotable Beach Sports Aqua Sock for Po",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07R3WXLBK",
+          "title": "KARAZZO Mens Womens Water Shoes Aqua Shoes Socks Quick-Dry Lightweight Barefoot Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09Z8P644K",
+          "title": "FROGG TOGGS Men's Skipper Water Draining Quick Dry Sport Shoe",
+          "price": 24.75,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B019QNIKQ2",
+          "title": "AimTrend Women's Water Pool Beach Aqua Shoes",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: fabric; Rubber sole.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "fabric",
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "fabric",
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07X3MGMJR",
+          "title": "Zhuanglin Men's Quick Drying Aqua Water Shoes",
+          "price": 26.09,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07THT4G8N",
+          "title": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+          "price": 13.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07CBYVNG4",
+          "title": "Dreamcity Men's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07D5VGN9J",
+          "title": "Dreamcity Men's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07H2X4BV6",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B083BR2SJK",
+          "title": "bridawn Men Women Quick Dry Barefoot Hiking Water Shoes for Swim Surf Exercise",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07MV3XDYC",
+          "title": "MOERDENG Men Women Water Shoes Quick Dry Barefoot Aqua Socks Swim Shoes for Pool Beach Walking Running",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CZ7KJD9",
+          "title": "LIGHFOOT Garden Clog Shoes Beach Footwear Water bash Womens Summer Slippers Mesh Sandals Walking Slippers Quick Drying O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B072BHW2G2",
+          "title": "LIGHFOOT Garden Clog Shoes Beach Footwear Water bash Womens Summer Slippers Mesh Sandals Walking Slippers Quick Drying O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B081SMBYXT",
+          "title": "QACOHU Womens Mens Water Shoes Barefoot Skin Shoes Quick-Dry Water Shoes for Dive Surf Swim Beach Yoga",
+          "price": 13.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+    "hard_constraints": [
+      "fabric",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "Comfortable feeling: Super lightweight and flexible just like socks,breathable and smooth fabric provide great freedom and comfortable feeling. Let you enjoy your your beach trip o",
+      "Convenience: Quick-dry water shoes, ultra light weight smooth stretchy fabrics and easy slip-on design make it convenient to wear and take off. Lightweight and compressible, easy t"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "durability",
+      "style"
+    ]
+  }
+}

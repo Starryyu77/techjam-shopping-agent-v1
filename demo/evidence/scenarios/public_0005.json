@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0005",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B074G1JP8Z",
+  "target_title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boot Shop",
+    "Women",
+    "Outdoor & Work",
+    "Snow & Cold Weather"
+  ],
+  "target_price": 60.99,
+  "target_rating": 4.4,
+  "target_rating_number": 6290,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Outdoor & Work Snow & Cold Weather. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Outdoor & Work Snow & Cold Weather",
+        "hard_constraints": {
+          "use_case": [
+            "work"
+          ],
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Outdoor & Work Snow & Cold Weather",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ],
+            "use_case": [
+              "work"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01L758OMM",
+          "title": "AUSLAND Women's Classic Leather Short Snow Boot, Grey 2, 8.5 US/39 EUR",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B078JDQMTL",
+          "title": "DADAWEN Boy's Girl's Classic Waterproof Suede Leather Snow Boots (Toddler/Little Kid/Big Kid) Red US Size 8 M Toddler",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08YLGDX8R",
+          "title": "Winter Gloves for Men Women -20°F Thermal Deerskin Leather Insulated Work Glove Warm Polar Fleece Heated Heatlok Cotton ",
+          "price": 18.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07JQ97T24",
+          "title": "NORTIV 8 Men's Waterproof Hiking Boots Mid Outdoor Lightweight Trekking Backpacking Ankle Work Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07KVRGVLW",
+          "title": "Golden Fox 6\" Boondocker Service Boot Pro",
+          "price": 119.9,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00Q7JMFV0",
+          "title": "Columbia Men's BugabootPlus III Omni Cold-Weather Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00Q7JDXC0",
+          "title": "Columbia Men's BugabootPlus III Omni Cold-Weather Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HQJJLQP",
+          "title": "OZERO Mens Winter Gloves Nappa Leather Warm Cashmere Touchscreen Dress Glove - Thermal Gifts for Dad or Husband",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074X9PMTT",
+          "title": "GLOBALWIN Women's Fur Trek Winter Boots",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+    "hard_constraints": [
+      "leather",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "Shaft measures approximately 8.37\" from arch",
+      "Warm And Comfortable Women’s Winter Boots: These Women Winter Boots Featuring Thermolite Insulation Rated To -15F. Fully Lined With Soft Faux Fur To Keep The Feet Warm All Day Long"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style",
+      "durability"
+    ]
+  }
+}

@@ -1,0 +1,384 @@
+{
+  "sample_id": "public_0174",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0794VPVBH",
+  "target_title": "NY Threads Luxurious Mens Shawl Collar Fleece Bathrobe Spa Robe",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Sleep & Lounge",
+    "Robes"
+  ],
+  "target_price": 17.49,
+  "target_rating": 4.7,
+  "target_rating_number": 42104,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Robes. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Robes",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Robes",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ND4R9MK",
+          "title": "Women Plus Size Kimono Robes Cotton Knee Length Robe Knit Bathrobe Soft Sleepwear Ladies Loungewear XL-5XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B075697T3J",
+          "title": "MISSFASHION Women’s Lounge wear Satin Kimono Robe Peacock Pajamas for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0756C4C1R",
+          "title": "MISSFASHION Women’s Lounge wear Satin Kimono Robe Peacock Pajamas for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01N288ZQ2",
+          "title": "Robes King Classical Sleepwear Men’s Woven Shawl Collar Robe,",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CRPJ3C5",
+          "title": "Women's Satin Floral Robes Bride Bridesmaids Dressing Gown for Wedding Day Silky Bathrobe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08S6LP657",
+          "title": "Shymay Women's Kimono Robe Short Satin Bridesmaid Silk Crane Bathrobe Nightgown Sleepwear Loungewear",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09GT64JCG",
+          "title": "Van Heusen mens Comfort Soft Fleece Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09RW9YXKS",
+          "title": "Berkshire Blanket Peanuts Printed Shawl Robe | Ultra Cozy All Season Robe with Sherpa Collar",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0892N8LG2",
+          "title": "Chaps mens Drop-needle Comfort Soft Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074VHW93Y",
+          "title": "Turquaz Rhinestone Mother of The Bride Robe For Women Women's Satin Kimonoe for Bridesmaid and Bride Wedding Party",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Robes",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ND4R9MK",
+          "title": "Women Plus Size Kimono Robes Cotton Knee Length Robe Knit Bathrobe Soft Sleepwear Ladies Loungewear XL-5XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B075697T3J",
+          "title": "MISSFASHION Women’s Lounge wear Satin Kimono Robe Peacock Pajamas for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0756C4C1R",
+          "title": "MISSFASHION Women’s Lounge wear Satin Kimono Robe Peacock Pajamas for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01N288ZQ2",
+          "title": "Robes King Classical Sleepwear Men’s Woven Shawl Collar Robe,",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CRPJ3C5",
+          "title": "Women's Satin Floral Robes Bride Bridesmaids Dressing Gown for Wedding Day Silky Bathrobe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08S6LP657",
+          "title": "Shymay Women's Kimono Robe Short Satin Bridesmaid Silk Crane Bathrobe Nightgown Sleepwear Loungewear",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09GT64JCG",
+          "title": "Van Heusen mens Comfort Soft Fleece Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09RW9YXKS",
+          "title": "Berkshire Blanket Peanuts Printed Shawl Robe | Ultra Cozy All Season Robe with Sherpa Collar",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0892N8LG2",
+          "title": "Chaps mens Drop-needle Comfort Soft Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074VHW93Y",
+          "title": "Turquaz Rhinestone Mother of The Bride Robe For Women Women's Satin Kimonoe for Bridesmaid and Bride Wedding Party",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Polyester; Imported.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Robes",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00Z7BJJIQ",
+          "title": "VEAMI Women's Warm Microfiber Fleece Bathrobe, Long",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00F4O2QC2",
+          "title": "Dearfoams Women's faux sherpa Shawl Collar Long Solid Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B015HQH8II",
+          "title": "N Natori Women's Turkish Jewel Robe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0794VPVBH",
+          "title": "NY Threads Luxurious Mens Shawl Collar Fleece Bathrobe Spa Robe",
+          "price": 17.49,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BY2J9B43",
+          "title": "U2SKIIN Mens Fleece Robe Plush Collar Shawl Bathrobe",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07BWS4CSM",
+          "title": "PAVILIA Plush Robe For Women, Fluffy Soft Bathrobe, Warm Cozy Fleece Robe, Satin Trim",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075VLHTV4",
+          "title": "Soojun Women's Waffle Fleece Soft Zip Up Front Bathrobe",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08ND4R9MK",
+          "title": "Women Plus Size Kimono Robes Cotton Knee Length Robe Knit Bathrobe Soft Sleepwear Ladies Loungewear XL-5XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07XVLL55H",
+          "title": "AmeriMark Womens Lightweight Long Bath Robe Lounger Sleepwear with Big Buttons",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08BK4YLRN",
+          "title": "AmeriMark Women's V-Neck Lounger House Dress with Pockets Muumuu Nightgown",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "NY Threads Luxurious Mens Shawl Collar Fleece Bathrobe Spa Robe",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Tie closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "durability"
+    ]
+  }
+}

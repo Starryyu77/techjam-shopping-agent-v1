@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0030",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B09V5RTXG9",
+  "target_title": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Sleep & Lounge",
+    "Sleep Bottoms"
+  ],
+  "target_price": 11.99,
+  "target_rating": 4.7,
+  "target_rating_number": 48719,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Sleep Bottoms. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sleep Bottoms",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Sleep Bottoms",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09V5RTXG9",
+          "title": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00UHLFR32",
+          "title": "Fruit of the Loom Men's Extended Sizes Jersey Knit Sleep Pant (1 & 2 Packs)",
+          "price": 15.08,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08R61K9B9",
+          "title": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BL2HN7H1",
+          "title": "Sova Men's Combo Pack Ultra Comfy Fit Micro Fleece Pajama Pants",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08THWL29K",
+          "title": "U.S. Polo Assn. Men's Pajama Pants - Lightweight Knit Jogger Sweatpants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0939FH2D3",
+          "title": "New York Ave Men's Cotton Blend Super Soft Flannel Pajama Lounge Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07P1523QR",
+          "title": "Spongebob Squarepants 'Patty Me' Sleep Pajama Pants",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07ZZDZMVQ",
+          "title": "Marvel Comics Men's Thor Classic Comic Allover Print Loungewear Pajama Pants",
+          "price": 19.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07BQFRFXH",
+          "title": "Bronze Eagle Ultra Soft Fleece Men's Pajama Pants with Pockets Two Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0776ZV79T",
+          "title": "Jachs Men's Flannel Pajama Pants Comfortable Lounge Pants with Pockets",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+    "hard_constraints": [
+      "polyester",
+      "Polyester,Polar Fleece"
+    ],
+    "soft_preferences": [
+      "Button closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

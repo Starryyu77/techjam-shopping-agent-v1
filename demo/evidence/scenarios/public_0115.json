@@ -1,0 +1,150 @@
+{
+  "sample_id": "public_0115",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08VWZBYPY",
+  "target_title": "PrinStory Womens Sleepwear Short Sleeve Nightgown Soft Sleepshirt Pleated Nightshirt Scoopneck Casual Loungewear",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Sleep & Lounge",
+    "Nightgowns & Sleepshirts"
+  ],
+  "target_price": 24.99,
+  "target_rating": 4.5,
+  "target_rating_number": 3925,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Nightgowns & Sleepshirts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Nightgowns & Sleepshirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Nightgowns & Sleepshirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C73DSG4D",
+          "title": "Hanes Women's Wear Around Nightshirt",
+          "price": 14.7,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07KR1YDV4",
+          "title": "Avidlove Sleepwear for Women Tank Nightgown Chemise Racerback Sleeveless Sleep Dress",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0834HZQZF",
+          "title": "IZZY + TOBY 100% Cotton Nightgowns for Women Soft Ladies Gowns Sleepwear Long Sleeveless Nightgown",
+          "price": 30.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08VWZBYPY",
+          "title": "PrinStory Womens Sleepwear Short Sleeve Nightgown Soft Sleepshirt Pleated Nightshirt Scoopneck Casual Loungewear",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07CCLV3XP",
+          "title": "Keyocean Women Nightgowns, Soft 100% Cotton Lightweight Short Sleeve Night-dresses for Ladies",
+          "price": 19.97,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B082TXYP5R",
+          "title": "ENJOYNIGHT Sleepwear Women's Nightgown Printed Sleep Shirt Short Sleeve Sleep Tee Cotton Nightshirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07BQK1RTD",
+          "title": "Keyocean Women Nightgowns, Soft Comfy Lightweight 100% Cotton Short Sleeves Comfy Ladies Nightdress",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07H3XZWMH",
+          "title": "AmeriMark Women Full-Length Flannel Nightgown Pajamas – Lightweight Warm Cotton Night Gown for Sleeping – Long Sleeve PJ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07YDXYMN4",
+          "title": "AmeriMark Women Full-Length Flannel Nightgown Pajamas – Lightweight Warm Cotton Night Gown for Sleeping – Long Sleeve PJ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08BK4YLRN",
+          "title": "AmeriMark Women's V-Neck Lounger House Dress with Pockets Muumuu Nightgown",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "PrinStory Womens Sleepwear Short Sleeve Nightgown Soft Sleepshirt Pleated Nightshirt Scoopneck Casual Loungewear",
+    "hard_constraints": [
+      "rayon",
+      "95% Rayon, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "durability",
+      "style"
+    ]
+  }
+}

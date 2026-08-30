@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0151",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08CFNQNJK",
+  "target_title": "Under Armour Men's Micro G Valsetz Mid Military and Tactical Boot",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boot Shop",
+    "Men",
+    "Outdoor & Work",
+    "Work & Safety"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 1804,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Outdoor & Work Work & Safety, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Outdoor & Work Work & Safety",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "work"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Outdoor & Work Work & Safety",
+          "soft_preferences": {
+            "use_case": [
+              "work"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07KVRGVLW",
+          "title": "Golden Fox 6\" Boondocker Service Boot Pro",
+          "price": 119.9,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08CFNQNJK",
+          "title": "Under Armour Men's Micro G Valsetz Mid Military and Tactical Boot",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01N9T4RWE",
+          "title": "Bufferzone Men's 9\" Tan Military Tactical Boot with Zipper",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B078488ST1",
+          "title": "Maelstrom Tac Athlon Men's Waterproof Military Tactical Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00G8P3RLK",
+          "title": "Durango Lady Rebel 10 Inch Pull-On RD3557 Western Boot",
+          "price": 109.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00UPHJC3E",
+          "title": "Levis Men's Harrison Engineer Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09525B1R5",
+          "title": "Bates Unisex-Adult USMC Lightweight DuraShocks Military & Tactical Boot",
+          "price": 209.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B094Z7K4X1",
+          "title": "DRKA 6\" Steel Toe Work Boots for Men,Water Resistant Military Tactical Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09NFRBCT6",
+          "title": "AZXPROT Men's Military Tactical Boots, 6\" Waterproof Lightweight Combat Boots Non-slip Hiking Boots Breathable Outdoor D",
+          "price": 82.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B000TAIJ9A",
+          "title": "Red Wing Heritage Men's Round 6\" Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Under Armour Men's Micro G Valsetz Mid Military and Tactical Boot",
+    "hard_constraints": [
+      "leather",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Rubber sole",
+      "Shaft measures approximately Ankle from arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "durability",
+      "material"
+    ]
+  }
+}

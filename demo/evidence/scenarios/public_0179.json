@@ -1,0 +1,501 @@
+{
+  "sample_id": "public_0179",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08JK818ZD",
+  "target_title": "Azules Women's Long Sleeve Flowy Tunic",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "Tunics"
+  ],
+  "target_price": 17.99,
+  "target_rating": 4.4,
+  "target_rating_number": 217,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses Tunics. A key requirement is: spandex.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tees & Blouses Tunics",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Tees & Blouses Tunics",
+          "hard_constraints": {
+            "material": [
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B4BRW7JT",
+          "title": "KORSIS Summer Dresses For Women Casual T Shirt Dresses Swing Flowy Beach Vacation Sundress with Pockets",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09MSY8926",
+          "title": "LETDIOSTO Women's Plus Size Tops Casual Blouse Short Sleeve Lace Tunic Tops Fit Flare, M-4XL",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07BBH2R9M",
+          "title": "Nandashe Womens 3/4 Sleeves Floral Tunic Shirts Summer Casual Dressy Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0773LC3FW",
+          "title": "NICIAS Womens Side Buttons Long Sleeve Casual Crew Neck Elbow Patched Tunic Tops Loose T Shirt Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CZ9TVQT",
+          "title": "Sieanear Womens Tunic Tops Long Sleeve Round Neck Casual T Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076JDDZ7S",
+          "title": "Floral Find Women Long Sleeve A-line Tunic Top Scoop Neck Loose Fit Blouse Shirt Flowy Layered Hem",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07L8Y63VB",
+          "title": "I2CRAZY Women's Casual Long Sleeve Tunic Tops Fall Tshirt Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MAO9JRE",
+          "title": "STRETCH IS COMFORT Women's and Plus Size Knee Length Ruched Waist Flowy Skirt",
+          "price": 23.47,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08PF98BV4",
+          "title": "RITERA Plus Size Tops for Women Off the Shoulder Cold Shoulder Tops Short Sleeve Shirts Summer Blouses Sexy Tunics Tee X",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07X2YQ2P5",
+          "title": "IWOLLENCE Womens Waffle Knit Loose Tunic Blouse Casual Twist Knot Tops Long Sleeve Henley Bat Wing Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Tees & Blouses Tunics",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "spandex"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B4BRW7JT",
+          "title": "KORSIS Summer Dresses For Women Casual T Shirt Dresses Swing Flowy Beach Vacation Sundress with Pockets",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09MSY8926",
+          "title": "LETDIOSTO Women's Plus Size Tops Casual Blouse Short Sleeve Lace Tunic Tops Fit Flare, M-4XL",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07BBH2R9M",
+          "title": "Nandashe Womens 3/4 Sleeves Floral Tunic Shirts Summer Casual Dressy Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0773LC3FW",
+          "title": "NICIAS Womens Side Buttons Long Sleeve Casual Crew Neck Elbow Patched Tunic Tops Loose T Shirt Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CZ9TVQT",
+          "title": "Sieanear Womens Tunic Tops Long Sleeve Round Neck Casual T Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076JDDZ7S",
+          "title": "Floral Find Women Long Sleeve A-line Tunic Top Scoop Neck Loose Fit Blouse Shirt Flowy Layered Hem",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07L8Y63VB",
+          "title": "I2CRAZY Women's Casual Long Sleeve Tunic Tops Fall Tshirt Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MAO9JRE",
+          "title": "STRETCH IS COMFORT Women's and Plus Size Knee Length Ruched Waist Flowy Skirt",
+          "price": 23.47,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08PF98BV4",
+          "title": "RITERA Plus Size Tops for Women Off the Shoulder Cold Shoulder Tops Short Sleeve Shirts Summer Blouses Sexy Tunics Tee X",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07X2YQ2P5",
+          "title": "IWOLLENCE Womens Waffle Knit Loose Tunic Blouse Casual Twist Knot Tops Long Sleeve Henley Bat Wing Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 5% spandex; Made in the USA.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tees & Blouses Tunics",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "spandex"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B4BRW7JT",
+          "title": "KORSIS Summer Dresses For Women Casual T Shirt Dresses Swing Flowy Beach Vacation Sundress with Pockets",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09M5XXWR3",
+          "title": "AWULIFFAN Women's Summer Sleeveless V-Neck T-Shirt Tunic Tops Blouse Shirts",
+          "price": 25.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09V5CMRQX",
+          "title": "CATHY Women's Casual Long Sleeve Ruffle Tunic Tops Loose T Shirt Blouse for Leggings",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09MSY8926",
+          "title": "LETDIOSTO Women's Plus Size Tops Casual Blouse Short Sleeve Lace Tunic Tops Fit Flare, M-4XL",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Z8NTWVV",
+          "title": "HOCOSIT Women's Floral Print Short Ruffle Sleeve Pleated Front V Neck Button Tunic Tops",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C377NMF4",
+          "title": "Romanstii Women's Casual V-Neck T-Shirts Loose Puff Long Sleeve Tops Tunic Blouses",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08Y8ZJJC1",
+          "title": "LONGYUAN Womens Long Sleeve Fashion Tunic Tops Casual Vneck Shirts Dressy Blouses",
+          "price": 22.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07BBH2R9M",
+          "title": "Nandashe Womens 3/4 Sleeves Floral Tunic Shirts Summer Casual Dressy Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082ZVF1LD",
+          "title": "HUHOT Cotton Crew Neck 3/4 Sleeve Jersey Shirt Baseball Tee Raglan T-Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09G2ZNZY4",
+          "title": "Grlasen Women's Zipper Summer Pleated Button Short Sleeve T-Shirt Summer V-Neck Solid Color Casual top",
+          "price": 24.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "For that, what matters is: Pull On closure.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tees & Blouses Tunics",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "spandex"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "spandex"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01B8BV4GI",
+          "title": "Frumos Womens Tunic 3/4 Sleeve Round Neck T Shirts Made in USA",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08JK818ZD",
+          "title": "Azules Women's Long Sleeve Flowy Tunic",
+          "price": 17.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B074JHWL2P",
+          "title": "Harley-Davidson Women's Fire Vendetta Cutout Sleeves V-Neck Tee, Black 5V31-HC9Y",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HXRXWZW",
+          "title": "CLEMONCE Women's Boat Neck V Back Half Elbow Sleeve Longline Hip Covering Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HXV1BR4",
+          "title": "CLEMONCE Women's Boat Neck V Back Half Elbow Sleeve Longline Hip Covering Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0791Z6HJ4",
+          "title": "Betsy Red Couture Women's Ruffled 3/4 Sleeve Tunic (S-3X)",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B016L48MBC",
+          "title": "Star Vixen Women's Plus Size Three-Quarter Sleeve U-Band Print Necklace Top with Sharkbite Hem",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B008YF10F2",
+          "title": "Big Bang Theory Bazinga Juniors Blue Long Tank Top (Juniors Large)",
+          "price": 5.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00W0UIC76",
+          "title": "Ladies Easy Office Wear Contrast Micromodal/Span Short Sleeve Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B4BRW7JT",
+          "title": "KORSIS Summer Dresses For Women Casual T Shirt Dresses Swing Flowy Beach Vacation Sundress with Pockets",
+          "price": 28.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Azules Women's Long Sleeve Flowy Tunic",
+    "hard_constraints": [
+      "spandex",
+      "5% spandex"
+    ],
+    "soft_preferences": [
+      "Made in the USA",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "warmth",
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

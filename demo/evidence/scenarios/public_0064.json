@@ -1,0 +1,469 @@
+{
+  "sample_id": "public_0064",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B019DU687Q",
+  "target_title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses",
+    "Club & Night Out"
+  ],
+  "target_price": null,
+  "target_rating": 3.8,
+  "target_rating_number": 2773,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Dresses Club & Night Out. Hand Wash Only",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0746GX94R",
+          "title": "MANER Women's Sequin Glitter Short Sleeve Dress Sexy V Neck Mini Party Club Bodycon Dresses",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B019DU6AL0",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B019DU687Q",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0995LKCSV",
+          "title": "Antopmen Women Sexy V Neck Ribbed Knitted Long Sleeve Midi Dress Bodycon Slim Partywear Maxi Dress",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M8QVCKR",
+          "title": "kayamiya Women's Retro 1920s Beaded Sequined Leaf Art Deco Gatsby Flapper Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F33VP6X",
+          "title": "EGELEXY Summer Women Irregular Dresses Round Neck Bodycon Short Sleeve Wrap Dress Midi Club",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HRKVWHS",
+          "title": "LLmansha Women's Plus Size Glitter V-Neck Long Sleeve Bodycon Sequin Cocktail Party Club Sparkly Evening Mini Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B06X9KYZM9",
+          "title": "Amborido Women Off Shoulder Ruffles Bodycon Mini Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TMY9MTC",
+          "title": "LaSuiveur Women's Casual Long Sleeve Ruched Bodycon Wrapped T Shirt Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08DQZQ7WP",
+          "title": "Imysty Womens Casual Crew Neck Ruched Stretchy Bodycon Summer Short Mini T-Shirt Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0746GX94R",
+          "title": "MANER Women's Sequin Glitter Short Sleeve Dress Sexy V Neck Mini Party Club Bodycon Dresses",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B019DU6AL0",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B019DU687Q",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0995LKCSV",
+          "title": "Antopmen Women Sexy V Neck Ribbed Knitted Long Sleeve Midi Dress Bodycon Slim Partywear Maxi Dress",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M8QVCKR",
+          "title": "kayamiya Women's Retro 1920s Beaded Sequined Leaf Art Deco Gatsby Flapper Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F33VP6X",
+          "title": "EGELEXY Summer Women Irregular Dresses Round Neck Bodycon Short Sleeve Wrap Dress Midi Club",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HRKVWHS",
+          "title": "LLmansha Women's Plus Size Glitter V-Neck Long Sleeve Bodycon Sequin Cocktail Party Club Sparkly Evening Mini Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B06X9KYZM9",
+          "title": "Amborido Women Off Shoulder Ruffles Bodycon Mini Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TMY9MTC",
+          "title": "LaSuiveur Women's Casual Long Sleeve Ruched Bodycon Wrapped T Shirt Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08DQZQ7WP",
+          "title": "Imysty Womens Casual Crew Neck Ruched Stretchy Bodycon Summer Short Mini T-Shirt Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; cotton blend.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B019DU6AL0",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B019DU687Q",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07F33VP6X",
+          "title": "EGELEXY Summer Women Irregular Dresses Round Neck Bodycon Short Sleeve Wrap Dress Midi Club",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07QLLTJWS",
+          "title": "BTFBM Womens T Shirt Dress Simple Plain Short Sleeve High Waist Hollow Out Fashion Bodycon Short Dresses (Black, Large)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07D27WMB6",
+          "title": "Berydress Women's Vintage V-Neck Sheath Casual Party Work Faux Black Wrap Dress",
+          "price": 31.9,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0746GX94R",
+          "title": "MANER Women's Sequin Glitter Short Sleeve Dress Sexy V Neck Mini Party Club Bodycon Dresses",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08BJMT9M7",
+          "title": "Longwu Women's Casual V-Neck Sleeveless/Short Sleeve Side Split Drawstring Waist Midi Length Vest Dress with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07BKQ9DT4",
+          "title": "oodji Ultra Women's Relaxed-Fit Jersey Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WTVXCTW",
+          "title": "Kidsform Women's Off Shoulder Sexy Lace Bodycon Elegant Cocktail Party Long Sleeve Bandage Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B019DU6AL0",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B019DU687Q",
+          "title": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07F33VP6X",
+          "title": "EGELEXY Summer Women Irregular Dresses Round Neck Bodycon Short Sleeve Wrap Dress Midi Club",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07QLLTJWS",
+          "title": "BTFBM Womens T Shirt Dress Simple Plain Short Sleeve High Waist Hollow Out Fashion Bodycon Short Dresses (Black, Large)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07D27WMB6",
+          "title": "Berydress Women's Vintage V-Neck Sheath Casual Party Work Faux Black Wrap Dress",
+          "price": 31.9,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07W4CFNFG",
+          "title": "Wrangler Men's Sport Western Basic Two Pocket Long Sleeve Snap Shirt",
+          "price": 27.48,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08BJMT9M7",
+          "title": "Longwu Women's Casual V-Neck Sleeveless/Short Sleeve Side Split Drawstring Waist Midi Length Vest Dress with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07BKQ9DT4",
+          "title": "oodji Ultra Women's Relaxed-Fit Jersey Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WTVXCTW",
+          "title": "Kidsform Women's Off Shoulder Sexy Lace Bodycon Elegant Cocktail Party Long Sleeve Bandage Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Memorose Womens Sexy Long Sleeve Cut-Out Bandage Bodycon Clubwear Midi Dress",
+    "hard_constraints": [
+      "cotton",
+      "cotton blend"
+    ],
+    "soft_preferences": [
+      "Pull On closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Hand Wash Only",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "comfort",
+      "performance",
+      "durability",
+      "style"
+    ]
+  }
+}

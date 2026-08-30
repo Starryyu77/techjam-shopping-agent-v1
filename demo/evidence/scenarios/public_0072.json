@@ -1,0 +1,351 @@
+{
+  "sample_id": "public_0072",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B09JG4V9ZR",
+  "target_title": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Coats, Jackets & Vests",
+    "Trench, Rain & Anoraks",
+    "Anoraks"
+  ],
+  "target_price": 69.99,
+  "target_rating": 3.8,
+  "target_rating_number": 1859,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Rain & Anoraks Anoraks. Department: womens",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Anoraks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Rain & Anoraks Anoraks"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01KPFK9ZA",
+          "title": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09JG4V9ZR",
+          "title": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+          "price": 69.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073X8SH4Z",
+          "title": "Makeitmint Women's Zip Up Military Anorak Jacket with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B084QZGRN3",
+          "title": "GUESS Women's Adjustable Long Sleeve Anorak Jacket",
+          "price": 77.52,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01KIVIGAG",
+          "title": "ZENNESSA Women's Zip Up Military Anorak Drawstring Jacket w/Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B004QS8TFK",
+          "title": "prAna Women's Tori Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08GZP1FLM",
+          "title": "Time and Tru Rich Black & Animal Print Lightweight Anorak Jacket w/Hood - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00R6RX700",
+          "title": "BCBGeneration Women's Coated Cotton Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07GGLPKN7",
+          "title": "Iris Apparel Women's Light Layering Utility Parka Anorak Jacket (M, Cognac)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Anoraks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01KPFK9ZA",
+          "title": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09JG4V9ZR",
+          "title": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+          "price": 69.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073X8SH4Z",
+          "title": "Makeitmint Women's Zip Up Military Anorak Jacket with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B084QZGRN3",
+          "title": "GUESS Women's Adjustable Long Sleeve Anorak Jacket",
+          "price": 77.52,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01KIVIGAG",
+          "title": "ZENNESSA Women's Zip Up Military Anorak Drawstring Jacket w/Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B004QS8TFK",
+          "title": "prAna Women's Tori Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08GZP1FLM",
+          "title": "Time and Tru Rich Black & Animal Print Lightweight Anorak Jacket w/Hood - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00R6RX700",
+          "title": "BCBGeneration Women's Coated Cotton Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07GGLPKN7",
+          "title": "Iris Apparel Women's Light Layering Utility Parka Anorak Jacket (M, Cognac)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Faux Fur.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Anoraks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09JG4V9ZR",
+          "title": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+          "price": 69.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08GZP1FLM",
+          "title": "Time and Tru Rich Black & Animal Print Lightweight Anorak Jacket w/Hood - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MV1VVKR",
+          "title": "NineCiFun Women's Slip on Fuzzy House Slippers Memory Foam Slippers Scuff Outdoor Indoor Warm Plush Bedroom Shoes with F",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B004QMSTGA",
+          "title": "BEARPAW Men's Moc II Multiple Colors | Men's Slipper | Men's Shoe | Comfortable & Lightweight",
+          "price": 49.96,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01KPFK9ZA",
+          "title": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B077FRXRT4",
+          "title": "Zilcremo Women Hooded Cardigan Fuzzy Jacket Winter Open Front Fleece Coat Outwear with Pockets",
+          "price": 38.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00BCHDM14",
+          "title": "Kamik Women's Momentum Snow Boot",
+          "price": 79.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08MBM15JB",
+          "title": "Evshine Women's Fuzzy Slippers Cross Band Memory Foam House Slippers Open Toe",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B079MSN9X3",
+          "title": "Dr. Martens Women's 2976 Leonore Chelsea Boot",
+          "price": 91.8,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+    "hard_constraints": [
+      "Faux Fur",
+      "Drawstring closure"
+    ],
+    "soft_preferences": [
+      "Hand Wash Only",
+      "Department: womens"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Department: womens",
+      "new_value": "Faux Fur",
+      "message": "Actually, ignore my earlier preference. What I need is: Faux Fur."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "material",
+      "style"
+    ]
+  }
+}

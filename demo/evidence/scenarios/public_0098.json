@@ -1,0 +1,159 @@
+{
+  "sample_id": "public_0098",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08CZ34D75",
+  "target_title": "adidas Men's Lite Racer Adapt 4.0 Running Shoe",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Athletic",
+    "Running",
+    "Road Running"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 13966,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Running Road Running, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Running Road Running",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "running"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Running Road Running",
+          "soft_preferences": {
+            "use_case": [
+              "running"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08S6PLF6H",
+          "title": "SDolphin Women Black Running Shoes - Tennis Sneakers for Women Ladies Workout Memory Foam Nursing Athletic Run Shoes Lig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08CZ34D75",
+          "title": "adidas Men's Lite Racer Adapt 4.0 Running Shoe",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07XPLHXC1",
+          "title": "ASICS Women's Gel-Contend 6 Running Shoes",
+          "price": 54.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08PF2D2G7",
+          "title": "Men Athletic Shoes Mesh Blade Running Walking Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Q5N48QM",
+          "title": "Brooks Men's Adrenaline GTS 20 Supportive Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08VPRCD79",
+          "title": "ASICS Women's Gel-Kayano 27 Running Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08BMSXBDC",
+          "title": "New Balance Women's Fresh Foam 1080 V11 Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07D94SVSB",
+          "title": "Nike Women's Running Shoes, 20 UK Wide",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B4GGT4KC",
+          "title": "Under Armour Men's Surge 3 Running Shoe",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00KOLFNQ6",
+          "title": "ASICS Men's Gel-Noosa Tri 10 Running Shoe,Flash Coral/Flash Yellow/Ice Blue,7 M US",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "adidas Men's Lite Racer Adapt 4.0 Running Shoe",
+    "hard_constraints": [
+      "polyester",
+      "100% Rubber"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Rubber sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "performance",
+      "comfort",
+      "style",
+      "material"
+    ]
+  }
+}

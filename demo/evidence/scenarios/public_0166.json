@@ -1,0 +1,480 @@
+{
+  "sample_id": "public_0166",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B00IHW88W0",
+  "target_title": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Boots",
+    "Rain"
+  ],
+  "target_price": null,
+  "target_rating": 4.7,
+  "target_rating_number": 90,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Boots Rain. Women's-specific last is designed to match the contours of women's feet",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "boots"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00IHW88W0",
+          "title": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B016P9A6GM",
+          "title": "Skechers Sport Women's D'Lites Slip-On Mule Sneaker",
+          "price": 72.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B076VQQ962",
+          "title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B014UPAHO4",
+          "title": "The Boot Buddy - Shoe Cleaner & Boot Brush: Effortlessly Clean Muddy Boots, Shoes, Soccer Cleats, Hiking Boots, Golf Sho",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CJWHVQD",
+          "title": "Wrangler Men's Premium Performance Cowboy Cut Regular Fit Jean",
+          "price": 38.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09QT6D6R3",
+          "title": "Wrangler Women's Western Plus Size Mid Rise Stretch Boot Cut Jean",
+          "price": 24.32,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07H253XTD",
+          "title": "Ginjang Women Winter Snow Boots Warm Ankle Boots Anti-Slip Waterproof Winter Shoes Slip On Booties Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00IHW88W0",
+          "title": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B016P9A6GM",
+          "title": "Skechers Sport Women's D'Lites Slip-On Mule Sneaker",
+          "price": 72.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B076VQQ962",
+          "title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B014UPAHO4",
+          "title": "The Boot Buddy - Shoe Cleaner & Boot Brush: Effortlessly Clean Muddy Boots, Shoes, Soccer Cleats, Hiking Boots, Golf Sho",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CJWHVQD",
+          "title": "Wrangler Men's Premium Performance Cowboy Cut Regular Fit Jean",
+          "price": 38.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09QT6D6R3",
+          "title": "Wrangler Women's Western Plus Size Mid Rise Stretch Boot Cut Jean",
+          "price": 24.32,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07H253XTD",
+          "title": "Ginjang Women Winter Snow Boots Warm Ankle Boots Anti-Slip Waterproof Winter Shoes Slip On Booties Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% waterproof women's boots are suitable for any season and any outdoor activity; color: black.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "waterproof"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "color": [
+              "black"
+            ],
+            "feature": [
+              "waterproof"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00IHW88W0",
+          "title": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B9RJZLW4",
+          "title": "TENGTA Rubber Boots for Men, 6mm Neoprene Durable Outdoor Hunting Boot, Waterproof Insulated Work Rain Boots (Size 6-14)",
+          "price": 64.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B9FZS52Z",
+          "title": "Girls Spring Jackets Casual Solid Button Down Tops Long Sleeve Drawstring Cute Lapel Outwear Coat with Pockets 5-14Y",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08P8SHDWB",
+          "title": "Women Knit Leg Warmers Solid Color Footless Knee High Long Boot Socks For Autumn and Winter",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076VQQ962",
+          "title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09YTZ1H4D",
+          "title": "USHTH Black Waterproof Rain Boot Shoe Cover with reflector (1 Pair) (Medium)",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07H253XTD",
+          "title": "Ginjang Women Winter Snow Boots Warm Ankle Boots Anti-Slip Waterproof Winter Shoes Slip On Booties Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07VCQT55H",
+          "title": "HISEA Women's Rubber Boots, Waterproof Insulated Neoprene Rain Boots, Durable Knee High Outdoor Work Boot for Hunting Ga",
+          "price": 59.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: 100% waterproof women's boots are suitable for any season and any outdoor activity.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "waterproof"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "waterproof"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00IHW88W0",
+          "title": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B9RJZLW4",
+          "title": "TENGTA Rubber Boots for Men, 6mm Neoprene Durable Outdoor Hunting Boot, Waterproof Insulated Work Rain Boots (Size 6-14)",
+          "price": 64.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07HRG7BNJ",
+          "title": "MeetZa Women's Lightweight Shirts Color Block Striped Long Sleeve Pullover Tops Ladies Loose Tunic Blouses Sweatshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07VVKGN8T",
+          "title": "Brovollous Women's Mini Dress Long Sleeves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07CKSBDWQ",
+          "title": "ALPINESTARS Boot Ridge Black - 43 US Size 9",
+          "price": 149.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076VQQ962",
+          "title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09YTZ1H4D",
+          "title": "USHTH Black Waterproof Rain Boot Shoe Cover with reflector (1 Pair) (Medium)",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07H253XTD",
+          "title": "Ginjang Women Winter Snow Boots Warm Ankle Boots Anti-Slip Waterproof Winter Shoes Slip On Booties Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07VCQT55H",
+          "title": "HISEA Women's Rubber Boots, Waterproof Insulated Neoprene Rain Boots, Durable Knee High Outdoor Work Boot for Hunting Ga",
+          "price": 59.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Muck Boots Hale Multi-Season Women's Rubber Boot",
+    "hard_constraints": [
+      "100% waterproof women's boots are suitable for any season and any outdoor activity",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Lightweight and breathable mesh lining keeps feet well ventilated for long-wearing dryness; comfort rated from subfreezing to 65 °F/18 °C",
+      "Women's-specific last is designed to match the contours of women's feet"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Women's-specific last is designed to match the contours of women's feet",
+      "new_value": "100% waterproof women's boots are suitable for any season and any outdoor activity",
+      "message": "Actually, ignore my earlier preference. What I need is: 100% waterproof women's boots are suitable for any season and any outdoor activity."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

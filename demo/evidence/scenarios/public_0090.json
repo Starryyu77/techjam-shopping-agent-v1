@@ -1,0 +1,154 @@
+{
+  "sample_id": "public_0090",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07MGR6D5M",
+  "target_title": "Mardi Gras Costume Accessory Mardi Gras Mesh Shimmering Scarf Purple Green Gold Scarf Masquerade Costume Mardi Gras Party Favor (Style 2)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Costumes & Accessories",
+    "Women",
+    "Accessories"
+  ],
+  "target_price": 13.99,
+  "target_rating": 4.4,
+  "target_rating_number": 180,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Accessories. A key requirement is: Decorative lightweight scarf: 2 wearing ways of this mardi gras scarf, wrap the scarf around your neck, or wearing it as a shawl, just change the orientation of the scarf, you can.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Accessories",
+        "hard_constraints": {
+          "feature": [
+            "lightweight"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Accessories",
+          "hard_constraints": {
+            "feature": [
+              "lightweight"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09DYXPWPD",
+          "title": "MANSHU 4 PCS Women Soft Chiffon Scarves Shawl Long Scarf Wrap Scarves.",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B087823R6J",
+          "title": "Scarf for Women Lightweight Animal Butterfly Fashion Spring Fall Winter Scarves Shawl Wraps",
+          "price": 14.92,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07MGR6D5M",
+          "title": "Mardi Gras Costume Accessory Mardi Gras Mesh Shimmering Scarf Purple Green Gold Scarf Masquerade Costume Mardi Gras Part",
+          "price": 13.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GWQW6V9",
+          "title": "Women Scarf Lady Light Soft Solid Scarf Wrap Large Sheer Shawl Wraps for Adult Kids Using (Khaki, Dark Grey, 2 Pieces)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08FHPTVNF",
+          "title": "Kollie More Women's Fashion Scarf Long Lightweight Cotton Scarves Ultra Soft Wraps and Shawls For Lady (180cm x 90cm)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MYXTCCC",
+          "title": "Boston Terrier Dog Print Women's Scarf Shawl Wrap Lightweight",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01F3ZKW2W",
+          "title": "Women Lightweight Metallic Pleated Scarf Shwal Sequin Stripe Scarf Shwal with Fringes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01M1OWKUC",
+          "title": "Ladies Pashmina Shawl Paisley Scarf Wrap With Fringe Fashion Scarves For Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HP79H7K",
+          "title": "Clearance Scarf for Women,WUAI Christmas Long Cute Owl Print Scarf Wraps Shawl Soft Scarves",
+          "price": 0.01,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09B56K669",
+          "title": "SATINIOR 3 Pieces Women's Scarf Pashmina Shawls Winter Long Scarf Wraps Large Soft Pashminas Wedding Shawl for Evening D",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Mardi Gras Costume Accessory Mardi Gras Mesh Shimmering Scarf Purple Green Gold Scarf Masquerade Costume Mardi Gras Party Favor (Style 2)",
+    "hard_constraints": [
+      "Decorative lightweight scarf: 2 wearing ways of this mardi gras scarf, wrap the scarf around your neck, or wearing it as a shawl, just change the orientation of the scarf, you can",
+      "color: purple"
+    ],
+    "soft_preferences": [
+      "Classic mardi gras scarf: designed with gold, purple, green color, the scarf measure: 55 x 134 cm, tassel: 15 cm/ 5.9 inch",
+      "Pattern: the end of the mardi gras shawl is tassel, stripe pattern is shimmering, gold speckled with green and purple"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material"
+    ]
+  }
+}

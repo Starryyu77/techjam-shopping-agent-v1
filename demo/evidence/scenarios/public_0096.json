@@ -1,0 +1,361 @@
+{
+  "sample_id": "public_0096",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B074K2QX3M",
+  "target_title": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "T-Shirts"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.1,
+  "target_rating_number": 8837,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses T-Shirts. Pull On closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09WR1NZ48",
+          "title": "Graphic Tees for Women Short Sleeve Tshirts,Womens Summer Tops Crewneck Shirt Blouse",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B074K2QX3M",
+          "title": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07MG3H13G",
+          "title": "Aokosor Women's Short Sleeve High Low Loose T Shirt Basic Tee Tops with Side Split",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MVR31QJ",
+          "title": "iliad USA 7006 Womens V-Neck 3/4 Sleeve Drape Dolman Top with Side Shirring",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075D8GRHT",
+          "title": "iliad USA 7006 Womens V-Neck 3/4 Sleeve Drape Dolman Top with Side Shirring",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01JZ4JVBK",
+          "title": "SheIn Women's Summer Short Sleeve Loose Casual Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08B4CVDQ4",
+          "title": "CUNLIN Womens T Shirts for Women Leopard Polka Dot Striped Color Block Plain Basic Tees Tops XS-3XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B089CM3S1B",
+          "title": "Romwe Women's Short Sleeve Top Casual Graphic Print Tee Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09WR1NZ48",
+          "title": "Graphic Tees for Women Short Sleeve Tshirts,Womens Summer Tops Crewneck Shirt Blouse",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B074K2QX3M",
+          "title": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07MG3H13G",
+          "title": "Aokosor Women's Short Sleeve High Low Loose T Shirt Basic Tee Tops with Side Split",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MVR31QJ",
+          "title": "iliad USA 7006 Womens V-Neck 3/4 Sleeve Drape Dolman Top with Side Shirring",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075D8GRHT",
+          "title": "iliad USA 7006 Womens V-Neck 3/4 Sleeve Drape Dolman Top with Side Shirring",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01JZ4JVBK",
+          "title": "SheIn Women's Summer Short Sleeve Loose Casual Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08B4CVDQ4",
+          "title": "CUNLIN Womens T Shirts for Women Leopard Polka Dot Striped Color Block Plain Basic Tees Tops XS-3XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B089CM3S1B",
+          "title": "Romwe Women's Short Sleeve Top Casual Graphic Print Tee Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: polyester.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B074K2QX3M",
+          "title": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09SGYPW3M",
+          "title": "OFEEFAN Womens Tops Ruffle Short Sleeve V Neck T-Shirts Casual Loose Fit",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0882N8H6Y",
+          "title": "Sedimond Women's Cold Shoulder Casual Short Sleeve Tunic Tops Loose Blouse Shirt S-2XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01JZ4JVBK",
+          "title": "SheIn Women's Summer Short Sleeve Loose Casual Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0823YQ2HP",
+          "title": "SheIn Women's Summer Short Sleeve Loose Casual Tee T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08B4CVDQ4",
+          "title": "CUNLIN Womens T Shirts for Women Leopard Polka Dot Striped Color Block Plain Basic Tees Tops XS-3XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07Y32DYYS",
+          "title": "Sieanear Womens Tops Long Sleeve Solid Color Round Neck Tunic Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Zeagoo Women's Polka Dots Shirt Striped 3/4 Sleeve Casual Scoop Neck Tops Tee S-XXXL",
+    "hard_constraints": [
+      "polyester",
+      "95% Polyester, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Pull On closure",
+      "new_value": "polyester",
+      "message": "Actually, ignore my earlier preference. What I need is: polyester."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "material",
+      "fit",
+      "performance"
+    ]
+  }
+}

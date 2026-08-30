@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0061",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08HCP9YTV",
+  "target_title": "1pc Surgical Steel Piercing Ring for Nose Septum Cartilage Helix Tragus Conch Rook Daith Lobe 20g-18g-16g-14g-12g-10g 5mm-6mm-7mm-8mm-9mm-10mm-11mm-12mm-14mm-16mm Silver/Gold/Rose Gold/Black/Rainbow",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Jewelry",
+    "Body Jewelry",
+    "Piercing Jewelry",
+    "Rings"
+  ],
+  "target_price": 9.99,
+  "target_rating": 4.3,
+  "target_rating_number": 10297,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Piercing Jewelry Rings. A key requirement is: Snap closure.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "rings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "rings"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08HCP9YTV",
+          "title": "1pc Surgical Steel Piercing Ring for Nose Septum Cartilage Helix Tragus Conch Rook Daith Lobe 20g-18g-16g-14g-12g-10g 5m",
+          "price": 9.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B089DZT2C7",
+          "title": "IEFSHINY Nose Rings Hoop, 316L Surgical Steel Hinged Nose Rings Hoop 20G 18G 16G 14G Body Piercing Jewelry Septum Clicke",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08J295KCZ",
+          "title": "FUNLMO G23 Titanium Hinged Nose Rings Hoop 20G 18G 16G 14G Seamless Piercing Rings for Nose Septum Conch Daith Cartilage",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09Q7VYP3Q",
+          "title": "Casvort 10 PCS 16G Seamless Septum Nose Piercing Rings Segment Tragus Hoop Rings 316 Stainless Steel Helix Ring Stack Cl",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08NC7PPF6",
+          "title": "YEHHY Body Surgical Steel Hinged Nose Ring Hoop 16G Rainbow 8mm/10mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B016CXITYC",
+          "title": "JewelrieShop 20G Black Steel Nose Ring Hoop Stainless Steel Nose Piercing Body Jewelry Set (#M08: 4 Pcs (Steel, Black To",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07DJQ1W7R",
+          "title": "Freedom Fashion Press Fit Threadless Push-in 316L Surgical Steel Soft Enamel Back Comfort Labret/Monroe (Sold Piece)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0871W41JG",
+          "title": "Wide Shoulder Strap Adjustable Replacement Belt Crossbody Canvas Bag Handbag",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08DQWGMLZ",
+          "title": "Mayhoop 16G Surgical Steel Horseshoe Nose Septum Rings Piercing Jewelry Cartilage Helix Tragus Earring Hoop Lip Horsesho",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0793LPS1C",
+          "title": "FIBO STEEL 24 Pcs 20G Stainless Steel Hoop Nose Rings Screw Stud Rings Piercing Jewelry Colored CZ Inlaid",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "1pc Surgical Steel Piercing Ring for Nose Septum Cartilage Helix Tragus Conch Rook Daith Lobe 20g-18g-16g-14g-12g-10g 5mm-6mm-7mm-8mm-9mm-10mm-11mm-12mm-14mm-16mm Silver/Gold/Rose",
+    "hard_constraints": [
+      "Snap closure",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Sold by piece! 14g nose hoop ring size: 14 gauge (ring thickness: 1.6mm), inner diameter 6mm (15/64\" ).Gauge means the thickness of the hoop.Please decide the gauge firstly (measur",
+      "This hinged nose ring hoop is very easy to put in and close and you can't see the seams, comfortable to wear without sharp edge. It spins completely, makes for easy cleaning. You c"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort"
+    ]
+  }
+}

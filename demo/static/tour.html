@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shopping Copilot — Evidence Tour</title>
+<link rel="stylesheet" href="/tour.css" />
+</head>
+<body>
+
+<!-- Top Bar -->
+<header class="topbar">
+  <div class="brand"><span class="dot"></span> Shopping Copilot</div>
+  <div class="sub">Built for TikTok TechJam 2026 · Track 4</div>
+  <nav class="topbar-nav" aria-label="Site navigation">
+    <a href="/tour">Tour</a>
+    <a href="/evidence">Evidence</a>
+    <a href="/sandbox">Sandbox</a>
+  </nav>
+</header>
+
+<!-- Tour Progress -->
+<nav class="tour-progress" aria-label="Tour progress">
+  <button class="step-indicator active" data-step="0" aria-current="step">0 · Results</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator" data-step="1">1 · Data Contract</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator" data-step="2">2 · Replay</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator" data-step="3">3 · Mechanism</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator" data-step="4">4 · Evaluation</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator demo-step" data-step="5">5 · Ads</button>
+  <div class="step-connector"></div>
+  <button class="step-indicator" data-step="6">6 · Close</button>
+</nav>
+
+<!-- Tour Content -->
+<div class="tour-content">
+
+  <!-- ============================================================ -->
+  <!-- STEP 0: Hero / Result Hook                                    -->
+  <!-- ============================================================ -->
+  <section class="tour-step active" data-step="0" id="step0" aria-label="Result hook">
+    <div class="hero">
+      <h1>Shopping Copilot</h1>
+      <p class="subtitle">Find the purchased product earlier and rank it higher — over 50,000 catalog items, in at most 10 turns.</p>
+
+      <div class="metric-grid">
+        <div class="metric-big">
+          <div class="value" id="heroTS">—</div>
+          <div class="label">TechnicalScore</div>
+        </div>
+      </div>
+
+      <div class="metric-row">
+        <span class="metric-sm">HitRate@10 <span class="val" id="heroHR">—</span></span>
+        <span class="metric-sm">MRR <span class="val" id="heroMRR">—</span></span>
+        <span class="metric-sm">MTTC <span class="val" id="heroMTTC">—</span></span>
+      </div>
+
+      <div class="cta-row">
+        <button class="btn-primary" id="btnStartTour" aria-label="Start 3-minute evidence tour">
+          Start 3-minute evidence tour →
+        </button>
+        <a class="btn-secondary" href="/evidence" aria-label="Inspect verified results">
+          Inspect verified results
+        </a>
+      </div>
+
+      <div class="footer-note" aria-live="polite">
+        <span class="evidence-badge competition">Competition Evidence</span>
+        Official public evaluator · <span id="heroN">—</span> sessions<br>
+        Offline CPU · Python standard library · No API keys<br>
+        <span class="unknown-mark">Private 800-session performance remains unknown.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 1: Competition Data Contract                             -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="1" id="step1" aria-label="Data contract">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Competition Data Contract</div>
+          <div class="card-subtitle">What we agreed to solve</div>
+        </div>
+        <span class="evidence-badge competition">Competition Evidence</span>
+      </div>
+
+      <div class="contract-grid" id="contractGrid">
+        <!-- Populated by JS from dataset.json -->
+      </div>
+
+      <h4 class="mt-2 mb-1 text-sm text-muted">SCENARIO MIX</h4>
+      <div class="scenario-bar" id="scenarioBar" role="img" aria-label="Scenario mix distribution">
+        <!-- Populated by JS -->
+      </div>
+      <div id="scenarioLegend" class="text-sm text-muted" style="display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:1rem;"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Catalog Samples</div>
+        <div class="card-subtitle">Text-only metadata — no product images</div>
+      </div>
+      <div id="catalogSamples">
+        <!-- Populated by JS from catalog_samples.json -->
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav1Prev" aria-label="Previous step">← Results</button>
+      <span class="step-label">Step 1 of 6</span>
+      <button class="btn-primary" id="nav1Next" aria-label="Next step">See how one session evolves →</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 2: Scenario Replay                                       -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="2" id="step2" aria-label="Scenario replay">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Scenario Replay</div>
+          <div class="card-subtitle">Real public sessions from the official evaluator</div>
+        </div>
+        <span class="evidence-badge competition">Competition Evidence</span>
+      </div>
+
+      <div class="scenario-tabs" role="tablist" aria-label="Scenario type">
+        <button class="scenario-tab active" role="tab" aria-selected="true" data-scenario="buying">🛒 Buying</button>
+        <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="browsing">👀 Browsing</button>
+        <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="intent_override">🔄 Intent Override</button>
+        <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="boundary">🔲 Boundary</button>
+      </div>
+
+      <div class="replay-header" id="replayHeader" aria-live="polite">
+        <!-- Source, sample_id, scenario, etc. -->
+      </div>
+
+      <div class="replay-stage">
+        <!-- Left: Turn timeline -->
+        <div class="turn-timeline" id="turnTimeline" role="listbox" aria-label="Turn timeline">
+        </div>
+
+        <!-- Center: State panel -->
+        <div class="state-panel" id="statePanel" aria-live="polite">
+          <div class="state-section">
+            <h4>Route</h4>
+            <div id="routeIndicator"></div>
+          </div>
+          <div class="state-section">
+            <h4>Hard Constraints</h4>
+            <div id="hardConstraints" class="constraint-list"></div>
+          </div>
+          <div class="state-section">
+            <h4>Soft Preferences</h4>
+            <div id="softPreferences" class="constraint-list"></div>
+          </div>
+          <div class="state-section">
+            <h4>Negative Constraints</h4>
+            <div id="negConstraints" class="constraint-list"></div>
+          </div>
+          <div class="state-section">
+            <h4>Ask Attribute</h4>
+            <div id="askAttribute" class="text-sm"></div>
+          </div>
+        </div>
+
+        <!-- Right: Results panel -->
+        <div class="results-panel" id="resultsPanel" aria-live="polite">
+          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;margin-bottom:0.25rem;">
+            Top-10 Recommendations
+          </div>
+          <div id="top10List"></div>
+          <div id="targetRankInfo" class="mt-1 text-sm"></div>
+        </div>
+      </div>
+
+      <div class="replay-controls" aria-label="Replay controls">
+        <button id="replayPrev" aria-label="Previous turn" disabled>← Prev</button>
+        <button id="replayNext" aria-label="Next turn">Next →</button>
+        <button id="replayAuto" aria-label="Auto play">▶ Auto</button>
+        <button id="replayRestart" aria-label="Restart case">↻ Restart</button>
+        <span class="text-sm text-muted" id="replayTurnLabel">Turn 1</span>
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav2Prev">← Data Contract</button>
+      <span class="step-label">Step 2 of 6</span>
+      <button class="btn-primary" id="nav2Next">How it works →</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 3: Mechanism Inspection                                  -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="3" id="step3" aria-label="Mechanism inspection">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Mechanism Inspection</div>
+          <div class="card-subtitle">How the pipeline processes a real request</div>
+        </div>
+        <span class="evidence-badge competition">Competition Evidence</span>
+      </div>
+
+      <div class="state-section mb-2">
+        <h4>Pipeline</h4>
+        <div class="text-sm" style="color:var(--text-secondary);line-height:1.8;">
+          Message → <span class="text-evidence">Intent Router</span> →
+          <span class="text-evidence">Versioned Constraint State</span> →
+          <span class="text-evidence">SQLite FTS5 Retrieval</span> →
+          <span class="text-evidence">Rule Reranking</span> →
+          <span class="text-evidence">Candidate-driven Clarification</span> →
+          Top-10 parent_asin
+        </div>
+      </div>
+
+      <div class="mechanism-grid" id="mechanismGrid">
+        <!-- Populated by JS -->
+      </div>
+
+      <div class="card mt-2" style="border-color: var(--unknown-border);">
+        <div class="card-header">
+          <div class="card-title text-sm">Experiments We Did Not Ship</div>
+          <span class="evidence-badge unknown">Negative Result</span>
+        </div>
+        <div class="text-sm" style="color:var(--text-secondary);line-height:1.6;" id="negativeResults">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav3Prev">← Replay</button>
+      <span class="step-label">Step 3 of 6</span>
+      <button class="btn-primary" id="nav3Next">See the numbers →</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 4: Evaluation Evidence                                   -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="4" id="step4" aria-label="Evaluation evidence">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Evaluation Evidence</div>
+          <div class="card-subtitle">Official public-set evaluator result · Not hidden-set evidence</div>
+        </div>
+        <span class="evidence-badge competition">Competition Evidence</span>
+      </div>
+
+      <div class="eval-metrics" id="evalMetrics">
+        <!-- Populated by JS -->
+      </div>
+
+      <h4 class="text-sm text-muted mt-2 mb-1">VERSION COMPARISON</h4>
+      <table class="version-table" id="versionTable">
+        <thead>
+          <tr>
+            <th>Version</th>
+            <th>HitRate@10</th>
+            <th>MRR</th>
+            <th>MTTC</th>
+            <th>TechnicalScore</th>
+          </tr>
+        </thead>
+        <tbody id="versionTableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+
+      <h4 class="text-sm text-muted mt-2 mb-1">PER-SCENARIO BREAKDOWN (V1.3)</h4>
+      <table class="version-table" id="scenarioTable">
+        <thead>
+          <tr>
+            <th>Scenario</th>
+            <th>N</th>
+            <th>HitRate@10</th>
+            <th>MRR</th>
+            <th>MTTC</th>
+          </tr>
+        </thead>
+        <tbody id="scenarioTableBody">
+          <!-- Populated by JS -->
+        </tbody>
+      </table>
+
+      <div class="reproduce-drawer mt-2">
+        <h4 class="text-sm text-muted mb-1">REPRODUCE</h4>
+        <pre id="reproduceCmd"></pre>
+        <div class="text-sm text-muted mt-1" id="artifactInfo">
+          <!-- report artifact, hash, commit, generated_at -->
+        </div>
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav4Prev">← Mechanism</button>
+      <span class="step-label">Step 4 of 6</span>
+      <button class="btn-primary" id="nav4Next">Beyond the benchmark →</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 5: Transparent Ads                                       -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="5" id="step5" aria-label="Transparent ads">
+    <div class="card">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Beyond the Benchmark — Transparent Ads</div>
+          <div class="card-subtitle">Demo-only commercial extension</div>
+        </div>
+        <span class="evidence-badge demo-only">Demo Only</span>
+      </div>
+
+      <div class="demo-banner">
+        <strong>Demo-only commercial extension.</strong><br>
+        Never called by the official evaluator. Does not alter organic Top-10 ranking.
+      </div>
+
+      <h4 class="text-sm text-muted mb-1">PRESET EXPERIMENT</h4>
+      <div class="ad-experiment">
+        <div class="campaign-card" id="campaignA">
+          <h4>Campaign A</h4>
+          <div class="field"><span class="label">Bid</span><span class="value">$1.00</span></div>
+          <div class="field"><span class="label">Relevance</span><span class="value" id="relA">0.82</span></div>
+          <div class="field"><span class="label">eCPM</span><span class="value" id="ecpmA">—</span></div>
+        </div>
+        <div class="campaign-card" id="campaignB">
+          <h4>Campaign B</h4>
+          <div class="field"><span class="label">Bid</span><span class="value">$5.00</span></div>
+          <div class="field"><span class="label">Relevance</span><span class="value" id="relB">0.12</span></div>
+          <div class="field"><span class="label">eCPM</span><span class="value" id="ecpmB">—</span></div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin:1rem 0;">
+        <button class="btn-primary" id="btnRunAuction">Run Auction</button>
+      </div>
+
+      <div class="auction-result" id="auctionResult" style="display:none;">
+        <h4 class="text-sm text-muted mb-1">AUCTION RESULT</h4>
+        <div id="auctionDetails"></div>
+        <div class="mt-1">
+          <h4 class="text-sm text-muted mb-1">ORGANIC TOP-10: BEFORE vs AFTER</h4>
+          <div class="organic-comparison">
+            <div>
+              <div class="organic-label">BEFORE — ORGANIC</div>
+              <ol class="organic-list" id="organicBeforeList"></ol>
+            </div>
+            <div>
+              <div class="organic-label">AFTER — SPONSORED + ORGANIC</div>
+              <div class="sponsored-preview" id="sponsoredPreview"></div>
+              <ol class="organic-list" id="organicAfterList"></ol>
+            </div>
+          </div>
+          <div class="text-sm text-success" id="organicInvariant"></div>
+        </div>
+      </div>
+
+      <div class="text-sm text-muted mt-2" style="line-height:1.6;">
+        This chapter proves: transparent ad auction · relevance-aware monetization · budget accounting · official/demo path isolation · impact potential.<br>
+        Current scope: <strong>impression auction and budget accounting</strong>. No click/conversion path, CTR, or GMV.
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav5Prev">← Evaluation</button>
+      <span class="step-label">Step 5 of 6</span>
+      <button class="btn-primary" id="nav5Next">Wrap up →</button>
+    </div>
+  </section>
+
+  <!-- ============================================================ -->
+  <!-- STEP 6: Closeout                                              -->
+  <!-- ============================================================ -->
+  <section class="tour-step" data-step="6" id="step6" aria-label="Closeout">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">Deliverables & Limitations</div>
+        <span class="evidence-badge competition">Competition Evidence</span>
+      </div>
+
+      <div class="closeout-links">
+        <a class="closeout-link" href="https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2" target="_blank" rel="noopener">
+          📂 Public Repository
+        </a>
+        <a class="closeout-link" href="/report" id="linkReport">
+          📄 Technical Report
+        </a>
+        <a class="closeout-link" href="/reproduce" id="linkReproduce">
+          🔁 Reproduction Instructions
+        </a>
+        <span class="closeout-link disabled-link" id="linkVideo" aria-disabled="true">
+          🎥 Demo Video <span class="text-muted text-sm">(placeholder)</span>
+        </span>
+      </div>
+
+      <div class="card mt-2" style="border-color: var(--unknown-border);">
+        <div class="card-title text-sm mb-1">Limitations</div>
+        <ul class="text-sm" style="color:var(--text-secondary);line-height:1.8;padding-left:1.5rem;">
+          <li>Public-set gains fix generic error classes but do not substitute for the hidden 800-session validation.</li>
+          <li>Popularity tiebreaker band (5.0) is tuned on public 200; a conservative band=3 (+0.03) is available if hidden set regresses.</li>
+          <li>The optional Qwen layer improves vague-intent classification but is not required for reported scores.</li>
+          <li>No dense/vector recall — proven unnecessary since recall is 100% saturated (200/200).</li>
+          <li>Ad engine is demo-only with simulated inventory and budgets.</li>
+        </ul>
+      </div>
+
+      <div class="closeout-quote">
+        What we ship: a deterministic, offline, reproducible scored Agent.<br>
+        What we demonstrate beyond the score: transparent commercial extensions.<br>
+        <span class="text-unknown">What remains unknown: organizer-private 800-session performance.</span>
+      </div>
+
+      <div class="text-sm text-muted" style="text-align:center;margin-top:1rem;" id="teamContributions">
+      </div>
+    </div>
+
+    <div class="tour-nav">
+      <button class="btn-secondary" id="nav6Prev">← Ads</button>
+      <span class="step-label">Step 6 of 6 — Tour Complete</span>
+      <a class="btn-secondary" href="/evidence">Explore all evidence →</a>
+    </div>
+  </section>
+
+</div>
+
+<script src="/tour.js"></script>
+</body>
+</html>

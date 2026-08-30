@@ -1,0 +1,354 @@
+{
+  "sample_id": "public_0172",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0829PZGBB",
+  "target_title": "Skechers Women's Sneaker",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "target_price": 59.95,
+  "target_rating": 4.7,
+  "target_rating_number": 190,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Fashion Sneakers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07TBQW9XD",
+          "title": "MEHOTO Womens Breathable Tennis Shoes, Athletic Fashion Walking Comfort Lightweight Running Sneakers Sports Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07D8Y7KX9",
+          "title": "Tommy Hilfiger Women's Essential Nautical Low-Top Sneakers",
+          "price": 96.71,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CTLX626",
+          "title": "SUNJIN ACRO Unisex Canvas Low Top Sneaker Lace up Classic Casual",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083HWSJ5Q",
+          "title": "DREAM PAIRS Women's Lightweight Walking Shoes Casual Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01BHR2QBU",
+          "title": "Skechers Sport Women's Burst Very Daring Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08TQ7S2GW",
+          "title": "DKNY Women's Lightweight Slip On Comfort Sneaker",
+          "price": 64.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RM8GL5K",
+          "title": "New Balance Men's Ct20 V1 Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082MTCQ6G",
+          "title": "Dockers Mens Gilmore Leather Casual Fashion Sneaker Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01FEQJBEA",
+          "title": "ECCO Men's Soft 7 Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07TBQW9XD",
+          "title": "MEHOTO Womens Breathable Tennis Shoes, Athletic Fashion Walking Comfort Lightweight Running Sneakers Sports Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07D8Y7KX9",
+          "title": "Tommy Hilfiger Women's Essential Nautical Low-Top Sneakers",
+          "price": 96.71,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CTLX626",
+          "title": "SUNJIN ACRO Unisex Canvas Low Top Sneaker Lace up Classic Casual",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083HWSJ5Q",
+          "title": "DREAM PAIRS Women's Lightweight Walking Shoes Casual Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01BHR2QBU",
+          "title": "Skechers Sport Women's Burst Very Daring Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08TQ7S2GW",
+          "title": "DKNY Women's Lightweight Slip On Comfort Sneaker",
+          "price": 64.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RM8GL5K",
+          "title": "New Balance Men's Ct20 V1 Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082MTCQ6G",
+          "title": "Dockers Mens Gilmore Leather Casual Fashion Sneaker Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01FEQJBEA",
+          "title": "ECCO Men's Soft 7 Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 100% Cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C62X675S",
+          "title": "Skechers Women's Bobs Sneaker",
+          "price": 39.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0728LDBKL",
+          "title": "Converse Women's Chuck Taylor All Star Madison Low Top Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01N7KLQ9U",
+          "title": "Converse Women's Chuck Taylor All Star Madison Low Top Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07L14F3V4",
+          "title": "Converse Women's Chuck Taylor Shoreline All of The Stars Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0829PZGBB",
+          "title": "Skechers Women's Sneaker",
+          "price": 59.95,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BSMJDZH7",
+          "title": "Skechers Women's Athleisure Sneaker",
+          "price": 67.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00QV77LIU",
+          "title": "Roxy Women's Santa Cruz Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00LMNBD6E",
+          "title": "Roxy Women's Santa Cruz Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B008PNGL66",
+          "title": "Keds Women's Champion Seasonal Brights Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00DWWEIQU",
+          "title": "Palladium Women's Pampa Oxford",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Skechers Women's Sneaker",
+    "hard_constraints": [
+      "cotton",
+      "100% Cotton"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Synthetic sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "material",
+      "comfort"
+    ]
+  }
+}

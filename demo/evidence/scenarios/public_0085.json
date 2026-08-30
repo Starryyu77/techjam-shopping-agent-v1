@@ -1,0 +1,345 @@
+{
+  "sample_id": "public_0085",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C3YJMRRD",
+  "target_title": "welltree Slides for Women Men Pillow Slippers Non-Slip Bathroom Shower Sandals Soft Thick Sole Indoor and Outdoor Slides",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Sandals",
+    "Slides"
+  ],
+  "target_price": 13.59,
+  "target_rating": 4.3,
+  "target_rating_number": 12021,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sandals Slides, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "sandals"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08WZ4Z457",
+          "title": "Athlefit Cloud Slippers Shower Shoes Bathroom Non-Slip Comfort Slides Cushioned Thick Soft Platform Pillow Slippers",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WSNM7X9",
+          "title": "SAGUARO Mens Womens Slides Double Buckle Flat Sandals Slip On Adjustable EVA Slippers",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B072KW9VLY",
+          "title": "Sanuk Women's Yoga Gora Gora",
+          "price": 34.89,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08VS57FYW",
+          "title": "SEMARY Unisex Man's and Women's Flat Sandals Slip on EVA Slippers Comfort Footbed Adjustable Slides Double Buckle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B013JOZBV6",
+          "title": "Clarks Women's Leisa Broach Dress Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B013JP2S6G",
+          "title": "Clarks Women's Leisa Broach Dress Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07DNLTYQK",
+          "title": "DailyShoes Women's Fashion Alina-01 Sandal Shoes Buckle Flat Casual Adjustable Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B088FZZ9X2",
+          "title": "CUSHIONAIRE Women's Basil Sandal with +Comfort, Wide Widths Available",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08M648961",
+          "title": "Eozlink Fluffy Fur Slides for Women Single/Double Band Faux Fur Decor with Glitter Rhinestones Sliders Two Strap Slide O",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08WZ4Z457",
+          "title": "Athlefit Cloud Slippers Shower Shoes Bathroom Non-Slip Comfort Slides Cushioned Thick Soft Platform Pillow Slippers",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WSNM7X9",
+          "title": "SAGUARO Mens Womens Slides Double Buckle Flat Sandals Slip On Adjustable EVA Slippers",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B072KW9VLY",
+          "title": "Sanuk Women's Yoga Gora Gora",
+          "price": 34.89,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08VS57FYW",
+          "title": "SEMARY Unisex Man's and Women's Flat Sandals Slip on EVA Slippers Comfort Footbed Adjustable Slides Double Buckle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B013JOZBV6",
+          "title": "Clarks Women's Leisa Broach Dress Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B013JP2S6G",
+          "title": "Clarks Women's Leisa Broach Dress Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07DNLTYQK",
+          "title": "DailyShoes Women's Fashion Alina-01 Sandal Shoes Buckle Flat Casual Adjustable Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B088FZZ9X2",
+          "title": "CUSHIONAIRE Women's Basil Sandal with +Comfort, Wide Widths Available",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08M648961",
+          "title": "Eozlink Fluffy Fur Slides for Women Single/Double Band Faux Fur Decor with Glitter Rhinestones Sliders Two Strap Slide O",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Ethylene Vinyl Acetate sole; Heel measures approximately 1.57\".",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C3YJMRRD",
+          "title": "welltree Slides for Women Men Pillow Slippers Non-Slip Bathroom Shower Sandals Soft Thick Sole Indoor and Outdoor Slides",
+          "price": 13.59,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0CBCP1LSH",
+          "title": "XIXITIAO Mens Slide Sandals, womens cloud slides for men Slippers EVA Flat velcro sandals,Waterproof House Shoes for Ind",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09QHC6T6N",
+          "title": "Crocs Women's Kadie II Flip Flops",
+          "price": 13.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B099DMTCXV",
+          "title": "Crocs Unisex-Adult Men's and Women's Classic Slide Sandals",
+          "price": 38.12,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B010121UQ4",
+          "title": "Crocs Women's Capri V Flip Flop | Casual Comfortable Sandals for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B003WSZXPO",
+          "title": "Crocs Men's and Women's Athens Flip Flop | Water Shoes | Beach Sandals",
+          "price": 24.06,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08727VLT1",
+          "title": "JUXI Toddler Clogs Boys Girls Cute Cartoon Toddler Sandals Kids Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B087288YD7",
+          "title": "JUXI Toddler Clogs Boys Girls Cute Cartoon Toddler Sandals Kids Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08T84NF3N",
+          "title": "Women Mens Cloud Slides Slippers EVA Open Toe Bath Shower Quick Drying Non-Slip",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "welltree Slides for Women Men Pillow Slippers Non-Slip Bathroom Shower Sandals Soft Thick Sole Indoor and Outdoor Slides",
+    "hard_constraints": [
+      "Ethylene Vinyl Acetate sole",
+      "Heel measures approximately 1.57\""
+    ],
+    "soft_preferences": [
+      "【High-Quality】:Slides for women and men are made of high-quality EVA, environmentally friendly, no special smell, no noise, no water absorption, and easy to clean",
+      "【Ergonomic Design】:About 30° forward tilt head protection design,so that the sole of the foot does not rush out. The sunken footbed fits the curve of the foot pelvic floor and make"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "durability"
+    ]
+  }
+}

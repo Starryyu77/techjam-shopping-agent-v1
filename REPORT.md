@@ -180,7 +180,7 @@ retrieval and evaluation runs are reproducible from `reports/`.
 Everything in this section lives in a **demo-only layer** (`demo/server.py` and
 its static frontend) that the official evaluator never reaches. We re-ran the
 official evaluator after every change described here and it reproduced
-**TS = 0.8665** bit-for-bit; all 18 unit tests pass. The scored path remains
+**TS = 0.8665** bit-for-bit; all 64 current unit/integration/evidence tests pass. The scored path remains
 pure-rules, offline, stdlib-only.
 
 ### 6.1 Sponsored-ads engine (eCPM auction)

@@ -1,0 +1,703 @@
+{
+  "sample_id": "public_0127",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0B8DX189T",
+  "target_title": "Under Armour Storm Fleece Gloves",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Accessories",
+    "Gloves & Mittens",
+    "Cold Weather Gloves"
+  ],
+  "target_price": 27.27,
+  "target_rating": 4.6,
+  "target_rating_number": 199,
+  "hit": true,
+  "first_hit_turn": 6,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 6,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Gloves & Mittens Cold Weather Gloves, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Gloves & Mittens Cold Weather Gloves"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0825RFGR9",
+          "title": "TRENDOUX Winter Gloves for Men Women - Upgraded Touch Screen Cold Weather Thermal Warm Knit Glove for Running Driving Hi",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C19S5XH1",
+          "title": "G & F Products 100% Waterproof Winter Gloves for outdoor cold weather Double Coated Windproof HPT Plam and Fingers Acryl",
+          "price": 12.71,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07CNJMCMF",
+          "title": "Compression Lightweight Sport Running Gloves Liner Gloves- Black - Men & Women",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HQJJLQP",
+          "title": "OZERO Mens Winter Gloves Nappa Leather Warm Cashmere Touchscreen Dress Glove - Thermal Gifts for Dad or Husband",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B073PTNXC6",
+          "title": "WARMEN Mens Touchscreen Texting Winter Leather Gloves Driving Long Fleece Lining Black - Wool/Cashmere Blend Cuff",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BY8NS7K2",
+          "title": "MaxW Winter Mens Sheepskin Gloves Black Touchscreen Leather Gloves Soft Warm Driving Cycling Mitten Faux Rabbit Fur Lini",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HR5LDKB",
+          "title": "4 Pairs Cashmere Fingerless Gloves Wrist Warmers with Thumb Hole for Women and Men (7.5 x 3.5 inches)()",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00O7RSNP6",
+          "title": "Tenn Waterproof Cold Weather Plus Winter Thermal Padded Thinsulate Lined Cycling Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BYVQYLHR",
+          "title": "HOLDINA Winter Gloves Men Touchscreen Texting,Gloves for Men Knit Warm Anti-Slip,Gloves for Women Fleece Lined",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00RNI7884",
+          "title": "Holly Knitted Jacquard Touchscreen Gloves for Smartphones & Tablets, Small, Medium and Large",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0825RFGR9",
+          "title": "TRENDOUX Winter Gloves for Men Women - Upgraded Touch Screen Cold Weather Thermal Warm Knit Glove for Running Driving Hi",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C19S5XH1",
+          "title": "G & F Products 100% Waterproof Winter Gloves for outdoor cold weather Double Coated Windproof HPT Plam and Fingers Acryl",
+          "price": 12.71,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07CNJMCMF",
+          "title": "Compression Lightweight Sport Running Gloves Liner Gloves- Black - Men & Women",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HQJJLQP",
+          "title": "OZERO Mens Winter Gloves Nappa Leather Warm Cashmere Touchscreen Dress Glove - Thermal Gifts for Dad or Husband",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B073PTNXC6",
+          "title": "WARMEN Mens Touchscreen Texting Winter Leather Gloves Driving Long Fleece Lining Black - Wool/Cashmere Blend Cuff",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BY8NS7K2",
+          "title": "MaxW Winter Mens Sheepskin Gloves Black Touchscreen Leather Gloves Soft Warm Driving Cycling Mitten Faux Rabbit Fur Lini",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HR5LDKB",
+          "title": "4 Pairs Cashmere Fingerless Gloves Wrist Warmers with Thumb Hole for Women and Men (7.5 x 3.5 inches)()",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00O7RSNP6",
+          "title": "Tenn Waterproof Cold Weather Plus Winter Thermal Padded Thinsulate Lined Cycling Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BYVQYLHR",
+          "title": "HOLDINA Winter Gloves Men Touchscreen Texting,Gloves for Men Knit Warm Anti-Slip,Gloves for Women Fleece Lined",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00RNI7884",
+          "title": "Holly Knitted Jacquard Touchscreen Gloves for Smartphones & Tablets, Small, Medium and Large",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; color: black.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081NCR31B",
+          "title": "SATINIOR 3 Pairs Kid Anti-Skid Magic Stretch Gloves Full Finger Knit Gloves Warm Mittens",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VVKGN8T",
+          "title": "Brovollous Women's Mini Dress Long Sleeves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00400NSBE",
+          "title": "MARMOT Glide Softshell Glove - Women's Gloves & Mitts MD Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0B9W9YYHW",
+          "title": "2 Pieces Newsboy Hats for Men Flat Cotton Cap Irish Hats Gatsby Cabbie Cap for Hunting Traveling Cycling Fishing Hiking,",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B003X0BUHG",
+          "title": "Seirus Innovation 1510 Junior Heat Pocket Youth Childs Kids Mitt Mitten",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B009GUWN3M",
+          "title": "ELMA Men's Nappa Leather Winter Gloves Super Warm Cashmere Lining Elasticated Cuff",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06XYN1TJ1",
+          "title": "Iwoner Cycling Mountain Bike Gloves Half Finger Road Racing Riding Gloves in Summer Breathable with Light Anti-Slip Shoc",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0825RFGR9",
+          "title": "TRENDOUX Winter Gloves for Men Women - Upgraded Touch Screen Cold Weather Thermal Warm Knit Glove for Running Driving Hi",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0C19S5XH1",
+          "title": "G & F Products 100% Waterproof Winter Gloves for outdoor cold weather Double Coated Windproof HPT Plam and Fingers Acryl",
+          "price": 12.71,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "For that, what matters is: Imported.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B003X0BUHG",
+          "title": "Seirus Innovation 1510 Junior Heat Pocket Youth Childs Kids Mitt Mitten",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0825RFGR9",
+          "title": "TRENDOUX Winter Gloves for Men Women - Upgraded Touch Screen Cold Weather Thermal Warm Knit Glove for Running Driving Hi",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CNJMCMF",
+          "title": "Compression Lightweight Sport Running Gloves Liner Gloves- Black - Men & Women",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B015K51VPM",
+          "title": "chouyatou Women's Casual Stretch Waist Washed Denim A-line Maxi Skirt",
+          "price": 28.9,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BY8NS7K2",
+          "title": "MaxW Winter Mens Sheepskin Gloves Black Touchscreen Leather Gloves Soft Warm Driving Cycling Mitten Faux Rabbit Fur Lini",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YLW6RM2",
+          "title": "Vopmocld Christmas Family Matching Pajama Red Holiday Pjs Sets Cotton Sleepwear",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08XYYPBC9",
+          "title": "Hikenture Cycling Gloves for Men Women Mountain Road Bike Gloves Half Finger Padded Bicycle Glove",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BYVQYLHR",
+          "title": "HOLDINA Winter Gloves Men Touchscreen Texting,Gloves for Men Knit Warm Anti-Slip,Gloves for Women Fleece Lined",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07X4W3383",
+          "title": "SCHONTAN Women's Outerwear Winter Long Fleece Camouflage Print Lined Thickened Parka Puffer Coats with Faux Fur Hood…",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "I don't have an additional preference for use_case.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B003X0BUHG",
+          "title": "Seirus Innovation 1510 Junior Heat Pocket Youth Childs Kids Mitt Mitten",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0825RFGR9",
+          "title": "TRENDOUX Winter Gloves for Men Women - Upgraded Touch Screen Cold Weather Thermal Warm Knit Glove for Running Driving Hi",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CNJMCMF",
+          "title": "Compression Lightweight Sport Running Gloves Liner Gloves- Black - Men & Women",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B015K51VPM",
+          "title": "chouyatou Women's Casual Stretch Waist Washed Denim A-line Maxi Skirt",
+          "price": 28.9,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BY8NS7K2",
+          "title": "MaxW Winter Mens Sheepskin Gloves Black Touchscreen Leather Gloves Soft Warm Driving Cycling Mitten Faux Rabbit Fur Lini",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YLW6RM2",
+          "title": "Vopmocld Christmas Family Matching Pajama Red Holiday Pjs Sets Cotton Sleepwear",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08XYYPBC9",
+          "title": "Hikenture Cycling Gloves for Men Women Mountain Road Bike Gloves Half Finger Padded Bicycle Glove",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BYVQYLHR",
+          "title": "HOLDINA Winter Gloves Men Touchscreen Texting,Gloves for Men Knit Warm Anti-Slip,Gloves for Women Fleece Lined",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07X4W3383",
+          "title": "SCHONTAN Women's Outerwear Winter Long Fleece Camouflage Print Lined Thickened Parka Puffer Coats with Faux Fur Hood…",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 6,
+      "user_message": "For that, what matters is: 100% Polyester.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Gloves & Mittens Cold Weather Gloves",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BYVQYLHR",
+          "title": "HOLDINA Winter Gloves Men Touchscreen Texting,Gloves for Men Knit Warm Anti-Slip,Gloves for Women Fleece Lined",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01C4U3GX6",
+          "title": "Carhartt Women's The Iris Glove",
+          "price": 30.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B8DX189T",
+          "title": "Under Armour Storm Fleece Gloves",
+          "price": 27.27,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00KXQ93H2",
+          "title": "isotoner Men's Smartouch Matrix Nylon Stretch Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BT9CJVLN",
+          "title": "American Trends Cloak with Hood Women Halloween Hooded Cloak Wizard Robe Cosplay Costume Christmas",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B007WABLE0",
+          "title": "Manzella Women's Equinox Touch Tip Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00LADQ5F0",
+          "title": "Spyder Women's CORE Sweater Conduct Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0914LVFD1",
+          "title": "Mud Pie womens Sherpa Glove",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B009L7HYYI",
+          "title": "Black Diamond Virago Skiing Gloves",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00R7GQOJ6",
+          "title": "Outdoor Durable Lightweight Fingerless Glove - Coyote",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Under Armour Storm Fleece Gloves",
+    "hard_constraints": [
+      "polyester",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "100% Polyester",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort",
+      "warmth"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0165",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B09XHSLX4X",
+  "target_title": "WOCCI Leather Watch Band, Vintage Replacement Strap, Stainless Steel Buckle, Choice of Width 14mm 16mm 18mm 19mm 20mm 21mm 22mm 23mm 24mm",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Watches",
+    "Watch Bands"
+  ],
+  "target_price": 13.99,
+  "target_rating": 4.5,
+  "target_rating_number": 4262,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watches Watch Bands. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Watch Bands",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watches Watch Bands",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09XHSLX4X",
+          "title": "WOCCI Leather Watch Band, Vintage Replacement Strap, Stainless Steel Buckle, Choice of Width 14mm 16mm 18mm 19mm 20mm 21",
+          "price": 13.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07141HM8F",
+          "title": "Fullmosa 12 Colors for Quick Release Leather Watch Band, Uli Genuine Leather Watch Strap 18mm, 20mm, 22mm or 24mm (Choos",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B076BNX4YM",
+          "title": "ArtStyle Vintage Crazy Horse Leather Watch Band with Double Sides Leather Watch Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CRJRKZD",
+          "title": "deBeer - Alligator Grain Leather Replacement Watch Band Strap - Extra Long Length - 8.75\" Long - Widths: 16mm, 18mm, 19m",
+          "price": 16.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B003LUKMNQ",
+          "title": "deBeer Smooth Leather Watch Band- Choice of Color (Black, Brown, Havana) & Width (12mm, 14mm, 16mm, 18mm, 19mm, 20mm)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B079LSDK7Y",
+          "title": "Real Leather Creations Made in the USA - Genuine Crocodile Skin – Glazed Padded Stitched – American Factory Direct - Rep",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B076PQ6FCM",
+          "title": "StrapsCo Crocodile Embossed Women's Leather Watch Band - Quick Release Strap - 10mm 12mm 14mm 16mm 18mm 20mm 22mm 24mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B076PV8N83",
+          "title": "StrapsCo GT Rally Holes Racing Leather Watch Band - Quick Release Strap - 18mm 20mm 22mm 24mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BK6YR2BG",
+          "title": "deBeer Crocodile Grain Chrono Watch Band With White Contrast Stitching-Choice of Color (Black, Brown, Havana) & Width (1",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C61FG7GL",
+          "title": "BARTON Elite Silicone Watch Bands - Quick Release - Choose Strap Color & Buckle Color (Stainless Steel, Black PVD or Gun",
+          "price": 23.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "WOCCI Leather Watch Band, Vintage Replacement Strap, Stainless Steel Buckle, Choice of Width 14mm 16mm 18mm 19mm 20mm 21mm 22mm 23mm 24mm",
+    "hard_constraints": [
+      "leather",
+      "Watch Band Material: Made of good quality crazy-horse leather, they are durable that they may take some breaking in when you first start get them. But once you start wearing them,"
+    ],
+    "soft_preferences": [
+      "Vintage Design: Equipped with classic buckle, neat stitching and proper padding, creating a simple yet charming look, adding a retro vibe to any occasion. Please avoid soaking the",
+      "Available Size (Band Width): 14mm, 16mm, 18mm, 19mm, 20mm, 21mm, 22mm, 23mm, 24mm. Designed to fit most traditional watches and smart watches. In order to get a suitable strap, ple"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

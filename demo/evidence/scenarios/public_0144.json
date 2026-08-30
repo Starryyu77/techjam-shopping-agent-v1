@@ -1,0 +1,683 @@
+{
+  "sample_id": "public_0144",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B08LMMDYV7",
+  "target_title": "URBAN REPUBLIC Women's Winter Jacket - Heavyweight Water Resistant Expedition Faux-Fur Lined Parka Jacket",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Coats, Jackets & Vests",
+    "Down Jackets & Parkas"
+  ],
+  "target_price": 34.99,
+  "target_rating": 4.3,
+  "target_rating_number": 147,
+  "hit": true,
+  "first_hit_turn": 6,
+  "best_rank": 8,
+  "reciprocal_rank": 0.125,
+  "total_turns": 6,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Jackets & Vests Down Jackets & Parkas. Zipper closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jackets"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VVWPQ4Y",
+          "title": "Women's Packable Puffer Down Jacket II Lightweight Full-Zip Water-Resistant Collar Short Coat with Travel Bag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01LDBLG9S",
+          "title": "CHERRY CHICK Women's Light Weight Down Jacket with Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B081BHJZWZ",
+          "title": "Old-to-new Women's Short Hooded Puffer Jacket Lightweight Packable Down Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07R9Y26PY",
+          "title": "CAMEL Womens Down Jacket Lightweight Packable Puffer Down Coats Short Parka Jackets Winter Coats with 4 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07MD54RM5",
+          "title": "SUNDAY ROSE Women's Hooded Puffer Jacket Water-Resistant Insulated Quilted Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08R6J137C",
+          "title": "32 Degrees Women's Down Alternative Lightweight Water-Resistant Short Puffer Packable Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08GPGW8W8",
+          "title": "qualidyne Women's Hooded Lightweight Packable Down Jacket Full-Zip Short Coat Puffer Jacket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VVWPQ4Y",
+          "title": "Women's Packable Puffer Down Jacket II Lightweight Full-Zip Water-Resistant Collar Short Coat with Travel Bag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01LDBLG9S",
+          "title": "CHERRY CHICK Women's Light Weight Down Jacket with Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B081BHJZWZ",
+          "title": "Old-to-new Women's Short Hooded Puffer Jacket Lightweight Packable Down Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07R9Y26PY",
+          "title": "CAMEL Womens Down Jacket Lightweight Packable Puffer Down Coats Short Parka Jackets Winter Coats with 4 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07MD54RM5",
+          "title": "SUNDAY ROSE Women's Hooded Puffer Jacket Water-Resistant Insulated Quilted Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08R6J137C",
+          "title": "32 Degrees Women's Down Alternative Lightweight Water-Resistant Short Puffer Packable Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08GPGW8W8",
+          "title": "qualidyne Women's Hooded Lightweight Packable Down Jacket Full-Zip Short Coat Puffer Jacket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; 100% Polyester.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B081BHJZWZ",
+          "title": "Old-to-new Women's Short Hooded Puffer Jacket Lightweight Packable Down Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07R9Y26PY",
+          "title": "CAMEL Womens Down Jacket Lightweight Packable Puffer Down Coats Short Parka Jackets Winter Coats with 4 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MD54RM5",
+          "title": "SUNDAY ROSE Women's Hooded Puffer Jacket Water-Resistant Insulated Quilted Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B68X2DMM",
+          "title": "RIJING Women's Winter Coat Thicken Warm Puffer Jacket Long Sleeve Zip Windproof Jacket with Fur Removable Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07X6DL9HV",
+          "title": "INCHOICE Winter Coats for Women Long Down Jackets with Hood Warm Heavy Puffer Gifts for Mom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09LRJ6NQX",
+          "title": "Reebok Women's Winter Jacket - Reversible Sherpa-Lined Puffer Windbreaker Coat (S-XL)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B013EDSRD6",
+          "title": "Weathertamer Women's Mid-Length Puffer Coat with Faux Fur-Trimmed Hood",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: polyester.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B081BHJZWZ",
+          "title": "Old-to-new Women's Short Hooded Puffer Jacket Lightweight Packable Down Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07R9Y26PY",
+          "title": "CAMEL Womens Down Jacket Lightweight Packable Puffer Down Coats Short Parka Jackets Winter Coats with 4 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MD54RM5",
+          "title": "SUNDAY ROSE Women's Hooded Puffer Jacket Water-Resistant Insulated Quilted Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B68X2DMM",
+          "title": "RIJING Women's Winter Coat Thicken Warm Puffer Jacket Long Sleeve Zip Windproof Jacket with Fur Removable Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07X6DL9HV",
+          "title": "INCHOICE Winter Coats for Women Long Down Jackets with Hood Warm Heavy Puffer Gifts for Mom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09LRJ6NQX",
+          "title": "Reebok Women's Winter Jacket - Reversible Sherpa-Lined Puffer Windbreaker Coat (S-XL)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B013EDSRD6",
+          "title": "Weathertamer Women's Mid-Length Puffer Coat with Faux Fur-Trimmed Hood",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "I don't have an additional preference for use_case.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B081BHJZWZ",
+          "title": "Old-to-new Women's Short Hooded Puffer Jacket Lightweight Packable Down Coats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07R9Y26PY",
+          "title": "CAMEL Womens Down Jacket Lightweight Packable Puffer Down Coats Short Parka Jackets Winter Coats with 4 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MD54RM5",
+          "title": "SUNDAY ROSE Women's Hooded Puffer Jacket Water-Resistant Insulated Quilted Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B68X2DMM",
+          "title": "RIJING Women's Winter Coat Thicken Warm Puffer Jacket Long Sleeve Zip Windproof Jacket with Fur Removable Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07X6DL9HV",
+          "title": "INCHOICE Winter Coats for Women Long Down Jackets with Hood Warm Heavy Puffer Gifts for Mom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09LRJ6NQX",
+          "title": "Reebok Women's Winter Jacket - Reversible Sherpa-Lined Puffer Windbreaker Coat (S-XL)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B013EDSRD6",
+          "title": "Weathertamer Women's Mid-Length Puffer Coat with Faux Fur-Trimmed Hood",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 6,
+      "user_message": "For that, what matters is: Imported; Zipper closure.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07BR2J71F",
+          "title": "U.S. Polo Assn. Women's Quilted Moto Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XDJX81Q",
+          "title": "CHERFLY Women's Winter Puffer Coat Heavy Warm Long Parka Down Jacket with Fur Hood",
+          "price": 59.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08SS3Y79W",
+          "title": "Amazon Essentials Women's Heavyweight Diamond Quilted Knee Length Puffer Coat",
+          "price": 67.92,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RS44M91",
+          "title": "Tommy Hilfiger Women's Quilted Hooded Long Puffer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B68X2DMM",
+          "title": "RIJING Women's Winter Coat Thicken Warm Puffer Jacket Long Sleeve Zip Windproof Jacket with Fur Removable Hood",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07X6DL9HV",
+          "title": "INCHOICE Winter Coats for Women Long Down Jackets with Hood Warm Heavy Puffer Gifts for Mom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09LRJ6NQX",
+          "title": "Reebok Women's Winter Jacket - Reversible Sherpa-Lined Puffer Windbreaker Coat (S-XL)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08LMMDYV7",
+          "title": "URBAN REPUBLIC Women's Winter Jacket - Heavyweight Water Resistant Expedition Faux-Fur Lined Parka Jacket",
+          "price": 34.99,
+          "is_target": true
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09JX1Q6RY",
+          "title": "32 Degrees Women’s Down Alternative Water-Repellent Jacket, Lightweight Full-Zip Packable",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0995HJKRX",
+          "title": "Womens Hooded Down Jacket Long Quilted Lightweight Puffer Coat, Standard and Plus Size",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 8,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "URBAN REPUBLIC Women's Winter Jacket - Heavyweight Water Resistant Expedition Faux-Fur Lined Parka Jacket",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Zipper closure",
+      "new_value": "polyester",
+      "message": "Actually, ignore my earlier preference. What I need is: polyester."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "material"
+    ]
+  }
+}

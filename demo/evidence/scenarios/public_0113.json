@@ -1,0 +1,352 @@
+{
+  "sample_id": "public_0113",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08CTFPBN5",
+  "target_title": "RockDove Women's Nomad Slipper with Memory Foam",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": 27.99,
+  "target_rating": 4.5,
+  "target_rating_number": 7317,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07DH2BLJJ",
+          "title": "Women's Cozy Memory Foam Slippers Fluffy Micro Suede Faux Fur Fleece Lined House Shoes with Non Skid Indoor Outdoor Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08D6GYP6Y",
+          "title": "Timatego Toddler Baby Boys Girls Shoes Non Skid Slipper Sneaker Moccasins Infant First Walker House Walking Crib Shoes(6",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07ZSDWSZZ",
+          "title": "Snug Leaves Women's Fuzzy Woolen Memory Foam Slippers with Dual Side Elastic Gores",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B079FDJRPW",
+          "title": "HomeTop Women's Elegant Cotton Knitted Memory Foam Indoor Ballerina House Slippers/Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B084NXRSQ2",
+          "title": "HomeTop Boys Girls Comfy Wool Felt House Shoes Light Weight Stretchable Elastic Band Slippers for Kids with Durable Rubb",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YJJD9MM",
+          "title": "VIFUUR Men's Memory Foam Cushioned Slippers Suede Knit Comfort House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08C4RC157",
+          "title": "HomeTop Kids Comfy Microsuede Memory Foam House Shoes with Warm and Soft Plush Lining",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B081DNWHSN",
+          "title": "Westie Super Soft Women’s Slippers - One Size Fits Most - Cozy House Slippers - Non Skid Bottom - perfect for Westie gif",
+          "price": 16.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07DH2BLJJ",
+          "title": "Women's Cozy Memory Foam Slippers Fluffy Micro Suede Faux Fur Fleece Lined House Shoes with Non Skid Indoor Outdoor Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08D6GYP6Y",
+          "title": "Timatego Toddler Baby Boys Girls Shoes Non Skid Slipper Sneaker Moccasins Infant First Walker House Walking Crib Shoes(6",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GD828W6",
+          "title": "VIFUUR Women's Men's Memory Foam Slippers Plush Lining Anti-Skid House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07ZSDWSZZ",
+          "title": "Snug Leaves Women's Fuzzy Woolen Memory Foam Slippers with Dual Side Elastic Gores",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B079FDJRPW",
+          "title": "HomeTop Women's Elegant Cotton Knitted Memory Foam Indoor Ballerina House Slippers/Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B084NXRSQ2",
+          "title": "HomeTop Boys Girls Comfy Wool Felt House Shoes Light Weight Stretchable Elastic Band Slippers for Kids with Durable Rubb",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YJJD9MM",
+          "title": "VIFUUR Men's Memory Foam Cushioned Slippers Suede Knit Comfort House Shoes Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08C4RC157",
+          "title": "HomeTop Kids Comfy Microsuede Memory Foam House Shoes with Warm and Soft Plush Lining",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B081DNWHSN",
+          "title": "Westie Super Soft Women’s Slippers - One Size Fits Most - Cozy House Slippers - Non Skid Bottom - perfect for Westie gif",
+          "price": 16.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Sherpa Fleece; Rubber sole.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08C76ND5Y",
+          "title": "Homeier Ralph Women’s Cozy Comfy Chenille Slippers Luxury Sherpa Fleece House Shoes Indoor Outdoor Closed Back",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09RZJ3P96",
+          "title": "Zizor Women's Adjustable Strap Closed Back Slipper with Memory Foam, Ladies' Cozy House Slipper for Indoor Outdoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08MV1VVKR",
+          "title": "NineCiFun Women's Slip on Fuzzy House Slippers Memory Foam Slippers Scuff Outdoor Indoor Warm Plush Bedroom Shoes with F",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08D222F93",
+          "title": "COFACE Mens Womens Cozy Memory Foam Scuff Slippers Slip On Warm House Shoes Indoor/Outdoor with Best Arch Surpport Size ",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "RockDove Women's Nomad Slipper with Memory Foam",
+    "hard_constraints": [
+      "Sherpa Fleece",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "CLOSED HEEL - These slippers hug your feet entirely so they won't fly off when walking, especially on stairs. Made of soft uppers, you can also step over the back and wear them as",
+      "TOASTY WARM - Covered in plush sherpa fleece from inside to outside, this slipper will wrap your feet in a cocoon of warmth so they'll never feel cold"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

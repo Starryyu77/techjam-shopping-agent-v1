@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0131",
+  "scenario_type": "boundary",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07PQQQ8ZL",
+  "target_title": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Socks & Hosiery",
+    "Leg Warmers"
+  ],
+  "target_price": 9.99,
+  "target_rating": 4.5,
+  "target_rating_number": 13603,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Socks & Hosiery Leg Warmers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Socks & Hosiery Leg Warmers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Socks & Hosiery Leg Warmers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07PQQQ8ZL",
+          "title": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+          "price": 9.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BGCL426M",
+          "title": "TeeHee Knee Leg Warmers,Extra Long Thigh High Leg Warmers, Boot Cuffs for Women",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07MYZ4VXM",
+          "title": "Ordenado 3 Pairs Boys & Girls Cotton School Uniform Knee High Socks Kids Child Soccer Socks Cute Cable Knit Tube Sport S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01HJVJXMS",
+          "title": "Dimore Women Thigh High Socks Extra Long Cotton Knit Warm Winter Over The Knee Long Boot Stockings Black…",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B42PVX1F",
+          "title": "Wool Plus Size Thigh High Socks For Thick Thighs- Extra Long Womens Warm Cable Knit Over Knee Stockings Leg Warmers",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07K2SJFHK",
+          "title": "Women Short Boots Socks Winter Crochet Knit Leg Warmers Girl Boot Cuffs Socks Short Leg Warmer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00AMA1QEC",
+          "title": "Fashion Ribbed Knit Soft Acrylic Leg Warmer - Grey",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01N0GC4V7",
+          "title": "Lian LifeStyle Women's 2 Pairs Adorable Thigh High Cotton Socks LLS1025 Size 6-9",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B091DQRRQF",
+          "title": "URATOT 4 Pairs Women Over Knee Socks Stockings Girls Knee-high Socks Extra Long Socks Long Boot Stockings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00KLNCO5K",
+          "title": "Sakkas Gisele Knit Leg Warmers",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Women Thigh High Socks Extra Long Cotton Knit Warm Thick Tall Long Boot Stockings Leg Warmers",
+    "hard_constraints": [
+      "cotton",
+      "Thigh high socks: 20% Stretchy Yarn, 80% cotton"
+    ],
+    "soft_preferences": [
+      "Hand Wash Only",
+      "◆ Soft & Breathable: Being knitted by cotton and stretchy yarn, the mid thigh high socks for women are comfortable, soft, lightweight and breathable. ( 80% Cotton, 20% Stretchy Yar"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "boundary"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "weather",
+      "comfort",
+      "style"
+    ]
+  }
+}

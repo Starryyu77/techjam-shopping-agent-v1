@@ -1,0 +1,355 @@
+{
+  "sample_id": "public_0153",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07BMJ77FR",
+  "target_title": "Susanny High Heel Boots for Women,Womens Platform Boot Heels Sexy Round Toe Lace UP High Heels Mid Calf Boots",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Boots",
+    "Ankle & Bootie"
+  ],
+  "target_price": 42.99,
+  "target_rating": 4.2,
+  "target_rating_number": 5530,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Boots Ankle & Bootie, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "boots"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01HJA0W24",
+          "title": "Timberland Women's 6\" Premium Waterproof Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B073X8Y8LW",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073X9SVPT",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07D4Q6N8F",
+          "title": "GLOBALWIN Women's Lara Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07D44PR5R",
+          "title": "GLOBALWIN Women's Lara Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B083TJDGG4",
+          "title": "Dunes Women's Patty Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075LVZPH4",
+          "title": "Skechers Elm",
+          "price": 69.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YMMP58W",
+          "title": "MVE Women's Bootie Side Zip High Stacked Block Heel Ankle Booties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B097XSNQQN",
+          "title": "DREAM PAIRS Women’s White Black Platform Boots Low Wedge Heel Ankle Booties Lace-up Combat Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B001B78AH6",
+          "title": "Minnetonka Women's Suede Ankle Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01HJA0W24",
+          "title": "Timberland Women's 6\" Premium Waterproof Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B073X8Y8LW",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073X9SVPT",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07D4Q6N8F",
+          "title": "GLOBALWIN Women's Lara Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07D44PR5R",
+          "title": "GLOBALWIN Women's Lara Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B083TJDGG4",
+          "title": "Dunes Women's Patty Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075LVZPH4",
+          "title": "Skechers Elm",
+          "price": 69.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YMMP58W",
+          "title": "MVE Women's Bootie Side Zip High Stacked Block Heel Ankle Booties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B097XSNQQN",
+          "title": "DREAM PAIRS Women’s White Black Platform Boots Low Wedge Heel Ankle Booties Lace-up Combat Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B001B78AH6",
+          "title": "Minnetonka Women's Suede Ankle Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; PU Leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "boots",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07BMJ77FR",
+          "title": "Susanny High Heel Boots for Women,Womens Platform Boot Heels Sexy Round Toe Lace UP High Heels Mid Calf Boots",
+          "price": 42.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VQH6L7M",
+          "title": "gracosy Leather Ankle Boots for Women, Block Heel Vintage Side Zipper Floral Pattern Boots Lace up with Warm Lining",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08T1K6N3G",
+          "title": "Padgene Women's PU Leather Platform Wedgie Sneakers Fashion High Top Ankle Booties Booties Slip On Side Zipper Casual We",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01HJA0W24",
+          "title": "Timberland Women's 6\" Premium Waterproof Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B074G1JP8Z",
+          "title": "GLOBALWIN Women's Waterproof Winter Boots Snow Boots For Women",
+          "price": 60.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08WJNJXK6",
+          "title": "TOMS Desert Tan Leopard Suede Kelsy Bootie 10014153",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B073X8Y8LW",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B073X9SVPT",
+          "title": "LUSTHAVE Women's Madeline Western Almond Round Toe Slip on Bootie - Low Stack Heel - Zip Up - Casual Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074X9PMTT",
+          "title": "GLOBALWIN Women's Fur Trek Winter Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07D4Q6N8F",
+          "title": "GLOBALWIN Women's Lara Fashion Boots",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Susanny High Heel Boots for Women,Womens Platform Boot Heels Sexy Round Toe Lace UP High Heels Mid Calf Boots",
+    "hard_constraints": [
+      "leather",
+      "PU Leather"
+    ],
+    "soft_preferences": [
+      "Rubber sole",
+      "Shaft measures approximately Ankle from arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style",
+      "durability"
+    ]
+  }
+}

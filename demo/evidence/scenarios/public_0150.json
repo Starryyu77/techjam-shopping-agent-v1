@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0150",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07P6MPQY5",
+  "target_title": "Sivvan Scrubs for Men - Zippered Short Sleeve Jacket",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Uniforms, Work & Safety",
+    "Clothing",
+    "Medical",
+    "Scrub Jackets"
+  ],
+  "target_price": 15.29,
+  "target_rating": 4.3,
+  "target_rating_number": 797,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Medical Scrub Jackets, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jackets"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07P6MPQY5",
+          "title": "Sivvan Scrubs for Men - Zippered Short Sleeve Jacket",
+          "price": 15.29,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01MYUM67T",
+          "title": "Med Couture Women's in-Seam Zip Front Solid Warm Up Scrub Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B097QG31KD",
+          "title": "Strictly Scrubs Women's Stretch Watercolor Zebra Print Scrub Jacket (XS-3X) – Warm Up Medical Scrub Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01DE4O9D2",
+          "title": "Careisma Women's Zip-up Solid Scrub Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00AZO9Q4W",
+          "title": "BARCO ICU Women's Missy Fit 2 Pocket Snap Front Scrub Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B002B61ERE",
+          "title": "Landau Essentials Women’s Drawstring Warm-Up Scrub Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07W7W3M1V",
+          "title": "Cherokee Infinity CK372 Women's Zip Front Jacket, Botanical Gestures, Small",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B083JSMQNC",
+          "title": "Natural Uniforms Women's Warm Up Jacket Medical Scrub Jacket (XS to 5XL) (Medium, Ceil Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00GRIOW5I",
+          "title": "Adar Universal Scrubs for Women - Round Neck Warm-Up Scrub Jacket - 602 - Chocolate Brown - 3X",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00AZO7TKA",
+          "title": "Cherokee Genuine CK301 Hope is Beautiful L",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Sivvan Scrubs for Men - Zippered Short Sleeve Jacket",
+    "hard_constraints": [
+      "polyester",
+      "65% Polyester, 35% Cotton"
+    ],
+    "soft_preferences": [
+      "CLOSURE: Zip Front closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

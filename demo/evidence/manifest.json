@@ -1,0 +1,166 @@
+{
+  "evidence_scope": "official_public_200",
+  "generated_at": "2026-08-30T16:17:56.521246+00:00",
+  "catalog_sha256": "da979b05a68af864cb0dcf9ee6a81c010c7e66a57978ad286c7a2e005fc69a67",
+  "evaluator_git_commit": "34078351e1c3615e5505a2e829600b56a542e462",
+  "agent_git_commit": "c0fa45f894d71ce09c6bf5123088a67bb8d71a0e",
+  "report_sha256": "192783ee88cb4f1db470f4a0e6117ef7d4649d8dff4c1e5abe987e6def1324cc",
+  "report_file": "official_public_rules_v1_3.json",
+  "metrics": {
+    "hit_rate_at_10": 0.995,
+    "mrr": 0.644355,
+    "mttc": 2.215,
+    "efficiency": 0.8785,
+    "technical_score": 0.866507
+  },
+  "sample_count": 200,
+  "scenario_counts": {
+    "buying": 80,
+    "browsing": 80,
+    "intent_override": 30,
+    "boundary": 10
+  },
+  "canonical_case_candidates": [
+    {
+      "sample_id": "public_0001",
+      "scenario_type": "buying",
+      "total_turns": 1,
+      "target_parent_asin": "B09PYB7B6Z",
+      "target_title": "QIAN0813 Celttic Knot Triple Moon Pentagram Pentacle Star Wicca Pendant Necklace Round Pagan Jewelry",
+      "first_hit_turn": 1,
+      "best_rank": 1,
+      "demonstrates": "Early hard-constraint lock: target in Top-3 on turn 1",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0018",
+      "scenario_type": "buying",
+      "total_turns": 3,
+      "target_parent_asin": "B07H3T5YGH",
+      "target_title": "O2TEE Men's Workout Gym Tank Tops Men - Custom Tank Top - Customized & Personalized Tanktops Text",
+      "first_hit_turn": 3,
+      "best_rank": 1,
+      "demonstrates": "Multi-turn constraint refinement improves rank",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0063",
+      "scenario_type": "browsing",
+      "total_turns": 2,
+      "target_parent_asin": "B09MKL5TBK",
+      "target_title": "BALEAF Womens' 7\" Long Running Athletic Shorts with Liner Workout Zipper Pocket",
+      "first_hit_turn": 2,
+      "best_rank": 1,
+      "demonstrates": "Candidate-driven clarification narrows vague browsing intent",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0006",
+      "scenario_type": "browsing",
+      "total_turns": 1,
+      "target_parent_asin": "B071F2Z7JG",
+      "target_title": "Pro Club Men's Heavyweight Mesh Basketball Shorts",
+      "first_hit_turn": 1,
+      "best_rank": 1,
+      "demonstrates": "Browsing hit on turn 1 despite vague intent",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0004",
+      "scenario_type": "intent_override",
+      "total_turns": 3,
+      "target_parent_asin": "B07C2XPZ6D",
+      "target_title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+      "first_hit_turn": 3,
+      "best_rank": 1,
+      "demonstrates": "Erase-and-rewrite: old preference removed, new preference set (visible slot deletion in trace)",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0072",
+      "scenario_type": "intent_override",
+      "total_turns": 3,
+      "target_parent_asin": "B09JG4V9ZR",
+      "target_title": "Facitisu Womens Winter Warm Jacket Long Down Faux Fur Hooded Quilted Sherpa Lined Coat",
+      "first_hit_turn": 3,
+      "best_rank": 1,
+      "demonstrates": "Erase-and-rewrite: old preference removed, new preference set",
+      "anomalies": null
+    },
+    {
+      "sample_id": "public_0050",
+      "scenario_type": "boundary",
+      "total_turns": 1,
+      "target_parent_asin": "B07BYR6T7W",
+      "target_title": "EverBoots Mens Work Boots for Men, Leather EverFit Lightweight Comfort Boot, Anti Slip & Shock Absor",
+      "first_hit_turn": 1,
+      "best_rank": 1,
+      "demonstrates": "Handles 'no preference' without losing valid constraints",
+      "anomalies": null
+    }
+  ],
+  "canonical_cases_frozen": true,
+  "canonical_cases": [
+    {
+      "sample_id": "public_0030",
+      "scenario_type": "buying",
+      "role": "primary_video"
+    },
+    {
+      "sample_id": "public_0004",
+      "scenario_type": "intent_override",
+      "role": "primary_video"
+    },
+    {
+      "sample_id": "public_0063",
+      "scenario_type": "browsing",
+      "role": "primary_website"
+    },
+    {
+      "sample_id": "public_0050",
+      "scenario_type": "boundary",
+      "role": "primary_website"
+    },
+    {
+      "sample_id": "public_0018",
+      "scenario_type": "buying",
+      "role": "secondary"
+    },
+    {
+      "sample_id": "public_0006",
+      "scenario_type": "browsing",
+      "role": "secondary"
+    },
+    {
+      "sample_id": "public_0072",
+      "scenario_type": "intent_override",
+      "role": "secondary"
+    }
+  ],
+  "canonical_approval": {
+    "approved_at": "2026-08-31",
+    "approval_note": "P0 repair: use public_0030 because it visibly locks material=polyester and hits rank 1; keep the anomalous multi-turn case secondary.",
+    "source": "demo/canonical_cases.json"
+  },
+  "evaluator_command": "python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules",
+  "reproduce_command": "python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search",
+  "artifacts": [
+    "demo/evidence/manifest.json",
+    "demo/evidence/metrics.json",
+    "demo/evidence/dataset.json",
+    "demo/evidence/version_comparison.json",
+    "demo/evidence/catalog_samples.json",
+    "demo/evidence/scenarios/*.json"
+  ],
+  "claim_boundary": {
+    "public_200": "verified by official public-set evaluator",
+    "private_800": "unknown — performance not measured",
+    "score_label": "official public-set evaluator result",
+    "not_labels": [
+      "hidden-set score",
+      "final score",
+      "competition-ready score",
+      "private-set evidence"
+    ]
+  }
+}

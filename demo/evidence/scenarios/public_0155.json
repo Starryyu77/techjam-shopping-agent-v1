@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0155",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0C4VLWWYY",
+  "target_title": "GearTOP Net Hat UV Protection Sun Hat Head Net Hat Fishing Hat for Men & Women Wide Brim Hat w/Removable Net",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Accessories",
+    "Hats & Caps",
+    "Sun Hats"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.4,
+  "target_rating_number": 340,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Hats & Caps Sun Hats. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Sun Hats",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Hats & Caps Sun Hats",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C4VLWWYY",
+          "title": "GearTOP Net Hat UV Protection Sun Hat Head Net Hat Fishing Hat for Men & Women Wide Brim Hat w/Removable Net",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B003TOAFPY",
+          "title": "DC Men's Take That Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B06XXJCVCR",
+          "title": "Connectyle Outdoor Neck Flap Sun Hat Large Brim Sun Protection Bucket Fishing Hats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01GFK3ZQ4",
+          "title": "Under Armour Women's Links Visor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08576BP9W",
+          "title": "Graden Hats for Women Sun Protection Hat-Wide Brim Ponytail Cap-Great for Travel, Visor Hat with Fashion Design.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07CZ84YFJ",
+          "title": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075LPX32H",
+          "title": "Carhartt Men's Rugged Professional™ Series Canvas Mesh-Back Cap",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B081K9HCJ4",
+          "title": "CHAPEAU TRIBE Classic Stretchable Wool French Beret",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TN1845M",
+          "title": "Arctic Air Adjustable Sports Cap, Beige, Hat",
+          "price": 19.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09BB4X8ZY",
+          "title": "Women Beret Hat Winter Wool Beret French Artist Beanie Beret with Skily Scarf",
+          "price": 12.59,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "GearTOP Net Hat UV Protection Sun Hat Head Net Hat Fishing Hat for Men & Women Wide Brim Hat w/Removable Net",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Drawstring closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "comfort",
+      "material"
+    ]
+  }
+}

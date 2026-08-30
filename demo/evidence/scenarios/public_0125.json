@@ -1,0 +1,450 @@
+{
+  "sample_id": "public_0125",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07VCYFB5D",
+  "target_title": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Women",
+    "Accessories",
+    "Hats & Caps",
+    "Baseball Caps"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.6,
+  "target_rating_number": 2454,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Hats & Caps Baseball Caps. HOOK & LOOP CLOSURE: Our hats for women and men feature a strap closure in the back letting you easily adjust the size for a perfect fit",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Baseball Caps",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Hats & Caps Baseball Caps"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07VCYFB5D",
+          "title": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B073DYJ2V1",
+          "title": "Flexfit Men's Athletic Baseball Fitted Cap",
+          "price": 22.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B075LPX32H",
+          "title": "Carhartt Men's Rugged Professional™ Series Canvas Mesh-Back Cap",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TN1845M",
+          "title": "Arctic Air Adjustable Sports Cap, Beige, Hat",
+          "price": 19.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00DEJI6GE",
+          "title": "adidas Men's Contract Cap",
+          "price": 19.5,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B96H6C84",
+          "title": "Callaway Men's Golf Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CKQGNWB",
+          "title": "Embroidered California Republic with Bear Claw Scratch Snapback Cap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082YV16C7",
+          "title": "Tommy Hilfiger Men's Cotton Tony Adjustable Baseball Cap",
+          "price": 15.02,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09FQ892TL",
+          "title": "Trump 2024 Hat Donald Trump Hat 2024 MAGA Keep America Great Hat Camo USA Embroidered Adjustable Baseball Cap",
+          "price": 13.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00FBNKH0E",
+          "title": "bioWorld Pokémon Pikachu Big Face with Ears Hat, One Size",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: HOOK & LOOP CLOSURE: Our hats for women and men feature a strap closure in the back letting you easily adjust the size for a perfect fit.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Baseball Caps",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07VCYFB5D",
+          "title": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B073DYJ2V1",
+          "title": "Flexfit Men's Athletic Baseball Fitted Cap",
+          "price": 22.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B075LPX32H",
+          "title": "Carhartt Men's Rugged Professional™ Series Canvas Mesh-Back Cap",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TN1845M",
+          "title": "Arctic Air Adjustable Sports Cap, Beige, Hat",
+          "price": 19.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00DEJI6GE",
+          "title": "adidas Men's Contract Cap",
+          "price": 19.5,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B96H6C84",
+          "title": "Callaway Men's Golf Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CKQGNWB",
+          "title": "Embroidered California Republic with Bear Claw Scratch Snapback Cap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082YV16C7",
+          "title": "Tommy Hilfiger Men's Cotton Tony Adjustable Baseball Cap",
+          "price": 15.02,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09FQ892TL",
+          "title": "Trump 2024 Hat Donald Trump Hat 2024 MAGA Keep America Great Hat Camo USA Embroidered Adjustable Baseball Cap",
+          "price": 13.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00FBNKH0E",
+          "title": "bioWorld Pokémon Pikachu Big Face with Ears Hat, One Size",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Acrylic; Hook and Loop closure.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Baseball Caps",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07VCYFB5D",
+          "title": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07WZQ2WF9",
+          "title": "Baseball Cap Christain Chaplain Cross Embroidery Dad Hats for Men & Women 1 Size",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WZQ3C6Y",
+          "title": "Baseball Cap Black Lives Matter Embroidery Dad Hats for Men & Women 1 Size",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08HGL5MTV",
+          "title": "Custom Baseball Cap Anchor A Embroidery Symbols Acrylic Dad Hats for Men & Women",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00PCZ3OO2",
+          "title": "United States Navy 3D Embroidered Adjustable Baseball Cap Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MKW27V5",
+          "title": "Lymalley Keep America Great 2020, Trump Baseball Cap/Hat, with USA Flag.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08YQGGS8F",
+          "title": "Baseball Ponytail Cap with Hole for Women Fashionable Trucker Mesh Sun Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CHXLG33",
+          "title": "Eiffel Fashion Baseball Cap, Make America Great Again Donald Trump USA Cap Adjustable Baseball Hat (USA Black)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07G8R49M3",
+          "title": "Armycrew Vietnam Veteran 1961 to 1975 Eagle Star Embroidered Baseball Cap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01N7JN1UA",
+          "title": "KATYDID Mimi Hair Don't Care Women's Trucker Hats Caps",
+          "price": 22.95,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: 100% Acrylic.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Baseball Caps",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00PCZ3OO2",
+          "title": "United States Navy 3D Embroidered Adjustable Baseball Cap Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B083LFWGH1",
+          "title": "Trade Winds Jolly Roger Pirate Surrender The Booty Prepare to Be Boarded Ball Cap Hat Multi",
+          "price": 13.87,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07VCYFB5D",
+          "title": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07WZQ2WF9",
+          "title": "Baseball Cap Christain Chaplain Cross Embroidery Dad Hats for Men & Women 1 Size",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07WZQ3C6Y",
+          "title": "Baseball Cap Black Lives Matter Embroidery Dad Hats for Men & Women 1 Size",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08YQGGS8F",
+          "title": "Baseball Ponytail Cap with Hole for Women Fashionable Trucker Mesh Sun Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CHXLG33",
+          "title": "Eiffel Fashion Baseball Cap, Make America Great Again Donald Trump USA Cap Adjustable Baseball Hat (USA Black)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07G8R49M3",
+          "title": "Armycrew Vietnam Veteran 1961 to 1975 Eagle Star Embroidered Baseball Cap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01N7JN1UA",
+          "title": "KATYDID Mimi Hair Don't Care Women's Trucker Hats Caps",
+          "price": 22.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08HGL5MTV",
+          "title": "Custom Baseball Cap Anchor A Embroidery Symbols Acrylic Dad Hats for Men & Women",
+          "price": 19.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Baseball Cap Custom Personalized Text Dad Hats for Men & Women Strap Closure",
+    "hard_constraints": [
+      "100% Acrylic",
+      "Hook and Loop closure"
+    ],
+    "soft_preferences": [
+      "PREMIUM QUALITY: Take your outfit to the next level with our 100% acrylic 6 panels mid-profile structured baseball hat that provides maximum comfort. Fits men and women!",
+      "HOOK & LOOP CLOSURE: Our hats for women and men feature a strap closure in the back letting you easily adjust the size for a perfect fit"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "HOOK & LOOP CLOSURE: Our hats for women and men feature a strap closure in the back letting you easily adjust the size for a perfect fit",
+      "new_value": "100% Acrylic",
+      "message": "Actually, ignore my earlier preference. What I need is: 100% Acrylic."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

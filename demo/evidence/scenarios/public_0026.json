@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0026",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B093R14VP1",
+  "target_title": "ASICS Men's Gel-Venture 6 MX Running Shoes",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Athletic",
+    "Running",
+    "Trail Running"
+  ],
+  "target_price": 63.95,
+  "target_rating": 4.6,
+  "target_rating_number": 29486,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Running Trail Running. A key requirement is: 100% Synthetic.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Running Trail Running",
+        "hard_constraints": {
+          "use_case": [
+            "running"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Running Trail Running",
+          "hard_constraints": {
+            "use_case": [
+              "running"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B093R14VP1",
+          "title": "ASICS Men's Gel-Venture 6 MX Running Shoes",
+          "price": 63.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00KZIV0Q0",
+          "title": "Merrell Women's Vapor Glove 2 Barefoot Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07CZ862B2",
+          "title": "Salomon Women's X-Mission 3 Trail Running Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B006H38BYG",
+          "title": "ASICS Mens Gel-Kahana 6",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00HMN9QM6",
+          "title": "Salomon Men's Speedcross 3 CS Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01HGW7NE0",
+          "title": "Merrell Women's Bare Access Arc 4 Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00E6EMTNC",
+          "title": "Salomon Men's Speedcross 3 127612 Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0002M13Q6",
+          "title": "Saucony Men's Cohesion TR8 Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00B9TVIBQ",
+          "title": "Merrell Women's Mix Master Move Glide Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00AO3BMPU",
+          "title": "Saucony Men's Excursion TR7 Trail Running Shoe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "ASICS Men's Gel-Venture 6 MX Running Shoes",
+    "hard_constraints": [
+      "100% Synthetic",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Rubber sole",
+      "Shaft measures approximately low-top from arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

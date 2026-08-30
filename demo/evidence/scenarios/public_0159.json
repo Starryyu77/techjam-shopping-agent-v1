@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0159",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B00UHLFR32",
+  "target_title": "Fruit of the Loom Men's Extended Sizes Jersey Knit Sleep Pant (1 & 2 Packs)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Sleep & Lounge",
+    "Sleep Bottoms"
+  ],
+  "target_price": 15.08,
+  "target_rating": 4.5,
+  "target_rating_number": 42451,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Sleep Bottoms. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sleep Bottoms",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Sleep Bottoms",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00UHLFR32",
+          "title": "Fruit of the Loom Men's Extended Sizes Jersey Knit Sleep Pant (1 & 2 Packs)",
+          "price": 15.08,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08R61K9B9",
+          "title": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07RDK5HLH",
+          "title": "Amazon Brand - Goodthreads Men's Stretch Poplin Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00CXWF4P4",
+          "title": "Noble Mount Men's Cotton Lounge Sleep Short",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0939FH2D3",
+          "title": "New York Ave Men's Cotton Blend Super Soft Flannel Pajama Lounge Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07P1523QR",
+          "title": "Spongebob Squarepants 'Patty Me' Sleep Pajama Pants",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00SVEUWVY",
+          "title": "Andrew Scott Men's 6 Pack Cotton Knit Jersey Sleep Lounge Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00COH1GZK",
+          "title": "C-IN2 Men's Woven Sleep Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01LX0PMYA",
+          "title": "Legendary Whitetails Mens Fireside Lounge Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0776ZV79T",
+          "title": "Jachs Men's Flannel Pajama Pants Comfortable Lounge Pants with Pockets",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fruit of the Loom Men's Extended Sizes Jersey Knit Sleep Pant (1 & 2 Packs)",
+    "hard_constraints": [
+      "cotton",
+      "60% Cotton, 40% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Drawstring closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

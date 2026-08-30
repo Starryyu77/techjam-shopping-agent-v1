@@ -1,0 +1,384 @@
+{
+  "sample_id": "public_0161",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0B6N6TJ6V",
+  "target_title": "Thankful Grateful Blessed Shirt for Women Plaid Pumpkin Long Sleeve Tshirts Leopard Stripe Striped Thanksgiving Fall Tee Tops",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "T-Shirts"
+  ],
+  "target_price": 18.99,
+  "target_rating": 4.6,
+  "target_rating_number": 202,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 6,
+  "reciprocal_rank": 0.16666666666666666,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses T-Shirts. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07GF3YT1X",
+          "title": "Roolan Womens Fall Cotton Long Sleeve T Shirts Casual Plain Round Neck Blouses Tops with Pocket, White, Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07JP5YTVT",
+          "title": "Amazon Essentials Women's Short Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09WR1NZ48",
+          "title": "Graphic Tees for Women Short Sleeve Tshirts,Womens Summer Tops Crewneck Shirt Blouse",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08DL4SL2M",
+          "title": "Romwe Women's Elegant Short Puff Sleeve Rib Knit V-Neck Basic Slim Fit T-Shirt Crop Tops Royal Blue Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B089D566YR",
+          "title": "KILIG Womens Long Sleeve Tunic Tops Crew Neck Leopard Color Block Patchwork Casual T-Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08GX8Y9CD",
+          "title": "PESION Women's Colorful Striped Shirts Crewneck Long Sleeve Raglan Baseball Tee Tops, Small, Stripe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07GF3YT1X",
+          "title": "Roolan Womens Fall Cotton Long Sleeve T Shirts Casual Plain Round Neck Blouses Tops with Pocket, White, Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07JP5YTVT",
+          "title": "Amazon Essentials Women's Short Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09WR1NZ48",
+          "title": "Graphic Tees for Women Short Sleeve Tshirts,Womens Summer Tops Crewneck Shirt Blouse",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08DL4SL2M",
+          "title": "Romwe Women's Elegant Short Puff Sleeve Rib Knit V-Neck Basic Slim Fit T-Shirt Crop Tops Royal Blue Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B089D566YR",
+          "title": "KILIG Womens Long Sleeve Tunic Tops Crew Neck Leopard Color Block Patchwork Casual T-Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08GX8Y9CD",
+          "title": "PESION Women's Colorful Striped Shirts Crewneck Long Sleeve Raglan Baseball Tee Tops, Small, Stripe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton blend; Imported.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C1YPPMQ1",
+          "title": "Womens Mother's Days T Shirt Round Neck Short Sleeve Graphic Tee Tops Mom of Girls Mama Shirts (M, Leopard Striped-Purpl",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07JP5YTVT",
+          "title": "Amazon Essentials Women's Short Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07VV1RV62",
+          "title": "STYLEIE Women Tale As Old As Time Tee Tops Letter Print Graphic Tees Vintage Tanks Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0942X5WGH",
+          "title": "Billie Eilish Exclusive Official Happier Than Ever Embroidered T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08Z32GJRX",
+          "title": "Womens Mom Tie Dye Softball T Shirt Letter Print Mama O-Neck Short Sleeve Casual Shirt Mothers Day Tee",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B6N6TJ6V",
+          "title": "Thankful Grateful Blessed Shirt for Women Plaid Pumpkin Long Sleeve Tshirts Leopard Stripe Striped Thanksgiving Fall Tee",
+          "price": 18.99,
+          "is_target": true
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09PV5HJMB",
+          "title": "Good Mom Say Bad Words T Shirt Mom Shirts Short Sleeve Women Funny Letter Print Tee Casual Round Neck Tee Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08G1C4MN3",
+          "title": "FLOYU Women Thanksgiving Pumpkin Shirt Leopard Floral Pumpkin Graphic Tee Fall Shirt Thanksgiving Gift Short Sleeve Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BBMRV3TD",
+          "title": "Plus Size Thanksgiving Shirts Women Thankful Grateful Blessed Shirt Leopard Pumpkin Print Casual Fall Tops",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BW2Y7JNS",
+          "title": "MYHALF Plus Size American Flag Shirt Women 4th of July Shirts Patriotic Cold Shoulder T-Shirt Summer Short Sleeve Tops",
+          "price": 22.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 6,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Thankful Grateful Blessed Shirt for Women Plaid Pumpkin Long Sleeve Tshirts Leopard Stripe Striped Thanksgiving Fall Tee Tops",
+    "hard_constraints": [
+      "cotton",
+      "cotton blend"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "comfort",
+      "material"
+    ]
+  }
+}

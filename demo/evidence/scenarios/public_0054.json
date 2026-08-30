@@ -1,0 +1,389 @@
+{
+  "sample_id": "public_0054",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08PP1ZJQ5",
+  "target_title": "Verdusa Women's Basic Casual Long Sleeve Round Neck Crop Top Pullover Sweatshirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Fashion Hoodies & Sweatshirts"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.0,
+  "target_rating_number": 132,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 7,
+  "reciprocal_rank": 0.14285714285714285,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Fashion Hoodies & Sweatshirts. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Fashion Hoodies & Sweatshirts",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07G5QX7FV",
+          "title": "MEROKEETY Women's Long Sleeve Contrast Color Zipper Sherpa Pile Pullover Tops Fleece Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07PKPMR29",
+          "title": "Aokosor Women's Casual Short Sleeve Round Neck Loose Tunic T Shirt Blouse Tops with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09BFDBRNW",
+          "title": "Yovela Womens High Waisted Baggy Sweatpants Comfy Cotton High Waist Jogger Pants Y2k Trendy Lounge Trousers with Pockets",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B095QW81G7",
+          "title": "Champion Boys Fleece Hooded Zip Up Sweatshirt Hoody Kids Clothes",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08P7HS6QL",
+          "title": "VISLILY Women-Plus-Size-Hoodies-Sweatshirts Color Block Tops with Pockets XL-4XL",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0814TB2DM",
+          "title": "ZAFUL Men' s Fuzzy Hoodie Unisex Color Block Sherpa Pullover Loose Fluffy Drawstring Hooded Sweatshirt Outwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09MMRCQSS",
+          "title": "Geifa Crewneck Sweatshirts for Women Oversized Sweaters Long Sleeve Shirts Tunic Tops for Leggings",
+          "price": 28.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07G5QX7FV",
+          "title": "MEROKEETY Women's Long Sleeve Contrast Color Zipper Sherpa Pile Pullover Tops Fleece Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07PKPMR29",
+          "title": "Aokosor Women's Casual Short Sleeve Round Neck Loose Tunic T Shirt Blouse Tops with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09BFDBRNW",
+          "title": "Yovela Womens High Waisted Baggy Sweatpants Comfy Cotton High Waist Jogger Pants Y2k Trendy Lounge Trousers with Pockets",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08JPVWF9W",
+          "title": "BTFBM Women Zip Up Striped Hoodies Jackets Color Block Print Long Sleeve Drawstring Stretchy Casual Pullover Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B095QW81G7",
+          "title": "Champion Boys Fleece Hooded Zip Up Sweatshirt Hoody Kids Clothes",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08P7HS6QL",
+          "title": "VISLILY Women-Plus-Size-Hoodies-Sweatshirts Color Block Tops with Pockets XL-4XL",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0814TB2DM",
+          "title": "ZAFUL Men' s Fuzzy Hoodie Unisex Color Block Sherpa Pullover Loose Fluffy Drawstring Hooded Sweatshirt Outwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09MMRCQSS",
+          "title": "Geifa Crewneck Sweatshirts for Women Oversized Sweaters Long Sleeve Shirts Tunic Tops for Leggings",
+          "price": 28.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Soft Fabric; Pull On closure.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "soft"
+          ],
+          "material": [
+            "fabric"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "fabric"
+            ],
+            "feature": [
+              "soft"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0893RM7HK",
+          "title": "Verdusa Women's V Neck Pullover Long Sleeve Crop Top Sweatshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07G1RQRZT",
+          "title": "SeSe Code Women's Long Sleeve Pleated Swing Midi Casual Dress with Hooded",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07G9TYSM1",
+          "title": "Cropped Sweatshirts for Women, Long Sleeve Cute Crop Top Shirt Cotton Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07ZVF8S3X",
+          "title": "SATINIOR Women's Ultra Soft Solid Fleece Crewneck Pullover Sweatshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07VSNK5J1",
+          "title": "Moblosm Hoodie Unisex Fashion Flame Sweatshirts Men Women White Red Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09FPXQHHC",
+          "title": "Envlon Womens Yoga Sweatpants for Women High Waisted Jogging Pants Workout Drawstring Comfy Casual Lounge Pants with Poc",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08PP1ZJQ5",
+          "title": "Verdusa Women's Basic Casual Long Sleeve Round Neck Crop Top Pullover Sweatshirt",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07FPV75NF",
+          "title": "Wild Bobby Baltimore Fan | BAL Fantasy Football Sports Unisex Crewneck Graphic Sweatshirt",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08M64C67V",
+          "title": "AMORUN Men's Lightweight Pullover Fleece Long Sleeve Drawstring Casual Hooded Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09YT3MSR7",
+          "title": "Men's UPF 50+ Long Sleeve Fishing Shirts Lightweight Quick Dry Sun Shirts, Hoodie With ThumbHoles Adjustable Neck Gaiter",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 7,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Verdusa Women's Basic Casual Long Sleeve Round Neck Crop Top Pullover Sweatshirt",
+    "hard_constraints": [
+      "fabric",
+      "Soft Fabric"
+    ],
+    "soft_preferences": [
+      "Pull On closure",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "weather",
+      "comfort",
+      "durability",
+      "style"
+    ]
+  }
+}

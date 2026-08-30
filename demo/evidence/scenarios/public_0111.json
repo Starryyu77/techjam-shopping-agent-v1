@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0111",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07H7BWMQF",
+  "target_title": "Lacozy Women's Off Shoulder Long Sleeve Oversized Pullover Sweater Knit Jumper Loose Tunic Tops",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Sweaters",
+    "Pullovers"
+  ],
+  "target_price": 23.99,
+  "target_rating": 4.4,
+  "target_rating_number": 17768,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sweaters Pullovers. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sweaters Pullovers",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sweaters Pullovers",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07H7BWMQF",
+          "title": "Lacozy Women's Off Shoulder Long Sleeve Oversized Pullover Sweater Knit Jumper Loose Tunic Tops",
+          "price": 23.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XXSB8W7",
+          "title": "KILIG Women's Turtleneck Top Sweater Pullover Casual Long Sleeve Side Split Loose Sweater Shirts Knit ChunkyTunic Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B3D5CSLZ",
+          "title": "WEESO Turtleneck Sweater Women Fitted Knit Casual Jumper Tops",
+          "price": 43.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08X15Z6GT",
+          "title": "LZZSWDT Women's Fashion, Blue, One Size",
+          "price": 8.9,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CNGCTQ8",
+          "title": "Beyove Womens Turtleneck Long Batwing Sleeve Knit Sweater Asymmetric Hem Casual Pullover Winter Ribbed Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B2QYRN15",
+          "title": "Women Turtleneck Sweater Winter Pullover Lightweight Long Sleeve Knitted Slim Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07WGKFKH7",
+          "title": "Fanient Men Christmas Xmas Sweater",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09877ZZGS",
+          "title": "NIUBIA Women's Sweaters Turtleneck Batwing Sleeve Loose Oversized Sweaters Chunky Knitted Pullover Sweaters for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08NG2BBLB",
+          "title": "vrbabies Boat Neck Batwing Sleeves Dolman Knitted Sweaters Pullover Sweater for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0771L1F9S",
+          "title": "Rocorose Women's Pullover Sweater Boyfriend Loose Sleeves Knit Top",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Lacozy Women's Off Shoulder Long Sleeve Oversized Pullover Sweater Knit Jumper Loose Tunic Tops",
+    "hard_constraints": [
+      "polyester",
+      "60% Polyester, 35% Cotton, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "durability",
+      "material"
+    ]
+  }
+}

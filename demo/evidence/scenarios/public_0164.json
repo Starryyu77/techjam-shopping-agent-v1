@@ -1,0 +1,360 @@
+{
+  "sample_id": "public_0164",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C61FG7GL",
+  "target_title": "BARTON Elite Silicone Watch Bands - Quick Release - Choose Strap Color & Buckle Color (Stainless Steel, Black PVD or Gunmetal Grey) - (ODD SIZE LUG WIDTHS ONLY 19mm, 21mm, 23mm - MOST WATCHES HAVE EVE",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Watches",
+    "Watch Bands"
+  ],
+  "target_price": 23.99,
+  "target_rating": 3.6,
+  "target_rating_number": 23,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 6,
+  "reciprocal_rank": 0.16666666666666666,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watches Watch Bands, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Watches Watch Bands",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watches Watch Bands"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09XHSLX4X",
+          "title": "WOCCI Leather Watch Band, Vintage Replacement Strap, Stainless Steel Buckle, Choice of Width 14mm 16mm 18mm 19mm 20mm 21",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07141HM8F",
+          "title": "Fullmosa 12 Colors for Quick Release Leather Watch Band, Uli Genuine Leather Watch Strap 18mm, 20mm, 22mm or 24mm (Choos",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B075DRYF14",
+          "title": "Fullmosa 12 Colors for Quick Release Leather Watch Band, Uli Genuine Leather Watch Strap 18mm, 20mm, 22mm or 24mm (Choos",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B072N86ZGW",
+          "title": "YEENIK Men’s Digital Watch, Led Military 50M Waterproof Sports Watches for Men, Electronic Hand Wrist Watch with Alarm S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B006JUWIZ0",
+          "title": "KAVU Watchband - Nylon Webbing Wrist Band for Any Watch Face",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076BNX4YM",
+          "title": "ArtStyle Vintage Crazy Horse Leather Watch Band with Double Sides Leather Watch Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B003TMD0YY",
+          "title": "Fast Wrap 18-20mm Long Nylon Band Replacement for Timex Expedition SPORT 1 PIECE WATCH BAND",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B019C30Z5K",
+          "title": "Vetoo 02 Watch Bands,for Moto 360 2nd Gen 46mm, Pebble Time, Time Steel, Classic, ASUS ZenWatch WI500Q, WI501Q, Samsung ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074BC43M2",
+          "title": "CLUSE La Bohème Click On/Off Interchangeable Leather or Stainless Steel Mesh Women's Watch Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WYK9NXT",
+          "title": "g24 Silicone Black Rubber Replacement Watch Band Strap fits 40/8254 40/8309 & Others",
+          "price": 18.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Watches Watch Bands",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09XHSLX4X",
+          "title": "WOCCI Leather Watch Band, Vintage Replacement Strap, Stainless Steel Buckle, Choice of Width 14mm 16mm 18mm 19mm 20mm 21",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07141HM8F",
+          "title": "Fullmosa 12 Colors for Quick Release Leather Watch Band, Uli Genuine Leather Watch Strap 18mm, 20mm, 22mm or 24mm (Choos",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B075DRYF14",
+          "title": "Fullmosa 12 Colors for Quick Release Leather Watch Band, Uli Genuine Leather Watch Strap 18mm, 20mm, 22mm or 24mm (Choos",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B072N86ZGW",
+          "title": "YEENIK Men’s Digital Watch, Led Military 50M Waterproof Sports Watches for Men, Electronic Hand Wrist Watch with Alarm S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B006JUWIZ0",
+          "title": "KAVU Watchband - Nylon Webbing Wrist Band for Any Watch Face",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076BNX4YM",
+          "title": "ArtStyle Vintage Crazy Horse Leather Watch Band with Double Sides Leather Watch Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B003TMD0YY",
+          "title": "Fast Wrap 18-20mm Long Nylon Band Replacement for Timex Expedition SPORT 1 PIECE WATCH BAND",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B019C30Z5K",
+          "title": "Vetoo 02 Watch Bands,for Moto 360 2nd Gen 46mm, Pebble Time, Time Steel, Classic, ASUS ZenWatch WI500Q, WI501Q, Samsung ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074BC43M2",
+          "title": "CLUSE La Bohème Click On/Off Interchangeable Leather or Stainless Steel Mesh Women's Watch Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WYK9NXT",
+          "title": "g24 Silicone Black Rubber Replacement Watch Band Strap fits 40/8254 40/8309 & Others",
+          "price": 18.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; color: black.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Watch Bands",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07WYK9NXT",
+          "title": "g24 Silicone Black Rubber Replacement Watch Band Strap fits 40/8254 40/8309 & Others",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B003LUKMNQ",
+          "title": "deBeer Smooth Leather Watch Band- Choice of Color (Black, Brown, Havana) & Width (12mm, 14mm, 16mm, 18mm, 19mm, 20mm)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B071PFGR4J",
+          "title": "Andrew Family Black Monogram Jewelry Gift Boxes Case with LED Light for Ring Earring Pendant, Initial-J",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01FCNB9T0",
+          "title": "TrendyFashionJewelry Men Biker Boot Pair Bracelets Black Faux Leather Strap Chain Native Buffalo Animal Hunter",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C61FG7GL",
+          "title": "BARTON Elite Silicone Watch Bands - Quick Release - Choose Strap Color & Buckle Color (Stainless Steel, Black PVD or Gun",
+          "price": 23.99,
+          "is_target": true
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06ZZXMG4G",
+          "title": "Mefeir Watch Box for Men Women PU Leather Display Storage Collection Organizer Jewelry Case with Removable Pillows (20 S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00BSTTVAW",
+          "title": "Harley-Davidson Women's Watch, Embellished Crystal Stones, Leather Band 78L111",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0020IT0Y2",
+          "title": "Men's Lucien Piccard Leather Cgrono Watch 26958SL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00302DDH2",
+          "title": "Disney Men's MCK611 Mickey Mouse Black Strap Watch",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 6,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "BARTON Elite Silicone Watch Bands - Quick Release - Choose Strap Color & Buckle Color (Stainless Steel, Black PVD or Gunmetal Grey) - (ODD SIZE LUG WIDTHS ONLY 19mm, 21mm, 23mm - M",
+    "hard_constraints": [
+      "leather",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Buckle closure",
+      "SWAP IN SECONDS: Quick release spring bars allow you to swap bands in seconds to compliment your wardrobe or mix and match with BARTON's other Leather, Canvas and Silicone quick re"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "style",
+      "weather"
+    ]
+  }
+}

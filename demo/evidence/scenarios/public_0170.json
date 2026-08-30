@@ -1,0 +1,353 @@
+{
+  "sample_id": "public_0170",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08LRQX5RH",
+  "target_title": "UGG Women's Harrison Lace Fashion Boot",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boot Shop",
+    "Women",
+    "Fashion",
+    "Combat"
+  ],
+  "target_price": 63.98,
+  "target_rating": 4.2,
+  "target_rating_number": 180,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Fashion Combat, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Fashion Combat",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Fashion Combat"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0827LGNTQ",
+          "title": "HARENCE Womens Winter Snow Boots With Warm Fur Lined Comfortable Outdoor Waterproof Anti-Slip Shoes Leather Zipper Flat ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08SBT4WF1",
+          "title": "Cape Robbin Womens Radio",
+          "price": 46.53,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00FZ603NI",
+          "title": "Breckelle's Women's Alabama-12 Knee High Riding Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00O7MOR06",
+          "title": "Breckelle's Women's Alabama-12 Knee High Riding Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B084JBKQVQ",
+          "title": "Cape Robbin Future Wave Leopard Snake Lace Up Lug Sole Commander Millitary Boots",
+          "price": 37.09,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00178V4Z4",
+          "title": "Dr. Martens Women's 1B60 20-Eye Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07D7ZQQKS",
+          "title": "GLOBALWIN Women's Strap In Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CN7853D",
+          "title": "Lucky Top Soda Pack72 Dome Girls Faux Leather Combat Boots",
+          "price": 34.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00OONM6GA",
+          "title": "KSC Womens Rugged Lace Up Stacked High Heel Ankle Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00JC33QVQ",
+          "title": "Timberland Men's Chestnut Ridge Waterproof Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Fashion Combat",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0827LGNTQ",
+          "title": "HARENCE Womens Winter Snow Boots With Warm Fur Lined Comfortable Outdoor Waterproof Anti-Slip Shoes Leather Zipper Flat ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08SBT4WF1",
+          "title": "Cape Robbin Womens Radio",
+          "price": 46.53,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00FZ603NI",
+          "title": "Breckelle's Women's Alabama-12 Knee High Riding Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00O7MOR06",
+          "title": "Breckelle's Women's Alabama-12 Knee High Riding Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B084JBKQVQ",
+          "title": "Cape Robbin Future Wave Leopard Snake Lace Up Lug Sole Commander Millitary Boots",
+          "price": 37.09,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00178V4Z4",
+          "title": "Dr. Martens Women's 1B60 20-Eye Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07D7ZQQKS",
+          "title": "GLOBALWIN Women's Strap In Fashion Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CN7853D",
+          "title": "Lucky Top Soda Pack72 Dome Girls Faux Leather Combat Boots",
+          "price": 34.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00OONM6GA",
+          "title": "KSC Womens Rugged Lace Up Stacked High Heel Ankle Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00JC33QVQ",
+          "title": "Timberland Men's Chestnut Ridge Waterproof Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; 100% Leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Fashion Combat",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00JC33QVQ",
+          "title": "Timberland Men's Chestnut Ridge Waterproof Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01N5K44IX",
+          "title": "Dr. Martens Women's Aimilita FL Ankle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08LRQX5RH",
+          "title": "UGG Women's Harrison Lace Fashion Boot",
+          "price": 63.98,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B003FLL1RM",
+          "title": "FRYE Men's James Lace Up Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00EWC4HCO",
+          "title": "Pleaser Men's Riot-12 Buckle Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00SK2I9YO",
+          "title": "Rockport Cobb Hill Women's Daniela Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00753BX6A",
+          "title": "Rockport Men's Heritage Heights Boot-",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07NYVTK6H",
+          "title": "Lucky Brand Women's Lk-idril Ankle Boot",
+          "price": 82.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B003OBZSZE",
+          "title": "Timberland Trail Classic Tall Boot (Little Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004KNWPHE",
+          "title": "KEEN Women's Clara High Boot",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "UGG Women's Harrison Lace Fashion Boot",
+    "hard_constraints": [
+      "leather",
+      "100% Leather"
+    ],
+    "soft_preferences": [
+      "Made in the USA or Imported",
+      "Rubber sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

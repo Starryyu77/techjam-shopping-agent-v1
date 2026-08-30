@@ -1,0 +1,363 @@
+{
+  "sample_id": "public_0147",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B077276QGC",
+  "target_title": "wirarpa Women's High Waisted Cotton Underwear Ladies Soft Full Briefs Panties Multipack",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.6,
+  "target_rating_number": 74430,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Lingerie, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Lingerie",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Lingerie"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z6J5N6Y",
+          "title": "Amazon Essentials Women's Cotton Bikini Brief Underwear (Available in Plus Size), Multipacks",
+          "price": 12.72,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BXMCZLZV",
+          "title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01LYWU5JJ",
+          "title": "Iris & Lilly Women's Cotton and Lace Hipster Underwear, Pack of 5",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07XC165FX",
+          "title": "MISSWHO Womens Cotton Underwear High Waist Postpartum Care Panties Soft Breathable No Muffin Briefs for Ladies",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0847J1T2K",
+          "title": "WONDERSHAPE Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Lingerie",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z6J5N6Y",
+          "title": "Amazon Essentials Women's Cotton Bikini Brief Underwear (Available in Plus Size), Multipacks",
+          "price": 12.72,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BXMCZLZV",
+          "title": "Vanity Fair Women's Perfectly Yours High Waisted Brief Panties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01LYWU5JJ",
+          "title": "Iris & Lilly Women's Cotton and Lace Hipster Underwear, Pack of 5",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07XC165FX",
+          "title": "MISSWHO Womens Cotton Underwear High Waist Postpartum Care Panties Soft Breathable No Muffin Briefs for Ladies",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0847J1T2K",
+          "title": "WONDERSHAPE Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 95% Combed Cotton, 5% Spandex of Women's 4-PACK High Waisted Underwear. Machine Wash with laundry bag (30°C).",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Lingerie",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "spandex"
+          ],
+          "feature": [
+            "machine washable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "spandex"
+            ],
+            "feature": [
+              "machine washable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B077276QGC",
+          "title": "wirarpa Women's High Waisted Cotton Underwear Ladies Soft Full Briefs Panties Multipack",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XC165FX",
+          "title": "MISSWHO Womens Cotton Underwear High Waist Postpartum Care Panties Soft Breathable No Muffin Briefs for Ladies",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MPZFHCY",
+          "title": "OHLLAVIVY Women's Underwear Soft Cotton Panties Ladies Hipster Stretch Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07Z9NPB25",
+          "title": "Kalon Women's 4-Pack Racerback Shelf Bra Camisole Base Layer",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B008V1XNSG",
+          "title": "Anigan StainFree Brief Leakproof Protection Menstrual Period Panty",
+          "price": 12.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07N187D49",
+          "title": "Ruiyige Built-in Bra Tops Ladies Camisoles Comfortable Solid Shelf Cami Shirt,Tag L/US Size M White",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09CM4MF7M",
+          "title": "Elita Women's Full High Cut Soft Cotton Panty",
+          "price": 16.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07DDB3QKY",
+          "title": "Comfort Choice Women's Plus Size 5-Pack Stretch Cotton Full-Cut Brief Underwear - 10, Geo Hearts Pack Multicolored",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07Z6J5N6Y",
+          "title": "Amazon Essentials Women's Cotton Bikini Brief Underwear (Available in Plus Size), Multipacks",
+          "price": 12.72,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07X9V6HZX",
+          "title": "POKARLA Women's High Waisted Cotton Underwear Soft Breathable Panties Stretch Briefs Regular & Plus Size 5-Pack",
+          "price": 28.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "wirarpa Women's High Waisted Cotton Underwear Ladies Soft Full Briefs Panties Multipack",
+    "hard_constraints": [
+      "cotton",
+      "95% Combed Cotton, 5% Spandex of Women's 4-PACK High Waisted Underwear. Machine Wash with laundry bag (30°C)"
+    ],
+    "soft_preferences": [
+      "Hand Wash Only",
+      "STRETCHY COVERED WAISTBAND: Soft stretchy DOUBLE-LAYER fabric covered waistband sits right at the waist. No rolling or bunching, with no compression but perfectly snuggish. The hig"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

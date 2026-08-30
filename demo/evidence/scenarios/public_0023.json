@@ -1,0 +1,486 @@
+{
+  "sample_id": "public_0023",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B08ZKFD4GM",
+  "target_title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Bras",
+    "Everyday Bras"
+  ],
+  "target_price": 16.81,
+  "target_rating": 4.3,
+  "target_rating_number": 31195,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bras Everyday Bras. Date First Available: March 19, 2021",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "everyday"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bras Everyday Bras",
+          "soft_preferences": {
+            "use_case": [
+              "everyday"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08HS712ZB",
+          "title": "Duufin 5 Pcs Lace Bralettes for Women Bralette Padded Lace Bandeau Bra",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PWZXZVX",
+          "title": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0847J1T2K",
+          "title": "WONDERSHAPE Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YYKH2DF",
+          "title": "Romals Women's Push-up Bras Pack T-Shirt Bras for Women Brassieres Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08BWHG5WG",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08R84SVMP",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "everyday"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "everyday"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08HS712ZB",
+          "title": "Duufin 5 Pcs Lace Bralettes for Women Bralette Padded Lace Bandeau Bra",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PWZXZVX",
+          "title": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0847J1T2K",
+          "title": "WONDERSHAPE Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YYKH2DF",
+          "title": "Romals Women's Push-up Bras Pack T-Shirt Bras for Women Brassieres Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08BWHG5WG",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08R84SVMP",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Hand Wash Only; Item model number: G796.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "everyday"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "everyday"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07PWZXZVX",
+          "title": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08YYKH2DF",
+          "title": "Romals Women's Push-up Bras Pack T-Shirt Bras for Women Brassieres Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08R84SVMP",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07PRSGKYT",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00BGCNWTW",
+          "title": "Hanes Women's Comfort Unlined T-Shirt Underwire Bra MHG113",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07SZF8HJH",
+          "title": "MxG - a Mae and Glamorise Collaboration - Women's Front Close Full Figure Plus Size Lace Underwire Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Hand Wash Only.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "use_case": [
+              "everyday"
+            ]
+          }
+        },
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08R84SVMP",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PRSGKYT",
+          "title": "W L INTIMATES Bras for Women Pack of 6 Underwire Bra Women's Everyday Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07SZF8HJH",
+          "title": "MxG - a Mae and Glamorise Collaboration - Women's Front Close Full Figure Plus Size Lace Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07T2K83PW",
+          "title": "MxG - a Mae and Glamorise Collaboration - Women's Front Close Full Figure Plus Size Lace Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07T5TCHCG",
+          "title": "MxG - a Mae and Glamorise Collaboration - Women's Front Close Full Figure Plus Size Lace Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08B3CHZX3",
+          "title": "Generics Women's Sexy Floral Lace Front-Close Padded Bralette Comfy Racerback Halter Plunge Wireless Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+    "hard_constraints": [
+      "Hand Wash Only",
+      "Item model number: G796"
+    ],
+    "soft_preferences": [
+      "Department: Womens",
+      "Date First Available: March 19, 2021"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Date First Available: March 19, 2021",
+      "new_value": "Hand Wash Only",
+      "message": "Actually, ignore my earlier preference. What I need is: Hand Wash Only."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "material",
+      "fit",
+      "style"
+    ]
+  }
+}

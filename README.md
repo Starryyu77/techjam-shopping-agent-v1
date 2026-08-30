@@ -19,9 +19,11 @@ python evaluate_official.py --official-root /path/to/techjam-conversational-sear
 # Interactive offline chat.
 python chat.py --intent-backend rules
 
-# Live demo: chat + state-machine visualization + evaluation dashboard.
-python demo/build_dashboard.py                 # regenerate demo/static/dashboard.html
-python demo/server.py --port 8000              # http://127.0.0.1:8000  and  /dashboard
+# Judge-facing evidence tour (frozen evidence is shipped in demo/evidence/).
+python demo/server.py --port 8000              # tour at /, optional chat at /sandbox
+
+# Rebuild and validate all 200 public-session traces when agent/evidence changes.
+python scripts/build_demo_evidence.py --official-root /path/to/techjam-conversational-search
 ```
 
 ## Links
@@ -38,7 +40,8 @@ python demo/server.py --port 8000              # http://127.0.0.1:8000  and  /da
 | `reranker.py` | Optional local cross-encoder (default OFF; kept as reproducible experiment) |
 | `REPORT.md` | Architecture, models/cost/latency, results, negative CE finding, methodology |
 | `DEVPOST.md` | Submission narrative |
-| `demo/` | Offline web demo, evaluation dashboard, and video script |
+| `demo/` | Judge-facing evidence tour, frozen public traces, optional sandbox, and video script |
+| `scripts/build_demo_evidence.py` | Rebuilds and fail-closed validates the shipped public evidence artifacts |
 | `prompt_lab.py` | Leakage-safe dev/validation prompt self-evolution loop |
 | `reports/` | Evaluation artifacts for every configuration |
 

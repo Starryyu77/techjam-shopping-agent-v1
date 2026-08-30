@@ -1,0 +1,356 @@
+{
+  "sample_id": "public_0043",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C1KNGLPX",
+  "target_title": "Levi's Women's Classic Bootcut Jeans",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jeans"
+  ],
+  "target_price": 37.95,
+  "target_rating": 4.4,
+  "target_rating_number": 15762,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Jeans, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Jeans"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09B7D53S2",
+          "title": "LROSEY Fashion Jeans for Curvy Women with Fringe Cut Out Hole Rips Distressed Detail",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BK3DXHMC",
+          "title": "SySea Womens High Waisted Stretch Jeans Casual Drawstring Straight Leg Denim Jogger Pants with Pockets",
+          "price": 45.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07TS2D23C",
+          "title": "Wudodo Jean Pants for Women Elastic Waist Jeans Boyfriend Pull On Yoga Jogger Pant Denim Flare Pants with 2 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B010121UQ4",
+          "title": "Crocs Women's Capri V Flip Flop | Casual Comfortable Sandals for Women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09B7D53S2",
+          "title": "LROSEY Fashion Jeans for Curvy Women with Fringe Cut Out Hole Rips Distressed Detail",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BK3DXHMC",
+          "title": "SySea Womens High Waisted Stretch Jeans Casual Drawstring Straight Leg Denim Jogger Pants with Pockets",
+          "price": 45.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07TS2D23C",
+          "title": "Wudodo Jean Pants for Women Elastic Waist Jeans Boyfriend Pull On Yoga Jogger Pant Denim Flare Pants with 2 Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B010121UQ4",
+          "title": "Crocs Women's Capri V Flip Flop | Casual Comfortable Sandals for Women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 60% Cotton, 23% Viscose, 16% Polyester, 1% Elastane.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C1KNGLPX",
+          "title": "Levi's Women's Classic Bootcut Jeans",
+          "price": 37.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B078MWZZZ1",
+          "title": "Levi's Women's 311 Shaping Skinny Jeans, Indigo Canvas, 34 (US 18) L",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07H7BWMQF",
+          "title": "Lacozy Women's Off Shoulder Long Sleeve Oversized Pullover Sweater Knit Jumper Loose Tunic Tops",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B078MQRQ38",
+          "title": "Levi's Women's Straight 505 Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0829R9M5G",
+          "title": "Amazon Essentials Women's Pull-On Knit Jegging (Available in Plus Size)",
+          "price": 25.6,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07VXRB6NG",
+          "title": "Lildy Women's Denim Jeggings, Stretchable Cotton Blend",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Levi's Women's Classic Bootcut Jeans",
+    "hard_constraints": [
+      "cotton",
+      "60% Cotton, 23% Viscose, 16% Polyester, 1% Elastane"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "material",
+      "comfort"
+    ]
+  }
+}

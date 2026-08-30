@@ -1,0 +1,375 @@
+{
+  "sample_id": "public_0171",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BFVFFHKS",
+  "target_title": "ZAFUL Bikini Set for Women Solid V Neck Knot Front Push Up High Leg Thong Two Piece Swimsuit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Swimsuits & Cover Ups",
+    "Bikinis",
+    "Sets"
+  ],
+  "target_price": 33.99,
+  "target_rating": 3.8,
+  "target_rating_number": 1185,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bikinis Sets. A key requirement is: nylon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bikinis Sets",
+        "hard_constraints": {
+          "material": [
+            "nylon"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bikinis Sets",
+          "hard_constraints": {
+            "material": [
+              "nylon"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07QR1MM48",
+          "title": "Yomoko Women's Plus Size High Waist Bandage Bikini Sets Chic Swimsuit Retro Bathing Suit",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08DF9F8KG",
+          "title": "Yii ouneey Plus Size Swimsuit for Women High Waisted Bikini Sets for Women Bathing Suit for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0779DP2LM",
+          "title": "MOSHENGQI Women 3 Piece Swimsuit Sexy String Bikini with Mesh Shorts Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B086L9P9SX",
+          "title": "ZAFUL Women's Striped Ruffle High Waisted Two Pieces Tankini Set Swinsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B087Q6L93Q",
+          "title": "SHEKINI Women's Triangle Top Brazilian Bottom Two Piece Bikini Swimsuit Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RT97VZJ",
+          "title": "Women High Waisted Bikini Set Two Piece Swimsuit Tassel Pom-Poms Halter Mesh Bathing Suits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07QKXC38L",
+          "title": "COCOLEGGINGS Women's Tie Front Keyhole High Waisted 2 Piece Bikini Set Swimsuits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B091H1653X",
+          "title": "SherryDC Women's High Waisted Bikini Set Twist Front Swimsuit Drawstring Tie Side Bottom Two Piece Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09JJYFXBN",
+          "title": "Charmo Women Scalloped High Waisted Bikini Swimsuit Full Coverage Modest Two Piece Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B099J4PJV8",
+          "title": "Mycoco Women Tummy Control Strapless Tankini Swimsuits Halter Two Piece Bathing Suits",
+          "price": 34.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Bikinis Sets",
+        "hard_constraints": {
+          "material": [
+            "nylon"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "nylon"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07QR1MM48",
+          "title": "Yomoko Women's Plus Size High Waist Bandage Bikini Sets Chic Swimsuit Retro Bathing Suit",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08DF9F8KG",
+          "title": "Yii ouneey Plus Size Swimsuit for Women High Waisted Bikini Sets for Women Bathing Suit for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0779DP2LM",
+          "title": "MOSHENGQI Women 3 Piece Swimsuit Sexy String Bikini with Mesh Shorts Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B086L9P9SX",
+          "title": "ZAFUL Women's Striped Ruffle High Waisted Two Pieces Tankini Set Swinsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B087Q6L93Q",
+          "title": "SHEKINI Women's Triangle Top Brazilian Bottom Two Piece Bikini Swimsuit Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RT97VZJ",
+          "title": "Women High Waisted Bikini Set Two Piece Swimsuit Tassel Pom-Poms Halter Mesh Bathing Suits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07QKXC38L",
+          "title": "COCOLEGGINGS Women's Tie Front Keyhole High Waisted 2 Piece Bikini Set Swimsuits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B091H1653X",
+          "title": "SherryDC Women's High Waisted Bikini Set Twist Front Swimsuit Drawstring Tie Side Bottom Two Piece Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09JJYFXBN",
+          "title": "Charmo Women Scalloped High Waisted Bikini Swimsuit Full Coverage Modest Two Piece Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B099J4PJV8",
+          "title": "Mycoco Women Tummy Control Strapless Tankini Swimsuits Halter Two Piece Bathing Suits",
+          "price": 34.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Elastic; Imported.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bikinis Sets",
+        "hard_constraints": {
+          "material": [
+            "nylon"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "nylon"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09JJYFXBN",
+          "title": "Charmo Women Scalloped High Waisted Bikini Swimsuit Full Coverage Modest Two Piece Bathing Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09N8SYG7Q",
+          "title": "AUROLA Workout Leggings for Women Seamless Scrunch Tights Tummy Control Gym Fitness Girl Sport Active Yoga Pants",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09BQ74R56",
+          "title": "ALLEGRACE Women Plus Size Skinny Pants Stretch Slim Fit Pull-on High Waist Pants with Pockets",
+          "price": 24.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09RZSB9M4",
+          "title": "DIPUG Ballet Tights for Girls Dance Tights Toddler Ballet Tights Girls Thick Soft Footed Kids Ballet Tights",
+          "price": 6.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BFVFFHKS",
+          "title": "ZAFUL Bikini Set for Women Solid V Neck Knot Front Push Up High Leg Thong Two Piece Swimsuit",
+          "price": 33.99,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087N9QRFS",
+          "title": "XUNYU High Waisted Bikini Set for Women Swimsuits Push Up Tie Knot Swimwear Two Piece Bathing Suits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08KP3CM45",
+          "title": "OYS Women's Workout 2 Piece Outfits Seamless High Waist Yoga Leggings Running Sports Long sleeve Gym Sets",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B083HVVN29",
+          "title": "LAPASA Women's High Waist Tummy Control Biker Shorts with Pockets Active Yoga Workout Running Compression Exercise L52",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07ZS8BHR3",
+          "title": "Litgo Sports Bras for Women Racerback Seamless Comfortable Yoga Gym Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07HJ172QZ",
+          "title": "LAFROI Men's Long Sleeve UPF 50+ Baselayer Skins Performance Fit Compression Rash Guard-CLY02C",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "ZAFUL Bikini Set for Women Solid V Neck Knot Front Push Up High Leg Thong Two Piece Swimsuit",
+    "hard_constraints": [
+      "nylon",
+      "Elastic"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Nylon lining"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "material",
+      "comfort",
+      "warmth"
+    ]
+  }
+}

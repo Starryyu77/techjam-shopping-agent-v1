@@ -1,0 +1,1265 @@
+{
+  "sample_id": "public_0020",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08P4SSFX4",
+  "target_title": "Funny Saying Novelty Gift ideas - My Favorite People Call Me Grandma Long Sleeve T-Shirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Women"
+  ],
+  "target_price": 21.98,
+  "target_rating": 5.0,
+  "target_rating_number": 1,
+  "hit": false,
+  "first_hit_turn": null,
+  "best_rank": null,
+  "reciprocal_rank": 0.0,
+  "total_turns": 10,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Novelty Women. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Novelty Women",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01H3R4LQ6",
+          "title": "Summer Lake Tank Top Time to Get Nauti Anchor Tee Girls Party Nautical Boating",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B082NZFTFK",
+          "title": "DISC Red Heart Shirts Women - Gift Ideas for Wife [40021025-BA] | White Love, XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01JOTZKE8",
+          "title": "CafePress - Its A Hamilton Thing Pajamas - Womens Novelty Cotton Pajama Set, Comfortable PJ Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07JNG8PBY",
+          "title": "Tobin Clothing RED Bills Mafia T-Shirt ADULT MEDIUM",
+          "price": 24.31,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01LXQ05CY",
+          "title": "The Many Sides of a Realtor",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B018BHRNSK",
+          "title": "Women Animals in the Clouds Pig Sheep Novelty Cotton Crew Socks M 1 Pair",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075Y7B3SY",
+          "title": "Autism Awareness Novelty Tshirt",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082YKRMG7",
+          "title": "Balanced Co. Circle Game Meme Dress Socks Funny Socks Crazy Socks Casual Cotton Crew Socks",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01FWQ8NH8",
+          "title": "Red Hot Chili Peppers Distressed Men's T-Shirt Black",
+          "price": 17.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01H3R4LQ6",
+          "title": "Summer Lake Tank Top Time to Get Nauti Anchor Tee Girls Party Nautical Boating",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B082NZFTFK",
+          "title": "DISC Red Heart Shirts Women - Gift Ideas for Wife [40021025-BA] | White Love, XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01JOTZKE8",
+          "title": "CafePress - Its A Hamilton Thing Pajamas - Womens Novelty Cotton Pajama Set, Comfortable PJ Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07JNG8PBY",
+          "title": "Tobin Clothing RED Bills Mafia T-Shirt ADULT MEDIUM",
+          "price": 24.31,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01LXQ05CY",
+          "title": "The Many Sides of a Realtor",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B018BHRNSK",
+          "title": "Women Animals in the Clouds Pig Sheep Novelty Cotton Crew Socks M 1 Pair",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075Y7B3SY",
+          "title": "Autism Awareness Novelty Tshirt",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B082YKRMG7",
+          "title": "Balanced Co. Circle Game Meme Dress Socks Funny Socks Crazy Socks Casual Cotton Crew Socks",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01FWQ8NH8",
+          "title": "Red Hot Chili Peppers Distressed Men's T-Shirt Black",
+          "price": 17.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: grey; Solid colors: 100% Cotton; Heather Grey: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01C1FM658",
+          "title": "Love All Animals Veterinarian Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B072BH1NWG",
+          "title": "Tehran Iran T shirt Tshirt tee",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073426Q26",
+          "title": "Pink Flamingos T-Shirt Summer Flamingo Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B071CVKC4M",
+          "title": "Super Callous Fragile Racist Sexist Not My Potus Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01LXQ05CY",
+          "title": "The Many Sides of a Realtor",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B06XCNCZ2J",
+          "title": "World Autism Day T-Shirt",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01EW382K0",
+          "title": "50 is the new 30 shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B072JJCFK8",
+          "title": "Summer 2017 Red BOGO Box Logo T-Shirt (5 Color Options)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "I don't have an additional preference for style.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01C1FM658",
+          "title": "Love All Animals Veterinarian Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B072BH1NWG",
+          "title": "Tehran Iran T shirt Tshirt tee",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073426Q26",
+          "title": "Pink Flamingos T-Shirt Summer Flamingo Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B071CVKC4M",
+          "title": "Super Callous Fragile Racist Sexist Not My Potus Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01LXQ05CY",
+          "title": "The Many Sides of a Realtor",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B06XCNCZ2J",
+          "title": "World Autism Day T-Shirt",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01EW382K0",
+          "title": "50 is the new 30 shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B072JJCFK8",
+          "title": "Summer 2017 Red BOGO Box Logo T-Shirt (5 Color Options)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "For that, what matters is: Imported.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 6,
+      "user_message": "I don't have an additional preference for use_case.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 7,
+      "user_message": "I don't have an additional preference for other.",
+      "agent_message": "Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 8,
+      "user_message": "I don't have an additional preference for brand.",
+      "agent_message": "The candidates are unchanged. You can choose one or add a new requirement.",
+      "ask_attribute": null,
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 9,
+      "user_message": "Those options are not quite right yet. Ask me about one specific attribute.",
+      "agent_message": "The candidates are unchanged. You can choose one or add a new requirement.",
+      "ask_attribute": null,
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 10,
+      "user_message": "Those options are not quite right yet. Ask me about one specific attribute.",
+      "agent_message": "The candidates are unchanged. You can choose one or add a new requirement.",
+      "ask_attribute": null,
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Novelty Women",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ],
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          },
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ],
+            "color": [
+              "gray"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B075WLRX51",
+          "title": "Womens Retro Idaho Shirt Vintage (Pink & Gray)",
+          "price": 16.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01GJ0LYCM",
+          "title": "Judo Because You Might Run Out of Ammo T Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B075H2S3MH",
+          "title": "Gamer Heartbeat T-Shirt For Video Game Players T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M9EHI5T",
+          "title": "Detroit T Shirt Graphic D T-Shirt",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0722HX61L",
+          "title": "Star Wars Darth Vader Choking Hazard Vintage T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VVDYJQL",
+          "title": "If you don't like Trump T Shirt",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0772Y9KVC",
+          "title": "Bud Light Official Dilly Dilly T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01M3U4BKZ",
+          "title": "\"The Beagles\" Premium T-Shirt",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071V6F1YK",
+          "title": "Star Wars Chewbacca Awesome Geometric Style Chewie Portrait T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Funny Saying Novelty Gift ideas - My Favorite People Call Me Grandma Long Sleeve T-Shirt",
+    "hard_constraints": [
+      "cotton",
+      "color: grey"
+    ],
+    "soft_preferences": [
+      "Solid colors: 100% Cotton; Heather Grey: 90% Cotton, 10% Polyester; All Other Heathers: 50% Cotton, 50% Polyester",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

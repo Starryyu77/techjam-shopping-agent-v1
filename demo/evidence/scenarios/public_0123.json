@@ -1,0 +1,361 @@
+{
+  "sample_id": "public_0123",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07CZ84YFJ",
+  "target_title": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Hats & Caps",
+    "Fedoras"
+  ],
+  "target_price": 25.99,
+  "target_rating": 4.5,
+  "target_rating_number": 23634,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Hats & Caps Fedoras. Buckle closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Fedoras",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Hats & Caps Fedoras"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07HF4BL1Z",
+          "title": "FUNGORGT Women Fedora Hat Belt Buckle Fashion Fedora Hat Brown Fedora Hats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CZ84YFJ",
+          "title": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+          "price": 25.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MXLQCQV",
+          "title": "FALETO Two Tone Red Bottom Wide Brim Wool Felt Fedora Hat Panama Hat Casual Jazz Hats for Men Women",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07JPLHZPY",
+          "title": "Simplicity Mens Women's Soft Mesh Straw Fedora Panama Hat for Summer",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01N3BA0Z6",
+          "title": "Stetson Los Alamos Straw Hat OSLAMS",
+          "price": 67.64,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B071G29H3F",
+          "title": "Goorin Bros. Men's Good Boy Fedora",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0881KXXSL",
+          "title": "Gossifan Classic Wide Brim Fedora Panama Hat with Belt Buckle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CHT118W",
+          "title": "Men's Everyday Light Summer Ribbon Porkpie Boater Derby Fedora Sun Hat",
+          "price": 32.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078H4173W",
+          "title": "squaregarden Flat Caps for Men, Beret Leather Hat Cabbie Gatsby Newsboy Cap Ivy Irish Hats",
+          "price": 14.29,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01DRV4GCQ",
+          "title": "DASMARCA Mens Summer Pork Pie Straw Hat",
+          "price": 60.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Hats & Caps Fedoras",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07HF4BL1Z",
+          "title": "FUNGORGT Women Fedora Hat Belt Buckle Fashion Fedora Hat Brown Fedora Hats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CZ84YFJ",
+          "title": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+          "price": 25.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MXLQCQV",
+          "title": "FALETO Two Tone Red Bottom Wide Brim Wool Felt Fedora Hat Panama Hat Casual Jazz Hats for Men Women",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07JPLHZPY",
+          "title": "Simplicity Mens Women's Soft Mesh Straw Fedora Panama Hat for Summer",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01N3BA0Z6",
+          "title": "Stetson Los Alamos Straw Hat OSLAMS",
+          "price": 67.64,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B071G29H3F",
+          "title": "Goorin Bros. Men's Good Boy Fedora",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0881KXXSL",
+          "title": "Gossifan Classic Wide Brim Fedora Panama Hat with Belt Buckle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CHT118W",
+          "title": "Men's Everyday Light Summer Ribbon Porkpie Boater Derby Fedora Sun Hat",
+          "price": 32.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078H4173W",
+          "title": "squaregarden Flat Caps for Men, Beret Leather Hat Cabbie Gatsby Newsboy Cap Ivy Irish Hats",
+          "price": 14.29,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01DRV4GCQ",
+          "title": "DASMARCA Mens Summer Pork Pie Straw Hat",
+          "price": 60.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: wool.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Hats & Caps Fedoras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "wool"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "wool"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07KH68XY2",
+          "title": "Mens Crushable Wool Felt Porkpie Fedora Hats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CZ84YFJ",
+          "title": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+          "price": 25.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MXLQCQV",
+          "title": "FALETO Two Tone Red Bottom Wide Brim Wool Felt Fedora Hat Panama Hat Casual Jazz Hats for Men Women",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07JPLHZPY",
+          "title": "Simplicity Mens Women's Soft Mesh Straw Fedora Panama Hat for Summer",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01N3BA0Z6",
+          "title": "Stetson Los Alamos Straw Hat OSLAMS",
+          "price": 67.64,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B071G29H3F",
+          "title": "Goorin Bros. Men's Good Boy Fedora",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0881KXXSL",
+          "title": "Gossifan Classic Wide Brim Fedora Panama Hat with Belt Buckle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CHT118W",
+          "title": "Men's Everyday Light Summer Ribbon Porkpie Boater Derby Fedora Sun Hat",
+          "price": 32.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07S76LSZW",
+          "title": "e4Hats.com Big Size Elastic Wool Ivy Cap",
+          "price": 36.29,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01DRV4GCQ",
+          "title": "DASMARCA Mens Summer Pork Pie Straw Hat",
+          "price": 60.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Lanzom Womens Classic Wide Brim Floppy Panama Hat Belt Buckle Wool Fedora Hat",
+    "hard_constraints": [
+      "wool",
+      "65% Polyester, 35% Wool"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Buckle closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Buckle closure",
+      "new_value": "wool",
+      "message": "Actually, ignore my earlier preference. What I need is: wool."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style",
+      "fit",
+      "material",
+      "comfort"
+    ]
+  }
+}

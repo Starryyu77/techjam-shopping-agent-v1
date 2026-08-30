@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0110",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C277G9FW",
+  "target_title": "Loritta 5 Pairs Womens Wool Socks Thick Knit Vintage Winter Warm Cozy Crew Socks Gifts",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Active",
+    "Athletic Socks"
+  ],
+  "target_price": 12.99,
+  "target_rating": 4.6,
+  "target_rating_number": 7371,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Active Athletic Socks, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Active Athletic Socks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Active Athletic Socks"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0735V67KT",
+          "title": "Fruit of the Loom mens Cushioned Durable Cotton Work Gear With Moisture Wicking Casual Sock, White, 6-12 US(Pack of 10)",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C246QRQS",
+          "title": "5 Pack Womens Wool Socks Winter Warm Socks Thick Knit Cabin Cozy Crew Soft Socks Gifts for Women",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07KWVHFCY",
+          "title": "Copper Compression Socks Women and Men 6 Pairs - Circulation Arch Support Plantar Fasciitis Running Ankle Socks",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0C277G9FW",
+          "title": "Loritta 5 Pairs Womens Wool Socks Thick Knit Vintage Winter Warm Cozy Crew Socks Gifts",
+          "price": 12.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BGJ85RYM",
+          "title": "Extra Wide Comfort Fit Athletic Crew (Mid-Calf) Socks for Men and Women, for Wide Feet Pick Your Size, Do not Size up",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07H2JP4M2",
+          "title": "Spotted Zebra Kids Cotton Crew Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00IJZZWGA",
+          "title": "BRIGHT STAR Low Cut Ankle Socks For Women - 30 Pairs of Athletic Socks For Running, Workout, Sports",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07ZQGLRH4",
+          "title": "DANISH ENURANCE Premium Outdoor Hiking Socks, Merino Wool, Men & Women, 2 Pack",
+          "price": 28.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00Y0NG5OS",
+          "title": "Hanes Men's FreshIQ Over The Calf Tube Socks (Pack of 12)",
+          "price": 14.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B083QRC2DF",
+          "title": "Women's Athletic Ankle Socks with Heel Tab, Premium Cotton, Soft Cushion, Reinforced Toe, Arch Support, Pack of 6",
+          "price": 21.49,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Loritta 5 Pairs Womens Wool Socks Thick Knit Vintage Winter Warm Cozy Crew Socks Gifts",
+    "hard_constraints": [
+      "wool",
+      "35% wool, 29% cotton, 36% polyester"
+    ],
+    "soft_preferences": [
+      "Machine Wash,Hand Wash",
+      "Material: Womens winter warm socks made of 35% wool, 29% cotton, 36% polyester. These cabin socks are super soft, breathable and wearable. Elegant, classic wool socks hosiery, colo"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "style"
+    ]
+  }
+}

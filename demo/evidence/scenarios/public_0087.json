@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0087",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BT158RRR",
+  "target_title": "Goodthreads Men's Standard-Fit Short-Sleeve Printed Poplin Shirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Shirts",
+    "Casual Button-Down Shirts"
+  ],
+  "target_price": 20.0,
+  "target_rating": 4.5,
+  "target_rating_number": 10080,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts Casual Button-Down Shirts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "style": [
+            "casual"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shirts",
+          "soft_preferences": {
+            "style": [
+              "casual"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BGQFMD6L",
+          "title": "Alimens & Gentle 100% Cotton Regular Fit Short Sleeve Casual Hawaiian Shirt for Men",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BT158RRR",
+          "title": "Goodthreads Men's Standard-Fit Short-Sleeve Printed Poplin Shirt",
+          "price": 20.0,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07JH72TND",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Print Shirt",
+          "price": 26.1,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HMW2MKN",
+          "title": "28 Palms Men's Standard-Fit 100% Cotton Tropical Vacation Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B06WLHD6PL",
+          "title": "Goodthreads Men's Standard-Fit Long-Sleeve Gingham Poplin Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0773CXWKM",
+          "title": "Goodthreads Men's Slim-Fit Short-Sleeve Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HMT4SH7",
+          "title": "Goodthreads Men's Slim-Fit Long-Sleeve Plaid Oxford Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B071JQY33S",
+          "title": "Goodthreads Men's Standard-Fit Long-Sleeve Plaid Oxford Shirt",
+          "price": 20.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0894G7J42",
+          "title": "Men's UV UPF 50+ Sun Protection Soild Anti-Static Waterproof Breathable Fast Dry SPF Hiking Fishing Short Sleeve Shirts",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07DZX22MB",
+          "title": "Goodthreads Men's Slim-Fit Short-Sleeve Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Goodthreads Men's Standard-Fit Short-Sleeve Printed Poplin Shirt",
+    "hard_constraints": [
+      "cotton",
+      "100% Cotton"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort"
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0182",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C5XBLB2P",
+  "target_title": "ELFISH Mini RFID Aluminum Wallet Credit Cards Holder Business Card Case Metal ID Case for Men Women (Black Marble)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Wallets, Card Cases & Money Organizers",
+    "Card & ID Cases",
+    "Card Cases"
+  ],
+  "target_price": 6.99,
+  "target_rating": 4.6,
+  "target_rating_number": 4370,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Card & ID Cases Card Cases, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Card & ID Cases Card Cases",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Card & ID Cases Card Cases"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C5XBLB2P",
+          "title": "ELFISH Mini RFID Aluminum Wallet Credit Cards Holder Business Card Case Metal ID Case for Men Women (Black Marble)",
+          "price": 6.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07L6LHFB9",
+          "title": "Kaabao Credit Card Holder, RFID Blocking Metal Card Wallet for Women Men Slim ID Card Holders Protector Aluminum Busines",
+          "price": 6.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01N6B3A67",
+          "title": "Artmi Credit Card Holder RFID Blocking Aluminum Business Card Holder with Strong Money Clip",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08FFWL6N1",
+          "title": "EcoVision Keychain Wallet, Keychain Bracelet with RFID Blocking Slim Card Holder Wallets with Detachable D-Shackle",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0834YNH2J",
+          "title": "MaxGear RFID Credit Card Holder Metal Card Case Aluminum Wallet ID Card Protector for Men Women Purple",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08SL6GKMV",
+          "title": "Bybetermon Slim Wallet Minimalist Credit Card Holder Double RFID Blocking Leather Card Wallets for Men Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07C378Z47",
+          "title": "Medicare Card Protector with 2 Clear Card Sleeves - Holds Medical Prescriptions, Health Insurance Card, Social Security ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07SLXQWRP",
+          "title": "Casmonal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00BRSVXFK",
+          "title": "LeatherBoss Credit Card Holder Tall Wallet With 18 Credit Card Slots",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07S5BP4TS",
+          "title": "Toughergun RFID Blocking Minimalist Genuine Leather Slim Front Pocket Wallet U (Vintage Brown Shallow)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "ELFISH Mini RFID Aluminum Wallet Credit Cards Holder Business Card Case Metal ID Case for Men Women (Black Marble)",
+    "hard_constraints": [
+      "UPDATED ALUMINUM WALLET with high quality aluminum materials and Environmentally friendly plastic(ABS) clasp closure",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "PEACE OF MIND when Travelling: It is a Must Have a protector case ID slots when on vacations or traveling overseas. Using on public transportation and crowded places - keep the wor",
+      "MOST RELIABLE RFID BLOCKING PROTECTION. Most RFID blocking hard shell aluma wallets can NOT block 125KHz signals. But Elfish metal id cases are able to Block both 13.56 MHz and 125"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "material"
+    ]
+  }
+}

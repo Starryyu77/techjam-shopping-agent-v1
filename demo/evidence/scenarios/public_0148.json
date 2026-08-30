@@ -1,0 +1,160 @@
+{
+  "sample_id": "public_0148",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BQC2NRG2",
+  "target_title": "Fruit of the Loom Women's Eversoft Cotton Bikini Underwear, Tag Free & Breathable",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Panties",
+    "Bikinis"
+  ],
+  "target_price": 9.48,
+  "target_rating": 4.4,
+  "target_rating_number": 44437,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Panties Bikinis. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Panties Bikinis",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Panties Bikinis",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z6J5N6Y",
+          "title": "Amazon Essentials Women's Cotton Bikini Brief Underwear (Available in Plus Size), Multipacks",
+          "price": 12.72,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BQC2NRG2",
+          "title": "Fruit of the Loom Women's Eversoft Cotton Bikini Underwear, Tag Free & Breathable",
+          "price": 9.48,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0897FWZG1",
+          "title": "Cotton Underwear For Women Seamless Bikini Panties Calzones De Mujer 6-pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07K21Z6BY",
+          "title": "Ruxia Women's Seamless Hipster Panties Comfortable Underwear Stretch Bikini Panty 5 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B004IYFT28",
+          "title": "Jockey Women's Underwear Elance String Bikini - 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00C3UPPLY",
+          "title": "Jockey Women's Underwear Staycool Bikini - 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07FD5ZWXC",
+          "title": "ANZERMIX Women's Seamless Breathable Bikini Comfortable Panty Pack of 6",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B010S8E3HO",
+          "title": "Pact Women's 2-pack Organic Cotton Bikini Brief Panties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B010S8DWNK",
+          "title": "Pact Women's 2-pack Organic Cotton Bikini Brief Panties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B7HYJ6B3",
+          "title": "ALLBASE Womens Seamless Underwear Invisibles Bikini Panties No Show Low Rise Breathable Hipster Underpants Pack of 6",
+          "price": 25.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fruit of the Loom Women's Eversoft Cotton Bikini Underwear, Tag Free & Breathable",
+    "hard_constraints": [
+      "cotton",
+      "50% Cotton, 50% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "performance"
+    ]
+  }
+}

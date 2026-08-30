@@ -1,0 +1,361 @@
+{
+  "sample_id": "public_0078",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B0C5RLJDSF",
+  "target_title": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Socks & Hosiery",
+    "Socks",
+    "No Show & Liner Socks"
+  ],
+  "target_price": 7.69,
+  "target_rating": 4.7,
+  "target_rating_number": 36978,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Socks No Show & Liner Socks. Pull On closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Socks No Show & Liner Socks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Socks No Show & Liner Socks"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00B2Q9U4S",
+          "title": "Women's Silky Seamless No Show Liner Socks w/ Silicon Patch by Lily's Hosiery",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C5RLJDSF",
+          "title": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+          "price": 7.69,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08664M5ZF",
+          "title": "WHISPER DEER No Show Liner Socks Women - (Size 4-15) Low Cut Invisible Cotton Sneaker Socks with Non Slip Grip (3/6/8 pa",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09YYT5KT2",
+          "title": "SIXDAYSOX No Show Socks Women for Flats 4 to 8 Pack Non Slip Invisible Ultra Low Cut Socks Shoe Size 5-8/9-11",
+          "price": 14.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07XH1PJY3",
+          "title": "QING 6 Pairs Ultra Low Cut No Show Socks Women Invisible for Flats and Dress Shoes Liner Socks for Women with Non-Slip H",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06WWB8RDS",
+          "title": "FAYBOX Women's Cat Socks Cute Animal Socks No Show Socks，Birthday Gifts for Women Her Girls 5 Pairs",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01M71S0IB",
+          "title": "2econdskin Women's Casual No Show 3 to 8 Pairs Socks Non Slip Flat Boat Line",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01MDTS0WW",
+          "title": "HASLRA Low Cut Full-Cushion Comfort Running Socks 3-6 Pairs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0868VHGDC",
+          "title": "Nicole Miller Women's Microfiber No Show Athletic Low Cut Socks (10 Pack)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0853XV3HR",
+          "title": "GOLDTOE Women's Tie Dye Liners, 6 Pairs",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Socks No Show & Liner Socks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00B2Q9U4S",
+          "title": "Women's Silky Seamless No Show Liner Socks w/ Silicon Patch by Lily's Hosiery",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C5RLJDSF",
+          "title": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+          "price": 7.69,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08664M5ZF",
+          "title": "WHISPER DEER No Show Liner Socks Women - (Size 4-15) Low Cut Invisible Cotton Sneaker Socks with Non Slip Grip (3/6/8 pa",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09YYT5KT2",
+          "title": "SIXDAYSOX No Show Socks Women for Flats 4 to 8 Pack Non Slip Invisible Ultra Low Cut Socks Shoe Size 5-8/9-11",
+          "price": 14.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07XH1PJY3",
+          "title": "QING 6 Pairs Ultra Low Cut No Show Socks Women Invisible for Flats and Dress Shoes Liner Socks for Women with Non-Slip H",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06WWB8RDS",
+          "title": "FAYBOX Women's Cat Socks Cute Animal Socks No Show Socks，Birthday Gifts for Women Her Girls 5 Pairs",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01M71S0IB",
+          "title": "2econdskin Women's Casual No Show 3 to 8 Pairs Socks Non Slip Flat Boat Line",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01MDTS0WW",
+          "title": "HASLRA Low Cut Full-Cushion Comfort Running Socks 3-6 Pairs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0868VHGDC",
+          "title": "Nicole Miller Women's Microfiber No Show Athletic Low Cut Socks (10 Pack)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0853XV3HR",
+          "title": "GOLDTOE Women's Tie Dye Liners, 6 Pairs",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Socks No Show & Liner Socks",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07P17Q1H6",
+          "title": "Women's No Show Cushion Socks,Low Cut Invisible Anti-Slid Casual Cotton Boat Liner Athletic Sneakers Loafer Sports Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C5RLJDSF",
+          "title": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+          "price": 7.69,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08664M5ZF",
+          "title": "WHISPER DEER No Show Liner Socks Women - (Size 4-15) Low Cut Invisible Cotton Sneaker Socks with Non Slip Grip (3/6/8 pa",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09YYT5KT2",
+          "title": "SIXDAYSOX No Show Socks Women for Flats 4 to 8 Pack Non Slip Invisible Ultra Low Cut Socks Shoe Size 5-8/9-11",
+          "price": 14.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07XH1PJY3",
+          "title": "QING 6 Pairs Ultra Low Cut No Show Socks Women Invisible for Flats and Dress Shoes Liner Socks for Women with Non-Slip H",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06WWB8RDS",
+          "title": "FAYBOX Women's Cat Socks Cute Animal Socks No Show Socks，Birthday Gifts for Women Her Girls 5 Pairs",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07J3SXM84",
+          "title": "Low No Show Socks Men Invisible Non Slip Liner Socks Casual Footies for Loafer Boats",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01M71S0IB",
+          "title": "2econdskin Women's Casual No Show 3 to 8 Pairs Socks Non Slip Flat Boat Line",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01MDTS0WW",
+          "title": "HASLRA Low Cut Full-Cushion Comfort Running Socks 3-6 Pairs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0868VHGDC",
+          "title": "Nicole Miller Women's Microfiber No Show Athletic Low Cut Socks (10 Pack)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Women's Value, Crew Soft Moisture-Wicking Socks, Available in 10 and 14-Packs",
+    "hard_constraints": [
+      "cotton",
+      "78% Cotton, 21% Polyester, 1% Spandex"
+    ],
+    "soft_preferences": [
+      "Made in the USA or Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Pull On closure",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "style"
+    ]
+  }
+}

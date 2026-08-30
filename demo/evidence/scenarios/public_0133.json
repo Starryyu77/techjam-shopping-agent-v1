@@ -1,0 +1,354 @@
+{
+  "sample_id": "public_0133",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01KILT64Q",
+  "target_title": "Flying Fisherman womens 7719cs sunglasses, Camo Frames/Smoke Lenses, Medium US",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Accessories",
+    "Sunglasses & Eyewear Accessories",
+    "Sunglasses"
+  ],
+  "target_price": 21.11,
+  "target_rating": 4.5,
+  "target_rating_number": 310,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sunglasses & Eyewear Accessories Sunglasses. A key requirement is: Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sunglasses & Eyewear Accessories Sunglasses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0084J438E",
+          "title": "MLC EYEWEAR Retro Horn Rimmed 80s Mirrored Sunglasses (white - blue green lens, uv400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0725NL65K",
+          "title": "BVAGSS Women Rimless Oversized Studded Sunglasses Gradient Color Lens Rivet Fashion Lightweight Design WS027",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BX5GKSXL",
+          "title": "URUMQI Sunglasses Fit Over Glasses, Polarized 100% UV Protection Wrap-around Sunglasses for Men & Women Driving",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B084BYD9KR",
+          "title": "Gamma Ray Polarized Sunglasses Men and Women 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B007VQR0H2",
+          "title": "Oakley unisex-adult Square O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B58LS4R3",
+          "title": "SeeBand Fashion Oversized Square Sunglasses for Women Men Trendy Black Thick Frame Luxury Designer Big Sun Glasses UV400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0084J438E",
+          "title": "MLC EYEWEAR Retro Horn Rimmed 80s Mirrored Sunglasses (white - blue green lens, uv400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0725NL65K",
+          "title": "BVAGSS Women Rimless Oversized Studded Sunglasses Gradient Color Lens Rivet Fashion Lightweight Design WS027",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BX5GKSXL",
+          "title": "URUMQI Sunglasses Fit Over Glasses, Polarized 100% UV Protection Wrap-around Sunglasses for Men & Women Driving",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B084BYD9KR",
+          "title": "Gamma Ray Polarized Sunglasses Men and Women 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B007VQR0H2",
+          "title": "Oakley unisex-adult Square O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B58LS4R3",
+          "title": "SeeBand Fashion Oversized Square Sunglasses for Women Men Trendy Black Thick Frame Luxury Designer Big Sun Glasses UV400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: gray; Polycarbonate frame.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "color": [
+            "gray"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "color": [
+              "gray"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01KILT64Q",
+          "title": "Flying Fisherman womens 7719cs sunglasses, Camo Frames/Smoke Lenses, Medium US",
+          "price": 21.11,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08F8PVCDL",
+          "title": "Versol Oversized Cateye Sunglasses for Women Men with UV400 Eye Protection Lens Fashion Women Sunglasses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B7JTM76J",
+          "title": "TAHARI Th559 Round 100% Uv Protective Women's Aviator Pilot Sunglasses. Elegant Gifts for Her, 53 Mm",
+          "price": 32.51,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BXBDDRP7",
+          "title": "Dragon Vantage Sunglasses",
+          "price": 135.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B001KPFGOE",
+          "title": "Swiss Eye Outbreak Protector Glasses Black Frame Blue Mirror Lens",
+          "price": 23.45,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07D9RLKG2",
+          "title": "MessyWeekend Sunglasses for Women in a Oversized Polycarbonate Cat-Eye Round Frame - Lenses with UV400 Protection - THEL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BC6D8JXM",
+          "title": "OLINLIFE Bat Heart Sunglasses Rimless Goth Trendy Steampunk Glasses for Women Men Halloween Party Glasses UV400 Protecti",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BQPKZWJ9",
+          "title": "Vince Camuto Vc975 Stylish Flush Lens 100% Uv Protective Women's Cat Eye Sunglasses. Luxe Gifts for Her, 61 Mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B081HS91P9",
+          "title": "Superdry Crescendo Round Sunglasses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00JOVIKLW",
+          "title": "Large OG Hardcore LOCS brand Sports Wrap Sunglasses (Black-Red)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Flying Fisherman womens 7719cs sunglasses, Camo Frames/Smoke Lenses, Medium US",
+    "hard_constraints": [
+      "Imported",
+      "color: gray"
+    ],
+    "soft_preferences": [
+      "Polycarbonate frame",
+      "Polycarbonate lens"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "style"
+    ]
+  }
+}

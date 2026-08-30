@@ -1,0 +1,380 @@
+{
+  "sample_id": "public_0074",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07N15QTKC",
+  "target_title": "Skechers Women's Go Walk 5-Lucky Sneaker",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Athletic",
+    "Walking"
+  ],
+  "target_price": 55.95,
+  "target_rating": 4.6,
+  "target_rating_number": 2559,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Walking, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Athletic Walking",
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00C31HKWA",
+          "title": "Breckelle's Women's Sahara-51 Athletic Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08134XNNB",
+          "title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0834T68X3",
+          "title": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+          "price": 28.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08PP7LXLG",
+          "title": "TIAMOU Running Shoes Women Walking Athletic Tennis Non Slip Blade Type Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PCYWFBY",
+          "title": "MOSHA BELLE Women Running Shoes Fashion Tennis Athletic Walking Gym Sports Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07N1624C5",
+          "title": "Skechers Women's Go Walk 5-True Sneaker",
+          "price": 56.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07C2QCD89",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C2MK6QX",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086ZNJY8K",
+          "title": "Nautica Men's Casual Slip-On Fashion Sneakers-Walking Shoes-Lightweight Joggers",
+          "price": 34.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for brand.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00C31HKWA",
+          "title": "Breckelle's Women's Sahara-51 Athletic Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08134XNNB",
+          "title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0834T68X3",
+          "title": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+          "price": 28.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08PP7LXLG",
+          "title": "TIAMOU Running Shoes Women Walking Athletic Tennis Non Slip Blade Type Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PCYWFBY",
+          "title": "MOSHA BELLE Women Running Shoes Fashion Tennis Athletic Walking Gym Sports Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07N1624C5",
+          "title": "Skechers Women's Go Walk 5-True Sneaker",
+          "price": 56.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07C2QCD89",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C2MK6QX",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086ZNJY8K",
+          "title": "Nautica Men's Casual Slip-On Fashion Sneakers-Walking Shoes-Lightweight Joggers",
+          "price": 34.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: mesh; Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ],
+          "material": [
+            "mesh"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "mesh"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01J2Q2RC6",
+          "title": "Skechers Performance Men's Go Train-Endurance Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08134XNNB",
+          "title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GWQ8BG1",
+          "title": "SAGUARO Women's Breathable Walking Shoes Lady Fashion Mary Jane Sneakers Adjustable Working Nurse Shoes Lightweight Flat",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07N15QTKC",
+          "title": "Skechers Women's Go Walk 5-Lucky Sneaker",
+          "price": 55.95,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08SH8GF6K",
+          "title": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00HNDD9AK",
+          "title": "RYKA Women's Dash Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09S11CHMC",
+          "title": "POLIVA Hiking Shorts Women Cargo Golf Casual Shorts Lightweight Water Resistant Quick Dry for Athletic Walking Travel",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B008OOND8U",
+          "title": "Skechers Performance Women's Go Walk Baby Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01HOBQZYW",
+          "title": "Skechers Sport Women's Empire Inside Look Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Skechers Women's Go Walk 5-Lucky Sneaker",
+    "hard_constraints": [
+      "mesh",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Synthetic sole",
+      "Shaft measures approximately not_applicable from arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style"
+    ]
+  }
+}

@@ -1,0 +1,577 @@
+{
+  "sample_id": "public_0187",
+  "scenario_type": "boundary",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B000GQ1F3O",
+  "target_title": "Eastland Men's Newport Slip-On Shoe",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Loafers & Slip-Ons"
+  ],
+  "target_price": null,
+  "target_rating": 4.4,
+  "target_rating_number": 542,
+  "hit": true,
+  "first_hit_turn": 5,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 5,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Loafers & Slip-Ons, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MBQHU72",
+          "title": "Skechers Performance Men's Go Walk 3 Attain Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0924JF9ST",
+          "title": "FANTURE Men Loafer Slip On Sneakers Casual Comfort Lightweight Travel Stretch Canvas Shoes -U419XXXME001",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086166WVZ",
+          "title": "Bruno Marc Men’s Walking Shoes Slip-on Sneakers Casual Comfortable Loafers",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have a preference for size; please use your judgment.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NO_PREFERENCE",
+        "confidence": 0.97
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MBQHU72",
+          "title": "Skechers Performance Men's Go Walk 3 Attain Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0924JF9ST",
+          "title": "FANTURE Men Loafer Slip On Sneakers Casual Comfort Lightweight Travel Stretch Canvas Shoes -U419XXXME001",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086166WVZ",
+          "title": "Bruno Marc Men’s Walking Shoes Slip-on Sneakers Casual Comfortable Loafers",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; 100% Leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B002OHE4D6",
+          "title": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B003WZ4330",
+          "title": "Bostonian Men's Bolton Dress Slip-On",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00LVTONZM",
+          "title": "KEEN Women's Kaci Full-Grain Slip On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B002JEUT92",
+          "title": "Dr. Martens Men's Tevin Slip-On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00NYQZP3Y",
+          "title": "Clarks Women's Evianna Peal Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00HF6PKY8",
+          "title": "Merrell Women's Dassie Buckle Slip-on Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0010ERDSC",
+          "title": "G.H. Bass & Co. Men's Larson Penny Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MMYD5FE",
+          "title": "Clarks Men's Allston Free Slip-On Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01681NKBU",
+          "title": "Aerosoles Women's Mr Softee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004FXOH3E",
+          "title": "Rockport Men's BL Moc Slip-On Casual Loafer",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "I don't have an additional preference for feature.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B002OHE4D6",
+          "title": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B003WZ4330",
+          "title": "Bostonian Men's Bolton Dress Slip-On",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00LVTONZM",
+          "title": "KEEN Women's Kaci Full-Grain Slip On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B002JEUT92",
+          "title": "Dr. Martens Men's Tevin Slip-On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00NYQZP3Y",
+          "title": "Clarks Women's Evianna Peal Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00HF6PKY8",
+          "title": "Merrell Women's Dassie Buckle Slip-on Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0010ERDSC",
+          "title": "G.H. Bass & Co. Men's Larson Penny Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MMYD5FE",
+          "title": "Clarks Men's Allston Free Slip-On Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01681NKBU",
+          "title": "Aerosoles Women's Mr Softee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004FXOH3E",
+          "title": "Rockport Men's BL Moc Slip-On Casual Loafer",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "For that, what matters is: Leather sole; Leather slip-on featuring dual gore panels at entry and padded collar.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B000GQ1F3O",
+          "title": "Eastland Men's Newport Slip-On Shoe",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B06XS2T88L",
+          "title": "Bruno Marc Men's Leather Lined Dress Loafers Slip-On Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B002OHE4D6",
+          "title": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B003WZ4330",
+          "title": "Bostonian Men's Bolton Dress Slip-On",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07GN8HSBW",
+          "title": "JABASIC Women Penny Moccasins Loafers Comfortable Slip On Driving Flats Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00LVTONZM",
+          "title": "KEEN Women's Kaci Full-Grain Slip On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B002JEUT92",
+          "title": "Dr. Martens Men's Tevin Slip-On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07NP8LHRK",
+          "title": "Hey Dude Men's Wayne Lace up Loafers Multiple Colors",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00NYQZP3Y",
+          "title": "Clarks Women's Evianna Peal Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00HF6PKY8",
+          "title": "Merrell Women's Dassie Buckle Slip-on Shoe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Eastland Men's Newport Slip-On Shoe",
+    "hard_constraints": [
+      "leather",
+      "100% Leather"
+    ],
+    "soft_preferences": [
+      "Leather sole",
+      "Leather slip-on featuring dual gore panels at entry and padded collar"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "boundary"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "weather",
+      "comfort",
+      "style"
+    ]
+  }
+}

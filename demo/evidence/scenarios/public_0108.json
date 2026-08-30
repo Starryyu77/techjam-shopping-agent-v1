@@ -1,0 +1,159 @@
+{
+  "sample_id": "public_0108",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01I21CI7G",
+  "target_title": "Hanes Women's Stretch Jersey Bike Shorts, Women’s Cotton Bike Shorts, Women’s Athletic Shorts, 7\" Inseam",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Cycling",
+    "Women",
+    "Tights, Pants & Shorts",
+    "Shorts"
+  ],
+  "target_price": 13.0,
+  "target_rating": 4.4,
+  "target_rating_number": 38968,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Pants & Shorts Shorts. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "pants",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01I21CI7G",
+          "title": "Hanes Women's Stretch Jersey Bike Shorts, Women’s Cotton Bike Shorts, Women’s Athletic Shorts, 7\" Inseam",
+          "price": 13.0,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08C9Q1WBT",
+          "title": "Catpapa Newborn Baby Girl Romper Jumpsuit Bodysuit +Pants Shorts+Headband Outfit Set …",
+          "price": 18.69,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07YF1THQ6",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HCFHFB9",
+          "title": "Amazon Essentials Men's Big & Tall Loose-fit Wrinkle-Resistant Flat-Front Chino Pant fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HCM89PL",
+          "title": "Amazon Essentials Men's Big & Tall Loose-fit Wrinkle-Resistant Flat-Front Chino Pant fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HMTH77S",
+          "title": "Dutebare Women Long Sleeve Round Neck Sweatshirt Pocket Pullover Loose Tunic Shirts Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B071JQY33S",
+          "title": "Goodthreads Men's Standard-Fit Long-Sleeve Plaid Oxford Shirt",
+          "price": 20.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C5L3V4Y",
+          "title": "WEWINK CUKOO 100% Cotton Women Capri Pajama Pants, Soft Lounge Bottom with Pockets Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07ZV6C4DL",
+          "title": "Amazon Essentials Men's Slim-fit Lightweight Stretch 9\" Short",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Women's Stretch Jersey Bike Shorts, Women’s Cotton Bike Shorts, Women’s Athletic Shorts, 7\" Inseam",
+    "hard_constraints": [
+      "cotton",
+      "54% Cotton, 36% Polyester, 10% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Elastic closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0086",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07WN8N9Q7",
+  "target_title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": 27.95,
+  "target_rating": 4.6,
+  "target_rating_number": 11754,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07WN8N9Q7",
+          "title": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+          "price": 27.95,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07WP1VDG9",
+          "title": "MIXIN Slippers for Men House Shoes Moccasin with Comfortable Memory Foam Indoor Outdoor",
+          "price": 23.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08D8MYFWK",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08D8KKJYM",
+          "title": "Mens Cozy House Slippers Memory Foam Fuzzy Slip on Shoes Comfortable Black Bedroom Plush Lining Slipper Rubber Sole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07DH2BLJJ",
+          "title": "Women's Cozy Memory Foam Slippers Fluffy Micro Suede Faux Fur Fleece Lined House Shoes with Non Skid Indoor Outdoor Sole",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "LongBay Women's Chenille Knit Bootie Slippers Cute Plush Fleece Memory Foam House Shoes",
+    "hard_constraints": [
+      "Rubber sole",
+      "PRETTY ANKLE BOOTS - Cozy up the cold season with these attractive warm house slippers while luxe chenille knit styling adds a chic and cute touch to your comfort. Subtle scrunchin"
+    ],
+    "soft_preferences": [
+      "COMFY & SOFT - Nice chenille velvet upper and fuzzy plush fleece lining hug your feet and provide toasty warmth plus ultra softness, which make you feel like walking on a cloud. Wh",
+      "CUSHION & SUPPORT - Long lasting 80D memory foam insole provides superior cushioning and padding, feels like ergonomic pillows under your feet. Supportive insole relaxes your arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "comfort",
+      "material",
+      "fit",
+      "durability"
+    ]
+  }
+}

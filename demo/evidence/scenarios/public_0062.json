@@ -1,0 +1,155 @@
+{
+  "sample_id": "public_0062",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B015K51VPM",
+  "target_title": "chouyatou Women's Casual Stretch Waist Washed Denim A-line Maxi Skirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Skirts",
+    "Casual"
+  ],
+  "target_price": 28.9,
+  "target_rating": 4.3,
+  "target_rating_number": 1622,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Skirts Casual, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Skirts Casual",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "style": [
+            "casual"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Skirts Casual",
+          "soft_preferences": {
+            "style": [
+              "casual"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B015K51VPM",
+          "title": "chouyatou Women's Casual Stretch Waist Washed Denim A-line Maxi Skirt",
+          "price": 28.9,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01DX7KT02",
+          "title": "Afibi Women Floral Print Pleated Vintage Chiffon Long Maxi Skirt (Medium, S-122)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07B6GMLBP",
+          "title": "Lee Women's Relaxed Fit Skirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01GMRBHP6",
+          "title": "Kaachli Women's Denim Skirt Thin Blue Cotton Midi Calf Pocket Fall Skirt with Belt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01LXPD7ZZ",
+          "title": "PROGRACE Women's Vintage Lace Up High Waist Bodycon Faux Suede Mini Skirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01JLRJ2CY",
+          "title": "Lovezesent Women's High Waist A-Line Pleated Midi Skirt Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07D1M9HR8",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Mid-Rise Mini Skirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00WVNXQZU",
+          "title": "VIV Collection Women's Printed Full Maxi Skirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01GCRISE4",
+          "title": "Billy's Thai Shop Plus Size Maxi Skirt Long Skirts for Women Handmade Tiered Skirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07J6494X8",
+          "title": "Daily Ritual Women's Terry Cotton and Modal Pencil Skirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "chouyatou Women's Casual Stretch Waist Washed Denim A-line Maxi Skirt",
+    "hard_constraints": [
+      "fabric",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Fabric: 70%Cotton, 28.5%Polyester, 1.5%Spandex",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "style"
+    ]
+  }
+}

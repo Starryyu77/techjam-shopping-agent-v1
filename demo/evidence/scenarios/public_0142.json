@@ -1,0 +1,519 @@
+{
+  "sample_id": "public_0142",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07YRGC1Q1",
+  "target_title": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Jewelry",
+    "Bracelets",
+    "Link"
+  ],
+  "target_price": 16.99,
+  "target_rating": 4.4,
+  "target_rating_number": 1271,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bracelets Link. Bracelet Size: Length-8.34 inch, width-0.4 inch, weight: 54g. smooth chain, lightweight and comfortable to wear, perfect for bike enthusiasts etc",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "bracelet",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "lightweight",
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "bracelet",
+          "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "lightweight"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07YRGC1Q1",
+          "title": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+          "price": 16.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08MFCGLX2",
+          "title": "10mm Natural Black Onyx Stone Zodiac Charm Adjustable Bracelet for Men Women 7.08\", 7.48\", 7.87\", 8.66\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08LQHMBN2",
+          "title": "Miabella 18K Gold Over Sterling Silver Italian 3mm, 4mm Solid Diamond-Cut Mariner Link Chain Bracelet for Men Women, Mad",
+          "price": 16.5,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CKG1FN7",
+          "title": "YBMYCM 14K Gold Plated Beaded Bracelets Letter Stretch Dainty Stackable Bracelet for Women Girls",
+          "price": 9.89,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09B6X5WJW",
+          "title": "Mens Steel Fancy Curb Chain Bracelet with Vintage Sugar Skulls Charm Cubic Zirconia Eyes",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08JQMQV37",
+          "title": "SIALIN Birthday Gift Initial Charm Bracelets for Women Stainless Steel Heart 26 Letters Alphabet love Initial Bracelet f",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07WQXK8TD",
+          "title": "Birthday Gifts Bracelet Heart Charm Bracelet Birthday Gifts for Girl Women 7th 11th 13th 15th 16th 21st 30th 40th 50th 6",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BR86BXJB",
+          "title": "𝐌𝐨𝐫𝐬𝐞 𝐂𝐨𝐝𝐞 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭 for Women Men Inspirational 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭𝐬 𝐟𝐨𝐫 𝐖𝐨𝐦𝐞𝐧 Couples I Love You Friendship 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐆𝐢𝐟𝐭𝐬 for Wom",
+          "price": 15.97,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07GZQ6FHH",
+          "title": "Granny Chic Men Chain Boys Round Curb Cuban Link 316L Stainless Steel Bracelet 15mm 7-11inch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00HFIENYY",
+          "title": "RainSo Mens Magnetic Titanium Steel 3 Power Elements Bracelet Chain Link with Free Removal Tool",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: Bracelet Size: Length-8.34 inch, width-0.4 inch, weight: 54g. smooth chain, lightweight and comfortable to wear, perfect for bike enthusiasts etc.",
+      "agent_message": "I found 10 current candidates. Which color do you prefer?",
+      "ask_attribute": "color",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "bracelet",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "lightweight",
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "lightweight"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07YRGC1Q1",
+          "title": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+          "price": 16.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08MFCGLX2",
+          "title": "10mm Natural Black Onyx Stone Zodiac Charm Adjustable Bracelet for Men Women 7.08\", 7.48\", 7.87\", 8.66\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08LQHMBN2",
+          "title": "Miabella 18K Gold Over Sterling Silver Italian 3mm, 4mm Solid Diamond-Cut Mariner Link Chain Bracelet for Men Women, Mad",
+          "price": 16.5,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CKG1FN7",
+          "title": "YBMYCM 14K Gold Plated Beaded Bracelets Letter Stretch Dainty Stackable Bracelet for Women Girls",
+          "price": 9.89,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09B6X5WJW",
+          "title": "Mens Steel Fancy Curb Chain Bracelet with Vintage Sugar Skulls Charm Cubic Zirconia Eyes",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08JQMQV37",
+          "title": "SIALIN Birthday Gift Initial Charm Bracelets for Women Stainless Steel Heart 26 Letters Alphabet love Initial Bracelet f",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07WQXK8TD",
+          "title": "Birthday Gifts Bracelet Heart Charm Bracelet Birthday Gifts for Girl Women 7th 11th 13th 15th 16th 21st 30th 40th 50th 6",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BR86BXJB",
+          "title": "𝐌𝐨𝐫𝐬𝐞 𝐂𝐨𝐝𝐞 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭 for Women Men Inspirational 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭𝐬 𝐟𝐨𝐫 𝐖𝐨𝐦𝐞𝐧 Couples I Love You Friendship 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐆𝐢𝐟𝐭𝐬 for Wom",
+          "price": 15.97,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07GZQ6FHH",
+          "title": "Granny Chic Men Chain Boys Round Curb Cuban Link 316L Stainless Steel Bracelet 15mm 7-11inch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00HFIENYY",
+          "title": "RainSo Mens Magnetic Titanium Steel 3 Power Elements Bracelet Chain Link with Free Removal Tool",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: black; Unique Design: Inspire from Royal Knight, high polished bright chain links, with strong fold-over clasp, personalized colors match can highlights the low-key but noble quality and.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "bracelet",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "lightweight",
+            "comfortable"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "lightweight"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07YRGC1Q1",
+          "title": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+          "price": 16.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09B6X5WJW",
+          "title": "Mens Steel Fancy Curb Chain Bracelet with Vintage Sugar Skulls Charm Cubic Zirconia Eyes",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B081K333RB",
+          "title": "exoticdream Men Women Set of 3 Bracelets 8mm Gemstone Stone Beads Bracelet Elastic Wood Leather Men Mens Jewelry Combina",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00D2UIP2K",
+          "title": "KONOV Heavy Stainless Steel Biker Men's Bracelet, Color Black Silver",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08MFCGLX2",
+          "title": "10mm Natural Black Onyx Stone Zodiac Charm Adjustable Bracelet for Men Women 7.08\", 7.48\", 7.87\", 8.66\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B082YN2GYP",
+          "title": "BTFBM Women Summer Short Sleeve Shirts Crew Neck Color Block Irregular Striped Print Loose Soft Casual Tee Tops Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08LQHMBN2",
+          "title": "Miabella 18K Gold Over Sterling Silver Italian 3mm, 4mm Solid Diamond-Cut Mariner Link Chain Bracelet for Men Women, Mad",
+          "price": 16.5,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08CKG1FN7",
+          "title": "YBMYCM 14K Gold Plated Beaded Bracelets Letter Stretch Dainty Stackable Bracelet for Women Girls",
+          "price": 9.89,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07VJK8FTY",
+          "title": "imeetu Wristlet Keychain, Circle Silicone Bangle Keyring Bracelet",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B085DJQ1D8",
+          "title": "Cabilock 2pcs Female Mannequin Hand Jewelry Display Holder Plastic Bracelet Ring Watch Stand Support Holder Ring Stand (",
+          "price": 20.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Stainless Steel Bike Bracelet: Handcrafted with high quality material, 100% HYPOALLERGENIC, Lead & Nickel Free, Stronger and very LOW MAINTENANCE Metal, long lasting IP vacuum Plat.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "bracelet",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "stainless steel"
+          ],
+          "feature": [
+            "hypoallergenic"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "stainless steel"
+            ],
+            "feature": [
+              "hypoallergenic"
+            ]
+          }
+        },
+        "removed": {
+          "soft_preferences": {
+            "color": [
+              "black"
+            ],
+            "feature": [
+              "comfortable",
+              "lightweight"
+            ]
+          }
+        },
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07YRGC1Q1",
+          "title": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+          "price": 16.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09B6X5WJW",
+          "title": "Mens Steel Fancy Curb Chain Bracelet with Vintage Sugar Skulls Charm Cubic Zirconia Eyes",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B081K333RB",
+          "title": "exoticdream Men Women Set of 3 Bracelets 8mm Gemstone Stone Beads Bracelet Elastic Wood Leather Men Mens Jewelry Combina",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00D2UIP2K",
+          "title": "KONOV Heavy Stainless Steel Biker Men's Bracelet, Color Black Silver",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08LQHMBN2",
+          "title": "Miabella 18K Gold Over Sterling Silver Italian 3mm, 4mm Solid Diamond-Cut Mariner Link Chain Bracelet for Men Women, Mad",
+          "price": 16.5,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08CKG1FN7",
+          "title": "YBMYCM 14K Gold Plated Beaded Bracelets Letter Stretch Dainty Stackable Bracelet for Women Girls",
+          "price": 9.89,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08JQMQV37",
+          "title": "SIALIN Birthday Gift Initial Charm Bracelets for Women Stainless Steel Heart 26 Letters Alphabet love Initial Bracelet f",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WQXK8TD",
+          "title": "Birthday Gifts Bracelet Heart Charm Bracelet Birthday Gifts for Girl Women 7th 11th 13th 15th 16th 21st 30th 40th 50th 6",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BR86BXJB",
+          "title": "𝐌𝐨𝐫𝐬𝐞 𝐂𝐨𝐝𝐞 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭 for Women Men Inspirational 𝐁𝐫𝐚𝐜𝐞𝐥𝐞𝐭𝐬 𝐟𝐨𝐫 𝐖𝐨𝐦𝐞𝐧 Couples I Love You Friendship 𝐁𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐆𝐢𝐟𝐭𝐬 for Wom",
+          "price": 15.97,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07GZQ6FHH",
+          "title": "Granny Chic Men Chain Boys Round Curb Cuban Link 316L Stainless Steel Bracelet 15mm 7-11inch",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Feraco Mens Bikers Bracelet Stainless Steel Motorcycle Bike Chain Bracelets 8.4 Inch",
+    "hard_constraints": [
+      "Stainless Steel Bike Bracelet: Handcrafted with high quality material, 100% HYPOALLERGENIC, Lead & Nickel Free, Stronger and very LOW MAINTENANCE Metal, long lasting IP vacuum Plat",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Unique Design: Inspire from Royal Knight, high polished bright chain links, with strong fold-over clasp, personalized colors match can highlights the low-key but noble quality and",
+      "Bracelet Size: Length-8.34 inch, width-0.4 inch, weight: 54g. smooth chain, lightweight and comfortable to wear, perfect for bike enthusiasts etc"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Bracelet Size: Length-8.34 inch, width-0.4 inch, weight: 54g. smooth chain, lightweight and comfortable to wear, perfect for bike enthusiasts etc",
+      "new_value": "Stainless Steel Bike Bracelet: Handcrafted with high quality material, 100% HYPOALLERGENIC, Lead & Nickel Free, Stronger and very LOW MAINTENANCE Metal, long lasting IP vacuum Plat",
+      "message": "Actually, ignore my earlier preference. What I need is: Stainless Steel Bike Bracelet: Handcrafted with high quality material, 100% HYPOALLERGENIC, Lead & Nickel Free, Stronger and very LOW MAINTENANCE Metal, long lasting IP vacuum Plat."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "warmth",
+      "performance",
+      "material",
+      "fit"
+    ]
+  }
+}

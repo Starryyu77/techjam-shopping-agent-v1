@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0019",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B076VQQ962",
+  "target_title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boot Shop",
+    "Women",
+    "Outdoor & Work",
+    "Rain"
+  ],
+  "target_price": 32.99,
+  "target_rating": 4.5,
+  "target_rating_number": 22511,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Outdoor & Work Rain, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Outdoor & Work Rain",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "work"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Outdoor & Work Rain",
+          "soft_preferences": {
+            "use_case": [
+              "work"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07TZ8D64B",
+          "title": "AlwaysU Women's Mid Calf Rain Boots Ankle Rubber Rainboots Ladies Work Garden Waterproof Outdoor Booties Rain Shoes, Low",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B076VQQ962",
+          "title": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+          "price": 32.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01F00DAVK",
+          "title": "Joules Women's Welly Print Rain Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00JUGNRMS",
+          "title": "West Blvd Women's Mid Calf Waterproof Rainboots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00YUT5SOU",
+          "title": "Womens Original Tall Snow Winter Wellington Waterproof Rain Wellies Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07MNGMC2F",
+          "title": "TIDEWE Rain Boots for Kids and Toddlers, Children Natural Rubber Rain Boots with Easy-On Handles, Waterproof Lightweight",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07M9L2HYZ",
+          "title": "TIDEWE Rain Boots for Kids and Toddlers, Children Natural Rubber Rain Boots with Easy-On Handles, Waterproof Lightweight",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08GKV2M6R",
+          "title": "Jileon Ankle Rain Boots Wide Width Fit | Specially Designed For Ladies with Wide Feet & Calves | Wide Calf Rain Boots fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00J57W9ZS",
+          "title": "Chooka Women's Horse Trot Rain Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071X4PZX5",
+          "title": "getmorebeauty Womens Hidden High Heel Platform Sneakers Wedge Lace Up Chelsea Punk Patent Ankle Boots",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Asgard Women's Ankle Rain Boots Waterproof Chelsea Boots",
+    "hard_constraints": [
+      "Rubber sole",
+      "Shaft measures approximately 5.5\" from arch"
+    ],
+    "soft_preferences": [
+      "Platform measures approximately 0.5\"",
+      "Boot opening measures approximately 6.5\" around"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "weather",
+      "comfort",
+      "durability",
+      "style"
+    ]
+  }
+}

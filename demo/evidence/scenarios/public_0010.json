@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0010",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0929KL5W7",
+  "target_title": "MANGOPOP Women's Mock Turtle Neck Long Sleeve Tops Bodysuit Jumpsuit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Bodysuits"
+  ],
+  "target_price": 24.98,
+  "target_rating": 4.4,
+  "target_rating_number": 45560,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Bodysuits. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Bodysuits",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Bodysuits",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BRKBZZ7H",
+          "title": "Berryou Bodysuit for Women Square Neck Halter Sleeveless Tank Tops Sexy Backless Bodysuits Slim Fit Clubwear",
+          "price": 23.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B083GB47SQ",
+          "title": "SKD ANFIBIOS Womens One Piece Swimsuit Athletic Swimwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0929KL5W7",
+          "title": "MANGOPOP Women's Mock Turtle Neck Long Sleeve Tops Bodysuit Jumpsuit",
+          "price": 24.98,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07Q46M2J2",
+          "title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BGQFMD6L",
+          "title": "Alimens & Gentle 100% Cotton Regular Fit Short Sleeve Casual Hawaiian Shirt for Men",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07XHQDJWN",
+          "title": "Roadbox 1, 2 or 3 Pack Men's Compression Pants Athletic Base Layer Cycling Tights Leggings for Running Yoga Basketball",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0936ZJJ68",
+          "title": "MANGOPOP Women's Square Neck Short Sleeve Long Sleeve Tops Bodysuit Jumpsuit",
+          "price": 20.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08QN272FH",
+          "title": "Tommy Hilfiger Men's Ribbon Inlay Fabric Belt with Harness Buckle",
+          "price": 25.36,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "MANGOPOP Women's Mock Turtle Neck Long Sleeve Tops Bodysuit Jumpsuit",
+    "hard_constraints": [
+      "fabric",
+      "Stretchy fabric: 95% modal, 5% spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Snap closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "fit",
+      "performance",
+      "comfort"
+    ]
+  }
+}

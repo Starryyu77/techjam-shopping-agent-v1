@@ -1,0 +1,388 @@
+{
+  "sample_id": "public_0189",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0C614ZPK3",
+  "target_title": "Levi's Men's 505 Regular Fit Shorts (Also Available in Big & Tall)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Shorts",
+    "Denim"
+  ],
+  "target_price": 21.16,
+  "target_rating": 4.6,
+  "target_rating_number": 16216,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shorts Denim. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Shorts Denim",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Shorts Denim",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08DJXX7FD",
+          "title": "Wrangler Authentics Men's Classic Relaxed Fit Five Pocket Jean Short",
+          "price": 27.78,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B06ZYX4PD5",
+          "title": "Tengo Womens High Waist Microstretch Cotton Denim Shorts",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01BMYTAR6",
+          "title": "Wax Women's Juniors Mid-Rise Denim Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08VDBVSQZ",
+          "title": "Happy Sailed Mid Waisted Women Denim Shorts Casual Ripped Frayed Raw Hem Jeans Short with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08429V9RQ",
+          "title": "Goodfellow & Co Men's 10.5 inch Inseam Slim Fit Denim Shorts, 38 Tan Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01FUUZ76G",
+          "title": "Seven7 Women's Denim Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06ZZMDH2R",
+          "title": "Enrica Men's Casual Ripped Destroyed Slim Fit Jeans Shorts",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08596LMCR",
+          "title": "Sarriben Men's Casual Summer Distressed Button up Stretch Ripped Jeans Shorts with Repair Rips, 0064 Grey Blue, 38",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07613FW3G",
+          "title": "Comfort Denim Outfitters Mens Classic Regular Fit Shorts 40W Dark Blue",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Shorts Denim",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08DJXX7FD",
+          "title": "Wrangler Authentics Men's Classic Relaxed Fit Five Pocket Jean Short",
+          "price": 27.78,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B06ZYX4PD5",
+          "title": "Tengo Womens High Waist Microstretch Cotton Denim Shorts",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01BMYTAR6",
+          "title": "Wax Women's Juniors Mid-Rise Denim Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08VDBVSQZ",
+          "title": "Happy Sailed Mid Waisted Women Denim Shorts Casual Ripped Frayed Raw Hem Jeans Short with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08429V9RQ",
+          "title": "Goodfellow & Co Men's 10.5 inch Inseam Slim Fit Denim Shorts, 38 Tan Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01FUUZ76G",
+          "title": "Seven7 Women's Denim Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06ZZMDH2R",
+          "title": "Enrica Men's Casual Ripped Destroyed Slim Fit Jeans Shorts",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08596LMCR",
+          "title": "Sarriben Men's Casual Summer Distressed Button up Stretch Ripped Jeans Shorts with Repair Rips, 0064 Grey Blue, 38",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07613FW3G",
+          "title": "Comfort Denim Outfitters Mens Classic Regular Fit Shorts 40W Dark Blue",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: black; 100% Cotton.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Shorts Denim",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "black"
+          ],
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C614ZPK3",
+          "title": "Levi's Men's 505 Regular Fit Shorts (Also Available in Big & Tall)",
+          "price": 21.16,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08DJXX7FD",
+          "title": "Wrangler Authentics Men's Classic Relaxed Fit Five Pocket Jean Short",
+          "price": 27.78,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B7WY3DYM",
+          "title": "Wide Leg Jeans for Women Mid Rise Stretchy Distressed Washed Denim Jeans Bootcut 70s Hippie Cowboy Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00IRL6KRG",
+          "title": "One Teaspoon Women's Hendrix Bandit Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B7634SMB",
+          "title": "Peloton Original Washed Hat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B2WPYG12",
+          "title": "NIDIE Black Mens Hiking Shorts Stretch Waist Casual Outdoor Stretchy Lightweight Short with Multi Pockets",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B06VV945WT",
+          "title": "Matty M. Womens Size Small Cargo Vest w/Hood, Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B06ZYX4PD5",
+          "title": "Tengo Womens High Waist Microstretch Cotton Denim Shorts",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BY8NSJHQ",
+          "title": "Levi's Boys' 505 Regular Fit Jeans",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01BMYTAR6",
+          "title": "Wax Women's Juniors Mid-Rise Denim Shorts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Levi's Men's 505 Regular Fit Shorts (Also Available in Big & Tall)",
+    "hard_constraints": [
+      "cotton",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "100% Cotton",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "material"
+    ]
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "sample_id": "public_0021",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07K4FX4WZ",
+  "target_title": "Amazon Essentials Men's Slim-Fit Stretch Golf Pant",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Golf",
+    "Men",
+    "Pants"
+  ],
+  "target_price": 23.92,
+  "target_rating": 4.3,
+  "target_rating_number": 13762,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Men Pants, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "pants"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081YXFRBN",
+          "title": "MAGCOMSEN Hiking Pants Mens Summer Hiking Pants Cargo Pants with Pockets Lightweight Mens Travel Pants Spring Pants Zipp",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B1DRYPR7",
+          "title": "TACVASEN Men's Quick Dry Hiking Pants Reflective Striped Sports Training Fishing Travel Pants",
+          "price": 22.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087R8WNF6",
+          "title": "Rdruko Men's Lightweight Hiking Pants Quick Dry Fishing Running Active Pants with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09NB7MT7M",
+          "title": "Men's Punk Pants, Vintage Gothic Steampunk Slim Fit Leather Leggings Long Pants Hip Hop Skinny Running Jogger Trouser",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07S79DCTH",
+          "title": "EXCELLENT ELITE SPANKER Men's Sweatpants Winter Woollen Lightweight Casual Slim Jogger Pants with Pockets",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B072MM2CFT",
+          "title": "Climbing Pants Men Hiking Pants Quick Drying Pants Convertible Pants Summer Pants Breathable Pants Zip Off Pants Mountai",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09HHDY3X5",
+          "title": "Misaky Men’s Home Pants Plaid Cotton Pajama Pants Drawstring Sleep Lounge Pant With Pockets",
+          "price": 22.37,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BS98NVHG",
+          "title": "bwdbhd Sweatpants for Men with Pockets,Men's Sweatpants Big and Tall Jogger Slim Fit Stretch Workout Pants",
+          "price": 12.32,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0951Y2XQK",
+          "title": "ANTARCTICA Mens Tactical Hiking Pants Durable Lightweight Waterproof Military Army Cargo Fishing Travel",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07P66B5YC",
+          "title": "Mens Swim Trunks Fxbar Swim Board Shorts,Breathable Transparent Short Big and Tall Triangle Bikini Swimsuit",
+          "price": 3.9,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for brand.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081YXFRBN",
+          "title": "MAGCOMSEN Hiking Pants Mens Summer Hiking Pants Cargo Pants with Pockets Lightweight Mens Travel Pants Spring Pants Zipp",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B1DRYPR7",
+          "title": "TACVASEN Men's Quick Dry Hiking Pants Reflective Striped Sports Training Fishing Travel Pants",
+          "price": 22.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087R8WNF6",
+          "title": "Rdruko Men's Lightweight Hiking Pants Quick Dry Fishing Running Active Pants with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09NB7MT7M",
+          "title": "Men's Punk Pants, Vintage Gothic Steampunk Slim Fit Leather Leggings Long Pants Hip Hop Skinny Running Jogger Trouser",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07S79DCTH",
+          "title": "EXCELLENT ELITE SPANKER Men's Sweatpants Winter Woollen Lightweight Casual Slim Jogger Pants with Pockets",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B072MM2CFT",
+          "title": "Climbing Pants Men Hiking Pants Quick Drying Pants Convertible Pants Summer Pants Breathable Pants Zip Off Pants Mountai",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09HHDY3X5",
+          "title": "Misaky Men’s Home Pants Plaid Cotton Pajama Pants Drawstring Sleep Lounge Pant With Pockets",
+          "price": 22.37,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BS98NVHG",
+          "title": "bwdbhd Sweatpants for Men with Pockets,Men's Sweatpants Big and Tall Jogger Slim Fit Stretch Workout Pants",
+          "price": 12.32,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0951Y2XQK",
+          "title": "ANTARCTICA Mens Tactical Hiking Pants Durable Lightweight Waterproof Military Army Cargo Fishing Travel",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07P66B5YC",
+          "title": "Mens Swim Trunks Fxbar Swim Board Shorts,Breathable Transparent Short Big and Tall Triangle Bikini Swimsuit",
+          "price": 3.9,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; 98% Polyester, 2% Spandex.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester",
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07K4FX4WZ",
+          "title": "Amazon Essentials Men's Slim-Fit Stretch Golf Pant",
+          "price": 23.92,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B088GVMQK8",
+          "title": "Goodstoworld Teen Boys 3D Jogger Pants Funny Cool Graphic Sweatpants Trousers Pants Drawstring Cuffed Jogging Pants Ligh",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B089SS2SGW",
+          "title": "Vzteek Mens-Hiking-Pants Convertible Outdoor-Pants Quick Dry Stretchy Zip Off Trail Pants for Hiking, Travel, Camping",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07J1TVDF7",
+          "title": "Nonwe Men's Warm Windproof Zipper Pockets Snow Pants Fleece Mountain Hiking Ski Trip",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B1DRYPR7",
+          "title": "TACVASEN Men's Quick Dry Hiking Pants Reflective Striped Sports Training Fishing Travel Pants",
+          "price": 22.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087R8WNF6",
+          "title": "Rdruko Men's Lightweight Hiking Pants Quick Dry Fishing Running Active Pants with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00DDU0ISI",
+          "title": "PUMA Golf NA Men's Tech 6 Pocket Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00B1KATOU",
+          "title": "ASICS Mens PR Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08VDDLK8G",
+          "title": "CAMELSPORTS Mens Lightweight Summer Workout Running Sport Pants Casual Beach Jogger Trousers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B008XNTROG",
+          "title": "Puma Golf NA Men's 5 Pocket Tech Pant",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Amazon Essentials Men's Slim-Fit Stretch Golf Pant",
+    "hard_constraints": [
+      "polyester",
+      "98% Polyester, 2% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

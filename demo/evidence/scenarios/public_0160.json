@@ -1,0 +1,161 @@
+{
+  "sample_id": "public_0160",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01AAANF2Y",
+  "target_title": "Amazon Basics 4 Piece Packing Travel Organizer Cubes Set - Slim, Black",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Travel Accessories",
+    "Packing Organizers"
+  ],
+  "target_price": 25.05,
+  "target_rating": 4.7,
+  "target_rating_number": 33803,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Travel Accessories Packing Organizers. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Travel Accessories Packing Organizers",
+        "hard_constraints": {
+          "use_case": [
+            "travel"
+          ],
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Travel Accessories Packing Organizers",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ],
+            "use_case": [
+              "travel"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0834HJ8TS",
+          "title": "Mount Plus MP-L-BAG6 6 Set Packing Cubes Multi-Functional Luggage Packing Organizers with Shirt Bag for Travel Accessori",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07MKGFSK2",
+          "title": "BAGAIL 6 Set Packing Cubes Multi-Functional Luggage Packing Organizers with Shirt Bag for Travel Accessories",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01AAANF2Y",
+          "title": "Amazon Basics 4 Piece Packing Travel Organizer Cubes Set - Slim, Black",
+          "price": 25.05,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B081K9HCJ4",
+          "title": "CHAPEAU TRIBE Classic Stretchable Wool French Beret",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BFCKB2QN",
+          "title": "Womens Snow Pants Winter Fleece Lined Waterproof Soft Shell Insulated Outdoor Camping Travel ski Pants",
+          "price": 35.39,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09KC8VMDH",
+          "title": "SIQUK 12 Pieces Satin Headbands 1 Inch Wide Non-slip Headband Colorful Headbands DIY Hair Headband for Women and Girls,1",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B078H9ZCLN",
+          "title": "Vera Bradley Women's Protection Signature Cotton RFID Georgia Wallet, Imperial Rose, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07T2FSP64",
+          "title": "Vera Bradley Women's Wallet Signature Cotton Jen Zip ID Case, Camofloral, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00ZG20HP0",
+          "title": "Travel Polishing Cloth Made in USA for Cleaning Silver, Gold and Platinum Jewelry, Watch, Coins. All Cotton, Non Toxic C",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B096DQ1KCP",
+          "title": "Aogist Mini Leather Backpack Purse 3-Pieces Fashion Bowknot Zipper Bags Cute Casual Travel Daypacks for and Women",
+          "price": 29.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Amazon Basics 4 Piece Packing Travel Organizer Cubes Set - Slim, Black",
+    "hard_constraints": [
+      "fabric",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Double zipper pulls make opening/closing simple and fast",
+      "Mesh top panel for easy identification of contents, and ventilation"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

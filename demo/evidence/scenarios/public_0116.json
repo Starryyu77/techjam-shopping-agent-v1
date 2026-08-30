@@ -1,0 +1,146 @@
+{
+  "sample_id": "public_0116",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07S2Y3THP",
+  "target_title": "Lugz Men's Clipper Sneaker",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "target_price": 31.99,
+  "target_rating": 4.3,
+  "target_rating_number": 30779,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Fashion Sneakers. A key requirement is: 100% Canvas.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00B5ZU8WO",
+          "title": "Keds Women's Double Up Core Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00DNO2Y68",
+          "title": "Keds Women's Double Up Core Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B082QL8WZ4",
+          "title": "Amazon Essentials Men's Classic Canvas Slip on Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08B7X2BWJ",
+          "title": "Amazon Essentials Men's Canvas Lace Up Beach Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00I41T1JS",
+          "title": "Polo Honey Comb Rip Stop Sneakers Mens",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08HRDCDFM",
+          "title": "MAUGELY Women's High Top Heightened Sole Sports Causal Fashion Sneakers Canvas Shoes",
+          "price": 29.9,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07PFSX4S5",
+          "title": "Oakley Men's Canvas Flyer Shoes",
+          "price": 60.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00J34X0WE",
+          "title": "Polo Ralph Lauren Men's Bawtry Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B009T1FT4S",
+          "title": "Tretorn Men's Nylite Canvas Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Lugz Men's Clipper Sneaker",
+    "hard_constraints": [
+      "100% Canvas",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "Cushioned Insole for added comfort",
+      "Canvas Upper"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort"
+    ]
+  }
+}

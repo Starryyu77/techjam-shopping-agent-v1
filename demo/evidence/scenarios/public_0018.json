@@ -1,0 +1,386 @@
+{
+  "sample_id": "public_0018",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07H3T5YGH",
+  "target_title": "O2TEE Men's Workout Gym Tank Tops Men - Custom Tank Top - Customized & Personalized Tanktops Text",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Men",
+    "Shirts",
+    "Tanks Tops"
+  ],
+  "target_price": 19.99,
+  "target_rating": 3.5,
+  "target_rating_number": 45,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts Tanks Tops. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shirts",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09P81G2K9",
+          "title": "MIROL Women's Cap Sleeve Tank Tops U Neck Solid Color Casual Shirts Loose Fit Basic Blouse",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07Y32DYYS",
+          "title": "Sieanear Womens Tops Long Sleeve Solid Color Round Neck Tunic Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08545YHQS",
+          "title": "Canikat Women's V Neck Lace Strappy Cami Tank Tops Casual Loose Sleeveless Blouse Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07GVGG7VS",
+          "title": "GADEWAKE Womens Casual Floral Print Color Block Short Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07ZYMGXZZ",
+          "title": "Fanient Mens Tank Tops Summer 3D Print Casual Workout Graphic Holiday Sleeveless Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B091DHBFYF",
+          "title": "WIHOLL T Shirts for Women Loose Fit Short Sleeve Summer Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08NY63L9W",
+          "title": "Esobo Womens Tie Dye Tank Tops Loose Fit V Neck Sleeveless Color Block Shirts Casual Tunic Tees with Pocket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09P81G2K9",
+          "title": "MIROL Women's Cap Sleeve Tank Tops U Neck Solid Color Casual Shirts Loose Fit Basic Blouse",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B3RC268V",
+          "title": "Womens Striped Long Sleeve T Shirts Color Block Comfy Casual Blouses Tunics Tops Fashion Clothes",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07Y32DYYS",
+          "title": "Sieanear Womens Tops Long Sleeve Solid Color Round Neck Tunic Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08545YHQS",
+          "title": "Canikat Women's V Neck Lace Strappy Cami Tank Tops Casual Loose Sleeveless Blouse Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07GVGG7VS",
+          "title": "GADEWAKE Womens Casual Floral Print Color Block Short Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07ZYMGXZZ",
+          "title": "Fanient Mens Tank Tops Summer 3D Print Casual Workout Graphic Holiday Sleeveless Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B091DHBFYF",
+          "title": "WIHOLL T Shirts for Women Loose Fit Short Sleeve Summer Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08NY63L9W",
+          "title": "Esobo Womens Tie Dye Tank Tops Loose Fit V Neck Sleeveless Color Block Shirts Casual Tunic Tees with Pocket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Modal,Polyester,Cotton; Pull On closure.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07H3T5YGH",
+          "title": "O2TEE Men's Workout Gym Tank Tops Men - Custom Tank Top - Customized & Personalized Tanktops Text",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B088LWDGBF",
+          "title": "Men's Marvel Deadpool Work Out Eat Tacos Tank Top",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01E283N5O",
+          "title": "Men's Cartoon Glove Mickey West Coast Hand Sign Tank Top",
+          "price": 9.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00VFBI2OE",
+          "title": "Cybertela Men's Ukrainian Coat of Arms Ukraine Flag Pride Sleeveless Muscle T-Shirt",
+          "price": 13.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0882LSYMV",
+          "title": "Sieanear Womens Tops Summer Short Sleeve V Neck T Shirts Casual",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09P81G2K9",
+          "title": "MIROL Women's Cap Sleeve Tank Tops U Neck Solid Color Casual Shirts Loose Fit Basic Blouse",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082ZVF1LD",
+          "title": "HUHOT Cotton Crew Neck 3/4 Sleeve Jersey Shirt Baseball Tee Raglan T-Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08GX8Y9CD",
+          "title": "PESION Women's Colorful Striped Shirts Crewneck Long Sleeve Raglan Baseball Tee Tops, Small, Stripe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "O2TEE Men's Workout Gym Tank Tops Men - Custom Tank Top - Customized & Personalized Tanktops Text",
+    "hard_constraints": [
+      "polyester",
+      "Modal,Polyester,Cotton"
+    ],
+    "soft_preferences": [
+      "Pull On closure",
+      "Material: 95%Cotton & 5%Polyester - Made of Superior Quality Modal Fiber, Ultra Light-Weight, Soft & Smooth, Feels Really Comfortable, Which Keep You Cool & Dry All Day Long"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

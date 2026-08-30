@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0193",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07YM55NLW",
+  "target_title": "Shimmer Anna Shine USA American Flag Patriotic Scarf",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Scarves & Wraps",
+    "Fashion Scarves"
+  ],
+  "target_price": 8.99,
+  "target_rating": 4.6,
+  "target_rating_number": 619,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Scarves & Wraps Fashion Scarves. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Scarves & Wraps Fashion Scarves",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Scarves & Wraps Fashion Scarves",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07YM55NLW",
+          "title": "Shimmer Anna Shine USA American Flag Patriotic Scarf",
+          "price": 8.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00BMP9W10",
+          "title": "Leopard Print Scarve with One Piece of Fashion Bracelet",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GWQW6V9",
+          "title": "Women Scarf Lady Light Soft Solid Scarf Wrap Large Sheer Shawl Wraps for Adult Kids Using (Khaki, Dark Grey, 2 Pieces)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08FHPTVNF",
+          "title": "Kollie More Women's Fashion Scarf Long Lightweight Cotton Scarves Ultra Soft Wraps and Shawls For Lady (180cm x 90cm)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00CXT54ES",
+          "title": "Hugssy 2015 Silky Scrunch Wrinkled Infinity Scarf Circle Scarf",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07XQG2HSJ",
+          "title": "Havanese Dog Print Women's Scarf Shawl Wrap Lightweight",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B64HRC7M",
+          "title": "alquds chiffon hijab head wrap chiffon scarf-solid color head wraps for women hijab for Muslim women soft long scarf",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0997G1BVP",
+          "title": "TAME-YOU 4 Pack for Women High-Quality Printing Lightweight Chiffon Scarf Travel Wraps Soft Long House Patter Printed Su",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01IZXYCRU",
+          "title": "OULY Red Plaid Christmas Scarves Men's Scarf Women's scarf warm anti-static",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08P97H3BD",
+          "title": "Nufr Headwear Face Scarf Tube Mask Seamless Neck Gaiter Outdoors Windproof Women Men Camouflage",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Shimmer Anna Shine USA American Flag Patriotic Scarf",
+    "hard_constraints": [
+      "fabric",
+      "color: red"
+    ],
+    "soft_preferences": [
+      "Chiffon",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

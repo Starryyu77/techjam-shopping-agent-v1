@@ -1,0 +1,395 @@
+{
+  "sample_id": "public_0152",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B000EQU0NW",
+  "target_title": "Citizen Eco-Drive Corso Quartz Mens Watch, Stainless Steel with Leather strap, Classic, Brown (Model: BM8242-08E)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Watches",
+    "Wrist Watches"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 749,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watches Wrist Watches. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watches Wrist Watches",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07QSH2YL1",
+          "title": "Mens Natural Wooden Watches Handmade Vintage Casual Wrist Watch Cowhide Leather Wood Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07FS7JNFZ",
+          "title": "Top Plaza Womens Fashion Wrist Watch Luxury Rhinestones Case Roman Numerals Thin Leather Strap Analog Quartz Dress Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B073M4BKJF",
+          "title": "Souarts Womens Artificial Leather No Numbers Moon Dial Quartz Analog Wristwatch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01F6XULS6",
+          "title": "Yunanwa 10 Pack Unisex Women Men Watches Big Dial Lover Gift Leather Bracelet Wristwatch Wholesales …",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07JJB67BX",
+          "title": "OLMECA Men’s Watch Fashion Sports Dress Simple Wrist Watches Analog Quartz Waterproof Stainless Steel Case Brown Genuine",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07S9W25K8",
+          "title": "Men's Wrist Watches,Military Nylon Waterproof Date Quartz Analog Army Men's Quartz Wrist Watches(Gold)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B006K6PCZQ",
+          "title": "Timex Women's T2N862 Weekender Green Leather Strap Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01HLRMH8W",
+          "title": "Soleasy 2017 New Fashion Casual Women Leather Quartz Wrist Watch-Yellow WTH8404",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07QSH2YL1",
+          "title": "Mens Natural Wooden Watches Handmade Vintage Casual Wrist Watch Cowhide Leather Wood Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07FS7JNFZ",
+          "title": "Top Plaza Womens Fashion Wrist Watch Luxury Rhinestones Case Roman Numerals Thin Leather Strap Analog Quartz Dress Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B073M4BKJF",
+          "title": "Souarts Womens Artificial Leather No Numbers Moon Dial Quartz Analog Wristwatch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01F6XULS6",
+          "title": "Yunanwa 10 Pack Unisex Women Men Watches Big Dial Lover Gift Leather Bracelet Wristwatch Wholesales …",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07JJB67BX",
+          "title": "OLMECA Men’s Watch Fashion Sports Dress Simple Wrist Watches Analog Quartz Waterproof Stainless Steel Case Brown Genuine",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07S9W25K8",
+          "title": "Men's Wrist Watches,Military Nylon Waterproof Date Quartz Analog Army Men's Quartz Wrist Watches(Gold)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B006K6PCZQ",
+          "title": "Timex Women's T2N862 Weekender Green Leather Strap Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01HLRMH8W",
+          "title": "Soleasy 2017 New Fashion Casual Women Leather Quartz Wrist Watch-Yellow WTH8404",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: brown; Gold-tone watch in stainless steel featuring black two-step dial with date window at 3 o'clock and croco-embossed leather band. Case diameter : 36 mm.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "brown",
+            "gold",
+            "black"
+          ],
+          "material": [
+            "stainless steel",
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather",
+              "stainless steel"
+            ],
+            "color": [
+              "black",
+              "brown",
+              "gold"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B000EQU0NW",
+          "title": "Citizen Eco-Drive Corso Quartz Mens Watch, Stainless Steel with Leather strap, Classic, Brown (Model: BM8242-08E)",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07QHFX9Z9",
+          "title": "Citizen Automatic Men's Promaster Diver Watch, Silver Tone, One Size, Bracelet",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07RCKF8RK",
+          "title": "Steve Madden Leather Band Analog Men's Watch (SMMW009)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B003KQJ9RG",
+          "title": "Invicta Women's 6912 II Collection Two-Tone Stainless Steel Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B001L1RZP0",
+          "title": "Pulsar Women's PTC384 Gold-Tone Black Leather Strap Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07S9W25K8",
+          "title": "Men's Wrist Watches,Military Nylon Waterproof Date Quartz Analog Army Men's Quartz Wrist Watches(Gold)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B003DIPB50",
+          "title": "U.S. Polo Assn. Classic Men's USC80049 Two-Tone Analogue White Dial Expansion Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B005FN0DSQ",
+          "title": "Invicta Men's 1561 II Collection Swiss Chronograph Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00L059500",
+          "title": "Hamilton Men's H42415551 American Classic Spirit of Liberty Analog Display Swiss Automatic Brown Watch",
+          "price": 940.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B003X0X6KU",
+          "title": "Stuhrling Original Men's 228.33452 Symphony Saturnalia Brumalia Analog Mechanical Hand Wind Brown Leather Watch",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Citizen Eco-Drive Corso Quartz Mens Watch, Stainless Steel with Leather strap, Classic, Brown (Model: BM8242-08E)",
+    "hard_constraints": [
+      "leather",
+      "color: brown"
+    ],
+    "soft_preferences": [
+      "Gold-tone watch in stainless steel featuring black two-step dial with date window at 3 o'clock and croco-embossed leather band. Case diameter : 36 mm",
+      "Japanese quartz movement with analog display"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "durability",
+      "style"
+    ]
+  }
+}

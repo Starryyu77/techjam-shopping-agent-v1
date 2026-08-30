@@ -1,0 +1,260 @@
+{
+  "sample_id": "public_0092",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07FKNZC43",
+  "target_title": "COSOSA Womens Satin Striped Pajamas Long Sleeve V-neck Tops and Pants 2-piece Pj Set",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Sleep & Lounge",
+    "Sets"
+  ],
+  "target_price": null,
+  "target_rating": 4.3,
+  "target_rating_number": 165,
+  "hit": true,
+  "first_hit_turn": 2,
+  "best_rank": 10,
+  "reciprocal_rank": 0.1,
+  "total_turns": 2,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Sets, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Sets"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0963L93JY",
+          "title": "luvamia Women Tie Dye Pajama Sets Long Sleeve Tops and Pants PJ Sets Joggers Loungewear Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0953BX2J8",
+          "title": "luvamia Women Tie Dye Pajama Sets Long Sleeve Tops and Pants PJ Sets Joggers Loungewear Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08FTD2LFQ",
+          "title": "Saslax Women's Pajama Set Long Sleeve Tops and Shorts PJ Set Sleepwear Night Shirt Loungewear with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0C5MH6KT2",
+          "title": "Ekouaer Women's Fit Short-Sleeve Sleepwear, Striped Shorts",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07SMWH3S9",
+          "title": "Ekouaer Women's Tank Capri Soft Pajama Sets",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B081V7ZBPT",
+          "title": "Joyaria Womens Soft Bamboo Pajama Sets Button Down Long Sleeve Pj Pants Set Sleepwear",
+          "price": 48.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B089DXH39C",
+          "title": "Women's Pajamas Set, Short Sleeve Sleepwear Lace Hem Pj Lounge Sets Nightwear Pajamas for Women S-XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0874S95LK",
+          "title": "PRETTYGARDEN Women’s Leopard Print Two Piece Pajamas Set Short Sleeve Tops With Drawstring Shorts Sleepwear Loungewear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00UGIDBIY",
+          "title": "Forever Lazy Heavyweight Adult Onesies | One-Piece Pajama Jumpsuits for Men and Women | Unisex",
+          "price": 44.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08Y5N2WKG",
+          "title": "PRETTYGARDEN Women’s Causal Two Piece Outfit Long Pant Sweatsuit Off Shoulder High Waist Loungewear Tracksuits With Pock",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: polyester; 95% Polyester, 5% Spandex.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester",
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08LDKWB1F",
+          "title": "KENMAX Lounge Sets for Women 2 Piece Sweatsuit Loungewear Sets Long Sleeve Pullover Tops and Sweatpants Outfits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C5MH6KT2",
+          "title": "Ekouaer Women's Fit Short-Sleeve Sleepwear, Striped Shorts",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08F5GXT67",
+          "title": "Arshiner Girl's 2 Piece Tie-dye Pullover Hooded Sweatshirt Set Loungewear Sweatpants",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08YNV5LCR",
+          "title": "Ekouaer Women's Nightgown Short Sleeves Nightshirt V-Neck Sleepwear Button Down Pajama Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07RWB95CX",
+          "title": "IN'VOLAND Women Plus Size Nightgown Short Sleeve Loungewear V-Neck Sleepwear Comfy Sleep Shirt Pajama Dress (16W-24W",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08889Q88B",
+          "title": "luvamia Women Tie Dye Pajama Sets Short Sleeve PJ Sets Joggers Loungewear Sleepwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08GX2JLWL",
+          "title": "Doaraha Women's Tie Dye Two Piece Pajamas Set Long Sleeve Sweatshirt with Long Pants Sleepwear with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08XYT1B28",
+          "title": "ZESICA Womens Satin Pajama Set Short Sleeve Top and Shorts Two Piece Silk Sleepwear Nightwear Loungewear Pjs Sets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08DKLS5D8",
+          "title": "VENTELAN Women’s Tie Dye Sweatsuit Long Sleeve Pajamas Set Pullover Sweatpants Joggers Sets Loose Sleepwear with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07FKNZC43",
+          "title": "COSOSA Womens Satin Striped Pajamas Long Sleeve V-neck Tops and Pants 2-piece Pj Set",
+          "price": null,
+          "is_target": true
+        }
+      ],
+      "target_rank": 10,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "COSOSA Womens Satin Striped Pajamas Long Sleeve V-neck Tops and Pants 2-piece Pj Set",
+    "hard_constraints": [
+      "polyester",
+      "95% Polyester, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

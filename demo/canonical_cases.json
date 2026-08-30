@@ -1,0 +1,42 @@
+{
+  "owner_approved": true,
+  "approved_at": "2026-08-31",
+  "approval_note": "P0 repair: use public_0030 because it visibly locks material=polyester and hits rank 1; keep the anomalous multi-turn case secondary.",
+  "canonical_cases": [
+    {
+      "sample_id": "public_0030",
+      "scenario_type": "buying",
+      "role": "primary_video"
+    },
+    {
+      "sample_id": "public_0004",
+      "scenario_type": "intent_override",
+      "role": "primary_video"
+    },
+    {
+      "sample_id": "public_0063",
+      "scenario_type": "browsing",
+      "role": "primary_website"
+    },
+    {
+      "sample_id": "public_0050",
+      "scenario_type": "boundary",
+      "role": "primary_website"
+    },
+    {
+      "sample_id": "public_0018",
+      "scenario_type": "buying",
+      "role": "secondary"
+    },
+    {
+      "sample_id": "public_0006",
+      "scenario_type": "browsing",
+      "role": "secondary"
+    },
+    {
+      "sample_id": "public_0072",
+      "scenario_type": "intent_override",
+      "role": "secondary"
+    }
+  ]
+}

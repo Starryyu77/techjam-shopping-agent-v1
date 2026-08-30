@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0022",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B08F5G843H",
+  "target_title": "YESNO Summer Dresses for Women Casual Loose Bohemian Floral Dress with Pockets Spaghetti Strap Maxi Dress E75",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses",
+    "Casual"
+  ],
+  "target_price": 39.99,
+  "target_rating": 4.1,
+  "target_rating_number": 18915,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Dresses Casual. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {
+          "style": [
+            "casual"
+          ],
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ],
+            "style": [
+              "casual"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08F5G843H",
+          "title": "YESNO Summer Dresses for Women Casual Loose Bohemian Floral Dress with Pockets Spaghetti Strap Maxi Dress E75",
+          "price": 39.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07QPM54V7",
+          "title": "WNEEDU Women's Summer Casual T Shirt Dresses Short Sleeve Swing Dress with Pockets",
+          "price": 19.59,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07N4GLDMB",
+          "title": "YATHON Women's Vintage Ruffle Floral Flared A Line Swing Casual Cocktail Party Dresses",
+          "price": 27.16,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Q4KT6BR",
+          "title": "LIYOHON Women's Summer Maxi Dress Boho Loose Striped Floral Printed Casual Sleeveless Party Tank Long Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PFQGGBF",
+          "title": "UNICOMIDEA Girl Sleeveless Dress Colorful Print Adorable Tunic Summer Swing Skirt Toddler Casual/Party Sundress 4-13 Yea",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B071Y4L2Z4",
+          "title": "STYLEWORD Women's Casual Summer V Neck Floral Spaghetti Strap Ruffle Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07V7C8L6K",
+          "title": "MOLERANI Women's Loose Plain Maxi Dresses Casual Long Dresses with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07XLJ2TRS",
+          "title": "levaca Women's Plain Long Sleeve Flowy Modest Midi Work Casual Dress with Belt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07Q56WFK8",
+          "title": "Alelly Women Wrap Maxi Dress Split Flowy Long Cocktail Dress Boho Polka Dot Summer Dresses",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "YESNO Summer Dresses for Women Casual Loose Bohemian Floral Dress with Pockets Spaghetti Strap Maxi Dress E75",
+    "hard_constraints": [
+      "fabric",
+      "Fabric: 100% Cotton, Soft, Comfy, Breathable and keep you cool"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style",
+      "material"
+    ]
+  }
+}

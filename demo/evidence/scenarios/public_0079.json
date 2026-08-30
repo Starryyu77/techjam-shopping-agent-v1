@@ -1,0 +1,357 @@
+{
+  "sample_id": "public_0079",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BFRMX3JG",
+  "target_title": "Jeasona Women’s Fuzzy Slipper Socks With Grippers Cozy Warm Cute Animal Gifts",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Socks & Hosiery",
+    "Slipper Socks"
+  ],
+  "target_price": 13.99,
+  "target_rating": 4.7,
+  "target_rating_number": 3029,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Socks & Hosiery Slipper Socks, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08MVTZ8H5",
+          "title": "HomeTop Women's Soft Sherpa Lining Slipper Socks with Cute Animal Decor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFHQR5XV",
+          "title": "Caudblor Women Slipper Socks With Suede Non Slip Sole, Fuzzy Winter Warm Soft Slipper Socks With Grippers For Festival P",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07SRWKGQ4",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - Lobster - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01M03UHYC",
+          "title": "ofoot Women's Winter Warm Christmas Slipper Socks Non Skid Crew Stockings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08R5S4JSM",
+          "title": "Snoozies Mini Buffalo Plaid Ballerina - Womens Slippers - Red - Small",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01JLW6BAK",
+          "title": "Women's Winter Slipper Soft Socks Snowflake Fleece Lining Fuzzy Warm Indoor Home Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07SXVW89T",
+          "title": "Snoozies Pairable Slipper Socks – House Slippers for Women, Fuzzy Slipper Socks with Unique Designs, Non Slip Socks, Anc",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08H4XXVR5",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - HO HO HO - Silver/Red - Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01JM6S49G",
+          "title": "Snoozies Womens Aztec Ballerina Comfort Sole Slipper Socks - Green, Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07GGJXL2Z",
+          "title": "MeMoi Women's Chenille Non-Skid Pom-Pom Slippers",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08MVTZ8H5",
+          "title": "HomeTop Women's Soft Sherpa Lining Slipper Socks with Cute Animal Decor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFHQR5XV",
+          "title": "Caudblor Women Slipper Socks With Suede Non Slip Sole, Fuzzy Winter Warm Soft Slipper Socks With Grippers For Festival P",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07SRWKGQ4",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - Lobster - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01M03UHYC",
+          "title": "ofoot Women's Winter Warm Christmas Slipper Socks Non Skid Crew Stockings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08R5S4JSM",
+          "title": "Snoozies Mini Buffalo Plaid Ballerina - Womens Slippers - Red - Small",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01JLW6BAK",
+          "title": "Women's Winter Slipper Soft Socks Snowflake Fleece Lining Fuzzy Warm Indoor Home Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07SXVW89T",
+          "title": "Snoozies Pairable Slipper Socks – House Slippers for Women, Fuzzy Slipper Socks with Unique Designs, Non Slip Socks, Anc",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08H4XXVR5",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - HO HO HO - Silver/Red - Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01JM6S49G",
+          "title": "Snoozies Womens Aztec Ballerina Comfort Sole Slipper Socks - Green, Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07GGJXL2Z",
+          "title": "MeMoi Women's Chenille Non-Skid Pom-Pom Slippers",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; Rubber sole.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester",
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BFRMX3JG",
+          "title": "Jeasona Women’s Fuzzy Slipper Socks With Grippers Cozy Warm Cute Animal Gifts",
+          "price": 13.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07SRWKGQ4",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - Lobster - Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BLWGPKVH",
+          "title": "RALME Cozy Christmas Slipper Socks for Girls and Women- Pack of 3 - Fuzzy Fleece Lined with Non-Skid Grippers",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08H4XXVR5",
+          "title": "Snoozies Womens Pairables - Funny Slippers for Women - Womens Slippers - House Slippers - HO HO HO - Silver/Red - Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0C65TFM9F",
+          "title": "Vionic Women's Gemma",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09NNXKKG7",
+          "title": "Scurtain Unisex Adults Rubber Sole Slippers",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08CTFPBN5",
+          "title": "RockDove Women's Nomad Slipper with Memory Foam",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WK5D8T9",
+          "title": "Lulex Moccasins for Men House Slippers Indoor Outdoor Plush Mens Bedroom Shoes with Hard Sole",
+          "price": 25.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Jeasona Women’s Fuzzy Slipper Socks With Grippers Cozy Warm Cute Animal Gifts",
+    "hard_constraints": [
+      "polyester",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "Best Gifts Ideas: These cute fluffy slipper socks are featuring lovely animals pattern-owl, dog, cat, fox, penguin and reindeer. They are very good gifts for women. Gifts for mom.",
+      "Super Soft and Cozy: These fuzzy slipper socks are made of Polyester 95%, Spandex 5%. The material is extraordinary soft and comfy"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style",
+      "fit",
+      "comfort",
+      "durability"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0117",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07HJ18QRQ",
+  "target_title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": 45.0,
+  "target_rating": 4.6,
+  "target_rating_number": 8372,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers. A key requirement is: Synthetic Rubber sole.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers",
+          "hard_constraints": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07HJ18QRQ",
+          "title": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+          "price": 45.0,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07FNNTR76",
+          "title": "Snug Leaves Women's Slip-On Knit Slippers Memory Foam Plush Lining Indoor/Outdoor House Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08L39SH1C",
+          "title": "Kids Unicorn House Slippers for Girls Boys - Cute Dinosaur Warm Winter Shoes (Toddler/Little Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09FGJNXZL",
+          "title": "Greatonu Slippers for Women Fuzzy House Slippers Comfy Memory Foam Bedroom Slippers Indoor Outdoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08QCJY5DV",
+          "title": "COFACE Mothers Day Gifts Womens Fur Sliders Plush Fluffy Orthotic Slippers with Arch Support Ladies Slides for Plantar F",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09K7LMRW1",
+          "title": "COFACE Fluffy Womens Slippers with Arch Support Open Toe Cheap Fuzzy Slides for Plantar Fasciitis Orthotic Ladies House ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00VBG9XCS",
+          "title": "Acorn Women's Moc Slipper, Carnival Blue, 9.5-10.5",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07612TYT1",
+          "title": "Soho Shoes Women's Open Toe Rose Embroidered Faux Fur Slide Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B007HCIUBU",
+          "title": "Acorn Unisex-Kid's SPA Terry B-K, Periwinkle, 0-6 Months Toddler",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Vionic Sadie Women's Adjustable Strap Orthotic Slippers",
+    "hard_constraints": [
+      "Synthetic Rubber sole",
+      "Mule-style slipper, adjustable strap with hook-and-loop closure, silvertone button detail"
+    ],
+    "soft_preferences": [
+      "Terrycloth-covered EVA midsole absorbs shock, helping reduce stress on feet, ankles, and knees",
+      "Podiatrist-designed, biomechanical orthotic footbed with Orthaheel technology and a deep heel cup helps stabilize, support, and realign feet back to their natural position while we"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "durability"
+    ]
+  }
+}

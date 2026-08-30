@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0134",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B081SF3QRL",
+  "target_title": "YOFANST 2pcs-12pcs Double Flare Stainless Steel Tunnels Gauges Screwed Gem Rhinestones Tunnels Plugs Stretcher Jewelry",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Jewelry",
+    "Body Jewelry",
+    "Piercing Jewelry",
+    "Tunnels"
+  ],
+  "target_price": 12.99,
+  "target_rating": 4.6,
+  "target_rating_number": 399,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Piercing Jewelry Tunnels, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jewelry"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081SF3QRL",
+          "title": "YOFANST 2pcs-12pcs Double Flare Stainless Steel Tunnels Gauges Screwed Gem Rhinestones Tunnels Plugs Stretcher Jewelry",
+          "price": 12.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0811DGPJP",
+          "title": "COOEAR Ebony Plugs and Tunnels Black Ear Gauges Earrings Tear Drop Stretchers Expander Piercing 0g to 30mm.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B24TC7CK",
+          "title": "POBAISITER 2PCS Stainless Steel Ear Gauges Tunnels Hollow Spider Bee Bat Chain Screw Fit For Men Women 6mm-25mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0861B5M21",
+          "title": "TBOSEN 2PCS Set Ear Tunnels Plugs Gauges for Ears Screwed Ear Tunnels Expander Stretcher Piercing Earrings Crystal with ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B49BH2JD",
+          "title": "2pc Flesh Skin Colored Ear Gauges Plugs Tunnels Expanders Stretcher Silicone Body Piercing Jewelry",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00DDO844O",
+          "title": "Pair (2) Stainless Steel Hexagon Shape Ear Plugs Hollow Tunnels Screw Look Double Flared Gauges- 00G 10MM",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07GSWV3N3",
+          "title": "FECTAS Ear Stretching Gauges Flesh Tunnels Plugs White Silicone Flexible Stretchers Expander Ear Piercing Jewelry 6PRS 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07SD9T33K",
+          "title": "TBOSEN 2 PCS Stainless Steel Screw Sunflower Ear Gauges Plugs Tunnels Expander Body Piercing",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07F1DJ52Q",
+          "title": "LOYALLOOK 2Pairs Stainless Steel Screw Opal Tunnels Ear Stretcher Plugs Kit Expander Body Piercing Set 0g-3/4 Gauge Pier",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B018LTY6HY",
+          "title": "AtoZ Piercing Pink Glitter Inlay Top 316L Surgical Steel Flesh Tunnel - Sold by Piece",
+          "price": 10.36,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "YOFANST 2pcs-12pcs Double Flare Stainless Steel Tunnels Gauges Screwed Gem Rhinestones Tunnels Plugs Stretcher Jewelry",
+    "hard_constraints": [
+      "Gauge in Choice: 8g(3mm), 6g(4mm), 4g(5mm), 2g(6mm), 0g(8mm), 00g(10mm), 1/2\"(12mm), 9/16\"(14mm)",
+      "You will get 3 pairs fashion gem double flare screw-fit tunnels in same size, in same color"
+    ],
+    "soft_preferences": [
+      "Material: Stainless Steel With Rhinestones, Look Nice, Light Weight, Smooth Polish Surface and Long Lasting Color",
+      "The screw-on method tunnels are pretty, you can twist on from one head, very easy to wear and take off. Fashion party and wedding body piercing jewelry"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "comfort"
+    ]
+  }
+}

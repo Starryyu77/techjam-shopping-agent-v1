@@ -1,0 +1,356 @@
+{
+  "sample_id": "public_0146",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BCQWYQLQ",
+  "target_title": "Sarin Mathews Womens One Shoulder Ruched Bodycon Dress Sexy Sleeveless Slit Midi Party Cocktail Wedding Guest Dresses",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses"
+  ],
+  "target_price": 41.99,
+  "target_rating": 4.0,
+  "target_rating_number": 279,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Dresses. A key requirement is: rayon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07D4QLVTN",
+          "title": "TheMogan S~XL Classic Snap Button Front V-Neck Long Sleeve Knit Cardigan",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0932WJ2Q7",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09R4NDWFS",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CMV5BCQ",
+          "title": "Lamilus Women's Casual Summer Tshirt Dresses Sleeveless Boho Beach Sundress Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PRG4HLM",
+          "title": "ThusFar Women's Boho Floral Print V Neck Short Sleeve Wrap Cover Up with Belt Split Ruffle Hem Beach Party Flowy Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01M6947CZ",
+          "title": "Couple Matching Hawaiian Luau Cruise Party Outfit Shirt Dress in Hibiscus Red",
+          "price": 71.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B079VSJLZB",
+          "title": "Amdesco Ladies America's Original Motorcycle Indian Skull Casual Racerback Tank Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00JWV7LQ4",
+          "title": "meilun Women's Rayon Short Sleeve Square Neck Bandage Dress Large Red",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T6ZD987",
+          "title": "TEMOFON Women's Dress Bohemian Summer V Neck Short Sleeve Floral Printed Button Down Casual Mini Dresses with Pockets Wh",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00IJUXUM8",
+          "title": "Dear-lover Women's Party Bandage Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07D4QLVTN",
+          "title": "TheMogan S~XL Classic Snap Button Front V-Neck Long Sleeve Knit Cardigan",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0932WJ2Q7",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09R4NDWFS",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08CMV5BCQ",
+          "title": "Lamilus Women's Casual Summer Tshirt Dresses Sleeveless Boho Beach Sundress Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PRG4HLM",
+          "title": "ThusFar Women's Boho Floral Print V Neck Short Sleeve Wrap Cover Up with Belt Split Ruffle Hem Beach Party Flowy Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01M6947CZ",
+          "title": "Couple Matching Hawaiian Luau Cruise Party Outfit Shirt Dress in Hibiscus Red",
+          "price": 71.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B079VSJLZB",
+          "title": "Amdesco Ladies America's Original Motorcycle Indian Skull Casual Racerback Tank Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00JWV7LQ4",
+          "title": "meilun Women's Rayon Short Sleeve Square Neck Bandage Dress Large Red",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T6ZD987",
+          "title": "TEMOFON Women's Dress Bohemian Summer V Neck Short Sleeve Floral Printed Button Down Casual Mini Dresses with Pockets Wh",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00IJUXUM8",
+          "title": "Dear-lover Women's Party Bandage Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 50%Rayon+45%Polyester+5%Spandex; Imported.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester",
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BCQWYQLQ",
+          "title": "Sarin Mathews Womens One Shoulder Ruched Bodycon Dress Sexy Sleeveless Slit Midi Party Cocktail Wedding Guest Dresses",
+          "price": 41.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07D4QLVTN",
+          "title": "TheMogan S~XL Classic Snap Button Front V-Neck Long Sleeve Knit Cardigan",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0932WJ2Q7",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09R4NDWFS",
+          "title": "OWIN Women's Summer Casual Sleeveless Tank Dress Crewneck Bodycon Ruched Tie Waist Mini Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CMV5BCQ",
+          "title": "Lamilus Women's Casual Summer Tshirt Dresses Sleeveless Boho Beach Sundress Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B074R7Q81J",
+          "title": "Marycrafts Women's Office Business Short Sleeve Pencil Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07PRG4HLM",
+          "title": "ThusFar Women's Boho Floral Print V Neck Short Sleeve Wrap Cover Up with Belt Split Ruffle Hem Beach Party Flowy Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09MYVCRVH",
+          "title": "KINGOTS 2022 Women’s Color Block Scoop Neck Sleeveless Swing Mini Pink Dress Racerback T-Shirt Babydoll Short Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B092QYLHYQ",
+          "title": "Gothic Vintage Ball Gown Medieval Lace Costume 18th Century Renaissance Steampunk Period Dress for Women Princess",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07BZ6T96P",
+          "title": "icyzone Womens' Racerback Workout Athletic Running Tank Tops (Pack of 3)",
+          "price": 23.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Sarin Mathews Womens One Shoulder Ruched Bodycon Dress Sexy Sleeveless Slit Midi Party Cocktail Wedding Guest Dresses",
+    "hard_constraints": [
+      "rayon",
+      "50%Rayon+45%Polyester+5%Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

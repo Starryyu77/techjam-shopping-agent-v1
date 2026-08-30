@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0006",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B071F2Z7JG",
+  "target_title": "Pro Club Men's Heavyweight Mesh Basketball Shorts",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Basketball",
+    "Men"
+  ],
+  "target_price": 36.5,
+  "target_rating": 4.6,
+  "target_rating_number": 3042,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Basketball Men, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Basketball Men",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Basketball Men"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B071F2Z7JG",
+          "title": "Pro Club Men's Heavyweight Mesh Basketball Shorts",
+          "price": 36.5,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B007023PU8",
+          "title": "NIKE Men's Layup 2 Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08R3CKZ67",
+          "title": "YIMENG Black Panther Men's Athletic Basketball Jersey Single for Team Scrimmage",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GTB7CPK",
+          "title": "adidas Men's Pro Bounce 2018 Basketball Shoe, Black/White/Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B072KHDZND",
+          "title": "iKRR Men's Mesh Basketball Athletic Loose Training Workout Sports Shorts with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0781F25RD",
+          "title": "iKRR Men's Mesh Basketball Athletic Loose Training Workout Sports Shorts with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B001ST5FSE",
+          "title": "adidas Men's Basic 3-Stripe Short",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B001NCDFVA",
+          "title": "adidas Men's Basic 3-Stripe Short",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BJ9HLZ9L",
+          "title": "Don't BE A Menace Basketball Jersey for Mens #00 Sleeveless Hip Hop 90s Sports Shirts Stitched",
+          "price": 28.8,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00HQCY3CG",
+          "title": "Star Wars Men's Troop Army Basketball Jersey Sweatshirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Pro Club Men's Heavyweight Mesh Basketball Shorts",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Drawstring closure",
+      "High quality mesh for maximum breathability to keep you cool"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "durability",
+      "style"
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0048",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B00VQBMJUQ",
+  "target_title": "Vizari Infinity FG Soccer Cleat (Toddler/Little Kid/Big Kid)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boys",
+    "Shoes",
+    "Athletic",
+    "Soccer"
+  ],
+  "target_price": 29.99,
+  "target_rating": 4.6,
+  "target_rating_number": 3724,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Soccer, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Athletic Soccer",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Athletic Soccer"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00VQBMJUQ",
+          "title": "Vizari Infinity FG Soccer Cleat (Toddler/Little Kid/Big Kid)",
+          "price": 29.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0819CN25R",
+          "title": "BomKinta Kid's FG Soccer Shoes Athletic Outdoor Soccer Cleats",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B091F4M4W1",
+          "title": "DREAM PAIRS Boys Girls Outdoor Soccer Cleats Football Shoes",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B087BW81C2",
+          "title": "adidas Predator Freak .4 Turf Soccer Shoe Mens",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08TQGZS33",
+          "title": "Vizari Kids Teramo FG Soccer Cleats | Shoes for Boys and Girls | for Firm or Hard Surfaces",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0995GRFQD",
+          "title": "LEOCI Turf Soccer Shoe - Boy and Kids' and Toddler Indoor Coomfortable Soccer Cleat",
+          "price": 17.54,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B009RBI23A",
+          "title": "Trax Flames MD JR Soccer Shoe (Toddler/Little Kid/Big Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09KMVDLV6",
+          "title": "adidas Unisex-Child X Speedportal.3 Turf Soccer Shoe",
+          "price": 64.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00CCQ779M",
+          "title": "Vizari Butterflies FG Soccer Shoe (Toddler/Little Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07GQ6M3P5",
+          "title": "Diadora Youth Pichichi MDPU Soccer Cleats",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Vizari Infinity FG Soccer Cleat (Toddler/Little Kid/Big Kid)",
+    "hard_constraints": [
+      "100% Synthetic",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "FEATURES: Infinity style cleats are constructed from durable synthetic materials that are water resistant. Easily adjustable laces allow these shoes to easily form to your foot",
+      "RUGGED OUTSOLE: Our flexible rubber outsoles have a two tone design and feature rugged studs to aid with traction on turf and outdoor fields"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "durability",
+      "style"
+    ]
+  }
+}

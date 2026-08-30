@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0140",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B09BT6LSJV",
+  "target_title": "Grlasen Women's Casual Long Blazers Ruched 3/4 Sleeve Lapel Oversized Suit Jacket Elegant Work Office Blazer Jackets",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Suiting & Blazers",
+    "Blazers"
+  ],
+  "target_price": 48.99,
+  "target_rating": 3.8,
+  "target_rating_number": 162,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 8,
+  "reciprocal_rank": 0.125,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Suiting & Blazers Blazers, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Suiting & Blazers Blazers",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Suiting & Blazers Blazers"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07WGJ5NHT",
+          "title": "SSOULM Women's Loose Fit Open Front Work Office Blazer Jacket with One Button and Plus Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08NLRHYHR",
+          "title": "Boston Proper - Beyond Travel - Women's One Button Knit Boyfriend Blazer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01F3OX24I",
+          "title": "LookbookStore Women's Open Front Draped Asymmetric Padded Side Zip Blazer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01A9ZNWNC",
+          "title": "LookbookStore Women Double Notch Lapel Sharp Shoulder Pad Asymmetry Blazer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01CQO8PAO",
+          "title": "Aro Lora Women's Long Sleeve Jacket Double Notch Lapel Sharp Slim Pleated Blazer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B073SWJS2H",
+          "title": "LATUD Women's One Button Blazer Jacket Suit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TC8X31Z",
+          "title": "Jessica CC Women Summer Notched Lapel Open Front Blazer Jacket with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09BT6LSJV",
+          "title": "Grlasen Women's Casual Long Blazers Ruched 3/4 Sleeve Lapel Oversized Suit Jacket Elegant Work Office Blazer Jackets",
+          "price": 48.99,
+          "is_target": true
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B096LMGB89",
+          "title": "SAIKESIGIRL Womens Long Sleeve Open Front Blazer Casual Office Blazer Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01N6Q7NQO",
+          "title": "ASMAX HaoDuoYi Women Business Longline Basic Lapel Collar Blazer Jacket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 8,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Grlasen Women's Casual Long Blazers Ruched 3/4 Sleeve Lapel Oversized Suit Jacket Elegant Work Office Blazer Jackets",
+    "hard_constraints": [
+      "polyester",
+      "Polyester,Spandex"
+    ],
+    "soft_preferences": [
+      "Polyester lining",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "style"
+    ]
+  }
+}

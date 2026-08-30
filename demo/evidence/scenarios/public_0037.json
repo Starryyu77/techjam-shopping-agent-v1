@@ -1,0 +1,146 @@
+{
+  "sample_id": "public_0037",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08KKBBMMD",
+  "target_title": "The Children's Place Boys' Pull on Cargo Pants",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boys",
+    "Clothing",
+    "Pants"
+  ],
+  "target_price": 13.99,
+  "target_rating": 4.6,
+  "target_rating_number": 13787,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 7,
+  "reciprocal_rank": 0.14285714285714285,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Boys Pants, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "pants"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01DC6BKLQ",
+          "title": "Nike Boys' Pro Vapor Baseball Pants (White, Small)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09V5RTXG9",
+          "title": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08DG4NFT3",
+          "title": "Boys Dinosaur Pajamas Glow In The Dark Pjs Toddler Sleepwear Children Cotton 2 PCs Clothes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08DFCLH7Y",
+          "title": "Boys Dinosaur Pajamas Glow In The Dark Pjs Toddler Sleepwear Children Cotton 2 PCs Clothes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07Y6DGSJ1",
+          "title": "Boys Dinosaur Pajamas Glow In The Dark Pjs Toddler Sleepwear Children Cotton 2 PCs Clothes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08KKBBMMD",
+          "title": "The Children's Place Boys' Pull on Cargo Pants",
+          "price": 13.99,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08BKGYJBB",
+          "title": "shelry Boys Pajamas Toddler Dinosaur Sleepwear Kids Space Pjs Children Cotton Clothes Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08BKFHBYN",
+          "title": "shelry Boys Pajamas Toddler Dinosaur Sleepwear Kids Space Pjs Children Cotton Clothes Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BY8NSJHQ",
+          "title": "Levi's Boys' 505 Regular Fit Jeans",
+          "price": 24.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 7,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "The Children's Place Boys' Pull on Cargo Pants",
+    "hard_constraints": [
+      "cotton",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Pull On closure",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

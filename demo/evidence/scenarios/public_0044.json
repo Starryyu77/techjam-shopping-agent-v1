@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0044",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B09BQ4G5BD",
+  "target_title": "K898 Men's Square Leg Swimming Jammer Shorts UPF50+,Men Swimsuit Swim Jammers Fabric Shape Retention",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Competitive Swimwear",
+    "Men",
+    "Jammers"
+  ],
+  "target_price": 20.97,
+  "target_rating": 4.3,
+  "target_rating_number": 1274,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Men Jammers. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Men Jammers",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Men Jammers",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09BQ4G5BD",
+          "title": "K898 Men's Square Leg Swimming Jammer Shorts UPF50+,Men Swimsuit Swim Jammers Fabric Shape Retention",
+          "price": 20.97,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07QXG5N4C",
+          "title": "Willit Men’s Swim Jammer Swimsuit Training Endurance+ UPF50+ Swimwear Quick Dry",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0051NQ8XY",
+          "title": "Speedo Men's Endurance+ Mercury Splice Jammer Swimsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09VCNRTK9",
+          "title": "Sporti Solid Compression Jammer Swimsuit",
+          "price": 29.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0C36VHHG5",
+          "title": "Arena Men's Powerskin Carbon Ultra Jammers Racing Swimsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C1CC4TL5",
+          "title": "BROKIG Men's Shining Scales Swim Jammers,Square Leg Swimming Short, Durable Swimsuit Brief Training Racing Bathing Suit",
+          "price": 22.97,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B004AGMTMW",
+          "title": "Arena Men's Brizz Polyester Jammer Swimsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B016OT9D3K",
+          "title": "Hanes Men’s Short Sleeve Graphic T-shirt Collection",
+          "price": 8.75,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B008U7KRBW",
+          "title": "Fruit of the Loom Men's Tag-Free Tank A-Shirt",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07QMS8TX8",
+          "title": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+          "price": 19.19,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "K898 Men's Square Leg Swimming Jammer Shorts UPF50+,Men Swimsuit Swim Jammers Fabric Shape Retention",
+    "hard_constraints": [
+      "fabric",
+      "Polyester,Spandex"
+    ],
+    "soft_preferences": [
+      "Rope closure",
+      "【100% chlorine-resistant durable】KGKE mens swimming jammer swimsuit have 4-Level chlorine resistant fabric,worth to prevent chaffing and fadding.FBT fabrics keep shape retention af"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "fit"
+    ]
+  }
+}

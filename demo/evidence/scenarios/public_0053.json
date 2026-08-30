@@ -1,0 +1,161 @@
+{
+  "sample_id": "public_0053",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07TZK3GZK",
+  "target_title": "Passport Holder Cover Travel RFID Blocking Passport Cover Rose Gold Cute Flowers Passport Wallet with Elastic Band for Women",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Travel Accessories",
+    "Passport Covers"
+  ],
+  "target_price": 10.99,
+  "target_rating": 4.7,
+  "target_rating_number": 3989,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 8,
+  "reciprocal_rank": 0.125,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Travel Accessories Passport Covers. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Travel Accessories Passport Covers",
+        "hard_constraints": {
+          "use_case": [
+            "travel"
+          ],
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Travel Accessories Passport Covers",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ],
+            "use_case": [
+              "travel"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08KWQR9YN",
+          "title": "Maruse Italian Leather Passport Cover for Men and Women, Handmade in Italy, Red",
+          "price": 45.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00Z91DYPI",
+          "title": "ZLYC Vintage Novelty PU Leather Travel Wallet Passport Holder Case Waterproof Cover, US National Flag",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07ZR88YLW",
+          "title": "ZONGSHU Passport Holder Cover Wallet RFID Blocking PU Leather Card Case Travel Document Organizer for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0B9ZYDDZ1",
+          "title": "Buffway Slim Minimalist Front Pocket RFID Blocking Leather Wallets for Men Women",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07CBYYHTL",
+          "title": "SDIYABOLO Small Black Sling Crossbody Backpack Shoulder Bag for Men Women Vintage PU Leather Sling Backpack Cycling",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0949GR8H9",
+          "title": "LETURE PU Leather Small Jewelry Box, Travel Portable Jewelry Case for Ring, Pendant, Earring, Necklace, Bracelet Organiz",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HFVBK9Z",
+          "title": "APHISON Womens Wallets RFID Blocking Leather Clutch Long Wallet for Women Card Holder Phone Organizer Ladies Travel Purs",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TZK3GZK",
+          "title": "Passport Holder Cover Travel RFID Blocking Passport Cover Rose Gold Cute Flowers Passport Wallet with Elastic Band for W",
+          "price": 10.99,
+          "is_target": true
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0954QMP4D",
+          "title": "Suavell Slim Wallets for Men. RFID Money Clip Wallet, Slim Wallet, Thin Front Pocket Credit Card Wallet, Minimalist Bifo",
+          "price": 23.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B083VHP6BM",
+          "title": "Michael Kors Jet Set Travel Large East/West Crossbody",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 8,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Passport Holder Cover Travel RFID Blocking Passport Cover Rose Gold Cute Flowers Passport Wallet with Elastic Band for Women",
+    "hard_constraints": [
+      "leather",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Leather lining",
+      "Dry Cloth Clean"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,467 @@
+{
+  "sample_id": "public_0183",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07Z2KSZR3",
+  "target_title": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Coats, Jackets & Vests",
+    "Vests"
+  ],
+  "target_price": null,
+  "target_rating": 3.9,
+  "target_rating_number": 3494,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Jackets & Vests Vests. Hand Wash Only",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jackets"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z2KSZR3",
+          "title": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B1DRXCCK",
+          "title": "HOULENGS Women's Stand Collar Crop Puffer Vest Lightweight Sleeveless Winter Warm Outerwear Puffer Vest Padded Gilet",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00DJ1XQ26",
+          "title": "Tri-Mountain Women's Peak Performers Anti-Pilling Vest. 7020 Crescent",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08JGM7V56",
+          "title": "Bolomi Women's Casual Soft Polar Fleece Vest Sleeveless Zip-up Stand Collar Coat Outerwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08DNVCJW4",
+          "title": "LAPASA Women's Lightweight Packble Down Vest Water-Resistant L62",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01LYCJSER",
+          "title": "Alpinetek Women’s Long Down Parka Coat (Medium, Black)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08L8JF923",
+          "title": "Remook Heated Vest for Women Hunting Motor Vest Winter Heating Vest With Battery",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07X7MWWQ7",
+          "title": "ExQuisite.ZFZ Womens Puffer Vest Quilted Padded Gilet Lightweigh Outerwear Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0721X787V",
+          "title": "Military Print Camouflage Camo Cut Off Leather Lace Motorcycle Vest Waistcoat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07R7FFSJH",
+          "title": "Showyoo Women's Long Sleeveless Duster Trench Vest Casual Lapel Blazer Jacket Wine Red, Medium",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z2KSZR3",
+          "title": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B1DRXCCK",
+          "title": "HOULENGS Women's Stand Collar Crop Puffer Vest Lightweight Sleeveless Winter Warm Outerwear Puffer Vest Padded Gilet",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00DJ1XQ26",
+          "title": "Tri-Mountain Women's Peak Performers Anti-Pilling Vest. 7020 Crescent",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08JGM7V56",
+          "title": "Bolomi Women's Casual Soft Polar Fleece Vest Sleeveless Zip-up Stand Collar Coat Outerwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08DNVCJW4",
+          "title": "LAPASA Women's Lightweight Packble Down Vest Water-Resistant L62",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01LYCJSER",
+          "title": "Alpinetek Women’s Long Down Parka Coat (Medium, Black)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08L8JF923",
+          "title": "Remook Heated Vest for Women Hunting Motor Vest Winter Heating Vest With Battery",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07X7MWWQ7",
+          "title": "ExQuisite.ZFZ Womens Puffer Vest Quilted Padded Gilet Lightweigh Outerwear Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0721X787V",
+          "title": "Military Print Camouflage Camo Cut Off Leather Lace Motorcycle Vest Waistcoat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07R7FFSJH",
+          "title": "Showyoo Women's Long Sleeveless Duster Trench Vest Casual Lapel Blazer Jacket Wine Red, Medium",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; 100% Polyester.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z2KSZR3",
+          "title": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XZFVBG6",
+          "title": "GG Golooper Womens Spring Vest-Lightweight Quilted High Collar Zip Vest Padded Gilet",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07F8NKWG3",
+          "title": "Wantdo Women's Thicken Padding Vest Detachable Hooded Puffer Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08DNVCJW4",
+          "title": "LAPASA Women's Lightweight Packble Down Vest Water-Resistant L62",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0741RZYMP",
+          "title": "KOGMO Womens Quilted Fully Lined Lightweight Zip Up Vest S-3X",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00GSTR88O",
+          "title": "Columbia Women's Take to The Streets Trench Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00GWM5HHG",
+          "title": "Columbia Sportswear Women's Harborside Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01DIZM72M",
+          "title": "Carhartt Women's Kentwood Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00K0TZFR4",
+          "title": "Woolrich Women's Andes Embossed Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B3JBJB9W",
+          "title": "GODONLIF Heated Vest, USB Rechargeable Lightweight Heated Jacket, M (Battery Not Included)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: polyester.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z2KSZR3",
+          "title": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XZFVBG6",
+          "title": "GG Golooper Womens Spring Vest-Lightweight Quilted High Collar Zip Vest Padded Gilet",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07F8NKWG3",
+          "title": "Wantdo Women's Thicken Padding Vest Detachable Hooded Puffer Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08DNVCJW4",
+          "title": "LAPASA Women's Lightweight Packble Down Vest Water-Resistant L62",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0741RZYMP",
+          "title": "KOGMO Womens Quilted Fully Lined Lightweight Zip Up Vest S-3X",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00GSTR88O",
+          "title": "Columbia Women's Take to The Streets Trench Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00GWM5HHG",
+          "title": "Columbia Sportswear Women's Harborside Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01DIZM72M",
+          "title": "Carhartt Women's Kentwood Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00K0TZFR4",
+          "title": "Woolrich Women's Andes Embossed Fleece Vest",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B3JBJB9W",
+          "title": "GODONLIF Heated Vest, USB Rechargeable Lightweight Heated Jacket, M (Battery Not Included)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "SheIn Women's Double Breasted Long Vest Jacket Casual Sleeveless Pocket Outerwear Longline",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Button closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Hand Wash Only",
+      "new_value": "polyester",
+      "message": "Actually, ignore my earlier preference. What I need is: polyester."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

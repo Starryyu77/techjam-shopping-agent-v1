@@ -1,0 +1,117 @@
+[
+  {
+    "version": "Official Weak BM25 Baseline",
+    "file": "docs/baseline_results.json",
+    "hit_rate_at_10": 0.125,
+    "mrr": 0.068034,
+    "mttc": 9.81,
+    "efficiency": 0.119,
+    "technical_score": 0.10671,
+    "scenario_metrics": {}
+  },
+  {
+    "version": "Rules V1.1",
+    "file": "official_public_rules_v1_1.json",
+    "hit_rate_at_10": 0.95,
+    "mrr": 0.628409,
+    "mttc": 3.495,
+    "efficiency": 0.7505,
+    "technical_score": 0.813623,
+    "scenario_metrics": {
+      "boundary": {
+        "sample_count": 10,
+        "hit_rate_at_10": 1.0,
+        "mrr": 0.746786,
+        "mttc": 3.4
+      },
+      "browsing": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.925,
+        "mrr": 0.621994,
+        "mttc": 3.7875
+      },
+      "buying": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.9625,
+        "mrr": 0.611052,
+        "mttc": 2.75
+      },
+      "intent_override": {
+        "sample_count": 30,
+        "hit_rate_at_10": 0.966667,
+        "mrr": 0.652341,
+        "mttc": 4.733333
+      }
+    }
+  },
+  {
+    "version": "Rules V1.2",
+    "file": "official_public_rules_v1_2.json",
+    "hit_rate_at_10": 0.97,
+    "mrr": 0.613276,
+    "mttc": 3.155,
+    "efficiency": 0.7845,
+    "technical_score": 0.825883,
+    "scenario_metrics": {
+      "boundary": {
+        "sample_count": 10,
+        "hit_rate_at_10": 1.0,
+        "mrr": 0.621786,
+        "mttc": 3.1
+      },
+      "browsing": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.9625,
+        "mrr": 0.614266,
+        "mttc": 3.35
+      },
+      "buying": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.975,
+        "mrr": 0.579087,
+        "mttc": 2.425
+      },
+      "intent_override": {
+        "sample_count": 30,
+        "hit_rate_at_10": 0.966667,
+        "mrr": 0.698968,
+        "mttc": 4.6
+      }
+    }
+  },
+  {
+    "version": "Rules V1.3 (submitted)",
+    "file": "official_public_rules_v1_3.json",
+    "hit_rate_at_10": 0.995,
+    "mrr": 0.644355,
+    "mttc": 2.215,
+    "efficiency": 0.8785,
+    "technical_score": 0.866507,
+    "scenario_metrics": {
+      "boundary": {
+        "sample_count": 10,
+        "hit_rate_at_10": 1.0,
+        "mrr": 0.66,
+        "mttc": 1.9
+      },
+      "browsing": {
+        "sample_count": 80,
+        "hit_rate_at_10": 1.0,
+        "mrr": 0.627232,
+        "mttc": 2.1125
+      },
+      "buying": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.9875,
+        "mrr": 0.623204,
+        "mttc": 1.725
+      },
+      "intent_override": {
+        "sample_count": 30,
+        "hit_rate_at_10": 1.0,
+        "mrr": 0.741204,
+        "mttc": 3.9
+      }
+    }
+  }
+]

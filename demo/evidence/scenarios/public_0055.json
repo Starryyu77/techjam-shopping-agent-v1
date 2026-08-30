@@ -1,0 +1,344 @@
+{
+  "sample_id": "public_0055",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C1TDJ9HZ",
+  "target_title": "Crocs Unisex-Adult Baya Clogs, Neo Mint, 7 Women/5 Men",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Mules & Clogs"
+  ],
+  "target_price": 30.93,
+  "target_rating": 4.7,
+  "target_rating_number": 282,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Mules & Clogs, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08513YB2T",
+          "title": "Crocs Unisex-Adult Classic Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B016P9A6GM",
+          "title": "Skechers Sport Women's D'Lites Slip-On Mule Sneaker",
+          "price": 72.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B010WE6VHO",
+          "title": "Crocs Unisex Offroad Sport Clogs",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B085RX192V",
+          "title": "Crocs Women’s Freesail Clog",
+          "price": 49.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BKNQ4L1P",
+          "title": "Crocs Unisex-Adult Men's and Women's Baya Graphic Clog",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B082WXH61Q",
+          "title": "gracosy Clogs Shoes for Women, Summer Leather Slippers Comfort Work Clogs Slip on Loafers Wide Fit Mules Antil Slip Beac",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08R8YDCLK",
+          "title": "FITORY Men's Women's Slip on Sneakers Sandals, Garden Clogs Casual Slipper Indoor Outdoor Slides Unisex",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08R8Z2F9X",
+          "title": "FITORY Men's Women's Slip on Sneakers Sandals, Garden Clogs Casual Slipper Indoor Outdoor Slides Unisex",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01A6LZT26",
+          "title": "Crocs Sarah Mule Clog",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08513YB2T",
+          "title": "Crocs Unisex-Adult Classic Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B016P9A6GM",
+          "title": "Skechers Sport Women's D'Lites Slip-On Mule Sneaker",
+          "price": 72.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B010WE6VHO",
+          "title": "Crocs Unisex Offroad Sport Clogs",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B085RX192V",
+          "title": "Crocs Women’s Freesail Clog",
+          "price": 49.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BKNQ4L1P",
+          "title": "Crocs Unisex-Adult Men's and Women's Baya Graphic Clog",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B082WXH61Q",
+          "title": "gracosy Clogs Shoes for Women, Summer Leather Slippers Comfort Work Clogs Slip on Loafers Wide Fit Mules Antil Slip Beac",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08R8YDCLK",
+          "title": "FITORY Men's Women's Slip on Sneakers Sandals, Garden Clogs Casual Slipper Indoor Outdoor Slides Unisex",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08R8Z2F9X",
+          "title": "FITORY Men's Women's Slip on Sneakers Sandals, Garden Clogs Casual Slipper Indoor Outdoor Slides Unisex",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01A6LZT26",
+          "title": "Crocs Sarah Mule Clog",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Croslite Foam; Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01A6LZT26",
+          "title": "Crocs Sarah Mule Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01A6LZQ60",
+          "title": "Crocs Sarah Mule Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0C1TDJ9HZ",
+          "title": "Crocs Unisex-Adult Baya Clogs, Neo Mint, 7 Women/5 Men",
+          "price": 30.93,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B072LQ3HC2",
+          "title": "Crocs Bistro Swedish Chef Clog, Black/Light Blue, 11 US Men/ 13 US Women M US",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08513YB2T",
+          "title": "Crocs Unisex-Adult Classic Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B016P9A6GM",
+          "title": "Skechers Sport Women's D'Lites Slip-On Mule Sneaker",
+          "price": 72.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09QHC6T6N",
+          "title": "Crocs Women's Kadie II Flip Flops",
+          "price": 13.49,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Crocs Unisex-Adult Baya Clogs, Neo Mint, 7 Women/5 Men",
+    "hard_constraints": [
+      "100% Croslite Foam",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Ethylene Vinyl Acetate sole",
+      "Shaft measures approximately 1\" from arch"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "style"
+    ]
+  }
+}

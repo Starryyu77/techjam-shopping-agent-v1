@@ -1,0 +1,728 @@
+{
+  "sample_id": "public_0049",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08G4WVYLJ",
+  "target_title": "Dacomfy Mens Slip On Shoes, Men's Loafers & Slip-ons Leather Walking Shoes for Men, Hand Stitching Comfortable Breathable Brown Black Khaki",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Loafers & Slip-Ons"
+  ],
+  "target_price": 49.99,
+  "target_rating": 3.9,
+  "target_rating_number": 758,
+  "hit": true,
+  "first_hit_turn": 6,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 6,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Loafers & Slip-Ons, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09GF1RWH5",
+          "title": "Hey Dude Men's Wally Funk-Multiple Colors and Size | Men’s Shoes | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07L5GBVX7",
+          "title": "Bruno Marc Men's Slip-On Canvas Sneaker Loafer Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09GF1RWH5",
+          "title": "Hey Dude Men's Wally Funk-Multiple Colors and Size | Men’s Shoes | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07L5GBVX7",
+          "title": "Bruno Marc Men's Slip-On Canvas Sneaker Loafer Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; color: brown.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ],
+          "color": [
+            "brown"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ],
+            "color": [
+              "brown"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01NBPCYI3",
+          "title": "labato Women’s Leather Loafers Comfortable Slip on Leather Driving Shoes Casual Flat Shoes（10,Brown",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09GF1RWH5",
+          "title": "Hey Dude Men's Wally Funk-Multiple Colors and Size | Men’s Shoes | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B071RG3CCH",
+          "title": "Go Tour Men's Premium Genuine Leather Casual Slip on Loafers Breathable Driving Shoes Fashion Slipper",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07L5GBVX7",
+          "title": "Bruno Marc Men's Slip-On Canvas Sneaker Loafer Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YS3QZ94",
+          "title": "HARENCE Shoes for Women Casual Slip On Driving Loafers Comfortable Leather Outdoor Walking Flat Shoes Beige",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07Q9PNNB5",
+          "title": "DUOYANGJIASHA Loafers for Women Casual Slip on Dress Loafers Womens Comfortable Leather Driving Shoes Outdoor Walking Fl",
+          "price": 25.76,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "For that, what matters is: Rubber sole.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather",
+            "rubber"
+          ],
+          "color": [
+            "brown"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ],
+            "color": [
+              "brown"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B014BSE3NQ",
+          "title": "ROPER Women's Performance Sport Slip-On Casual Shoes Round Toe Brown",
+          "price": 81.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PFD9D7M",
+          "title": "Women Loafers Leather Rubber Sole Slip On Walking Flats Casual Moccasin Boat Shoes (10 M US, V-Dark Brown)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B004QMSTGA",
+          "title": "BEARPAW Men's Moc II Multiple Colors | Men's Slipper | Men's Shoe | Comfortable & Lightweight",
+          "price": 49.96,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B071RG3CCH",
+          "title": "Go Tour Men's Premium Genuine Leather Casual Slip on Loafers Breathable Driving Shoes Fashion Slipper",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Q9PNNB5",
+          "title": "DUOYANGJIASHA Loafers for Women Casual Slip on Dress Loafers Womens Comfortable Leather Driving Shoes Outdoor Walking Fl",
+          "price": 25.76,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "I don't have an additional preference for use_case.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather",
+            "rubber"
+          ],
+          "color": [
+            "brown"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather",
+              "rubber"
+            ],
+            "color": [
+              "brown"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B014BSE3NQ",
+          "title": "ROPER Women's Performance Sport Slip-On Casual Shoes Round Toe Brown",
+          "price": 81.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PFD9D7M",
+          "title": "Women Loafers Leather Rubber Sole Slip On Walking Flats Casual Moccasin Boat Shoes (10 M US, V-Dark Brown)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B004QMSTGA",
+          "title": "BEARPAW Men's Moc II Multiple Colors | Men's Slipper | Men's Shoe | Comfortable & Lightweight",
+          "price": 49.96,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B071RG3CCH",
+          "title": "Go Tour Men's Premium Genuine Leather Casual Slip on Loafers Breathable Driving Shoes Fashion Slipper",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Q9PNNB5",
+          "title": "DUOYANGJIASHA Loafers for Women Casual Slip on Dress Loafers Womens Comfortable Leather Driving Shoes Outdoor Walking Fl",
+          "price": 25.76,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TSF9GW3",
+          "title": "Grasshoppers Women's Windsor Bow Canvas Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08FLD24NK",
+          "title": "DailyShoes Women's Confortable Casual Slip-On Flat Loafers Sneakers Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 6,
+      "user_message": "For that, what matters is: 👟BEST MATERIAL.These mens shoes casual slip on has premium microfiber leather upper,soft rubber sole.It's a good choice for outdoor all season.",
+      "agent_message": "The candidates are now focused. You can choose a rank, reject them, or add another requirement.",
+      "ask_attribute": null,
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather",
+            "rubber"
+          ],
+          "color": [
+            "brown"
+          ],
+          "style": [
+            "casual"
+          ],
+          "feature": [
+            "soft"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "style": [
+              "casual"
+            ],
+            "feature": [
+              "soft"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather",
+              "rubber"
+            ],
+            "color": [
+              "brown"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08G4WVYLJ",
+          "title": "Dacomfy Mens Slip On Shoes, Men's Loafers & Slip-ons Leather Walking Shoes for Men, Hand Stitching Comfortable Breathabl",
+          "price": 49.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B083TRSXV1",
+          "title": "GOUPSKY Slip on Sneakers for Women Fashion Loafers Perforated Flats Sports Cushioned Insole Comfortable Walking Casual S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B008D4U794",
+          "title": "Hush Puppies Women's Ceil MT Slip-On Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01G7ARHSE",
+          "title": "LOUECHY Men's Notus Mesh Walking Loafers Breathable Casual Shoes Lightweight Driving Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0757JHP27",
+          "title": "Forucreate Mens New Chic Shoes Casual Suede Loafers Flats Sneaker Oxford Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0757K4T3Z",
+          "title": "Forucreate Mens New Chic Shoes Casual Suede Loafers Flats Sneaker Oxford Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00B2G6CJE",
+          "title": "Hush Puppies Women's Ceil Slip On Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083SFV5HQ",
+          "title": "Moodeng Men`s Leather Loafers Casual Slip-on Shoes Outdoor Summer Boat Shoes Comfortable Driving Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WP4KG63",
+          "title": "sorliva Women's Breathable Slip on Penny Leather Loafers Flat Casual Driving Shoes Moccasins",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Dacomfy Mens Slip On Shoes, Men's Loafers & Slip-ons Leather Walking Shoes for Men, Hand Stitching Comfortable Breathable Brown Black Khaki",
+    "hard_constraints": [
+      "leather",
+      "color: brown"
+    ],
+    "soft_preferences": [
+      "Rubber sole",
+      "👟BEST MATERIAL.These mens shoes casual slip on has premium microfiber leather upper,soft rubber sole.It's a good choice for outdoor all season"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "material",
+      "style",
+      "comfort"
+    ]
+  }
+}

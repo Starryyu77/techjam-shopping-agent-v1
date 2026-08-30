@@ -1,0 +1,589 @@
+{
+  "sample_id": "public_0184",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BWLFCTTF",
+  "target_title": "Ray-Ban Woman Sunglasses Black Frame, Green Classic G-15 Lenses, 57MM",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Sunglasses & Eyewear Accessories",
+    "Sunglasses"
+  ],
+  "target_price": 75.5,
+  "target_rating": 4.5,
+  "target_rating_number": 199,
+  "hit": true,
+  "first_hit_turn": 5,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 5,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sunglasses & Eyewear Accessories Sunglasses, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sunglasses & Eyewear Accessories Sunglasses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0725NL65K",
+          "title": "BVAGSS Women Rimless Oversized Studded Sunglasses Gradient Color Lens Rivet Fashion Lightweight Design WS027",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BX5GKSXL",
+          "title": "URUMQI Sunglasses Fit Over Glasses, Polarized 100% UV Protection Wrap-around Sunglasses for Men & Women Driving",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B084BYD9KR",
+          "title": "Gamma Ray Polarized Sunglasses Men and Women 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B007VQR0H2",
+          "title": "Oakley unisex-adult Square O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B58LS4R3",
+          "title": "SeeBand Fashion Oversized Square Sunglasses for Women Men Trendy Black Thick Frame Luxury Designer Big Sun Glasses UV400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B085L6T1CM",
+          "title": "LUENX Mens Semi Rimless Sunglasses Polarized Womens: UV 400 Protection with Case",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0725NL65K",
+          "title": "BVAGSS Women Rimless Oversized Studded Sunglasses Gradient Color Lens Rivet Fashion Lightweight Design WS027",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BX5GKSXL",
+          "title": "URUMQI Sunglasses Fit Over Glasses, Polarized 100% UV Protection Wrap-around Sunglasses for Men & Women Driving",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B084BYD9KR",
+          "title": "Gamma Ray Polarized Sunglasses Men and Women 3 Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B007VQR0H2",
+          "title": "Oakley unisex-adult Square O",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B58LS4R3",
+          "title": "SeeBand Fashion Oversized Square Sunglasses for Women Men Trendy Black Thick Frame Luxury Designer Big Sun Glasses UV400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B085L6T1CM",
+          "title": "LUENX Mens Semi Rimless Sunglasses Polarized Womens: UV 400 Protection with Case",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: nylon; color: black.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "nylon"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "nylon"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B077N7MSWV",
+          "title": "Gucci GG0163S 001 Black GG0163S Square Sunglasses Lens Category 3 Size 51mm",
+          "price": 218.07,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B085FQPRF7",
+          "title": "Dioptics unisex adult Solar Shield Stone Sunglasses Fits Over Sunglasses, Black, 57 mm US",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00H91FJDQ",
+          "title": "Fox Racing Mens The Duncan Sport Sunglasses, Polished Black/Black Irid, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00DBT21JU",
+          "title": "Tiffany 8157-3C Black 4076 Square Sunglasses Lens Category 2 Size 58mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076PQ7648",
+          "title": "Saint Laurent SL 136 COMBI Sunglasses 001 Black/Silver / Grey Lens 52 mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08PYSZ17Z",
+          "title": "Gonex Nylon Tote Organizer Purse Insert Pocketbook Organizer Insert Handbag Divider with Handles Zipper Closure Fit Spee",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "I don't have an additional preference for use_case.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "nylon"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "nylon"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B077N7MSWV",
+          "title": "Gucci GG0163S 001 Black GG0163S Square Sunglasses Lens Category 3 Size 51mm",
+          "price": 218.07,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B085FQPRF7",
+          "title": "Dioptics unisex adult Solar Shield Stone Sunglasses Fits Over Sunglasses, Black, 57 mm US",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00H91FJDQ",
+          "title": "Fox Racing Mens The Duncan Sport Sunglasses, Polished Black/Black Irid, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00DBT21JU",
+          "title": "Tiffany 8157-3C Black 4076 Square Sunglasses Lens Category 2 Size 58mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B076PQ7648",
+          "title": "Saint Laurent SL 136 COMBI Sunglasses 001 Black/Silver / Grey Lens 52 mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B077CBR2WG",
+          "title": "Boolavard Night Sight Night Driving Over Glasses UV Wind Protection",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08PYSZ17Z",
+          "title": "Gonex Nylon Tote Organizer Purse Insert Pocketbook Organizer Insert Handbag Divider with Handles Zipper Closure Fit Spee",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "For that, what matters is: Composite/Plastic Frame; Imported.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sunglasses & Eyewear Accessories Sunglasses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "nylon"
+          ],
+          "color": [
+            "black"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "nylon"
+            ],
+            "color": [
+              "black"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B004KDXE1A",
+          "title": "Ray-Ban Mens Sunglasses (RB4115) Black Matte/Green Plastic,Nylon - Non-Polarized - 57mm",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BWLFCTTF",
+          "title": "Ray-Ban Woman Sunglasses Black Frame, Green Classic G-15 Lenses, 57MM",
+          "price": 75.5,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B096B6CXWG",
+          "title": "SUNGAIT Vintage Round Sunglasses for Women Men Classic Retro Designer Style",
+          "price": 10.19,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0925BQY1H",
+          "title": "Joopin Polarized Semi Rimless Sunglasses Men Women, Classic Half Frame Sun Glasses UV Protection",
+          "price": 16.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BX5GKSXL",
+          "title": "URUMQI Sunglasses Fit Over Glasses, Polarized 100% UV Protection Wrap-around Sunglasses for Men & Women Driving",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0B58LS4R3",
+          "title": "SeeBand Fashion Oversized Square Sunglasses for Women Men Trendy Black Thick Frame Luxury Designer Big Sun Glasses UV400",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08CBKHMJ2",
+          "title": "Ray Ban RB4165 JUSTIN Sunglasses For Men For Women+ BUNDLE with Designer iWear Complimentary Eyewear Care Kit",
+          "price": 135.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09QHLNSDF",
+          "title": "Prada Women's Sporty Rectangular Sunglasses",
+          "price": 117.31,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09NZN9HK5",
+          "title": "Hycredi Retro 70s Flat Aviator Sunglasses Trendy Vintage Square Glasses for Women Men Metal Design Shades UV Protection",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071D877KZ",
+          "title": "Gucci GG0141S 001 Black GG0141S Square Sunglasses Lens Category 2 Size 53mm, womens",
+          "price": 201.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Ray-Ban Woman Sunglasses Black Frame, Green Classic G-15 Lenses, 57MM",
+    "hard_constraints": [
+      "nylon",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Composite/Plastic Frame",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "material",
+      "comfort",
+      "style"
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "sample_id": "public_0100",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B002OHE4D6",
+  "target_title": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology, EVA Sock Lining, and Durable Rubber Outsole",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Loafers & Slip-Ons"
+  ],
+  "target_price": null,
+  "target_rating": 4.3,
+  "target_rating_number": 3751,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Loafers & Slip-Ons, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09GF1RWH5",
+          "title": "Hey Dude Men's Wally Funk-Multiple Colors and Size | Men’s Shoes | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09VRSZ81X",
+          "title": "Hey Dude Men's Wally Flow Multiple Colors | Men’s Shoes | Men's Lace Up Loafers | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MBQHU72",
+          "title": "Skechers Performance Men's Go Walk 3 Attain Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0924JF9ST",
+          "title": "FANTURE Men Loafer Slip On Sneakers Casual Comfort Lightweight Travel Stretch Canvas Shoes -U419XXXME001",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07NP8LHRK",
+          "title": "Hey Dude Men's Wayne Lace up Loafers Multiple Colors",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09GF1RWH5",
+          "title": "Hey Dude Men's Wally Funk-Multiple Colors and Size | Men’s Shoes | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BBWJNL9X",
+          "title": "VenusCelia Women's Comfort Walking Boat Shoe",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07F5GJJFJ",
+          "title": "Artisure Women's Classic Genuine Leather Penny Loafers Driving Moccasins Casual Slip On Boat Shoes Fashion Comfort Flats",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07F1N3YQF",
+          "title": "New Balance Women's FuelCore Nergize Mule V1 Alternative Closure Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01CR8GTIO",
+          "title": "Womens Canvas Slip On Boat Shoe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09VRSZ81X",
+          "title": "Hey Dude Men's Wally Flow Multiple Colors | Men’s Shoes | Men's Lace Up Loafers | Comfortable & Light-Weight",
+          "price": 59.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MBQHU72",
+          "title": "Skechers Performance Men's Go Walk 3 Attain Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0924JF9ST",
+          "title": "FANTURE Men Loafer Slip On Sneakers Casual Comfort Lightweight Travel Stretch Canvas Shoes -U419XXXME001",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07NP8LHRK",
+          "title": "Hey Dude Men's Wayne Lace up Loafers Multiple Colors",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: leather; 100% Leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B002OHE4D6",
+          "title": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B003WZ4330",
+          "title": "Bostonian Men's Bolton Dress Slip-On",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00LVTONZM",
+          "title": "KEEN Women's Kaci Full-Grain Slip On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B002JEUT92",
+          "title": "Dr. Martens Men's Tevin Slip-On Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00NYQZP3Y",
+          "title": "Clarks Women's Evianna Peal Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00HF6PKY8",
+          "title": "Merrell Women's Dassie Buckle Slip-on Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0010ERDSC",
+          "title": "G.H. Bass & Co. Men's Larson Penny Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00MMYD5FE",
+          "title": "Clarks Men's Allston Free Slip-On Loafer",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01681NKBU",
+          "title": "Aerosoles Women's Mr Softee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B004FXOH3E",
+          "title": "Rockport Men's BL Moc Slip-On Casual Loafer",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Dockers Proposal - Genuine Full-Grain Leather Slip-On Loafer Dress Shoes for Men Featuring All Motion Comfort Technology, EVA Sock Lining, and Durable Rubber Outsole",
+    "hard_constraints": [
+      "leather",
+      "100% Leather"
+    ],
+    "soft_preferences": [
+      "Manmade sole",
+      "Platform measures approximately 0.5\""
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "performance"
+    ]
+  }
+}

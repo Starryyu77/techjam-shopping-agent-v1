@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0060",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08R61K9B9",
+  "target_title": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Sleep & Lounge",
+    "Sleep Bottoms"
+  ],
+  "target_price": null,
+  "target_rating": 4.4,
+  "target_rating_number": 9072,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Sleep Bottoms, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sleep Bottoms",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Sleep Bottoms"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09V5RTXG9",
+          "title": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00UHLFR32",
+          "title": "Fruit of the Loom Men's Extended Sizes Jersey Knit Sleep Pant (1 & 2 Packs)",
+          "price": 15.08,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08R61K9B9",
+          "title": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BL2HN7H1",
+          "title": "Sova Men's Combo Pack Ultra Comfy Fit Micro Fleece Pajama Pants",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07RF7XFJY",
+          "title": "Amazon Brand - Goodthreads Men's Flannel Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00V3XA5X0",
+          "title": "Totally Pink Women's Warm and Cozy Plush Fleece Pajama Bottoms/Lounge Pants Buffalo Plaid (Two Pack)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08THWL29K",
+          "title": "U.S. Polo Assn. Men's Pajama Pants - Lightweight Knit Jogger Sweatpants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RDK5HLH",
+          "title": "Amazon Brand - Goodthreads Men's Stretch Poplin Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0151WOJXA",
+          "title": "Andrew Scott Men's 3 Pack Super Light Weight Lounge Sleep Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00CXWF4P4",
+          "title": "Noble Mount Men's Cotton Lounge Sleep Short",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+    "hard_constraints": [
+      "cotton",
+      "55% Cotton, 45% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Drawstring Waist closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "fit",
+      "style",
+      "warmth"
+    ]
+  }
+}

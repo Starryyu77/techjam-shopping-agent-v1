@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0024",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B076X3JXMW",
+  "target_title": "Riviera Sun Womens Off Shoulder Embroidered Jumpsuit Romper",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jumpsuits, Rompers & Overalls",
+    "Jumpsuits"
+  ],
+  "target_price": 19.99,
+  "target_rating": 3.7,
+  "target_rating_number": 759,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 7,
+  "reciprocal_rank": 0.14285714285714285,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Rompers & Overalls Jumpsuits. A key requirement is: rayon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rompers & Overalls Jumpsuits",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Rompers & Overalls Jumpsuits"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BR4PLQGN",
+          "title": "LuFeng Women's Sexy Sleeveless Zipper Bodycon Party Club Long Rompers Jumpsuit",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07YWK6KLC",
+          "title": "Romwe Women's Sexy Casual Sleeveless Ruffle Trim Wide Leg High Waist Long Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B097ZVM2RQ",
+          "title": "PerZeal Sexy V-Neck Jumpsuits for Women Casual Printed Long Wide Leg Pants Party Jumpsuits with Belt",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01LAGRB4U",
+          "title": "Longwu Women's Fashion Off-Shoulder Drawstring Jumpsuits Rompers Knee Hole Pants with Pockets Lounge Wear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B06X9B45YB",
+          "title": "Annabelle Women's Comfy Rayon Solid Color Sleeveless Harem Jumpsuits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B072N4KTXN",
+          "title": "Annabelle Women's Comfy Rayon Solid Color Sleeveless Harem Jumpsuits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B076X3JXMW",
+          "title": "Riviera Sun Womens Off Shoulder Embroidered Jumpsuit Romper",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01N9T3OIG",
+          "title": "Annabelle Women's Loose Fit Solid Long Sleeve Harem Pants Jumpsuits with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07813NLWM",
+          "title": "The Classic Womens Stretch Cotton Sleeveless One Piece Unitard Jumpsuit Bodysuits Small to Plus",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086WGLP3F",
+          "title": "Choichic Women's Two Piece Outfits 2 PC Sets Crop Top + Skinny Pants",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 7,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Riviera Sun Womens Off Shoulder Embroidered Jumpsuit Romper",
+    "hard_constraints": [
+      "rayon",
+      "100 rayon"
+    ],
+    "soft_preferences": [
+      "Machine Wash",
+      "BOHOSTYLE: Your womens off shoulder jumpsuit has an exaggerated loose fit with beautiful embroidery. It is perfect if you want to keep up with the latest trends without sacrificing"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "performance",
+      "style"
+    ]
+  }
+}

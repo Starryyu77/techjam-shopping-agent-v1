@@ -1,0 +1,348 @@
+{
+  "sample_id": "public_0192",
+  "scenario_type": "boundary",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C62MF2HV",
+  "target_title": "adidas unisex adult Adilette Clog Slide Sandal, Pink Tint/White/Pink Tint, 12 Women Men US",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Shoes",
+    "Athletic",
+    "Sport Sandals & Slides"
+  ],
+  "target_price": 20.68,
+  "target_rating": 4.4,
+  "target_rating_number": 46,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Sport Sandals & Slides, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "sandals"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07KL224BC",
+          "title": "Nike Womens Benassi Duo Ultra Slide Sandals",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08F51YN5Q",
+          "title": "ATIKA Men's Outdoor Hiking Sandals, Lightweight Trail Walking Sandals, Closed Toe Athletic Sport Sandals, Summer Water S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08V13S9X7",
+          "title": "Faslie Slides for Men Athletic Slide Sandal for Beach, Comfort Open Toe Slip-On Indoor Outdoor Slides, Size 8-12",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00KWKHRN6",
+          "title": "Chaco Women's ZX2 Yampa W Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PJNZ82B",
+          "title": "ODOUK Mens Sport Hiking Sandals Athletic Outdoor Summer Closed Toe Beach Sandals",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PHJY5MZ",
+          "title": "ODOUK Mens Sport Hiking Sandals Athletic Outdoor Summer Closed Toe Beach Sandals",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07H8WRX4M",
+          "title": "Skechers Women's Reggae Slim-Festivity-Strappy Adjustable Slingback Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01KYOY82C",
+          "title": "Taos Footwear Women's Zen Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00ZG2GX3U",
+          "title": "KEEN Women's Sage Ankle Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08CZ8BRZ3",
+          "title": "GRITION Women Hiking Sandals Comfortable Walking Sport Sandals Summer, Open Toe Athletic Sports Shoes Waterproof Lightwe",
+          "price": 48.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have a preference for size; please use your judgment.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NO_PREFERENCE",
+        "confidence": 0.97
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07KL224BC",
+          "title": "Nike Womens Benassi Duo Ultra Slide Sandals",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08F51YN5Q",
+          "title": "ATIKA Men's Outdoor Hiking Sandals, Lightweight Trail Walking Sandals, Closed Toe Athletic Sport Sandals, Summer Water S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08V13S9X7",
+          "title": "Faslie Slides for Men Athletic Slide Sandal for Beach, Comfort Open Toe Slip-On Indoor Outdoor Slides, Size 8-12",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00KWKHRN6",
+          "title": "Chaco Women's ZX2 Yampa W Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PJNZ82B",
+          "title": "ODOUK Mens Sport Hiking Sandals Athletic Outdoor Summer Closed Toe Beach Sandals",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PHJY5MZ",
+          "title": "ODOUK Mens Sport Hiking Sandals Athletic Outdoor Summer Closed Toe Beach Sandals",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07H8WRX4M",
+          "title": "Skechers Women's Reggae Slim-Festivity-Strappy Adjustable Slingback Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01KYOY82C",
+          "title": "Taos Footwear Women's Zen Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00ZG2GX3U",
+          "title": "KEEN Women's Sage Ankle Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08CZ8BRZ3",
+          "title": "GRITION Women Hiking Sandals Comfortable Walking Sport Sandals Summer, Open Toe Athletic Sports Shoes Waterproof Lightwe",
+          "price": 48.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Textile Synthetics; Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": [
+          "size"
+        ]
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C62MF2HV",
+          "title": "adidas unisex adult Adilette Clog Slide Sandal, Pink Tint/White/Pink Tint, 12 Women Men US",
+          "price": 20.68,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00E0GOZ92",
+          "title": "KEEN Women's Waimea H2 Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07FDB7GMZ",
+          "title": "adidas Men's Adilette Shower Slide",
+          "price": 28.82,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B099DMTCXV",
+          "title": "Crocs Unisex-Adult Men's and Women's Classic Slide Sandals",
+          "price": 38.12,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07KL224BC",
+          "title": "Nike Womens Benassi Duo Ultra Slide Sandals",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B087CSYVVP",
+          "title": "adidas Men's Kaptir Super Running Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08F51YN5Q",
+          "title": "ATIKA Men's Outdoor Hiking Sandals, Lightweight Trail Walking Sandals, Closed Toe Athletic Sport Sandals, Summer Water S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07227JQDW",
+          "title": "KEEN Women's Bali Sandals",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07WSNM7X9",
+          "title": "SAGUARO Mens Womens Slides Double Buckle Flat Sandals Slip On Adjustable EVA Slippers",
+          "price": 20.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "adidas unisex adult Adilette Clog Slide Sandal, Pink Tint/White/Pink Tint, 12 Women Men US",
+    "hard_constraints": [
+      "100% Textile Synthetics",
+      "color: pink"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Ethylene Vinyl Acetate sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "boundary"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

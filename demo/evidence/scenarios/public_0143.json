@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0143",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01H54X6CM",
+  "target_title": "MUXXN Women's Retro 1950s Style Sleeveless Slim Business Pencil Dress",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses",
+    "Work"
+  ],
+  "target_price": 34.99,
+  "target_rating": 4.3,
+  "target_rating_number": 21351,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Dresses Work. A key requirement is: rayon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {
+          "use_case": [
+            "work"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses",
+          "hard_constraints": {
+            "use_case": [
+              "work"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01H54X6CM",
+          "title": "MUXXN Women's Retro 1950s Style Sleeveless Slim Business Pencil Dress",
+          "price": 34.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07G5XQZYJ",
+          "title": "WOOSUNZE Womens Flounce Bell Sleeve Office Work Casual Pencil Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07F1KD7KQ",
+          "title": "Lark & Ro Women's Three Quarter Sleeve Faux Wrap Fit and Flare Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07YLH6WY2",
+          "title": "Lark & Ro Women's Standard Gathered Puff Sleeve Wrap Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07GFCNVDG",
+          "title": "Amazon Brand - Lark & Ro Women's Half Sleeve Twist Front A-Line Ponte Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07GF1R2MK",
+          "title": "Amazon Brand - Lark & Ro Women's Half Sleeve Twist Front A-Line Ponte Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07NPL8BSV",
+          "title": "Lark & Ro Women's Three-Quarter Sleeve Faux Wrap Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0789256T8",
+          "title": "Marycrafts Women's Work Office Business Long Sleeve Pencil Midi Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07FPNMVWW",
+          "title": "Amazon Brand - Lark & Ro Women's Cap Sleeve Faux Wrap Sheath Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B074R7Q81J",
+          "title": "Marycrafts Women's Office Business Short Sleeve Pencil Midi Dress",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "MUXXN Women's Retro 1950s Style Sleeveless Slim Business Pencil Dress",
+    "hard_constraints": [
+      "rayon",
+      "65% Rayon, 30% Cotton, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "style",
+      "fit",
+      "comfort"
+    ]
+  }
+}

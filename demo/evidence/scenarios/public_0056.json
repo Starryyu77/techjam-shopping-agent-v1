@@ -1,0 +1,357 @@
+{
+  "sample_id": "public_0056",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0B2RF64YD",
+  "target_title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Shirts",
+    "T-Shirts"
+  ],
+  "target_price": null,
+  "target_rating": 4.2,
+  "target_rating_number": 22305,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts T-Shirts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06XS3X7B6",
+          "title": "Idgreatim Unisex Casual 3D Print Animal Short Sleeve T-Shirt Graphic Tees",
+          "price": 11.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08LPR9ML3",
+          "title": "Mens Camouflage T Shirts Tops Short Sleeve Crewneck Gym Tees Military Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09JP2N6LH",
+          "title": "Graphic Tees Men Tshirt Cotton Short Sleeve Cool Novelty Printed Black T Shirts M-5XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B083QGS76S",
+          "title": "Oakazer Unisex Graphic Tees Summer 3D Printed T-Shirts for Men Casual Short Sleeve T-Shirts S-4XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00JS5OL5I",
+          "title": "Funny Fishing Shirts Gifts Dad Humorous Guys Joke Cool Mens Birthday Graphic Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BGZWZY6M",
+          "title": "Xiovio Customize® Large Print Area | Custom Personalized T-Shirts Adult Tee Add Your Text Image Photo Front·Back",
+          "price": 13.88,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07253QWNZ",
+          "title": "Star Wars Bounty Hunter Like a Bossk Graphic T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B097QYLCV4",
+          "title": "GEMLON Halloween Shirts for Men Dadcula Letter Print Tshirt Bat Short Sleeve Tee",
+          "price": 18.59,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09YQFHPWK",
+          "title": "FTD Apparel Men's TRD 5th Gen",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09BZ9JX6M",
+          "title": "XXBR Sweater Cardigans for Mens Plus Size, Open Front Single Breasted Striped Rainbow Patchwork Tunic Coat Outerwear",
+          "price": 24.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06XS3X7B6",
+          "title": "Idgreatim Unisex Casual 3D Print Animal Short Sleeve T-Shirt Graphic Tees",
+          "price": 11.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08LPR9ML3",
+          "title": "Mens Camouflage T Shirts Tops Short Sleeve Crewneck Gym Tees Military Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09JP2N6LH",
+          "title": "Graphic Tees Men Tshirt Cotton Short Sleeve Cool Novelty Printed Black T Shirts M-5XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B083QGS76S",
+          "title": "Oakazer Unisex Graphic Tees Summer 3D Printed T-Shirts for Men Casual Short Sleeve T-Shirts S-4XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00JS5OL5I",
+          "title": "Funny Fishing Shirts Gifts Dad Humorous Guys Joke Cool Mens Birthday Graphic Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BGZWZY6M",
+          "title": "Xiovio Customize® Large Print Area | Custom Personalized T-Shirts Adult Tee Add Your Text Image Photo Front·Back",
+          "price": 13.88,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07253QWNZ",
+          "title": "Star Wars Bounty Hunter Like a Bossk Graphic T-Shirt",
+          "price": 23.5,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B097QYLCV4",
+          "title": "GEMLON Halloween Shirts for Men Dadcula Letter Print Tshirt Bat Short Sleeve Tee",
+          "price": 18.59,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09YQFHPWK",
+          "title": "FTD Apparel Men's TRD 5th Gen",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09BZ9JX6M",
+          "title": "XXBR Sweater Cardigans for Mens Plus Size, Open Front Single Breasted Striped Rainbow Patchwork Tunic Coat Outerwear",
+          "price": 24.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07YF1THQ6",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B076J95B7F",
+          "title": "Mr. Robot Our Democracy Has Been Hacked Comfortable T-shirt T-Shirt",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07YF3D5Z7",
+          "title": "Amazon Essentials Men's Big & Tall 2-pack Short-sleeve Crewneck T-shirt Fit By Dxl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09MVF4SDH",
+          "title": "INTO THE AM Mens T Shirt - Short Sleeve Crew Neck Soft Fitted Tees S - 4XL Fresh Classic Tshirts",
+          "price": 57.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07YDZZDGQ",
+          "title": "Amazon Essentials Men's Slim-Fit Short-Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CLKVV5K",
+          "title": "Bolter 4 Pack Men's Everyday Cotton Blend V Neck Short Sleeve T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07HJ8YS8Z",
+          "title": "Amazon Essentials Men's Slim-fit 3/4 Sleeve Baseball T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HJJ35LS",
+          "title": "Amazon Essentials Men's Regular-fit 3/4 Sleeve Baseball T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+    "hard_constraints": [
+      "cotton",
+      "Solids: 100% Cotton; Heathers: 60% Cotton, 40% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "No Closure closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "durability",
+      "style",
+      "material"
+    ]
+  }
+}

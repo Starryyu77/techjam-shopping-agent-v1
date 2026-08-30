@@ -1,0 +1,147 @@
+{
+  "sample_id": "public_0077",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B077JDSZ27",
+  "target_title": "Ashford & Brooks Mens Flannel Long Sleeve Sleep Nightshirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Sleep & Lounge",
+    "Sleep Tops"
+  ],
+  "target_price": 38.99,
+  "target_rating": 4.6,
+  "target_rating_number": 1979,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Sleep Tops, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Sleep Tops",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Sleep Tops"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B077JDSZ27",
+          "title": "Ashford & Brooks Mens Flannel Long Sleeve Sleep Nightshirt",
+          "price": 38.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08FY2QMLZ",
+          "title": "Joe Wenko Women's Tie Dye Lounge Pajamas Set",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08M5NTK64",
+          "title": "REDWOON Men's Nightwear, Comfy Nightshirt Big&Tall V Neck Short Sleeve Soft Loose Pajama Sleep Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00B1AHBIC",
+          "title": "Intimo Mens Soft Knit Short Sleeve V-Neck Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B004ZWG0XU",
+          "title": "Calvin Klein Men's Body Long-Sleeve Crew-Neck T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C2JBR98W",
+          "title": "Just Love Women Plush Pajama Pants",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C73DSG4D",
+          "title": "Hanes Women's Wear Around Nightshirt",
+          "price": 14.7,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08R61K9B9",
+          "title": "Fruit of the Loom mens Woven Sleep Pajama Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07KR1YDV4",
+          "title": "Avidlove Sleepwear for Women Tank Nightgown Chemise Racerback Sleeveless Sleep Dress",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08D7JTHSK",
+          "title": "Ekouaer Tie Dye Pajamas Set Womens Loungewear Sleepwear 2 Piece PJ Sets",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Ashford & Brooks Mens Flannel Long Sleeve Sleep Nightshirt",
+    "hard_constraints": [
+      "cotton",
+      "55% Cotton /45% Polyester Flannel"
+    ],
+    "soft_preferences": [
+      "Button closure",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

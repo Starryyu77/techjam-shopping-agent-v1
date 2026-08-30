@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0009",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07GXHPWTJ",
+  "target_title": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Handbags & Wallets",
+    "Totes"
+  ],
+  "target_price": 42.99,
+  "target_rating": 4.4,
+  "target_rating_number": 12633,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 10,
+  "reciprocal_rank": 0.1,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Handbags & Wallets Totes. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Totes",
+        "hard_constraints": {
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Handbags & Wallets Totes",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B076FTW4HQ",
+          "title": "YOLANDO Women Genuine Leather Zipper Tote Bag Top-handle Handbags Large Capacity Ladies' Purse YTG03 (Brown)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09VD4S8BC",
+          "title": "Genuine Leather Handbag for Women,Vintage Design Embossed Feather Totem Purse Organizer Satchel Handmade Satchel Crossbo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08RHTTW4H",
+          "title": "OVER EARTH Women's Purses and Handbags Genuine Leather Shoulder Bag Tote Purses for Ladies(O104E Indigo Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08L8PV9ZW",
+          "title": "Handbags for Women,Women's Shoulder Handbags Ladies Tote Handbags Crossbody Hobo Bags for Women Purses with Wallets Set ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07QV4HRW2",
+          "title": "FOXER Leather Handbags for Women, Genuine Leather Ladies Top-handle Bags with Adjustable Shoulder Strap Womens Casual Sa",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0987R6RNC",
+          "title": "BOSTANTEN Leather Handbags Womens Shoulder Handbags Designer Purses Top Handle Purses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07FPYGS4V",
+          "title": "Kooba Handbags Bolivia Reversable Tote",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07GDYRRCX",
+          "title": "Leather Top Handle Bag Satchel Handbags for Women Girl Weitine Brand Hard Strong Water-Proof Tote Purse Blue (blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CS9CG1Q",
+          "title": "Women's Soft Faux Leather Tote Shoulder Bag from Dreubea, Big Capacity Tassel Handbag",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07GXHPWTJ",
+          "title": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+          "price": 42.99,
+          "is_target": true
+        }
+      ],
+      "target_rank": 10,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+    "hard_constraints": [
+      "leather",
+      "Soft Washed PU Leather with Convenient side Pockets"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Adjustable and Removable Shoulder Strap"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "sample_id": "public_0119",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BBLR3QB2",
+  "target_title": "MIFORINES Ladies Summer Jelly Pillow-shaped Top Handle Handbag Candy Color Transparent Crystal Purse",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Handbags & Wallets",
+    "Top-Handle Bags"
+  ],
+  "target_price": 34.99,
+  "target_rating": 4.5,
+  "target_rating_number": 134,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Handbags & Wallets Top-Handle Bags. A key requirement is: Pvc,Resin.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Top-Handle Bags",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Handbags & Wallets Top-Handle Bags"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BBLR3QB2",
+          "title": "MIFORINES Ladies Summer Jelly Pillow-shaped Top Handle Handbag Candy Color Transparent Crystal Purse",
+          "price": 34.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07D8S9ZP3",
+          "title": "Womens Handbags and Purses Fashion Top Handle Satchel Tote PU Leather Shoulder Bags",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B008JDMEWC",
+          "title": "Fashion Women Korea Simple Style PU leather Clutch Handbag Bag Totes Purse Red",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00S8JNJ9O",
+          "title": "Anne Klein New Recruits Large Satchel",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00T3IJJQQ",
+          "title": "Fossil Sydney Satchel Handbag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01837UN5S",
+          "title": "Fossil Sydney Satchel Handbag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00R2MV57Q",
+          "title": "Buenocn Women Hello Kitty Top Handle Bag Bow Decorated Pu Leather Handbag Shy381",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01CSG5BP2",
+          "title": "Anne Klein New Recruits Small Dome Satchel",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00F5CJDUG",
+          "title": "Rebecca Minkoff Cupid Satchel Handbag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0073KAYH4",
+          "title": "Miche Petite Long Handle Black",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "MIFORINES Ladies Summer Jelly Pillow-shaped Top Handle Handbag Candy Color Transparent Crystal Purse",
+    "hard_constraints": [
+      "Pvc,Resin",
+      "Imported"
+    ],
+    "soft_preferences": [
+      "Material: High Quality PVC Material. Made from Natural resin, not plastic",
+      "Size: <1>Big handbag:26*15*18cm/10.2\"*7\"*5.9\"(Length*Width*Height), handle height:4.3\" <2>Mini handbag :6.7’’(L) x 3.9’’(W) x4.7” (H), handle height :3.15”"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

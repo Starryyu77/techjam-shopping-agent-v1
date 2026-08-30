@@ -1,0 +1,364 @@
+{
+  "sample_id": "public_0128",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BNP1RZ2W",
+  "target_title": "PAVOI 14K Gold Plated Lightweight Chunky Open Hoops | Gold Hoop Earrings for Women",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Jewelry",
+    "Earrings",
+    "Hoop"
+  ],
+  "target_price": 59.99,
+  "target_rating": 4.5,
+  "target_rating_number": 43974,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Earrings Hoop, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "earrings"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09TZNPKQ3",
+          "title": "Gold Hoop Earrings for Women Sterling Silver Post Small Gold Hoop Earrings 14k Real Gold Tiny Hypoallergenic Small Hoop ",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08XB8C1LT",
+          "title": "Milacolato 925 Sterling Silver Small Hoop Earrings for Women 18K Gold Plated Geometric Huggie Hoop Earrings Hypoallergen",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07J6T54RW",
+          "title": "Agvana Silver Hoop Earrings Gold Plated Sterling Silver Hammered C Open Hoop Earrings Jewelry Gifts for Women Girls, Dia",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BBZDTSLM",
+          "title": "4 Pairs Small Silver Hoop Earrings 925 Sterling Silver Post Hoop Earrings for Women 14K Gold Plated Cubic Zirconia Huggi",
+          "price": 17.44,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09WJ4Z19L",
+          "title": "AINUOSHI Moissanite Huggie Hoop Earrings for Women, D-E Color, 925 Sterling Silver with 18K White Gold Plating, Hypoalle",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08HGQQMP1",
+          "title": "Ccino Silver Hoop Earrings for Women, 925 Sterling Silver Hoops Earrings for Girls, Hypoallergenic Fashion Small Hoop Ea",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B085DLNZCK",
+          "title": "Fashion Bridal Pave Encrusted Crystal Wide Half Dome Clip On Earrings For Women Wedding Party Non Pierced Ears 14K Yello",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BGGHSYHC",
+          "title": "FOCALOOK Hoop Earrings Set 3 Pairs for Women 18K Gold Plated Round Circle Thin Huggie Hoop Earrings 30mm 50mm 70mm",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B085WSQFLM",
+          "title": "Glitter Hoop Earrings Bohemian Sparkle Crystal Wrapped Big Hoop Dangle Earrings Pearl Enamel C Hoop Earrings Jewelry Gif",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RGMRMXY",
+          "title": "Gleamart Hoop Tassel Earrings for Women Statement Handmade Beaded Fringe Earrings",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09TZNPKQ3",
+          "title": "Gold Hoop Earrings for Women Sterling Silver Post Small Gold Hoop Earrings 14k Real Gold Tiny Hypoallergenic Small Hoop ",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08XB8C1LT",
+          "title": "Milacolato 925 Sterling Silver Small Hoop Earrings for Women 18K Gold Plated Geometric Huggie Hoop Earrings Hypoallergen",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07J6T54RW",
+          "title": "Agvana Silver Hoop Earrings Gold Plated Sterling Silver Hammered C Open Hoop Earrings Jewelry Gifts for Women Girls, Dia",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BBZDTSLM",
+          "title": "4 Pairs Small Silver Hoop Earrings 925 Sterling Silver Post Hoop Earrings for Women 14K Gold Plated Cubic Zirconia Huggi",
+          "price": 17.44,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09WJ4Z19L",
+          "title": "AINUOSHI Moissanite Huggie Hoop Earrings for Women, D-E Color, 925 Sterling Silver with 18K White Gold Plating, Hypoalle",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08HGQQMP1",
+          "title": "Ccino Silver Hoop Earrings for Women, 925 Sterling Silver Hoops Earrings for Girls, Hypoallergenic Fashion Small Hoop Ea",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B085DLNZCK",
+          "title": "Fashion Bridal Pave Encrusted Crystal Wide Half Dome Clip On Earrings For Women Wedding Party Non Pierced Ears 14K Yello",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BGGHSYHC",
+          "title": "FOCALOOK Hoop Earrings Set 3 Pairs for Women 18K Gold Plated Round Circle Thin Huggie Hoop Earrings 30mm 50mm 70mm",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B085WSQFLM",
+          "title": "Glitter Hoop Earrings Bohemian Sparkle Crystal Wrapped Big Hoop Dangle Earrings Pearl Enamel C Hoop Earrings Jewelry Gif",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RGMRMXY",
+          "title": "Gleamart Hoop Tassel Earrings for Women Statement Handmade Beaded Fringe Earrings",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: ✦18K GOLD VERMEIL✦ A premium offering of our best selling styles, our vermeil jewelry is made with a solid s925 sterling silver base and plated in 18K gold that is 10x thicker than; color: yellow.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "color": [
+            "gold",
+            "silver",
+            "yellow"
+          ],
+          "material": [
+            "sterling silver"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jewelry",
+          "soft_preferences": {
+            "material": [
+              "sterling silver"
+            ],
+            "color": [
+              "gold",
+              "silver",
+              "yellow"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BNP1RZ2W",
+          "title": "PAVOI 14K Gold Plated Lightweight Chunky Open Hoops | Gold Hoop Earrings for Women",
+          "price": 59.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08XB8C1LT",
+          "title": "Milacolato 925 Sterling Silver Small Hoop Earrings for Women 18K Gold Plated Geometric Huggie Hoop Earrings Hypoallergen",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0876BP8LJ",
+          "title": "Kainier Big Hoop Earrings 14K Gold Plated 925 Sterling Silver Post Lightweight Gold Hoops for Women And Girl",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0B1TSYK5C",
+          "title": "Beutirer Gold Silver Tone Hoop Earrings for Women, Thicker 18K Yellow/White Gold Plated Hinged Endless Earrings, Rounded",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07SL245RZ",
+          "title": "Cute Sterling Silver Safety Pin Small Hoop Earrings for Women Girls Men Cartilage Minimalist Sleeper Hoops Lightweight P",
+          "price": 12.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01BLUCCGM",
+          "title": "Hoops & Loops 925 Sterling Silver 5mm Thick High Polished Circle Chunky Click-Top Hoop Earrings for Women and Teen Girls",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09WJ4Z19L",
+          "title": "AINUOSHI Moissanite Huggie Hoop Earrings for Women, D-E Color, 925 Sterling Silver with 18K White Gold Plating, Hypoalle",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0119NLCIA",
+          "title": "14k Rose Gold Plated 925 Sterling Silver Openwork Filigree Hoop Earrings",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00AK6L6HU",
+          "title": "Argento Vivo Large Front Facing Open Hoop Earrings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B077T58F4W",
+          "title": "Sterling Silver High Polished Lightweight Oval Square-Cutout Hoop Earrings",
+          "price": 29.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "PAVOI 14K Gold Plated Lightweight Chunky Open Hoops | Gold Hoop Earrings for Women",
+    "hard_constraints": [
+      "✦18K GOLD VERMEIL✦ A premium offering of our best selling styles, our vermeil jewelry is made with a solid s925 sterling silver base and plated in 18K gold that is 10x thicker than",
+      "color: yellow"
+    ],
+    "soft_preferences": [
+      "PAVOI 4.5mm Thick 40mm Diameter Yellow Gold Earrings for Women",
+      "✦ 60-DAY GUARANTEE ✦ Your happiness is our number one priority. To ensure your complete satisfaction, we offer a hassle-free 60-Day money-back guarantee. To get in touch, email or"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0145",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B00IJZZWGA",
+  "target_title": "BRIGHT STAR Low Cut Ankle Socks For Women - 30 Pairs of Athletic Socks For Running, Workout, Sports",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Active",
+    "Athletic Socks"
+  ],
+  "target_price": 23.99,
+  "target_rating": 4.6,
+  "target_rating_number": 3117,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Active Athletic Socks. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Active Athletic Socks",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Active Athletic Socks",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C277G9FW",
+          "title": "Loritta 5 Pairs Womens Wool Socks Thick Knit Vintage Winter Warm Cozy Crew Socks Gifts",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BGJ85RYM",
+          "title": "Extra Wide Comfort Fit Athletic Crew (Mid-Calf) Socks for Men and Women, for Wide Feet Pick Your Size, Do not Size up",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00IJZZWGA",
+          "title": "BRIGHT STAR Low Cut Ankle Socks For Women - 30 Pairs of Athletic Socks For Running, Workout, Sports",
+          "price": 23.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00Y0NG5OS",
+          "title": "Hanes Men's FreshIQ Over The Calf Tube Socks (Pack of 12)",
+          "price": 14.98,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083QRC2DF",
+          "title": "Women's Athletic Ankle Socks with Heel Tab, Premium Cotton, Soft Cushion, Reinforced Toe, Arch Support, Pack of 6",
+          "price": 21.49,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09B1KSZHD",
+          "title": "Gold Toe Men's Cotton Quarter Athletic Sock",
+          "price": 32.95,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07VTR9J38",
+          "title": "Top Flite Men's Sport Full Cushion Quarter Socks 3 Pair Pack",
+          "price": 13.71,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08PKRXD1N",
+          "title": "Non Skid Grip Women Socks for Pilates Barre Yoga Anti Slip Sticky House Floor Socks for Home Hospital Athletic 3 Or 1 Pa",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07WTLT7NR",
+          "title": "GLINTO Men's Premium Cushioned Cotton Athletic Crew Socks, (3, 5 or 10 Packs, Shoe Size: 7-12)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08NC481LG",
+          "title": "BUDERMMY Men's Cotton Moisture Wicking Heavy Cushion Crew Work Socks,6-12, 6Pairs (as1, numeric, numeric_6, numeric_9, r",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "BRIGHT STAR Low Cut Ankle Socks For Women - 30 Pairs of Athletic Socks For Running, Workout, Sports",
+    "hard_constraints": [
+      "cotton",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Cotton",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "style",
+      "comfort",
+      "durability"
+    ]
+  }
+}

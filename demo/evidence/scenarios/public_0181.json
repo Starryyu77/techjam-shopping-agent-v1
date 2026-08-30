@@ -1,0 +1,150 @@
+{
+  "sample_id": "public_0181",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08M3WKDFJ",
+  "target_title": "Fixmatti Women's 2 Piece Outfits Long Sleeve Pullover Sweatshirt Jogger Pants Sweatsuit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Active",
+    "Sets",
+    "Tracksuits"
+  ],
+  "target_price": 42.97,
+  "target_rating": 4.0,
+  "target_rating_number": 2273,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sets Tracksuits, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Sets Tracksuits",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sets Tracksuits"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08NTGBDD8",
+          "title": "PRETTYGARDEN Women's Two Piece Outfit Long Sleeve Crewneck Pullover Tops And Long Pants Tracksuit",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0C4Q394KD",
+          "title": "niyokki Workout Sets for Women Seamless Crop Tops Leggings Matching 2 Pieces Outfits Two Piece Yoga Workout Outfits",
+          "price": 21.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08GKSVFF6",
+          "title": "Jogger Sets for Women 2 Piece, Tie Dye Outfits Long Sleeve Sweatshirt Skinny Pants Tracksuit Set Purple&Yellow XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08M3WKDFJ",
+          "title": "Fixmatti Women's 2 Piece Outfits Long Sleeve Pullover Sweatshirt Jogger Pants Sweatsuit",
+          "price": 42.97,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B49MQBSK",
+          "title": "Huasemy Plus Size Outfits for Women Tracksuits Long Sleeve Slant Shoulder Asymmetrica Tops Bodycon Pants Sweatsuit Sets",
+          "price": 40.88,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B092QXY52G",
+          "title": "FAVALIVE Two Piece Outfits for Women Summer Bodycon Athletic Shorts Sets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YJKPWR4",
+          "title": "kaimimei 2 Piece Outfits for Women - Sweatsuit Tracksuit Long Sleeve Sweatshirt and Long Pants Set Sports Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01G1LH676",
+          "title": "Pink Queen Womens 2 Piece Outfit Sport Bodycon Crop Top Long Pant Tracksuit Set Activewear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09BKYS7HX",
+          "title": "MANTORS Men's Hooded Athletic Tracksuit Casual 2 Pieces Suits Color Block Hoodies and Sweatpants Set",
+          "price": 41.59,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08JM5V3YR",
+          "title": "Women's Two Piece Tie Dye Outfits Casual Long Sleeve V Neck Pullover Sweatsuit Pants Sets Tracksuits",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fixmatti Women's 2 Piece Outfits Long Sleeve Pullover Sweatshirt Jogger Pants Sweatsuit",
+    "hard_constraints": [
+      "polyester",
+      "Drawstring closure"
+    ],
+    "soft_preferences": [
+      "Hand Wash Only",
+      "Casual 2 piece active sweatsuit pant set"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "warmth",
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

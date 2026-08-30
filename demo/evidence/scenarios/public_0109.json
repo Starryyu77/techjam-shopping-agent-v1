@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0109",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B016OT9D3K",
+  "target_title": "Hanes Men’s Short Sleeve Graphic T-shirt Collection",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Shirts",
+    "T-Shirts"
+  ],
+  "target_price": 8.75,
+  "target_rating": 4.6,
+  "target_rating_number": 66584,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts T-Shirts. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B016OT9D3K",
+          "title": "Hanes Men’s Short Sleeve Graphic T-shirt Collection",
+          "price": 8.75,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09MVF4SDH",
+          "title": "INTO THE AM Mens T Shirt - Short Sleeve Crew Neck Soft Fitted Tees S - 4XL Fresh Classic Tshirts",
+          "price": 57.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07KCFS4VC",
+          "title": "Columbia Men's Thistletown Park Crew",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HJ8YS8Z",
+          "title": "Amazon Essentials Men's Slim-fit 3/4 Sleeve Baseball T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07HJJ35LS",
+          "title": "Amazon Essentials Men's Regular-fit 3/4 Sleeve Baseball T-Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09YKFSDWX",
+          "title": "Johari West Men's Big and Tall Short Sleeve Tropical Hawaiian Cotton Shirt",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07HJGF6Z6",
+          "title": "Amazon Essentials Men's Slim-Fit Slub Raglan Crew T-Shirt Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B06ZZW2ZT1",
+          "title": "Ninedaily Womens Business Tops Lapel V Neck Slimming Long Sleeve Office Blouse",
+          "price": 30.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Men’s Short Sleeve Graphic T-shirt Collection",
+    "hard_constraints": [
+      "fabric",
+      "100% Other Fibers"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "No Closure closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

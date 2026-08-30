@@ -1,0 +1,257 @@
+{
+  "sample_id": "public_0063",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B09MKL5TBK",
+  "target_title": "BALEAF Womens' 7\" Long Running Athletic Shorts with Liner Workout Zipper Pocket",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Running",
+    "Women",
+    "Shorts"
+  ],
+  "target_price": 29.99,
+  "target_rating": 4.3,
+  "target_rating_number": 6566,
+  "hit": true,
+  "first_hit_turn": 2,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 2,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Shorts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Shorts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Shorts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08DJXX7FD",
+          "title": "Wrangler Authentics Men's Classic Relaxed Fit Five Pocket Jean Short",
+          "price": 27.78,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08548KQG6",
+          "title": "BTFBM Women 2023 Summer Fashion V Neck Wrap Rompers Swiss Dot Pocketed Elastic Waist Short Sleeve Beach Shorts Jumpsuit",
+          "price": 40.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08HJ1L39K",
+          "title": "Ekouaer 2 Pack Women's Sleep Shorts Stretchy Pajama Bottoms Shorts With Lace Hem",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08VQGWGML",
+          "title": "YoungLA Men’s Bodybuilding Shorts | Slim Fit Gym Active Comfort Sport Style| Gym Squat Lunges Weightlifting | 103",
+          "price": 30.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07SRBP4VR",
+          "title": "MakeMeChic Women's Summer Plus Strap Knot Back Tropical Print Elastic Waist Casual Loose Romper Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B094YM5HSY",
+          "title": "Basoteeuo Womens Summer Shorts Solid Color Drawstring Elastic Waist Casual with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08TN2HT6X",
+          "title": "XBUTY Satin Pajamas Sets Womens Short Sleeve Button Down Sleepwear Soft Silk Pj Set (S-XL)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YNQK6J7",
+          "title": "Alimens & Gentle Women's Pajama Shorts with Pockets Flannel Plaid PJ Bottoms Shorts Sleepwear Cute Sleep Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0823W19C7",
+          "title": "MsLure Women's Casual Elastic Waist Cotton Linen Summer Loose Shorts with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B091YKS21M",
+          "title": "PrinStory Womens Summer Loose Shorts Casual Shorts Comfy Sweat Shorts Elastic High Waist Shorts with Side Zipper",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: 3\" Width Waistband: The elastic flat waist provides tummy control and features 4-way stretch performance.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Shorts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "stretch"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "feature": [
+              "stretch"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09MKL5TBK",
+          "title": "BALEAF Womens' 7\" Long Running Athletic Shorts with Liner Workout Zipper Pocket",
+          "price": 29.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01MQUDPPO",
+          "title": "Iflex Scrubs for Women, Yoga-Inspired Knit Waistband Scrub Pants CK002",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08548KQG6",
+          "title": "BTFBM Women 2023 Summer Fashion V Neck Wrap Rompers Swiss Dot Pocketed Elastic Waist Short Sleeve Beach Shorts Jumpsuit",
+          "price": 40.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09QM6BZ99",
+          "title": "Women's Lightweight Hiking Cargo Shorts Quick Dry Athletic Shorts for Camping Travel Golf with Zipper Pockets Water Resi",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09S11CHMC",
+          "title": "POLIVA Hiking Shorts Women Cargo Golf Casual Shorts Lightweight Water Resistant Quick Dry for Athletic Walking Travel",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07NF999GW",
+          "title": "90 Degree By Reflex - High Waist Cotton Power Flex Leggings - Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B7BPDNFR",
+          "title": "LAWAKE Fleece Lined Leggings with Pockets for Women - Soft Black Thermal High Waisted Winter Yoga Pants for Workout",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07SRBP4VR",
+          "title": "MakeMeChic Women's Summer Plus Strap Knot Back Tropical Print Elastic Waist Casual Loose Romper Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B094YM5HSY",
+          "title": "Basoteeuo Womens Summer Shorts Solid Color Drawstring Elastic Waist Casual with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09W5ZWL5V",
+          "title": "Cagola 7\" Hiking Golf Shorts Women Cargo Shorts with Pockets Quick Dry Athletic Shorts Workout Summer Elastic Waist",
+          "price": 27.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "BALEAF Womens' 7\" Long Running Athletic Shorts with Liner Workout Zipper Pocket",
+    "hard_constraints": [
+      "polyester",
+      "Body: 95% Polyester, 5% Spandex; Waist: 90% Polyester, 10% Spandex; Liner: 90% Polyester, 10% Spandex"
+    ],
+    "soft_preferences": [
+      "elastic closure",
+      "3\" Width Waistband: The elastic flat waist provides tummy control and features 4-way stretch performance"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style",
+      "durability"
+    ]
+  }
+}

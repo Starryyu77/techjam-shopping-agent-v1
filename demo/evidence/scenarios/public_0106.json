@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0106",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0776SVXW9",
+  "target_title": "Mens Socks Dress Cotton Socks Fashion Patterned Argyle Socks &Formal Business Socks Classic Cotton Dress Casual Socks for Men",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Socks & Hosiery",
+    "Socks",
+    "Calf Socks"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 863,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Socks Calf Socks. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Socks Calf Socks",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Socks Calf Socks",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07JHXMLK9",
+          "title": "Men's Fun Dress Socks Colorful Funky Patterned Cotton Crew Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B67T4QRV",
+          "title": "xiaomaizi Men's Funny and Colorful Patterned Dress Socks for Men Fun and Crazy Casual Crew Socks Size 7-13",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WWW8CXJ",
+          "title": "Footfox 6 Pairs Womens Warm Wool Socks Vintage Thick Knit Winter Casual Cotton Socks, Multicolor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0776SVXW9",
+          "title": "Mens Socks Dress Cotton Socks Fashion Patterned Argyle Socks &Formal Business Socks Classic Cotton Dress Casual Socks fo",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07QXJ6J3F",
+          "title": "SummerTies Mens Dress Socks",
+          "price": 11.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07NLXPVCD",
+          "title": "Buttoned Down Men's 3-Pack Pima Cotton Pattern Dress Socks",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07C24QYMM",
+          "title": "Mens 6 Pair Pack Thin 100% Cotton Lightweight Black or Brown Ribbed Crew Dress Socks (SE002 Brown) 7-12 US",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09TQ1R2CB",
+          "title": "Polo Ralph Lauren Men's Big & Tall Classic Sport 3-Pairs Socks Sz: XL Fits 13-16",
+          "price": 22.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01LWZ4R3D",
+          "title": "Pact Women's Pointelle Over The Knee Socks | Made with Organic Cotton",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07G1ZR6JZ",
+          "title": "5 Pack Mens Combed Cotton Colorful Patterned Happy and Dress Socks (Grimace)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Mens Socks Dress Cotton Socks Fashion Patterned Argyle Socks &Formal Business Socks Classic Cotton Dress Casual Socks for Men",
+    "hard_constraints": [
+      "cotton",
+      "Polyester,Cotton,Spandex"
+    ],
+    "soft_preferences": [
+      "Machine Wash",
+      "❤ 【Material】：Our mens dress socks are are expertly fabricated with the perfect formulation, made with 76% cotton,2% spandex and 22% polyester to keep your feet a elasticity and sof"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "style"
+    ]
+  }
+}

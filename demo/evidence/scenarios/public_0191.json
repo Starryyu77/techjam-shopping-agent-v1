@@ -1,0 +1,360 @@
+{
+  "sample_id": "public_0191",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B083TB1NDK",
+  "target_title": "CS CELERSPORT 3 Pairs Compression Socks for Men and Women 20-30 mmHg Running Support Socks",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Active"
+  ],
+  "target_price": 17.95,
+  "target_rating": 4.4,
+  "target_rating_number": 7797,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Men Active, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Men Active",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Men Active"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0825JBWP5",
+          "title": "Derminpro Men's Dry Fit 1/4 Zip Long Sleeve Performance Golf Shirts Athletic Running Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BZJ9FKH4",
+          "title": "V VALANCH Mens Polo Shirt Short Sleeve Performance Moisture Wicking Golf Shirt Regular Fit Polo",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07BZ6T96P",
+          "title": "icyzone Womens' Racerback Workout Athletic Running Tank Tops (Pack of 3)",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08ZJWTCDR",
+          "title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+          "price": 21.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BYCW1T1C",
+          "title": "Hanes Men's Jogger Sweatpants, EcoSmart Jogger Sweatpants for Men, Men's Fleece Lounge Pants",
+          "price": 12.17,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0735V67KT",
+          "title": "Fruit of the Loom mens Cushioned Durable Cotton Work Gear With Moisture Wicking Casual Sock, White, 6-12 US(Pack of 10)",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07XHQDJWN",
+          "title": "Roadbox 1, 2 or 3 Pack Men's Compression Pants Athletic Base Layer Cycling Tights Leggings for Running Yoga Basketball",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B085L58P9F",
+          "title": "SPECIALMAGIC Women's Sweatpants Capri Pants Cropped Jogger Running Pants Lounge Loose Fit Drawstring Waist with Side Poc",
+          "price": 25.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Men Active",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0825JBWP5",
+          "title": "Derminpro Men's Dry Fit 1/4 Zip Long Sleeve Performance Golf Shirts Athletic Running Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BZJ9FKH4",
+          "title": "V VALANCH Mens Polo Shirt Short Sleeve Performance Moisture Wicking Golf Shirt Regular Fit Polo",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07BZ6T96P",
+          "title": "icyzone Womens' Racerback Workout Athletic Running Tank Tops (Pack of 3)",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08ZJWTCDR",
+          "title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+          "price": 21.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BYCW1T1C",
+          "title": "Hanes Men's Jogger Sweatpants, EcoSmart Jogger Sweatpants for Men, Men's Fleece Lounge Pants",
+          "price": 12.17,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0735V67KT",
+          "title": "Fruit of the Loom mens Cushioned Durable Cotton Work Gear With Moisture Wicking Casual Sock, White, 6-12 US(Pack of 10)",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07XHQDJWN",
+          "title": "Roadbox 1, 2 or 3 Pack Men's Compression Pants Athletic Base Layer Cycling Tights Leggings for Running Yoga Basketball",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B085L58P9F",
+          "title": "SPECIALMAGIC Women's Sweatpants Capri Pants Cropped Jogger Running Pants Lounge Loose Fit Drawstring Waist with Side Poc",
+          "price": 25.98,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Polyamide,Mesh; Machine Wash.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Men Active",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "mesh"
+          ],
+          "feature": [
+            "machine washable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "mesh"
+            ],
+            "feature": [
+              "machine washable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B083TB1NDK",
+          "title": "CS CELERSPORT 3 Pairs Compression Socks for Men and Women 20-30 mmHg Running Support Socks",
+          "price": 17.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01G1ORT5M",
+          "title": "RFID Blocking Travel Wallet - Money Belt & Passport Holder, Travel Fanny Pack for Women Men - Black",
+          "price": 9.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07L7M66MQ",
+          "title": "3 Pack Unisex Ultra Thin Breathable Dry Fit Low Cut Running Ankle Socks black white grey color",
+          "price": 14.5,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07B3Y3FDD",
+          "title": "Reebok Men's Athletic Performance Boxer Briefs (3 Pack)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08MTQLDT9",
+          "title": "Ceseboo Thongs for Women, Womens Thongs Seamless Thongs Underwear for Women Low Waist No Show Thong",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08BRL7WML",
+          "title": "COOFANDY Men's 3 Pack Workout Tank Tops Quick Dry Y Back Gym Muscle Tee Bodybuilding Fitness Sleeveless T Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01N5HF8DG",
+          "title": "Mission VaporActive Cooling Skull Cap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09PWZG9CJ",
+          "title": "Billabong Men's Performance Mesh Boxer Brief",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07RM6FNNS",
+          "title": "Baby Knee Pads for Crawling, Baby Safety Protector for Baby Girls and Boys",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B094CFZ3GW",
+          "title": "MOFONE 3 Pack Muscle Sleeveless Shirts for Men Gym Workout Tank Top Men",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "CS CELERSPORT 3 Pairs Compression Socks for Men and Women 20-30 mmHg Running Support Socks",
+    "hard_constraints": [
+      "Polyamide,Mesh",
+      "Machine Wash"
+    ],
+    "soft_preferences": [
+      "Moisture Wicking & Breathable: These compression socks for women are made of lightweight farbic and polyamide, Moisture-wicking yarn and breathable mesh pulls perspiration away fro",
+      "Friction & Shock Protection: Our mens compression socks use the seamless toe design, these compression socks for men circulation have targeted cushioning on the footbed for shock a"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "performance",
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

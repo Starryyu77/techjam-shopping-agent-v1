@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0065",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BSQ9TCYC",
+  "target_title": "Arctix Women's Essential Insulated Bib Overalls",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Skiing",
+    "Women",
+    "Bibs & Pants",
+    "Bibs"
+  ],
+  "target_price": null,
+  "target_rating": 4.6,
+  "target_rating_number": 44070,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bibs & Pants Bibs. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "pants",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B074BMLZTL",
+          "title": "Wantdo Men's Winter Insulated Ski Pants Waterproof Snow Bibs Cargo Overalls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09V5RTXG9",
+          "title": "#followme Microfleece Men’s Buffalo Plaid Pajama Pants with Pockets",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BSQ9TCYC",
+          "title": "Arctix Women's Essential Insulated Bib Overalls",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BYCW1T1C",
+          "title": "Hanes Men's Jogger Sweatpants, EcoSmart Jogger Sweatpants for Men, Men's Fleece Lounge Pants",
+          "price": 12.17,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07QMS8TX8",
+          "title": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+          "price": 19.19,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08WKZNFG2",
+          "title": "BeltBro Titan No Buckle Elastic Belt For Men — Fits 1.5 Inch Belt Loops, Comfortable and Easy To Use",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08NTGBDD8",
+          "title": "PRETTYGARDEN Women's Two Piece Outfit Long Sleeve Crewneck Pullover Tops And Long Pants Tracksuit",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07XHQDJWN",
+          "title": "Roadbox 1, 2 or 3 Pack Men's Compression Pants Athletic Base Layer Cycling Tights Leggings for Running Yoga Basketball",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07K4FX4WZ",
+          "title": "Amazon Essentials Men's Slim-Fit Stretch Golf Pant",
+          "price": 23.92,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01MQUDPPO",
+          "title": "Iflex Scrubs for Women, Yoga-Inspired Knit Waistband Scrub Pants CK002",
+          "price": 34.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Arctix Women's Essential Insulated Bib Overalls",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort"
+    ]
+  }
+}

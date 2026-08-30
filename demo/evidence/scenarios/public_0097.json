@@ -1,0 +1,383 @@
+{
+  "sample_id": "public_0097",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0785RCKBT",
+  "target_title": "Leggings Depot Women's Flared Casual, Work, Lounge Palazzo Pants-Wide Leg",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Leggings"
+  ],
+  "target_price": 14.99,
+  "target_rating": 4.3,
+  "target_rating_number": 5898,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Leggings. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Leggings",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Q46M2J2",
+          "title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087X1JZHF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B085435DSF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07P88KKLV",
+          "title": "SERHOM Yoga Pants, High Waist Tummy Control Workout Women Yoga Leggings with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087FWG8QL",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08LN1DSCP",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YCRWQB9",
+          "title": "QOQ Women's High Waist Yoga Pants Tummy Control Slimming Textured Booty Leggings Running Workout Ruched Butt Lift Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07R7PH27H",
+          "title": "ZOOSIXX High Waisted Leggings for Women - Tummy Control Soft Athletic Slim Pants for Yoga Workout Running Cycling",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01LQ7YR2C",
+          "title": "Idingding Womens Galaxy Star Printed High Waist Leggings Pants",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Q46M2J2",
+          "title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087X1JZHF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B085435DSF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07P88KKLV",
+          "title": "SERHOM Yoga Pants, High Waist Tummy Control Workout Women Yoga Leggings with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087FWG8QL",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08LN1DSCP",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YCRWQB9",
+          "title": "QOQ Women's High Waist Yoga Pants Tummy Control Slimming Textured Booty Leggings Running Workout Ruched Butt Lift Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07R7PH27H",
+          "title": "ZOOSIXX High Waisted Leggings for Women - Tummy Control Soft Athletic Slim Pants for Yoga Workout Running Cycling",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01LQ7YR2C",
+          "title": "Idingding Womens Galaxy Star Printed High Waist Leggings Pants",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 92% Polyester; Elastic closure.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B89SD66J",
+          "title": "Leggings Depot High Waisted Floral & Space Print Leggings for Women - Regular, Plus, 1X3X, 3X5X",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B085435DSF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B091F54MWM",
+          "title": "CAMPSNAIL 4 Pack Biker Shorts for Women High Waist - 5\" Soft Summer Womens Shorts Spandex Workout Shorts for Running Ath",
+          "price": 18.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0785RCKBT",
+          "title": "Leggings Depot Women's Flared Casual, Work, Lounge Palazzo Pants-Wide Leg",
+          "price": 14.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B085TB5CGJ",
+          "title": "CUGOAO High Waist Yoga Pants with Pockets, Workout Pants for Women, Yoga Leggings with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087FWG8QL",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08LN1DSCP",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08YCRWQB9",
+          "title": "QOQ Women's High Waist Yoga Pants Tummy Control Slimming Textured Booty Leggings Running Workout Ruched Butt Lift Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07R7PH27H",
+          "title": "ZOOSIXX High Waisted Leggings for Women - Tummy Control Soft Athletic Slim Pants for Yoga Workout Running Cycling",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01LQ7YR2C",
+          "title": "Idingding Womens Galaxy Star Printed High Waist Leggings Pants",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Leggings Depot Women's Flared Casual, Work, Lounge Palazzo Pants-Wide Leg",
+    "hard_constraints": [
+      "polyester",
+      "92% Polyester"
+    ],
+    "soft_preferences": [
+      "Elastic closure",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "durability"
+    ]
+  }
+}

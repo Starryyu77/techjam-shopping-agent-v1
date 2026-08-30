@@ -1,0 +1,159 @@
+{
+  "sample_id": "public_0178",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01FWQ8NH8",
+  "target_title": "Red Hot Chili Peppers Distressed Men's T-Shirt Black",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Men",
+    "Shirts",
+    "T-Shirts"
+  ],
+  "target_price": 17.99,
+  "target_rating": 4.5,
+  "target_rating_number": 3347,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts T-Shirts. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "t-shirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "t-shirts",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01N66BXT4",
+          "title": "US Marine Corps Short Sleeve Shirts, 100% Cotton Casual Mens Shirts, Show Your Pride with Our Double Flag Gold Globe Mar",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07WK8T3ZB",
+          "title": "YTD Mens Casual Slim Fit Basic Henley Long Sleeve Fashion T-Shirt",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01FWQ8NH8",
+          "title": "Red Hot Chili Peppers Distressed Men's T-Shirt Black",
+          "price": 17.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08V2YJ8XV",
+          "title": "PUMA Men's Essentials Logo Tee",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HKNZ7S9",
+          "title": "Journey Rock Band Music Group Colored Wings Logo Adult T-Shirt Tee",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00IZEHEE8",
+          "title": "Sons of Anarchy - Logo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07GVGG7VS",
+          "title": "GADEWAKE Womens Casual Floral Print Color Block Short Sleeve T Shirts Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00DR7WSRG",
+          "title": "Rapiddominance Marines Classic Military Tee",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0767KQ9VH",
+          "title": "Retro Bigfoot Silhouette Sun Believe! Original 80's Graphic T-Shirt",
+          "price": 16.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Red Hot Chili Peppers Distressed Men's T-Shirt Black",
+    "hard_constraints": [
+      "cotton",
+      "color: red"
+    ],
+    "soft_preferences": [
+      "100% Cotton",
+      "Made in the USA"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

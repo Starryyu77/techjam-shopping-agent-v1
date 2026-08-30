@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0073",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07QPM54V7",
+  "target_title": "WNEEDU Women's Summer Casual T Shirt Dresses Short Sleeve Swing Dress with Pockets",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses",
+    "Casual"
+  ],
+  "target_price": 19.59,
+  "target_rating": 4.2,
+  "target_rating_number": 16161,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Dresses Casual, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "style": [
+            "casual"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses",
+          "soft_preferences": {
+            "style": [
+              "casual"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08F5G843H",
+          "title": "YESNO Summer Dresses for Women Casual Loose Bohemian Floral Dress with Pockets Spaghetti Strap Maxi Dress E75",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07QPM54V7",
+          "title": "WNEEDU Women's Summer Casual T Shirt Dresses Short Sleeve Swing Dress with Pockets",
+          "price": 19.59,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07N4GLDMB",
+          "title": "YATHON Women's Vintage Ruffle Floral Flared A Line Swing Casual Cocktail Party Dresses",
+          "price": 27.16,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08G1YP48X",
+          "title": "Amazon Essentials Women's Tank Swing Dress (Available in Plus Size)",
+          "price": 21.52,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B079GWQ9P3",
+          "title": "HAOMEILI Women's Cold Shoulder with Pockets Casual Swing T-Shirt Dresses (X-Small, Wine Red)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Q4KT6BR",
+          "title": "LIYOHON Women's Summer Maxi Dress Boho Loose Striped Floral Printed Casual Sleeveless Party Tank Long Dresses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07V7C8L6K",
+          "title": "MOLERANI Women's Loose Plain Maxi Dresses Casual Long Dresses with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07XLJ2TRS",
+          "title": "levaca Women's Plain Long Sleeve Flowy Modest Midi Work Casual Dress with Belt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07F5FGZKX",
+          "title": "Sweetnight Womens Halter Neck Chiffon Tunic Tank Dress Lace Patchwork Short Mini Dresses",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "WNEEDU Women's Summer Casual T Shirt Dresses Short Sleeve Swing Dress with Pockets",
+    "hard_constraints": [
+      "polyester",
+      "♥【Try RISK FREE】: Wear COMFORTABLE or Your MONEY BACK! 30-day wear test! FREE shipping and returns.If for any reason you’re unhappy with your purchase,feel free to contact us"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Elastic closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "material",
+      "comfort",
+      "style"
+    ]
+  }
+}

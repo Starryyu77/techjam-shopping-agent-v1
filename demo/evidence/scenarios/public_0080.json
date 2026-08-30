@@ -1,0 +1,477 @@
+{
+  "sample_id": "public_0080",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B0BPRQY4CF",
+  "target_title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Shirts",
+    "Polos"
+  ],
+  "target_price": null,
+  "target_rating": 4.5,
+  "target_rating_number": 20450,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shirts Polos. Button closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06Y45LQP3",
+          "title": "Hanes Men’s X-Temp Short Sleeve Polo Shirt, Midweight Men's Shirt",
+          "price": 13.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07HJDBN4L",
+          "title": "Amazon Essentials Men's Regular-Fit Pocket Jersey Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07NKBP6V4",
+          "title": "Amazon Essentials Men's Big & Tall Cotton Pique Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07MZ942LH",
+          "title": "GHYUGR Short Sleeve Polo Shirts for Men Basic Cotton Contrasting Colors Threaded T-Shirt Casual Polos Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PW4T128",
+          "title": "Amazon Essentials Men's Big & Tall Jersey Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B077QJ7SPC",
+          "title": "Amazon Essentials Men's Lightweight Slub Polo Shirt (Previously Goodthreads)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B077ZH6ZVF",
+          "title": "Starter Men's Short Sleeve Tech Golf Polo Shirt, Amazon Exclusive",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08229VKYF",
+          "title": "Musen Men Cotton Plaid Long Sleeve Button Down Casual Dress Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071NGKPX1",
+          "title": "Cherokee Boys' Uniform Short Sleeve Performance Polo Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06Y45LQP3",
+          "title": "Hanes Men’s X-Temp Short Sleeve Polo Shirt, Midweight Men's Shirt",
+          "price": 13.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07HJDBN4L",
+          "title": "Amazon Essentials Men's Regular-Fit Pocket Jersey Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07NKBP6V4",
+          "title": "Amazon Essentials Men's Big & Tall Cotton Pique Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07MZ942LH",
+          "title": "GHYUGR Short Sleeve Polo Shirts for Men Basic Cotton Contrasting Colors Threaded T-Shirt Casual Polos Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PW4T128",
+          "title": "Amazon Essentials Men's Big & Tall Jersey Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B077QJ7SPC",
+          "title": "Amazon Essentials Men's Lightweight Slub Polo Shirt (Previously Goodthreads)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B077ZH6ZVF",
+          "title": "Starter Men's Short Sleeve Tech Golf Polo Shirt, Amazon Exclusive",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08229VKYF",
+          "title": "Musen Men Cotton Plaid Long Sleeve Button Down Casual Dress Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B071NGKPX1",
+          "title": "Cherokee Boys' Uniform Short Sleeve Performance Polo Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 60% Cotton, 40% Polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton",
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton",
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07HJDBN4L",
+          "title": "Amazon Essentials Men's Regular-Fit Pocket Jersey Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07PW4T128",
+          "title": "Amazon Essentials Men's Big & Tall Jersey Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00FFCP99K",
+          "title": "Tri-Mountain Men's Short Sleeve 3-Button Contrast Collar Pique Knit Pocket Golf",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B076K8QHTV",
+          "title": "IZOD Men's Big and Tall Advantage Performance Short Sleeve Solid Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00HUOI15A",
+          "title": "Nautica Men's Striped Anchor Deck Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B095XYGQTF",
+          "title": "KENMAX Men's Classic Fit Polo Shirt Tipped Collar Short Sleeve Quick-Dry Solid Performance Golf Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00XBYH2GM",
+          "title": "Nautica Boys' Short Sleeve Solid Pique Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00IZKU0TS",
+          "title": "Nautica Boys' Uniform Long Sleeve Pique Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B008LK6G9K",
+          "title": "Tri-Mountain Men’s 60/40 Pique Long Sleeve Golf Shirt, Sunflower, 3XL",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BPRQY4CF",
+          "title": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07HJDBN4L",
+          "title": "Amazon Essentials Men's Regular-Fit Pocket Jersey Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07PW4T128",
+          "title": "Amazon Essentials Men's Big & Tall Jersey Polo Shirt fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B076K8QHTV",
+          "title": "IZOD Men's Big and Tall Advantage Performance Short Sleeve Solid Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00HUOI15A",
+          "title": "Nautica Men's Striped Anchor Deck Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00XBYH2GM",
+          "title": "Nautica Boys' Short Sleeve Solid Pique Polo Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00IZKU0TS",
+          "title": "Nautica Boys' Uniform Long Sleeve Pique Polo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00XBYIXTW",
+          "title": "Nautica Big Boys' Short Sleeve Solid Pique CVC Polo, Navy, X-Large",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BXXH77N8",
+          "title": "Jerzees Men's Short Sleeve Polo Shirts, SpotShield Stain Resistant, Sizes S-5X",
+          "price": 19.33,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "IZOD Men's Advantage Performance Short Sleeve Polo Shirt",
+    "hard_constraints": [
+      "cotton",
+      "60% Cotton, 40% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Button closure",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "durability",
+      "material",
+      "comfort",
+      "fit"
+    ]
+  }
+}

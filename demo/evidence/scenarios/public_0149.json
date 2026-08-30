@@ -1,0 +1,162 @@
+{
+  "sample_id": "public_0149",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07CBYYHTL",
+  "target_title": "SDIYABOLO Small Black Sling Crossbody Backpack Shoulder Bag for Men Women Vintage PU Leather Sling Backpack Cycling",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Backpacks",
+    "Casual Daypacks"
+  ],
+  "target_price": 32.99,
+  "target_rating": 4.5,
+  "target_rating_number": 9172,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 8,
+  "reciprocal_rank": 0.125,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Backpacks Casual Daypacks. A key requirement is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Backpacks Casual Daypacks",
+        "hard_constraints": {
+          "style": [
+            "casual"
+          ],
+          "material": [
+            "leather"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Backpacks Casual Daypacks",
+          "hard_constraints": {
+            "material": [
+              "leather"
+            ],
+            "style": [
+              "casual"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07M6LBQN7",
+          "title": "Women Backpack Metal Hidden Print PU Leather Lightweight Cute Small Fashion Bag (Brown)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B077SV6MZ8",
+          "title": "ili New York 6505 Leather Backpack (Indigo)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07CS9CG1Q",
+          "title": "Women's Soft Faux Leather Tote Shoulder Bag from Dreubea, Big Capacity Tassel Handbag",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08FLYBP2J",
+          "title": "Lavemi Men's Real Leather Ratchet Dress Casual Belt, Cut to Exact Fit, Elegant Gift Box",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BZWZSM7D",
+          "title": "Steve Madden Men's Dress Casual Every Day Leather Belt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08L13H7SY",
+          "title": "BULLIANT Men's Belt, Reversible Belt 1.25\" For Mens Casual Golf Dress pants shirts,One Reverse For 2 Sides",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07GXHPWTJ",
+          "title": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07CBYYHTL",
+          "title": "SDIYABOLO Small Black Sling Crossbody Backpack Shoulder Bag for Men Women Vintage PU Leather Sling Backpack Cycling",
+          "price": 32.99,
+          "is_target": true
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B071RG3CCH",
+          "title": "Go Tour Men's Premium Genuine Leather Casual Slip on Loafers Breathable Driving Shoes Fashion Slipper",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C4HGYDMF",
+          "title": "Belts for Men, High Quality Handmade Genuine Leather, 100% Cow Leather, Classic and Fashion Designs",
+          "price": 16.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 8,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "SDIYABOLO Small Black Sling Crossbody Backpack Shoulder Bag for Men Women Vintage PU Leather Sling Backpack Cycling",
+    "hard_constraints": [
+      "leather",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "PU",
+      "进口"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "performance",
+      "material"
+    ]
+  }
+}

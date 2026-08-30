@@ -62,7 +62,8 @@ If the official repo is checked out as a sibling of this repo
 | --- | ---: | ---: | ---: | ---: |
 | Rules V1 (pre-fix) | 0.550 | 0.262 | 6.740 | 0.439 |
 | Rules V1.1 | 0.950 | 0.628 | 3.495 | 0.814 |
-| **Rules V1.2 (submitted)** | **0.970** | **0.613** | **3.155** | **0.826** |
+| Rules V1.2 | 0.970 | 0.613 | 3.155 | 0.826 |
+| **Rules V1.3 (submitted)** | **0.995** | **0.644** | **2.215** | **0.867** |
 | Official weak BM25 baseline | 0.125 | 0.068 | 9.810 | 0.139 |
 
 `TechnicalScore = 0.50·HitRate@10 + 0.30·MRR + 0.20·Efficiency`,
@@ -74,7 +75,7 @@ jitter is ≈±0.005 because the evaluator assigns random session ids.
 
 ```bash
 python -m py_compile shopping_agent.py chat.py prompt_lab.py official_agent.py
-python -m unittest discover -s tests -v   # 13 tests
+python -m unittest discover -s tests -v   # 64 current tests
 ```
 
 ## What is inside

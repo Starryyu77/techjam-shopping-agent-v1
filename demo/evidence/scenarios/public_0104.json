@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0104",
+  "scenario_type": "boundary",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B00QSAICLU",
+  "target_title": "Black 1 Inch Wide Leather Like Headband Solid Hair band for Women and Girls",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Hats & Caps",
+    "Headbands"
+  ],
+  "target_price": 8.99,
+  "target_rating": 4.3,
+  "target_rating_number": 3316,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Hats & Caps Headbands, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Hats & Caps Headbands",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Hats & Caps Headbands"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00QSAICLU",
+          "title": "Black 1 Inch Wide Leather Like Headband Solid Hair band for Women and Girls",
+          "price": 8.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09KC8VMDH",
+          "title": "SIQUK 12 Pieces Satin Headbands 1 Inch Wide Non-slip Headband Colorful Headbands DIY Hair Headband for Women and Girls,1",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08G1JTDB8",
+          "title": "\"Dirty Thirty\" Sash & Rhinestone Headband Set - 30th Birthday Gifts Birthday Sash for Women Birthday Party Supplies (Gol",
+          "price": 13.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09J1FD7KY",
+          "title": "Turban Head Wraps For Women Stretch Jersey African Head Wrap Knit Headwraps Urban Hair Scarf Breathable Headband …",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0895QFNSJ",
+          "title": "CEELGON Womens Mens Bandanas Seamless Headwear Headbands",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00RQNNSQM",
+          "title": "Bandana Headbands for Women Moisture Wicking Athletic Sports Headbands",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07G7DN6HR",
+          "title": "A Miaow Black Mouse Ears Headband MM Glitter Hair Hoop Women Adults Butterfly Sequin Costum Hair Clasp Birthday Party Ho",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B083JJ1XJJ",
+          "title": "BuiltCool Women's Cooling Headbands - 2 pack - Workout Headband for Running, Hiking, and Exercise",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01MS40UOI",
+          "title": "LUX ACCESSORIES Gold Tone Casted Leaf Chain Goddess Hair Crown Stretch Headband",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07YF4S394",
+          "title": "Flowery Birthday Deluxe Headband - 11 3/4\" x 13\", 1 Pc",
+          "price": 15.68,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Black 1 Inch Wide Leather Like Headband Solid Hair band for Women and Girls",
+    "hard_constraints": [
+      "leather",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "Classy Leather-like Fabric",
+      "Durable Headband"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "boundary"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "durability",
+      "fit",
+      "material"
+    ]
+  }
+}

@@ -1,0 +1,569 @@
+{
+  "sample_id": "public_0003",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B09YMTWDXJ",
+  "target_title": "Casio Men's Wrist Watch AQ-800E-7A",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Watches",
+    "Wrist Watches"
+  ],
+  "target_price": 47.95,
+  "target_rating": 4.6,
+  "target_rating_number": 110,
+  "hit": true,
+  "first_hit_turn": 5,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 5,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watches Wrist Watches. Stainless Steel Band",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "stainless steel"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watches Wrist Watches",
+          "soft_preferences": {
+            "material": [
+              "stainless steel"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FYFXPSS",
+          "title": "Fashion Watch for Men Business Stainless Steel Band Quartz Analog Chronograph Waterproof Sport Wrist Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0196A59GY",
+          "title": "ABCsell 22mm Milanese Stainless Steel Wrist Watch Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01LWOGORL",
+          "title": "Timex Men's Classic Digital Watch",
+          "price": 33.16,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0811LN4CG",
+          "title": "BUREI Men's Classic Minimalist Wrist Watch with Fashion Stainless Steel Mesh Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C3MYXFPL",
+          "title": "Stuhrling Original Men's Watches Pro Dive Watch Sports Watch with 42 MM Case Blue Dial Stainless Steel Silver Bracelet D",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07S7Z3CMK",
+          "title": "Kate Spade New York Women's Park Row Stainless Steel and Silicone Quartz Watch",
+          "price": 99.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B6QXR6K1",
+          "title": "BOBO BIRD Wood Watches Colorful Wood WristWatches Week & Date Display Multifunction Handmade Quartz Watch Sport Chronogr",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B7QFCWPX",
+          "title": "Invicta Men's Pro Diver Quartz Diving Watch with Stainless-Steel Strap, Two Tone, 22 (Model: 23229 23388)",
+          "price": 69.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B06XYN5XBD",
+          "title": "GUESS Iconic Retro Logo 3-Hand 42mm Watch",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "stainless steel"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "stainless steel"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07FYFXPSS",
+          "title": "Fashion Watch for Men Business Stainless Steel Band Quartz Analog Chronograph Waterproof Sport Wrist Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0196A59GY",
+          "title": "ABCsell 22mm Milanese Stainless Steel Wrist Watch Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01LWOGORL",
+          "title": "Timex Men's Classic Digital Watch",
+          "price": 33.16,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0811LN4CG",
+          "title": "BUREI Men's Classic Minimalist Wrist Watch with Fashion Stainless Steel Mesh Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C3MYXFPL",
+          "title": "Stuhrling Original Men's Watches Pro Dive Watch Sports Watch with 42 MM Case Blue Dial Stainless Steel Silver Bracelet D",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07S7Z3CMK",
+          "title": "Kate Spade New York Women's Park Row Stainless Steel and Silicone Quartz Watch",
+          "price": 99.0,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B6QXR6K1",
+          "title": "BOBO BIRD Wood Watches Colorful Wood WristWatches Week & Date Display Multifunction Handmade Quartz Watch Sport Chronogr",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B7QFCWPX",
+          "title": "Invicta Men's Pro Diver Quartz Diving Watch with Stainless-Steel Strap, Two Tone, 22 (Model: 23229 23388)",
+          "price": 69.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B06XYN5XBD",
+          "title": "GUESS Iconic Retro Logo 3-Hand 42mm Watch",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Water Resistant.",
+      "agent_message": "I found 10 current candidates. Which color do you prefer?",
+      "ask_attribute": "color",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "material": [
+              "stainless steel"
+            ]
+          }
+        },
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08GHDQLPK",
+          "title": "KIMOMT Mens Watches Fashion Minimalist Quartz Analog Date Watch with Stainless Steel Mesh Band Water Resistant Gents Wri",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B008501TUM",
+          "title": "Titan Raga Gold Metal Jewellery Bangle Design, Bracelet Clasp, Quartz Glass, Water Resistant Analog Wrist Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B000FBTXZ2",
+          "title": "Tissot Men's T91148641 PRS 516 Quartz Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M0VKVDG",
+          "title": "Mulco Two Maze Swiss Quartz Multifunctional Movement Women's Watch | Forrest Rose Gold Pattern Sundial with Rose Gold an",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07QW3GYSP",
+          "title": "Wrangler Men's Watch, 44mm with Cushion Shaped Case, Polyurethane Strap, Water Resistant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B076M5G1DC",
+          "title": "NORTH EDGE Digital Watches Mens Military Sport Watch Fashion Men LED Display Water Resistant Wrist Watch Silver",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BJVWCSKQ",
+          "title": "Anne Klein Women's Bracelet Watch",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01LWOGORL",
+          "title": "Timex Men's Classic Digital Watch",
+          "price": 33.16,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "I don't have an additional preference for color.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08GHDQLPK",
+          "title": "KIMOMT Mens Watches Fashion Minimalist Quartz Analog Date Watch with Stainless Steel Mesh Band Water Resistant Gents Wri",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B008501TUM",
+          "title": "Titan Raga Gold Metal Jewellery Bangle Design, Bracelet Clasp, Quartz Glass, Water Resistant Analog Wrist Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B000FBTXZ2",
+          "title": "Tissot Men's T91148641 PRS 516 Quartz Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01M0VKVDG",
+          "title": "Mulco Two Maze Swiss Quartz Multifunctional Movement Women's Watch | Forrest Rose Gold Pattern Sundial with Rose Gold an",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07QW3GYSP",
+          "title": "Wrangler Men's Watch, 44mm with Cushion Shaped Case, Polyurethane Strap, Water Resistant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B076M5G1DC",
+          "title": "NORTH EDGE Digital Watches Mens Military Sport Watch Fashion Men LED Display Water Resistant Wrist Watch Silver",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BJVWCSKQ",
+          "title": "Anne Klein Women's Bracelet Watch",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01LWOGORL",
+          "title": "Timex Men's Classic Digital Watch",
+          "price": 33.16,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "For that, what matters is: 3 Year Battery; Day / Date Indicator.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09YMTWDXJ",
+          "title": "Casio Men's Wrist Watch AQ-800E-7A",
+          "price": 47.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01KIKLVVS",
+          "title": "Casio Sports Watch Men's Stainless Steel Quartz with Strap Black",
+          "price": 239.5,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GBT82S7",
+          "title": "Casio Mud Resistant Stainless Steel Quartz Watch with Resin Strap, Black, 27.6 (Model: TRT-110H-1A2VCF)",
+          "price": 31.92,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07PCRXPQ6",
+          "title": "Olmeca Men's Sports Watch Fashion Dress Casual Quartz Watches Stainless Steel Chronograph Date Waterproof Wrist Watch fo",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B6CYH17L",
+          "title": "Citizen Men's Classic Corso Eco-Drive Watch, 3-Hand Date, Luminous Hands and Markers, Two-Tone Stainless Steel",
+          "price": 300.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07WDTRJK7",
+          "title": "LIGE Mens Watches Fashion Luxury Blue Analog Quartz Watch Mens Business Dress Automatic Date Watch Waterproof Sports Chr",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07PQK7WC4",
+          "title": "Mens Watches,CURREN Watches Quartz Analog Calendar,Wrist Watch for Men, Fashion Waterproof Stainless Steel Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B079Q78Q9N",
+          "title": "MVMT MOD Watches | 32MM Women's Analog Minimalist Watch | RB3",
+          "price": 89.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09H3VT8JH",
+          "title": "Invicta Women's Pro Diver 36543 Quartz Watch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BQ6XY143",
+          "title": "Citizen Eco-Drive Avatar Watch",
+          "price": 236.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Casio Men's Wrist Watch AQ-800E-7A",
+    "hard_constraints": [
+      "Water Resistant",
+      "3 Year Battery"
+    ],
+    "soft_preferences": [
+      "Day / Date Indicator",
+      "Stainless Steel Band"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Stainless Steel Band",
+      "new_value": "Water Resistant",
+      "message": "Actually, ignore my earlier preference. What I need is: Water Resistant."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

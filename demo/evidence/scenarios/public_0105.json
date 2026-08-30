@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0105",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07Q46M2J2",
+  "target_title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Yoga",
+    "Women",
+    "Leggings"
+  ],
+  "target_price": 23.99,
+  "target_rating": 4.6,
+  "target_rating_number": 26161,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Leggings, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Leggings"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Q46M2J2",
+          "title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+          "price": 23.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XHQDJWN",
+          "title": "Roadbox 1, 2 or 3 Pack Men's Compression Pants Athletic Base Layer Cycling Tights Leggings for Running Yoga Basketball",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B087X1JZHF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B085435DSF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B085TB5CGJ",
+          "title": "CUGOAO High Waist Yoga Pants with Pockets, Workout Pants for Women, Yoga Leggings with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B087FWG8QL",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08LN1DSCP",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08YCRWQB9",
+          "title": "QOQ Women's High Waist Yoga Pants Tummy Control Slimming Textured Booty Leggings Running Workout Ruched Butt Lift Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07R7PH27H",
+          "title": "ZOOSIXX High Waisted Leggings for Women - Tummy Control Soft Athletic Slim Pants for Yoga Workout Running Cycling",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+    "hard_constraints": [
+      "polyester",
+      "77% Polyester, 23% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "IUGA is a lifestyle brand that combines Style, Comfort and Performance. The High Quality Activewear is perfect for Fitness Enthusiasts and Everyday Athleisure as it is Affordable a"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "weather",
+      "material",
+      "durability"
+    ]
+  }
+}

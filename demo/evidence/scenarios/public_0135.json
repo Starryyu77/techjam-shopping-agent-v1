@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0135",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0C6BL4RNN",
+  "target_title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Slippers"
+  ],
+  "target_price": 21.42,
+  "target_rating": 4.3,
+  "target_rating_number": 31434,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Slippers. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "slippers",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "slippers",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B074QKDQJS",
+          "title": "maamgic Womens Fuzzy Slippers Non-skid Animal Slippers with Memory Foam Ladies Cute Bedroom Indoor Winter Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B5VN4P5D",
+          "title": "Adult Hobbit Costume Feet Slippers",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07K4PZGQ4",
+          "title": "Tootsies Womens Luxury Fleece Slippers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0C6BL4RNN",
+          "title": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+          "price": 21.42,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08X2X83DW",
+          "title": "isotoner Women's Terry Slip on Clog Slipper with Memory Foam for Indoor/Outdoor Comfort",
+          "price": 15.3,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HM5YD4K",
+          "title": "FANZERO Toddler Kids Girls Boys Cute Cartoon Animal Soft Warm Plush Lining Non-Slip Slippers Winter House Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08N6VDT2H",
+          "title": "Bioworld The Nightmare Before Christmas Zero Dog Character Slipper Socks with No-Slip Sole For Women Men",
+          "price": 16.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01JTMIRFY",
+          "title": "Fur Slippers Slides For Women Open Toe Fuzzy Fur Slippers Girls Fluffy House Slides Outdoor Indoor",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083FM1WLK",
+          "title": "Dearfoams Men's Closed Back Slipper",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07QHZP1YJ",
+          "title": "kikiya socks Cute Women No Show Socks - Lovely Cat Dog Smile Unique Fashion Outfit Ladies & Girl Cotton Socks | US 6~8.5",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Dearfoams Women's Rebecca Lightweight Cozy Memory Foam Closed Back Slipper with Wide Widths",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Thermoplastic Elastomers sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material"
+    ]
+  }
+}

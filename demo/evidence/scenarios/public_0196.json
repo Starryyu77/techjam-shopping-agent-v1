@@ -1,0 +1,354 @@
+{
+  "sample_id": "public_0196",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B073T364MM",
+  "target_title": "DREAM PAIRS Women's Sole-Simple Ballerina Walking Flats Shoes",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Flats"
+  ],
+  "target_price": 30.99,
+  "target_rating": 4.1,
+  "target_rating_number": 7607,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Flats, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08516Z84X",
+          "title": "Ballet Flats Shoes -Women's Foldable Portable Travel Roll Up Shoes with Pouch",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B085VPNRMM",
+          "title": "Women's Ballet Flat Lambskin Loafers Classic Round Toe Ballerina Casual Ladies Leather Shoes Foldable Portable Travel Ro",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GVVT8D7",
+          "title": "Dr. Scholl's Shoes Women's Adjustify Flat Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07W3HWSGW",
+          "title": "Baby Girls Mary Jane Flats Sparkly Bow Diamonds Princess Dress Shoes Anti-Slip Infant Crib Shoes",
+          "price": 14.84,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07D2J38K1",
+          "title": "Harborsides Grisel Women Comfort Flats, Memory Foam Insole, Flex A Lite Outsole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00SX77NCK",
+          "title": "AK Anne Klein Women's Petrica Leather Ballet Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B082VZDR4V",
+          "title": "CAMEL CROWN Flat Shoes for Women Slip on Bowknot Dress Shoes Faux Python Comfortable Round Toe Ballet Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082W1KGCJ",
+          "title": "CAMEL CROWN Flat Shoes for Women Slip on Bowknot Dress Shoes Faux Python Comfortable Round Toe Ballet Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0784V434R",
+          "title": "Harborsides Audrey Women Comfort Flats - Memory Foam Insole, Flex A Lite Outsole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00DYQP1UQ",
+          "title": "Timberland Women's Ellsworth Ballet Flat",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08516Z84X",
+          "title": "Ballet Flats Shoes -Women's Foldable Portable Travel Roll Up Shoes with Pouch",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B085VPNRMM",
+          "title": "Women's Ballet Flat Lambskin Loafers Classic Round Toe Ballerina Casual Ladies Leather Shoes Foldable Portable Travel Ro",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GVVT8D7",
+          "title": "Dr. Scholl's Shoes Women's Adjustify Flat Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07W3HWSGW",
+          "title": "Baby Girls Mary Jane Flats Sparkly Bow Diamonds Princess Dress Shoes Anti-Slip Infant Crib Shoes",
+          "price": 14.84,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07D2J38K1",
+          "title": "Harborsides Grisel Women Comfort Flats, Memory Foam Insole, Flex A Lite Outsole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00SX77NCK",
+          "title": "AK Anne Klein Women's Petrica Leather Ballet Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B082VZDR4V",
+          "title": "CAMEL CROWN Flat Shoes for Women Slip on Bowknot Dress Shoes Faux Python Comfortable Round Toe Ballet Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082W1KGCJ",
+          "title": "CAMEL CROWN Flat Shoes for Women Slip on Bowknot Dress Shoes Faux Python Comfortable Round Toe Ballet Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0784V434R",
+          "title": "Harborsides Audrey Women Comfort Flats - Memory Foam Insole, Flex A Lite Outsole",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00DYQP1UQ",
+          "title": "Timberland Women's Ellsworth Ballet Flat",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Rubber sole; Design in USA.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B073T364MM",
+          "title": "DREAM PAIRS Women's Sole-Simple Ballerina Walking Flats Shoes",
+          "price": 30.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07NZZGR2D",
+          "title": "TOMS Women's Canvas Classics Seasonal",
+          "price": 39.0,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B085W27C7N",
+          "title": "PANDANINJIA Jessica Toddler Girls Dress Shoes Ankle Strap Ballet Flats Flower Girl Shoes for Wedding Party School",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B008K7HBLG",
+          "title": "Jambu Women's Blossom Mary Jane Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B008K7HGHK",
+          "title": "Jambu Women's Blossom Mary Jane Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B007TQ30E6",
+          "title": "Dr. Scholl's Women's Joliet Ballet Flat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08516Z84X",
+          "title": "Ballet Flats Shoes -Women's Foldable Portable Travel Roll Up Shoes with Pouch",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B8CY5YW4",
+          "title": "GINFIVE Toddler/Little Girls Oxfords Shoes Kids School Party Dress Shoes Mary Jane Flat (Big Kid 2/Brown)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00ALYEJCA",
+          "title": "KEEN Women's Harvest Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0055XE26A",
+          "title": "PUMA Women's Zandy Ballet Flat",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "DREAM PAIRS Women's Sole-Simple Ballerina Walking Flats Shoes",
+    "hard_constraints": [
+      "Rubber sole",
+      "Design in USA"
+    ],
+    "soft_preferences": [
+      "Heel height: 0.15\" (approx)",
+      "Ultra Flexible Rubber Outsole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit",
+      "comfort",
+      "style"
+    ]
+  }
+}

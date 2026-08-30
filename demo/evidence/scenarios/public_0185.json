@@ -1,0 +1,160 @@
+{
+  "sample_id": "public_0185",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BCW4QKV5",
+  "target_title": "MIOTAN Boy Shorts Underwear for Women High Waisted Panties Cotton Boxer Briefs 4 Pack",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Panties",
+    "Boy Shorts"
+  ],
+  "target_price": 19.99,
+  "target_rating": 4.2,
+  "target_rating_number": 186,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Panties Boy Shorts. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Panties Boy Shorts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Panties Boy Shorts",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0176YUJ1M",
+          "title": "Hanes Women's Cool Comfort Cotton Boyshort Panty (Pack of 3)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BCW4QKV5",
+          "title": "MIOTAN Boy Shorts Underwear for Women High Waisted Panties Cotton Boxer Briefs 4 Pack",
+          "price": 19.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09ZP39Z7S",
+          "title": "URATOT 6 Pack Women's Underwear Boy Short Seamless Boyshorts Panties Boxer Briefs Shorts for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01GSMQ8ZO",
+          "title": "Custom Panties - Girlfriend Gifts - Create Your Own Booty Shorts ADD Your OWN Text Boyshort Panties",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0725R1DTR",
+          "title": "Calvin Klein Women's Body Boyshort Panty",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00VSKWQLM",
+          "title": "Brazilex Women's Boy Short Panties Cotton",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00FZR0YZE",
+          "title": "Hanes Women's Underwear Boy Shorts Pack, Underwear for Women, Moisture-Wicking Cotton Panties, 6-Pack (Colors May Vary)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B005GVBU2K",
+          "title": "Comfort Choice Women's Plus Size 3-Pack Cotton Boxer Panties - 12, White",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09ZDZ3ZZJ",
+          "title": "NW opdamyi Women`s Underwear 4 Pack Soft Comfortable Loose Cotton Boy Shorts Solid Colors Panties",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07L8RC2B8",
+          "title": "Women's Comfortable Cotton Bike Yoga Boxer Brief Boyshort Pack of 5 (XS, Winter)",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "MIOTAN Boy Shorts Underwear for Women High Waisted Panties Cotton Boxer Briefs 4 Pack",
+    "hard_constraints": [
+      "cotton",
+      "92%Cotton/8%Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "material",
+      "fit"
+    ]
+  }
+}

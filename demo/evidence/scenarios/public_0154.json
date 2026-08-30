@@ -1,0 +1,404 @@
+{
+  "sample_id": "public_0154",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B00CYNKSTE",
+  "target_title": "Bestform Women's Wire Free Bra",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Bras",
+    "Everyday Bras"
+  ],
+  "target_price": 14.98,
+  "target_rating": 4.2,
+  "target_rating_number": 96,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bras Everyday Bras. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {
+          "use_case": [
+            "everyday"
+          ],
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bras Everyday Bras",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ],
+            "use_case": [
+              "everyday"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B005BT6C4I",
+          "title": "Fruit of the Loom Women's 2pk Grey and White Cotton Stretch Extreme Comfort Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B094BGFS5R",
+          "title": "Free People Carina Bralette, Mango XS",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B077276QGC",
+          "title": "wirarpa Women's High Waisted Cotton Underwear Ladies Soft Full Briefs Panties Multipack",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08ZJWTCDR",
+          "title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+          "price": 21.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08KKBBMMD",
+          "title": "The Children's Place Boys' Pull on Cargo Pants",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YF3D5Z7",
+          "title": "Amazon Essentials Men's Big & Tall 2-pack Short-sleeve Crewneck T-shirt Fit By Dxl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YF3W282",
+          "title": "Amazon Essentials Men's Big & Tall 2-pack Short-sleeve Crewneck T-shirt Fit By Dxl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07Q8JZLK6",
+          "title": "Amazon Essentials Men's Cotton Cushioned Low Cut Socks, 10 Pairs",
+          "price": 18.9,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C1ZVKCXB",
+          "title": "Tommy Hilfiger Boys' Short Sleeve Ken Ringer Crew Neck T-Shirt",
+          "price": 12.34,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {
+          "use_case": [
+            "everyday"
+          ],
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ],
+            "use_case": [
+              "everyday"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B005BT6C4I",
+          "title": "Fruit of the Loom Women's 2pk Grey and White Cotton Stretch Extreme Comfort Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B094BGFS5R",
+          "title": "Free People Carina Bralette, Mango XS",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B077276QGC",
+          "title": "wirarpa Women's High Waisted Cotton Underwear Ladies Soft Full Briefs Panties Multipack",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08ZJWTCDR",
+          "title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+          "price": 21.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0B2RF64YD",
+          "title": "Amazon Essentials Men's Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08KKBBMMD",
+          "title": "The Children's Place Boys' Pull on Cargo Pants",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YF3D5Z7",
+          "title": "Amazon Essentials Men's Big & Tall 2-pack Short-sleeve Crewneck T-shirt Fit By Dxl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YF3W282",
+          "title": "Amazon Essentials Men's Big & Tall 2-pack Short-sleeve Crewneck T-shirt Fit By Dxl",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07Q8JZLK6",
+          "title": "Amazon Essentials Men's Cotton Cushioned Low Cut Socks, 10 Pairs",
+          "price": 18.9,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C1ZVKCXB",
+          "title": "Tommy Hilfiger Boys' Short Sleeve Ken Ringer Crew Neck T-Shirt",
+          "price": 12.34,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: color: white; Hand Wash Only.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {
+          "use_case": [
+            "everyday"
+          ],
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "color": [
+            "white"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "color": [
+              "white"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ],
+            "use_case": [
+              "everyday"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00CYNKSTE",
+          "title": "Bestform Women's Wire Free Bra",
+          "price": 14.98,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09WCYC17X",
+          "title": "3 Pieces Men's A Shirts Classic Men Tank Tops Cotton Tank Tops Undershirts Sleeveless Workout Gym Tank Tops for Men",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0023ZZAXW",
+          "title": "Hanes 100% Cotton Lightly Lined Soft Cup 2-Pack, 34A-White/White",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07WBWWQNK",
+          "title": "MODARANI Printed Pocket Tee Shirts for Women Casual Loose Fit Tunic Tops Round Neck",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01FXPARHM",
+          "title": "Wantdo Men's Military Jacket Casual Bomber Jacket Stand Collar Canvas Jacket Windbreaker",
+          "price": 39.98,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B081J9RJ1B",
+          "title": "Minclouse Women's Long Sleeves Color Block Sweatshirts Hoodie Pullover Casual Drawstring Cute Tunic Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08BJMT9M7",
+          "title": "Longwu Women's Casual V-Neck Sleeveless/Short Sleeve Side Split Drawstring Waist Midi Length Vest Dress with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08B3CHZX3",
+          "title": "Generics Women's Sexy Floral Lace Front-Close Padded Bralette Comfy Racerback Halter Plunge Wireless Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B082YV16C7",
+          "title": "Tommy Hilfiger Men's Cotton Tony Adjustable Baseball Cap",
+          "price": 15.02,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Bestform Women's Wire Free Bra",
+    "hard_constraints": [
+      "cotton",
+      "color: white"
+    ],
+    "soft_preferences": [
+      "Hand Wash Only",
+      "Item model number: 5006715"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

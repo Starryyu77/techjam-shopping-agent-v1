@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0157",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B00BCHDM14",
+  "target_title": "Kamik Women's Momentum Snow Boot",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Boot Shop",
+    "Women",
+    "Outdoor & Work",
+    "Snow & Cold Weather"
+  ],
+  "target_price": 79.95,
+  "target_rating": 4.4,
+  "target_rating_number": 4601,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Outdoor & Work Snow & Cold Weather. A key requirement is: nylon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Outdoor & Work Snow & Cold Weather",
+        "hard_constraints": {
+          "use_case": [
+            "work"
+          ],
+          "material": [
+            "nylon"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Outdoor & Work Snow & Cold Weather",
+          "hard_constraints": {
+            "material": [
+              "nylon"
+            ],
+            "use_case": [
+              "work"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07RX4JHCY",
+          "title": "Toddler Snow Boots Boys & Girls Lightweight Waterproof Cold Weather Winter Outdoor Boots (Toddler/Little Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07S17CJLF",
+          "title": "Toddler Snow Boots Boys & Girls Lightweight Waterproof Cold Weather Winter Outdoor Boots (Toddler/Little Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0C19S5XH1",
+          "title": "G & F Products 100% Waterproof Winter Gloves for outdoor cold weather Double Coated Windproof HPT Plam and Fingers Acryl",
+          "price": 12.71,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B079YZK3G5",
+          "title": "VIV Collection Women's Ease in Pull-On Straight Fit Trouser Work Pants Wrinkle-Free Full & Ankle | 3 Different Inseams",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00BCHDM14",
+          "title": "Kamik Women's Momentum Snow Boot",
+          "price": 79.95,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07S7CWLPQ",
+          "title": "FREE SOLDIER Men's Cargo Shorts with Belt Lightweight Breathable Quick Dry Hiking Tactical Shorts Nylon Spandex",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00Q7JMFV0",
+          "title": "Columbia Men's BugabootPlus III Omni Cold-Weather Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00Q7JDXC0",
+          "title": "Columbia Men's BugabootPlus III Omni Cold-Weather Boot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B074X9PMTT",
+          "title": "GLOBALWIN Women's Fur Trek Winter Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07DDZM3LS",
+          "title": "Gildan Men's Polyester Half Cushion Low Cut Socks, 12-pack",
+          "price": 19.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Kamik Women's Momentum Snow Boot",
+    "hard_constraints": [
+      "nylon",
+      "Nylon"
+    ],
+    "soft_preferences": [
+      "Rubber sole",
+      "Seam-sealed waterproof snow boot featuring plush faux-fur collar, quick bungee lacing, and grippy PEAK snow and ice traction sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "material",
+      "warmth"
+    ]
+  }
+}

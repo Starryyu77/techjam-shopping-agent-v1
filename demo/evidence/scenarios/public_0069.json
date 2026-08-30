@@ -1,0 +1,259 @@
+{
+  "sample_id": "public_0069",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07ZFBQ76H",
+  "target_title": "Acrylic Earrings For Women Girls Statement Geometric Earrings Resin Acetate Drop Dangle Earrings Mottled Hoop Earrings Fashion Jewelry",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Jewelry",
+    "Earrings",
+    "Drop & Dangle"
+  ],
+  "target_price": 11.99,
+  "target_rating": 4.4,
+  "target_rating_number": 2921,
+  "hit": true,
+  "first_hit_turn": 2,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 2,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Earrings Drop & Dangle, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "earrings"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B083SDLMWT",
+          "title": "4 Pairs Moon Gold Earrings Sun Star Earrings Boho Earrings Moon Dangle Drop Earrings Retro Jewelry for Women Girls, Gold",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BXSGJBTX",
+          "title": "Madison Tyler Americana Collection Jewelry, Red White and Blue Plexi Double Star Drop Dangle Post Earrings for Women.",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07DGW6RLD",
+          "title": "Top Plaza Fashion Silver Spiral Goddess Earth Mother Charm Copper Dangle Drop Earrings Chakra Healing Crystal Natural Ge",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GMTM566",
+          "title": "Thread Ball Dangle Earrings Beaded Lantern Ear Stud Drop Wrapped Triple Balls Fashion Tassel Earring for Women -Gold",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09P5GQ4Z4",
+          "title": "MIGUO STORE Exaggerated African Head Comb Geometric Color Wooden Earrings Simple Retro Ethnic Style Dangle Drop Earrings",
+          "price": 5.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B097QRN1Q4",
+          "title": "Vertical Bar Dangle Earrings for Women - White Gold Rose Gold Yellow Gold Plated Short & Long Linear Stud Earrings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B071HM5Z4L",
+          "title": "Hoops & Loops 925 Sterling Silver Infinity Eternity Figure Eight 8 Polished Twisted Dangle Hook Earrings for Women and T",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B085XCTMY3",
+          "title": "Gotocut Ethnic Style Colorful Feather Print Faux Leather Drop Earrings for Women,Girl Dangle Earring Set Lightweight Han",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07TT3WNV9",
+          "title": "Masedy 3 Pairs Beaded Statement Earrings for Women Raffia Earrings for Girls Fan Dangle Drop Earrings Bohemian",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08B833J56",
+          "title": "Glitzies Round Pearl Hoop Earrings for Women Fashion Hypoallergenic Girls Pearl Earrings Drop Dangle Earrings Jewelry Gi",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: 【COMFORTABLE TO WEAR】—Acrylic Leopard dangle earring give a summer-ready feel to any look. Post back closures for pieced ears. Size: 2.5''in length weight 0.2oz a pair,Lightweight,.",
+      "agent_message": "I found 10 current candidates. Which color do you prefer?",
+      "ask_attribute": "color",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "comfortable",
+            "lightweight"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "lightweight"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07ZFBQ76H",
+          "title": "Acrylic Earrings For Women Girls Statement Geometric Earrings Resin Acetate Drop Dangle Earrings Mottled Hoop Earrings F",
+          "price": 11.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08BWR1T58",
+          "title": "47 Pairs Fashion Earrings for Women Girls, Boho Statement Tassel Rattan Leather Earrings Butterfly Acrylic Hoop Stud Dro",
+          "price": 16.19,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0711QBT8X",
+          "title": "CiNily 18K White Gold Plated Leaf Opal Dangle Drop Earrings for Women Teen Girls Hypoallergenic Opal Jewelry Gift",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08HWDR881",
+          "title": "BONALUNA Bohemian Wood And Marble Effect Oblong Shaped Drop Statement Earrings",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083LV7JB1",
+          "title": "9 Pairs Faux Druzy Drop Earrings Crystal Pendant Dangle Earrings Multicolor Stainless Steel Earrings for Women Girls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B075YH7SPM",
+          "title": "Thread Tassel Earrings Statement Tassel Dangle Earrings Bohemian Fringe Drop Earrings Gifts for Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08678QV6Z",
+          "title": "SMALLLOVE Wooden Hoop Earrings for Women Girls Retro Black African Bohemian Wood Teardrop Geometric Lightweight Dangle D",
+          "price": 5.66,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07MYT1SJP",
+          "title": "4 Pairs Funny Acrylic Goldfish and Starfish Earrings, Water Bag Shape Dangle Hook Earrings for Girls Women (Style1)",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07MFJTN3W",
+          "title": "GIMEFIVE Gold Sequin Earrings Lightweight Metal Mesh Grid Tassel Drop Dangle Earrings Long Hook Earrings Women Girls",
+          "price": 8.9,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B083SDLMWT",
+          "title": "4 Pairs Moon Gold Earrings Sun Star Earrings Boho Earrings Moon Dangle Drop Earrings Retro Jewelry for Women Girls, Gold",
+          "price": 11.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Acrylic Earrings For Women Girls Statement Geometric Earrings Resin Acetate Drop Dangle Earrings Mottled Hoop Earrings Fashion Jewelry",
+    "hard_constraints": [
+      "【FASHION DESIGN 】—Acrylic mottled hoop earrings. Square and oval silhouette. Marbled Floral and Leopard design. Post back. Light-weight earrings. these acrylic earrings are the per",
+      "【COMFORTABLE TO WEAR】—Acrylic Leopard dangle earring give a summer-ready feel to any look. Post back closures for pieced ears. Size: 2.5''in length weight 0.2oz a pair,Lightweight,"
+    ],
+    "soft_preferences": [
+      "【PERFECT GIFT】—Geometric drop dangle earring with Excellent Luster and Unimpeachable Rust very popular with women and girls packaged in a velvet bag, a wonderful gift giving mom, w",
+      "【MATCH TO MOST OCCASIONS】—Minimalist Acrylic Hoop Earrings works well with your daily outfit,Can wear it with many things go to many occasions.Such as Valentine’s Day, Christmas’ D"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "warmth",
+      "material",
+      "comfort",
+      "fit"
+    ]
+  }
+}

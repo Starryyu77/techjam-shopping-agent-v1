@@ -1,0 +1,146 @@
+{
+  "sample_id": "public_0169",
+  "scenario_type": "boundary",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0829R9M5G",
+  "target_title": "Amazon Essentials Women's Pull-On Knit Jegging (Available in Plus Size)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Jeans"
+  ],
+  "target_price": 25.6,
+  "target_rating": 4.3,
+  "target_rating_number": 11994,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 8,
+  "reciprocal_rank": 0.125,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Jeans, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Jeans"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09BJT1996",
+          "title": "PRETTYGARDEN Women's Mid Rise Stretch Skinny Jeans Distressed Ripped Jeans Slim Fit Slit Denim Jeans Pants Bottoms",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09WTM3QKQ",
+          "title": "Gloria Vanderbilt Women's Classic Amanda High Rise Tapered Jean |High Waist| Stretch Fabric| - Portland Indigo Blue Wash",
+          "price": 26.59,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0B6VK1XNY",
+          "title": "Pants for Women Women's Fashion Summer Sweet Loose Casual Print Retro Strappy Jumpsuit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TVDN6JH",
+          "title": "Sarin Mathews Womens Shirts Casual Tee Shirts Short Sleeve Patchwork Color Block Loose Fits Tunic Tops Blouses",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0829R9M5G",
+          "title": "Amazon Essentials Women's Pull-On Knit Jegging (Available in Plus Size)",
+          "price": 25.6,
+          "is_target": true
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0858VDFDW",
+          "title": "Riders by Lee Indigo Women's Ultra Soft Denim Capri",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07PH3X7QK",
+          "title": "Amazon Essentials Women's Lace-Up Combat Boot",
+          "price": 47.4,
+          "is_target": false
+        }
+      ],
+      "target_rank": 8,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Amazon Essentials Women's Pull-On Knit Jegging (Available in Plus Size)",
+    "hard_constraints": [
+      "cotton",
+      "57% Cotton, 26% Polyester, 10% Other Fibers, 7% Elastane"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "boundary"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort"
+    ]
+  }
+}

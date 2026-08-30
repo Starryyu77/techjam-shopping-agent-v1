@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0014",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B088QF5G58",
+  "target_title": "Hanes Men's Underwear Briefs Pack, Mid-Rise, Moisture-Wicking, 6-Pack",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Underwear",
+    "Briefs"
+  ],
+  "target_price": 17.91,
+  "target_rating": 4.5,
+  "target_rating_number": 21411,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Underwear Briefs, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Underwear Briefs",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Underwear Briefs"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B088QF5G58",
+          "title": "Hanes Men's Underwear Briefs Pack, Mid-Rise, Moisture-Wicking, 6-Pack",
+          "price": 17.91,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B089M57PSQ",
+          "title": "Boboking 100% Cotton Little Boys Briefs Soft Dinosaur Truck Toddler Underwear",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0846KWKVB",
+          "title": "Hanes Boys' Tagless Super Soft Briefs 10-Pack",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07HBJG7QJ",
+          "title": "Amazon Essentials Men's Big & Tall 5-Pack Tag-Free Briefs fit by DXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07WTC11SR",
+          "title": "ROCHVIE Underwear for Women Cotton Panties Full Coverage Soft Womens Underwear Briefs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07HKH91KZ",
+          "title": "PJ Masks Boys' Catboy Gekko Owlette Underwear",
+          "price": 19.5,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08Z6KJT1W",
+          "title": "Bamboo Sports Mens No Fly Bamboo Underwear Briefs- Super Soft & Comfortable Fit",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07VLFBWGL",
+          "title": "Stafford 6 Pack 100% Cotton Low-Rise Briefs White",
+          "price": 31.83,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B34ZFDTM",
+          "title": "True Religion Mens Boxer Briefs – Trunks Underwear for Men Pack, 6-Pack",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07XCWRCLD",
+          "title": "Goodthreads Men's Lightweight Performance Knit Brief, Pack of 3",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Men's Underwear Briefs Pack, Mid-Rise, Moisture-Wicking, 6-Pack",
+    "hard_constraints": [
+      "cotton",
+      "Solids: 100% Cotton; heathers: 75% cotton, 25% polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "warmth",
+      "comfort",
+      "style",
+      "fit"
+    ]
+  }
+}

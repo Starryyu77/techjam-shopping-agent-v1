@@ -1,0 +1,257 @@
+{
+  "sample_id": "public_0141",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BLH7JHG8",
+  "target_title": "Fzroezz 6Pcs Nose Studs L Shaped 20 Gauge Nose Piercings Nose Rings Studs Nose Piercing Jewelry Nose Piercing Stud Surgical Steel Nose Ring Nose Rings Studs Jewelry for Women Men 20G 2mm 2.5mm 3mm CZ ",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Jewelry",
+    "Body Jewelry",
+    "Piercing Jewelry",
+    "Screws"
+  ],
+  "target_price": 5.49,
+  "target_rating": 4.7,
+  "target_rating_number": 76,
+  "hit": true,
+  "first_hit_turn": 2,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 2,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Piercing Jewelry Screws, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "jewelry",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jewelry"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BY2KGLW8",
+          "title": "Anicina Nose Rings 18G Nose Rings Hoops Surgical Steel Nose Piercing Kit L Shape Nose Studs for Women CZ Heart Moon Nose",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07RYS9CPP",
+          "title": "ZS 5/6 Pieces Opal Nose Studs 20 Gauge Nose Pin Blue Nose Piercing Stud Stainless Steel Nose Stud Retainer L-Shape",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B001EU3ZR0",
+          "title": "Body Candy Women's Solid 14k Yellow Gold 1.5mm Ball L Shaped Nose Ring 20 Gauge 1/4\" Body Piercing Screw, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TXH6Z4T",
+          "title": "FreshTrends Diamond Nose Stud 14K Yellow Gold Nose Ring Bone 20 Gauge SI1 Clarity",
+          "price": 140.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09DV77JK1",
+          "title": "Uqnwbdq 3Pcs-10pcs Dermal Base Dermal Piercing Replacement 316L Surgical Steel Dermal Piercing Jewelry for Women Men",
+          "price": 10.59,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07DR9LGDW",
+          "title": "Incaton 20G Stainless Steel CZ Inlaid Nose Rings Studs Straight Bone Nose Studs Screw L Shaped Nose Piercing Jewelry (6p",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BC17W7G7",
+          "title": "PiercingPoint Round Cz Stone 14K Gold 18 Gauge L Shape Nose Stud- Tiny Nose Ring- L Shaped Nose Ring- 14K Gold Nose Stud",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TWMXJMZ",
+          "title": "FreshTrends 1.5mm Cubic Zirconia 14K Rose Gold Nose Ring Bone 20G",
+          "price": 60.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B013XEOEEW",
+          "title": "Body Candy Steel Aurora Press Fit L Shaped Nose Stud Ring Created with Crystal 18 Gauge 1/4\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0018WNDTO",
+          "title": "Body Candy Solid 14k Yellow Gold 2mm Fuchsia Synthetic Opal L Shaped Nose Stud Ring 20 Gauge 1/4\"",
+          "price": 44.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: Nose Rings Studs Size: 20 gauge (0.8mm), Pin Length: 7mm (9/32\"), Round Cubic Zirconia Size: 2mm. Easy to Put In and Take Off, absolutely make you feel beautiful, comfortable, happ.",
+      "agent_message": "I found 10 current candidates. Which color do you prefer?",
+      "ask_attribute": "color",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "rings",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "rings",
+          "soft_preferences": {
+            "feature": [
+              "comfortable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BY2KGLW8",
+          "title": "Anicina Nose Rings 18G Nose Rings Hoops Surgical Steel Nose Piercing Kit L Shape Nose Studs for Women CZ Heart Moon Nose",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BLH7JHG8",
+          "title": "Fzroezz 6Pcs Nose Studs L Shaped 20 Gauge Nose Piercings Nose Rings Studs Nose Piercing Jewelry Nose Piercing Stud Surgi",
+          "price": 5.49,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07TXH6Z4T",
+          "title": "FreshTrends Diamond Nose Stud 14K Yellow Gold Nose Ring Bone 20 Gauge SI1 Clarity",
+          "price": 140.0,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07DR9LGDW",
+          "title": "Incaton 20G Stainless Steel CZ Inlaid Nose Rings Studs Straight Bone Nose Studs Screw L Shaped Nose Piercing Jewelry (6p",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BC17W7G7",
+          "title": "PiercingPoint Round Cz Stone 14K Gold 18 Gauge L Shape Nose Stud- Tiny Nose Ring- L Shaped Nose Ring- 14K Gold Nose Stud",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0871W41JG",
+          "title": "Wide Shoulder Strap Adjustable Replacement Belt Crossbody Canvas Bag Handbag",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08HCP9YTV",
+          "title": "1pc Surgical Steel Piercing Ring for Nose Septum Cartilage Helix Tragus Conch Rook Daith Lobe 20g-18g-16g-14g-12g-10g 5m",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08DQWGMLZ",
+          "title": "Mayhoop 16G Surgical Steel Horseshoe Nose Septum Rings Piercing Jewelry Cartilage Helix Tragus Earring Hoop Lip Horsesho",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0793LPS1C",
+          "title": "FIBO STEEL 24 Pcs 20G Stainless Steel Hoop Nose Rings Screw Stud Rings Piercing Jewelry Colored CZ Inlaid",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07PZFRN4Z",
+          "title": "4 Pairs Sterling Silver Cartilage Small Hoop Earrings Set Hypoallergenic 14K White Gold Plated Endless Helix Tragus Earr",
+          "price": 12.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fzroezz 6Pcs Nose Studs L Shaped 20 Gauge Nose Piercings Nose Rings Studs Nose Piercing Jewelry Nose Piercing Stud Surgical Steel Nose Ring Nose Rings Studs Jewelry for Women Men 2",
+    "hard_constraints": [
+      "You will receive 6 Pcs silver nose studs, coming with one free gift velvet bag. Can be used as nose rings, nose piercings, nose rings studs, nose piercing jewelry, nostril piercing",
+      "color: red"
+    ],
+    "soft_preferences": [
+      "Nose Rings Studs Size: 20 gauge (0.8mm), Pin Length: 7mm (9/32\"), Round Cubic Zirconia Size: 2mm. Easy to Put In and Take Off, absolutely make you feel beautiful, comfortable, happ",
+      "High quality 316L surgical stainless steel, hypoallergenic, nickel and lead free, never rust and tarnish resistance, lightweight. High-polished finishing and electroplating, super"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

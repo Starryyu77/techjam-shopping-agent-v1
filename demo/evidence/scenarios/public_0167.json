@@ -1,0 +1,376 @@
+{
+  "sample_id": "public_0167",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07357B79L",
+  "target_title": "Champion Women's Absolute Sports Bra with SmoothTec Band, Graphic",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Bras",
+    "Sports Bras"
+  ],
+  "target_price": 28.0,
+  "target_rating": 4.1,
+  "target_rating_number": 552,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bras Sports Bras, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Bras Sports Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "sports"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bras Sports Bras",
+          "soft_preferences": {
+            "use_case": [
+              "sports"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B089W2LQ3W",
+          "title": "Sports Bras for Women, High Impact Full Coverage Yoga Gym Sports Bras Crop Workout Tank Tops with Removable Pads Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VFPS68P",
+          "title": "Glamorise Women's Full Figure No Bounce Plus Size Camisole Wirefree Back Close Sports Bra #1066",
+          "price": 35.25,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09FT7XZSV",
+          "title": "FITTIN Cross Back Sports Bras for Women - Seamless Sports Bra with Removable Padded for Yoga Gym Workout",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B083SK228W",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08BWHG5WG",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09TQFV6DW",
+          "title": "SYROKAN Women's High Impact Front Closure Racerback Full Support Wirefree Sports Bra",
+          "price": 16.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09B1RHH8F",
+          "title": "YOGERSSY Longline Sports Bras for Women Wirefree Padded Sports Yoga Bra Gym Running Workout Tank Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B099KMQB97",
+          "title": "YOGERSSY Longline Sports Bras for Women Wirefree Padded Sports Yoga Bra Gym Running Workout Tank Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B06VV8PL4W",
+          "title": "Maidenform Women's Sport Secure Zip Front Underwire Racerback DM7991",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08141HFYW",
+          "title": "Core 10 Women's Ballerina Light-Support Strappy Back Yoga Sports Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Bras Sports Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "sports"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "sports"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B089W2LQ3W",
+          "title": "Sports Bras for Women, High Impact Full Coverage Yoga Gym Sports Bras Crop Workout Tank Tops with Removable Pads Black",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07VFPS68P",
+          "title": "Glamorise Women's Full Figure No Bounce Plus Size Camisole Wirefree Back Close Sports Bra #1066",
+          "price": 35.25,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09FT7XZSV",
+          "title": "FITTIN Cross Back Sports Bras for Women - Seamless Sports Bra with Removable Padded for Yoga Gym Workout",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B083SK228W",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08BWHG5WG",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09TQFV6DW",
+          "title": "SYROKAN Women's High Impact Front Closure Racerback Full Support Wirefree Sports Bra",
+          "price": 16.0,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09B1RHH8F",
+          "title": "YOGERSSY Longline Sports Bras for Women Wirefree Padded Sports Yoga Bra Gym Running Workout Tank Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B099KMQB97",
+          "title": "YOGERSSY Longline Sports Bras for Women Wirefree Padded Sports Yoga Bra Gym Running Workout Tank Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B06VV8PL4W",
+          "title": "Maidenform Women's Sport Secure Zip Front Underwire Racerback DM7991",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08141HFYW",
+          "title": "Core 10 Women's Ballerina Light-Support Strappy Back Yoga Sports Bra",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Imported; Pull-On closure.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Sports Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "sports"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "sports"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09FT7XZSV",
+          "title": "FITTIN Cross Back Sports Bras for Women - Seamless Sports Bra with Removable Padded for Yoga Gym Workout",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08ML8YGDZ",
+          "title": "ohlyah Women's Sports Bra Seamless Comfort Yoga Bras with Removable Pads",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B095P8283H",
+          "title": "THE GYM PEOPLE Womens Longline Sports Bra Padded Crop Tank Tops Workout Yoga Bra with Removable Pads",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07357B79L",
+          "title": "Champion Women's Absolute Sports Bra with SmoothTec Band, Graphic",
+          "price": 28.0,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08P46TVJW",
+          "title": "ODODOS Women's Y Racer Back Padded Sports Bra Fitness Workout Longline Yoga Bra Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08DJZPK9Q",
+          "title": "Crop Tops for Women Workout Sleeveless Shirt Longline Summer Padded Sport Bra for Teen Girls Yoga Fitness Running Tank T",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07F7485QV",
+          "title": "HeartFor Racerback Sports Bras for Women - Padded High Impact Workout,Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B5HLH1DB",
+          "title": "LIONESS ACTIVEWEAR Sports Bras for Women – Crisscross Back Medium Support Sports Bra with Removable Cups",
+          "price": 7.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B095LJX1MM",
+          "title": "Womens Sports Bra Top Workout Tank Tops Longline Sports Bra with Removable Padded Medium Support Yoga Bras Gym Running T",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B095LJ53TW",
+          "title": "Womens Sports Bra Top Workout Tank Tops Longline Sports Bra with Removable Padded Medium Support Yoga Bras Gym Running T",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Champion Women's Absolute Sports Bra with SmoothTec Band, Graphic",
+    "hard_constraints": [
+      "Imported",
+      "Pull-On closure"
+    ],
+    "soft_preferences": [
+      "Machine Wash",
+      "Wicking for moisture management"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "fit",
+      "style",
+      "durability"
+    ]
+  }
+}

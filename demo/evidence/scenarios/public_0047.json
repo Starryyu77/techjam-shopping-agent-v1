@@ -1,0 +1,363 @@
+{
+  "sample_id": "public_0047",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0BYZX7B1L",
+  "target_title": "Lunarable Multicolor Unisex Bandana",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Men",
+    "Accessories",
+    "Bandanas"
+  ],
+  "target_price": 17.99,
+  "target_rating": 4.2,
+  "target_rating_number": 11,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Accessories Bandanas, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Accessories Bandanas",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Accessories Bandanas"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00PG84H9G",
+          "title": "CoverYourHair Paisley Bandanas - 12 Pack Bandanas - Bulk Bandanas - Dozen bandanas",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08GYDHPV4",
+          "title": "Yes We Vibe Neck Gaiter Face Mask + Bandana Headband + Buff (3 Pack) - Colorful & Vibrant Design - For Men and Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0894MZ9JS",
+          "title": "Cowboy Bandanas - Novelty Cotton Bandanas Paisley Bandanas Printed Headwrap Scarf Multi-Purpose Double-Sided For Men Wom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07BWDJ7FF",
+          "title": "FakeFace Breathable Skull Cap Moisture Wicking Beanie Sun UV Protection Hat Motorcycle Helmet Liner",
+          "price": 4.3,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B086QZNTPF",
+          "title": "Bandanas 6 PC Paisley Bandanas Cowboy for face, Head, Wristband, Cotton Handkerchiefs for Men and Women 22\" X 22\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08FJFZKXZ",
+          "title": "6Pcs Men's Face Bandanas Neck Gaiter Face Scarf Headwear for Outdoors, Festivals, Sports",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08882QBFT",
+          "title": "Hopgo Unisex 3pcs Bandanas Face Mask for Outdoors Sports Neck Gaiter Triangle Face Scarf with Earloop",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00BI9ISGK",
+          "title": "BUFF UV Multifunctional Headwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09C1GBVFW",
+          "title": "CTM® Cotton Mexican Flag Bandana",
+          "price": 2.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BKPX1HGG",
+          "title": "JIANGLAI Fringe Rhinestone Bandana & Heart Sunglasses,Disco Cowgirl Bachelorette",
+          "price": 11.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Accessories Bandanas",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00PG84H9G",
+          "title": "CoverYourHair Paisley Bandanas - 12 Pack Bandanas - Bulk Bandanas - Dozen bandanas",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08GYDHPV4",
+          "title": "Yes We Vibe Neck Gaiter Face Mask + Bandana Headband + Buff (3 Pack) - Colorful & Vibrant Design - For Men and Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0894MZ9JS",
+          "title": "Cowboy Bandanas - Novelty Cotton Bandanas Paisley Bandanas Printed Headwrap Scarf Multi-Purpose Double-Sided For Men Wom",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07BWDJ7FF",
+          "title": "FakeFace Breathable Skull Cap Moisture Wicking Beanie Sun UV Protection Hat Motorcycle Helmet Liner",
+          "price": 4.3,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B086QZNTPF",
+          "title": "Bandanas 6 PC Paisley Bandanas Cowboy for face, Head, Wristband, Cotton Handkerchiefs for Men and Women 22\" X 22\"",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08FJFZKXZ",
+          "title": "6Pcs Men's Face Bandanas Neck Gaiter Face Scarf Headwear for Outdoors, Festivals, Sports",
+          "price": 18.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08882QBFT",
+          "title": "Hopgo Unisex 3pcs Bandanas Face Mask for Outdoors Sports Neck Gaiter Triangle Face Scarf with Earloop",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00BI9ISGK",
+          "title": "BUFF UV Multifunctional Headwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09C1GBVFW",
+          "title": "CTM® Cotton Mexican Flag Bandana",
+          "price": 2.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BKPX1HGG",
+          "title": "JIANGLAI Fringe Rhinestone Bandana & Heart Sunglasses,Disco Cowgirl Bachelorette",
+          "price": 11.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; color: pink.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Accessories Bandanas",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ],
+          "color": [
+            "pink"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ],
+            "color": [
+              "pink"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BKPX1HGG",
+          "title": "JIANGLAI Fringe Rhinestone Bandana & Heart Sunglasses,Disco Cowgirl Bachelorette",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BYZX7B1L",
+          "title": "Lunarable Multicolor Unisex Bandana",
+          "price": 17.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B096FXGVF5",
+          "title": "Langwyqu Womens' Cap Sleeve Casual Loose Fit Basic Shirts Tank Tops",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08N4962LL",
+          "title": "Cyanstyle Women's Long Sleeve Henley V-Neck Button Sweatshirt Tunic Hoodies Casual Pullover with Drawstring Pink Medium",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08KSH4DSN",
+          "title": "Stylore Christmas Shirt for Men Hawaiian Relaxed-Fit Vacation Multiple Color",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B015H5OCGK",
+          "title": "PERSUN Women‘s Elegant High Waist Skater Flared A-Line Midi Skirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07VYGB7M6",
+          "title": "Tinsow 8 Rib Rainbow Umbrella Portable LGBT Pride Umbrella Collapsible, Compact and Durable, Lightweight and Cute Travel",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08NY63L9W",
+          "title": "Esobo Womens Tie Dye Tank Tops Loose Fit V Neck Sleeveless Color Block Shirts Casual Tunic Tees with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08NY678PP",
+          "title": "Esobo Womens Tie Dye Tank Tops Loose Fit V Neck Sleeveless Color Block Shirts Casual Tunic Tees with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B089NJB8V1",
+          "title": "Bbonlinedress Women's Summer Boho Floral High Waist Ruffle A-line Mini Skater Skirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Lunarable Multicolor Unisex Bandana",
+    "hard_constraints": [
+      "polyester",
+      "color: pink"
+    ],
+    "soft_preferences": [
+      "100% Polyester",
+      "Adjustable closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "performance"
+    ]
+  }
+}

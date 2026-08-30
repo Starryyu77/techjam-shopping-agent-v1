@@ -1,0 +1,355 @@
+{
+  "sample_id": "public_0126",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B09M84R91V",
+  "target_title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "Blouses & Button-Down Shirts"
+  ],
+  "target_price": 21.14,
+  "target_rating": 4.3,
+  "target_rating_number": 32276,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses Blouses & Button-Down Shirts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07TZPFQ9N",
+          "title": "Biucly Women's Casual V Neck Tops 3/4 Sleeve Tie Knot Chiffon Blouses Button Down Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B094XZJY5X",
+          "title": "luvamia Women's Casual Long Balloon Sleeve V Neck Loose Button Down Shirts Tie Knot Tops Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07XTG1J28",
+          "title": "Milumia Women's Elegant Round Neck Long Sleeve Pullovers Asymmetrical Hem Peplum Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0831QQKSH",
+          "title": "acelyn Women's Elegant Sequin Mesh Sheer Puff Long Sleeve Mock Neck Slim Fit Party Blouse Shirt Top",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Z83KDSL",
+          "title": "Kyerivs Women's Check Plaid Shirts V Neck Roll Up/Long Sleeve Casual Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06ZZW2ZT1",
+          "title": "Ninedaily Womens Business Tops Lapel V Neck Slimming Long Sleeve Office Blouse",
+          "price": 30.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0899VBWGH",
+          "title": "Sousuoty Womens Short Sleeve V Neck T Shirts Wrap Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WL6QY56",
+          "title": "YOINS Cold Shoulder Long Sleeves Tops for Women Loose Casual Pullovers Cut Out Shirts Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01GNW638Q",
+          "title": "WLLW Women Khaki Asymmetric Hem Short Sleeve with Sequin Inserts Shirt Top",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09VS3CGMZ",
+          "title": "Belle Poque Women Vintage Puff Sleeve Blouse Off The Shoulder Slim Fit Tee Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07TZPFQ9N",
+          "title": "Biucly Women's Casual V Neck Tops 3/4 Sleeve Tie Knot Chiffon Blouses Button Down Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B094XZJY5X",
+          "title": "luvamia Women's Casual Long Balloon Sleeve V Neck Loose Button Down Shirts Tie Knot Tops Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07XTG1J28",
+          "title": "Milumia Women's Elegant Round Neck Long Sleeve Pullovers Asymmetrical Hem Peplum Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0831QQKSH",
+          "title": "acelyn Women's Elegant Sequin Mesh Sheer Puff Long Sleeve Mock Neck Slim Fit Party Blouse Shirt Top",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07Z83KDSL",
+          "title": "Kyerivs Women's Check Plaid Shirts V Neck Roll Up/Long Sleeve Casual Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B06ZZW2ZT1",
+          "title": "Ninedaily Womens Business Tops Lapel V Neck Slimming Long Sleeve Office Blouse",
+          "price": 30.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0899VBWGH",
+          "title": "Sousuoty Womens Short Sleeve V Neck T Shirts Wrap Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07WL6QY56",
+          "title": "YOINS Cold Shoulder Long Sleeves Tops for Women Loose Casual Pullovers Cut Out Shirts Blouses",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01GNW638Q",
+          "title": "WLLW Women Khaki Asymmetric Hem Short Sleeve with Sequin Inserts Shirt Top",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09VS3CGMZ",
+          "title": "Belle Poque Women Vintage Puff Sleeve Blouse Off The Shoulder Slim Fit Tee Shirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: polyester; 95% Polyester, 5% Spandex.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester",
+            "spandex"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester",
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09M84R91V",
+          "title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+          "price": 21.14,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07TFF3C28",
+          "title": "FARYSAYS Women's V Neck Long Sleeve Boho Floral Shirts Casual Loose Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07TZPFQ9N",
+          "title": "Biucly Women's Casual V Neck Tops 3/4 Sleeve Tie Knot Chiffon Blouses Button Down Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07SD35K7G",
+          "title": "FARYSAYS Women's Casual Boho Embroidered V Neck Long Sleeve Shirts Casual Loose Blouses Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B087B4KKX7",
+          "title": "BLENCOT Womens 3/4 Bell Sleeve V Neck Lace Patchwork Blouse Casual Loose Shirt Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07BRQSP88",
+          "title": "LookbookStore Women's Short Sleeve Leopard Patchwork Blouse Crew Neck Shirt Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09VS3CGMZ",
+          "title": "Belle Poque Women Vintage Puff Sleeve Blouse Off The Shoulder Slim Fit Tee Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TJR942W",
+          "title": "Shawhuwa Blouses Tie Front Womens Button Down Deep V Neck Tops 3/4 Sleeve Casual Blouse Tops Summer Chiffon Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08DS7Q2RJ",
+          "title": "AlvaQ Women Casual V Neck Cuffed Sleeve Striped Button Down Blouses Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08L6BB77C",
+          "title": "BTFBM Women Long Sleeve V-Neck Buttons Loose Shirts Blouses Casual Cozy Soft Sweatshirts Tops Leopard Print Solid Color",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+    "hard_constraints": [
+      "polyester",
+      "95% Polyester, 5% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,354 @@
+{
+  "sample_id": "public_0175",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07D5M61T2",
+  "target_title": "Ariat Men’s M2 Relaxed Boot Cut Jean",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Jeans"
+  ],
+  "target_price": 59.95,
+  "target_rating": 4.6,
+  "target_rating_number": 3529,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 6,
+  "reciprocal_rank": 0.16666666666666666,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Men Jeans, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Men Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Men Jeans"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B000TJG29U",
+          "title": "Key Apparel Men's Relaxed Fit Double Front Denim Logger Dungaree",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07RMDYG9G",
+          "title": "Coffee Leather Belt for Western Men Jeans with Brass Roller Buckle 34-50 Inch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B086GDZTGL",
+          "title": "DiShang Men's Regular Fit Jeans with Classic 5-Pocket Straight Flex Leg Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B099DMTCXV",
+          "title": "Crocs Unisex-Adult Men's and Women's Classic Slide Sandals",
+          "price": 38.12,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08QN272FH",
+          "title": "Tommy Hilfiger Men's Ribbon Inlay Fabric Belt with Harness Buckle",
+          "price": 25.36,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Men Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B000TJG29U",
+          "title": "Key Apparel Men's Relaxed Fit Double Front Denim Logger Dungaree",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07RMDYG9G",
+          "title": "Coffee Leather Belt for Western Men Jeans with Brass Roller Buckle 34-50 Inch",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B086GDZTGL",
+          "title": "DiShang Men's Regular Fit Jeans with Classic 5-Pocket Straight Flex Leg Jeans",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BQDTGHMZ",
+          "title": "Signature by Levi Strauss & Co. Gold Label Women's Modern Skinny Jeans (Standard and Plus)",
+          "price": 25.16,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00E1ITZIA",
+          "title": "Crocs Men's Santa Cruz Loafer | Comfortable Men's Loafers | Slip On Shoes, Navy/Stucco, 10 US Men",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B099DMTCXV",
+          "title": "Crocs Unisex-Adult Men's and Women's Classic Slide Sandals",
+          "price": 38.12,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08QN272FH",
+          "title": "Tommy Hilfiger Men's Ribbon Inlay Fabric Belt with Harness Buckle",
+          "price": 25.36,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 100% Cotton.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Men Jeans",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B085FT43TV",
+          "title": "BOCOMAL Men's FR Jeans Flame Resistant Pants Low Rise Comfort 11.5oz 100% Cotton Blue Denim Fire Retardant Jeans, 40W x ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09TSLQ3B5",
+          "title": "Wrangler Men’s 13MWZ Cowboy Cut Original Fit Jean",
+          "price": 29.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07YHBF835",
+          "title": "Wrangler Riggs Workwear Men's Logger Twill Long Sleeve Workshirt",
+          "price": 39.0,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CJWHVQD",
+          "title": "Wrangler Men's Premium Performance Cowboy Cut Regular Fit Jean",
+          "price": 38.0,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BY8NSJHQ",
+          "title": "Levi's Boys' 505 Regular Fit Jeans",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07D5M61T2",
+          "title": "Ariat Men’s M2 Relaxed Boot Cut Jean",
+          "price": 59.95,
+          "is_target": true
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07JBW81J4",
+          "title": "Myobe Women's Cardigan Elbow Patch Shawl Collar Summer Striped Open Front Cardigan Sweaters Coat Outwear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B01FXPARHM",
+          "title": "Wantdo Men's Military Jacket Casual Bomber Jacket Stand Collar Canvas Jacket Windbreaker",
+          "price": 39.98,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0BZ5BL53L",
+          "title": "Blizzard Bay Men's Festive Llama",
+          "price": 23.35,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07KQ4PF54",
+          "title": "LOCALMODE Men's Slim Fit Cotton Business Shirt Solid Long Sleeve Button Down Dress Shirts",
+          "price": 25.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 6,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Ariat Men’s M2 Relaxed Boot Cut Jean",
+    "hard_constraints": [
+      "cotton",
+      "100% Cotton"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "style",
+      "material",
+      "comfort"
+    ]
+  }
+}

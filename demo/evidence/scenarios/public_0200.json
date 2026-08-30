@@ -1,0 +1,146 @@
+{
+  "sample_id": "public_0200",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07VFZ2FC2",
+  "target_title": "FUNKYMONKEY Mens Bathroom Shower Slippers Indoor Home Beach Non Slip Sandal",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men"
+  ],
+  "target_price": 15.99,
+  "target_rating": 4.3,
+  "target_rating_number": 15461,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes & Jewelry Men. A key requirement is: Ethylene Vinyl Acetate sole.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08513YB2T",
+          "title": "Crocs Unisex-Adult Classic Clog",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BKL2R1WX",
+          "title": "Crocs Unisex-Adult Classic Tie Dye Clogs",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B099DMTCXV",
+          "title": "Crocs Unisex-Adult Men's and Women's Classic Slide Sandals",
+          "price": 38.12,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B010WE6VHO",
+          "title": "Crocs Unisex Offroad Sport Clogs",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07VFZ2FC2",
+          "title": "FUNKYMONKEY Mens Bathroom Shower Slippers Indoor Home Beach Non Slip Sandal",
+          "price": 15.99,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B003WSZXPO",
+          "title": "Crocs Men's and Women's Athens Flip Flop | Water Shoes | Beach Sandals",
+          "price": 24.06,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07L5GBVX7",
+          "title": "Bruno Marc Men's Slip-On Canvas Sneaker Loafer Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08T84NF3N",
+          "title": "Women Mens Cloud Slides Slippers EVA Open Toe Bath Shower Quick Drying Non-Slip",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08F51YN5Q",
+          "title": "ATIKA Men's Outdoor Hiking Sandals, Lightweight Trail Walking Sandals, Closed Toe Athletic Sport Sandals, Summer Water S",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07TCL7WPX",
+          "title": "Crocs Men's LiteRide Modform Slip On Sneakers, Black/White, 9 Men",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "FUNKYMONKEY Mens Bathroom Shower Slippers Indoor Home Beach Non Slip Sandal",
+    "hard_constraints": [
+      "Ethylene Vinyl Acetate sole",
+      "Heel measures approximately 2.3 centimeters"
+    ],
+    "soft_preferences": [
+      "【Concise Style】Diamond pattern and raised design, pure color, casual style are quite suitable for home and any other casual occasion",
+      "【Soft & Lightweight】Which only weight about 200g, lightweight and durable EVA material can arbitrary bending, thick soles design with light rebound ability, give your feet ultimate"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+{
+  "sample_id": "public_0176",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C3MKNZJN",
+  "target_title": "adidas Originals Originals Sport Waist Pack",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Waist Packs"
+  ],
+  "target_price": null,
+  "target_rating": 4.7,
+  "target_rating_number": 606,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Luggage & Travel Gear Waist Packs, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Luggage & Travel Gear Waist Packs",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "travel"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Luggage & Travel Gear Waist Packs",
+          "soft_preferences": {
+            "use_case": [
+              "travel"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B000XJOFZ4",
+          "title": "Wet Safe Waist Bag",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07F71PP3S",
+          "title": "GEEAD Fanny Packs for Women Fashion Waist Bag Leather Belt Bum Bag Waterproof",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0C3MKNZJN",
+          "title": "adidas Originals Originals Sport Waist Pack",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07FCYCJP6",
+          "title": "Betsey Johnson Designer Luggage Collection - Expandable 3 Piece Hardside Lightweight Spinner Suitcase Set - Travel Set i",
+          "price": 319.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00JQL1RV0",
+          "title": "Green Travel Fanny Pack w/Phone Pocket and Key Ring",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B005LXUUXI",
+          "title": "Genuine Leather USA Flag Fanny Pack, Stars & Stripes Waist Bag or Belt Bag. Great for Travel or Everyday Use",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BS22KZN7",
+          "title": "Fanny Packs Waist Pack for Women, Black Fashionable Crossbody Fanny Pack with Adjustable Strap, Cute Waist Bag for Trave",
+          "price": 6.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BTP2YPZJ",
+          "title": "AIRCAR Mini Belt Bag for Women Men, Fashion Waist Pack with Adjustable Strap,Small Fanny Pack for Run, Travel, Outdoor C",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09J55BZJH",
+          "title": "Waist Bag for Kids, Cute Fanny Pack for Little Boy Girls, Fashion Children's Bum Bag Lightweight Chest Bag Princess Mini",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C5JQNWRJ",
+          "title": "FASNAHOK Nylon Messenger Bag with USB Charging Port Waterproof Crossbody Sling Bag Travel Chest Bags Casual Daypack for ",
+          "price": 18.88,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "adidas Originals Originals Sport Waist Pack",
+    "hard_constraints": [
+      "polyester",
+      "93% Polyester, 3% Natural Latex Rubber, 2% Spandex, 2% Nylon"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Polyester lining"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "style",
+      "material",
+      "comfort"
+    ]
+  }
+}

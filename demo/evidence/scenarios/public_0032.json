@@ -1,0 +1,385 @@
+{
+  "sample_id": "public_0032",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0834HZQZF",
+  "target_title": "IZZY + TOBY 100% Cotton Nightgowns for Women Soft Ladies Gowns Sleepwear Long Sleeveless Nightgown",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Sleep & Lounge",
+    "Nightgowns & Sleepshirts"
+  ],
+  "target_price": 30.99,
+  "target_rating": 4.6,
+  "target_rating_number": 3997,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sleep & Lounge Nightgowns & Sleepshirts. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Nightgowns & Sleepshirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Sleep & Lounge Nightgowns & Sleepshirts",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01M0IH5B6",
+          "title": "Floopi Womens Nightgown Sleepwear Cotton Pajamas - Womans Cap Sleeve Sleep Dress Nightshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08HRY3Q56",
+          "title": "uideazone Women's Nightgown Long Sleeve Button Down Nightshirt V-Neck Sleepwear Pajama Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BZZ435PM",
+          "title": "Vlazom Women's Nightgowns Short Sleeve Sleep Shirts Nightshirt V Neck Button Down Pajama Sleepwear S-XXL",
+          "price": 23.59,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07STTSWJB",
+          "title": "Inadays Sleepwear Women's Nightgown Cotton Sleepshirts Short Sleeve Nightshirt Print Sleep Dress R Neck Nightdress Loose",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CVM46SH",
+          "title": "Ekouaer Women's Nightgown, Cotton Novelty Sleepshirts V Neck Short Sleeve Sleep Shirt Loose Comfy Pajama Sleepwear S-XXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08FDPMWHN",
+          "title": "Ekouaer Nightshirt Women's Nightgown Cotton Novelty Starry Sky Printed Sleepshirts O Neck Short Sleeve Sleep Shirt Loose",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07LF94F7G",
+          "title": "Zexxxy Women's Short Sleeve/Sleeveless Sleepwear V-Neck Nightgown Soft Loose Pockets Sleeping Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B088DF8BPZ",
+          "title": "ARGCONNER Sleepwear Women's Long Loungewear Nightgown V Neck Nightshirt Casual Loungewear with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083JW6DQB",
+          "title": "Zexxxy Women's Maternity Nursing Button End Dress Adjustable Tie Back Casual Dress Loungewear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07KLQFHBP",
+          "title": "Ekouaer Sleepwear Short Sleeve Nightgown Full Length Sleepshirts Loungewear Nightshirts for Women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Nightgowns & Sleepshirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01M0IH5B6",
+          "title": "Floopi Womens Nightgown Sleepwear Cotton Pajamas - Womans Cap Sleeve Sleep Dress Nightshirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08HRY3Q56",
+          "title": "uideazone Women's Nightgown Long Sleeve Button Down Nightshirt V-Neck Sleepwear Pajama Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BZZ435PM",
+          "title": "Vlazom Women's Nightgowns Short Sleeve Sleep Shirts Nightshirt V Neck Button Down Pajama Sleepwear S-XXL",
+          "price": 23.59,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07STTSWJB",
+          "title": "Inadays Sleepwear Women's Nightgown Cotton Sleepshirts Short Sleeve Nightshirt Print Sleep Dress R Neck Nightdress Loose",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08CVM46SH",
+          "title": "Ekouaer Women's Nightgown, Cotton Novelty Sleepshirts V Neck Short Sleeve Sleep Shirt Loose Comfy Pajama Sleepwear S-XXL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08FDPMWHN",
+          "title": "Ekouaer Nightshirt Women's Nightgown Cotton Novelty Starry Sky Printed Sleepshirts O Neck Short Sleeve Sleep Shirt Loose",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07LF94F7G",
+          "title": "Zexxxy Women's Short Sleeve/Sleeveless Sleepwear V-Neck Nightgown Soft Loose Pockets Sleeping Shirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B088DF8BPZ",
+          "title": "ARGCONNER Sleepwear Women's Long Loungewear Nightgown V Neck Nightshirt Casual Loungewear with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083JW6DQB",
+          "title": "Zexxxy Women's Maternity Nursing Button End Dress Adjustable Tie Back Casual Dress Loungewear",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07KLQFHBP",
+          "title": "Ekouaer Sleepwear Short Sleeve Nightgown Full Length Sleepshirts Loungewear Nightshirts for Women",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Cotton; Pull On closure.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Sleep & Lounge Nightgowns & Sleepshirts",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0834HZQZF",
+          "title": "IZZY + TOBY 100% Cotton Nightgowns for Women Soft Ladies Gowns Sleepwear Long Sleeveless Nightgown",
+          "price": 30.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07BQK1RTD",
+          "title": "Keyocean Women Nightgowns, Soft Comfy Lightweight 100% Cotton Short Sleeves Comfy Ladies Nightdress",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07PYB8F1G",
+          "title": "Hanes Women's Signature Breathe Cotton Brief Underwear 6-Pack",
+          "price": 10.47,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BQC2NRG2",
+          "title": "Fruit of the Loom Women's Eversoft Cotton Bikini Underwear, Tag Free & Breathable",
+          "price": 9.48,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0C73DSG4D",
+          "title": "Hanes Women's Wear Around Nightshirt",
+          "price": 14.7,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07CCLV3XP",
+          "title": "Keyocean Women Nightgowns, Soft 100% Cotton Lightweight Short Sleeve Night-dresses for Ladies",
+          "price": 19.97,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07H3XZWMH",
+          "title": "AmeriMark Women Full-Length Flannel Nightgown Pajamas – Lightweight Warm Cotton Night Gown for Sleeping – Long Sleeve PJ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YDXYMN4",
+          "title": "AmeriMark Women Full-Length Flannel Nightgown Pajamas – Lightweight Warm Cotton Night Gown for Sleeping – Long Sleeve PJ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CMF1Z5Y",
+          "title": "AMERICAN ACTIVE Men's 3 Pack 100% Cotton Fleece Lined Base Layer Long Sleeve Thermal Crew Neck Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08R3B84YG",
+          "title": "YOZLY Sleep Shirt Women Tie Dye Nightgown Short Sleeve Cotton Nightshirt S-XXL",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "IZZY + TOBY 100% Cotton Nightgowns for Women Soft Ladies Gowns Sleepwear Long Sleeveless Nightgown",
+    "hard_constraints": [
+      "cotton",
+      "100% Cotton"
+    ],
+    "soft_preferences": [
+      "Pull On closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "performance",
+      "style",
+      "warmth"
+    ]
+  }
+}

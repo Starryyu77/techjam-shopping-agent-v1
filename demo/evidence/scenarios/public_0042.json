@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0042",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01LWOGORL",
+  "target_title": "Timex Men's Classic Digital Watch",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Watches",
+    "Wrist Watches"
+  ],
+  "target_price": 33.16,
+  "target_rating": 4.6,
+  "target_rating_number": 6161,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Watches Wrist Watches. A key requirement is: Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Watches Wrist Watches",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Watches Wrist Watches"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01ETFUBCS",
+          "title": "SMTSMT Women's Stainless Steel Mesh Band Wrist Watch-Gold",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B19838BK",
+          "title": "Accutime Kids Marvel Spider-Man Digital Quartz Plastic Watch for Boys & Girls with LCD Display",
+          "price": 14.49,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BJVWCSKQ",
+          "title": "Anne Klein Women's Bracelet Watch",
+          "price": 65.0,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01LWOGORL",
+          "title": "Timex Men's Classic Digital Watch",
+          "price": 33.16,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B007R9WURS",
+          "title": "Fossil Women's Riley Quartz Stainless Steel Multifunction Watch, Color: Rose Gold Glitz (Model: ES2811)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0811LN4CG",
+          "title": "BUREI Men's Classic Minimalist Wrist Watch with Fashion Stainless Steel Mesh Band",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BM4WGCJ6",
+          "title": "MVMT Classic Men's Analog Watch",
+          "price": 78.4,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09LZ4C7RM",
+          "title": "CRESTELLO Analog Wrist Watch for Women with Date Display Blue/Black Colored Dial Studded with Artificial Diamonds Women'",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07BMFGG4W",
+          "title": "Timex Men's Mod 44 Leather Strap Watch",
+          "price": 42.47,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09C2XBL8R",
+          "title": "U.S. Polo Assn. Classic Men's Analog Leather Strap Watch",
+          "price": 39.0,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Timex Men's Classic Digital Watch",
+    "hard_constraints": [
+      "Imported",
+      "color: green"
+    ],
+    "soft_preferences": [
+      "Gold-tone 18mm stainless steel expansion band fits up to 8-inch wrist circumference",
+      "100-hour chronograph with lap & split times; month, day & date calendar"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "material",
+      "performance",
+      "style"
+    ]
+  }
+}

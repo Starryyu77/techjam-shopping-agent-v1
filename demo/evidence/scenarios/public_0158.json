@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0158",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B012ZM6RGQ",
+  "target_title": "CreepyParty Novelty Halloween Costume Party Animal Head Mask - King Lion",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Costumes & Accessories",
+    "Men",
+    "Masks"
+  ],
+  "target_price": 15.99,
+  "target_rating": 3.7,
+  "target_rating_number": 240,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Men Masks, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Men Masks",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Men Masks"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00840U882",
+          "title": "A Nightmare On Elm Street Freddy Krueger Costume Deluxe Overhead Mask",
+          "price": 32.03,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B011ZCG9SI",
+          "title": "NEON NIGHTLIFE Light Up V for Vendetta Anonymous LED mask, Guy Fawkes Mask, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B012ZM6RGQ",
+          "title": "CreepyParty Novelty Halloween Costume Party Animal Head Mask - King Lion",
+          "price": 15.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0872QQHWY",
+          "title": "Plague Doctor Costume Mask PU Leather Steampunk Bird Mask Halloween Cosplay Masquerade Party Mask",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B079HM1VTM",
+          "title": "BT21 Official Merchandise by Line Friends - KOYA Character Eye Sleep Mask for Men & Women",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01CVNV10G",
+          "title": "WWE Sting Mask",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07W61FJ1K",
+          "title": "ALIZIWAY Unisex 3D Dragon Mask Christmas Halloween Cosplay Costume Props for Adult",
+          "price": 9.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B007QJ5OVS",
+          "title": "Evil Masquerade Mask",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00IPDS77M",
+          "title": "Rubie's Costume Men's Arkham City Adult Deluxe Overhead Latex Death Stroke Mask",
+          "price": 30.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00FJFM6M6",
+          "title": "Off the Wall Toys Evil Unicorn Mask (The Original)",
+          "price": 17.95,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "CreepyParty Novelty Halloween Costume Party Animal Head Mask - King Lion",
+    "hard_constraints": [
+      "Roomy enough to fit any adult.You can see through the nostrils or the mouth",
+      "Made from 100% natural latex, environmental friendly and non-toxic. We offer a range of quality choices with the best price"
+    ],
+    "soft_preferences": [
+      "Perfect for a fun meme, Halloween, Christmas, Easter, Carnival, Costume parties, tag party or simply for going to a night club. It is perfect for so many occasions",
+      "CreepyParty is an amazon registered brand, more creepy and funny masks, please visit our store"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "warmth",
+      "comfort",
+      "material",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,150 @@
+{
+  "sample_id": "public_0040",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08ZJWTCDR",
+  "target_title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Active",
+    "Active Pants",
+    "Sweatpants"
+  ],
+  "target_price": 21.0,
+  "target_rating": 4.4,
+  "target_rating_number": 35397,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Active Pants Sweatpants, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "pants",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "pants"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08ZJWTCDR",
+          "title": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+          "price": 21.0,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BYCW1T1C",
+          "title": "Hanes Men's Jogger Sweatpants, EcoSmart Jogger Sweatpants for Men, Men's Fleece Lounge Pants",
+          "price": 12.17,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B085L58P9F",
+          "title": "SPECIALMAGIC Women's Sweatpants Capri Pants Cropped Jogger Running Pants Lounge Loose Fit Drawstring Waist with Side Poc",
+          "price": 25.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08LV52XVF",
+          "title": "Women's Cotton Sweatpants High Waisted Pants with Pockets Athletic Fit Joggers for Women Lounge,Jogging",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08LV5B8FG",
+          "title": "Women's Cotton Sweatpants High Waisted Pants with Pockets Athletic Fit Joggers for Women Lounge,Jogging",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00WHLI0Q6",
+          "title": "PUMA Women's Sweatpants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08DFVFZSP",
+          "title": "Naggoo Women's High Waisted Joggers Lightweight Sweatpants Workout Running Lounge Sport Pants with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07Q3912B9",
+          "title": "90 Degree By Reflex High Waist Slim Stretch Yoga Jogger - Tapered Lounge Trouser Pants with Side Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01HPMTQUK",
+          "title": "adidas Women's Designed 2 Move Straight Pants",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08J67RSDL",
+          "title": "Wangdo Men's Slim Jogger Gym Pants Comfortable Tapered Athletic Sweatpants Casual Running Fitness Track Pants with Pocke",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Champion Men's Joggers, Everyday Joggers, Lightweight, Comfortable Joggers for Men, 31\"",
+    "hard_constraints": [
+      "cotton",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "100% Cotton",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

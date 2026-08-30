@@ -1,0 +1,478 @@
+{
+  "sample_id": "public_0198",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B08K1ZJZ4N",
+  "target_title": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Handbags & Wallets",
+    "Crossbody Bags"
+  ],
+  "target_price": 23.9,
+  "target_rating": 4.7,
+  "target_rating_number": 4718,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Handbags & Wallets Crossbody Bags. Imported",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Crossbody Bags",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Handbags & Wallets Crossbody Bags"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01C6SL1D8",
+          "title": "KAVU Original Rope Bag Sling Pack with Adjustable Rope Shoulder Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B06Y5SB28W",
+          "title": "ALYSSA Double Compartment Large Flapover Crossbody Bag",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08K1ZJZ4N",
+          "title": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+          "price": 23.9,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09YCZSKRY",
+          "title": "VINAIDA Small Crossbody Wallet Phone Bag Women Mini Crossbody Purse Cell Phone Shoulder Bag Mini Wallet Over Shoulder St",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B083VHP6BM",
+          "title": "Michael Kors Jet Set Travel Large East/West Crossbody",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B088M19KJ3",
+          "title": "KKXIU Crossbody Bags for Women Hollow Purses with Adjustable Strap",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B5ZS2J2W",
+          "title": "CLUCI Crossbody Purses for Women, Medium Size Zipper Pocket Adjustable Strap, Soft Leather Women's Shoulder Handbags",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07MYVS3F6",
+          "title": "Chala Mini Crossbody/Purse with Convertible Strap Stylish, Compact, Versatile",
+          "price": 46.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07S8NW7PV",
+          "title": "K.EYRE Crossover Purse and Handbags Crossbody Bags for Women Soft Leather Wallet Small Neatpack Bag with Pockets Brownne",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B084RWDBVW",
+          "title": "MKF Crossbody Bag for Women - Adjustable Strap - Vegan Leather Crossover, Designer Handbag, Messenger Purse",
+          "price": 27.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: leather.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Crossbody Bags",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09R7J2H7H",
+          "title": "Valentino Bags by Mario Beatriz",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CS9CG1Q",
+          "title": "Women's Soft Faux Leather Tote Shoulder Bag from Dreubea, Big Capacity Tassel Handbag",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01C6SL1D8",
+          "title": "KAVU Original Rope Bag Sling Pack with Adjustable Rope Shoulder Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GXHPWTJ",
+          "title": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B06Y5SB28W",
+          "title": "ALYSSA Double Compartment Large Flapover Crossbody Bag",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07G4W83Y8",
+          "title": "2E-youth Designer Purses and Handbags for Women Satchel Shoulder Bag Tote Top Handle Bag",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08K1ZJZ4N",
+          "title": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+          "price": 23.9,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09YCZSKRY",
+          "title": "VINAIDA Small Crossbody Wallet Phone Bag Women Mini Crossbody Purse Cell Phone Shoulder Bag Mini Wallet Over Shoulder St",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083VHP6BM",
+          "title": "Michael Kors Jet Set Travel Large East/West Crossbody",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B088M19KJ3",
+          "title": "KKXIU Crossbody Bags for Women Hollow Purses with Adjustable Strap",
+          "price": 26.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Crossbody Bags",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B09R7J2H7H",
+          "title": "Valentino Bags by Mario Beatriz",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CS9CG1Q",
+          "title": "Women's Soft Faux Leather Tote Shoulder Bag from Dreubea, Big Capacity Tassel Handbag",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01C6SL1D8",
+          "title": "KAVU Original Rope Bag Sling Pack with Adjustable Rope Shoulder Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07GXHPWTJ",
+          "title": "Angel Barcelo Roomy Fashion Hobo Womens Handbags Ladies Purse Satchel Shoulder Bags Tote Washed Leather Bag",
+          "price": 42.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B06Y5SB28W",
+          "title": "ALYSSA Double Compartment Large Flapover Crossbody Bag",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07G4W83Y8",
+          "title": "2E-youth Designer Purses and Handbags for Women Satchel Shoulder Bag Tote Top Handle Bag",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08K1ZJZ4N",
+          "title": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+          "price": 23.9,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09YCZSKRY",
+          "title": "VINAIDA Small Crossbody Wallet Phone Bag Women Mini Crossbody Purse Cell Phone Shoulder Bag Mini Wallet Over Shoulder St",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B083VHP6BM",
+          "title": "Michael Kors Jet Set Travel Large East/West Crossbody",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B088M19KJ3",
+          "title": "KKXIU Crossbody Bags for Women Hollow Purses with Adjustable Strap",
+          "price": 26.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: leather.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Handbags & Wallets Crossbody Bags",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "leather"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "leather"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07G6WBSX9",
+          "title": "Smooth Black Leather Crossbody Purses and Handbags for Women - Crossover Bags",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01C6SL1D8",
+          "title": "KAVU Original Rope Bag Sling Pack with Adjustable Rope Shoulder Strap",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B06Y5SB28W",
+          "title": "ALYSSA Double Compartment Large Flapover Crossbody Bag",
+          "price": 25.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08K1ZJZ4N",
+          "title": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+          "price": 23.9,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09YCZSKRY",
+          "title": "VINAIDA Small Crossbody Wallet Phone Bag Women Mini Crossbody Purse Cell Phone Shoulder Bag Mini Wallet Over Shoulder St",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B083VHP6BM",
+          "title": "Michael Kors Jet Set Travel Large East/West Crossbody",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B088M19KJ3",
+          "title": "KKXIU Crossbody Bags for Women Hollow Purses with Adjustable Strap",
+          "price": 26.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B5ZS2J2W",
+          "title": "CLUCI Crossbody Purses for Women, Medium Size Zipper Pocket Adjustable Strap, Soft Leather Women's Shoulder Handbags",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07MYVS3F6",
+          "title": "Chala Mini Crossbody/Purse with Convertible Strap Stylish, Compact, Versatile",
+          "price": 46.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07S8NW7PV",
+          "title": "K.EYRE Crossover Purse and Handbags Crossbody Bags for Women Soft Leather Wallet Small Neatpack Bag with Pockets Brownne",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "lola mae Quilted Crossbody Bag, Medium Lightweight Shoulder Purse Top Zipper Tassel Accent",
+    "hard_constraints": [
+      "leather",
+      "color: black"
+    ],
+    "soft_preferences": [
+      "PU",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Imported",
+      "new_value": "leather",
+      "message": "Actually, ignore my earlier preference. What I need is: leather."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "durability",
+      "fit",
+      "comfort"
+    ]
+  }
+}

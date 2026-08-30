@@ -1,0 +1,166 @@
+{
+  "sample_id": "public_0008",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BPCC1KBT",
+  "target_title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Bras",
+    "Everyday Bras"
+  ],
+  "target_price": 10.99,
+  "target_rating": 4.0,
+  "target_rating_number": 30628,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 5,
+  "reciprocal_rank": 0.2,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bras Everyday Bras. A key requirement is: nylon.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {
+          "use_case": [
+            "everyday"
+          ],
+          "material": [
+            "nylon"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bras Everyday Bras",
+          "hard_constraints": {
+            "material": [
+              "nylon"
+            ],
+            "use_case": [
+              "everyday"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07T8CF4GW",
+          "title": "Felina Women's Wire-Free Seamless Bra with Removable Pads - Comfortable Bras for Women, Wireless Bras",
+          "price": 34.95,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B071R1YM3N",
+          "title": "Flower Bali Underwire Bra 2 Pack_White_40D",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08P14CYYC",
+          "title": "Auden Women's Plus Size Lightly Lined Balconette Bra (Black)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08HS712ZB",
+          "title": "Duufin 5 Pcs Lace Bralettes for Women Bralette Padded Lace Bandeau Bra",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": true
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09N8SYG7Q",
+          "title": "AUROLA Workout Leggings for Women Seamless Scrunch Tights Tummy Control Gym Fitness Girl Sport Active Yoga Pants",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07KWVHFCY",
+          "title": "Copper Compression Socks Women and Men 6 Pairs - Circulation Arch Support Plantar Fasciitis Running Ankle Socks",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09FT7XZSV",
+          "title": "FITTIN Cross Back Sports Bras for Women - Seamless Sports Bra with Removable Padded for Yoga Gym Workout",
+          "price": 14.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 5,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+    "hard_constraints": [
+      "nylon",
+      "96% Nylon, 4% Spandex"
+    ],
+    "soft_preferences": [
+      "Pull-On closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "style"
+    ]
+  }
+}

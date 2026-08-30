@@ -1,0 +1,384 @@
+{
+  "sample_id": "public_0083",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0BPMCJ1RD",
+  "target_title": "CHICZONE Plaid Shacket Jacket Womens Long Flannel Jacket Casual Lapel Button Down Tartan Trench Coats",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Tops, Tees & Blouses",
+    "Blouses & Button-Down Shirts"
+  ],
+  "target_price": 39.58,
+  "target_rating": 4.4,
+  "target_rating_number": 648,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 7,
+  "reciprocal_rank": 0.14285714285714285,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tees & Blouses Blouses & Button-Down Shirts. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shirts",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07GWF5FKS",
+          "title": "Jeazi Women's V Neck Color Block Stripes Button Down Detail Loose Fitting Blouses Solid Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07M677S66",
+          "title": "ETOSELL Lady Bowknot Baby Peter Pan Collar Shirt Womens Long Sleeve OL Button-Down Shirts White Blouses (M/US6/UK8/EU36,",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07XKGWK4G",
+          "title": "Kidsform Denim Dresses for Women Long Sleeve Blouse Dress Button Down Jean Shirt Dress Tunic Tops Chambray Cotton t-Shir",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09M84R91V",
+          "title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+          "price": 21.14,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09Q7G1MMW",
+          "title": "luvamia Women's Casual 3/4 Tiered Bell Sleeve Crewneck Loose Tops Blouses Shirt",
+          "price": 22.94,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07TFF3C28",
+          "title": "FARYSAYS Women's V Neck Long Sleeve Boho Floral Shirts Casual Loose Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07S7NXZ7J",
+          "title": "BELONGSCI Women's Casual Sweet & Cute Loose Shirt Balloon Sleeve V-Neck Blouse Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09BQ5QQT4",
+          "title": "Paitluc Blouses for Women Blouse Sleeveless Womens Work Blouses Swiss Dot Blouse for Women",
+          "price": 26.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07GWF5FKS",
+          "title": "Jeazi Women's V Neck Color Block Stripes Button Down Detail Loose Fitting Blouses Solid Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07M677S66",
+          "title": "ETOSELL Lady Bowknot Baby Peter Pan Collar Shirt Womens Long Sleeve OL Button-Down Shirts White Blouses (M/US6/UK8/EU36,",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07XKGWK4G",
+          "title": "Kidsform Denim Dresses for Women Long Sleeve Blouse Dress Button Down Jean Shirt Dress Tunic Tops Chambray Cotton t-Shir",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09M84R91V",
+          "title": "Asvivid Womens Casual Boho Floral Print 3/4 Flare Sleeve Blouses Summer Off The Shoulder Tops Tie Knot Shirts",
+          "price": 21.14,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09Q7G1MMW",
+          "title": "luvamia Women's Casual 3/4 Tiered Bell Sleeve Crewneck Loose Tops Blouses Shirt",
+          "price": 22.94,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07TFF3C28",
+          "title": "FARYSAYS Women's V Neck Long Sleeve Boho Floral Shirts Casual Loose Blouse Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07S7NXZ7J",
+          "title": "BELONGSCI Women's Casual Sweet & Cute Loose Shirt Balloon Sleeve V-Neck Blouse Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08T8WGSZC",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08T8YBQ88",
+          "title": "Jescakoo Womens V Neck Tshirts Short Sleeve Tops Casual Loose Fit",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09BQ5QQT4",
+          "title": "Paitluc Blouses for Women Blouse Sleeveless Womens Work Blouses Swiss Dot Blouse for Women",
+          "price": 26.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 100% Polyester; Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shirts",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B081VC8KJR",
+          "title": "BCBGeneration Women's Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09Q7G1MMW",
+          "title": "luvamia Women's Casual 3/4 Tiered Bell Sleeve Crewneck Loose Tops Blouses Shirt",
+          "price": 22.94,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07YWNR2NC",
+          "title": "Romwe Women's Plus Size 3/4 Sleeve Pearl Beaded Tie Knot Cuff Solid Blouse Tops Shirt",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01MT1K1SC",
+          "title": "Messic Women's V-Neck Blouses 3/4 Roll-up Sleeve Button Casual Chiffon Tunic Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0747VVGYN",
+          "title": "April Apparel Women's Basic TOP (Small, Baby Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0747V3945",
+          "title": "April Apparel Women's Basic TOP (Small, Baby Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BPMCJ1RD",
+          "title": "CHICZONE Plaid Shacket Jacket Womens Long Flannel Jacket Casual Lapel Button Down Tartan Trench Coats",
+          "price": 39.58,
+          "is_target": true
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YLZLPMQ",
+          "title": "Lark & Ro Women's Crepe de Chine Long Sleeve V-Neck Gathered Tie Neck Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07BTM7RR5",
+          "title": "Lark & Ro Women's Georgette Lightweight Long Sleeve Utility Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07L1M6YHD",
+          "title": "Lark & Ro Women's Georgette Lightweight Long Sleeve Utility Blouse",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 7,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "CHICZONE Plaid Shacket Jacket Womens Long Flannel Jacket Casual Lapel Button Down Tartan Trench Coats",
+    "hard_constraints": [
+      "polyester",
+      "100% Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Button closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "fit",
+      "material",
+      "comfort",
+      "style"
+    ]
+  }
+}

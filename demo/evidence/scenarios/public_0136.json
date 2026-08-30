@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0136",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B091F54MWM",
+  "target_title": "CAMPSNAIL 4 Pack Biker Shorts for Women High Waist - 5\" Soft Summer Womens Shorts Spandex Workout Shorts for Running Athletic",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Active",
+    "Active Shorts"
+  ],
+  "target_price": 18.98,
+  "target_rating": 4.4,
+  "target_rating_number": 7141,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Active Active Shorts. A key requirement is: spandex.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Active Active Shorts",
+        "hard_constraints": {
+          "material": [
+            "spandex"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Active Active Shorts",
+          "hard_constraints": {
+            "material": [
+              "spandex"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B091F54MWM",
+          "title": "CAMPSNAIL 4 Pack Biker Shorts for Women High Waist - 5\" Soft Summer Womens Shorts Spandex Workout Shorts for Running Ath",
+          "price": 18.98,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096WW7MXD",
+          "title": "High Waisted Biker Shorts Women - 8 inches Soft Tummy Control Shorts for Workout, Gym, Yoga, Running",
+          "price": 10.49,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01M22QTWT",
+          "title": "BALEAF Women's 5\" Volleyball Biker Running Yoga Shorts Spandex Compression High Waisted Shorts Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B094QQKJTB",
+          "title": "OFEEFAN Womens Athletic Shorts with Pockets Workout Running Summer Lounge Dolphin Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B089RKD8D5",
+          "title": "Fulbelle Elastic Banded Waist Running Shorts for Women with Invisible Zipper Pockets Athletic Workout Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07DJBPQSF",
+          "title": "JEEING GEAR Men's Bodybuilding Gym Workout Fitness Shorts 3\" Inseam inch Cotton Without Pocket",
+          "price": 12.89,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08D6K3BTP",
+          "title": "VALANDY Womens Compression Yoga Shorts High Waist Fitness Workout Shorts for Women with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08D6J17MQ",
+          "title": "OMANTIC Yoga Shorts for Women - High Waist Stretch Biker Gym Shorts with Side Pockets for Workout Running 5\"/8\" Inseam",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08TRDNCKT",
+          "title": "Roadbox mens Gym Shorts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B087LY2GDN",
+          "title": "A WATERWANG Men's Bodybuilding Shorts, Breathable Workout Sweat Shorts for Running with Pockets",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "CAMPSNAIL 4 Pack Biker Shorts for Women High Waist - 5\" Soft Summer Womens Shorts Spandex Workout Shorts for Running Athletic",
+    "hard_constraints": [
+      "spandex",
+      "92% Polyester, 8% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Elastic closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "material"
+    ]
+  }
+}

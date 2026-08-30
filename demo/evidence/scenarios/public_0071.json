@@ -1,0 +1,468 @@
+{
+  "sample_id": "public_0071",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B06XRFSDL4",
+  "target_title": "Mordenmiss Women's Loose Sweatshirt Spring/Fall Simple Shirt Tops",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Fashion Hoodies & Sweatshirts"
+  ],
+  "target_price": 38.88,
+  "target_rating": 4.2,
+  "target_rating_number": 547,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Fashion Hoodies & Sweatshirts. Pull On closure",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Fashion Hoodies & Sweatshirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07G488MMB",
+          "title": "Cartoon Dinosaurs Designed Casual Pullover Hoodies for Children Niece, Purple, Size 8",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07544428T",
+          "title": "MakeMeChic Women's Letter Print Sweatshirt Long Sleeve Pullover Hoodies Tops A Black XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09H7HQTRS",
+          "title": "GRACE KARIN Dark Wine Women Causal Long Sleeve Hoodies Dress Lightweight Sweatshirt Tops XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07G5QX7FV",
+          "title": "MEROKEETY Women's Long Sleeve Contrast Color Zipper Sherpa Pile Pullover Tops Fleece Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07BKM1Y8T",
+          "title": "Goodthreads Men's Lightweight Slub T-Shirt Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07PKPMR29",
+          "title": "Aokosor Women's Casual Short Sleeve Round Neck Loose Tunic T Shirt Blouse Tops with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B071HSTPDV",
+          "title": "Add Your Own Text and Design Custom Personalized Sweatshirt Hoodie",
+          "price": 45.9,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07CHJ7V7K",
+          "title": "Starter Men's Pullover Logo Hoodie",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07G488MMB",
+          "title": "Cartoon Dinosaurs Designed Casual Pullover Hoodies for Children Niece, Purple, Size 8",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07544428T",
+          "title": "MakeMeChic Women's Letter Print Sweatshirt Long Sleeve Pullover Hoodies Tops A Black XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09H7HQTRS",
+          "title": "GRACE KARIN Dark Wine Women Causal Long Sleeve Hoodies Dress Lightweight Sweatshirt Tops XL",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07G5QX7FV",
+          "title": "MEROKEETY Women's Long Sleeve Contrast Color Zipper Sherpa Pile Pullover Tops Fleece Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07BKM1Y8T",
+          "title": "Goodthreads Men's Lightweight Slub T-Shirt Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07PKPMR29",
+          "title": "Aokosor Women's Casual Short Sleeve Round Neck Loose Tunic T Shirt Blouse Tops with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B071HSTPDV",
+          "title": "Add Your Own Text and Design Custom Personalized Sweatshirt Hoodie",
+          "price": 45.9,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07CHJ7V7K",
+          "title": "Starter Men's Pullover Logo Hoodie",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; 90% Cotton, 10% Others.",
+      "agent_message": "I found 10 current candidates. Which style do you prefer?",
+      "ask_attribute": "style",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06XRFSDL4",
+          "title": "Mordenmiss Women's Loose Sweatshirt Spring/Fall Simple Shirt Tops",
+          "price": 38.88,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07CHJ7V7K",
+          "title": "Starter Men's Pullover Logo Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09DJ159SZ",
+          "title": "Carhartt Men's Loose Fit Midweight Logo Graphic Sweatshirt",
+          "price": 49.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09MMRCQSS",
+          "title": "Geifa Crewneck Sweatshirts for Women Oversized Sweaters Long Sleeve Shirts Tunic Tops for Leggings",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B088GVMQK8",
+          "title": "Goodstoworld Teen Boys 3D Jogger Pants Funny Cool Graphic Sweatpants Trousers Pants Drawstring Cuffed Jogging Pants Ligh",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07RBP6CRX",
+          "title": "Drinks Well with Others T Shirt Women Letter Print Alcohol Drinking Shirts Funny Saying Graphic Tee Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0B6FZBDSM",
+          "title": "Pandolah Men's Athletic 3D Animal Cosmic Galaxy Printed Hoodies Sweatshirts",
+          "price": 22.88,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B084R6L5W4",
+          "title": "Army PT Style Shirt | U.S. Military Physical Training Infantry Workout Long Sleeve T-Shirt",
+          "price": 26.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B075DFLDY7",
+          "title": "Regna X Basic Loose Fit Pocket Pullover Hoodie Long Tunic Sweatshirts (S~3X)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07ZTFM5J9",
+          "title": "Peppa Pig Boys George Pig Sweatshirt",
+          "price": 22.95,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Fashion Hoodies & Sweatshirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B06XRFSDL4",
+          "title": "Mordenmiss Women's Loose Sweatshirt Spring/Fall Simple Shirt Tops",
+          "price": 38.88,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0757F8RJ2",
+          "title": "Angashion Womens Sweatshirt-Tops-Crewneck Lace Up Open Back Long Sleeve Color Block Shirt Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09KH2L6KX",
+          "title": "Gafeng Kids Boys Girls Color Block Sherpa Sweatshirt Fleece Cute Crewneck Fuzzy Long Sleeve Pullover Outfits",
+          "price": 9.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07L2ZD5ML",
+          "title": "Minibee Women's Denim Shirt Blouse Snap Buttons Hi-Low Hem Tops Outfits",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B06X1H3FTG",
+          "title": "Minibee Women's Elbow Sleeve Casual T Shirt Dress Irregular Hem Top Tees Mmb1232-a (3X, Wine)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01N67CJGX",
+          "title": "DOUBLJU Lightweight Thin Zip-Up Hoodie Jacket for Women Girls Kids with Plus Size",
+          "price": 35.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07G5QX7FV",
+          "title": "MEROKEETY Women's Long Sleeve Contrast Color Zipper Sherpa Pile Pullover Tops Fleece Sweatshirt",
+          "price": 39.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07BKM1Y8T",
+          "title": "Goodthreads Men's Lightweight Slub T-Shirt Hoodie",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07PKPMR29",
+          "title": "Aokosor Women's Casual Short Sleeve Round Neck Loose Tunic T Shirt Blouse Tops with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RP71WXG",
+          "title": "Topstype Women's Pullover Long Sleeve Fall Hoodies Color Block Tunics Loose Casual Sweatshirts",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Mordenmiss Women's Loose Sweatshirt Spring/Fall Simple Shirt Tops",
+    "hard_constraints": [
+      "cotton",
+      "90% Cotton, 10% Others"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Pull On closure",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "performance",
+      "durability",
+      "style"
+    ]
+  }
+}

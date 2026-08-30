@@ -1,0 +1,158 @@
+{
+  "sample_id": "public_0033",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08134XNNB",
+  "target_title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Athletic",
+    "Walking"
+  ],
+  "target_price": 34.99,
+  "target_rating": 4.0,
+  "target_rating_number": 99389,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Walking, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Athletic Walking",
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00C31HKWA",
+          "title": "Breckelle's Women's Sahara-51 Athletic Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08134XNNB",
+          "title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+          "price": 34.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0834T68X3",
+          "title": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+          "price": 28.89,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08PP7LXLG",
+          "title": "TIAMOU Running Shoes Women Walking Athletic Tennis Non Slip Blade Type Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PCYWFBY",
+          "title": "MOSHA BELLE Women Running Shoes Fashion Tennis Athletic Walking Gym Sports Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07N1624C5",
+          "title": "Skechers Women's Go Walk 5-True Sneaker",
+          "price": 56.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07C2QCD89",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C2MK6QX",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B086ZNJY8K",
+          "title": "Nautica Men's Casual Slip-On Fashion Sneakers-Walking Shoes-Lightweight Joggers",
+          "price": 34.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+    "hard_constraints": [
+      "fabric",
+      "Mesh Fabric"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "MD + Air Cushion sole"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "mixed",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "style",
+      "durability"
+    ]
+  }
+}

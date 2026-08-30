@@ -1,0 +1,149 @@
+{
+  "sample_id": "public_0039",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07TZCJW9X",
+  "target_title": "Women's Pro Series Cycling Short Sleeve Jersey, Cargo Bib Shorts, or Kit Bundle",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Cycling",
+    "Women",
+    "Jerseys"
+  ],
+  "target_price": 29.95,
+  "target_rating": 4.0,
+  "target_rating_number": 159,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Jerseys, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Women Jerseys",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Jerseys"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B088B5V3D5",
+          "title": "Cycling Jersey Women Mountain Bike Jersey Shirts Short Sleeve Summer",
+          "price": 25.97,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07XDXXX6D",
+          "title": "bpbtti Women's Half Zipper Short Sleeve Cycling Jersey Bike Biking Shirt with 3-Real Pockets",
+          "price": 11.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01B02W5EK",
+          "title": "Arza Sports Guatemala Slim Women Soccer Jersey",
+          "price": 24.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TZCJW9X",
+          "title": "Women's Pro Series Cycling Short Sleeve Jersey, Cargo Bib Shorts, or Kit Bundle",
+          "price": 29.95,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00D9NYITO",
+          "title": "Worth Women's Fleece Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07GD9HL4J",
+          "title": "Women Cycling Jersey Long Sleeve Bike Jacket Biking Shirt Bicycle Clothing",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08ZCDHW9D",
+          "title": "Weimostar Women's Long Sleeve MTB Cycling Mountain Bike Jersey Biking Shirt Jacket Tops Breathable",
+          "price": 27.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09VBWYT55",
+          "title": "Gicaer Women's Cycling Clothing Short Sleeve Mountain Bike Shirt, Bike Riding Fast Sweat T-Shirt Night Reflective top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09KMX2SZR",
+          "title": "adidas Women's Hi Low Jersey Long Sleeve",
+          "price": 27.0,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B084B4VYMR",
+          "title": "Augusta Sportswear Women's 1665",
+          "price": 29.7,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Women's Pro Series Cycling Short Sleeve Jersey, Cargo Bib Shorts, or Kit Bundle",
+    "hard_constraints": [
+      "polyester",
+      "80% Polyester, 20% Spandex"
+    ],
+    "soft_preferences": [
+      "Zipper closure",
+      "Hand Wash Only"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "performance",
+      "durability",
+      "style"
+    ]
+  }
+}

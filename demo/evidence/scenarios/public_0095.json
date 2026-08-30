@@ -1,0 +1,266 @@
+{
+  "sample_id": "public_0095",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B09N78FT2W",
+  "target_title": "Free Leaper High Waisted Yoga Pants with Pockets for Women-Comfortable Running Seamless Leggings",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Sport Specific Clothing",
+    "Yoga",
+    "Women",
+    "Leggings"
+  ],
+  "target_price": 23.99,
+  "target_rating": 4.4,
+  "target_rating_number": 1026,
+  "hit": true,
+  "first_hit_turn": 2,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 2,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Leggings. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Women Leggings",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Q46M2J2",
+          "title": "IUGA High Waisted Yoga Pants for Women with Pockets Capri Leggings for Women Workout Leggings for Women Yoga Capris",
+          "price": 23.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BFS2LF46",
+          "title": "90 Degree By Reflex High Waist Tummy Control Interlink Squat Proof Ankle Length Leggings",
+          "price": 26.98,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B087X1JZHF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B085435DSF",
+          "title": "DCCDU Anti Cellulite Ruched Butt Lifting Leggings Booty Lifting Tummy Control Yoga Pants High Waist Textured Workout Tig",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07P88KKLV",
+          "title": "SERHOM Yoga Pants, High Waist Tummy Control Workout Women Yoga Leggings with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B087FWG8QL",
+          "title": "Ritiriko Women's Yoga Pants High Waisted Crop Workout Running Leggings with Side Pocketed Tummy Control",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07R7PH27H",
+          "title": "ZOOSIXX High Waisted Leggings for Women - Tummy Control Soft Athletic Slim Pants for Yoga Workout Running Cycling",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0B7BPDNFR",
+          "title": "LAWAKE Fleece Lined Leggings with Pockets for Women - Soft Black Thermal High Waisted Winter Yoga Pants for Workout",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08S6WVVRN",
+          "title": "KIWI RATA Women Workout Scrunched Booty Leggings, High-Waist Tummy Control Butt Lifting Textured Tights Lounge Yoga Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09JSQ86LH",
+          "title": "ccko High Waisted Leggings for Women with Pockets, Womens Yoga Pants Stretch Workout Leggings Tummy Control",
+          "price": 22.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "For that, what matters is: Imported; Pull On closure.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Women Leggings",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B074KJ49F2",
+          "title": "Leggings Depot Premium Quality Women's Cotton Blend Stretch Pull-on Jeggings with Pockets",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09MMRCQSS",
+          "title": "Geifa Crewneck Sweatshirts for Women Oversized Sweaters Long Sleeve Shirts Tunic Tops for Leggings",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09N78FT2W",
+          "title": "Free Leaper High Waisted Yoga Pants with Pockets for Women-Comfortable Running Seamless Leggings",
+          "price": 23.99,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08RNF9RGT",
+          "title": "Roadbox Womens Workout Sleeveless Shirts Athletic Exercise Gym Tank Tops",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BWMFZXV7",
+          "title": "Hanes Girls Baby Leggings, Ultimate Flexy Knit Pants Boys & Girls, 3-Pack",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B081N3GZH3",
+          "title": "Hopgo Women's Yoga Pants High Waisted Workout Running Butt Lifting Leggings Compression Seamless Gym Leggings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075F5HN58",
+          "title": "Pink Queen® Women's Chic Ugly Santa Christmas Leggings Funny Costume Tights",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08JSB899Z",
+          "title": "JoJo Siwa Bow Bow Girls T-Shirt and Leggings Outfit Set Toddler to Big Kid",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09C4KPBJN",
+          "title": "Zioccie Women Scrunch Butt Lifting Leggings Booty High Waisted Workout Yoga Pants Ruched Tights",
+          "price": 8.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0CCL7YMNY",
+          "title": "KINLONSAIR Women Casual Long Sleeve Tunic V-Neck Slim Fit T Shirts Basic Tee Tops Crew Neck Ribbed Knit Solid Shirt",
+          "price": 21.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Free Leaper High Waisted Yoga Pants with Pockets for Women-Comfortable Running Seamless Leggings",
+    "hard_constraints": [
+      "polyester",
+      "75% Polyester, 25% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "warmth",
+      "weather",
+      "comfort",
+      "fit"
+    ]
+  }
+}

@@ -14,6 +14,7 @@ then open http://127.0.0.1:8000
 from __future__ import annotations
 
 import argparse
+import html
 import json
 import os
 import re
@@ -411,8 +412,59 @@ def make_handler(demo: DemoState):
             self.end_headers()
             self.wfile.write(data)
 
+        def _send_markdown_page(self, path: Path, title: str):
+            content = html.escape(path.read_text(encoding="utf-8"))
+            body = (
+                "<!doctype html><html><head><meta charset='utf-8'>"
+                f"<title>{html.escape(title)}</title>"
+                "<style>body{margin:0;background:#0d1117;color:#e6edf3;"
+                "font:15px/1.55 ui-monospace,SFMono-Regular,Menlo,monospace}"
+                "main{max-width:1100px;margin:auto;padding:32px}"
+                "a{color:#58a6ff}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>"
+                f"</head><body><main><a href='/'>← Tour</a><pre>{content}</pre></main></body></html>"
+            ).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.end_headers()
+            self.wfile.write(body)
+
         def do_GET(self):
-            if self.path in ("/", "/index.html"):
+            # --- Judge-facing demo: tour is the default entry ---
+            if self.path in ("/", "/tour", "/tour.html"):
+                tour = _STATIC / "tour.html"
+                if tour.is_file():
+                    return self._send_file(tour, "text/html; charset=utf-8")
+                # Fallback to old index if tour not yet built
+                return self._send_file(_STATIC / "index.html", "text/html; charset=utf-8")
+            if self.path == "/tour.js":
+                return self._send_file(_STATIC / "tour.js", "application/javascript")
+            if self.path == "/tour.css":
+                return self._send_file(_STATIC / "tour.css", "text/css")
+            if self.path == "/evidence":
+                tour = _STATIC / "tour.html"
+                if tour.is_file():
+                    return self._send_file(tour, "text/html; charset=utf-8")
+            if self.path == "/report":
+                return self._send_markdown_page(_REPO_ROOT / "REPORT.md", "Technical Report")
+            if self.path == "/reproduce":
+                return self._send_markdown_page(_REPO_ROOT / "README.md", "Reproduction Instructions")
+            # --- Evidence JSON (frozen, read-only) ---
+            if self.path.startswith("/evidence/"):
+                evidence_dir = _STATIC.parent / "evidence"
+                # /evidence/scenarios/public_0001.json etc.
+                rel = self.path[len("/evidence/"):]
+                if rel and not (".." in rel):
+                    fpath = evidence_dir / rel
+                    if fpath.is_file() and fpath.suffix == ".json":
+                        return self._send_file(fpath, "application/json")
+                # /evidence -> evidence explorer page (fallback to tour for now)
+                if not rel or rel in ("", "index.html"):
+                    tour = _STATIC / "tour.html"
+                    if tour.is_file():
+                        return self._send_file(tour, "text/html; charset=utf-8")
+            # --- Sandbox (old chat UI) ---
+            if self.path in ("/sandbox", "/sandbox.html", "/index.html"):
                 return self._send_file(_STATIC / "index.html", "text/html; charset=utf-8")
             if self.path == "/app.js":
                 return self._send_file(_STATIC / "app.js", "application/javascript")

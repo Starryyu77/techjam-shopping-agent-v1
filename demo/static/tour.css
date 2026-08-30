@@ -1,0 +1,1247 @@
+/* ===================================================================
+   Shopping Copilot — Judge-Facing Demo: Guided Evidence Tour
+   Visual: technical evidence console + polished presentation
+   Brand: Shopping Copilot · Built for TikTok TechJam 2026 · Track 4
+   =================================================================== */
+
+/* --- Design Tokens ------------------------------------------------- */
+:root {
+  /* Base palette */
+  --bg-primary: #0d1117;
+  --bg-secondary: #161b22;
+  --bg-tertiary: #21262d;
+  --bg-card: #1c2028;
+  --border: #30363d;
+  --border-light: #484f58;
+
+  /* Text */
+  --text-primary: #e6edf3;
+  --text-secondary: #8b949e;
+  --text-muted: #6e7681;
+
+  /* Competition Evidence (cyan/blue) */
+  --evidence-primary: #58a6ff;
+  --evidence-secondary: #1f6feb;
+  --evidence-bg: rgba(88, 166, 255, 0.08);
+  --evidence-border: rgba(88, 166, 255, 0.3);
+
+  /* Demo-only Extension (purple) */
+  --demo-primary: #bc8cff;
+  --demo-secondary: #8b5cf6;
+  --demo-bg: rgba(188, 140, 255, 0.08);
+  --demo-border: rgba(188, 140, 255, 0.3);
+
+  /* Unknown / Private boundary (amber) */
+  --unknown-primary: #d29922;
+  --unknown-bg: rgba(210, 153, 34, 0.08);
+  --unknown-border: rgba(210, 153, 34, 0.3);
+
+  /* Success / Hit */
+  --success: #3fb950;
+  --success-bg: rgba(63, 185, 80, 0.08);
+
+  /* Error */
+  --error: #f85149;
+  --error-bg: rgba(248, 81, 73, 0.08);
+
+  /* Metrics */
+  --metric-highlight: #79c0ff;
+
+  /* Layout */
+  --max-width: 1280px;
+  --content-padding: 2rem;
+  --card-radius: 12px;
+  --small-radius: 6px;
+
+  /* Animation */
+  --transition-fast: 160ms ease;
+  --transition-normal: 240ms ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition-fast: 0ms;
+    --transition-normal: 0ms;
+  }
+}
+
+/* --- Reset & Base -------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* --- Top Bar ------------------------------------------------------- */
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem var(--content-padding);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.topbar .brand {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.topbar .brand .dot {
+  display: inline-block;
+  width: 8px; height: 8px;
+  background: var(--evidence-primary);
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.topbar .sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.topbar-nav {
+  margin-left: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.topbar-nav a, .topbar-nav button {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.3rem 0.6rem;
+  border-radius: var(--small-radius);
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.topbar-nav a:hover, .topbar-nav button:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+.topbar-nav a:focus-visible, .topbar-nav button:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+/* --- Tour Progress Bar --------------------------------------------- */
+.tour-progress {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0.75rem var(--content-padding);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+}
+
+.tour-progress .step-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  background: none;
+  color: var(--text-muted);
+}
+
+.tour-progress .step-indicator:hover {
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+}
+
+.tour-progress .step-indicator:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.tour-progress .step-indicator.active {
+  color: var(--evidence-primary);
+  background: var(--evidence-bg);
+  border-color: var(--evidence-border);
+  font-weight: 600;
+}
+
+.tour-progress .step-indicator.completed {
+  color: var(--success);
+}
+
+.tour-progress .step-indicator.completed::before {
+  content: '✓';
+  margin-right: 0.2rem;
+}
+
+.tour-progress .step-indicator.demo-step.active {
+  color: var(--demo-primary);
+  background: var(--demo-bg);
+  border-color: var(--demo-border);
+}
+
+.tour-progress .step-connector {
+  width: 24px;
+  height: 1px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+/* --- Tour Content Container --------------------------------------- */
+.tour-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--content-padding);
+  min-height: calc(100vh - 140px);
+}
+
+/* --- Tour Steps ---------------------------------------------------- */
+.tour-step {
+  display: none;
+  animation: fadeIn var(--transition-normal) ease;
+}
+
+.tour-step.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Cards --------------------------------------------------------- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.card-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Evidence Badge ------------------------------------------------ */
+.evidence-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.evidence-badge.competition {
+  color: var(--evidence-primary);
+  background: var(--evidence-bg);
+  border: 1px solid var(--evidence-border);
+}
+
+.evidence-badge.demo-only {
+  color: var(--demo-primary);
+  background: var(--demo-bg);
+  border: 1px solid var(--demo-border);
+}
+
+.evidence-badge.unknown {
+  color: var(--unknown-primary);
+  background: var(--unknown-bg);
+  border: 1px solid var(--unknown-border);
+}
+
+/* --- Step 0: Hero -------------------------------------------------- */
+.hero {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.hero .subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+}
+
+.hero .metric-grid {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hero .metric-big {
+  text-align: center;
+}
+
+.hero .metric-big .value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--metric-highlight);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero .metric-big .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero .metric-row {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero .metric-sm {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.hero .metric-sm .val {
+  font-weight: 600;
+  color: var(--metric-highlight);
+  font-variant-numeric: tabular-nums;
+}
+
+.hero .cta-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #fff;
+  background: var(--evidence-secondary);
+  border: none;
+  border-radius: var(--small-radius);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background: var(--evidence-primary);
+}
+
+.btn-primary:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.btn-secondary:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.hero .footer-note {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.hero .footer-note .unknown-mark {
+  color: var(--unknown-primary);
+}
+
+/* --- Step 1: Dataset Contract -------------------------------------- */
+.contract-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+  .contract-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contract-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: var(--small-radius);
+  background: var(--bg-tertiary);
+}
+
+.contract-item .icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+  width: 28px;
+  text-align: center;
+}
+
+.contract-item .detail {
+  flex: 1;
+}
+
+.contract-item .detail .key {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.contract-item .detail .val {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.scenario-bar {
+  display: flex;
+  gap: 0;
+  border-radius: var(--small-radius);
+  overflow: hidden;
+  height: 24px;
+  margin: 1rem 0;
+}
+
+.scenario-bar .segment {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #fff;
+  transition: flex var(--transition-normal);
+}
+
+.catalog-sample {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+#catalogSamples {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+#catalogSamples .catalog-sample {
+  margin-bottom: 0;
+}
+
+#catalogSamples .catalog-sample .text-sm {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+@media (max-width: 1024px) {
+  #catalogSamples { grid-template-columns: 1fr; }
+}
+
+.catalog-sample .asin {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.catalog-sample .title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0.3rem 0;
+}
+
+.catalog-sample .meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  flex-wrap: wrap;
+}
+
+/* --- Step 2: Scenario Replay --------------------------------------- */
+.scenario-tabs {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.scenario-tab {
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.scenario-tab:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.scenario-tab:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.scenario-tab.active {
+  color: var(--evidence-primary);
+  background: var(--evidence-bg);
+  border-color: var(--evidence-border);
+}
+
+.replay-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--small-radius);
+  margin-bottom: 1rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.replay-header code {
+  font-family: monospace;
+  color: var(--evidence-primary);
+}
+
+.replay-stage {
+  display: grid;
+  grid-template-columns: 300px 1fr 320px;
+  gap: 1rem;
+  min-height: 400px;
+}
+
+@media (max-width: 1024px) {
+  .replay-stage {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Turn timeline (left) */
+.turn-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.turn-card {
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: var(--bg-card);
+}
+
+.turn-card:hover {
+  border-color: var(--border-light);
+}
+
+.turn-card:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.turn-card.active {
+  border-color: var(--evidence-primary);
+  background: var(--evidence-bg);
+}
+
+.turn-card .turn-number {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.turn-card .user-msg {
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  margin: 0.3rem 0;
+  line-height: 1.4;
+}
+
+.turn-card .agent-msg {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* State panel (center) */
+.state-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.state-section {
+  padding: 0.75rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--small-radius);
+}
+
+.state-section h4 {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.route-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.route-indicator.buying {
+  color: var(--evidence-primary);
+  background: var(--evidence-bg);
+}
+
+.route-indicator.browsing {
+  color: var(--demo-primary);
+  background: var(--demo-bg);
+}
+
+.constraint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.constraint-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.constraint-chip.hard {
+  color: var(--evidence-primary);
+  background: var(--evidence-bg);
+  border: 1px solid var(--evidence-border);
+}
+
+.constraint-chip.soft {
+  color: var(--text-secondary);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+}
+
+.constraint-chip.negative {
+  color: var(--error);
+  background: var(--error-bg);
+  border: 1px solid rgba(248, 81, 73, 0.3);
+}
+
+.constraint-chip.added {
+  outline: 2px solid var(--success);
+  outline-offset: 1px;
+}
+
+.constraint-chip.added::before {
+  content: '+ added';
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--success);
+  margin-right: 0.2rem;
+}
+
+.constraint-chip.removed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.constraint-chip.removed::before {
+  content: '✕ removed';
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--error);
+  margin-right: 0.2rem;
+  text-decoration: none;
+}
+
+.constraint-chip.retained::before {
+  content: '= retained';
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-right: 0.2rem;
+}
+
+/* Results panel (right) */
+.results-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#top10List {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.result-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  font-size: 0.8rem;
+  transition: all var(--transition-fast);
+}
+
+.result-item.is-target {
+  border-color: var(--success);
+  background: var(--success-bg);
+}
+
+.result-item .rank {
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 24px;
+  font-variant-numeric: tabular-nums;
+}
+
+.result-item.is-target .rank {
+  color: var(--success);
+}
+
+.result-item .asin-title {
+  flex: 1;
+}
+
+.result-item .asin-title .title {
+  color: var(--text-primary);
+  display: block;
+  line-height: 1.3;
+}
+
+.result-item .asin-title .asin {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: monospace;
+}
+
+.result-item .target-badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  color: var(--success);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* --- Replay Controls ----------------------------------------------- */
+.replay-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.replay-controls button {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.8rem;
+  border-radius: var(--small-radius);
+  border: 1px solid var(--border);
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.replay-controls button:hover {
+  color: var(--text-primary);
+  border-color: var(--border-light);
+}
+
+.replay-controls button:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.replay-controls button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.replay-controls button.active-control {
+  color: var(--evidence-primary);
+  border-color: var(--evidence-primary);
+}
+
+/* --- Step 3: Mechanism Cards --------------------------------------- */
+.mechanism-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 1024px) {
+  .mechanism-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mechanism-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  padding: 1.25rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.mechanism-card:hover {
+  border-color: var(--border-light);
+  transform: translateY(-1px);
+}
+
+.mechanism-card:focus-visible {
+  outline: 2px solid var(--evidence-primary);
+  outline-offset: 2px;
+}
+
+.mechanism-card .mc-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.mechanism-card .mc-detail {
+  display: none;
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.mechanism-card.expanded .mc-detail {
+  display: block;
+}
+
+.mechanism-card .mc-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.mechanism-card .mc-row .mc-label {
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 100px;
+  flex-shrink: 0;
+}
+
+/* --- Step 4: Evaluation Evidence ----------------------------------- */
+.eval-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.eval-metric {
+  text-align: center;
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border-radius: var(--small-radius);
+  min-width: 120px;
+}
+
+.eval-metric .value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--metric-highlight);
+  font-variant-numeric: tabular-nums;
+}
+
+.eval-metric .label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.version-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.version-table th {
+  text-align: left;
+  padding: 0.5rem 0.75rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.version-table td {
+  padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  font-variant-numeric: tabular-nums;
+}
+
+.version-table tr:last-child td {
+  border-bottom: none;
+}
+
+.version-table tr.current td {
+  color: var(--evidence-primary);
+  font-weight: 600;
+}
+
+.reproduce-drawer {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.reproduce-drawer pre {
+  background: var(--bg-primary);
+  padding: 0.75rem;
+  border-radius: var(--small-radius);
+  font-size: 0.8rem;
+  overflow-x: auto;
+  color: var(--text-secondary);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* --- Step 5: Transparent Ads --------------------------------------- */
+.demo-banner {
+  padding: 0.75rem 1rem;
+  background: var(--demo-bg);
+  border: 1px solid var(--demo-border);
+  border-radius: var(--small-radius);
+  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--demo-primary);
+  line-height: 1.5;
+}
+
+.ad-experiment {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  .ad-experiment {
+    grid-template-columns: 1fr;
+  }
+}
+
+.campaign-card {
+  padding: 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+}
+
+.campaign-card h4 {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.campaign-card .field {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  padding: 0.2rem 0;
+}
+
+.campaign-card .field .label { color: var(--text-muted); }
+.campaign-card .field .value { font-weight: 600; font-variant-numeric: tabular-nums; }
+
+.auction-result {
+  padding: 1rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--card-radius);
+  margin-top: 1rem;
+}
+
+.organic-comparison {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.organic-label {
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.organic-list {
+  margin: 0;
+  padding: 0.55rem 0.55rem 0.55rem 1.8rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
+.sponsored-preview {
+  padding: 0.4rem 0.55rem;
+  margin-bottom: 0.35rem;
+  background: var(--demo-bg);
+  border: 1px solid var(--demo-border);
+  border-radius: var(--small-radius);
+  color: var(--text-secondary);
+  font-size: 0.72rem;
+}
+
+.demo-only-tag {
+  color: var(--demo-primary);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .organic-comparison { grid-template-columns: 1fr; }
+}
+
+/* --- Step 6: Closeout ---------------------------------------------- */
+.closeout-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin: 1rem 0;
+}
+
+@media (max-width: 1024px) {
+  .closeout-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+.closeout-link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border);
+  border-radius: var(--small-radius);
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.closeout-link:hover {
+  border-color: var(--evidence-primary);
+}
+
+.disabled-link {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.disabled-link:hover {
+  border-color: var(--border);
+}
+
+.closeout-quote {
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  padding: 1.5rem;
+  border-left: 3px solid var(--evidence-primary);
+  font-style: italic;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* --- Tour Navigation ----------------------------------------------- */
+.tour-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  margin-top: 1rem;
+  border-top: 1px solid var(--border);
+}
+
+.tour-nav .step-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* --- Utilities ----------------------------------------------------- */
+.sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.text-evidence { color: var(--evidence-primary); }
+.text-demo { color: var(--demo-primary); }
+.text-unknown { color: var(--unknown-primary); }
+.text-success { color: var(--success); }
+.text-error { color: var(--error); }
+.text-muted { color: var(--text-muted); }
+.text-sm { font-size: 0.8rem; }
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mono { font-family: 'SF Mono', 'Fira Code', monospace; }
+
+/* Compact recording layout: keep the decision and controls in one 1440×900 frame. */
+@media (min-width: 1200px) and (max-height: 950px) {
+  :root { --content-padding: 1.1rem; }
+  .card { padding: 1rem; margin-bottom: 0.65rem; }
+  .card-header { margin-bottom: 0.65rem; }
+  .contract-grid { gap: 0.55rem; }
+  .contract-item { padding: 0.5rem 0.65rem; }
+  .scenario-bar { margin: 0.55rem 0; }
+  .catalog-sample { padding: 0.65rem; }
+  .tour-nav { padding: 0.75rem 0; margin-top: 0.5rem; }
+  .scenario-tabs, .replay-header { margin-bottom: 0.6rem; }
+  .replay-stage { min-height: 0; height: 360px; }
+  .turn-timeline, .state-panel, .results-panel { max-height: 360px; overflow-y: auto; }
+  #top10List { max-height: 315px; }
+  .replay-controls { margin-top: 0.5rem; padding: 0.5rem 0 0; }
+}
+
+/* --- 1024px width support ------------------------------------------ */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 1.8rem; }
+  .hero .metric-big .value { font-size: 1.6rem; }
+  .replay-stage { grid-template-columns: 1fr; }
+  .mechanism-grid { grid-template-columns: 1fr; }
+  .ad-experiment { grid-template-columns: 1fr; }
+}
+
+/* --- 200% zoom support --------------------------------------------- */
+@media (max-width: 720px) {
+  :root {
+    --content-padding: 1rem;
+  }
+  .hero h1 { font-size: 1.4rem; }
+  .tour-progress { padding: 0.5rem 1rem; }
+  .topbar .sub { display: none; }
+}

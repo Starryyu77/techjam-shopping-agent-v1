@@ -1,0 +1,448 @@
+{
+  "sample_id": "public_0038",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07B5RGY2N",
+  "target_title": "Blowfish Malibu Women's Fruit Sneaker",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Fashion Sneakers"
+  ],
+  "target_price": 32.95,
+  "target_rating": 4.6,
+  "target_rating_number": 19488,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shoes Fashion Sneakers. Lace Slip On Sneaker",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "shoes"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07B5RGY2N",
+          "title": "Blowfish Malibu Women's Fruit Sneaker",
+          "price": 32.95,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08ZCRPDL5",
+          "title": "New Balance Men's 501 V1 Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CTLX626",
+          "title": "SUNJIN ACRO Unisex Canvas Low Top Sneaker Lace up Classic Casual",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B087T18CQ5",
+          "title": "Shoes for Crews Holden, Men's Slip Resistant Food Service Work Sneaker",
+          "price": 82.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07VB14S8S",
+          "title": "Keds Women's Charter Stripe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TMKWCM1",
+          "title": "XIANV Women Denim Jeans Sneaker Classic Low Top Canvas Casual Shoes Slip-on Loafers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TYB7X4R",
+          "title": "XIANV Women Denim Jeans Sneaker Classic Low Top Canvas Casual Shoes Slip-on Loafers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01BHR2QBU",
+          "title": "Skechers Sport Women's Burst Very Daring Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07LC5M33L",
+          "title": "Converse Women's Chuck Taylor All Star Shoreline Knit Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for brand.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07B5RGY2N",
+          "title": "Blowfish Malibu Women's Fruit Sneaker",
+          "price": 32.95,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08ZCRPDL5",
+          "title": "New Balance Men's 501 V1 Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07CTLX626",
+          "title": "SUNJIN ACRO Unisex Canvas Low Top Sneaker Lace up Classic Casual",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B087T18CQ5",
+          "title": "Shoes for Crews Holden, Men's Slip Resistant Food Service Work Sneaker",
+          "price": 82.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07VB14S8S",
+          "title": "Keds Women's Charter Stripe Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07TMKWCM1",
+          "title": "XIANV Women Denim Jeans Sneaker Classic Low Top Canvas Casual Shoes Slip-on Loafers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TYB7X4R",
+          "title": "XIANV Women Denim Jeans Sneaker Classic Low Top Canvas Casual Shoes Slip-on Loafers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01BHR2QBU",
+          "title": "Skechers Sport Women's Burst Very Daring Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07LC5M33L",
+          "title": "Converse Women's Chuck Taylor All Star Shoreline Knit Sneaker",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Textile; Made in the USA or Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07B5RGY2N",
+          "title": "Blowfish Malibu Women's Fruit Sneaker",
+          "price": 32.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B136Z5FN",
+          "title": "Levi's® Court Hi American Folk",
+          "price": 50.4,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09F5NCF5Z",
+          "title": "Levi's® 501 Court Lo Monogram",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00KYCF81A",
+          "title": "Reef Women's Girls Deckhand 3 Tx Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07S2Y3THP",
+          "title": "Lugz Men's Clipper Sneaker",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BKR754VG",
+          "title": "Roxy Women's Minnow Slip on Sneaker Shoe",
+          "price": 35.36,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00LI6P44W",
+          "title": "K-Swiss Men's Classic Vn Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B00XV4NPEU",
+          "title": "Saucony Originals Men's Jazz Low Pro Classic Retro Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Textile.",
+      "agent_message": "I found 10 current candidates. Do you have a material preference?",
+      "ask_attribute": "material",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "shoes",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07B5RGY2N",
+          "title": "Blowfish Malibu Women's Fruit Sneaker",
+          "price": 32.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B136Z5FN",
+          "title": "Levi's® Court Hi American Folk",
+          "price": 50.4,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09F5NCF5Z",
+          "title": "Levi's® 501 Court Lo Monogram",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00KYCF81A",
+          "title": "Reef Women's Girls Deckhand 3 Tx Fashion Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BKR754VG",
+          "title": "Roxy Women's Minnow Slip on Sneaker Shoe",
+          "price": 35.36,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B00LI6P44W",
+          "title": "K-Swiss Men's Classic Vn Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00XV4NPEU",
+          "title": "Saucony Originals Men's Jazz Low Pro Classic Retro Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TBQW9XD",
+          "title": "MEHOTO Womens Breathable Tennis Shoes, Athletic Fashion Walking Comfort Lightweight Running Sneakers Sports Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B087S13L3Q",
+          "title": "Clarks Women's Sharon Dolly Loafer",
+          "price": 94.66,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07D8Y7KX9",
+          "title": "Tommy Hilfiger Women's Essential Nautical Low-Top Sneakers",
+          "price": 96.71,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Blowfish Malibu Women's Fruit Sneaker",
+    "hard_constraints": [
+      "Textile",
+      "Made in the USA or Imported"
+    ],
+    "soft_preferences": [
+      "Synthetic sole",
+      "Lace Slip On Sneaker"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Lace Slip On Sneaker",
+      "new_value": "Textile",
+      "message": "Actually, ignore my earlier preference. What I need is: Textile."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "style",
+      "fit",
+      "material",
+      "comfort"
+    ]
+  }
+}

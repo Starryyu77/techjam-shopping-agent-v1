@@ -1,0 +1,64 @@
+{
+  "evidence_scope": "official_public_200",
+  "evaluator": "unmodified official local_evaluator.py",
+  "intent_backend": "rules",
+  "sample_count": 200,
+  "hit_rate_at_10": 0.995,
+  "mrr": 0.644355,
+  "mttc": 2.215,
+  "efficiency": 0.8785,
+  "technical_score": 0.866507,
+  "reported_token_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0
+  },
+  "scenario_metrics": {
+    "boundary": {
+      "sample_count": 10,
+      "hit_rate_at_10": 1.0,
+      "mrr": 0.66,
+      "mttc": 1.9
+    },
+    "browsing": {
+      "sample_count": 80,
+      "hit_rate_at_10": 1.0,
+      "mrr": 0.627232,
+      "mttc": 2.1125
+    },
+    "buying": {
+      "sample_count": 80,
+      "hit_rate_at_10": 0.9875,
+      "mrr": 0.623204,
+      "mttc": 1.725
+    },
+    "intent_override": {
+      "sample_count": 30,
+      "hit_rate_at_10": 1.0,
+      "mrr": 0.741204,
+      "mttc": 3.9
+    }
+  },
+  "first_hit_turn_distribution": {
+    "1": 101,
+    "2": 5,
+    "3": 64,
+    "4": 20,
+    "5": 5,
+    "6": 4,
+    "miss": 1
+  },
+  "best_rank_distribution": {
+    "1": 97,
+    "10": 3,
+    "2": 31,
+    "3": 20,
+    "4": 21,
+    "5": 6,
+    "6": 6,
+    "7": 6,
+    "8": 7,
+    "9": 2,
+    "miss": 1
+  }
+}

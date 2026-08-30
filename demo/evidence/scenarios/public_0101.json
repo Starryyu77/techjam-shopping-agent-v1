@@ -1,0 +1,159 @@
+{
+  "sample_id": "public_0101",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B07QMS8TX8",
+  "target_title": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Uniforms, Work & Safety",
+    "Clothing",
+    "Medical",
+    "Scrub Bottoms"
+  ],
+  "target_price": 19.19,
+  "target_rating": 4.5,
+  "target_rating_number": 29264,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Medical Scrub Bottoms. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Medical Scrub Bottoms",
+        "hard_constraints": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Medical Scrub Bottoms",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07QMS8TX8",
+          "title": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+          "price": 19.19,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B01MQUDPPO",
+          "title": "Iflex Scrubs for Women, Yoga-Inspired Knit Waistband Scrub Pants CK002",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B01N7TWD24",
+          "title": "Iguanamed MA146022 Women's 5500 Quattro Pant, Medium, Merlot",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07KJHJJJ8",
+          "title": "Athletic Works Women's Straight Leg Pant: Avaliable in Regular & Petite",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B01FON9H5G",
+          "title": "M&M SCRUBS Women's Super Soft Medical Scrub Pants for Women - Drawstring Yoga Pant Inspired - Junior FIT 9120",
+          "price": 17.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B007R0PO1G",
+          "title": "Ecko Unltd Men's Scrubs Harrison Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01CFX0G3K",
+          "title": "KOI Big and Tall James Elastic Men's Big & Tall Scrub Pants with Zip Fly and Drawstring Waist",
+          "price": 39.95,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08GR3VKSN",
+          "title": "Medline Men's Straight",
+          "price": 13.88,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B078XJN2ZS",
+          "title": "Urbane Performance 9733 Activate Pant",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07MR3H7H1",
+          "title": "Cherokee Workwear Revolution WW110 Espresso XLP",
+          "price": 23.98,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Medical Cargo Pants for Men Workwear Originals, Zipper Fly Scrubs for Men 4000",
+    "hard_constraints": [
+      "polyester",
+      "color: white"
+    ],
+    "soft_preferences": [
+      "65% Polyester, 35% Cotton",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "durability"
+    ]
+  }
+}

@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0070",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B010LVBVKA",
+  "target_title": "Travel Neck Wallet with RFID Blocking – Passport Holder Neck Pouch to Keep Your Cash And Documents Safe – Get Peace Of Mind When Traveling",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Luggage & Travel Gear",
+    "Travel Accessories",
+    "Travel Wallets"
+  ],
+  "target_price": 18.95,
+  "target_rating": 4.6,
+  "target_rating_number": 9909,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Travel Accessories Travel Wallets, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Travel Accessories Travel Wallets",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "travel"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Travel Accessories Travel Wallets",
+          "soft_preferences": {
+            "use_case": [
+              "travel"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08T9XMHM7",
+          "title": "Dakine Vert Rail Wallet - Aloha Camo",
+          "price": 14.0,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B010LVBVKA",
+          "title": "Travel Neck Wallet with RFID Blocking – Passport Holder Neck Pouch to Keep Your Cash And Documents Safe – Get Peace Of M",
+          "price": 18.95,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00O1FFXH0",
+          "title": "Shacke Hidden Travel Belt Wallet w/RFID Blocker (Black with Black Strap)",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B01G1ORT5M",
+          "title": "RFID Blocking Travel Wallet - Money Belt & Passport Holder, Travel Fanny Pack for Women Men - Black",
+          "price": 9.95,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B076Q4429C",
+          "title": "Waterproof Pouch with Adjustable Waist Strap Best Way to Keep Your Phone and Valuables Safe and Dry Perfect for Boating ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B011O8L190",
+          "title": "Tuff Mudda Money Belt 100% RFID Protection Perfect Money Belt for Travel & Keeping Your ID Secure - Black - Lightweight",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B007XAI2JG",
+          "title": "Travelon Luggage Safe Id Credit Card Wallet, Off Black, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07TX5CJ7Y",
+          "title": "Gostwo Mens Bifold Wallet Money Clip RFID Blocking Travel Wallet Credit Card Holder (Carbon Fiber Blue)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B004WYQA7W",
+          "title": "Samsonite Luggage Security Waist Belt, Cream, One Size",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RDMKGSD",
+          "title": "Michael Kors Jet Set Travel Zip Around Card Case Wallet",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Travel Neck Wallet with RFID Blocking – Passport Holder Neck Pouch to Keep Your Cash And Documents Safe – Get Peace Of Mind When Traveling",
+    "hard_constraints": [
+      "nylon",
+      "✅ PERFECT FOR TRAVEL - COMFORTABLE, LIGHTWEIGHT, AND WATER RESISTANT PASSPORT AND VACCINE CARD HOLDER designed to offer you a safe and secure location to store valuables , passport"
+    ],
+    "soft_preferences": [
+      "✅ RFID BLOCKING – RFID WALLET LINED WITH RADIO FREQUENCY SHIELDING MATERIAL WHICH BLOCKS UNWANTED SCANS , ensuring that your cards and personal information remain private and confi",
+      "Nylon lining"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "fit",
+      "performance"
+    ]
+  }
+}

@@ -1,0 +1,481 @@
+{
+  "sample_id": "public_0103",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B0BT8T2FQ3",
+  "target_title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Underwear",
+    "Undershirts"
+  ],
+  "target_price": 18.48,
+  "target_rating": 4.6,
+  "target_rating_number": 100480,
+  "hit": true,
+  "first_hit_turn": 4,
+  "best_rank": 3,
+  "reciprocal_rank": 0.3333333333333333,
+  "total_turns": 4,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Underwear Undershirts. Imported",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Underwear Undershirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Underwear Undershirts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C3J1VSQ",
+          "title": "Berrak Collection Men's Cotton Crew-Neck Undershirts-White (Pack of 3/6)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BT8T2FQ3",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+          "price": 18.48,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B008U7KRBW",
+          "title": "Fruit of the Loom Men's Tag-Free Tank A-Shirt",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BSS36XCS",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked V-Neck T-Shirt",
+          "price": 45.92,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BXP6MG3X",
+          "title": "Hanes Men's Tagless Cotton V-Neck Undershirt – Multiple Packs and Colors",
+          "price": 18.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07CGSLYVL",
+          "title": "Hanes Men's 5-Pack ComfortBlend V-Neck T-Shirt with FreshIQ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YF1THQ6",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YDZZDGQ",
+          "title": "Amazon Essentials Men's Slim-Fit Short-Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CLKVV5K",
+          "title": "Bolter 4 Pack Men's Everyday Cotton Blend V Neck Short Sleeve T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0891LTVHT",
+          "title": "Buyless Fashion Boys Scoop Neck Tagless Undershirts Soft Cotton Tank Top (4 Pack)",
+          "price": 21.47,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Underwear Undershirts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C3J1VSQ",
+          "title": "Berrak Collection Men's Cotton Crew-Neck Undershirts-White (Pack of 3/6)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BT8T2FQ3",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+          "price": 18.48,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B008U7KRBW",
+          "title": "Fruit of the Loom Men's Tag-Free Tank A-Shirt",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BSS36XCS",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked V-Neck T-Shirt",
+          "price": 45.92,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BXP6MG3X",
+          "title": "Hanes Men's Tagless Cotton V-Neck Undershirt – Multiple Packs and Colors",
+          "price": 18.98,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07CGSLYVL",
+          "title": "Hanes Men's 5-Pack ComfortBlend V-Neck T-Shirt with FreshIQ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07YF1THQ6",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YDZZDGQ",
+          "title": "Amazon Essentials Men's Slim-Fit Short-Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CLKVV5K",
+          "title": "Bolter 4 Pack Men's Everyday Cotton Blend V Neck Short Sleeve T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0891LTVHT",
+          "title": "Buyless Fashion Boys Scoop Neck Tagless Undershirts Soft Cotton Tank Top (4 Pack)",
+          "price": 21.47,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: cotton; color: white.",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Underwear Undershirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ],
+          "color": [
+            "white"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ],
+            "color": [
+              "white"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BT8T2FQ3",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+          "price": 18.48,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B008U7KRBW",
+          "title": "Fruit of the Loom Men's Tag-Free Tank A-Shirt",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B019P5WRLK",
+          "title": "Feathers Boys White Tank Top 100% Cotton Tagless Undershirts 3-Pack",
+          "price": 17.98,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00TADVSZO",
+          "title": "Impact Blondie Bonzai Women's tee Vintage-White",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07HC5LL2H",
+          "title": "Boys’ Long Sleeve Cotton Tees – Tagless Undershirt Super Soft 3 pk Tee Shirts.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09PRTSYLJ",
+          "title": "dELiA*s Girls’ Undershirt – 100% Cotton Cami – Camisole Tank Top (6 Pack, 2T-16)",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00KDC6VVW",
+          "title": "Fruit of the Loom Men's Sure Fit V-Neck Top(Pack of 3)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B09WCYC17X",
+          "title": "3 Pieces Men's A Shirts Classic Men Tank Tops Cotton Tank Tops Undershirts Sleeveless Workout Gym Tank Tops for Men",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B017HY3OH2",
+          "title": "Hanes Men's 2 Pack Long Sleeve Beefy-T Shirt, X-Large, 1 White / 1 Navy",
+          "price": 26.04,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07HYJZKW4",
+          "title": "KingSize Men's Big & Tall Cotton Crewneck Undershirt 3-Pack - Tall - 6XL, White",
+          "price": 37.67,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "Actually, ignore my earlier preference. What I need is: cotton.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Underwear Undershirts",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "color": [
+              "white"
+            ]
+          }
+        },
+        "retained": {
+          "soft_preferences": {
+            "material": [
+              "cotton"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B019P5WRLK",
+          "title": "Feathers Boys White Tank Top 100% Cotton Tagless Undershirts 3-Pack",
+          "price": 17.98,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09WCYC17X",
+          "title": "3 Pieces Men's A Shirts Classic Men Tank Tops Cotton Tank Tops Undershirts Sleeveless Workout Gym Tank Tops for Men",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0BT8T2FQ3",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+          "price": 18.48,
+          "is_target": true
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B008U7KRBW",
+          "title": "Fruit of the Loom Men's Tag-Free Tank A-Shirt",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BSS36XCS",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked V-Neck T-Shirt",
+          "price": 45.92,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BXP6MG3X",
+          "title": "Hanes Men's Tagless Cotton V-Neck Undershirt – Multiple Packs and Colors",
+          "price": 18.98,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07CGSLYVL",
+          "title": "Hanes Men's 5-Pack ComfortBlend V-Neck T-Shirt with FreshIQ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07YF1THQ6",
+          "title": "Amazon Essentials Men's Regular-Fit Short-Sleeve Crewneck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07YDZZDGQ",
+          "title": "Amazon Essentials Men's Slim-Fit Short-Sleeve V-Neck T-Shirt, Pack of 2",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07CLKVV5K",
+          "title": "Bolter 4 Pack Men's Everyday Cotton Blend V Neck Short Sleeve T Shirt",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 3,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked Crew T-Shirt",
+    "hard_constraints": [
+      "cotton",
+      "color: white"
+    ],
+    "soft_preferences": [
+      "100% Cotton",
+      "Imported"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 4,
+      "old_value": "Imported",
+      "new_value": "cotton",
+      "message": "Actually, ignore my earlier preference. What I need is: cotton."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

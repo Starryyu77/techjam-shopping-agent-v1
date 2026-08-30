@@ -1,0 +1,146 @@
+{
+  "sample_id": "public_0120",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08GPGX2QG",
+  "target_title": "SENDEFN Wallets for Women Genuine Leather Credit Card Holder with RFID Blocking Large Capacity Wristlet",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Accessories",
+    "Wallets, Card Cases & Money Organizers",
+    "Wallets"
+  ],
+  "target_price": 25.99,
+  "target_rating": 4.6,
+  "target_rating_number": 22424,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Card Cases & Money Organizers Wallets, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Card Cases & Money Organizers Wallets",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Card Cases & Money Organizers Wallets"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0B9ZYDDZ1",
+          "title": "Buffway Slim Minimalist Front Pocket RFID Blocking Leather Wallets for Men Women",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B089RXP8K2",
+          "title": "Travelambo Womens Wallet RFID Blocking Bifold Multi Card Case Wallet with Zipper Pocket",
+          "price": 13.59,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0C31KQH8P",
+          "title": "SERMAN BRANDS RFID Blocking Slim Bifold Genuine Leather Minimalist Front Pocket Wallets for Men with Money Clip Thin Men",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08GPGX2QG",
+          "title": "SENDEFN Wallets for Women Genuine Leather Credit Card Holder with RFID Blocking Large Capacity Wristlet",
+          "price": 25.99,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B081TWX2LR",
+          "title": "Timberland Men's Leather RFID Blocking Passcase Security Wallet",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0C3CRDQQG",
+          "title": "Zitahli Mens-Wallet-Slim-Leather-RFID Blocking Wallet for Men Minimalist Bifold Credit Card Holder with Gift Box",
+          "price": 25.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BNYK4FJX",
+          "title": "Zitahli Wallet Men-Magnetic Money Clip-Slim and Minimalist Card Case-ID Window Front Pocket Wallet Gift Boxing Black",
+          "price": 17.98,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07HFVBK9Z",
+          "title": "APHISON Womens Wallets RFID Blocking Leather Clutch Long Wallet for Women Card Holder Phone Organizer Ladies Travel Purs",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0873CNY44",
+          "title": "STAY FINE Top Grain Leather Trifold Wallet for Men | Ultra Strong Stitching | Handcrafted Argentinian Leather | RFID Blo",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0954QMP4D",
+          "title": "Suavell Slim Wallets for Men. RFID Money Clip Wallet, Slim Wallet, Thin Front Pocket Credit Card Wallet, Minimalist Bifo",
+          "price": 23.95,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "SENDEFN Wallets for Women Genuine Leather Credit Card Holder with RFID Blocking Large Capacity Wristlet",
+    "hard_constraints": [
+      "leather",
+      "color: red"
+    ],
+    "soft_preferences": [
+      "Leather lining",
+      "Snap closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort"
+    ]
+  }
+}

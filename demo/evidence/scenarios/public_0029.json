@@ -1,0 +1,388 @@
+{
+  "sample_id": "public_0029",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01IAKCZEK",
+  "target_title": "Sanuk Yoga Sling 2 Light Natural 5 B (M)",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Sandals",
+    "Flats"
+  ],
+  "target_price": 34.95,
+  "target_rating": 3.9,
+  "target_rating_number": 11,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Sandals Flats. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "sandals",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00JTKXCIO",
+          "title": "Golden Rd Women's Sandals Flip Flops Hemp Braided Strap Flats Slipper Summer Floral Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00B8YUBCO",
+          "title": "Blowfish Dame",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08SHV7ZXM",
+          "title": "FUDYNMALC Casual Wedge Sandals for Women Comfortable Flower Clip Toe Summer Beach Sandals Fashion Ladies Bohemia Platfor",
+          "price": 37.7,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08V13PVM8",
+          "title": "Nomadic State of Mind - JC Sandal | Handmade | Woven | Adjustable | Men and Women’s Sizes | Vegan | Socially Responsible",
+          "price": 55.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08BJMT9M7",
+          "title": "Longwu Women's Casual V-Neck Sleeveless/Short Sleeve Side Split Drawstring Waist Midi Length Vest Dress with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B071FFKZXK",
+          "title": "JACKSHIBO Girls Boys Summer Beach Breathable Athletic Closed-Toe Sandals for Kids(Toddler/Little Kid/Big Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082YN2GYP",
+          "title": "BTFBM Women Summer Short Sleeve Shirts Crew Neck Color Block Irregular Striped Print Loose Soft Casual Tee Tops Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B094D15B1V",
+          "title": "FAVALIVE Two Piece Outfits for Women Lounge Sets Shorts with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00M95N6U0",
+          "title": "FitFlop Women's The Skinny Fabric Flip-Flop",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B00JTKXCIO",
+          "title": "Golden Rd Women's Sandals Flip Flops Hemp Braided Strap Flats Slipper Summer Floral Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00B8YUBCO",
+          "title": "Blowfish Dame",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08B8BKPQS",
+          "title": "BTFBM Women's 2023 Summer Casual Beach Dresses Crew Neck Short Sleeve Wrap Party Club Mini Ruched Bodycon T Shirt Dress",
+          "price": 33.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B08SHV7ZXM",
+          "title": "FUDYNMALC Casual Wedge Sandals for Women Comfortable Flower Clip Toe Summer Beach Sandals Fashion Ladies Bohemia Platfor",
+          "price": 37.7,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08V13PVM8",
+          "title": "Nomadic State of Mind - JC Sandal | Handmade | Woven | Adjustable | Men and Women’s Sizes | Vegan | Socially Responsible",
+          "price": 55.0,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08BJMT9M7",
+          "title": "Longwu Women's Casual V-Neck Sleeveless/Short Sleeve Side Split Drawstring Waist Midi Length Vest Dress with Pocket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B071FFKZXK",
+          "title": "JACKSHIBO Girls Boys Summer Beach Breathable Athletic Closed-Toe Sandals for Kids(Toddler/Little Kid/Big Kid)",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B082YN2GYP",
+          "title": "BTFBM Women Summer Short Sleeve Shirts Crew Neck Color Block Irregular Striped Print Loose Soft Casual Tee Tops Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B094D15B1V",
+          "title": "FAVALIVE Two Piece Outfits for Women Lounge Sets Shorts with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00M95N6U0",
+          "title": "FitFlop Women's The Skinny Fabric Flip-Flop",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: Back for a second time, it's the ever comfy, ever stylish Yoga Sling 2 sandal from Sanuk®. A sandal that's a flexible as you—win!; New lightweight, two-way stretch knit upper with sling comfort construction.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "sandals",
+        "hard_constraints": {
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {
+          "feature": [
+            "lightweight",
+            "stretch",
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "lightweight",
+              "stretch"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01IAKCZEK",
+          "title": "Sanuk Yoga Sling 2 Light Natural 5 B (M)",
+          "price": 34.95,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08V13PVM8",
+          "title": "Nomadic State of Mind - JC Sandal | Handmade | Woven | Adjustable | Men and Women’s Sizes | Vegan | Socially Responsible",
+          "price": 55.0,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B082YN2GYP",
+          "title": "BTFBM Women Summer Short Sleeve Shirts Crew Neck Color Block Irregular Striped Print Loose Soft Casual Tee Tops Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0924Z541X",
+          "title": "GLASS TWO Women's Biker Shorts - Basic Stretch 3\" Casual Pants Yoga Sports Workout Running Active Bike Leggings",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07B16X47S",
+          "title": "LifeStride Women's Tania Flat Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08C356KK3",
+          "title": "Skechers Women's Cross Strap Flat Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07R1ZX96G",
+          "title": "Jellypop Women's Kent Sandal",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B098GXBCTG",
+          "title": "EDENNAOMI Women's Casual Crop Top - Short Sleeve French Terry Elastic Hem Loose Fit Cropped T Shirt Pullover",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0967CP9J3",
+          "title": "NIMIZIA Women's Sandals Bow Roman Open Toe Breathable Comfortable Elegant Flat Sandals Casual Summer Beach Sandals for W",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0C148CJC3",
+          "title": "Libiyi Women's Comfy Orthotic Sandals, Libiyi Women's Ultra-comfy Breathable Sneakers, Libiyi Orthotic Sandals (8/8.5, B",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Sanuk Yoga Sling 2 Light Natural 5 B (M)",
+    "hard_constraints": [
+      "fabric",
+      "Back for a second time, it's the ever comfy, ever stylish Yoga Sling 2 sandal from Sanuk®. A sandal that's a flexible as you—win!"
+    ],
+    "soft_preferences": [
+      "New lightweight, two-way stretch knit upper with sling comfort construction",
+      "Sealed edge footbed made from real yoga mats"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "material",
+      "style",
+      "fit"
+    ]
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0067",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B09G9BXJZM",
+  "target_title": "TLZC Men's Lightweight Bomber Jacket Windbreaker Slim Fit Active Coat Outerwear",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Clothing",
+    "Jackets & Coats",
+    "Lightweight Jackets",
+    "Windbreakers"
+  ],
+  "target_price": 35.98,
+  "target_rating": 4.5,
+  "target_rating_number": 986,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Lightweight Jackets Windbreakers. A key requirement is: polyester.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "jackets",
+        "hard_constraints": {
+          "feature": [
+            "lightweight"
+          ],
+          "material": [
+            "polyester"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "jackets",
+          "hard_constraints": {
+            "material": [
+              "polyester"
+            ],
+            "feature": [
+              "lightweight"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0716S3Y6C",
+          "title": "Tortor 1Bacha Men's Hooded Windbreaker Outdoor UV Sun Protection Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09G9BXJZM",
+          "title": "TLZC Men's Lightweight Bomber Jacket Windbreaker Slim Fit Active Coat Outerwear",
+          "price": 35.98,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B073BV7R19",
+          "title": "Calvin Klein Men's Winter Coats-Sherpa-Lined Hooded Soft Shell Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B078X291BC",
+          "title": "Peak Velocity Men's Zephyr Windbreaker Loose-Fit Anorak Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00U6CC0O6",
+          "title": "SCOTTeVEST Tropiformer Jacket for Men - 22 Hidden Pockets - Breathable Water Resistant Coat for Travel & More",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09S5S7J8D",
+          "title": "Rip Curl Men's Elite Anti Series Hooded Wind Breaker, Water Repellent Jacket",
+          "price": 51.97,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07RKRQPRP",
+          "title": "Nutriangee Men's Rose Floral Windbreaker Hooded Jacket Lightweight Casual Zip-up Flower Coat",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B071HPGY7D",
+          "title": "Tortor 1Bacha Men's Hooded Windbreaker Outdoor UV Sun Protection Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0751SRBWS",
+          "title": "Andrew Marc Men's Light Weight Bomber Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0751SRBVF",
+          "title": "Andrew Marc Men's Light Weight Bomber Jacket",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "TLZC Men's Lightweight Bomber Jacket Windbreaker Slim Fit Active Coat Outerwear",
+    "hard_constraints": [
+      "polyester",
+      "Polyester"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "material"
+    ]
+  }
+}

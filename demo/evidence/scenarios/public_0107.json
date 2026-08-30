@@ -1,0 +1,157 @@
+{
+  "sample_id": "public_0107",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B01KPFK9ZA",
+  "target_title": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Coats, Jackets & Vests",
+    "Trench, Rain & Anoraks",
+    "Anoraks"
+  ],
+  "target_price": 42.99,
+  "target_rating": 3.8,
+  "target_rating_number": 7672,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Rain & Anoraks Anoraks. A key requirement is: cotton.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Rain & Anoraks Anoraks",
+        "hard_constraints": {
+          "material": [
+            "cotton"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Rain & Anoraks Anoraks",
+          "hard_constraints": {
+            "material": [
+              "cotton"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01KPFK9ZA",
+          "title": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+          "price": 42.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B004QS8TFK",
+          "title": "prAna Women's Tori Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B00R6RX700",
+          "title": "BCBGeneration Women's Coated Cotton Jacket",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BSS36XCS",
+          "title": "Fruit of the Loom Men's Eversoft Cotton Stay Tucked V-Neck T-Shirt",
+          "price": 45.92,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B082YKRMG7",
+          "title": "Balanced Co. Circle Game Meme Dress Socks Funny Socks Crazy Socks Casual Cotton Crew Socks",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0834HZQZF",
+          "title": "IZZY + TOBY 100% Cotton Nightgowns for Women Soft Ladies Gowns Sleepwear Long Sleeveless Nightgown",
+          "price": 30.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0792TWF7C",
+          "title": "Wealurre Women's Cotton Thong Breathable Panties Low Rise Underwear",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08V2YJ8XV",
+          "title": "PUMA Men's Essentials Logo Tee",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CLKVV5K",
+          "title": "Bolter 4 Pack Men's Everyday Cotton Blend V Neck Short Sleeve T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07HCCKRCD",
+          "title": "Amazon Brand - Spotted Zebra Girls' Cotton Tights",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "FASHION BOOMY Women's Zip Up Safari Military Anorak Jacket with Hood Drawstring - Regular and Plus Sizes",
+    "hard_constraints": [
+      "cotton",
+      "Shell 100% Cotton Lining 100% Polyester"
+    ],
+    "soft_preferences": [
+      "Zipper closure",
+      "Machine Wash"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

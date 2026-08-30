@@ -1,0 +1,160 @@
+{
+  "sample_id": "public_0102",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B07PWZXZVX",
+  "target_title": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Bras",
+    "Everyday Bras"
+  ],
+  "target_price": 22.99,
+  "target_rating": 4.1,
+  "target_rating_number": 13441,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 6,
+  "reciprocal_rank": 0.16666666666666666,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Bras Everyday Bras, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Bras Everyday Bras",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "everyday"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Bras Everyday Bras",
+          "soft_preferences": {
+            "use_case": [
+              "everyday"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07R3YS1TV",
+          "title": "PRETTYWELL Women's Sleep Bra, Seamless ComfortableYoga Bra, 1 Pack Everyday Bras with Removable Pads,for A to D Cup(1 Nu",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08HS712ZB",
+          "title": "Duufin 5 Pcs Lace Bralettes for Women Bralette Padded Lace Bandeau Bra",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08ZKFD4GM",
+          "title": "Hanes Women's Wireless Bra with Cooling, Seamless Smooth Comfort Wirefree T-Shirt Bra",
+          "price": 16.81,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BPCC1KBT",
+          "title": "Hanes Womens Wireless Bra, Full-Coverage Pullover Stretch-Knit Bra, Smoothing T-Shirt Bra",
+          "price": 10.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00L5YKFA0",
+          "title": "Hanes Women's Wireless T-shirt Bra, Moisture-Wicking Convertible Smoothing Bra, Full-coverage",
+          "price": 12.02,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07PWZXZVX",
+          "title": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+          "price": 22.99,
+          "is_target": true
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07Q2MLX5N",
+          "title": "Bali womens Comfort Revolution Wireless T-shirt Bra, Full-coverage Pullover Bra, Df3491",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0847J1T2K",
+          "title": "WONDERSHAPE Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08YYKH2DF",
+          "title": "Romals Women's Push-up Bras Pack T-Shirt Bras for Women Brassieres Underwire Bra",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B08BWHG5WG",
+          "title": "COLO Women Yoga Tank Top Workout Tops Seamless Sport Bra Racerback Built in Bra Removable Pad",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 6,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "FallSweet Padded Push Up Lace Bras for 34A to 44C Underwire",
+    "hard_constraints": [
+      "Hand Wash Only",
+      "Push Up Bra, A/B/C cup 3 centimeters Thickness Pad inside. But noted that D cup is thin cup,lightly padded"
+    ],
+    "soft_preferences": [
+      "Underwire",
+      "Lace Design"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "critical",
+    "preference_tags": [
+      "comfort",
+      "style",
+      "fit",
+      "material"
+    ]
+  }
+}

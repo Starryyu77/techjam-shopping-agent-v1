@@ -1,0 +1,151 @@
+{
+  "sample_id": "public_0059",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B01H6DGA16",
+  "target_title": "Supplim Women's Body Shaper Waist Cincher Underbust Corset Bodysuit Shapewear",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Lingerie, Sleep & Lounge",
+    "Lingerie",
+    "Shapewear",
+    "Bodysuits"
+  ],
+  "target_price": null,
+  "target_rating": 4.0,
+  "target_rating_number": 4781,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Shapewear Bodysuits, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Shapewear Bodysuits",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Shapewear Bodysuits"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B01H6DGA16",
+          "title": "Supplim Women's Body Shaper Waist Cincher Underbust Corset Bodysuit Shapewear",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B074DR42J6",
+          "title": "DIDK Women's Sexy Backless Lace Appliques Long Sleeve Bodysuit",
+          "price": 28.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09JRTH188",
+          "title": "MakeMeChic Women's 4 Piece Sexy Bodysuits Casual Solid Sleeveless Ribbed Knit Shapewear Tank Top Bodysuits",
+          "price": 44.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B09N9WRSFD",
+          "title": "Fajas Colombianas Reductoras y Moldeadoras Postparto Levanta Cola de Mujer Girdles for Women",
+          "price": 76.52,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07PXS98QY",
+          "title": "Women Shapewear Bodysuit Full Body Shaper with Sleeves 3 in 1 Post Surgery Firm Control Fajas Compression Garment",
+          "price": 59.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B083SC32KL",
+          "title": "Womens Sexy Turtleneck Bodysuit Long Sleeve Bodycon Bodysuit Leotard Top",
+          "price": 17.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07SJZN476",
+          "title": "JOYSHAPER Women's Shapewear Bodysuit Tummy Control Seamless Open Bust Bodysuits Body Shaper Body Briefer",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BMG8YQ37",
+          "title": "Shapewear Bodysuit Thong for Women Tummy Control Open Bust Body Shaper Waist Slimmer Cincher",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09NFNHCXS",
+          "title": "REYEOGO Women Seamless Shapewear Bodysuit Tummy Control Full Body Shaper Waist Trainer Slimming Leotard Jumpsuits Tank T",
+          "price": 21.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09PMPGNVP",
+          "title": "OWIN Women's Deep V Neck Short Sleeve Bodysuit Stretch Casual Collared Jumpsuit Leotard Tops",
+          "price": 25.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Supplim Women's Body Shaper Waist Cincher Underbust Corset Bodysuit Shapewear",
+    "hard_constraints": [
+      "nylon",
+      "62.4% Nylon 37.6% Spandex"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Pull On closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "style",
+      "material",
+      "comfort"
+    ]
+  }
+}

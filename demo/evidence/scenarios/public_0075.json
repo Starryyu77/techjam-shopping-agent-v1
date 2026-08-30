@@ -1,0 +1,148 @@
+{
+  "sample_id": "public_0075",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B08L13LJ5M",
+  "target_title": "BULLIANT Men's Belt, Slide Ratchet Belt For Men Dress Pant Shirt Oxfords,trim To Fit",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Accessories",
+    "Belts"
+  ],
+  "target_price": 24.99,
+  "target_rating": 4.6,
+  "target_rating_number": 38612,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Accessories Belts, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "Accessories Belts",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Accessories Belts"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08FLYBP2J",
+          "title": "Lavemi Men's Real Leather Ratchet Dress Casual Belt, Cut to Exact Fit, Elegant Gift Box",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08L13LJ5M",
+          "title": "BULLIANT Men's Belt, Slide Ratchet Belt For Men Dress Pant Shirt Oxfords,trim To Fit",
+          "price": 24.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08WKZNFG2",
+          "title": "BeltBro Titan No Buckle Elastic Belt For Men — Fits 1.5 Inch Belt Loops, Comfortable and Easy To Use",
+          "price": 14.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BZWZSM7D",
+          "title": "Steve Madden Men's Dress Casual Every Day Leather Belt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08L13H7SY",
+          "title": "BULLIANT Men's Belt, Reversible Belt 1.25\" For Mens Casual Golf Dress pants shirts,One Reverse For 2 Sides",
+          "price": 20.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08QN272FH",
+          "title": "Tommy Hilfiger Men's Ribbon Inlay Fabric Belt with Harness Buckle",
+          "price": 25.36,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0C4HGYDMF",
+          "title": "Belts for Men, High Quality Handmade Genuine Leather, 100% Cow Leather, Classic and Fashion Designs",
+          "price": 16.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B071X54486",
+          "title": "Hide & Drink, Rustic Handmade Full Grain Leather Men's Belt, Two Row Stitch Stylish Design - Everyday Belts for Men",
+          "price": 46.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01N44118B",
+          "title": "maikun Mens Dress Leather Belt Plaque Buckle 35mm Width For Father's Day",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07RQSN383",
+          "title": "Timberland PRO Men's No-Scratch No Buckle Mechanic Belt",
+          "price": 29.02,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "BULLIANT Men's Belt, Slide Ratchet Belt For Men Dress Pant Shirt Oxfords,trim To Fit",
+    "hard_constraints": [
+      "leather",
+      "100% Leather"
+    ],
+    "soft_preferences": [
+      "Genuine Leather,New Design for Exact Fit,Width 1 3/8\"",
+      "Ratchet closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "comfort",
+      "fit",
+      "style"
+    ]
+  }
+}

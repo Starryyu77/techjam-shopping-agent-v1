@@ -1,0 +1,603 @@
+{
+  "sample_id": "public_0068",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B08SH8GF6K",
+  "target_title": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Athletic",
+    "Walking"
+  ],
+  "target_price": null,
+  "target_rating": 4.4,
+  "target_rating_number": 2218,
+  "hit": true,
+  "first_hit_turn": 5,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 5,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Walking. Lightweight and responsive Ultra Go midsole cushioning",
+      "agent_message": "I found 10 current candidates. Do you have a preferred brand?",
+      "ask_attribute": "brand",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ],
+          "feature": [
+            "lightweight"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Athletic Walking",
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ],
+            "feature": [
+              "lightweight"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08SH8GF6K",
+          "title": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08GGXMPNP",
+          "title": "Skechers Women's Go Walk Smart Deco Lace Slip on Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07THT4G8N",
+          "title": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PP7LXLG",
+          "title": "TIAMOU Running Shoes Women Walking Athletic Tennis Non Slip Blade Type Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08PF2D2G7",
+          "title": "Men Athletic Shoes Mesh Blade Running Walking Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07N1624C5",
+          "title": "Skechers Women's Go Walk 5-True Sneaker",
+          "price": 56.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C2QCD89",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07C2MK6QX",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for brand.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "use_case": [
+            "walking"
+          ],
+          "feature": [
+            "lightweight"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ],
+            "feature": [
+              "lightweight"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08SH8GF6K",
+          "title": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B08GGXMPNP",
+          "title": "Skechers Women's Go Walk Smart Deco Lace Slip on Sneaker",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B089Y37G5Y",
+          "title": "FUNKYMONKEY Women's Comfort Slides Double Buckle Adjustable EVA Flat Sandals",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07THT4G8N",
+          "title": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PP7LXLG",
+          "title": "TIAMOU Running Shoes Women Walking Athletic Tennis Non Slip Blade Type Fashion Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B08PF2D2G7",
+          "title": "Men Athletic Shoes Mesh Blade Running Walking Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07N1624C5",
+          "title": "Skechers Women's Go Walk 5-True Sneaker",
+          "price": 56.95,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07C2QCD89",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07C2MK6QX",
+          "title": "Dreamcity Women's Water Shoes Athletic Sport Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: Imported.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {
+          "soft_preferences": {
+            "use_case": [
+              "walking"
+            ],
+            "feature": [
+              "lightweight"
+            ]
+          }
+        },
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00HNDD9AK",
+          "title": "RYKA Women's Dash Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09S11CHMC",
+          "title": "POLIVA Hiking Shorts Women Cargo Golf Casual Shorts Lightweight Water Resistant Quick Dry for Athletic Walking Travel",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0779J2V49",
+          "title": "Topteck Knit Running Shoes Men Womens Lightweight Sports Fashion Sneakers Athletic Walking Tennis Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00I67UWSO",
+          "title": "Skechers Performance Women's Go Walk Rival Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B005A996E2",
+          "title": "JSport by Jambu Women's Misty Encore Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B005A97OP0",
+          "title": "JSport by Jambu Women's Misty Encore Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00I9TMYVC",
+          "title": "RYKA Women's Dash Stretch Walking Shoe",
+          "price": 70.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01I42AKS2",
+          "title": "Propét Men's TravelFit Strap Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09Y994VCL",
+          "title": "GyeBea Womens Walking Shoes with Arch Support Comfy Orthotic Tennis Running Sneakers for Fasciitis Knee Pain Relief US 5",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 4,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B00HNDD9AK",
+          "title": "RYKA Women's Dash Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B09S11CHMC",
+          "title": "POLIVA Hiking Shorts Women Cargo Golf Casual Shorts Lightweight Water Resistant Quick Dry for Athletic Walking Travel",
+          "price": 27.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0779J2V49",
+          "title": "Topteck Knit Running Shoes Men Womens Lightweight Sports Fashion Sneakers Athletic Walking Tennis Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00I67UWSO",
+          "title": "Skechers Performance Women's Go Walk Rival Slip-On Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B005A996E2",
+          "title": "JSport by Jambu Women's Misty Encore Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B005A97OP0",
+          "title": "JSport by Jambu Women's Misty Encore Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00I9TMYVC",
+          "title": "RYKA Women's Dash Stretch Walking Shoe",
+          "price": 70.0,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B01I42AKS2",
+          "title": "Propét Men's TravelFit Strap Walking Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09Y994VCL",
+          "title": "GyeBea Womens Walking Shoes with Arch Support Comfy Orthotic Tennis Running Sneakers for Fasciitis Knee Pain Relief US 5",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 5,
+      "user_message": "For that, what matters is: Rubber sole; Dual-density outsole with Hyper Pillar comfort technology.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "rubber"
+          ],
+          "feature": [
+            "comfortable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "rubber"
+            ],
+            "feature": [
+              "comfortable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08SH8GF6K",
+          "title": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+          "price": null,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07GWQ8BG1",
+          "title": "SAGUARO Women's Breathable Walking Shoes Lady Fashion Mary Jane Sneakers Adjustable Working Nurse Shoes Lightweight Flat",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00MES8EIQ",
+          "title": "Skechers Performance Women's Go Walk 3 Fitknit Shoe",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B09X4GG71T",
+          "title": "Mishansha Women's Walking Shoes Mesh Slip On Sock Sneakers Arch Support Air Cushion Casual Sport Shoes US5.5-11.5",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B071YRXBY2",
+          "title": "Salomon Men's Pathfinder Mid ClimaSheild Waterproof Hiking Boots",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B00MF09KQI",
+          "title": "Ryka Women's Radiant Plus-W",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B00ZB0CZ6Q",
+          "title": "ASICS Women's Metrolyte",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0779J2V49",
+          "title": "Topteck Knit Running Shoes Men Womens Lightweight Sports Fashion Sneakers Athletic Walking Tennis Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B00O9YST6U",
+          "title": "New Balance Men's Made in Us 706 V2 Walking Shoe",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Skechers Women's Go Walk 6-Big Splash Sneaker",
+    "hard_constraints": [
+      "Imported",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "Dual-density outsole with Hyper Pillar comfort technology",
+      "Lightweight and responsive Ultra Go midsole cushioning"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Lightweight and responsive Ultra Go midsole cushioning",
+      "new_value": "Imported",
+      "message": "Actually, ignore my earlier preference. What I need is: Imported."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "material",
+      "comfort",
+      "style"
+    ]
+  }
+}

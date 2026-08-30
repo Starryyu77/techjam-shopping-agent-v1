@@ -1,0 +1,164 @@
+{
+  "sample_id": "public_0163",
+  "scenario_type": "buying",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "easy",
+  "target_parent_asin": "B0834T68X3",
+  "target_title": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Shoes",
+    "Athletic",
+    "Walking"
+  ],
+  "target_price": 28.89,
+  "target_rating": 4.3,
+  "target_rating_number": 36681,
+  "hit": true,
+  "first_hit_turn": 1,
+  "best_rank": 4,
+  "reciprocal_rank": 0.25,
+  "total_turns": 1,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Athletic Walking. A key requirement is: fabric.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Athletic Walking",
+        "hard_constraints": {
+          "use_case": [
+            "walking"
+          ],
+          "material": [
+            "fabric"
+          ]
+        },
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Athletic Walking",
+          "hard_constraints": {
+            "material": [
+              "fabric"
+            ],
+            "use_case": [
+              "walking"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B08TLVZXKL",
+          "title": "DUOYANGJIASHA Women's Athletic Running Walking Fabric Breathable Slip On Sports Tennis Mesh Breathable Workout Sneakers ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07L92BRLF",
+          "title": "Hawkwell Women's Slip On Breathable Lightweight Walking Sneakers,Grey Fabric,9 M US",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08134XNNB",
+          "title": "Women's Walking Shoes Sock Sneakers - Mesh Slip On Air Cushion Lady Girls Modern Jazz Dance Easy Shoes Platform Loafers",
+          "price": 34.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B0834T68X3",
+          "title": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+          "price": 28.89,
+          "is_target": true
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0BN6CCHB7",
+          "title": "Skechers Men's Go Max-Athletic Air Mesh Slip on Walking Shoe Sneaker",
+          "price": 54.97,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07THT4G8N",
+          "title": "Aqua Socks Beach Water Shoes Barefoot Yoga Socks Quick-Dry Surf Pool Swim Shoes for Women Men",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0BV2C1V44",
+          "title": "maamgic Mens Athletic Gym Shorts 5.5\" Elastic Waist Casual Pajama Pocket Jogger Men Workout Short Pants",
+          "price": 22.99,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B08PF2D2G7",
+          "title": "Men Athletic Shoes Mesh Blade Running Walking Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08PCYWFBY",
+          "title": "MOSHA BELLE Women Running Shoes Fashion Tennis Athletic Walking Gym Sports Sneakers",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07L5GBVX7",
+          "title": "Bruno Marc Men's Slip-On Canvas Sneaker Loafer Lightweight Walking Shoes",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 4,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "DOUSSPRT Womens Walking Shoes Slip on Sock Sneakers Lady Girls Nurse Mesh Air Cushion Platform Loafers Fashion Casual",
+    "hard_constraints": [
+      "fabric",
+      "Rubber sole"
+    ],
+    "soft_preferences": [
+      "1.Mesh Fabric + Air Cushion sole",
+      "2.Slip-on Design: Slip on design with Elastic Cuff is convenient for user to put on and take off"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "buying"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "fit",
+      "comfort",
+      "material",
+      "performance"
+    ]
+  }
+}

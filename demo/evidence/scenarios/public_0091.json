@@ -1,0 +1,368 @@
+{
+  "sample_id": "public_0091",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0C5XB43GG",
+  "target_title": "925 Sterling Silver Small Hoop Earrings Cubic Zirconia Huggie Hoop Earrings, 3 Pairs 14K White Gold Plated Cartilage Piercing Earrings Ear Cuff Tiny Hoop Earrings for Women Men",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Men",
+    "Jewelry",
+    "Earrings"
+  ],
+  "target_price": 15.99,
+  "target_rating": 4.4,
+  "target_rating_number": 9263,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Jewelry Earrings, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "earrings"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z8GJ48T",
+          "title": "Silver Clip On Earrings For Women, They Look Pierced, Don't Pinch & Won't Fall Off, Hypoallergenic & Lightweight",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B076749DC7",
+          "title": "Clip On Pearl Earrings with Art Vintage Wedding Style - Cream Pearls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MVNJV1Q",
+          "title": "72 Pairs Earrings Set for Women Assorted Multiple Simple Stud Earrings Set Geometric Fake Pearl Round Ball Earring Set",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07YY9CYPQ",
+          "title": "925 Sterling Silver Stud Earrings [SILGO]- High Quality August Black Onyx Gemstone Earrings- Hypoallergenic and Nickel-F",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07J6T54RW",
+          "title": "Agvana Silver Hoop Earrings Gold Plated Sterling Silver Hammered C Open Hoop Earrings Jewelry Gifts for Women Girls, Dia",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BGBSFKPG",
+          "title": "Gold Silver Huggig Earrings for Women Rectangular Hoop Earrings Daily Earrings Gift",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B085DB6ZKL",
+          "title": "925 Sterling Silver Stud Earrings for Women [SILGO]- High Quality Garnet Gemstone Earrings- Hypoallergenic and Nickel-Fr",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BGGHSYHC",
+          "title": "FOCALOOK Hoop Earrings Set 3 Pairs for Women 18K Gold Plated Round Circle Thin Huggie Hoop Earrings 30mm 50mm 70mm",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B094ZYGVMC",
+          "title": "shiYsRL Earrings Stud Crystal Pearl Earring Set, 6Pcs/Set Fashion Women Multicolor Fish Scale Pattern Ear Stud Earrings ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BG4WSCM6",
+          "title": "DYUNQ Moissanite Hoop Earrings Men, Lab Created Black Diamond 925 Sterling Silver Hypoallergenic 4.5MM Male Huggie, 18K ",
+          "price": 30.39,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07Z8GJ48T",
+          "title": "Silver Clip On Earrings For Women, They Look Pierced, Don't Pinch & Won't Fall Off, Hypoallergenic & Lightweight",
+          "price": 15.99,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B076749DC7",
+          "title": "Clip On Pearl Earrings with Art Vintage Wedding Style - Cream Pearls",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B08MVNJV1Q",
+          "title": "72 Pairs Earrings Set for Women Assorted Multiple Simple Stud Earrings Set Geometric Fake Pearl Round Ball Earring Set",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07YY9CYPQ",
+          "title": "925 Sterling Silver Stud Earrings [SILGO]- High Quality August Black Onyx Gemstone Earrings- Hypoallergenic and Nickel-F",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07J6T54RW",
+          "title": "Agvana Silver Hoop Earrings Gold Plated Sterling Silver Hammered C Open Hoop Earrings Jewelry Gifts for Women Girls, Dia",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B0BGBSFKPG",
+          "title": "Gold Silver Huggig Earrings for Women Rectangular Hoop Earrings Daily Earrings Gift",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B085DB6ZKL",
+          "title": "925 Sterling Silver Stud Earrings for Women [SILGO]- High Quality Garnet Gemstone Earrings- Hypoallergenic and Nickel-Fr",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BGGHSYHC",
+          "title": "FOCALOOK Hoop Earrings Set 3 Pairs for Women 18K Gold Plated Round Circle Thin Huggie Hoop Earrings 30mm 50mm 70mm",
+          "price": 14.99,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B094ZYGVMC",
+          "title": "shiYsRL Earrings Stud Crystal Pearl Earring Set, 6Pcs/Set Fashion Women Multicolor Fish Scale Pattern Ear Stud Earrings ",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B0BG4WSCM6",
+          "title": "DYUNQ Moissanite Hoop Earrings Men, Lab Created Black Diamond 925 Sterling Silver Hypoallergenic 4.5MM Male Huggie, 18K ",
+          "price": 30.39,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: 【HIGH QUALITY】This Sterling Silver Huggie Hoop Earring is made of 925 Sterling Silver post,Hypoallergenic.Best Choice for Sensitive Ears. Earrings Surface Mounted with Sparkling AA; color: white.",
+      "agent_message": "I found 10 current candidates. What budget range should I use?",
+      "ask_attribute": "budget",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "earrings",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "sterling silver"
+          ],
+          "color": [
+            "silver",
+            "white"
+          ],
+          "feature": [
+            "hypoallergenic"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "sterling silver"
+            ],
+            "color": [
+              "silver",
+              "white"
+            ],
+            "feature": [
+              "hypoallergenic"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0C5XB43GG",
+          "title": "925 Sterling Silver Small Hoop Earrings Cubic Zirconia Huggie Hoop Earrings, 3 Pairs 14K White Gold Plated Cartilage Pie",
+          "price": 15.99,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0876BP8LJ",
+          "title": "Kainier Big Hoop Earrings 14K Gold Plated 925 Sterling Silver Post Lightweight Gold Hoops for Women And Girl",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07SL245RZ",
+          "title": "Cute Sterling Silver Safety Pin Small Hoop Earrings for Women Girls Men Cartilage Minimalist Sleeper Hoops Lightweight P",
+          "price": 12.95,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07TG8KWF9",
+          "title": "Agvana Sterling Silver Tree of Life Earrings for Women Cubic Zirconia CZ Family Tree Leverback Dangle Drop Earrings Anni",
+          "price": 29.99,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B07KQ585WJ",
+          "title": "JORA Classical Gold Plated 925 Sterling Silver White Freshwater Cultured Pearl Dangle Drop Earrings for Women Girls Gift",
+          "price": 19.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B07QYLQH5Z",
+          "title": "I'S ISAACSONG Dainty Gold Layered Coin Necklace and Stud Earrings, 18k Gold Plated Sterling Silver Mother of Pearl Penda",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B07J6T54RW",
+          "title": "Agvana Silver Hoop Earrings Gold Plated Sterling Silver Hammered C Open Hoop Earrings Jewelry Gifts for Women Girls, Dia",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0BBZDTSLM",
+          "title": "4 Pairs Small Silver Hoop Earrings 925 Sterling Silver Post Hoop Earrings for Women 14K Gold Plated Cubic Zirconia Huggi",
+          "price": 17.44,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B08SB7J57T",
+          "title": "Hummingbird Cardinal Dangle Drop Earrings for Women 925 Sterling Silver Cubic Zirconia Teardrop Fish Hook Dainty Bird Fl",
+          "price": 32.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09WJ4Z19L",
+          "title": "AINUOSHI Moissanite Huggie Hoop Earrings for Women, D-E Color, 925 Sterling Silver with 18K White Gold Plating, Hypoalle",
+          "price": 39.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "925 Sterling Silver Small Hoop Earrings Cubic Zirconia Huggie Hoop Earrings, 3 Pairs 14K White Gold Plated Cartilage Piercing Earrings Ear Cuff Tiny Hoop Earrings for Women Men",
+    "hard_constraints": [
+      "【HIGH QUALITY】This Sterling Silver Huggie Hoop Earring is made of 925 Sterling Silver post,Hypoallergenic.Best Choice for Sensitive Ears. Earrings Surface Mounted with Sparkling AA",
+      "color: white"
+    ],
+    "soft_preferences": [
+      "【CLASSICAL&TIMELESS】Simple and Classical Hoop design,Classical and Timeless.You will be more Beautiful and Elegant when You Wearing this CZ Hoop Earrings.This Small Rose Gold Hoop",
+      "【PACKAGE INCLUDES】Order includes 3 Pairs 8/10/12mm(0.31/0.4/0.48in) Small Cubic Zirconia Hoop Earrings.The Small Hoop Earring is Cuff Design,Easy to Open and Close.Note:The 925 Ste"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "performance",
+      "comfort",
+      "fit",
+      "durability"
+    ]
+  }
+}

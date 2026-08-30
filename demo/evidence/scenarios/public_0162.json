@@ -1,0 +1,352 @@
+{
+  "sample_id": "public_0162",
+  "scenario_type": "browsing",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "medium",
+  "target_parent_asin": "B0B71JNMQY",
+  "target_title": "Satin Silk Slip Maxi Dress for Wedding Guest Women- Cowl Neck Pleated Bust Split Wedding Guest Cocktail Midi Dresses",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Women",
+    "Clothing",
+    "Dresses"
+  ],
+  "target_price": 40.99,
+  "target_rating": 3.5,
+  "target_rating_number": 717,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 2,
+  "reciprocal_rank": 0.5,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Women Dresses, but I'm still exploring.",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NEW",
+        "confidence": 0.96
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "dresses"
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0897TQCTF",
+          "title": "Mikilon Women Tank Maxi Dress Short Sleeve Hippie Soul Layerd Side Split Summer Cusual Long Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096ZQ24S3",
+          "title": "Tavorpt Summer Dress for Women, Women's Sleeveless Tie Dye Plus Size Maxi Dress Loose Beach Party Sundress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0948T9V3Y",
+          "title": "FORESTIME Summer Dresses for Women 2021,Womens Summer Beach Boho Print Halter Neck Sleeveless Splice Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07NV7NBPH",
+          "title": "OTINICE Women Summer Dresses Solid Sleeveless Casual Loose Swing T-Shirt Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0899TGVHC",
+          "title": "Dresses for Women COOKI Women's Summer Casual Tshirt Dresses Short Sleeve Solid Color Sunflower Short Mini Boho Beach Dr",
+          "price": 8.19,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08VJCW9W1",
+          "title": "KYLEON Summer Dresses Womens Casual Loose Solid Maxi Long Dress Pockets Swing Party Beach Sleeveless T Shirt Tank Sundre",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09S3745S2",
+          "title": "cooki Summer Dresses for Women Beach, Womens Casual V-Neck Roll Up Sleeve Striped Printed Cotton Linen Long Maxi Dresses",
+          "price": 6.89,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B092QYLHYQ",
+          "title": "Gothic Vintage Ball Gown Medieval Lace Costume 18th Century Renaissance Steampunk Period Dress for Women Princess",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09H4QBJPR",
+          "title": "2021 Women's High Low Dress Long Flared sleeves Floral Gothic Dress Swing Party Dress Elegant Court Renaissance Costumes",
+          "price": 60.04,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09V5KYNY4",
+          "title": "Women's 50s Classic Vintage Formal Cocktail Dress Cap Sleeve Retro Pencil Dress Polka Dot Slim Fit Evening Party Dress",
+          "price": 30.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {},
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B0897TQCTF",
+          "title": "Mikilon Women Tank Maxi Dress Short Sleeve Hippie Soul Layerd Side Split Summer Cusual Long Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B096ZQ24S3",
+          "title": "Tavorpt Summer Dress for Women, Women's Sleeveless Tie Dye Plus Size Maxi Dress Loose Beach Party Sundress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B0948T9V3Y",
+          "title": "FORESTIME Summer Dresses for Women 2021,Womens Summer Beach Boho Print Halter Neck Sleeveless Splice Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07NV7NBPH",
+          "title": "OTINICE Women Summer Dresses Solid Sleeveless Casual Loose Swing T-Shirt Dress with Pockets",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B0899TGVHC",
+          "title": "Dresses for Women COOKI Women's Summer Casual Tshirt Dresses Short Sleeve Solid Color Sunflower Short Mini Boho Beach Dr",
+          "price": 8.19,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08VJCW9W1",
+          "title": "KYLEON Summer Dresses Womens Casual Loose Solid Maxi Long Dress Pockets Swing Party Beach Sleeveless T Shirt Tank Sundre",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B09S3745S2",
+          "title": "cooki Summer Dresses for Women Beach, Womens Casual V-Neck Roll Up Sleeve Striped Printed Cotton Linen Long Maxi Dresses",
+          "price": 6.89,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B092QYLHYQ",
+          "title": "Gothic Vintage Ball Gown Medieval Lace Costume 18th Century Renaissance Steampunk Period Dress for Women Princess",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B09H4QBJPR",
+          "title": "2021 Women's High Low Dress Long Flared sleeves Floral Gothic Dress Swing Party Dress Elegant Court Renaissance Costumes",
+          "price": 60.04,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B09V5KYNY4",
+          "title": "Women's 50s Classic Vintage Formal Cocktail Dress Cap Sleeve Retro Pencil Dress Polka Dot Slim Fit Evening Party Dress",
+          "price": 30.99,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "For that, what matters is: silk; Satin.",
+      "agent_message": "I found 10 current candidates. What will you mainly use it for?",
+      "ask_attribute": "use_case",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "ANSWER",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "dresses",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "satin"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "satin"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C2XPZ6D",
+          "title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+          "price": 10.97,
+          "is_target": false
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B0B71JNMQY",
+          "title": "Satin Silk Slip Maxi Dress for Wedding Guest Women- Cowl Neck Pleated Bust Split Wedding Guest Cocktail Midi Dresses",
+          "price": 40.99,
+          "is_target": true
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07B3XJV3M",
+          "title": "FORUU Women Short Sleeve High Low Peplum Dress Bodycon Casual Party Club Dress",
+          "price": 12.32,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07QGCJVRG",
+          "title": "Long Ribbon Sash Belt for Dress Wedding Sash Bridal Silk Satin Belts Dress JW61",
+          "price": 9.49,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08533P5BH",
+          "title": "Iristide Long Silk Scarf Summer Lightweight Satin Shawl Outdoor Floral Large Wrap 70''X35''",
+          "price": 13.99,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B09MS23LSL",
+          "title": "Choichic Women's Satin Deep V Neck Long Sleeve High Low Front Slit Club Party Evening Wrap Flowy Maxi Dress with Belt",
+          "price": 31.99,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B0087Q6RC4",
+          "title": "Sakkas Veins Print Satin V-Neck Halter Handkerchief Hem Dress",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B07P4LZ2X9",
+          "title": "HongH Women's Tradtional Japanese Yukata Kimono Flower Print Long Kimono Robe Costume Summer Wear",
+          "price": 29.88,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0B5SSB8HD",
+          "title": "YXRHRong 100% Mulberry Silk Scarf Large Pashmina Floral Shawls and Wraps for Evening Dresses Satin Long Scarfs Dupatta W",
+          "price": 36.99,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01NBJKEZI",
+          "title": "Alice Blake Premium Metallic Floral/Paisley Pashmina Scarf Shawl Wrap w/Gift Box",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 2,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Satin Silk Slip Maxi Dress for Wedding Guest Women- Cowl Neck Pleated Bust Split Wedding Guest Cocktail Midi Dresses",
+    "hard_constraints": [
+      "silk",
+      "Satin"
+    ],
+    "soft_preferences": [
+      "Imported",
+      "Zipper closure"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "browsing"
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "material",
+      "fit"
+    ]
+  }
+}

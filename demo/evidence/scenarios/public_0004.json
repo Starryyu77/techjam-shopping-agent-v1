@@ -1,0 +1,388 @@
+{
+  "sample_id": "public_0004",
+  "scenario_type": "intent_override",
+  "category_bucket": "clothing",
+  "difficulty_bucket": "hard",
+  "target_parent_asin": "B07C2XPZ6D",
+  "target_title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+  "target_categories": [
+    "Clothing, Shoes & Jewelry",
+    "Novelty & More",
+    "Clothing",
+    "Novelty",
+    "Women",
+    "Tops & Tees",
+    "Tanks & Camis"
+  ],
+  "target_price": 10.97,
+  "target_rating": 4.4,
+  "target_rating_number": 15247,
+  "hit": true,
+  "first_hit_turn": 3,
+  "best_rank": 1,
+  "reciprocal_rank": 1.0,
+  "total_turns": 3,
+  "turns": [
+    {
+      "turn": 1,
+      "user_message": "I'm looking for Tops & Tees Tanks & Camis. Long torso camisole for extra coverage with spagetti adjustable strap for perfect fit",
+      "agent_message": "I found 10 current candidates. Do you have a size requirement?",
+      "ask_attribute": "size",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "NEW",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tops & Tees Tanks & Camis",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "category": "Tops & Tees Tanks & Camis",
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        },
+        "removed": {},
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C2XPZ6D",
+          "title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+          "price": 10.97,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09H227YL1",
+          "title": "AMVELOP Adjustable Camisole for Women Spaghetti Strap Tank Top Camisoles",
+          "price": 21.39,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07B4RS2BP",
+          "title": "YITAN Women Graphic Sleeveless Tank Crop Top Teen Girls Cute Gym Tee Shirt",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07R6LZS2C",
+          "title": "uideazone Women's Racerback Tank Tops Casual 3D Printed Graphic Tees Sleeveless Workout Yoga Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00UA09U0G",
+          "title": "Lock and Love Women's Sleeveless All-Purpose Racerback Tank top-Made in U.S.A.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PPJB74Z",
+          "title": "AMPOSH Women's Maternity Tank Top Ruched Side Sleeveless Pregnancy Basic Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01DLD88D8",
+          "title": "MBJ Womens Basic Wide Armhole Loose Fit Tank Top - Made in USA",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B075Y445MD",
+          "title": "Tough Cookie Clothing Tank Top – Women’s #Beast Print Burnout Racerback Sleeveless Active Workout Yoga Casual T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0097B63J0",
+          "title": "Allegra K Women's Block Boat Neck Sheer Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07CP2JCRP",
+          "title": "Women Sleeveless Does Running Out of Wine Racerback Tank Top",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 2,
+      "user_message": "I don't have an additional preference for size.",
+      "agent_message": "These constraints leave no reliable match. Which one can we relax?",
+      "ask_attribute": "other",
+      "intent": {
+        "domain_intent": "VAGUE",
+        "dialogue_act": "NOOP",
+        "confidence": 0.99
+      },
+      "state_after": {
+        "category": "Tops & Tees Tanks & Camis",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "feature": [
+            "adjustable"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {},
+        "removed": {},
+        "retained": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        }
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C2XPZ6D",
+          "title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+          "price": 10.97,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B09H227YL1",
+          "title": "AMVELOP Adjustable Camisole for Women Spaghetti Strap Tank Top Camisoles",
+          "price": 21.39,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07B4RS2BP",
+          "title": "YITAN Women Graphic Sleeveless Tank Crop Top Teen Girls Cute Gym Tee Shirt",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B07R6LZS2C",
+          "title": "uideazone Women's Racerback Tank Tops Casual 3D Printed Graphic Tees Sleeveless Workout Yoga Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B00UA09U0G",
+          "title": "Lock and Love Women's Sleeveless All-Purpose Racerback Tank top-Made in U.S.A.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B08PPJB74Z",
+          "title": "AMPOSH Women's Maternity Tank Top Ruched Side Sleeveless Pregnancy Basic Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B01DLD88D8",
+          "title": "MBJ Womens Basic Wide Armhole Loose Fit Tank Top - Made in USA",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B075Y445MD",
+          "title": "Tough Cookie Clothing Tank Top – Women’s #Beast Print Burnout Racerback Sleeveless Active Workout Yoga Casual T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B0097B63J0",
+          "title": "Allegra K Women's Block Boat Neck Sheer Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B07CP2JCRP",
+          "title": "Women Sleeveless Does Running Out of Wine Racerback Tank Top",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": null,
+      "hit": false,
+      "candidate_pool_size": 10
+    },
+    {
+      "turn": 3,
+      "user_message": "Actually, ignore my earlier preference. What I need is: polyester.",
+      "agent_message": "I found 10 current candidates. Which feature matters most?",
+      "ask_attribute": "feature",
+      "intent": {
+        "domain_intent": "ITEM",
+        "dialogue_act": "OVERRIDE",
+        "confidence": 0.9
+      },
+      "state_after": {
+        "category": "Tops & Tees Tanks & Camis",
+        "hard_constraints": {},
+        "soft_preferences": {
+          "material": [
+            "polyester"
+          ]
+        },
+        "negative_constraints": {},
+        "no_preference": []
+      },
+      "state_diff": {
+        "added": {
+          "soft_preferences": {
+            "material": [
+              "polyester"
+            ]
+          }
+        },
+        "removed": {
+          "soft_preferences": {
+            "feature": [
+              "adjustable"
+            ]
+          }
+        },
+        "retained": {}
+      },
+      "top10": [
+        {
+          "rank": 1,
+          "parent_asin": "B07C2XPZ6D",
+          "title": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+          "price": 10.97,
+          "is_target": true
+        },
+        {
+          "rank": 2,
+          "parent_asin": "B07B4RS2BP",
+          "title": "YITAN Women Graphic Sleeveless Tank Crop Top Teen Girls Cute Gym Tee Shirt",
+          "price": 12.99,
+          "is_target": false
+        },
+        {
+          "rank": 3,
+          "parent_asin": "B07R6LZS2C",
+          "title": "uideazone Women's Racerback Tank Tops Casual 3D Printed Graphic Tees Sleeveless Workout Yoga Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 4,
+          "parent_asin": "B00UA09U0G",
+          "title": "Lock and Love Women's Sleeveless All-Purpose Racerback Tank top-Made in U.S.A.",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 5,
+          "parent_asin": "B08PPJB74Z",
+          "title": "AMPOSH Women's Maternity Tank Top Ruched Side Sleeveless Pregnancy Basic Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 6,
+          "parent_asin": "B01DLD88D8",
+          "title": "MBJ Womens Basic Wide Armhole Loose Fit Tank Top - Made in USA",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 7,
+          "parent_asin": "B075Y445MD",
+          "title": "Tough Cookie Clothing Tank Top – Women’s #Beast Print Burnout Racerback Sleeveless Active Workout Yoga Casual T Shirt",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 8,
+          "parent_asin": "B0097B63J0",
+          "title": "Allegra K Women's Block Boat Neck Sheer Blouse",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 9,
+          "parent_asin": "B07CP2JCRP",
+          "title": "Women Sleeveless Does Running Out of Wine Racerback Tank Top",
+          "price": null,
+          "is_target": false
+        },
+        {
+          "rank": 10,
+          "parent_asin": "B01NH331KT",
+          "title": "Tough Cookie Clothing Tank Top – Women’s Burnout Workout Active Yoga Racerback Sleeveless Plain Basic Casual T Shirt Tee",
+          "price": null,
+          "is_target": false
+        }
+      ],
+      "target_rank": 1,
+      "hit": true,
+      "candidate_pool_size": 10
+    }
+  ],
+  "intent_card": {
+    "target_category": "Emmalise Women's Basic Casual Long Camisole Adjustable Strap Cami Layering Top",
+    "hard_constraints": [
+      "polyester",
+      "Polyester,Cotton,Spandex"
+    ],
+    "soft_preferences": [
+      "Quality soft cottonblend camisole, 95% cotton, 5% spandex, Neon Colors 57% cotton 38% polyester 5% spandex",
+      "Long torso camisole for extra coverage with spagetti adjustable strap for perfect fit"
+    ]
+  },
+  "behavior": {
+    "scenario_type": "intent_override",
+    "override": {
+      "turn": 3,
+      "old_value": "Long torso camisole for extra coverage with spagetti adjustable strap for perfect fit",
+      "new_value": "polyester",
+      "message": "Actually, ignore my earlier preference. What I need is: polyester."
+    }
+  },
+  "user_profile": {
+    "purchase_frequency": "3-4 prior purchases",
+    "rating_style": "usually positive",
+    "preference_tags": [
+      "weather",
+      "warmth",
+      "material",
+      "comfort"
+    ]
+  }
+}
