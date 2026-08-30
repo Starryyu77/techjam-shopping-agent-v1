@@ -1,0 +1,362 @@
+{
+  "train": [
+    {
+      "name": "ITEM-running-shoes",
+      "msg": "I'm looking for running shoes, must be breathable",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    },
+    {
+      "name": "ITEM-colloquial-summer",
+      "msg": "wanna get some light summer dress under 40 bucks",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    },
+    {
+      "name": "ITEM-typo-clothes",
+      "msg": "i want buy close for winter",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    },
+    {
+      "name": "ITEM-cn-mixed",
+      "msg": "想买一双跑步鞋 breathable 的",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    },
+    {
+      "name": "ANSWER-size-bare",
+      "msg": "42",
+      "di": "ITEM",
+      "da": "ANSWER",
+      "clarity": "L2",
+      "state": {
+        "category": "shoes",
+        "last_question": "size"
+      }
+    },
+    {
+      "name": "ANSWER-budget-colloquial",
+      "msg": "maybe around fifty dollars",
+      "di": "ITEM",
+      "da": "ANSWER",
+      "clarity": "L2",
+      "state": {
+        "category": "shoes",
+        "last_question": "budget"
+      }
+    },
+    {
+      "name": "ADD-feature",
+      "msg": "also it should be waterproof",
+      "di": "ITEM",
+      "da": "ADD",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "hard_constraints": {
+          "use_case": [
+            "running"
+          ]
+        }
+      }
+    },
+    {
+      "name": "NEGATE-material",
+      "msg": "not cotton please",
+      "di": "ITEM",
+      "da": "NEGATE",
+      "clarity": "L1",
+      "state": {
+        "category": "shirt"
+      }
+    },
+    {
+      "name": "NEGATE-colloquial",
+      "msg": "anything but leather",
+      "di": "ITEM",
+      "da": "NEGATE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes"
+      }
+    },
+    {
+      "name": "OVERRIDE-explicit",
+      "msg": "Actually, ignore my earlier preference. What I need is: waterproof.",
+      "di": "ITEM",
+      "da": "OVERRIDE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "soft_preferences": {
+          "style": [
+            "casual"
+          ]
+        }
+      }
+    },
+    {
+      "name": "OVERRIDE-colloquial",
+      "msg": "forget the red one, I'd rather have blue",
+      "di": "ITEM",
+      "da": "OVERRIDE",
+      "clarity": "L1",
+      "state": {
+        "category": "shirt",
+        "soft_preferences": {
+          "color": [
+            "red"
+          ]
+        }
+      }
+    },
+    {
+      "name": "NOPREF-size",
+      "msg": "size doesn't really matter to me",
+      "di": "ITEM",
+      "da": "NO_PREFERENCE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_question": "size"
+      }
+    },
+    {
+      "name": "NOPREF-colloquial",
+      "msg": "no preference on brand honestly",
+      "di": "ITEM",
+      "da": "NO_PREFERENCE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_question": "brand"
+      }
+    },
+    {
+      "name": "SELECT-rank",
+      "msg": "I'll take the second one",
+      "di": "ITEM",
+      "da": "SELECT",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_recommendations": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "name": "REJECT",
+      "msg": "none of these work for me",
+      "di": "ITEM",
+      "da": "REJECT",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_recommendations": [
+          "A",
+          "B",
+          "C"
+        ]
+      }
+    },
+    {
+      "name": "STOP-colloquial",
+      "msg": "i dont want buy shoes now",
+      "di": "ITEM",
+      "da": "STOP",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes"
+      }
+    },
+    {
+      "name": "RESET",
+      "msg": "let's start over completely",
+      "di": "ITEM",
+      "da": "RESET",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "hard_constraints": {
+          "use_case": [
+            "running"
+          ]
+        }
+      }
+    },
+    {
+      "name": "VAGUE-browse",
+      "msg": "just browsing for something nice",
+      "di": "VAGUE",
+      "da": "NEW",
+      "clarity": "L3"
+    },
+    {
+      "name": "VAGUE-gift",
+      "msg": "looking for a gift but not sure what",
+      "di": "VAGUE",
+      "da": "NEW",
+      "clarity": "L3"
+    },
+    {
+      "name": "BENEFIT-coupon",
+      "msg": "any coupons for electronics?",
+      "di": "BENEFIT",
+      "da": "NOOP",
+      "clarity": "L1"
+    },
+    {
+      "name": "BENEFIT-boundary-item",
+      "msg": "do you have discounts on running shoes",
+      "di": "BENEFIT",
+      "da": "NOOP",
+      "clarity": "L2"
+    },
+    {
+      "name": "IRRELEVANT-chat",
+      "msg": "what's the weather like today?",
+      "di": "IRRELEVANT",
+      "da": "NOOP",
+      "clarity": "L4"
+    },
+    {
+      "name": "IRRELEVANT-greeting",
+      "msg": "hi how are you",
+      "di": "IRRELEVANT",
+      "da": "NOOP",
+      "clarity": "L4"
+    }
+  ],
+  "test": [
+    {
+      "name": "ITEM-jacket-typo",
+      "msg": "need a warm jaket, waterproof one",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    },
+    {
+      "name": "ANSWER-color",
+      "msg": "black would be great",
+      "di": "ITEM",
+      "da": "ANSWER",
+      "clarity": "L2",
+      "state": {
+        "category": "shoes",
+        "last_question": "color"
+      }
+    },
+    {
+      "name": "ADD-usecase",
+      "msg": "and it's for hiking",
+      "di": "ITEM",
+      "da": "ADD",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "hard_constraints": {
+          "feature": [
+            "waterproof"
+          ]
+        }
+      }
+    },
+    {
+      "name": "NEGATE-color",
+      "msg": "no white ones",
+      "di": "ITEM",
+      "da": "NEGATE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes"
+      }
+    },
+    {
+      "name": "OVERRIDE-direction",
+      "msg": "on second thought I want boots instead of sneakers",
+      "di": "ITEM",
+      "da": "OVERRIDE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "hard_constraints": {
+          "style": [
+            "sneakers"
+          ]
+        }
+      }
+    },
+    {
+      "name": "NOPREF-color",
+      "msg": "color is not important",
+      "di": "ITEM",
+      "da": "NO_PREFERENCE",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_question": "color"
+      }
+    },
+    {
+      "name": "SELECT-title",
+      "msg": "the Nike one looks good",
+      "di": "ITEM",
+      "da": "SELECT",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes",
+        "last_recommendations": [
+          "Nike Air",
+          "Adidas Run",
+          "Puma X"
+        ]
+      }
+    },
+    {
+      "name": "STOP-formal",
+      "msg": "that's all, thanks",
+      "di": "ITEM",
+      "da": "STOP",
+      "clarity": "L1",
+      "state": {
+        "category": "shoes"
+      }
+    },
+    {
+      "name": "VAGUE-explore",
+      "msg": "show me what's popular",
+      "di": "VAGUE",
+      "da": "NEW",
+      "clarity": "L3"
+    },
+    {
+      "name": "BENEFIT-redpacket",
+      "msg": "is there any promo going on",
+      "di": "BENEFIT",
+      "da": "NOOP",
+      "clarity": "L1"
+    },
+    {
+      "name": "IRRELEVANT-offtopic",
+      "msg": "can you tell me a joke",
+      "di": "IRRELEVANT",
+      "da": "NOOP",
+      "clarity": "L4"
+    },
+    {
+      "name": "ITEM-cn",
+      "msg": "我想要一件棉的T恤",
+      "di": "ITEM",
+      "da": "NEW",
+      "clarity": "L1"
+    }
+  ]
+}

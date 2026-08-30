@@ -1,0 +1,16 @@
+[baseline] TS=0.8665 HR=0.9950 MRR=0.6444 MTTC=2.215
+   boundary         HR=1.000 MRR=0.660 MTTC=1.9
+   browsing         HR=1.000 MRR=0.627 MTTC=2.1125
+   buying           HR=0.988 MRR=0.623 MTTC=1.725
+   intent_override  HR=1.000 MRR=0.741 MTTC=3.9
+[downweight] TS=0.8658 HR=0.9900 MRR=0.6364 MTTC=2.005
+   boundary         HR=1.000 MRR=0.660 MTTC=2.0
+   browsing         HR=1.000 MRR=0.625 MTTC=1.7125
+   buying           HR=0.975 MRR=0.571 MTTC=1.6375
+   intent_override  HR=1.000 MRR=0.833 MTTC=3.766667
+[downweight_strong] TS=0.8651 HR=0.9900 MRR=0.6326 MTTC=1.985
+   boundary         HR=1.000 MRR=0.660 MTTC=2.0
+   browsing         HR=1.000 MRR=0.625 MTTC=1.6875
+   buying           HR=0.975 MRR=0.571 MTTC=1.625
+   intent_override  HR=1.000 MRR=0.808 MTTC=3.733333
+P3_DONE

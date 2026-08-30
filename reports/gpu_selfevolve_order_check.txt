@@ -1,0 +1,8 @@
+--- order A: seed then r1 ---
+seed test=86.7
+r1 test=91.7
+--- order B: r1 then seed ---
+r1 test=91.7
+seed test=86.7
+COLD_DONE
+DONE_MARK

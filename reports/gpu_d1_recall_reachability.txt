@@ -1,0 +1,5 @@
+=== D1 recall reachability (n=200) ===
+target HIT in top-10:          199 (99.5%)
+target in pool but rank>10:    0 (0.0%)  <- rerank territory (P1 showed dead)
+target NOT in recall pool:     1 (0.5%)  <- agentic query-gen COULD help here
+D1_DONE

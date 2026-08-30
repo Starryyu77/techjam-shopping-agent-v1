@@ -1,0 +1,21 @@
+[baseline] TS=0.8665 HR=0.9950 MRR=0.6444 MTTC=2.215
+   boundary         HR=1.000 MRR=0.660 MTTC=1.9
+   browsing         HR=1.000 MRR=0.627 MTTC=2.1125
+   buying           HR=0.988 MRR=0.623 MTTC=1.725
+   intent_override  HR=1.000 MRR=0.741 MTTC=3.9
+[demote_size_tiebreak] TS=0.8665 HR=0.9950 MRR=0.6444 MTTC=2.215
+   boundary         HR=1.000 MRR=0.660 MTTC=1.9
+   browsing         HR=1.000 MRR=0.627 MTTC=2.1125
+   buying           HR=0.988 MRR=0.623 MTTC=1.725
+   intent_override  HR=1.000 MRR=0.741 MTTC=3.9
+[skip_size_when_focused] TS=0.8650 HR=0.9900 MRR=0.6326 MTTC=1.990
+   boundary         HR=1.000 MRR=0.660 MTTC=2.0
+   browsing         HR=1.000 MRR=0.616 MTTC=1.7125
+   buying           HR=0.975 MRR=0.571 MTTC=1.6
+   intent_override  HR=1.000 MRR=0.833 MTTC=3.766667
+[demote_size_soft] TS=0.8649 HR=0.9900 MRR=0.6326 MTTC=1.995
+   boundary         HR=1.000 MRR=0.660 MTTC=2.0
+   browsing         HR=1.000 MRR=0.616 MTTC=1.725
+   buying           HR=0.975 MRR=0.571 MTTC=1.6
+   intent_override  HR=1.000 MRR=0.833 MTTC=3.766667
+P3B_DONE

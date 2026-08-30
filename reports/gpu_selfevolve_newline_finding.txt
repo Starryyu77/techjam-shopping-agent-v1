@@ -1,0 +1,7 @@
+seed endswith newline: 'e.\n' | r1 endswith: 'le.'
+seed_as_is       test=86.7 (len=2851)
+seed_stripped    test=91.7 (len=2850)
+r1_as_is         test=91.7 (len=2850)
+r1_plus_nl       test=86.7 (len=2851)
+NL_DONE
+NLM

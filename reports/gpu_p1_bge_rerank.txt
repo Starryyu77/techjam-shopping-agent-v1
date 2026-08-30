@@ -1,0 +1,18 @@
+=== available result keys probe ===
+[baseline-rules] TS=0.8665 HR=0.9950 MRR=0.6444 MTTC=2.215  (67.2s)
+   boundary         HR=1.000 MRR=0.660 MTTC=1.9
+   browsing         HR=1.000 MRR=0.627 MTTC=2.1125
+   buying           HR=0.988 MRR=0.623 MTTC=1.725
+   intent_override  HR=1.000 MRR=0.741 MTTC=3.9
+Loading weights:   0%|          | 0/393 [00:00<?, ?it/s]Loading weights: 100%|██████████| 393/393 [00:00<00:00, 4781.56it/s]
+[bge-buyingonly-w6.0] TS=0.8534 HR=0.9900 MRR=0.6186 MTTC=2.360  (88.0s)
+   boundary         HR=1.000 MRR=0.660 MTTC=1.9
+   browsing         HR=1.000 MRR=0.627 MTTC=2.1125
+   buying           HR=0.975 MRR=0.559 MTTC=2.0875
+   intent_override  HR=1.000 MRR=0.741 MTTC=3.9
+[bge-alwayson-w6.0] TS=0.8157 HR=0.9750 MRR=0.5431 MTTC=2.735  (139.8s)
+   boundary         HR=1.000 MRR=0.489 MTTC=1.8
+   browsing         HR=0.988 MRR=0.541 MTTC=2.85
+   buying           HR=0.975 MRR=0.517 MTTC=2.0875
+   intent_override  HR=0.933 MRR=0.636 MTTC=4.466667
+P1_DONE
