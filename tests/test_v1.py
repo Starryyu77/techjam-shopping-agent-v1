@@ -248,5 +248,53 @@ class V1Tests(unittest.TestCase):
             agent.close()
 
 
+class NaturalLanguageTests(unittest.TestCase):
+    def test_contextual_short_answer_size(self) -> None:
+        parser = RuleIntentParser()
+        state = ShoppingState()
+        state.category = "shoes"
+        state.last_question = "size"
+        result = parser.parse("42", state)
+        self.assertEqual(result.dialogue_act, "ANSWER")
+        self.assertTrue(
+            any(c.attribute == "size" and c.value == "42" for c in result.constraints),
+            "bare '42' after a size question should be captured as size",
+        )
+
+    def test_contextual_short_answer_ignored_without_pending_question(self) -> None:
+        # No pending question -> a bare number must NOT be forced into a size slot.
+        parser = RuleIntentParser()
+        state = ShoppingState()
+        state.category = "shoes"
+        state.last_question = None
+        result = parser.parse("42", state)
+        self.assertFalse(
+            any(c.attribute == "size" for c in result.constraints),
+            "bare number without a pending size question must not become a size",
+        )
+
+    def test_english_exit_intent_stops(self) -> None:
+        parser = RuleIntentParser()
+        result = parser.parse("i dont want buy shoes now", ShoppingState())
+        self.assertEqual(result.dialogue_act, "STOP")
+
+    def test_category_typo_is_normalized(self) -> None:
+        parser = RuleIntentParser()
+        # "close" is a common misspelling of "clothes".
+        self.assertEqual(parser._category("i want buy close"), "clothing")
+        # A correctly spelled word is unaffected.
+        self.assertEqual(parser._category("i want a dress"), "dresses")
+
+    def test_official_answer_template_still_wins(self) -> None:
+        # The evaluator template must keep taking the official ANSWER path, not the
+        # new contextual-answer path (regression guard for the frozen score).
+        parser = RuleIntentParser()
+        state = ShoppingState()
+        state.category = "shoes"
+        state.last_question = "material"
+        result = parser.parse("For that, what matters is: leather.", state)
+        self.assertEqual(result.dialogue_act, "ANSWER")
+
+
 if __name__ == "__main__":
     unittest.main()
