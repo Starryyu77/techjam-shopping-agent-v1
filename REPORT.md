@@ -43,6 +43,18 @@ REJECT/STOP/RESET/NOOP) drive incremental slot updates. **Intent Override**
 rewriting the slot, not by appending — the exact behavior the evaluator tests on
 turns 3–4.
 
+**Free-form robustness.** Beyond the evaluator's templated phrasings, the rule
+parser also handles realistic chat: a bare value replying to a pending question
+is read as that slot's answer (e.g. "42" after a size question → size:42);
+common category misspellings are normalized (close → clothes) as a fallback when
+no category matches; and casual exit intents ("I don't want to buy shoes now")
+stop the session. These paths are gated so they never fire on the templated
+evaluator inputs — the official ANSWER template always takes precedence — so they
+add product completeness with **zero** effect on the official score (verified:
+TS unchanged at 0.867). A local-LLM intent backend (`intent_backend=hybrid`)
+is wired as an optional enhancement and degrades gracefully to rules when no
+local model is reachable, keeping the offline scoring path intact.
+
 ### 2.3 Hybrid retrieval and ranking (Pillar I)
 FTS5 recalls up to 800 candidates via a BM25-weighted MATCH over
 title/categories/features/details/store/description. A transparent rerank then
