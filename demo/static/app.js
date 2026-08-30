@@ -12,10 +12,17 @@ async function post(path, body) {
   return r.json();
 }
 
-function addMessage(text, who, ask) {
+function addMessage(text, who, ask, narrated) {
   const div = document.createElement("div");
   div.className = "msg " + who;
   div.textContent = text;
+  if (narrated && who === "bot") {
+    const tag = document.createElement("span");
+    tag.className = "ai-tag";
+    tag.textContent = "AI associate";
+    div.prepend(tag);
+    div.insertBefore(document.createTextNode(" "), tag.nextSibling);
+  }
   if (ask) {
     const a = document.createElement("div");
     a.className = "ask";
@@ -97,14 +104,23 @@ function renderRecs(recs) {
       .map((x) => '<span class="why">' + esc(x) + "</span>")
       .join("");
     const adBadge = r.sponsored
-      ? '<span class="adbadge">Sponsored' + (r.advertiser ? " · " + esc(r.advertiser) : "") + "</span>"
+      ? '<span class="adbadge">Promoted · TikTok Shop' + (r.advertiser ? " · " + esc(r.advertiser) : "") + "</span>"
       : "";
+    // Ad economics line (relevance + eCPM) for sponsored rows
+    let adEcon = "";
+    if (r.sponsored) {
+      const parts = [];
+      if (r.relevance != null) parts.push('<span class="econ-badge">relevance <b>' + Math.round(r.relevance * 100) + '%</b></span>');
+      if (r.ecpm != null) parts.push('<span class="econ-badge">eCPM <b>$' + Number(r.ecpm).toFixed(2) + '</b></span>');
+      if (parts.length) adEcon = '<span class="ad-econ">' + parts.join("") + '</span>';
+    }
     li.innerHTML =
       '<span class="rank">' + (r.sponsored ? "Ad" : i + 1) + "</span>" +
       '<span class="rbody">' +
         '<span class="t">' + esc(r.title || r.parent_asin) + adBadge + "</span>" +
         (meta ? '<span class="meta">' + meta + "</span>" : "") +
         '<span class="asin">' + esc(r.parent_asin) + "</span>" +
+        adEcon +
         (reasons ? '<span class="reasons">' + reasons + "</span>" : "") +
       "</span>" +
       score;
@@ -155,7 +171,8 @@ async function send(text) {
   } finally {
     hideThinking();
   }
-  addMessage(data.message || "(no message)", "bot", data.ask_attribute);
+  const botText = data.message || "(no message)";
+  addMessage(botText, "bot", data.ask_attribute, data.narrated);
   renderState(data.state || {}, data.intent, data.ask_attribute, data.candidate_count);
   renderRecs(data.recommendations);
 }

@@ -1,68 +1,107 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8>
-<meta name=viewport content="width=device-width,initial-scale=1">
-<title>Evaluation Dashboard — Shopping Copilot</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TikTok Shop · Ads Dashboard</title>
+<link rel="stylesheet" href="/style.css" />
 <style>
-:root{--bg:#0b0d12;--panel:#12151d;--panel2:#171b25;--line:#232838;--ink:#e7ebf3;--muted:#8b93a7;--accent:#6ea8fe;--good:#4dd4ac}
-*{box-sizing:border-box}body{margin:0;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:radial-gradient(1200px 600px at 70% -10%,#182033,transparent),var(--bg);color:var(--ink)}
-.wrap{max-width:1080px;margin:0 auto;padding:26px}
-h1{font-size:22px;margin:0 0 4px}.sub{color:var(--muted);margin-bottom:24px}
-.kpis{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-bottom:26px}
-.kpi{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:16px}
-.kpi .v{font-size:26px;font-weight:750}.kpi .l{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.4px}
-.kpi.hl{border-color:var(--accent);box-shadow:0 0 24px rgba(110,168,254,.15)}.kpi.hl .v{color:var(--accent)}
-.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:22px}
-.card h3{margin:0 0 14px;font-size:14px;text-transform:uppercase;letter-spacing:.4px;color:var(--muted)}
-table{width:100%;border-collapse:collapse;font-size:14px}th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
-th{color:var(--muted);font-weight:600;font-size:12px;text-transform:uppercase}td.ts{font-weight:700;color:var(--good)}
-tr.base td{color:var(--muted)}tr.base td.ts{color:var(--muted)}
-.scen{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.scard{background:var(--panel2);border:1px solid var(--line);border-radius:12px;padding:14px}
-.scard h4{margin:0 0 8px;font-size:12px;text-transform:capitalize;color:var(--accent)}
-.scard .big{font-size:24px;font-weight:750}.scard .lbl{color:var(--muted);font-size:11px}.scard .mini{color:var(--muted);font-size:11px;margin-top:8px}
-.bar{display:grid;grid-template-columns:90px 1fr 44px;align-items:center;gap:12px;margin-bottom:9px}
-.barlabel{color:var(--muted);font-size:13px}.track{background:#0e1119;border:1px solid var(--line);border-radius:8px;height:20px;overflow:hidden}
-.fill{height:100%;border-radius:8px 0 0 8px;transition:width .6s}.barval{text-align:right;font-variant-numeric:tabular-nums}
-.note{color:var(--muted);font-size:13px;line-height:1.7}.formula{font-family:ui-monospace,Menlo,monospace;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 12px;display:inline-block;margin-top:8px;font-size:13px}
-</style></head><body><div class=wrap>
-<h1>Evaluation Dashboard — Conversational Shopping Copilot</h1>
-<div class=sub>TechJam 2026 · Problem Statement 4 · unmodified official public-set evaluator · 200 sessions · offline rules engine</div>
-
-<div class=kpis>
-  <div class="kpi hl"><div class=v>0.867</div><div class=l>Technical Score</div></div>
-  <div class=kpi><div class=v>0.995</div><div class=l>Hit Rate@10</div></div>
-  <div class=kpi><div class=v>0.644</div><div class=l>MRR</div></div>
-  <div class=kpi><div class=v>2.21</div><div class=l>MTTC</div></div>
-  <div class=kpi><div class=v>0.878</div><div class=l>Efficiency</div></div>
+  .wrap{max-width:1100px;margin:0 auto;padding:22px;overflow:auto;flex:1 1 auto;min-height:0}
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--line)}
+  th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.4px}
+  .on{color:var(--soft)} .off{color:var(--neg)}
+  .bid{font-variant-numeric:tabular-nums}
+  .section-title{font-weight:650;font-size:13px;letter-spacing:.4px;text-transform:uppercase;
+    color:var(--muted);margin:0 0 14px}
+  .updated{color:var(--muted);font-size:11px;margin-left:10px;font-weight:400;text-transform:none;letter-spacing:0}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><span class="dot"></span> TikTok Shop <span style="color:var(--muted);font-weight:400">·</span> Ads Dashboard</div>
+  <div class="sub">Advertiser metrics overview · auto-refreshes every 3 s</div>
+  <a class="reset" href="/" style="text-decoration:none;margin-left:auto">← Shopper view</a>
+  <a class="reset" href="/ads" target="_blank" style="text-decoration:none">Ad Console</a>
+</header>
+<div class="wrap">
+  <div id="kpis" class="kpi-grid"></div>
+  <div class="section-title">Campaigns by spend <span class="updated" id="updatedAt"></span></div>
+  <div class="card" style="padding:0;overflow:auto">
+    <table>
+      <thead>
+        <tr>
+          <th>Advertiser</th><th>Product</th><th>Bid</th><th>Impr.</th><th>Clicks</th>
+          <th>Spend / Budget</th><th>Last eCPM</th><th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
 </div>
+<script>
+const $ = (id) => document.getElementById(id);
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"]/g, c =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+}
+function kpiCard(value, label) {
+  return '<div class="kpi-card"><div class="kpi-value">' + esc(value) + '</div><div class="kpi-label">' + esc(label) + '</div></div>';
+}
+async function load() {
+  try {
+    const d = await (await fetch("/api/ads")).json();
+    const camps = d.campaigns || [];
 
-<div class=card><h3>Configuration comparison</h3>
-<table><thead><tr><th>Configuration</th><th>Hit Rate@10</th><th>MRR</th><th>MTTC</th><th>Technical Score</th></tr></thead>
-<tbody><tr><td>Rules V1.3 (submitted, popularity tiebreak)</td><td>0.995</td><td>0.644</td><td>2.215</td><td class='ts'>0.867</td></tr>
-<tr><td>Rules V1.2 (constraint-only)</td><td>0.970</td><td>0.613</td><td>3.155</td><td class='ts'>0.826</td></tr>
-<tr><td>Rules + cross-encoder (all)</td><td>0.970</td><td>0.606</td><td>3.095</td><td class='ts'>0.825</td></tr>
-<tr class='base'><td>Official weak BM25 baseline</td><td>0.125</td><td>0.068</td><td>9.810</td><td class='ts'>0.139</td></tr></tbody></table>
-<div class=note style="margin-top:12px">We evaluated a full local cross-encoder reranker (globally and gated to the Buying track) and kept it OFF by default: on this task's composite it is flat-to-slightly-negative and occasionally lowers Hit Rate. Carefully engineered lightweight rules win — the light-execution outcome the problem statement rewards.</div>
-</div>
+    // KPI calculations
+    const total = camps.length;
+    const active = camps.filter(c => c.active).length;
+    const totalImpr = camps.reduce((s, c) => s + (c.impressions || 0), 0);
+    const totalSpend = camps.reduce((s, c) => s + Number(c.spend || 0), 0);
+    const totalBudgetRemaining = camps.reduce((s, c) => s + Math.max(0, Number(c.budget || 0) - Number(c.spend || 0)), 0);
+    const served = camps.filter(c => c.last_relevance != null);
+    const avgRel = served.length > 0
+      ? served.reduce((s, c) => s + Number(c.last_relevance), 0) / served.length
+      : null;
 
-<div class=card><h3>Per-scenario (submitted config)</h3><div class=scen><div class='scard'><h4>buying</h4><div class='big'>0.988</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.623 · MTTC 1.73 · n=80</div></div>
-<div class='scard'><h4>browsing</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.627 · MTTC 2.11 · n=80</div></div>
-<div class='scard'><h4>intent override</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.741 · MTTC 3.90 · n=30</div></div>
-<div class='scard'><h4>boundary</h4><div class='big'>1.000</div><div class='lbl'>Hit Rate@10</div><div class='mini'>MRR 0.660 · MTTC 1.90 · n=10</div></div></div></div>
+    $("kpis").innerHTML =
+      kpiCard(total, "Total Campaigns") +
+      kpiCard(active, "Active") +
+      kpiCard(totalImpr.toLocaleString(), "Impressions") +
+      kpiCard("$" + totalSpend.toFixed(2), "Total Spend") +
+      kpiCard("$" + totalBudgetRemaining.toFixed(2), "Remaining Budget") +
+      kpiCard(avgRel != null ? Math.round(avgRel * 100) + "%" : "—", "Avg Relevance");
 
-<div class=card><h3>Best-rank distribution (submitted config)</h3><div class='bar'><div class='barlabel'>rank 1</div><div class='track'><div class='fill' style='width:48.5%;background:#4dd4ac'></div></div><div class='barval'>97</div></div>
-<div class='bar'><div class='barlabel'>rank 2</div><div class='track'><div class='fill' style='width:15.5%;background:#6ea8fe'></div></div><div class='barval'>31</div></div>
-<div class='bar'><div class='barlabel'>rank 3-5</div><div class='track'><div class='fill' style='width:23.5%;background:#b18cff'></div></div><div class='barval'>47</div></div>
-<div class='bar'><div class='barlabel'>rank 6-10</div><div class='track'><div class='fill' style='width:12.0%;background:#f0a35e'></div></div><div class='barval'>24</div></div>
-<div class='bar'><div class='barlabel'>miss</div><div class='track'><div class='fill' style='width:0.5%;background:#ff6b6b'></div></div><div class='barval'>1</div></div>
-<div class=note style="margin-top:12px">Diagnosis of every public-set miss showed a <b>ranking</b> problem, not recall: the target was always retrievable but hard to lift above look-alikes when the customer disclosed only a generic constraint. This reshaped our retrieval strategy toward constraint-aware reranking rather than deeper recall.</div>
-</div>
+    // Sort by spend descending
+    const sorted = [...camps].sort((a, b) => Number(b.spend || 0) - Number(a.spend || 0));
+    const rows = $("rows");
+    rows.innerHTML = "";
+    sorted.forEach(c => {
+      const spend = Number(c.spend || 0);
+      const budget = Number(c.budget || 0);
+      const pct = budget > 0 ? Math.min(100, spend / budget * 100) : 0;
+      const ecpmText = c.last_ecpm != null ? "$" + Number(c.last_ecpm).toFixed(2) : "—";
+      const tr = document.createElement("tr");
+      tr.innerHTML =
+        "<td>" + esc(c.advertiser) + "</td>" +
+        "<td>" + esc((c.title || "").slice(0, 42)) + "</td>" +
+        "<td class='bid'>$" + Number(c.bid).toFixed(2) + "</td>" +
+        "<td>" + (c.impressions || 0) + "</td>" +
+        "<td>" + (c.clicks || 0) + "</td>" +
+        "<td><span>$" + spend.toFixed(2) + " / $" + budget.toFixed(0) + "</span>" +
+          "<div class='prog-bar'><div class='prog-fill' style='width:" + pct + "%'></div></div></td>" +
+        "<td>" + ecpmText + "</td>" +
+        "<td class='" + (c.active ? "on" : "off") + "'>" + (c.active ? "active" : "paused") + "</td>";
+      rows.appendChild(tr);
+    });
 
-<div class=card><h3>Scoring formula & methodology</h3>
-<div class=note>
-<span class=formula>TechnicalScore = 0.50·HitRate@10 + 0.30·MRR + 0.20·Efficiency</span><br>
-<span class=formula>Efficiency = clip((11 − MTTC) / 10, 0, 1)</span>
-<p>Prompt self-evolution is leakage-safe: the optimizer sees only development-set bad cases; validation only accepts a new prompt when composite improves and safety metrics (JSON compliance, no-mutation preservation) do not regress; the held-out test set is read once, only after a final freeze. Target ids, validation text, and test labels never enter prompts.</p>
-</div></div>
-
-<div class=sub style="text-align:center">Generated offline from reports/ · no network required</div>
-</div></body></html>
+    $("updatedAt").textContent = "updated " + new Date().toLocaleTimeString();
+  } catch (e) {
+    console.error("Dashboard fetch error:", e);
+  }
+}
+load();
+setInterval(load, 3000);
+</script>
+</body>
+</html>

@@ -3,13 +3,13 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Shopping Copilot — Live State Machine</title>
+<title>TikTok Shop · Shopping Copilot</title>
 <link rel="stylesheet" href="/style.css" />
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><span class="dot"></span> Shopping Copilot</div>
-  <div class="sub">TechJam 2026 · PS4 · offline rules engine · 50k catalog</div>
+  <div class="brand"><span class="dot"></span> TikTok Shop <span style="color:var(--muted);font-weight:400">·</span> Shopping Copilot</div>
+  <div class="sub">TechJam 2026 · Product Scenario 4 · content-to-commerce engine · 50k catalog</div>
   <a class="reset" href="/ads" target="_blank" style="text-decoration:none;margin-left:auto">Ad Console</a>
   <a class="reset" href="/dashboard" target="_blank" style="text-decoration:none">Dashboard</a>
   <button id="resetBtn" class="reset" style="margin-left:0">New session</button>
@@ -17,6 +17,11 @@
 <main class="grid">
   <section class="chat card">
     <div class="card-title">Conversation</div>
+    <div id="howtoBanner" class="howto-banner">
+      <span class="howto-icon">💡</span>
+      <span class="howto-text"><b>How to try:</b> Chat like you're on TikTok Shop — describe what you saw or want. Watch the Copilot extract your intent (right panel) and surface picks. <b>Sponsored</b> picks are clearly labelled.</span>
+      <button class="howto-dismiss" onclick="this.parentElement.classList.add('hidden')" title="Dismiss">✕</button>
+    </div>
     <div id="messages" class="messages"></div>
     <form id="composer" class="composer">
       <input id="input" autocomplete="off" placeholder="e.g. I'm looking for running shoes, must be breathable" />
@@ -24,21 +29,19 @@
     </form>
     <div class="samples">
       <span>Try:</span>
-      <button data-s="I'm looking for running shoes, must be breathable">buying</button>
-      <button data-s="I'm looking for a jacket, but I'm still exploring">browsing</button>
-      <button data-s="Not cotton, budget under 80 dollars">negate</button>
-      <button data-s="Actually, ignore my earlier preference. What I need is: waterproof.">override</button>
-      <button data-s="Is there a coupon for this?">boundary</button>
+      <button data-s="Saw a creator wearing an oversized hoodie, want something similar">🔥 种草</button>
+      <button data-s="Need breathable running shoes, budget under $80">🛒 buying</button>
+      <button data-s="Just browsing for a winter jacket">👀 browsing</button>
     </div>
     <div class="samples">
-      <span>Free-form:</span>
-      <button data-s="i want buy close">typo → clothes</button>
-      <button data-s="i dont want buy shoes now">casual exit</button>
+      <button data-s="Actually forget cotton — I want something waterproof">🔄 override</button>
+      <button data-s="Any discount codes?">🏷️ boundary</button>
+      <button data-s="I don't know, just recommend me something">🤷 fallback</button>
     </div>
   </section>
 
   <section class="state card">
-    <div class="card-title">Internal dialogue state <span class="live">live</span></div>
+    <div class="card-title">How the Copilot understands you <span class="live">live</span></div>
     <div class="strategy">
       <div class="pill" id="pillIntent">intent —</div>
       <div class="pill" id="pillStrategy">strategy —</div>

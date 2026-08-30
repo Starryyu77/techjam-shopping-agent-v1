@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Ad Console — Sponsored Placements</title>
+<title>TikTok Shop · Ads Manager</title>
 <link rel="stylesheet" href="/style.css" />
 <style>
   .wrap{max-width:1000px;margin:0 auto;padding:22px;overflow:auto;flex:1 1 auto;min-height:0}
@@ -26,14 +26,18 @@
 </head>
 <body>
 <header class="topbar">
-  <div class="brand"><span class="dot"></span> Ad Console</div>
-  <div class="sub">Sponsored-placement simulator · demo feature (not part of scoring)</div>
+  <div class="brand"><span class="dot"></span> TikTok Shop <span style="color:var(--muted);font-weight:400">·</span> Ads Manager</div>
+  <div class="sub">Promoted-placement auction engine · eCPM-ranked · demo feature</div>
   <a class="reset" href="/" style="text-decoration:none;margin-left:auto">← Shopper view</a>
+  <a class="reset" href="/dashboard" target="_blank" style="text-decoration:none">Dashboard</a>
 </header>
 <div class="wrap">
-  <p class="note">Advertisers buy keyword-targeted placements. When a shopper's category or query matches a
-  live campaign, the matching product surfaces as a clearly-labelled <b style="color:var(--cat)">Sponsored</b>
-  slot in the shopper view — highest bid wins. Organic ranking (the scored path) is never changed.</p>
+  <div class="mechanic-note">
+    <b>How the auction works:</b> The winner is chosen by <code>eCPM = bid × relevance</code> (BM25 keyword match to the shopper's query), <em>not</em> by raw bid alone.
+    Ads below a relevance floor are suppressed. Each impression spends the bid from the campaign budget; a campaign stops serving when it exhausts its budget.
+    Organic ranking (the scored path) is <b>never</b> changed — promoted items appear in a separate labelled slot.
+  </div>
+  <div class="try-hint">💡 <b>How to try:</b> Launch a campaign below, then open the <a href="/" style="color:var(--accent)">Shopper view</a> and type a query matching your keywords — watch your Promoted slot win the auction.</div>
   <div class="cols">
     <form class="card" id="newCampaign">
       <div class="card-title">New campaign</div>
@@ -45,12 +49,14 @@
       <input id="keywords" placeholder="jacket, coat, waterproof" value="jacket, coat, outerwear" />
       <label>Bid (USD / impression)</label>
       <input id="bid" type="number" step="0.05" min="0" value="1.50" />
+      <label>Daily budget (USD)</label>
+      <input id="budget" type="number" step="1" min="1" value="25" />
       <button type="submit">Launch campaign</button>
     </form>
     <div class="card">
       <div class="card-title">Live campaigns</div>
       <table>
-        <thead><tr><th>Advertiser</th><th>Product</th><th>Keywords</th><th>Bid</th><th>Impr.</th><th>Status</th><th></th></tr></thead>
+        <thead><tr><th>Advertiser</th><th>Product</th><th>Keywords</th><th>Bid</th><th>Impr.</th><th>Clicks</th><th>Budget / Spend</th><th>Last rel</th><th>Last eCPM</th><th>Status</th><th></th></tr></thead>
         <tbody id="rows"></tbody>
       </table>
     </div>
@@ -64,10 +70,21 @@ async function load(){
   const d=await (await fetch("/api/ads")).json();
   const rows=$("rows"); rows.innerHTML="";
   (d.campaigns||[]).forEach(c=>{
+    const spend=Number(c.spend||0);
+    const budget=Number(c.budget||0);
+    const pct=budget>0?Math.min(100,spend/budget*100):0;
+    const relText=c.last_relevance!=null?Math.round(c.last_relevance*100)+"%":"—";
+    const ecpmText=c.last_ecpm!=null?"$"+Number(c.last_ecpm).toFixed(2):"—";
     const tr=document.createElement("tr");
     tr.innerHTML="<td>"+esc(c.advertiser)+"</td><td>"+esc((c.title||"").slice(0,38))+"</td>"+
       "<td class='kw'>"+(c.keywords||[]).map(esc).join(", ")+"</td>"+
-      "<td class='bid'>$"+Number(c.bid).toFixed(2)+"</td><td>"+(c.impressions||0)+"</td>"+
+      "<td class='bid'>$"+Number(c.bid).toFixed(2)+"</td>"+
+      "<td>"+(c.impressions||0)+"</td>"+
+      "<td>"+(c.clicks||0)+"</td>"+
+      "<td><span>$"+spend.toFixed(2)+" / $"+budget.toFixed(0)+"</span>"+
+        "<div class='prog-bar'><div class='prog-fill' style='width:"+pct+"%'></div></div></td>"+
+      "<td>"+relText+"</td>"+
+      "<td>"+ecpmText+"</td>"+
       "<td class='"+(c.active?"on":"off")+"'>"+(c.active?"active":"paused")+"</td>"+
       "<td><button class='toggle' data-id='"+c.id+"'>"+(c.active?"pause":"resume")+"</button></td>";
     rows.appendChild(tr);
@@ -79,11 +96,13 @@ async function load(){
 $("newCampaign").addEventListener("submit",async(e)=>{
   e.preventDefault();
   const r=await post("/api/ads",{advertiser:$("advertiser").value,target:$("target").value,
-    keywords:$("keywords").value,bid:parseFloat($("bid").value)||0.5});
+    keywords:$("keywords").value,bid:parseFloat($("bid").value)||0.5,
+    budget:parseFloat($("budget").value)||25});
   if(r.error){alert(r.error);return;}
   load();
 });
 load();
+setInterval(load, 3000);
 </script>
 </body>
 </html>
