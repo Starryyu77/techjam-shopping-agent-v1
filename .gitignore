@@ -4,3 +4,4 @@ __pycache__/
 models/
 reports/*.log
 demo/_smoke_*.py
+demo/_proof_*.py

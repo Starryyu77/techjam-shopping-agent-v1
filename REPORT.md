@@ -81,10 +81,17 @@ both query expansion and rerank scoring — never as a hard filter, respecting t
   Token usage reported to the evaluator is 0/0. Per-turn latency is dominated by
   the FTS5 query and is well under a second on CPU; the 50k index builds in
   memory at startup.
-- **Optional dev layers (OFF for scoring, disclosed for transparency):**
-  - Localhost Qwen3-8B (Q4_K_M, llama.cpp) for vague-intent classification in
-    hybrid/model mode. Endpoint restricted to loopback; ~5.8 GB VRAM,
-    ~38–42 tok/s on an RTX 4060 Laptop. Approximate cost: $0 (local).
+- **Optional demo/dev layers (OFF for scoring, disclosed for transparency):**
+  - Localhost Qwen3-8B (fp16, Hugging Face Transformers) served via a stdlib
+    HTTP server on loopback only (127.0.0.1:8100). ~16 GB VRAM on an NVIDIA A10
+    (24 GB). Supports Qwen3's native `enable_thinking` toggle: intent parsing
+    runs with thinking OFF for speed (~1.7 s/turn); the optional narration layer
+    (§8.2) can enable thinking for higher quality (~2 s/turn). `<think>` blocks
+    are stripped before the response reaches the demo UI. No fine-tuning of any
+    kind — zero SFT/LoRA/RLHF; all behavior comes from prompt engineering and
+    the self-evolution methodology described in §8.3. Approximate cost: $0
+    (local). **The scored/submitted path never loads, calls, or depends on this
+    model.**
   - A bundled MiniLM cross-encoder reranker (~88 MB) for semantic reranking
     experiments (MPS/CUDA/CPU). Approximate cost: $0 (local).
 
@@ -168,7 +175,101 @@ not regress); the held-out test is read once, only after a final freeze. We neve
 place target `parent_asin`s, validation text, or test labels into prompts. All
 retrieval and evaluation runs are reproducible from `reports/`.
 
-## 6. Limitations and future work
+## 6. Interactive demo: conversational commerce + transparent ad economics
+
+Everything in this section lives in a **demo-only layer** (`demo/server.py` and
+its static frontend) that the official evaluator never reaches. We re-ran the
+official evaluator after every change described here and it reproduced
+**TS = 0.8665** bit-for-bit; all 18 unit tests pass. The scored path remains
+pure-rules, offline, stdlib-only.
+
+### 6.1 Sponsored-ads engine (eCPM auction)
+
+To demonstrate how a shopping copilot can monetize attention without corrupting
+organic ranking, we built a complete in-demo ad engine:
+
+- **eCPM auction:** winner = argmax(bid × relevance). Relevance is *real BM25*
+  computed by the **same** SQLite FTS5 engine the scored path uses (zero
+  additional model, no latency spike), mapped to [0, 1] via a logistic
+  transform. Verified: a precisely-targeted $1.00 bid beats an off-topic $5.00
+  bid — the system is relevance-dominant, not highest-bid-wins.
+- **Relevance floor (0.15):** ads below the threshold are suppressed entirely
+  (e.g. a query for "diamond ring" produces no sponsored slot rather than a
+  forced mismatch).
+- **Per-campaign budgets with spend accounting:** each impression charges the
+  bid; a campaign stops serving when spend reaches budget. Verified: a $4
+  budget / $2 bid campaign serves exactly 2 impressions, then stops.
+  Multi-slot support (top-N by eCPM) is implemented.
+- **Advertiser surfaces:** an Ads Manager console (launch/pause campaigns, set
+  advertiser/target/keywords/bid/daily-budget, live table with spend/budget
+  progress bars, last eCPM and relevance, 3 s auto-refresh) and an Ads
+  Dashboard (KPI cards: campaigns, active, impressions, total spend, remaining
+  budget, average relevance; campaigns-by-spend table; 3 s auto-refresh).
+- **Design invariant:** organic ranking (the scored path) is **never** altered
+  by ads. Sponsored items appear only in a separate, clearly-labelled
+  "Promoted · TikTok Shop" slot that shows the relevance percentage and eCPM
+  dollar value — making the ad economics transparent and auditable, a
+  differentiator vs a black-box placement.
+
+### 6.2 LLM sales-associate narration
+
+After the deterministic engine returns real recommendations, the local Qwen3-8B
+(§3) rewrites the template reply as a short (2–3 sentence) conversational sales
+pitch: it names 1–2 picks with concrete reasons, naturally mentions any sponsored
+item, and is explicitly instructed never to fabricate prices, facts, or discounts
+and to stay within the returned shortlist. On any model failure or slowness the
+demo falls back to the deterministic template silently.
+
+Motivation: the Alipay-618 deployment found that moving users from passive
+recommendation to active conversational guidance lifted click-through ~3.7× and
+per-user value ~2.1×. Our narration layer makes this shift tangible.
+
+The demo layer also provides friendly handling of chit-chat ("what can you do?"),
+"just recommend something" requests, and off-topic redirects — all with rule
+templates in the demo wrapper, never changing the scored agent.
+
+Controlled via `--narrate` (off by default). No fine-tuning; zero
+SFT/LoRA/RLHF.
+
+### 6.3 Prompt self-evolution framework (an honest finding)
+
+We built an automated prompt-optimization loop:
+
+1. Evaluate a system prompt on a self-labeled golden-case set (23 train / 12
+   test, strict split).
+2. Score each case with a dual rule + LLM metric (0.6 · domain-intent accuracy
+   + 0.2 · dialogue-act accuracy + 0.2 · structural validity).
+3. Mine bad cases from the train set; have the LLM rewrite the system prompt
+   with anti-overfit guardrails (reject truncated or over-shortened rewrites
+   that drop below 85% of the original length or lose required structural
+   markers).
+4. Re-evaluate; iterate to convergence.
+
+**Honest result.** The framework's only measurable gain over the seed prompt
+traced entirely to **trailing-newline sensitivity** of the chat template: the
+seed prompt with a trailing \n scored 86.7 on test; without \n it scored 91.7;
+the rewriter's sole effective change was dropping that trailing newline. We
+confirmed this with a controlled experiment (3× deterministic runs, newline
+toggled in isolation). We therefore **did not ship a rewritten prompt** — the
+seed was already near-optimal — and we keep this as documented evidence of
+LLM-prompt brittleness and disciplined validation.
+
+We frame this positively: the methodology (leakage-safe, dual-scored,
+anti-overfit, cross-checked) is sound and reusable; the finding is that on this
+task the seed prompt sits at the plateau, and we refuse to ship a fragile
+artifact whose only delta is whitespace sensitivity.
+
+### 6.4 TikTok Shop scenario framing
+
+The demo is themed as a **"TikTok Shop · Shopping Copilot"** to fit the TikTok
+commerce context (content-to-commerce). Sample prompts include a
+creator-inspired "种草" flow ("Saw a creator wearing an oversized hoodie, want
+something similar") alongside buying/browsing/override/boundary/fallback
+scenarios. A live **"How the Copilot understands you"** panel shows the real
+extracted intent, dialogue act, confidence, hard/soft/negative constraints, and
+category on each turn — making the state machine transparent and auditable.
+
+## 7. Limitations and future work
 
 - Public-set gains fix generic error classes but do not substitute for the
   hidden 800-session validation.
@@ -183,10 +284,12 @@ retrieval and evaluation runs are reproducible from `reports/`.
 - The optional Qwen layer improves vague-intent classification in our gold set
   but is not required for the reported scores.
 
-## 7. Team contributions
+## 8. Team contributions
 
 - Retrieval, state machine, and rule rerank; official-contract adapter; unit
   tests and leakage-safe evaluation harness.
 - Cross-encoder reranker experiment, path portability, offline reproduction on
   macOS, and this report.
-- Local Qwen setup and prompt-iteration experiments (development-only).
+- Local Qwen3-8B deployment, prompt self-evolution framework, sponsored-ads
+  engine (eCPM auction), LLM narration layer, TikTok-themed demo frontend
+  (shopper view, Ads Manager, Ads Dashboard), and end-to-end demo testing.

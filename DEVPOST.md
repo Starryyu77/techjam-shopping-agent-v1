@@ -68,6 +68,10 @@ BM25 baseline at 0.139 (≈6× better). Recall is 100% saturated (target in pool
 200/200 sessions), so every gain came from smarter *ranking*: a banded
 popularity tiebreaker that lifts the tail without sacrificing precision.
 
+*The demo-layer features below (ad engine, LLM narration, TikTok theming) live
+in a separate wrapper the evaluator never reaches; the scored path and these
+numbers are unchanged and verified after every demo change.*
+
 ## What makes it different
 
 1. **A design stance the problem statement rewards:** light-execution, offline,
@@ -77,6 +81,18 @@ popularity tiebreaker that lifts the tail without sacrificing precision.
    composite. We ship the rules and keep the experiment for transparency.
 3. **Leakage-safe methodology:** dev/validation/held-out-test separation with a
    strict acceptance gate — prompts never see target ids or test labels.
+4. **Transparent eCPM ad engine (demo):** a full sponsored-placement auction
+   where winner = argmax(bid × BM25 relevance) — not highest-bid-wins. Ads
+   below a relevance floor are suppressed; per-campaign budgets cap spend; and
+   organic ranking is **never** altered. The ad economics (relevance%, eCPM$)
+   are shown on every sponsored slot — auditable, not a black box.
+5. **Conversational LLM sales-associate + TikTok content-to-commerce framing
+   (demo):** a local Qwen3-8B (zero fine-tuning) rewrites deterministic
+   recommendations into a natural 2–3 sentence sales pitch, naturally weaving
+   in sponsored picks without fabricating facts. Themed as "TikTok Shop ·
+   Shopping Copilot" with content-to-commerce sample flows (种草, browsing,
+   buying). Motivated by the Alipay-618 finding that active conversational
+   guidance lifts CTR ~3.7×.
 
 ## Challenges
 
@@ -87,12 +103,24 @@ reshaped our whole retrieval strategy.
 
 ## What's next
 
-Dual-track dense recall for open-ended Browsing, a self-evolving prompt-iteration
-loop with rule+LLM dual scoring, and an interactive state-visualization demo.
+- Optional **BGE cross-encoder** for ad-relevance scoring (the model is
+  downloaded; integrating it would replace BM25 relevance with dense semantic
+  matching in the eCPM auction).
+- **Second-price auction** (GSP) for fairer advertiser pricing.
+- **Budget pacing and frequency capping** (per-session and per-day limits) to
+  prevent ad fatigue.
+- **Dense (vector) recall track** for open-ended Browsing queries where BM25
+  keyword matching is weakest.
+- Richer **user-profile personalization** (purchase-history weighting, style
+  affinity) feeding both organic ranking and ad targeting.
 
 ## Built with
 
-Python, SQLite FTS5. (Optional/dev: PyTorch, Transformers, llama.cpp, Qwen3-8B.)
+Python, SQLite FTS5 (scored path — stdlib only, no dependencies). Demo layer:
+PyTorch, Hugging Face Transformers, Qwen3-8B (fp16, local inference, zero
+fine-tuning), eCPM ad-auction engine with BM25 relevance scoring, and three
+interactive dashboards (Shopper view, Ads Manager, Ads Dashboard) in vanilla
+HTML/CSS/JS.
 
 ## Links
 
