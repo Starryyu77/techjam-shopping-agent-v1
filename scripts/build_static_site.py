@@ -11,7 +11,6 @@ _STATIC = _REPO_ROOT / "demo" / "static"
 _EVIDENCE = _REPO_ROOT / "demo" / "evidence"
 _REPO_URL = "https://github.com/Starryyu77/techjam-shopping-agent-v1"
 _BRANCH_URL = _REPO_URL + "/tree/feature/aggressive-v2"
-_CUSTOM_DOMAIN = "shopagent.tianuzhang.org"
 
 
 def build_static_site(output: Path) -> None:
@@ -50,7 +49,6 @@ def build_static_site(output: Path) -> None:
     shutil.copy2(_STATIC / "tour.js", output / "tour.js")
     shutil.copytree(_EVIDENCE, output / "evidence")
     (output / ".nojekyll").write_text("", encoding="utf-8")
-    (output / "CNAME").write_text(_CUSTOM_DOMAIN + "\n", encoding="utf-8")
 
 
 def main() -> None:

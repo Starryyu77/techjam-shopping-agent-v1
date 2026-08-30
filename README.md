@@ -29,6 +29,7 @@ python scripts/build_demo_evidence.py --official-root /path/to/techjam-conversat
 ## Links
 
 - **Public GitHub:** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Live judge-facing tour:** https://shopping-copilot-techjam.pages.dev/
 - **Demo video (YouTube):** paste after upload (storyboard in `demo/VIDEO_SCRIPT.md`)
 
 ## Deliverables map

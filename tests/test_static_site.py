@@ -27,7 +27,6 @@ class StaticSiteBuildTests(unittest.TestCase):
             "tour.css",
             "tour.js",
             ".nojekyll",
-            "CNAME",
             "evidence/manifest.json",
             "evidence/metrics.json",
             "evidence/dataset.json",
@@ -36,11 +35,8 @@ class StaticSiteBuildTests(unittest.TestCase):
         for relative in required:
             self.assertTrue((self.output / relative).is_file(), relative)
 
-    def test_custom_domain_is_the_safe_subdomain(self):
-        self.assertEqual(
-            (self.output / "CNAME").read_text(encoding="utf-8").strip(),
-            "shopagent.tianuzhang.org",
-        )
+    def test_bundle_does_not_claim_an_unconfigured_custom_domain(self):
+        self.assertFalse((self.output / "CNAME").exists())
 
     def test_index_uses_project_path_portable_assets(self):
         html = (self.output / "index.html").read_text(encoding="utf-8")
