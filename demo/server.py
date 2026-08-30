@@ -110,10 +110,25 @@ def make_handler(demo: DemoState):
                 result = demo.agent.respond(session_id, message, top_k=10)
                 recs = []
                 for item in result.get("recommendations", [])[:10]:
-                    asin = item.get("parent_asin") if isinstance(item, dict) else str(item)
-                    if asin:
+                    if not isinstance(item, dict):
+                        asin = str(item)
                         recs.append({"parent_asin": asin, "title": demo.title_of(asin)})
+                        continue
+                    asin = item.get("parent_asin")
+                    if not asin:
+                        continue
+                    recs.append(
+                        {
+                            "parent_asin": asin,
+                            "title": item.get("title") or demo.title_of(asin),
+                            "price": item.get("price"),
+                            "store": item.get("store"),
+                            "score": item.get("score"),
+                            "reasons": item.get("reasons", [])[:3],
+                        }
+                    )
                 state = demo.snapshot(session_id)
+                intent = result.get("intent", {}) or {}
                 return self._send_json(
                     {
                         "message": result.get("message", ""),
@@ -121,7 +136,12 @@ def make_handler(demo: DemoState):
                         "recommendations": recs,
                         "state": state,
                         "candidate_count": demo.candidate_count(session_id),
-                        "turn": turn,
+                        "turn": min(turn, 10),
+                        "intent": {
+                            "domain_intent": intent.get("domain_intent"),
+                            "dialogue_act": intent.get("dialogue_act"),
+                            "confidence": intent.get("confidence"),
+                        },
                     }
                 )
             self._send_json({"error": "not found"}, 404)

@@ -43,24 +43,44 @@ function chips(elId, mapping) {
   }
 }
 
-function renderState(state, askAttr, poolCount) {
+// Map the agent's real domain_intent to a shopper-facing label.
+const INTENT_LABEL = {
+  ITEM: "buying", VAGUE: "browsing", IRRELEVANT: "off-topic",
+  BENEFIT: "asking benefit",
+};
+// Map the agent's real dialogue act to a readable state-machine action.
+const ACT_LABEL = {
+  NEW: "new request", ANSWER: "answering", ADD: "adding constraint",
+  NEGATE: "excluding", OVERRIDE: "override · rewrite", NO_PREFERENCE: "no preference",
+  SELECT: "selecting", REJECT: "rejecting", STOP: "stopped",
+  RESET: "reset", NOOP: "holding",
+};
+
+function renderState(state, intent, askAttr, poolCount) {
   chips("hard", state.hard_constraints);
   chips("soft", state.soft_preferences);
   chips("neg", state.negative_constraints);
   chips("cat", state.category ? [state.category] : []);
 
-  // derive a human strategy label from the state
-  const hasHard = state.hard_constraints && Object.keys(state.hard_constraints).length;
-  let strategy = "browsing · clarify";
-  if (state.status === "selected") strategy = "selected";
-  else if (state.status === "stopped") strategy = "stopped";
-  else if (askAttr) strategy = hasHard ? "buying · narrow" : "browsing · clarify";
-  else strategy = "recommend · focused";
+  intent = intent || {};
+  // Real intent from the backend (not guessed from the slots).
+  let intentLabel = INTENT_LABEL[intent.domain_intent] || (state.category ? "browsing" : "—");
+  if (state.status === "selected") intentLabel = "selected";
+  else if (state.status === "stopped") intentLabel = "stopped";
 
-  $("pillIntent").innerHTML = "intent <b>" + (hasHard ? "buying" : "browsing") + "</b>";
-  $("pillStrategy").innerHTML = "strategy <b>" + strategy + "</b>";
-  $("pillTurn").innerHTML = "turn <b>" + turn + "</b>/10";
+  // Real dialogue act drives the strategy label.
+  let act = ACT_LABEL[intent.dialogue_act] || "—";
+  const conf = intent.confidence != null ? " · " + Math.round(intent.confidence * 100) + "%" : "";
+
+  $("pillIntent").innerHTML = "intent <b>" + intentLabel + "</b>";
+  $("pillStrategy").innerHTML = "act <b>" + act + "</b>" + conf;
+  $("pillTurn").innerHTML = "turn <b>" + Math.min(turn, 10) + "</b>/10";
   $("pillPool").innerHTML = "candidates <b>" + (poolCount != null ? poolCount : "—") + "</b>";
+}
+
+function esc(s) {
+  return String(s == null ? "" : s).replace(/[&<>"]/g, (c) =>
+    ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 }
 
 function renderRecs(recs) {
@@ -68,10 +88,22 @@ function renderRecs(recs) {
   ol.innerHTML = "";
   (recs || []).forEach((r, i) => {
     const li = document.createElement("li");
+    const price = r.price != null ? "$" + r.price : "";
+    const store = r.store ? esc(r.store) : "";
+    const meta = [store, price].filter(Boolean).join(" · ");
+    const score = r.score != null ? '<span class="score">score ' + r.score.toFixed(2) + "</span>" : "";
+    const reasons = (r.reasons || [])
+      .map((x) => '<span class="why">' + esc(x) + "</span>")
+      .join("");
     li.innerHTML =
       '<span class="rank">' + (i + 1) + "</span>" +
-      '<span><span class="t">' + (r.title || r.parent_asin) + "</span><br>" +
-      '<span class="asin">' + r.parent_asin + "</span></span>";
+      '<span class="rbody">' +
+        '<span class="t">' + esc(r.title || r.parent_asin) + "</span>" +
+        (meta ? '<span class="meta">' + meta + "</span>" : "") +
+        '<span class="asin">' + esc(r.parent_asin) + "</span>" +
+        (reasons ? '<span class="reasons">' + reasons + "</span>" : "") +
+      "</span>" +
+      score;
     ol.appendChild(li);
   });
 }
@@ -89,18 +121,18 @@ async function reset() {
   sessionId = data.session_id;
   turn = 0;
   $("messages").innerHTML = "";
-  renderState(data.state || {}, null, null);
+  renderState(data.state || {}, null, null, null);
   renderRecs([]);
   addMessage("New session started. Tell me what you're shopping for.", "bot");
 }
 
 async function send(text) {
   if (!sessionId || !text.trim()) return;
-  turn += 1;
+  turn = Math.min(turn + 1, 10);
   addMessage(text, "user");
   const data = await post("/api/respond", { session_id: sessionId, message: text, turn });
   addMessage(data.message || "(no message)", "bot", data.ask_attribute);
-  renderState(data.state || {}, data.ask_attribute, data.candidate_count);
+  renderState(data.state || {}, data.intent, data.ask_attribute, data.candidate_count);
   renderRecs(data.recommendations);
 }
 
