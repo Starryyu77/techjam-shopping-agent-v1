@@ -11,7 +11,7 @@ standard library only — no network, no API keys, no GPU:**
 | ---: | ---: | ---: | ---: | ---: |
 | 0.995 | 0.644 | 2.22 | 0.878 | **0.867** |
 
-≈ **6×** the official BM25 baseline (0.139). Deterministic across runs.
+≈ **8.1×** the official BM25 starter TechnicalScore (0.10671). Deterministic across runs.
 
 **Three differentiators**
 1. **Explicit dialogue state machine with erase-and-rewrite intent override** —
@@ -64,7 +64,7 @@ OFF for official scoring.
 
 On the unmodified official public-set evaluator: **Hit Rate@10 = 0.995,
 MRR = 0.644, MTTC = 2.215, TechnicalScore = 0.867** — versus the official weak
-BM25 baseline at 0.139 (≈6× better). Recall is 100% saturated (target in pool for
+BM25 starter at 0.10671 (≈8.1× better by TechnicalScore). Recall is 100% saturated (target in pool for
 200/200 sessions), so every gain came from smarter *ranking*: a banded
 popularity tiebreaker that lifts the tail without sacrificing precision.
 
@@ -125,6 +125,7 @@ HTML/CSS/JS.
 ## Links
 
 - **Code (public GitHub):** https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/feature/aggressive-v2
+- **Live judge-facing Tour:** https://shopping-copilot-techjam.pages.dev/
 - **Demo video (YouTube):** <PASTE YOUTUBE URL AFTER UPLOAD — see demo/VIDEO_SCRIPT.md>
-- **Try it offline:** `python demo/server.py` then open http://127.0.0.1:8000 (chat + live state) and /dashboard (metrics)
+- **Try it offline:** `python demo/server.py --port 8000`, then open http://127.0.0.1:8000 for the Guided Evidence Tour; the optional legacy chat is at `/sandbox`.
 - **Reproduce the score:** `python evaluate_official.py --official-root <official-kit>` → TechnicalScore ≈ 0.867 on the public set

@@ -99,7 +99,7 @@ both query expansion and rerank scoring — never as a hard filter, respecting t
 
 | Configuration | Hit Rate@10 | MRR | MTTC | TechnicalScore |
 | --- | ---: | ---: | ---: | ---: |
-| Official weak BM25 baseline | 0.125 | 0.068 | 9.810 | 0.139 |
+| Official weak BM25 baseline | 0.125 | 0.068034 | 9.810 | 0.10671 |
 | Rules V1.2 (constraint-only) | 0.970 | 0.613 | 3.155 | 0.826 |
 | Rules + cross-encoder (all) | 0.970 | 0.607 | 3.095 | 0.825 |
 | **Rules V1.3 (submitted, popularity tiebreak)** | **0.995** | **0.644** | **2.215** | **0.867** |
@@ -180,7 +180,7 @@ retrieval and evaluation runs are reproducible from `reports/`.
 Everything in this section lives in a **demo-only layer** (`demo/server.py` and
 its static frontend) that the official evaluator never reaches. We re-ran the
 official evaluator after every change described here and it reproduced
-**TS = 0.8665** bit-for-bit; all 64 current unit/integration/evidence tests pass. The scored path remains
+**TS = 0.8665** bit-for-bit; all 74 current unit/integration/evidence/documentation tests pass. The scored path remains
 pure-rules, offline, stdlib-only.
 
 ### 6.1 Sponsored-ads engine (eCPM auction)

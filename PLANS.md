@@ -14,5 +14,9 @@
 - [x] V1.1 修复英文词边界、无损检索证据、`details` 重排和 `other` 追问循环
 - [x] 用未修改官方公开评测器复测 Rules V1.1（Hit Rate@10 0.950）
 - [x] V1.2 保留官方完整细品类作为检索证据（Hit Rate@10 0.970）
+- [x] V1.3 分带人气 tiebreaker（Hit Rate@10 0.995 / TechnicalScore 0.866507）
+- [x] Judge-facing Guided Evidence Tour 与 200 个冻结 public traces
+- [x] 74 项单元、集成、evidence 与文档一致性测试
+- [x] Cloudflare Pages 与 GitHub Pages 公网部署
 - [ ] 提示词训练或自动迭代（按用户要求暂不执行）
 - [ ] 冻结后运行一次 held-out test

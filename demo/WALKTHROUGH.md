@@ -1,60 +1,83 @@
-# Demo Walkthrough — TikTok Shop · Shopping Copilot
+# Guided Evidence Tour Walkthrough
 
-A 3-minute self-guided tour of the live demo. Open **http://127.0.0.1:8000**.
+[English README](../README.md) | [中文 README](../README.zh-CN.md)
 
-> The demo layer (conversation polish, LLM sales-associate narration, sponsored-ad
-> engine, dashboards) is entirely separate from the **scored path**. The official
-> evaluator only ever calls the deterministic rules engine, which reproduces
-> **TechnicalScore = 0.8665** bit-for-bit. Nothing here changes that number.
+- Public Tour: https://shopping-copilot-techjam.pages.dev/
+- Local Tour: `python demo/server.py --port 8000`, then open `http://127.0.0.1:8000`
 
----
+The default page is a deterministic evidence walkthrough. It does not require
+typing and does not call the optional Qwen model.
 
-## Station 1 — Shopper view (the core)
+## Step 0 — Results
 
-1. Click **New session** (top right).
-2. Type (or click a "Try:" chip). Suggested sequence:
+Confirm the Hero shows:
 
-   | Type this | What to watch |
-   |---|---|
-   | `I need breathable running shoes under 80 dollars` | Right panel extracts **category=running shoes, budget=80, feature=breathable** in real time. Left shows an **AI ASSOCIATE** reply (Qwen3-generated; a "thinking…" animation runs ~2–3s). The #1 rec is a **PROMOTED** slot with **relevance%** and **eCPM$**. |
-   | `Saw a creator wearing an oversized hoodie, want something similar` | TikTok content-to-commerce (种草) → finds similar hoodies. |
-   | `Actually forget cotton — I want something waterproof` | Detects **override** and rewrites the preference (doesn't just append). |
-   | `Any discount codes?` | Boundary safety: refuses to invent a coupon. |
-   | `I don't know, just recommend me something` | Fallback: recommends immediately instead of stalling. |
+- TechnicalScore 0.8665
+- HitRate@10 0.995
+- MRR 0.644
+- MTTC 2.215
+- `Official public evaluator · 200 sessions`
+- `Private 800-session performance remains unknown`
 
-3. Watch three things: the **AI-associate reply** (names products + reasons), the
-   **"How the Copilot understands you"** panel (live intent/constraints), and the
-   **Promoted** slot badge (relevance + eCPM).
+## Step 1 — Data Contract
 
-## Station 2 — Ad Console  (top-right "Ad Console")
+Confirm the page shows the frozen 50,000-product catalog, 200 public sessions,
+800 private sessions, a ten-turn limit, `parent_asin`, read-only status, scenario
+mix, and real text-only catalog metadata.
 
-Play the advertiser:
+## Step 2 — Scenario Replay
 
-1. In **New Campaign**: Advertiser `MyBrand`, Target product `hoodie`,
-   Keywords `hoodie, sweatshirt`, Bid `3.00`, Daily Budget `20`.
-2. Click **Launch campaign** — it appears in **Live Campaigns**.
-3. Go back to **Shopper view**, New session, type `looking for a hoodie` —
-   **your campaign wins the auction and appears as the Promoted slot.**
-4. Return to Ad Console: your campaign's **Impr.** and **Spend** have ticked up
-   (auto-refresh every 3s).
+Use the four scenario tabs:
 
-**Prove relevance beats raw bid:** launch two campaigns both keyed to `jacket` —
-one Target `jacket` Bid 1.0, one Target `watch` Bid 5.0. Search `jacket` in the
-shopper view: the **lower-bid but relevant** campaign wins, because
-**eCPM = bid × relevance**.
+| Tab | Canonical evidence | What to inspect |
+| --- | --- | --- |
+| Buying | `public_0030` | `material=polyester`, target Rank #1 |
+| Browsing | `public_0063` | clarification narrows a vague request |
+| Intent Override | `public_0004` | one removed slot, one added slot, target Rank #1 |
+| Boundary | `public_0050` | no-preference handling without state loss |
 
-## Station 3 — Dashboard  (top-right "Dashboard")
+Use Prev, Next, Auto, and Restart to move through a trace. Target labels are
+visible because these are labeled public sessions.
 
-KPI cards (total spend, remaining budget, avg relevance) and a campaigns-by-spend
-table with live progress bars, refreshing every 3s — the numbers move as you shop.
+## Step 3 — Mechanism
 
----
+Expand the four mechanism cards:
 
-## What's real vs simulated (be transparent with judges)
+1. Dual-track routing
+2. Erase-and-rewrite state machine
+3. Candidate-driven clarification
+4. Banded popularity tiebreaker
 
-- **Real:** the deterministic retrieval/ranking (the scored engine), the BM25
-  relevance used in the ad auction (same FTS5 engine), the Qwen3 intent parsing
-  and sales-associate narration (local, loopback).
-- **Simulated for the demo:** the sponsored-inventory catalog and advertiser
-  budgets/bids (there is no real ad marketplace). Clearly labelled "Promoted".
-- **Never touched:** organic ranking and the official score.
+Read `Experiments We Did Not Ship` for the cross-encoder and prompt-evolution
+negative results.
+
+## Step 4 — Evaluation
+
+Confirm the version table uses the official weak starter source:
+
+| System | HitRate@10 | MRR | MTTC | TechnicalScore |
+| --- | ---: | ---: | ---: | ---: |
+| Official weak BM25 starter | 0.125 | 0.068 | 9.810 | 0.1067 |
+| Rules V1.3 | 0.995 | 0.644 | 2.215 | 0.8665 |
+
+The page must say `Not hidden-set evidence` and show the report hash, Agent
+commit, generation timestamp, and reproduction command.
+
+## Step 5 — Transparent Ads
+
+This step is purple and marked `Demo Only`. Click `Run Auction` and verify:
+
+- Campaign A wins through relevance, not raw bid.
+- Campaign B is below the relevance floor.
+- The before/after organic `parent_asin` lists remain identical.
+- The page does not claim clicks, conversions, CTR, or GMV.
+
+## Step 6 — Closeout
+
+Check the public repository, Technical Report, Reproduction Instructions,
+limitations, team contributions, and private-800 boundary.
+
+## Optional sandbox
+
+`/sandbox` keeps the old free-form chat for local exploration. It is not part of
+the public static deployment, the main video, or official evaluator evidence.

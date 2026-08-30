@@ -64,18 +64,18 @@ If the official repo is checked out as a sibling of this repo
 | Rules V1.1 | 0.950 | 0.628 | 3.495 | 0.814 |
 | Rules V1.2 | 0.970 | 0.613 | 3.155 | 0.826 |
 | **Rules V1.3 (submitted)** | **0.995** | **0.644** | **2.215** | **0.867** |
-| Official weak BM25 baseline | 0.125 | 0.068 | 9.810 | 0.139 |
+| Official weak BM25 baseline | 0.125 | 0.068034 | 9.810 | 0.10671 |
 
 `TechnicalScore = 0.50·HitRate@10 + 0.30·MRR + 0.20·Efficiency`,
 `Efficiency = clip((11 - MTTC)/10, 0, 1)`. Public-set numbers show generic
 error classes are fixed; they do not replace hidden-set validation. Run-to-run
-jitter is ≈±0.005 because the evaluator assigns random session ids.
+results for the submitted rules path are deterministic across repeated public-set runs.
 
 ## Verify
 
 ```bash
 python -m py_compile shopping_agent.py chat.py prompt_lab.py official_agent.py
-python -m unittest discover -s tests -v   # 64 current tests
+python -m unittest discover -s tests -v   # 74 current tests
 ```
 
 ## What is inside

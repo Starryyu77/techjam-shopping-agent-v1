@@ -1,6 +1,6 @@
 # Judge-Facing Demo Website Design — Shopping Copilot
 
-状态：Implementation-ready candidate，等待 owner 对 3 个 gate 做最终确认
+状态：Implemented and deployed，P0 已验收
 日期：2026-08-30
 目标读者：实现 Agent、前端开发者、Demo 视频录制者、项目 owner
 
@@ -572,12 +572,10 @@ Browsing 与 Boundary 保留在网站中供评委点击，但不强行塞进 3 �
 
 ---
 
-## 13. Owner gates
+## 13. Resolved owner gates
 
-实现前只需 owner 最终确认三件事：
+1. **主视频时长：**3 分钟。
+2. **广告章节：**网站保留 Demo-only 章节；视频可控制在约 15 秒。
+3. **Canonical cases：**`public_0030`（Buying）、`public_0004`（Intent Override）、`public_0063`（Browsing）、`public_0050`（Boundary），由 `demo/canonical_cases.json` 固化。
 
-1. **主视频时长**：默认 3 分钟。
-2. **广告是否进入主视频**：默认保留 20 秒，作为 Impact 扩展；若时间紧则网站保留、视频删除。
-3. **canonical public cases**：实现 Agent 先提名 2–4 个真实 sample_id 和 trace，owner 人工确认后冻结；不得自动以“最好看”为由选择可能误导的案例。
-
-这三个 gate 之外，实现 Agent 可按 P0 → P3 自主执行。
+公网 Tour：https://shopping-copilot-techjam.pages.dev/
