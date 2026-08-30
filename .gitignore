@@ -3,3 +3,4 @@ __pycache__/
 # Bundled cross-encoder model is large; ship separately or via Git LFS for submission.
 models/
 reports/*.log
+demo/_smoke_*.py

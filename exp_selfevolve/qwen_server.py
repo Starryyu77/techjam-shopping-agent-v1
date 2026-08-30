@@ -5,7 +5,7 @@ security check). Supports response_schema via guided prompt (Qwen follows JSON s
 import json, sys, os, argparse, threading
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 
-MODEL_DIR = os.path.expanduser("~/shopagent/models/Qwen2.5-7B-Instruct")
+MODEL_DIR = os.path.expanduser(os.environ.get("QWEN_MODEL_DIR", "~/shopagent/models/Qwen3-8B"))
 
 _tok = None; _model = None; _lock = threading.Lock()
 
@@ -18,13 +18,17 @@ def _load():
     _model = AutoModelForCausalLM.from_pretrained(MODEL_DIR, torch_dtype=torch.float16, device_map="cuda")
     print("model loaded", flush=True)
 
-def _generate(messages, schema=None, max_new_tokens=2048):
+def _generate(messages, schema=None, max_new_tokens=2048, enable_thinking=False):
     import torch
     # If a JSON schema is requested, append an instruction (Qwen respects it well).
     if schema is not None:
         messages = list(messages) + [{"role":"system","content":
             "Return ONLY one JSON object matching this schema, no prose:\n"+json.dumps(schema)}]
-    text = _tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    try:
+        text = _tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True,
+                                        enable_thinking=enable_thinking)
+    except TypeError:
+        text = _tok.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     inputs = _tok([text], return_tensors="pt").to(_model.device)
     with _lock:
         with torch.no_grad():
@@ -33,6 +37,8 @@ def _generate(messages, schema=None, max_new_tokens=2048):
                                   pad_token_id=_tok.eos_token_id)
     gen = out[0][inputs.input_ids.shape[1]:]
     resp = _tok.decode(gen, skip_special_tokens=True)
+    if "</think>" in resp:
+        resp = resp.split("</think>", 1)[1].strip()
     ptoks = int(inputs.input_ids.shape[1]); ctoks = int(gen.shape[0])
     return resp, ptoks, ctoks
 
@@ -51,7 +57,7 @@ class H(BaseHTTPRequestHandler):
         schema=schema or body.get("response_schema")
         mnt=int(body.get("max_tokens") or 512)
         try:
-            resp,pt,ct=_generate(messages,schema,max_new_tokens=mnt)
+            resp,pt,ct=_generate(messages,schema,max_new_tokens=mnt,enable_thinking=bool(body.get("enable_thinking",False)))
         except Exception as e:
             self.send_response(500); self.send_header("Content-Type","application/json"); self.end_headers()
             self.wfile.write(json.dumps({"error":str(e)}).encode()); return

@@ -51,6 +51,7 @@ class DemoState:
         intent_backend: str = "rules",
         model_endpoint: str | None = None,
         model_name: str = "qwen3-8b",
+        narrate: bool = False,
     ) -> None:
         # Default: rules backend keeps the demo fully offline and deterministic.
         # Optional: intent_backend="hybrid" + model_endpoint enables the local LLM
@@ -64,6 +65,12 @@ class DemoState:
         )
         self.intent_backend = intent_backend
         self.model_endpoint = model_endpoint
+        # LLM sales-associate narration (DEMO ONLY). When on, the local LLM turns
+        # the agent's template reply + real recommendations into a natural,
+        # conversational sales pitch and works in the sponsored slot. Falls back to
+        # the template if the model is slow/unavailable. Never touches the scored path.
+        self.narrate = bool(narrate and model_endpoint)
+        self._narrate_endpoint = model_endpoint
         # --- Sponsored-ads simulation (DEMO ONLY, never affects scoring) ---
         # Advertisers "buy" placements keyed by target keywords. When a shopper's
         # category/query matches a live campaign, we surface that product as a
@@ -104,55 +111,109 @@ class DemoState:
             return None
         return best
 
+    def _new_campaign(self, advertiser, keywords, bid, best, budget=25.0):
+        return {
+            "id": uuid.uuid4().hex[:8], "advertiser": advertiser,
+            "keywords": [k.strip().lower() for k in keywords if k.strip()],
+            "bid": float(bid), "active": True,
+            "parent_asin": best[0], "title": best[1], "store": best[2], "price": best[3],
+            "budget": float(budget), "spend": 0.0,
+            "impressions": 0, "clicks": 0,
+            "last_relevance": None, "last_ecpm": None,
+        }
+
     def _seed_demo_campaigns(self) -> None:
-        # Pull a few real catalog products to act as demo "sponsored" inventory.
         seeds = [
-            ("Sneaker", ["running", "shoe", "sneaker", "gym", "athletic", "trainer"], "PaceLab", 1.20),
-            ("Jacket", ["jacket", "coat", "outerwear", "waterproof"], "NorthPeak", 0.95),
-            ("T-Shirt", ["shirt", "tee", "t-shirt", "cotton", "top"], "PureThread", 0.60),
+            ("Sneaker", ["running", "shoe", "sneaker", "gym", "athletic", "trainer"], "PaceLab", 1.20, 30.0),
+            ("Jacket", ["jacket", "coat", "outerwear", "waterproof"], "NorthPeak", 0.95, 25.0),
+            ("T-Shirt", ["shirt", "tee", "t-shirt", "cotton", "top"], "PureThread", 0.60, 20.0),
         ]
-        for term, keywords, advertiser, bid in seeds:
+        for term, keywords, advertiser, bid, budget in seeds:
             best = self._pick_ad_product(term)
             if best:
-                self.ad_campaigns.append({
-                    "id": uuid.uuid4().hex[:8], "advertiser": advertiser,
-                    "keywords": keywords, "bid": bid, "active": True,
-                    "parent_asin": best[0], "title": best[1], "store": best[2], "price": best[3],
-                    "impressions": 0,
-                })
+                self.ad_campaigns.append(self._new_campaign(advertiser, keywords, bid, best, budget))
 
-    def _match_campaign(self, session_id: str, message: str) -> dict | None:
+    def _relevance(self, query_text: str, parent_asin: str) -> float:
+        """Real BM25 relevance of an ad product to the user's query, reusing the
+        SAME full-text engine the scored path uses (no extra model, no latency spike).
+        Returns 0..1. This is the 'relevance' factor of the eCPM auction."""
+        import re as _re
+        terms = [t for t in _re.findall(r"[a-z0-9]+", (query_text or "").lower()) if len(t) > 1][:24]
+        if not terms:
+            return 0.0
+        expr = " OR ".join('"' + t + '"' for t in terms)
+        try:
+            row = self.agent.search.connection.execute(
+                "SELECT bm25(products, 0.0, 6.0, 4.0, 3.0, 2.0, 2.0, 1.0, 0.0, 0.0) AS b "
+                "FROM products WHERE products MATCH ? AND parent_asin = ? LIMIT 1",
+                (expr, parent_asin),
+            ).fetchone()
+        except Exception:
+            return 0.0
+        if not row or row[0] is None:
+            return 0.0
+        # bm25() in SQLite is NEGATIVE (more negative = better). Map to 0..1.
+        b = float(row[0])
+        import math as _m
+        return 1.0 / (1.0 + _m.exp(b / 4.0))
+
+    def _auction(self, session_id: str, message: str, top_n: int = 1) -> list[dict]:
+        """eCPM auction: eCPM = bid * relevance. Keyword gate + budget + relevance floor;
+        rank by eCPM, take top_n. Returns winning campaigns (annotated), highest first."""
         state = self.agent.sessions.get(session_id)
-        hay = " ".join(filter(None, [
-            (message or "").lower(),
-            (state.category or "").lower() if state else "",
+        query_text = " ".join(filter(None, [
+            (message or ""),
+            (state.category or "") if state else "",
+            " ".join(v for vs in (state.hard_constraints.values() if state else []) for v in vs),
+            " ".join(v for vs in (state.soft_preferences.values() if state else []) for v in vs),
         ]))
-        best, best_bid = None, -1.0
+        scored = []
         for c in self.ad_campaigns:
-            if not c.get("active"):
+            if not c.get("active") or c.get("spend", 0.0) >= c.get("budget", 0.0):
                 continue
-            if any(k in hay for k in c["keywords"]) and c["bid"] > best_bid:
-                best, best_bid = c, c["bid"]
-        return best
+            hay = query_text.lower()
+            if not any(k in hay for k in c["keywords"]):
+                continue
+            rel = self._relevance(query_text, c["parent_asin"])
+            if rel < 0.15:  # relevance floor: don't show barely-related ads
+                continue
+            ecpm = c["bid"] * rel
+            scored.append((ecpm, rel, c))
+        scored.sort(key=lambda x: x[0], reverse=True)
+        winners = []
+        for ecpm, rel, c in scored[:top_n]:
+            c["last_relevance"] = round(rel, 3)
+            c["last_ecpm"] = round(ecpm, 4)
+            winners.append(c)
+        return winners
 
-    def _inject_sponsored(self, result: dict, campaign: dict | None) -> dict:
-        if not campaign:
+    def _inject_sponsored(self, session_id: str, message: str, result: dict, top_n: int = 1) -> dict:
+        winners = self._auction(session_id, message, top_n=top_n)
+        if not winners:
             return result
-        recs = result.get("recommendations") or []
-        # Don't duplicate if it's already organically present.
-        if any((r.get("parent_asin") == campaign["parent_asin"]) for r in recs if isinstance(r, dict)):
+        recs = list(result.get("recommendations") or [])
+        organic_asins = {r.get("parent_asin") for r in recs if isinstance(r, dict)}
+        sponsored_slots = []
+        for c in winners:
+            if c["parent_asin"] in organic_asins:
+                continue
+            # charge second-price-ish: charge the bid (simple GSP-lite), cap by budget
+            charge = min(c["bid"], c["budget"] - c["spend"])
+            c["spend"] = round(c.get("spend", 0.0) + charge, 4)
+            c["impressions"] = c.get("impressions", 0) + 1
+            slot = {
+                "parent_asin": c["parent_asin"], "title": c["title"],
+                "store": c["store"], "price": c["price"],
+                "sponsored": True, "advertiser": c["advertiser"],
+                "relevance": c["last_relevance"], "ecpm": c["last_ecpm"],
+            }
+            sponsored_slots.append(slot)
+            organic_asins.add(c["parent_asin"])
+        if not sponsored_slots:
             return result
-        campaign["impressions"] = campaign.get("impressions", 0) + 1
-        sponsored = {
-            "parent_asin": campaign["parent_asin"],
-            "title": campaign["title"],
-            "store": campaign["store"],
-            "price": campaign["price"],
-            "sponsored": True,
-            "advertiser": campaign["advertiser"],
-        }
-        result["recommendations"] = [sponsored] + list(recs)
-        result["sponsored"] = sponsored
+        result["recommendations"] = sponsored_slots + recs
+        result["sponsored"] = sponsored_slots[0]
+        result["sponsored_slots"] = sponsored_slots
         return result
 
     def title_of(self, asin: str) -> str:
@@ -191,9 +252,10 @@ class DemoState:
     def _is_en(self, msg: str) -> bool:
         return not re.search(r"[\u4e00-\u9fff]", msg)
 
-    def converse(self, session_id: str, message: str, top_k: int = 10) -> dict:
+    def converse(self, session_id: str, message: str, top_k: int = 10, ad_slots: int = 1) -> dict:
         result = self._converse_inner(session_id, message, top_k)
-        return self._inject_sponsored(result, self._match_campaign(session_id, message))
+        result = self._inject_sponsored(session_id, message, result, top_n=ad_slots)
+        return self._narrate(message, result)
 
     def _converse_inner(self, session_id: str, message: str, top_k: int = 10) -> dict:
         msg = (message or "").strip()
@@ -279,6 +341,54 @@ class DemoState:
             "intent": {"domain_intent": "CHAT", "dialogue_act": act, "confidence": 1.0},
         }
 
+    def _narrate(self, user_message: str, result: dict) -> dict:
+        """Rewrite the template reply as a natural sales-associate pitch via the LLM.
+        DEMO ONLY. Falls back to the original template on any failure/slowness."""
+        if not self.narrate:
+            return result
+        import urllib.request
+        recs = (result.get("recommendations") or [])[:3]
+        if not recs:
+            return result
+        en = self._is_en(user_message)
+        lines = []
+        for i, r in enumerate(recs, 1):
+            tag = " [Sponsored]" if r.get("sponsored") else ""
+            price = (" $" + str(r["price"])) if r.get("price") is not None else ""
+            lines.append(str(i) + ". " + (r.get("title") or "")[:70] + price + tag)
+        catalog_view = "\n".join(lines)
+        sys_prompt = (
+            "You are a warm, concise in-store shopping associate. Given the user's "
+            "message and a ranked shortlist the search engine already returned, write "
+            "a SHORT reply (2-3 sentences) that: acknowledges what they want, highlights "
+            "1-2 picks by name with a concrete reason, and if a [Sponsored] item is "
+            "present, mention it naturally as a suggestion (never fabricate facts, "
+            "prices, or discounts). Do not invent products beyond the shortlist. "
+            + ("Reply in English." if en else "\u7528\u4e2d\u6587\u56de\u590d\u3002")
+        )
+        user_content = ("User said: " + user_message + "\nShortlist:\n" + catalog_view
+                        + "\nTemplate hint (context only): " + str(result.get("message", "")))
+        payload = {
+            "messages": [
+                {"role": "system", "content": sys_prompt},
+                {"role": "user", "content": user_content},
+            ],
+            "max_tokens": 220,
+            "enable_thinking": False,
+        }
+        try:
+            req = urllib.request.Request(
+                self._narrate_endpoint, data=json.dumps(payload).encode(),
+                headers={"Content-Type": "application/json"})
+            data = json.load(urllib.request.urlopen(req, timeout=25))
+            text = (data.get("choices") or [{}])[0].get("message", {}).get("content", "").strip()
+            if text:
+                result["message"] = text
+                result["narrated"] = True
+        except Exception:
+            pass  # keep the template reply
+        return result
+
 
 def make_handler(demo: DemoState):
     class Handler(BaseHTTPRequestHandler):
@@ -352,6 +462,8 @@ def make_handler(demo: DemoState):
                             "reasons": item.get("reasons", [])[:3],
                             "sponsored": bool(item.get("sponsored")),
                             "advertiser": item.get("advertiser"),
+                            "relevance": item.get("relevance"),
+                            "ecpm": item.get("ecpm"),
                         }
                     )
                 state = demo.snapshot(session_id)
@@ -370,6 +482,8 @@ def make_handler(demo: DemoState):
                             "confidence": intent.get("confidence"),
                         },
                         "sponsored": result.get("sponsored"),
+                        "sponsored_slots": result.get("sponsored_slots"),
+                        "narrated": bool(result.get("narrated")),
                     }
                 )
             if self.path == "/api/ads":
@@ -382,16 +496,13 @@ def make_handler(demo: DemoState):
                                   "Try a term that appears in product titles, e.g. jacket, sneaker, hoodie, watch, bag."},
                         400,
                     )
-                campaign = {
-                    "id": uuid.uuid4().hex[:8],
-                    "advertiser": str(payload.get("advertiser", "DemoBrand"))[:40],
-                    "keywords": [k.strip().lower() for k in
-                                 str(payload.get("keywords", title_like)).split(",") if k.strip()],
-                    "bid": float(payload.get("bid", 0.5)),
-                    "active": True,
-                    "parent_asin": row[0], "title": row[1], "store": row[2], "price": row[3],
-                    "impressions": 0,
-                }
+                campaign = demo._new_campaign(
+                    str(payload.get("advertiser", "DemoBrand"))[:40],
+                    str(payload.get("keywords", title_like)).split(","),
+                    float(payload.get("bid", 0.5)),
+                    row,
+                    budget=float(payload.get("budget", 25.0)),
+                )
                 demo.ad_campaigns.append(campaign)
                 return self._send_json({"campaign": campaign})
             if self.path == "/api/ads/toggle":
@@ -417,6 +528,9 @@ def main() -> None:
     parser.add_argument("--model-endpoint", default=os.environ.get("DEMO_MODEL_ENDPOINT"),
                         help="localhost OpenAI-compatible endpoint, e.g. http://127.0.0.1:8100/v1/chat/completions")
     parser.add_argument("--model-name", default=os.environ.get("DEMO_MODEL_NAME", "qwen3-8b"))
+    parser.add_argument("--narrate", action="store_true",
+                        default=os.environ.get("DEMO_NARRATE", "").lower() in ("1", "true", "yes"),
+                        help="LLM sales-associate narration of replies (demo only; needs --model-endpoint)")
     args = parser.parse_args()
     catalog = _resolve_catalog(args.catalog)
     if not catalog.is_file():
@@ -427,9 +541,11 @@ def main() -> None:
         intent_backend=args.intent_backend,
         model_endpoint=args.model_endpoint,
         model_name=args.model_name,
+        narrate=args.narrate,
     )
     print(f"Intent backend: {args.intent_backend}"
-          + (f" (LLM @ {args.model_endpoint})" if args.model_endpoint else " (offline rules)"),
+          + (f" (LLM @ {args.model_endpoint})" if args.model_endpoint else " (offline rules)")
+          + (" · LLM narration ON" if (args.narrate and args.model_endpoint) else ""),
           flush=True)
     # Single-threaded: the in-memory SQLite connection is thread-affine, and a
     # demo needs no concurrency. Requests are serialized, which is fine here.
