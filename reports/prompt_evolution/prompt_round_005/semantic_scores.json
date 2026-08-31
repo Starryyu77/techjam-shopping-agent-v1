@@ -10,6 +10,9 @@
   "dev_candidate": {
     "semantic_quality": null,
     "semantic_safety": null,
-    "judge_usage": {}
+    "judge_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0
+    }
   }
 }

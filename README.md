@@ -149,7 +149,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **96 tests pass** when the optional catalog fixture is present.
+Current expected result: **100 tests pass** when the optional catalog fixture is present.
 
 ## Optional Scheme B prompt evolution
 
@@ -159,18 +159,21 @@ experiment and must not be used for acceptance or submission evidence.
 The repository bundles the synthetic Gold-candidate dev and validation splits
 under `prompt_data/`; held-out labels are deliberately excluded.
 
-With one local endpoint, the target parser and optimizer share the same model;
-the deterministic Gold metrics remain the acceptance gate:
+The recommended workflow has Codex author a candidate from scrubbed dev bad
+cases while Qwen acts only as the target. The candidate is a complete system
+prompt file:
 
 ```bash
 python prompt_lab.py optimize \
   --backend model \
-  --endpoint http://127.0.0.1:8080/v1 \
-  --model qwen3-8b \
-  --rounds 3
+  --target-endpoint http://127.0.0.1:8080/v1 \
+  --target-model qwen3-8b \
+  --candidate-prompt prompts/candidates/codex_round_001.md \
+  --rounds 1
 ```
 
-The three roles can instead use separate local endpoints:
+A fully automatic experiment may use a model optimizer, but its endpoint must
+be supplied explicitly and remain separate:
 
 ```bash
 python prompt_lab.py optimize \
@@ -184,15 +187,19 @@ python prompt_lab.py optimize \
   --rounds 3
 ```
 
-The optimizer sees only scrubbed dev bad cases. Validation contributes
-aggregate accept/reject metrics but is never fed back for rewriting. Every
-round keeps prompts, diffs, metrics, confusions, semantic scores, bad cases,
-and the decision under `reports/prompt_evolution/`. A candidate is rejected if
-any critical metric regresses. A validation rejection stops immediately so its
-signal cannot steer another rewrite; two consecutive dev/static rejections also
-stop the loop.
-Prompt text is normalized with `.strip()` before evaluation. If target and
-judge use the same endpoint and model, the round is marked `self_judge: true`.
+`--endpoint` falls back only to the target and can no longer create an optimizer
+implicitly. The optimizer must use a different normalized endpoint from target
+and judge; changing only the model alias cannot bypass this boundary.
+A candidate must improve dev score without any protected-metric regression
+before validation is read once. Validation exposes only opaque accept/reject,
+then terminates the run on either result; raw messages, bad cases, confusions,
+per-metric deltas, and judge reasons are not persisted. Dev evidence, prompt
+diffs, and decisions remain under `reports/prompt_evolution/`.
+
+The first clean-room Codex candidate improved dev composite from **0.6137 to
+0.7191** and passed the single opaque validation gate, promoting the current
+pointer to `system_prompt_v002.md`. This is an intent-parser gain on the
+self-labelled Gold-candidate set, not a claim of a changed official retrieval score.
 
 The held-out test has **not** been run. Its labels are not bundled. Supply the
 full external dataset only after the prompt and evaluation code are frozen;
@@ -295,7 +302,7 @@ flowchart LR
 | [Development plan](PLANS.md) | Completed milestones and intentionally deferred work |
 | [Prompt iteration loop](docs/loop.md) | Leakage-safe prompt acceptance process |
 | [Engineering lessons](docs/loop-lessons.md) | Failure patterns and fixes |
-| [Intent prompt v001](prompts/system_prompt_v001.md) | Optional local-model parser contract |
+| [Current intent prompt v002](prompts/system_prompt_v002.md) | Local-model parser contract accepted by dev and one opaque validation run |
 
 ## Deployment and links
 

@@ -16,7 +16,7 @@
 - [x] V1.2 保留官方完整细品类作为检索证据（Hit Rate@10 0.970）
 - [x] V1.3 分带人气 tiebreaker（Hit Rate@10 0.995 / TechnicalScore 0.866507）
 - [x] Judge-facing Guided Evidence Tour 与 200 个冻结 public traces
-- [x] 96 项单元、集成、evidence 与文档一致性测试（含可选目录 fixture）
+- [x] 100 项单元、集成、evidence 与文档一致性测试（含可选目录 fixture）
 - [x] Cloudflare Pages 与 GitHub Pages 公网部署
-- [x] 防泄漏提示词自动迭代（dev 驱动、validation 严格门槛、三角色端点与逐轮证据）
+- [x] Codex 编写候选、Qwen 只作 target 的防泄漏提示词迭代；v002 已通过 dev 与一次性不透明 validation
 - [ ] 冻结后运行一次 held-out test（尚未运行）

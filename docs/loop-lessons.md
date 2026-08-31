@@ -1,5 +1,6 @@
 # 已知经验
 
+- target 与 optimizer 曾因共用 `--endpoint` 被意外绑定为同一个 Qwen，导致 Qwen 自优化结果被误述为 Codex 优化。现在 Codex 候选必须走 `--candidate-prompt`，自动 optimizer 必须显式配置；dev 明确提升前禁止读取 validation，validation 后无论结果如何立即停止。
 - 当前运行环境不允许测试往系统临时目录写文件，因此最小商品目录改成只读 fixture；业务逻辑没有依赖临时文件。
 - 规则基线会把 `sterling silver` 同时误识别成材质和颜色，且对中英混合的拒绝、停止句覆盖不足。这正是方案 B 需要解决的通用 bad case，不应继续堆单句规则。
 - 开发集 state exact 为 0.422，说明单轮意图看似不错仍会在五轮中累积错误；提示词比较必须同时看连续状态。

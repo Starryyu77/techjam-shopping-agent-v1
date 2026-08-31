@@ -1,0 +1,42 @@
+{
+  "round": 1,
+  "accepted": true,
+  "reasons": [
+    "validation accepted"
+  ],
+  "roles": {
+    "target": {
+      "endpoint": "http://127.0.0.1:8080/v1",
+      "model": "qwen3-8b",
+      "timeout": 120.0
+    },
+    "optimizer": {
+      "kind": "codex-authored",
+      "source": "codex_round_001.md"
+    },
+    "judge": null,
+    "self_optimizer": false,
+    "optimizer_is_judge": false,
+    "self_judge": false
+  },
+  "validation_status": "accepted",
+  "dev_gate": {
+    "accepted": true,
+    "reasons": [
+      "score improved with no protected-metric regression"
+    ],
+    "score_metric": "composite",
+    "before_score": 0.6137373737373737,
+    "candidate_score": 0.7190821256038646,
+    "delta": 0.10534475186649095
+  },
+  "validation_gate": {
+    "accepted": true
+  },
+  "candidate_sha256": "30bdd61bcbb2",
+  "optimizer_usage": {
+    "prompt_tokens": 0,
+    "completion_tokens": 0
+  },
+  "saved_as": "system_prompt_v002.md"
+}

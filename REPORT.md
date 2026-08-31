@@ -82,16 +82,12 @@ both query expansion and rerank scoring — never as a hard filter, respecting t
   the FTS5 query and is well under a second on CPU; the 50k index builds in
   memory at startup.
 - **Optional demo/dev layers (OFF for scoring, disclosed for transparency):**
-  - Localhost Qwen3-8B (fp16, Hugging Face Transformers) served via a stdlib
-    HTTP server on loopback only (127.0.0.1:8100). ~16 GB VRAM on an NVIDIA A10
-    (24 GB). Supports Qwen3's native `enable_thinking` toggle: intent parsing
-    runs with thinking OFF for speed (~1.7 s/turn); the optional narration layer
-    (§8.2) can enable thinking for higher quality (~2 s/turn). `<think>` blocks
-    are stripped before the response reaches the demo UI. No fine-tuning of any
-    kind — zero SFT/LoRA/RLHF; all behavior comes from prompt engineering and
-    the self-evolution methodology described in §8.3. Approximate cost: $0
-    (local). **The scored/submitted path never loads, calls, or depends on this
-    model.**
+  - Localhost Qwen3-8B Q4_K_M (4.68 GiB GGUF) served by llama.cpp's
+    OpenAI-compatible endpoint on loopback only (`127.0.0.1:8080`). Requests set
+    temperature to 0 and disable thinking. No fine-tuning of any kind — zero
+    SFT/LoRA/RLHF; behavior comes from prompt engineering and the Codex-guided
+    methodology in §6.3. Approximate API cost: $0 (local). **The scored/submitted
+    path never loads, calls, or depends on this model.**
   - A bundled MiniLM cross-encoder reranker (~88 MB) for semantic reranking
     experiments (MPS/CUDA/CPU). Approximate cost: $0 (local).
 
@@ -169,18 +165,19 @@ task, carefully engineered lightweight rules outperform a heavier semantic model
 ## 5. Evaluation methodology (leakage-safe)
 
 `prompt_lab.py` splits self-labeled gold candidates into dev / validation /
-held-out test. Prompt optimization sees only dev bad cases; validation only
-accepts or rejects a new prompt (composite must improve and safety metrics must
-not regress); the held-out test is read once, only after a final freeze. We never
-place target `parent_asin`s, validation text, or test labels into prompts. All
-retrieval and evaluation runs are reproducible from `reports/`.
+held-out test. Prompt optimization sees only dev bad cases. A candidate must
+improve dev without any protected-metric regression before validation is read;
+validation then returns only opaque accept/reject and terminates the run. The
+held-out test is read once, only after a final freeze. We never place target
+`parent_asin`s, validation text, or test labels into prompts. Dev evidence and
+the opaque validation decision are reproducible from `reports/`.
 
 ## 6. Interactive demo: conversational commerce + transparent ad economics
 
 Everything in this section lives in a **demo-only layer** (`demo/server.py` and
 its static frontend) that the official evaluator never reaches. We re-ran the
 official evaluator after every change described here and it reproduced
-**TS = 0.8665** bit-for-bit; all 96 current unit/integration/evidence/documentation tests pass when the optional catalog fixture is present. The scored path remains
+**TS = 0.8665** bit-for-bit; all 100 current unit/integration/evidence/documentation tests pass when the optional catalog fixture is present. The scored path remains
 pure-rules, offline, stdlib-only.
 
 ### 6.1 Sponsored-ads engine (eCPM auction)
@@ -231,33 +228,28 @@ templates in the demo wrapper, never changing the scored agent.
 Controlled via `--narrate` (off by default). No fine-tuning; zero
 SFT/LoRA/RLHF.
 
-### 6.3 Prompt self-evolution framework (an honest finding)
+### 6.3 Codex-guided prompt evolution
 
-We built an automated prompt-optimization loop:
+The supported loop separates responsibilities instead of asking Qwen to grade
+and rewrite itself:
 
-1. Evaluate a system prompt on a self-labeled golden-case set (23 train / 12
-   test, strict split).
-2. Score each case with a dual rule + LLM metric (0.6 · domain-intent accuracy
-   + 0.2 · dialogue-act accuracy + 0.2 · structural validity).
-3. Mine bad cases from the train set; have the LLM rewrite the system prompt
-   with anti-overfit guardrails (reject truncated or over-shortened rewrites
-   that drop below 85% of the original length or lose required structural
-   markers).
-4. Re-evaluate; iterate to convergence.
+1. A clean-room Codex optimizer reads only scrubbed dev metrics and bad cases.
+2. Codex writes one complete candidate prompt; static checks reject copied dev
+   sentences, product IDs, missing contract markers, or length drift beyond 15%.
+3. Qwen3-8B acts only as the target and evaluates v001 versus the candidate on
+   18 dev sessions / 90 annotated turns.
+4. Only a dev improvement with no regression across domain, dialogue act,
+   clarity, slots, rollout state, JSON, no-mutation, and selection unlocks one
+   validation check. That check exposes only accept/reject and always ends the
+   run, preventing validation-guided retries.
 
-**Honest result.** The framework's only measurable gain over the seed prompt
-traced entirely to **trailing-newline sensitivity** of the chat template: the
-seed prompt with a trailing \n scored 86.7 on test; without \n it scored 91.7;
-the rewriter's sole effective change was dropping that trailing newline. We
-confirmed this with a controlled experiment (3× deterministic runs, newline
-toggled in isolation). We therefore **did not ship a rewritten prompt** — the
-seed was already near-optimal — and we keep this as documented evidence of
-LLM-prompt brittleness and disciplined validation.
-
-We frame this positively: the methodology (leakage-safe, dual-scored,
-anti-overfit, cross-checked) is sound and reusable; the finding is that on this
-task the seed prompt sits at the plateau, and we refuse to ship a fragile
-artifact whose only delta is whitespace sensitivity.
+**Measured result.** The first Codex-authored candidate improved dev composite
+from **0.6137 to 0.7191**. Slot F1 rose from **0.2727 to 0.5652**, rollout state
+exact from **0.1000 to 0.2222**, and every protected metric was non-regressing.
+The one-time opaque validation gate accepted it, so the repository promoted
+`system_prompt_v002.md`. The held-out test remains untouched. This is evidence
+for intent-parser improvement on our Gold-candidate set, not a claim that the
+official retrieval score changed.
 
 ### 6.4 TikTok Shop scenario framing
 

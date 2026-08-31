@@ -483,13 +483,12 @@ def resolve_model_role(
     required: bool = False,
 ) -> ModelRole | None:
     endpoint = getattr(args, f"{role}_endpoint", None)
-    if role in {"target", "optimizer"}:
+    if role == "target":
         endpoint = endpoint or getattr(args, "endpoint", None)
     if not endpoint:
         if required:
-            raise SystemExit(
-                f"{role} 必须提供 --{role}-endpoint（或兼容参数 --endpoint）"
-            )
+            fallback = "（或兼容参数 --endpoint）" if role == "target" else ""
+            raise SystemExit(f"{role} 必须提供 --{role}-endpoint{fallback}")
         return None
     model = getattr(args, f"{role}_model", None) or getattr(
         args, "model", "qwen3-8b"
@@ -500,14 +499,23 @@ def resolve_model_role(
     return ModelRole(endpoint=endpoint, model=model, timeout=float(timeout))
 
 
-def _same_model_role(first: ModelRole, second: ModelRole) -> bool:
-    def identity(role: ModelRole) -> tuple[str, int | None, str, str]:
-        url = LocalModelClient(role.endpoint, role.model, role.timeout).url
-        parsed = urllib.parse.urlparse(url)
-        host = "loopback" if parsed.hostname in {"127.0.0.1", "localhost", "::1"} else str(parsed.hostname)
-        return host, parsed.port, parsed.path, role.model.casefold()
+def _endpoint_identity(role: ModelRole) -> tuple[str, int, str]:
+    url = LocalModelClient(role.endpoint, role.model, role.timeout).url
+    parsed = urllib.parse.urlparse(url)
+    host = (
+        "loopback"
+        if parsed.hostname in {"127.0.0.1", "localhost", "::1"}
+        else str(parsed.hostname)
+    )
+    return host, parsed.port or 80, parsed.path
 
-    return identity(first) == identity(second)
+
+def _same_endpoint(first: ModelRole, second: ModelRole) -> bool:
+    return _endpoint_identity(first) == _endpoint_identity(second)
+
+
+def _same_model_role(first: ModelRole, second: ModelRole) -> bool:
+    return _same_endpoint(first, second) and first.model.casefold() == second.model.casefold()
 
 
 def _parser_for_role(
@@ -755,8 +763,6 @@ def write_round_artifacts(
     prompt_before: str,
     prompt_candidate: str,
     dev_report: dict[str, Any],
-    validation_before: dict[str, Any],
-    validation_candidate: dict[str, Any],
     decision: dict[str, Any],
     dev_candidate: dict[str, Any] | None = None,
 ) -> None:
@@ -772,17 +778,16 @@ def write_round_artifacts(
     (round_dir / "prompt_candidate.md").write_text(
         prompt_candidate, encoding="utf-8"
     )
-    (round_dir / "prompt_diff.txt").write_text(
-        "".join(
-            unified_diff(
-                prompt_before.splitlines(keepends=True),
-                prompt_candidate.splitlines(keepends=True),
-                fromfile="prompt_before.md",
-                tofile="prompt_candidate.md",
-            )
-        ),
-        encoding="utf-8",
+    prompt_diff = "".join(
+        unified_diff(
+            prompt_before.splitlines(keepends=True),
+            prompt_candidate.splitlines(keepends=True),
+            fromfile="prompt_before.md",
+            tofile="prompt_candidate.md",
+        )
     )
+    prompt_diff = "\n".join(line.rstrip() for line in prompt_diff.splitlines()).rstrip() + "\n"
+    (round_dir / "prompt_diff.txt").write_text(prompt_diff, encoding="utf-8")
     write_json(
         "dev_metrics.json",
         {
@@ -792,10 +797,7 @@ def write_round_artifacts(
     )
     write_json(
         "validation_metrics.json",
-        {
-            "before": validation_before.get("metrics", {}),
-            "candidate": validation_candidate.get("metrics", {}),
-        },
+        {"status": decision.get("validation_status", "not_run")},
     )
     write_json(
         "badcases.json",
@@ -811,8 +813,6 @@ def write_round_artifacts(
         {
             "dev_before": dev_report.get("confusions", {}),
             "dev_candidate": (dev_candidate or {}).get("confusions", {}),
-            "validation_before": validation_before.get("confusions", {}),
-            "validation_candidate": validation_candidate.get("confusions", {}),
         },
     )
     write_json(
@@ -820,8 +820,6 @@ def write_round_artifacts(
         {
             "dev_before": _semantic_summary(dev_report),
             "dev_candidate": _semantic_summary(dev_candidate or {}),
-            "validation_before": _semantic_summary(validation_before),
-            "validation_candidate": _semantic_summary(validation_candidate),
         },
     )
     write_json("decision.json", decision)
@@ -941,8 +939,26 @@ def _clean_prompt(text: str) -> str:
 
 def optimize_command(args: argparse.Namespace) -> int:
     target_role = resolve_model_role(args, "target", required=True)
-    optimizer_role = resolve_model_role(args, "optimizer", required=True)
+    candidate_path = getattr(args, "candidate_prompt", None)
+    if candidate_path and args.rounds != 1:
+        raise SystemExit("--candidate-prompt 是 Codex 单轮模式，必须使用 --rounds 1")
+    if candidate_path and not candidate_path.is_file():
+        raise SystemExit(f"Codex 候选提示词不存在：{candidate_path}")
+    if candidate_path and (
+        getattr(args, "optimizer_endpoint", None)
+        or getattr(args, "optimizer_model", None)
+    ):
+        raise SystemExit("Codex 候选模式不能同时配置 optimizer 参数")
+    optimizer_role = (
+        None
+        if candidate_path
+        else resolve_model_role(args, "optimizer", required=True)
+    )
     judge_role = resolve_model_role(args, "judge")
+    if optimizer_role and _same_endpoint(optimizer_role, target_role):
+        raise SystemExit("target 与 optimizer 必须使用独立端点")
+    if optimizer_role and judge_role and _same_endpoint(optimizer_role, judge_role):
+        raise SystemExit("judge 与 optimizer 必须使用独立端点")
     judge = (
         SemanticJudge(
             LocalModelClient(
@@ -953,19 +969,21 @@ def optimize_command(args: argparse.Namespace) -> int:
         else None
     )
     dev = load_sessions(args.dataset, "dev")
-    validation = load_sessions(args.dataset, "validation")
-    optimizer = LocalModelClient(
-        optimizer_role.endpoint,
-        optimizer_role.model,
-        optimizer_role.timeout,
+    validation: list[dict[str, Any]] | None = None
+    optimizer = (
+        LocalModelClient(
+            optimizer_role.endpoint,
+            optimizer_role.model,
+            optimizer_role.timeout,
+        )
+        if optimizer_role
+        else None
     )
     current_prompt = load_current_prompt().strip()
     current_dev = evaluate(
         _parser_for_role(args, target_role, current_prompt), dev, judge
     )
-    current_validation = evaluate(
-        _parser_for_role(args, target_role, current_prompt), validation, judge
-    )
+    current_validation: dict[str, Any] = {}
     history: list[dict[str, Any]] = []
     rejected_in_a_row = 0
     seen_candidate_hashes: set[str] = set()
@@ -980,32 +998,50 @@ def optimize_command(args: argparse.Namespace) -> int:
         usage = {"prompt_tokens": 0, "completion_tokens": 0}
         candidate_fingerprint = ""
         repeated_candidate = False
-        validation_rejected = False
+        validation_checked = False
         decision: dict[str, Any] = {
             "round": round_number,
             "accepted": False,
             "reasons": [],
             "roles": {
                 "target": vars(target_role),
-                "optimizer": vars(optimizer_role),
+                "optimizer": (
+                    {
+                        "kind": "codex-authored",
+                        "source": candidate_path.name,
+                    }
+                    if candidate_path
+                    else vars(optimizer_role)
+                ),
                 "judge": vars(judge_role) if judge_role else None,
+                "self_optimizer": bool(
+                    optimizer_role and _same_model_role(optimizer_role, target_role)
+                ),
+                "optimizer_is_judge": bool(
+                    optimizer_role
+                    and judge_role
+                    and _same_model_role(optimizer_role, judge_role)
+                ),
                 "self_judge": bool(
                     judge_role and _same_model_role(judge_role, target_role)
                 ),
             },
+            "validation_status": "not_run",
         }
         try:
-            request = build_optimizer_request(
-                current_prompt,
-                current_dev,
-                max_badcases=args.max_badcases,
-                guidance=args.optimizer_guidance,
-                previous_feedback=retry_context,
-            )
-            candidate_text, usage = optimizer.chat(
-                [{"role": "user", "content": request + "\n/no_think"}],
-                max_tokens=1200,
-            )
+            if candidate_path:
+                candidate_text = candidate_path.read_text(encoding="utf-8")
+            else:
+                request = build_optimizer_request(
+                    current_prompt,
+                    current_dev,
+                    max_badcases=args.max_badcases,
+                    previous_feedback=retry_context,
+                )
+                candidate_text, usage = optimizer.chat(
+                    [{"role": "user", "content": request + "\n/no_think"}],
+                    max_tokens=1200,
+                )
             canonical_candidate = _clean_prompt(candidate_text)
             candidate_fingerprint = hashlib.sha256(
                 canonical_candidate.encode("utf-8")
@@ -1028,10 +1064,17 @@ def optimize_command(args: argparse.Namespace) -> int:
                 current_dev["metrics"],
                 candidate_dev["metrics"],
                 min_improvement=args.min_improvement,
-                require_improvement=False,
             )
             decision["dev_gate"] = dev_gate
             if dev_gate["accepted"]:
+                validation_checked = True
+                decision["validation_status"] = "error"
+                validation = load_sessions(args.dataset, "validation")
+                current_validation = evaluate(
+                    _parser_for_role(args, target_role, current_prompt),
+                    validation,
+                    judge,
+                )
                 candidate_validation = evaluate(
                     _parser_for_role(args, target_role, candidate_prompt),
                     validation,
@@ -1042,13 +1085,24 @@ def optimize_command(args: argparse.Namespace) -> int:
                     candidate_validation["metrics"],
                     min_improvement=args.min_improvement,
                 )
-                decision["validation_gate"] = validation_gate
+                decision["validation_gate"] = {
+                    "accepted": validation_gate["accepted"]
+                }
                 decision["accepted"] = validation_gate["accepted"]
-                decision["reasons"] = validation_gate["reasons"]
+                decision["validation_status"] = (
+                    "accepted" if validation_gate["accepted"] else "rejected"
+                )
+                decision["reasons"] = [
+                    "validation accepted"
+                    if validation_gate["accepted"]
+                    else "validation rejected"
+                ]
             else:
                 decision["reasons"] = dev_gate["reasons"]
         except (ModelUnavailable, ValueError, json.JSONDecodeError) as exc:
-            decision["reasons"] = [str(exc)]
+            decision["reasons"] = (
+                ["validation error"] if validation_checked else [str(exc)]
+            )
 
         decision["candidate_sha256"] = candidate_fingerprint or None
         decision["optimizer_usage"] = usage
@@ -1065,8 +1119,6 @@ def optimize_command(args: argparse.Namespace) -> int:
             + "\n",
             dev_report=current_dev,
             dev_candidate=candidate_dev,
-            validation_before=current_validation,
-            validation_candidate=candidate_validation,
             decision=decision,
         )
 
@@ -1081,8 +1133,7 @@ def optimize_command(args: argparse.Namespace) -> int:
             retry_context = ""
         else:
             rejected_in_a_row += 1
-            if "validation_gate" in decision:
-                validation_rejected = True
+            if validation_checked:
                 retry_context = ""
             else:
                 retry_context = (
@@ -1095,8 +1146,8 @@ def optimize_command(args: argparse.Namespace) -> int:
         if repeated_candidate:
             print("优化器重复了相同候选，停止自动迭代。")
             break
-        if validation_rejected:
-            print("候选未通过 validation；为避免反馈泄漏，停止本次自动迭代。")
+        if validation_checked:
+            print("validation 已完成；为避免反馈泄漏，无论结果如何都停止迭代。")
             break
         if rejected_in_a_row >= args.patience:
             print(f"连续 {args.patience} 轮未通过验收，停止自动迭代。")
@@ -1112,7 +1163,7 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     evaluate_parser = subparsers.add_parser("evaluate")
     evaluate_parser.add_argument("--dataset", type=Path, default=DEFAULT_DATASET)
-    evaluate_parser.add_argument("--split", choices=("dev", "validation", "test"), default="dev")
+    evaluate_parser.add_argument("--split", choices=("dev", "test"), default="dev")
     evaluate_parser.add_argument("--backend", choices=("rules", "model", "hybrid"), default="rules")
     evaluate_parser.add_argument("--endpoint")
     evaluate_parser.add_argument("--model", default="qwen3-8b")
@@ -1137,6 +1188,7 @@ def build_parser() -> argparse.ArgumentParser:
     optimize_parser.add_argument("--optimizer-endpoint")
     optimize_parser.add_argument("--optimizer-model")
     optimize_parser.add_argument("--optimizer-timeout", type=float)
+    optimize_parser.add_argument("--candidate-prompt", type=Path)
     optimize_parser.add_argument("--judge-endpoint")
     optimize_parser.add_argument("--judge-model")
     optimize_parser.add_argument("--judge-timeout", type=float)
@@ -1144,7 +1196,6 @@ def build_parser() -> argparse.ArgumentParser:
     optimize_parser.add_argument("--max-badcases", type=int, default=8)
     optimize_parser.add_argument("--patience", type=int, default=2)
     optimize_parser.add_argument("--min-improvement", type=float, default=0.001)
-    optimize_parser.add_argument("--optimizer-guidance", default="")
     optimize_parser.set_defaults(function=optimize_command)
 
     fingerprint_parser = subparsers.add_parser("fingerprint")

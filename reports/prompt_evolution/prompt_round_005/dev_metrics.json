@@ -1,0 +1,30 @@
+{
+  "before": {
+    "turns": 90,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9,
+    "dialogue_act_accuracy": 0.8222222222222222,
+    "clarity_accuracy": 0.7222222222222222,
+    "slot_precision": 0.2857142857142857,
+    "slot_recall": 0.2608695652173913,
+    "slot_f1": 0.2727272727272727,
+    "rollout_state_exact": 0.1,
+    "no_mutation_preservation": 0.8888888888888888,
+    "selection_accuracy": 0.9166666666666666,
+    "composite": 0.6137373737373737
+  },
+  "candidate": {
+    "turns": 90,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9333333333333333,
+    "dialogue_act_accuracy": 0.8444444444444444,
+    "clarity_accuracy": 0.8333333333333334,
+    "slot_precision": 0.5652173913043478,
+    "slot_recall": 0.5652173913043478,
+    "slot_f1": 0.5652173913043478,
+    "rollout_state_exact": 0.2222222222222222,
+    "no_mutation_preservation": 0.9444444444444444,
+    "selection_accuracy": 1.0,
+    "composite": 0.7190821256038646
+  }
+}

@@ -17,6 +17,7 @@ from prompt_lab import (
     evaluate,
     evaluation_system_sha256,
     load_sessions,
+    optimize_command,
     require_heldout_confirmation,
     resolve_model_role,
     validate_candidate_prompt,
@@ -342,6 +343,140 @@ class PromptLabWorkflowTests(unittest.TestCase):
         self.assertEqual(optimizer.endpoint, "http://127.0.0.1:8082/v1")
         self.assertEqual(optimizer.model, "teacher")
 
+    def test_optimizer_never_falls_back_to_the_target_endpoint(self) -> None:
+        args = build_parser().parse_args(
+            ["optimize", "--endpoint", "http://127.0.0.1:8080/v1"]
+        )
+        self.assertIsNone(resolve_model_role(args, "optimizer"))
+
+    def test_same_endpoint_is_rejected_even_with_a_different_model_alias(self) -> None:
+        args = build_parser().parse_args(
+            [
+                "optimize",
+                "--target-endpoint",
+                "http://127.0.0.1:8080/v1",
+                "--optimizer-endpoint",
+                "http://localhost:8080/v1",
+                "--optimizer-model",
+                "teacher-alias",
+            ]
+        )
+        with self.assertRaisesRegex(SystemExit, "独立端点"):
+            optimize_command(args)
+
+    def test_codex_candidate_dev_rejection_never_reads_validation(self) -> None:
+        args = build_parser().parse_args(
+            [
+                "optimize",
+                "--target-endpoint",
+                "http://127.0.0.1:8080/v1",
+                "--candidate-prompt",
+                "candidate.md",
+            ]
+        )
+        baseline = {
+            "composite": 0.8,
+            "domain_accuracy": 0.9,
+            "dialogue_act_accuracy": 0.9,
+            "clarity_accuracy": 0.9,
+            "slot_f1": 0.8,
+            "rollout_state_exact": 0.8,
+            "json_compliance": 1.0,
+            "no_mutation_preservation": 1.0,
+            "selection_accuracy": 1.0,
+        }
+        current_dev = {"metrics": baseline, "badcases": [], "confusions": {}}
+        candidate_dev = {
+            "metrics": {**baseline, "composite": 0.79},
+            "badcases": [],
+            "confusions": {},
+        }
+        with patch.object(Path, "is_file", return_value=True), patch.object(
+            Path, "read_text", return_value="candidate" * 100
+        ), patch("prompt_lab.load_current_prompt", return_value="current"), patch(
+            "prompt_lab.load_sessions", return_value=[]
+        ) as load, patch(
+            "prompt_lab._parser_for_role", return_value=object()
+        ), patch(
+            "prompt_lab.validate_candidate_prompt", return_value="candidate"
+        ), patch(
+            "prompt_lab.evaluate", side_effect=[current_dev, candidate_dev]
+        ) as run, patch(
+            "prompt_lab._next_round_dir", return_value=Path("round")
+        ), patch(
+            "prompt_lab.write_round_artifacts"
+        ) as artifacts, patch(
+            "prompt_lab.save_report"
+        ), patch(
+            "prompt_lab._write_current_prompt"
+        ) as promote, patch("builtins.print"):
+            self.assertEqual(optimize_command(args), 0)
+        self.assertEqual(load.call_count, 1)
+        self.assertEqual(load.call_args.args[1], "dev")
+        self.assertEqual(run.call_count, 2)
+        self.assertEqual(
+            artifacts.call_args.kwargs["decision"]["validation_status"],
+            "not_run",
+        )
+        promote.assert_not_called()
+
+    def test_codex_candidate_validation_is_opaque_and_terminal(self) -> None:
+        args = build_parser().parse_args(
+            [
+                "optimize",
+                "--target-endpoint",
+                "http://127.0.0.1:8080/v1",
+                "--candidate-prompt",
+                "candidate.md",
+            ]
+        )
+        baseline = {
+            "composite": 0.8,
+            "domain_accuracy": 0.9,
+            "dialogue_act_accuracy": 0.9,
+            "clarity_accuracy": 0.9,
+            "slot_f1": 0.8,
+            "rollout_state_exact": 0.8,
+            "json_compliance": 1.0,
+            "no_mutation_preservation": 1.0,
+            "selection_accuracy": 1.0,
+        }
+        improved = {**baseline, "composite": 0.82, "slot_f1": 0.81}
+        regressed = {**baseline, "composite": 0.82, "slot_f1": 0.79}
+        reports = [
+            {"metrics": baseline, "badcases": [], "confusions": {}},
+            {"metrics": improved, "badcases": [], "confusions": {}},
+            {"metrics": baseline, "badcases": [], "confusions": {}},
+            {"metrics": regressed, "badcases": [], "confusions": {}},
+        ]
+        with patch.object(Path, "is_file", return_value=True), patch.object(
+            Path, "read_text", return_value="candidate" * 100
+        ), patch("prompt_lab.load_current_prompt", return_value="current"), patch(
+            "prompt_lab.load_sessions", side_effect=[[], []]
+        ) as load, patch(
+            "prompt_lab._parser_for_role", return_value=object()
+        ), patch(
+            "prompt_lab.validate_candidate_prompt", return_value="candidate"
+        ), patch(
+            "prompt_lab.evaluate", side_effect=reports
+        ) as run, patch(
+            "prompt_lab._next_round_dir", return_value=Path("round")
+        ), patch(
+            "prompt_lab.write_round_artifacts"
+        ) as artifacts, patch(
+            "prompt_lab.save_report"
+        ), patch(
+            "prompt_lab._write_current_prompt"
+        ) as promote, patch("builtins.print"):
+            self.assertEqual(optimize_command(args), 0)
+        self.assertEqual([call.args[1] for call in load.call_args_list], ["dev", "validation"])
+        self.assertEqual(run.call_count, 4)
+        decision = artifacts.call_args.kwargs["decision"]
+        self.assertEqual(decision["validation_gate"], {"accepted": False})
+        self.assertEqual(decision["validation_status"], "rejected")
+        self.assertEqual(decision["reasons"], ["validation rejected"])
+        promote.assert_not_called()
+
     def test_model_role_identity_normalizes_loopback_endpoint_spelling(self) -> None:
         first = ModelRole("http://localhost:8080/v1", "qwen3-8b", 30)
         second = ModelRole(
@@ -390,9 +525,11 @@ class PromptLabWorkflowTests(unittest.TestCase):
                     "badcases": [],
                     "confusions": {},
                 },
-                validation_before={"metrics": {"composite": 0.8}, "confusions": {}},
-                validation_candidate={"metrics": {"composite": 0.7}, "confusions": {}},
-                decision={"accepted": False, "reasons": ["regression"]},
+                decision={
+                    "accepted": False,
+                    "reasons": ["regression"],
+                    "validation_status": "rejected",
+                },
             )
             expected = {
                 "prompt_before.md",
@@ -407,6 +544,18 @@ class PromptLabWorkflowTests(unittest.TestCase):
             }
             written = {call.args[0].name for call in write_text.call_args_list}
             self.assertEqual(written, expected)
+            payloads = {
+                call.args[0].name: call.args[1]
+                for call in write_text.call_args_list
+            }
+            self.assertEqual(
+                json.loads(payloads["validation_metrics.json"]),
+                {"status": "rejected"},
+            )
+            self.assertNotIn(
+                "validation_",
+                payloads["confusion_matrix.json"],
+            )
 
 
 if __name__ == "__main__":

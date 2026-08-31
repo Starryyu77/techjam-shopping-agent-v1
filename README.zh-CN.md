@@ -136,7 +136,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：安装可选商品目录 fixture 时，**96 项测试全部通过**。
+当前预期结果：安装可选商品目录 fixture 时，**100 项测试全部通过**。
 
 ## 可选的方案 B 提示词自进化
 
@@ -145,18 +145,19 @@ python -m unittest discover -s tests -v
 仓库在 `prompt_data/` 内自带合成 Gold 候选集的 dev 和 validation；
 held-out 标签刻意不随仓库提交。
 
-只有一个本地端点时，target parser 与 optimizer 共用同一模型，确定性的
-Gold 指标仍然负责最终验收：
+推荐流程由 Codex 根据脱敏 dev bad cases 编写候选提示词，Qwen 只作为
+target 执行。候选必须是完整 system prompt 文件：
 
 ```bash
 python prompt_lab.py optimize \
   --backend model \
-  --endpoint http://127.0.0.1:8080/v1 \
-  --model qwen3-8b \
-  --rounds 3
+  --target-endpoint http://127.0.0.1:8080/v1 \
+  --target-model qwen3-8b \
+  --candidate-prompt prompts/candidates/codex_round_001.md \
+  --rounds 1
 ```
 
-也可以为三个角色分别提供本机端点：
+全自动实验也可以配置模型 optimizer，但必须显式提供独立端点：
 
 ```bash
 python prompt_lab.py optimize \
@@ -170,12 +171,16 @@ python prompt_lab.py optimize \
   --rounds 3
 ```
 
-optimizer 只能看到脱敏的 dev bad cases。validation 只提供聚合的接受/拒绝
-指标，不能反馈给改写器。每轮都会在 `reports/prompt_evolution/` 保存提示词、
-diff、指标、混淆矩阵、语义评分、bad cases 和决策。任一关键指标退步都会拒绝
-候选。validation 一旦拒绝就立即停止，避免把这一位信号用于下一轮改写；
-dev/静态门槛连续拒绝两轮也会停止。送入模型前提示词统一用 `.strip()` 规范化。
-target 与 judge 同端点同模型时，本轮会标记为 `self_judge: true`。
+`--endpoint` 只会回退给 target，不会再隐式创建 optimizer。optimizer 必须与
+target/judge 使用不同的规范化端点，即使模型别名不同也不能放行。候选必须先在
+dev 总分提高且所有关键指标不退步，才读取一次
+validation。validation 只留下接受/拒绝，随后无论结果如何立即停止；不会保存
+validation 原文、bad cases、混淆矩阵、逐指标差值或 Judge 理由。dev 证据、提示词
+diff 和决策仍完整保存在 `reports/prompt_evolution/`。
+
+首个 clean-room Codex 候选已让 dev composite 从 **0.6137 提升到 0.7191**，
+并通过一次性不透明 validation，因此当前指针已晋升为 `system_prompt_v002.md`。
+这证明意图解析器在自建 Gold 候选集上改善，不代表官方检索分数已经变化。
 
 held-out test **尚未运行**，其标签也不在仓库中。只有提示词和评测代码都
 冻结后，才传入完整外部数据集；命令会写入一次性冻结清单，并拒绝第二次运行：
@@ -272,7 +277,7 @@ flowchart LR
 | [开发计划](PLANS.md) | 已完成里程碑和明确暂缓事项 |
 | [提示词迭代闭环](docs/loop.md) | 防泄漏的提示词验收流程 |
 | [工程经验](docs/loop-lessons.md) | 失败模式与修复记录 |
-| [意图提示词 v001](prompts/system_prompt_v001.md) | 可选本地模型解析契约 |
+| [当前意图提示词 v002](prompts/system_prompt_v002.md) | 已通过 dev 与一次性不透明 validation 的本地模型解析契约 |
 
 ## 部署与链接
 
