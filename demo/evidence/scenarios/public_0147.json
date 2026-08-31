@@ -247,12 +247,12 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
+            "feature": [
+              "machine washable"
+            ],
             "material": [
               "cotton",
               "spandex"
-            ],
-            "feature": [
-              "machine washable"
             ]
           }
         },

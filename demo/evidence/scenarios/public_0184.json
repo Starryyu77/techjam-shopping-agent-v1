@@ -246,11 +246,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "nylon"
-            ],
             "color": [
               "black"
+            ],
+            "material": [
+              "nylon"
             ]
           }
         },
@@ -362,11 +362,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "nylon"
-            ],
             "color": [
               "black"
+            ],
+            "material": [
+              "nylon"
             ]
           }
         }
@@ -476,11 +476,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "nylon"
-            ],
             "color": [
               "black"
+            ],
+            "material": [
+              "nylon"
             ]
           }
         }

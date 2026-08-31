@@ -49,11 +49,11 @@
         "added": {
           "category": "Athletic Walking",
           "soft_preferences": {
-            "use_case": [
-              "walking"
-            ],
             "feature": [
               "lightweight"
+            ],
+            "use_case": [
+              "walking"
             ]
           }
         },
@@ -165,11 +165,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "use_case": [
-              "walking"
-            ],
             "feature": [
               "lightweight"
+            ],
+            "use_case": [
+              "walking"
             ]
           }
         }
@@ -271,11 +271,11 @@
         "added": {},
         "removed": {
           "soft_preferences": {
-            "use_case": [
-              "walking"
-            ],
             "feature": [
               "lightweight"
+            ],
+            "use_case": [
+              "walking"
             ]
           }
         },
@@ -482,11 +482,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "rubber"
-            ],
             "feature": [
               "comfortable"
+            ],
+            "material": [
+              "rubber"
             ]
           }
         },

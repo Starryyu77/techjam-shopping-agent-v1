@@ -1,9 +1,9 @@
 {
   "evidence_scope": "official_public_200",
-  "generated_at": "2026-08-30T16:17:56.521246+00:00",
+  "generated_at": "2026-08-31T02:44:07.803654+00:00",
   "catalog_sha256": "da979b05a68af864cb0dcf9ee6a81c010c7e66a57978ad286c7a2e005fc69a67",
   "evaluator_git_commit": "34078351e1c3615e5505a2e829600b56a542e462",
-  "agent_git_commit": "c0fa45f894d71ce09c6bf5123088a67bb8d71a0e",
+  "agent_git_commit": "b8bb7c455eec5af15e0d1d1009203cc955a26393",
   "report_sha256": "192783ee88cb4f1db470f4a0e6117ef7d4649d8dff4c1e5abe987e6def1324cc",
   "report_file": "official_public_rules_v1_3.json",
   "metrics": {
@@ -109,7 +109,9 @@
     {
       "sample_id": "public_0004",
       "scenario_type": "intent_override",
-      "role": "primary_video"
+      "role": "primary_video",
+      "label": "Replace one preference",
+      "description": "Remove adjustable, add polyester, target moves to Rank #1."
     },
     {
       "sample_id": "public_0063",
@@ -132,14 +134,23 @@
       "role": "secondary"
     },
     {
-      "sample_id": "public_0072",
+      "sample_id": "public_0080",
       "scenario_type": "intent_override",
-      "role": "secondary"
+      "role": "secondary",
+      "label": "Retain the valid value",
+      "description": "Narrow cotton + polyester to cotton, preserving the valid material and reaching Rank #1."
+    },
+    {
+      "sample_id": "public_0142",
+      "scenario_type": "intent_override",
+      "role": "secondary",
+      "label": "Rewrite multiple slots",
+      "description": "Remove black, comfortable, and lightweight; add stainless steel and hypoallergenic; target reaches Rank #1."
     }
   ],
   "canonical_approval": {
     "approved_at": "2026-08-31",
-    "approval_note": "P0 repair: use public_0030 because it visibly locks material=polyester and hits rank 1; keep the anomalous multi-turn case secondary.",
+    "approval_note": "Primary Buying remains public_0030. Override showcase freezes three complementary traces: simple replacement, selective retention, and multi-slot rewrite.",
     "source": "demo/canonical_cases.json"
   },
   "evaluator_command": "python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules",

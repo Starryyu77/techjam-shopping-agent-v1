@@ -388,11 +388,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "stainless steel"
-            ],
             "feature": [
               "hypoallergenic"
+            ],
+            "material": [
+              "stainless steel"
             ]
           }
         },

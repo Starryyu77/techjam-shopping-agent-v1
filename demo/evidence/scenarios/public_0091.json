@@ -249,15 +249,15 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "sterling silver"
-            ],
             "color": [
               "silver",
               "white"
             ],
             "feature": [
               "hypoallergenic"
+            ],
+            "material": [
+              "sterling silver"
             ]
           }
         },

@@ -576,6 +576,7 @@ Browsing 与 Boundary 保留在网站中供评委点击，但不强行塞进 3 �
 
 1. **主视频时长：**3 分钟。
 2. **广告章节：**网站保留 Demo-only 章节；视频可控制在约 15 秒。
-3. **Canonical cases：**`public_0030`（Buying）、`public_0004`（Intent Override）、`public_0063`（Browsing）、`public_0050`（Boundary），由 `demo/canonical_cases.json` 固化。
+3. **Canonical cases：**`public_0030`（Buying）、`public_0063`（Browsing）、`public_0050`（Boundary），以及 3 个互补的 Intent Override cases，由 `demo/canonical_cases.json` 固化。
+4. **Override evidence depth：**`public_0004` 展示单偏好替换，`public_0080` 展示选择性保留，`public_0142` 展示多槽位重写。Step 2 通过案例选择器和六段状态摘要提供深挖，但 3 分钟视频仍以 `public_0004` 为主线。
 
 公网 Tour：https://shopping-copilot-techjam.pages.dev/

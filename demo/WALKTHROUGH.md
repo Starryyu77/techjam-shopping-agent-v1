@@ -33,11 +33,17 @@ Use the four scenario tabs:
 | --- | --- | --- |
 | Buying | `public_0030` | `material=polyester`, target Rank #1 |
 | Browsing | `public_0063` | clarification narrows a vague request |
-| Intent Override | `public_0004` | one removed slot, one added slot, target Rank #1 |
+| Intent Override | `public_0004`, `public_0080`, `public_0142` | replace, selectively retain, and multi-slot rewrite; all targets Rank #1 |
 | Boundary | `public_0050` | no-preference handling without state loss |
 
 Use Prev, Next, Auto, and Restart to move through a trace. Target labels are
 visible because these are labeled public sessions.
+
+For Intent Override, use the three case cards above the replay. The six-card
+summary makes the full transition explicit: `Before override`, `Removed`,
+`Retained`, `Added`, `After override`, and `Rank progression`. The short video
+path can stay on `public_0004`; reviewers who want stronger evidence can open
+the two four-turn cases without leaving Step 2.
 
 ## Step 3 — Mechanism
 

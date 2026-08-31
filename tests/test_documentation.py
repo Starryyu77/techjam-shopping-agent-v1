@@ -43,7 +43,7 @@ class PublicDocumentationTests(unittest.TestCase):
     def test_current_test_count_is_not_stale(self):
         for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("75", text, relative)
+            self.assertIn("78", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 
@@ -56,6 +56,8 @@ class PublicDocumentationTests(unittest.TestCase):
             "hero.jpg",
             "data-contract.jpg",
             "intent-override.jpg",
+            "override-retain.jpg",
+            "override-multislot.jpg",
             "evaluation.jpg",
             "transparent-ads.jpg",
         ]
@@ -65,6 +67,12 @@ class PublicDocumentationTests(unittest.TestCase):
                 relative = f"docs/assets/readme/{asset}"
                 self.assertIn(relative, text)
                 self.assertTrue((ROOT / relative).is_file(), relative)
+
+    def test_override_showcase_is_detailed_in_both_languages(self):
+        for text in [self.readme_en, self.readme_zh]:
+            for sample_id in ["public_0004", "public_0080", "public_0142"]:
+                self.assertIn(sample_id, text)
+            self.assertIn("Rank #1", text)
 
 
 if __name__ == "__main__":

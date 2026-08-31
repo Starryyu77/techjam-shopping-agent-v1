@@ -38,6 +38,41 @@ not evidence about the organizer's 800 private sessions.
 | **Verified evaluation** | **Transparent demo-only ads** |
 | [![Official weak starter compared with Rules V1.3](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![Relevance-aware ad auction with preserved organic order](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
+## Intent Override showcase
+
+The Tour now includes three owner-frozen official-public traces. Together they
+show that override handling is more than replacing one string:
+
+| Public case | Pattern | Before override | State transition | After override | Outcome |
+| --- | --- | --- | --- | --- | --- |
+| `public_0004` | Replace one preference | `feature=adjustable` | Remove `adjustable`; add `material=polyester` | `material=polyester` | Target **Rank #1** on Turn 3 |
+| `public_0080` | Retain the valid value | `material=cotton, polyester` | Remove `polyester`; retain `cotton` | `material=cotton` | Target **Rank #1** on Turn 4 |
+| `public_0142` | Rewrite multiple slots | `color=black`; `comfortable`; `lightweight` | Remove three superseded values; add `stainless steel` and `hypoallergenic` | `material=stainless steel`; `feature=hypoallergenic` | Target **Rank #1** on Turn 4 |
+
+| Retain a still-valid preference (`public_0080`) | Rewrite several slots together (`public_0142`) |
+| --- | --- |
+| [![Polyester is removed while cotton is retained](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Three old values are removed and two replacements are added](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+
+Each selector card opens the complete official session: all user turns, agent
+responses, per-turn state diffs, Top-10 recommendations, target identity, and
+rank progression remain inspectable rather than being condensed into a staged
+animation.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant S as Versioned state
+    participant R as Retrieval and reranking
+    U->>S: Initial preference
+    S->>R: Search with current constraints
+    U->>S: OVERRIDE, ignore earlier preference
+    S->>S: Remove superseded values
+    S->>S: Retain still-valid values
+    S->>S: Add replacement values
+    S->>R: Rerun Top-10 with rewritten state
+    R-->>U: Target reaches Rank #1
+```
+
 ## What the project demonstrates
 
 - **Buying vs. Browsing routing:** concrete requests lock constraints; vague
@@ -96,7 +131,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **75 tests pass**.
+Current expected result: **78 tests pass**.
 
 ## Evidence reproduction
 

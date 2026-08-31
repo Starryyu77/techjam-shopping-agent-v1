@@ -268,11 +268,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "fabric"
-            ],
             "feature": [
               "soft"
+            ],
+            "material": [
+              "fabric"
             ]
           }
         },

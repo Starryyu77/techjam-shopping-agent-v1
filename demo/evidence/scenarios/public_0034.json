@@ -49,12 +49,12 @@
         "added": {
           "category": "shoes",
           "soft_preferences": {
-            "material": [
-              "leather"
-            ],
             "feature": [
               "comfortable",
               "soft"
+            ],
+            "material": [
+              "leather"
             ]
           }
         },
@@ -167,12 +167,12 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "leather"
-            ],
             "feature": [
               "comfortable",
               "soft"
+            ],
+            "material": [
+              "leather"
             ]
           }
         }
@@ -290,12 +290,12 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "leather"
-            ],
             "feature": [
               "comfortable",
               "soft"
+            ],
+            "material": [
+              "leather"
             ]
           }
         }
@@ -401,12 +401,12 @@
         "added": {},
         "removed": {
           "soft_preferences": {
-            "material": [
-              "rubber"
-            ],
             "feature": [
               "comfortable",
               "soft"
+            ],
+            "material": [
+              "rubber"
             ]
           }
         },

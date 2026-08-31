@@ -270,12 +270,12 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         },
@@ -403,12 +403,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -528,12 +528,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -653,12 +653,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -778,12 +778,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -903,12 +903,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -1028,12 +1028,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }
@@ -1153,12 +1153,12 @@
             ]
           },
           "soft_preferences": {
+            "color": [
+              "gray"
+            ],
             "material": [
               "cotton",
               "polyester"
-            ],
-            "color": [
-              "gray"
             ]
           }
         }

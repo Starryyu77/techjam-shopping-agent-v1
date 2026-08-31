@@ -139,6 +139,14 @@
         <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="boundary">🔲 Boundary</button>
       </div>
 
+      <div class="case-selector" id="caseSelector" aria-label="Canonical case selector" hidden>
+        <!-- Populated by JS when a scenario has multiple owner-frozen cases -->
+      </div>
+
+      <div class="override-summary" id="overrideSummary" aria-live="polite" hidden>
+        <!-- Full before / removed / retained / added / after / rank story -->
+      </div>
+
       <div class="replay-header" id="replayHeader" aria-live="polite">
         <!-- Source, sample_id, scenario, etc. -->
       </div>

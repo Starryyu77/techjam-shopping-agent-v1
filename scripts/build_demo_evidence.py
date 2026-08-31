@@ -239,7 +239,7 @@ def _compute_state_diff(before: dict, after: dict) -> dict:
         b = before.get(field, {})
         a = after.get(field, {})
         all_keys = set(list(b.keys()) + list(a.keys()))
-        for key in all_keys:
+        for key in sorted(all_keys):
             bvals = set(b.get(key, []))
             avals = set(a.get(key, []))
             added = avals - bvals

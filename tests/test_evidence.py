@@ -242,6 +242,15 @@ class TraceConsistencyTests(unittest.TestCase):
                 trace["best_rank"], ref["best_rank"],
                 f"{trace['sample_id']}: best_rank mismatch",
             )
+            for turn in trace["turns"]:
+                for bucket in turn["state_diff"].values():
+                    for field in ("hard_constraints", "soft_preferences", "negative_constraints"):
+                        keys = list(bucket.get(field, {}))
+                        self.assertEqual(
+                            keys,
+                            sorted(keys),
+                            f"{trace['sample_id']} turn {turn['turn']}: unstable {field} order",
+                        )
 
 
 class CanonicalCaseTests(unittest.TestCase):
@@ -277,6 +286,19 @@ class CanonicalCaseTests(unittest.TestCase):
         for c in self.manifest["canonical_case_candidates"]:
             path = _EVIDENCE_DIR / "scenarios" / f"{c['sample_id']}.json"
             self.assertTrue(path.is_file(), f"Trace not found: {path}")
+
+    def test_override_showcase_has_three_diverse_owner_frozen_cases(self):
+        showcase = [
+            case
+            for case in self.manifest["canonical_cases"]
+            if case["scenario_type"] == "intent_override"
+        ]
+        self.assertEqual(
+            {case["sample_id"] for case in showcase},
+            {"public_0004", "public_0080", "public_0142"},
+        )
+        self.assertEqual(len({case["label"] for case in showcase}), 3)
+        self.assertTrue(all(case.get("description") for case in showcase))
 
 
 class DatasetInfoTests(unittest.TestCase):

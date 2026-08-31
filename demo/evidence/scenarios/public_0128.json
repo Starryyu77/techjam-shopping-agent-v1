@@ -249,13 +249,13 @@
         "added": {
           "category": "jewelry",
           "soft_preferences": {
-            "material": [
-              "sterling silver"
-            ],
             "color": [
               "gold",
               "silver",
               "yellow"
+            ],
+            "material": [
+              "sterling silver"
             ]
           }
         },

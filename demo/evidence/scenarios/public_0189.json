@@ -269,11 +269,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "cotton"
-            ],
             "color": [
               "black"
+            ],
+            "material": [
+              "cotton"
             ]
           }
         },

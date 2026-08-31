@@ -34,6 +34,38 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 | **已验证评测结果** | **透明的 Demo-only 广告** |
 | [![官方弱 starter 与 Rules V1.3 对比](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![相关性广告竞价与自然顺序不变](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
+## Intent Override 多案例展示
+
+Tour 现在包含 3 个由 owner 冻结的官方 public traces。它们共同说明，Override 不只是替换一个字符串：
+
+| Public case | 模式 | 改口前 | 状态变化 | 改口后 | 结果 |
+| --- | --- | --- | --- | --- | --- |
+| `public_0004` | 替换单个偏好 | `feature=adjustable` | 删除 `adjustable`；新增 `material=polyester` | `material=polyester` | Turn 3 目标 **Rank #1** |
+| `public_0080` | 保留仍有效值 | `material=cotton, polyester` | 删除 `polyester`；保留 `cotton` | `material=cotton` | Turn 4 目标 **Rank #1** |
+| `public_0142` | 多槽位重写 | `color=black`；`comfortable`；`lightweight` | 删除 3 个旧值；新增 `stainless steel` 和 `hypoallergenic` | `material=stainless steel`；`feature=hypoallergenic` | Turn 4 目标 **Rank #1** |
+
+| 保留仍有效偏好（`public_0080`） | 同时重写多个槽位（`public_0142`） |
+| --- | --- |
+| [![删除 polyester，同时保留 cotton](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![删除三个旧值，并写入两个替代值](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+
+点击任一案例卡片都能查看完整官方 session：用户消息、Agent 回答、逐轮状态差异、
+Top-10 推荐、目标商品身份和排名轨迹都保留可查，而不是压缩成预设动画。
+
+```mermaid
+sequenceDiagram
+    participant U as 用户
+    participant S as 版本化状态
+    participant R as 检索与重排
+    U->>S: 初始偏好
+    S->>R: 使用当前约束检索
+    U->>S: OVERRIDE，忽略之前偏好
+    S->>S: 删除被替换值
+    S->>S: 保留仍有效值
+    S->>S: 新增替代值
+    S->>R: 使用重写后的状态重新生成 Top-10
+    R-->>U: 目标商品到达 Rank #1
+```
+
 ## 项目展示的能力
 
 - **Buying / Browsing 分流：**明确购买请求锁定约束，模糊浏览请求先做高价值追问。
@@ -84,7 +116,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**75 项测试全部通过**。
+当前预期结果：**78 项测试全部通过**。
 
 ## Evidence 复现
 

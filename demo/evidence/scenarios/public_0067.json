@@ -50,11 +50,11 @@
         "added": {
           "category": "jackets",
           "hard_constraints": {
-            "material": [
-              "polyester"
-            ],
             "feature": [
               "lightweight"
+            ],
+            "material": [
+              "polyester"
             ]
           }
         },

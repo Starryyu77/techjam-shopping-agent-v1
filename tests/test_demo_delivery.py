@@ -72,6 +72,14 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertIn("organicBefore", self.js)
         self.assertIn("organicAfter", self.js)
 
+    def test_override_replay_supports_multiple_cases_and_full_state_summary(self):
+        self.assertIn('id="caseSelector"', self.html)
+        self.assertIn('id="overrideSummary"', self.html)
+        self.assertIn("canonicalCasesByScenario", self.js)
+        self.assertIn("renderOverrideSummary", self.js)
+        for label in ["Before override", "Removed", "Retained", "Added", "After override", "Rank progression"]:
+            self.assertIn(label, self.js)
+
 
 if __name__ == "__main__":
     unittest.main()

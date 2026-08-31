@@ -1,7 +1,7 @@
 {
   "owner_approved": true,
   "approved_at": "2026-08-31",
-  "approval_note": "P0 repair: use public_0030 because it visibly locks material=polyester and hits rank 1; keep the anomalous multi-turn case secondary.",
+  "approval_note": "Primary Buying remains public_0030. Override showcase freezes three complementary traces: simple replacement, selective retention, and multi-slot rewrite.",
   "canonical_cases": [
     {
       "sample_id": "public_0030",
@@ -11,7 +11,9 @@
     {
       "sample_id": "public_0004",
       "scenario_type": "intent_override",
-      "role": "primary_video"
+      "role": "primary_video",
+      "label": "Replace one preference",
+      "description": "Remove adjustable, add polyester, target moves to Rank #1."
     },
     {
       "sample_id": "public_0063",
@@ -34,9 +36,18 @@
       "role": "secondary"
     },
     {
-      "sample_id": "public_0072",
+      "sample_id": "public_0080",
       "scenario_type": "intent_override",
-      "role": "secondary"
+      "role": "secondary",
+      "label": "Retain the valid value",
+      "description": "Narrow cotton + polyester to cotton, preserving the valid material and reaching Rank #1."
+    },
+    {
+      "sample_id": "public_0142",
+      "scenario_type": "intent_override",
+      "role": "secondary",
+      "label": "Rewrite multiple slots",
+      "description": "Remove black, comfortable, and lightweight; add stainless steel and hypoallergenic; target reaches Rank #1."
     }
   ]
 }

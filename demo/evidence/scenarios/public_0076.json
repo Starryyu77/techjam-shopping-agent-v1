@@ -247,11 +247,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "cotton"
-            ],
             "color": [
               "gray"
+            ],
+            "material": [
+              "cotton"
             ]
           }
         },
@@ -363,11 +363,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "cotton"
-            ],
             "color": [
               "gray"
+            ],
+            "material": [
+              "cotton"
             ]
           }
         }
@@ -477,11 +477,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "cotton"
-            ],
             "color": [
               "gray"
+            ],
+            "material": [
+              "cotton"
             ]
           }
         }
@@ -598,11 +598,11 @@
         "removed": {},
         "retained": {
           "soft_preferences": {
-            "material": [
-              "cotton"
-            ],
             "color": [
               "gray"
+            ],
+            "material": [
+              "cotton"
             ]
           }
         }

@@ -16,10 +16,12 @@ let currentStep = 0;
 let currentScenario = 'buying';
 let currentTrace = null;
 let currentTurnIdx = 0;
+let currentCaseId = null;
 let autoPlayTimer = null;
 
 // Canonical cases: map scenario_type -> sample_id
 const canonicalCases = {};
+const canonicalCasesByScenario = {};
 const siteBaseUrl = new URL('.', document.currentScript.src);
 
 // ---------------------------------------------------------------------------
@@ -45,8 +47,12 @@ async function init() {
     if (!manifest.canonical_cases_frozen || !Array.isArray(manifest.canonical_cases)) {
       throw new Error('Canonical cases are not owner-approved and frozen');
     }
-    // Use only the source-controlled owner-approved primary selection.
+    // Use only the source-controlled owner-approved selection.
     for (const c of manifest.canonical_cases) {
+      if (!canonicalCasesByScenario[c.scenario_type]) {
+        canonicalCasesByScenario[c.scenario_type] = [];
+      }
+      canonicalCasesByScenario[c.scenario_type].push(c);
       if ((c.role === 'primary_video' || c.role === 'primary_website') && !canonicalCases[c.scenario_type]) {
         canonicalCases[c.scenario_type] = c.sample_id;
       }
@@ -153,23 +159,126 @@ function renderDataContract() {
 // ---------------------------------------------------------------------------
 // Step 2: Scenario Replay
 // ---------------------------------------------------------------------------
-async function loadScenario(scenarioType) {
+async function loadScenario(scenarioType, requestedSampleId) {
   currentScenario = scenarioType;
-  const sampleId = canonicalCases[scenarioType];
+  const sampleId = requestedSampleId || canonicalCases[scenarioType];
   if (!sampleId) {
     document.getElementById('replayHeader').innerHTML = '<span class="text-muted">No canonical case for this scenario yet (awaiting owner selection).</span>';
     return;
   }
 
   try {
+    currentCaseId = sampleId;
     currentTrace = await loadJSON('/evidence/scenarios/' + sampleId + '.json');
     currentTurnIdx = 0;
+    renderCaseSelector(scenarioType, sampleId);
+    renderOverrideSummary();
     renderReplayHeader();
     renderTurnTimeline();
     renderTurnDetail(0);
   } catch (err) {
     console.error('Failed to load scenario:', err);
   }
+}
+
+function renderCaseSelector(scenarioType, activeSampleId) {
+  const selector = document.getElementById('caseSelector');
+  const cases = canonicalCasesByScenario[scenarioType] || [];
+  if (scenarioType !== 'intent_override' || cases.length <= 1) {
+    selector.hidden = true;
+    selector.innerHTML = '';
+    return;
+  }
+
+  selector.hidden = false;
+  selector.innerHTML = cases.map((item, index) =>
+    '<button class="case-choice' + (item.sample_id === activeSampleId ? ' active' : '') + '" ' +
+    'data-sample-id="' + item.sample_id + '" aria-pressed="' + (item.sample_id === activeSampleId) + '">' +
+    '<span class="case-index">Case ' + (index + 1) + '</span>' +
+    '<strong>' + escHtml(item.label || item.sample_id) + '</strong>' +
+    '<span>' + escHtml(item.description || '') + '</span>' +
+    '<code>' + item.sample_id + '</code>' +
+    '</button>'
+  ).join('');
+
+  selector.querySelectorAll('.case-choice').forEach(button => {
+    button.addEventListener('click', () => {
+      stopAutoPlay();
+      loadScenario('intent_override', button.dataset.sampleId);
+    });
+  });
+}
+
+function renderOverrideSummary() {
+  const summary = document.getElementById('overrideSummary');
+  const step = document.getElementById('step2');
+  if (currentScenario !== 'intent_override' || !currentTrace) {
+    summary.hidden = true;
+    summary.innerHTML = '';
+    step.classList.remove('override-active');
+    return;
+  }
+
+  const overrideIndex = currentTrace.turns.findIndex(turn => turn.intent.dialogue_act === 'OVERRIDE');
+  if (overrideIndex < 0) {
+    summary.hidden = true;
+    summary.innerHTML = '';
+    step.classList.remove('override-active');
+    return;
+  }
+
+  const overrideTurn = currentTrace.turns[overrideIndex];
+  const before = overrideIndex > 0 ? currentTrace.turns[overrideIndex - 1].state_after : {};
+  const after = overrideTurn.state_after || {};
+  const removed = overrideTurn.state_diff.removed || {};
+  const retained = overrideTurn.state_diff.retained || {};
+  const added = overrideTurn.state_diff.added || {};
+  const rankProgression = currentTrace.turns.map(turn =>
+    'T' + turn.turn + ' ' + (turn.target_rank ? '#' + turn.target_rank : '—')
+  ).join(' → ');
+
+  summary.hidden = false;
+  step.classList.add('override-active');
+  summary.innerHTML =
+    summaryCard('Before override', flattenStateSnapshot(before), 'before') +
+    summaryCard('Removed', flattenDiffBucket(removed), 'removed') +
+    summaryCard('Retained', flattenDiffBucket(retained), 'retained') +
+    summaryCard('Added', flattenDiffBucket(added), 'added') +
+    summaryCard('After override', flattenStateSnapshot(after), 'after') +
+    summaryCard('Rank progression', [rankProgression, 'Target: ' + currentTrace.target_title], 'rank');
+}
+
+function summaryCard(label, values, kind) {
+  const safeValues = values.length ? values : ['None'];
+  return '<div class="override-summary-card ' + kind + '">' +
+    '<div class="override-summary-label">' + label + '</div>' +
+    safeValues.map(value => '<div class="override-summary-value">' + escHtml(value) + '</div>').join('') +
+    '</div>';
+}
+
+function flattenStateSnapshot(state) {
+  const values = [];
+  if (state.category) values.push('category: ' + state.category);
+  for (const field of ['hard_constraints', 'soft_preferences', 'negative_constraints']) {
+    const group = state[field] || {};
+    for (const [attribute, entries] of Object.entries(group)) {
+      for (const value of entries || []) values.push(attribute + ': ' + value);
+    }
+  }
+  for (const attribute of state.no_preference || []) values.push(attribute + ': no preference');
+  return values;
+}
+
+function flattenDiffBucket(bucket) {
+  const values = [];
+  if (bucket.category) values.push('category: ' + bucket.category);
+  for (const field of ['hard_constraints', 'soft_preferences', 'negative_constraints']) {
+    const group = bucket[field] || {};
+    for (const [attribute, entries] of Object.entries(group)) {
+      for (const value of entries || []) values.push(attribute + ': ' + value);
+    }
+  }
+  return values;
 }
 
 function renderReplayHeader() {

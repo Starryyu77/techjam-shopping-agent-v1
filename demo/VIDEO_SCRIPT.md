@@ -51,11 +51,14 @@ Suggested narration:
 ### 1:10–1:40 — Intent Override
 
 - Select `Intent Override`.
-- Advance `public_0004` from Turn 1 to Turn 3.
+- Keep Case 1 selected and advance `public_0004` from Turn 1 to Turn 3.
 - Point to `removed feature: adjustable`, `added material: polyester`, and Rank #1.
+- Briefly point to the Case 2 and Case 3 selectors as deeper official-public
+  evidence; do not open them in the three-minute cut.
 
 > “The difficult override scenario is erase-and-rewrite, not append-only state.
-> The superseded preference disappears while the replacement enters the state.”
+> The superseded preference disappears while the replacement enters the state.
+> Two additional official traces show selective retention and multi-slot rewrite.”
 
 ### 1:40–2:05 — Mechanism
 

@@ -249,14 +249,14 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
+            "feature": [
+              "comfortable",
+              "soft"
+            ],
             "material": [
               "fabric",
               "polyester",
               "spandex"
-            ],
-            "feature": [
-              "comfortable",
-              "soft"
             ]
           }
         },

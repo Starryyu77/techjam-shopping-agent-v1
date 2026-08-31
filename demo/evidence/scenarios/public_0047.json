@@ -248,11 +248,11 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "material": [
-              "polyester"
-            ],
             "color": [
               "pink"
+            ],
+            "material": [
+              "polyester"
             ]
           }
         },

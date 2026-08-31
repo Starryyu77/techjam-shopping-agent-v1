@@ -471,14 +471,14 @@
       "state_diff": {
         "added": {
           "soft_preferences": {
-            "use_case": [
-              "running"
+            "feature": [
+              "comfortable"
             ],
             "material": [
               "rubber"
             ],
-            "feature": [
-              "comfortable"
+            "use_case": [
+              "running"
             ]
           }
         },
