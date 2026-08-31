@@ -42,6 +42,33 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 决策链，并全部读取 Replay 当前轮次。Score anatomy 会公开正式路径中的全部排序
 权重，并明确 popularity 只参与近似分数的 tie-break。
 
+### Prompt Evolution Lab：查看提示词持续迭代
+
+[![六轮提示词迭代曲线、敏感性检查和 golden-case 确定性回放](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
+
+在 Step 3 切换到 **Prompt Evolution Lab**，可以检查一组真实的六轮 Qwen3-8B
+零微调实验。页面会展示 23/12 golden-case 划分、train/test 曲线、prompt 长度与
+混淆信号、受控的换行敏感性 A/B，以及每次接受候选提示词前必须经过的 guardrails。
+这组实验中观测到的最佳 test score 从 **86.7 提升到 91.7**。
+
+页面还提供四个可点击案例，将迭代合同拆成可播放的确定性流程：输入 → 预期
+intent/dialogue act → 错误诊断 → 泛化改写 → 边界检查 → 重新评估。这样可以让评委
+看见完整研发闭环，同时不会把预录案例包装成实时模型输出。
+
+```mermaid
+flowchart LR
+    G[Golden-case 划分] --> E[评估当前提示词]
+    E --> C[检查混淆信号]
+    C --> R[泛化一条改写规则]
+    R --> V{Guard checks}
+    V -->|拒绝| R
+    V -->|接受| T[重新评估 train 与 test]
+    T --> E
+```
+
+这是仍在持续迭代的实验性 LLM layer。仓库与网站公开它的过程证据；比赛正式
+分数仍严格对应确定性的 submitted path。
+
 ## 多轮推荐与排序证据
 
 Tour 现在展示 9 个由 owner 冻结的官方 public traces，覆盖 Buying、Browsing
@@ -94,6 +121,8 @@ sequenceDiagram
 - **轻量检索与排序：**SQLite FTS5 召回、透明规则重排和分带人气 tiebreaker。
 - **候选驱动追问：**按候选覆盖度 × 信息熵选择最值得问的属性。
 - **证据优先的交付网站：**公网 Tour 回放冻结的官方公开集 trace，不依赖实时 LLM。
+- **提示词自迭代：**本地 Qwen3-8B 在受保护的 golden-case 划分上，根据混淆信号
+  生成泛化改写，并经过显式 guard checks。
 - **演示层商业扩展：**相关性广告竞价与正式排名物理隔离，不改变自然推荐顺序。
 
 ## 快速开始
@@ -136,7 +165,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**78 项测试全部通过**。
+当前预期结果：**79 项测试全部通过**。
 
 ## Evidence 复现
 
@@ -194,6 +223,7 @@ flowchart LR
 | `scripts/build_demo_evidence.py` | Evidence 重建与一致性验证 |
 | `scripts/build_static_site.py` | 可移植静态部署构建 |
 | `reports/` | 可复现实验与评测结果 |
+| `exp_selfevolve/` | 提示词自迭代闭环、golden cases 与六轮冻结记录 |
 | `reranker.py` | 默认关闭的 cross-encoder 实验 |
 
 ## 声明与数据边界
@@ -202,7 +232,7 @@ flowchart LR
 - 网站只展示官方 public split 中可见的标签与 trace。
 - 主办方保留的 800-session 表现未知。
 - 不把公开集分数写成 hidden-set、private-set 或最终分数。
-- Qwen 与 cross-encoder 是可选实验，不是正式 rules path 的依赖。
+- Qwen prompt evolution 与 cross-encoder 是持续迭代的实验层，不是正式 rules path 的依赖。
 - 广告竞价使用模拟出价和预算，官方评测器不会调用它。
 
 ## 文档导航

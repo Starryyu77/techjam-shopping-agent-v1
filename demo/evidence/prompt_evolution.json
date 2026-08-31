@@ -1,0 +1,138 @@
+{
+  "evidence_scope": "local_qwen_development_experiment",
+  "status": "continuous_iteration",
+  "model": "Qwen3-8B · localhost-only · zero fine-tuning",
+  "official_score_path": false,
+  "split": {
+    "train": 23,
+    "test": 12
+  },
+  "score_formula": "0.6 × domain intent + 0.2 × dialogue act + 0.2 × structural validity",
+  "pipeline": [
+    "Evaluate",
+    "Mine bad cases",
+    "Diagnose confusion",
+    "Rewrite",
+    "Guard",
+    "Re-evaluate"
+  ],
+  "guardrails": [
+    "Abstract shared rules instead of enumerating cases",
+    "Separate train-only noise from test generalization signals",
+    "Keep already-passing dimensions unchanged",
+    "Reject rewrites below 85% length or missing required structural markers"
+  ],
+  "rounds": [
+    {
+      "round": 0,
+      "train_score": 86.95652173913045,
+      "test_score": 86.66666666666667,
+      "prompt_length": 2851,
+      "ends_with_newline": true,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 2 【两端共现·真实缺口】",
+      "change_summary": "Seed prompt evaluated"
+    },
+    {
+      "round": 1,
+      "train_score": 86.08695652173915,
+      "test_score": 91.66666666666667,
+      "prompt_length": 2850,
+      "ends_with_newline": false,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 1 【两端共现·真实缺口】",
+      "change_summary": "Trailing newline normalized"
+    },
+    {
+      "round": 2,
+      "train_score": 86.08695652173915,
+      "test_score": 91.66666666666667,
+      "prompt_length": 2850,
+      "ends_with_newline": false,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 1 【两端共现·真实缺口】",
+      "change_summary": "Guarded prompt retained"
+    },
+    {
+      "round": 3,
+      "train_score": 86.08695652173915,
+      "test_score": 91.66666666666667,
+      "prompt_length": 2850,
+      "ends_with_newline": false,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 1 【两端共现·真实缺口】",
+      "change_summary": "Guarded prompt retained"
+    },
+    {
+      "round": 4,
+      "train_score": 86.08695652173915,
+      "test_score": 91.66666666666667,
+      "prompt_length": 2850,
+      "ends_with_newline": false,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 1 【两端共现·真实缺口】",
+      "change_summary": "Guarded prompt retained"
+    },
+    {
+      "round": 5,
+      "train_score": 86.08695652173915,
+      "test_score": 91.66666666666667,
+      "prompt_length": 2850,
+      "ends_with_newline": false,
+      "confusion": "ITEM->IRRELEVANT: train 4 / test 1 【两端共现·真实缺口】",
+      "change_summary": "Guarded prompt retained"
+    }
+  ],
+  "best_observed_round": 1,
+  "best_observed_test_score": 91.66666666666667,
+  "newline_ab": {
+    "seed_as_is": 86.7,
+    "seed_stripped": 91.7,
+    "r1_as_is": 91.7,
+    "r1_plus_nl": 86.7
+  },
+  "simulation_cases": [
+    {
+      "id": "ITEM-jacket-typo",
+      "split": "test",
+      "message": "need a warm jaket, waterproof one",
+      "expected_domain_intent": "ITEM",
+      "expected_dialogue_act": "NEW",
+      "iteration_focus": "Preserve concrete shopping intent despite a product typo.",
+      "simulation_label": "Deterministic walkthrough using a real golden-case contract"
+    },
+    {
+      "id": "VAGUE-explore",
+      "split": "test",
+      "message": "show me what's popular",
+      "expected_domain_intent": "VAGUE",
+      "expected_dialogue_act": "NEW",
+      "iteration_focus": "Keep exploratory language broad and ask before filtering.",
+      "simulation_label": "Deterministic walkthrough using a real golden-case contract"
+    },
+    {
+      "id": "OVERRIDE-direction",
+      "split": "test",
+      "message": "on second thought I want boots instead of sneakers",
+      "expected_domain_intent": "ITEM",
+      "expected_dialogue_act": "OVERRIDE",
+      "iteration_focus": "Replace the earlier category direction instead of appending a conflict.",
+      "simulation_label": "Deterministic walkthrough using a real golden-case contract"
+    },
+    {
+      "id": "BENEFIT-redpacket",
+      "split": "test",
+      "message": "is there any promo going on",
+      "expected_domain_intent": "BENEFIT",
+      "expected_dialogue_act": "NOOP",
+      "iteration_focus": "Route promotion intent without polluting shopping constraints.",
+      "simulation_label": "Deterministic walkthrough using a real golden-case contract"
+    }
+  ],
+  "artifacts": {
+    "source": "exp_selfevolve/self_evolve.py",
+    "golden_cases": "exp_selfevolve/golden_cases.json",
+    "rounds": "exp_selfevolve/rounds/round_*.json",
+    "best_prompt": "exp_selfevolve/rounds/best_prompt.md",
+    "newline_report": "reports/gpu_selfevolve_newline_finding.txt",
+    "order_check": "reports/gpu_selfevolve_order_check.txt"
+  },
+  "source_sha256": "7f37fe9431364070fc1301aa062babd475459667d71ce539e911cce85a442ebf",
+  "golden_cases_sha256": "e22eb6a9abaa681af04c1d7f83cd489aaadf48dc87c7c30bc92e2a8cad8230bd",
+  "best_prompt_sha256": "5a0791a2d83c794c126dde227c72f3a7589495d957aff0e9d2e27ed885550cb4"
+}

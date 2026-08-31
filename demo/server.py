@@ -22,6 +22,7 @@ import sys
 import uuid
 from http.server import BaseHTTPRequestHandler, HTTPServer
 from pathlib import Path
+from urllib.parse import urlsplit
 
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(_REPO_ROOT) not in sys.path:
@@ -430,30 +431,34 @@ def make_handler(demo: DemoState):
             self.wfile.write(body)
 
         def do_GET(self):
+            # Route on the URL path only. The tour stores its current step in
+            # the query string (for example ``/?step=3``), so treating the
+            # raw request target as a path would break shareable deep links.
+            path = urlsplit(self.path).path
             # --- Judge-facing demo: tour is the default entry ---
-            if self.path in ("/", "/tour", "/tour.html"):
+            if path in ("/", "/tour", "/tour.html"):
                 tour = _STATIC / "tour.html"
                 if tour.is_file():
                     return self._send_file(tour, "text/html; charset=utf-8")
                 # Fallback to old index if tour not yet built
                 return self._send_file(_STATIC / "index.html", "text/html; charset=utf-8")
-            if self.path == "/tour.js":
+            if path == "/tour.js":
                 return self._send_file(_STATIC / "tour.js", "application/javascript")
-            if self.path == "/tour.css":
+            if path == "/tour.css":
                 return self._send_file(_STATIC / "tour.css", "text/css")
-            if self.path == "/evidence":
+            if path == "/evidence":
                 tour = _STATIC / "tour.html"
                 if tour.is_file():
                     return self._send_file(tour, "text/html; charset=utf-8")
-            if self.path == "/report":
+            if path == "/report":
                 return self._send_markdown_page(_REPO_ROOT / "REPORT.md", "Technical Report")
-            if self.path == "/reproduce":
+            if path == "/reproduce":
                 return self._send_markdown_page(_REPO_ROOT / "README.md", "Reproduction Instructions")
             # --- Evidence JSON (frozen, read-only) ---
-            if self.path.startswith("/evidence/"):
+            if path.startswith("/evidence/"):
                 evidence_dir = _STATIC.parent / "evidence"
                 # /evidence/scenarios/public_0001.json etc.
-                rel = self.path[len("/evidence/"):]
+                rel = path[len("/evidence/"):]
                 if rel and not (".." in rel):
                     fpath = evidence_dir / rel
                     if fpath.is_file() and fpath.suffix == ".json":
@@ -464,21 +469,21 @@ def make_handler(demo: DemoState):
                     if tour.is_file():
                         return self._send_file(tour, "text/html; charset=utf-8")
             # --- Sandbox (old chat UI) ---
-            if self.path in ("/sandbox", "/sandbox.html", "/index.html"):
+            if path in ("/sandbox", "/sandbox.html", "/index.html"):
                 return self._send_file(_STATIC / "index.html", "text/html; charset=utf-8")
-            if self.path == "/app.js":
+            if path == "/app.js":
                 return self._send_file(_STATIC / "app.js", "application/javascript")
-            if self.path == "/style.css":
+            if path == "/style.css":
                 return self._send_file(_STATIC / "style.css", "text/css")
-            if self.path in ("/dashboard", "/dashboard.html"):
+            if path in ("/dashboard", "/dashboard.html"):
                 dash = _STATIC / "dashboard.html"
                 if dash.is_file():
                     return self._send_file(dash, "text/html; charset=utf-8")
-            if self.path in ("/ads", "/ads.html"):
+            if path in ("/ads", "/ads.html"):
                 ads = _STATIC / "ads.html"
                 if ads.is_file():
                     return self._send_file(ads, "text/html; charset=utf-8")
-            if self.path == "/api/ads":
+            if path == "/api/ads":
                 return self._send_json({"campaigns": demo.ad_campaigns})
             self._send_json({"error": "not found"}, 404)
 

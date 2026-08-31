@@ -12,6 +12,7 @@ let metrics = null;
 let dataset = null;
 let versionComparison = null;
 let catalogSamples = null;
+let promptEvolution = null;
 let currentStep = 0;
 let currentScenario = 'buying';
 let currentTrace = null;
@@ -19,6 +20,9 @@ let currentTurnIdx = 0;
 let currentCaseId = null;
 let autoPlayTimer = null;
 let currentMechanismIdx = 0;
+let currentPromptRound = 0;
+let currentPromptCase = 0;
+let promptSimulationTimer = null;
 
 // Canonical cases: map scenario_type -> sample_id
 const canonicalCases = {};
@@ -100,12 +104,13 @@ async function loadJSON(url) {
 
 async function init() {
   try {
-    [manifest, metrics, dataset, versionComparison, catalogSamples] = await Promise.all([
+    [manifest, metrics, dataset, versionComparison, catalogSamples, promptEvolution] = await Promise.all([
       loadJSON('/evidence/manifest.json'),
       loadJSON('/evidence/metrics.json'),
       loadJSON('/evidence/dataset.json'),
       loadJSON('/evidence/version_comparison.json'),
       loadJSON('/evidence/catalog_samples.json'),
+      loadJSON('/evidence/prompt_evolution.json'),
     ]);
 
     if (!manifest.canonical_cases_frozen || !Array.isArray(manifest.canonical_cases)) {
@@ -647,10 +652,10 @@ function renderMechanisms() {
     '<p><strong>Cross-encoder reranker:</strong> Built a full local MiniLM cross-encoder. ' +
     'Per-scenario analysis: helps Buying (+0.46 summed RR) but hurts Browsing (−1.38) ' +
     'because generic queries mislead the semantic ranker. Net effect: flat to slightly negative. ' +
-    '<strong>Decision: ship rules-only, keep experiment for transparency.</strong></p>' +
-    '<p class="mt-1"><strong>Prompt self-evolution:</strong> Automated prompt optimization loop. ' +
-    'Only measurable gain traced to trailing-newline sensitivity of the chat template. ' +
-    'Seed prompt was already near-optimal. <strong>Did not ship a rewritten prompt.</strong></p>';
+    '<strong>Decision: ship rules-only, keep experiment for transparency.</strong></p>';
+
+  bindMechanismModeTabs();
+  renderPromptEvolutionLab();
 }
 
 function renderMechanismContext() {
@@ -869,6 +874,167 @@ function renderScoreAnatomy() {
     '<div class="score-weight-list">' + weights.map(weight =>
       '<div class="score-weight ' + weight[2] + '"><span>' + weight[0] + '</span><strong>' + weight[1] + '</strong></div>'
     ).join('') + '</div>';
+}
+
+function bindMechanismModeTabs() {
+  document.querySelectorAll('.mechanism-mode').forEach(button => {
+    button.addEventListener('click', () => {
+      const promptMode = button.dataset.mode === 'prompt';
+      document.querySelectorAll('.mechanism-mode').forEach(item => {
+        const active = item === button;
+        item.classList.toggle('active', active);
+        item.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+      document.getElementById('pipelineMechanismLab').hidden = promptMode;
+      document.getElementById('promptEvolutionLab').hidden = !promptMode;
+      document.getElementById('step3').classList.toggle('prompt-mode', promptMode);
+      if (!promptMode) stopPromptSimulation();
+    });
+  });
+}
+
+function renderPromptEvolutionLab() {
+  if (!promptEvolution) return;
+  const rounds = promptEvolution.rounds;
+  document.getElementById('promptLabBadges').innerHTML =
+    '<span>' + promptEvolution.model + '</span>' +
+    '<span>' + promptEvolution.split.train + ' train / ' + promptEvolution.split.test + ' test</span>' +
+    '<span>' + rounds.length + ' rounds</span>' +
+    '<span>Best observed ' + promptEvolution.best_observed_test_score.toFixed(1) + '</span>';
+
+  document.getElementById('promptRoundChart').innerHTML =
+    '<div class="prompt-chart-axis"><span>100</span><span>50</span><span>0</span></div>' +
+    '<div class="prompt-chart-bars">' + rounds.map(round =>
+      '<div class="prompt-round-bars">' +
+        '<div class="prompt-bar-pair">' +
+          '<i class="train" style="height:' + round.train_score + '%"><b>' + round.train_score.toFixed(1) + '</b></i>' +
+          '<i class="test" style="height:' + round.test_score + '%"><b>' + round.test_score.toFixed(1) + '</b></i>' +
+        '</div>' +
+        '<span>R' + round.round + '</span>' +
+      '</div>'
+    ).join('') + '</div>' +
+    '<div class="prompt-chart-legend"><span><i class="train"></i>Train</span><span><i class="test"></i>Test</span></div>';
+
+  document.getElementById('promptRoundSelector').innerHTML = rounds.map(round =>
+    '<button class="prompt-round-button' + (round.round === currentPromptRound ? ' active' : '') + '" data-round="' + round.round + '">Round ' + round.round + '</button>'
+  ).join('');
+  document.querySelectorAll('.prompt-round-button').forEach(button => {
+    button.addEventListener('click', () => renderPromptRound(Number.parseInt(button.dataset.round, 10)));
+  });
+
+  document.getElementById('promptLoop').innerHTML = promptEvolution.pipeline.map((step, index) =>
+    '<div class="prompt-loop-step"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + escHtml(step) + '</strong></div>' +
+    (index < promptEvolution.pipeline.length - 1 ? '<i>→</i>' : '')
+  ).join('');
+  document.getElementById('promptGuardList').innerHTML = promptEvolution.guardrails.map((guard, index) =>
+    '<div><span>G' + (index + 1) + '</span><strong>' + escHtml(guard) + '</strong></div>'
+  ).join('');
+
+  const sensitivity = promptEvolution.newline_ab;
+  document.getElementById('promptSensitivity').innerHTML =
+    '<div class="prompt-panel-title"><span>Sensitivity monitor</span><small>Controlled A/B · test score</small></div>' +
+    '<div class="sensitivity-bars">' +
+      sensitivityBar('Seed · as-is', sensitivity.seed_as_is, false) +
+      sensitivityBar('Seed · normalized', sensitivity.seed_stripped, true) +
+      sensitivityBar('Round 1 · as-is', sensitivity.r1_as_is, true) +
+      sensitivityBar('Round 1 · + newline', sensitivity.r1_plus_nl, false) +
+    '</div>' +
+    '<p>Whitespace sensitivity is tracked as a robustness signal for continued iteration.</p>';
+
+  document.getElementById('promptCaseSelector').innerHTML = promptEvolution.simulation_cases.map((item, index) =>
+    '<button class="prompt-case-button' + (index === currentPromptCase ? ' active' : '') + '" data-case="' + index + '">' +
+      '<strong>' + escHtml(item.id.replace(/-/g, ' · ')) + '</strong><span>' + escHtml(item.split) + '</span></button>'
+  ).join('');
+  document.querySelectorAll('.prompt-case-button').forEach(button => {
+    button.addEventListener('click', () => {
+      stopPromptSimulation();
+      renderPromptSimulation(Number.parseInt(button.dataset.case, 10));
+    });
+  });
+  document.getElementById('promptRunSimulation').addEventListener('click', startPromptSimulation);
+
+  renderPromptRound(currentPromptRound);
+  renderPromptSimulation(currentPromptCase);
+}
+
+function sensitivityBar(label, value, highlighted) {
+  return '<div class="sensitivity-row' + (highlighted ? ' highlighted' : '') + '">' +
+    '<span>' + label + '</span><div><i style="width:' + value + '%"></i></div><strong>' + value.toFixed(1) + '</strong></div>';
+}
+
+function renderPromptRound(roundIndex) {
+  currentPromptRound = roundIndex;
+  const round = promptEvolution.rounds.find(item => item.round === roundIndex) || promptEvolution.rounds[0];
+  const previous = roundIndex > 0 ? promptEvolution.rounds.find(item => item.round === roundIndex - 1) : null;
+  const delta = previous ? round.test_score - previous.test_score : 0;
+  document.querySelectorAll('.prompt-round-button').forEach(button => {
+    button.classList.toggle('active', Number.parseInt(button.dataset.round, 10) === roundIndex);
+  });
+  document.getElementById('promptRoundDetail').innerHTML =
+    '<div class="prompt-panel-title"><span>Round ' + round.round + ' inspection</span><small>' + escHtml(round.change_summary) + '</small></div>' +
+    '<div class="round-score-grid">' +
+      '<div><span>Train</span><strong>' + round.train_score.toFixed(1) + '</strong></div>' +
+      '<div><span>Test</span><strong>' + round.test_score.toFixed(1) + '</strong></div>' +
+      '<div><span>Δ test</span><strong>' + (delta >= 0 ? '+' : '') + delta.toFixed(1) + '</strong></div>' +
+      '<div><span>Prompt</span><strong>' + round.prompt_length + ' chars</strong></div>' +
+    '</div>' +
+    '<div class="round-confusion"><span>Confusion signal</span><strong>' + escHtml(round.confusion) + '</strong></div>' +
+    '<div class="round-change"><span>Iteration action</span><strong>' + escHtml(round.change_summary) + '</strong><small>' +
+      (round.ends_with_newline ? 'Prompt ends with newline' : 'Prompt normalized without trailing newline') + '</small></div>';
+}
+
+function renderPromptSimulation(caseIndex) {
+  currentPromptCase = caseIndex;
+  const item = promptEvolution.simulation_cases[caseIndex] || promptEvolution.simulation_cases[0];
+  document.querySelectorAll('.prompt-case-button').forEach(button => {
+    button.classList.toggle('active', Number.parseInt(button.dataset.case, 10) === caseIndex);
+  });
+  const steps = [
+    ['Input', item.message],
+    ['Expected contract', item.expected_domain_intent + ' / ' + item.expected_dialogue_act],
+    ['Diagnose', item.iteration_focus],
+    ['Rewrite', 'Abstract a shared rule; do not enumerate this exact phrase'],
+    ['Guard', 'Check train/test split, length, and required output markers'],
+    ['Re-evaluate', 'Contract target remains ' + item.expected_domain_intent + ' / ' + item.expected_dialogue_act],
+  ];
+  document.getElementById('promptCaseFlow').innerHTML =
+    '<div class="prompt-simulation-label">' + escHtml(item.simulation_label) + '</div>' +
+    '<div class="prompt-sim-steps">' + steps.map((step, index) =>
+      '<div class="prompt-sim-step" data-sim-step="' + index + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + step[0] + '</strong><p>' + escHtml(step[1]) + '</p></div>' +
+      (index < steps.length - 1 ? '<i>→</i>' : '')
+    ).join('') + '</div>';
+}
+
+function startPromptSimulation() {
+  stopPromptSimulation();
+  const steps = Array.from(document.querySelectorAll('.prompt-sim-step'));
+  const button = document.getElementById('promptRunSimulation');
+  let index = 0;
+  button.textContent = '⏸ Running';
+  steps.forEach(step => step.classList.remove('active', 'complete'));
+  const advance = () => {
+    steps.forEach((step, stepIndex) => {
+      step.classList.toggle('active', stepIndex === index);
+      step.classList.toggle('complete', stepIndex < index);
+    });
+    index += 1;
+    if (index >= steps.length) {
+      clearInterval(promptSimulationTimer);
+      promptSimulationTimer = null;
+      steps.forEach(step => step.classList.add('complete'));
+      steps.forEach(step => step.classList.remove('active'));
+      button.textContent = '↻ Run again';
+    }
+  };
+  advance();
+  promptSimulationTimer = setInterval(advance, 650);
+}
+
+function stopPromptSimulation() {
+  clearInterval(promptSimulationTimer);
+  promptSimulationTimer = null;
+  const button = document.getElementById('promptRunSimulation');
+  if (button) button.textContent = '▶ Run walkthrough';
 }
 
 // ---------------------------------------------------------------------------

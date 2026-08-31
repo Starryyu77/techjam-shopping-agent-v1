@@ -31,6 +31,7 @@ class StaticSiteBuildTests(unittest.TestCase):
             "evidence/metrics.json",
             "evidence/dataset.json",
             "evidence/version_comparison.json",
+            "evidence/prompt_evolution.json",
         ]
         for relative in required:
             self.assertTrue((self.output / relative).is_file(), relative)

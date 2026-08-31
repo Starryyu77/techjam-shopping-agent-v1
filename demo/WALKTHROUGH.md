@@ -59,8 +59,17 @@ Click the five pipeline stages:
 4. **Rule Reranker** — Top-3 podium plus transparent scoring weights.
 5. **Question Policy** — candidate-to-threshold decision chain plus selected `ask_attribute`.
 
-Open `Experiments We Did Not Ship` only for deeper review of the cross-encoder
-and prompt-evolution negative results.
+Switch the mode tab to **Prompt Evolution Lab** and inspect:
+
+1. Six real train/test rounds from the local Qwen3-8B experiment.
+2. The 23/12 golden-case split and confusion-driven iteration loop.
+3. Newline sensitivity A/B and prompt-length guardrails.
+4. Four clickable ITEM/VAGUE/OVERRIDE/BENEFIT contracts.
+5. `Run walkthrough`, which animates diagnosis, generalized rewrite, guard
+   checking, and re-evaluation. It is explicitly labelled deterministic.
+
+Return to **Shipped Pipeline** for the official deterministic score path. Open
+`Experiments We Did Not Ship` only for deeper review of the cross-encoder.
 
 ## Step 4 — Evaluation
 

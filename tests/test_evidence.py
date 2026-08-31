@@ -92,6 +92,15 @@ class ManifestSchemaTests(unittest.TestCase):
     def test_generated_evidence_is_shippable(self):
         ignore_text = (_REPO_ROOT / ".gitignore").read_text(encoding="utf-8")
         self.assertNotIn("demo/evidence/", ignore_text)
+        prompt_lab = _load("prompt_evolution.json")
+        self.assertEqual(prompt_lab["status"], "continuous_iteration")
+        self.assertEqual(prompt_lab["split"], {"train": 23, "test": 12})
+        self.assertEqual(len(prompt_lab["rounds"]), 6)
+        self.assertEqual(prompt_lab["rounds"][0]["test_score"], 86.66666666666667)
+        self.assertEqual(prompt_lab["rounds"][1]["test_score"], 91.66666666666667)
+        self.assertEqual(prompt_lab["newline_ab"]["seed_as_is"], 86.7)
+        self.assertEqual(prompt_lab["newline_ab"]["seed_stripped"], 91.7)
+        self.assertGreaterEqual(len(prompt_lab["simulation_cases"]), 4)
 
 
 class MetricConsistencyTests(unittest.TestCase):

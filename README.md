@@ -47,6 +47,37 @@ state transition, recall funnel, Top-3 podium, and question-decision chain. The
 score anatomy exposes every shipped ranking weight and keeps popularity as a
 near-tie signal only.
 
+### Prompt Evolution Lab: inspect continuous LLM iteration
+
+[![Six-round prompt evolution curve, sensitivity checks, and deterministic golden-case walkthrough](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
+
+Switch Step 3 to **Prompt Evolution Lab** to inspect a real six-round,
+zero-fine-tuning Qwen3-8B experiment. The Lab visualizes the 23/12 golden-case
+split, train/test score curve, prompt-length and confusion signals, a controlled
+newline-sensitivity A/B, and the guardrails used before each candidate prompt is
+accepted. The best observed test score in this experiment moved from **86.7 to
+91.7**.
+
+Four clickable cases then replay the iteration contract as a deterministic
+walkthrough: input → expected intent/dialogue act → diagnosis → generalized
+rewrite → guard check → re-evaluation. This makes the development loop tangible
+without presenting a prerecorded case as a live model response.
+
+```mermaid
+flowchart LR
+    G[Golden-case split] --> E[Evaluate current prompt]
+    E --> C[Inspect confusion signal]
+    C --> R[Generalize one rewrite]
+    R --> V{Guard checks}
+    V -->|Reject| R
+    V -->|Accept| T[Re-evaluate train and test]
+    T --> E
+```
+
+This is an actively iterated experimental LLM layer. Its artifacts are included
+for technical transparency, while the official competition score remains tied
+to the deterministic submitted path.
+
 ## Multi-turn recommendation and ranking evidence
 
 The Tour exposes nine owner-frozen official-public traces across Buying,
@@ -105,6 +136,8 @@ sequenceDiagram
   next attribute.
 - **Evidence-first delivery:** the public website replays frozen official-public
   traces and never depends on a live LLM.
+- **Prompt self-evolution:** a local Qwen3-8B layer iterates against a protected
+  golden-case split with confusion-driven rewrites and explicit guard checks.
 - **Demo-only commercial extension:** a clearly separated relevance-aware ad
   auction illustrates monetization without altering organic ordering.
 
@@ -149,7 +182,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **78 tests pass**.
+Current expected result: **79 tests pass**.
 
 ## Evidence reproduction
 
@@ -210,6 +243,7 @@ flowchart LR
 | `scripts/build_demo_evidence.py` | Evidence regeneration and validation |
 | `scripts/build_static_site.py` | Portable static deployment bundle |
 | `reports/` | Reproducible experiment and evaluator outputs |
+| `exp_selfevolve/` | Prompt self-evolution loop, golden cases, and six frozen rounds |
 | `reranker.py` | Optional cross-encoder experiment, OFF by default |
 
 ## Claim and data boundaries

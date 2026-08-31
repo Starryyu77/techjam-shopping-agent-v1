@@ -43,7 +43,7 @@ class PublicDocumentationTests(unittest.TestCase):
     def test_current_test_count_is_not_stale(self):
         for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("78", text, relative)
+            self.assertIn("79", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 
@@ -62,6 +62,7 @@ class PublicDocumentationTests(unittest.TestCase):
             "ranking-browsing.jpg",
             "ranking-override.jpg",
             "mechanism-lab.jpg",
+            "prompt-evolution-lab.jpg",
             "evaluation.jpg",
             "transparent-ads.jpg",
         ]
@@ -82,6 +83,7 @@ class PublicDocumentationTests(unittest.TestCase):
                 self.assertIn(sample_id, text)
             self.assertIn("Rank #1", text)
             self.assertIn("Top-10", text)
+            self.assertIn("Prompt Evolution Lab", text)
 
 
 if __name__ == "__main__":

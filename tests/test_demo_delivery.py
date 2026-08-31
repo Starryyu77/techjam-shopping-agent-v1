@@ -40,6 +40,11 @@ class DemoRouteTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn("Shopping Copilot", body)
 
+    def test_tour_deep_link_query_serves_tour(self):
+        status, body = self._get("/?step=3")
+        self.assertEqual(status, 200)
+        self.assertIn("Shopping Copilot", body)
+
     def test_report_route_serves_the_technical_report(self):
         status, body = self._get("/report")
         self.assertEqual(status, 200)
@@ -68,9 +73,14 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertNotIn("Prefer multi-turn cases for richer visual", self.js)
         for element_id in ["mechanismContext", "mechanismPipeline", "mechanismEvidence", "mechanismVisual", "mechanismEvidenceData", "scoreAnatomy"]:
             self.assertIn(f'id="{element_id}"', self.html)
+        for element_id in ["mechanismModeTabs", "promptEvolutionLab", "promptRoundChart", "promptRoundSelector", "promptCaseSelector", "promptCaseFlow", "promptRunSimulation"]:
+            self.assertIn(f'id="{element_id}"', self.html)
         self.assertIn("mechanismDefinitions", self.js)
         self.assertIn("renderMechanismDetail", self.js)
         self.assertIn("renderMechanismVisual", self.js)
+        self.assertIn("renderPromptEvolutionLab", self.js)
+        self.assertIn("renderPromptRound", self.js)
+        self.assertIn("renderPromptSimulation", self.js)
         self.assertIn("candidate_pool_size", self.js)
         self.assertIn("coverage × entropy", self.js)
         self.assertIn("3 / (rank + 1)", self.js)
