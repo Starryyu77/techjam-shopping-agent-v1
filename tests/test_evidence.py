@@ -288,17 +288,40 @@ class CanonicalCaseTests(unittest.TestCase):
             self.assertTrue(path.is_file(), f"Trace not found: {path}")
 
     def test_override_showcase_has_three_diverse_owner_frozen_cases(self):
-        showcase = [
-            case
-            for case in self.manifest["canonical_cases"]
-            if case["scenario_type"] == "intent_override"
-        ]
-        self.assertEqual(
-            {case["sample_id"] for case in showcase},
-            {"public_0004", "public_0080", "public_0142"},
-        )
-        self.assertEqual(len({case["label"] for case in showcase}), 3)
-        self.assertTrue(all(case.get("description") for case in showcase))
+        expected = {
+            "buying": {"public_0018", "public_0152", "public_0179"},
+            "browsing": {"public_0049", "public_0007", "public_0063"},
+            "intent_override": {"public_0003", "public_0046", "public_0142"},
+        }
+        primaries = {
+            "buying": "public_0018",
+            "browsing": "public_0049",
+            "intent_override": "public_0003",
+        }
+
+        for scenario_type, sample_ids in expected.items():
+            showcase = [
+                case
+                for case in self.manifest["canonical_cases"]
+                if case["scenario_type"] == scenario_type
+            ]
+            self.assertEqual({case["sample_id"] for case in showcase}, sample_ids)
+            self.assertEqual(len({case["label"] for case in showcase}), 3)
+            self.assertTrue(all(case.get("description") for case in showcase))
+            primary = next(
+                case for case in showcase
+                if case["role"] in {"primary_video", "primary_website"}
+            )
+            self.assertEqual(primary["sample_id"], primaries[scenario_type])
+
+            for case in showcase:
+                trace = _load(f"scenarios/{case['sample_id']}.json")
+                self.assertGreaterEqual(trace["total_turns"], 2)
+                self.assertIsNotNone(trace["turns"][-1]["target_rank"])
+                self.assertTrue(
+                    any(turn["target_rank"] is None for turn in trace["turns"][:-1]),
+                    f"{case['sample_id']} does not demonstrate ranking improvement",
+                )
 
 
 class DatasetInfoTests(unittest.TestCase):

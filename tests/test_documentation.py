@@ -58,6 +58,10 @@ class PublicDocumentationTests(unittest.TestCase):
             "intent-override.jpg",
             "override-retain.jpg",
             "override-multislot.jpg",
+            "ranking-buying.jpg",
+            "ranking-browsing.jpg",
+            "ranking-override.jpg",
+            "mechanism-lab.jpg",
             "evaluation.jpg",
             "transparent-ads.jpg",
         ]
@@ -70,9 +74,14 @@ class PublicDocumentationTests(unittest.TestCase):
 
     def test_override_showcase_is_detailed_in_both_languages(self):
         for text in [self.readme_en, self.readme_zh]:
-            for sample_id in ["public_0004", "public_0080", "public_0142"]:
+            for sample_id in [
+                "public_0018", "public_0152", "public_0179",
+                "public_0049", "public_0007", "public_0063",
+                "public_0003", "public_0046", "public_0142",
+            ]:
                 self.assertIn(sample_id, text)
             self.assertIn("Rank #1", text)
+            self.assertIn("Top-10", text)
 
 
 if __name__ == "__main__":

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="theme-color" content="#081018" />
 <title>Shopping Copilot — Evidence Tour</title>
 <link rel="stylesheet" href="/tour.css" />
 </head>
@@ -12,6 +13,7 @@
 <header class="topbar">
   <div class="brand"><span class="dot"></span> Shopping Copilot</div>
   <div class="sub">Built for TikTok TechJam 2026 · Track 4</div>
+  <span class="topbar-status" aria-label="Offline verified evidence">Offline · Verified</span>
   <nav class="topbar-nav" aria-label="Site navigation">
     <a href="/tour">Tour</a>
     <a href="/evidence">Evidence</a>
@@ -44,36 +46,59 @@
   <!-- ============================================================ -->
   <section class="tour-step active" data-step="0" id="step0" aria-label="Result hook">
     <div class="hero">
-      <h1>Shopping Copilot</h1>
-      <p class="subtitle">Find the purchased product earlier and rank it higher — over 50,000 catalog items, in at most 10 turns.</p>
+      <div class="hero-orbit" aria-hidden="true"></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <div class="hero-kicker"><span>01</span> Judge-facing evidence tour</div>
+          <h1>Shopping<br><span>Copilot</span></h1>
+          <p class="subtitle">Find the purchased product earlier and rank it higher — across 50,000 catalog items, in at most 10 turns.</p>
 
-      <div class="metric-grid">
-        <div class="metric-big">
-          <div class="value" id="heroTS">—</div>
-          <div class="label">TechnicalScore</div>
+          <div class="cta-row">
+            <button class="btn-primary" id="btnStartTour" aria-label="Start 3-minute evidence tour">
+              Start evidence tour <span aria-hidden="true">↗</span>
+            </button>
+            <a class="btn-secondary" href="/evidence" aria-label="Inspect verified results">
+              Inspect verified results
+            </a>
+          </div>
+
+          <div class="hero-proofline" aria-label="System properties">
+            <span>Deterministic</span>
+            <span>Offline CPU</span>
+            <span>Inspectable traces</span>
+          </div>
         </div>
-      </div>
 
-      <div class="metric-row">
-        <span class="metric-sm">HitRate@10 <span class="val" id="heroHR">—</span></span>
-        <span class="metric-sm">MRR <span class="val" id="heroMRR">—</span></span>
-        <span class="metric-sm">MTTC <span class="val" id="heroMTTC">—</span></span>
-      </div>
+        <aside class="hero-scorecard" aria-label="Verified public evaluation score">
+          <div class="scorecard-head">
+            <span>Public evaluation</span>
+            <span class="scorecard-live"><i></i> Verified</span>
+          </div>
 
-      <div class="cta-row">
-        <button class="btn-primary" id="btnStartTour" aria-label="Start 3-minute evidence tour">
-          Start 3-minute evidence tour →
-        </button>
-        <a class="btn-secondary" href="/evidence" aria-label="Inspect verified results">
-          Inspect verified results
-        </a>
+          <div class="metric-grid">
+            <div class="metric-big">
+              <div class="value" id="heroTS">—</div>
+              <div class="label">TechnicalScore</div>
+            </div>
+          </div>
+
+          <div class="metric-row">
+            <span class="metric-sm">HitRate@10 <span class="val" id="heroHR">—</span></span>
+            <span class="metric-sm">MRR <span class="val" id="heroMRR">—</span></span>
+            <span class="metric-sm">MTTC <span class="val" id="heroMTTC">—</span></span>
+          </div>
+
+          <div class="scorecard-signal" aria-hidden="true">
+            <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          </div>
+          <div class="scorecard-foot">Rules V1.3 · frozen public evidence</div>
+        </aside>
       </div>
 
       <div class="footer-note" aria-live="polite">
-        <span class="evidence-badge competition">Competition Evidence</span>
-        Official public evaluator · <span id="heroN">—</span> sessions<br>
-        Offline CPU · Python standard library · No API keys<br>
-        <span class="unknown-mark">Private 800-session performance remains unknown.</span>
+        <div><span class="evidence-badge competition">Competition Evidence</span> Official public evaluator · <span id="heroN">—</span> sessions</div>
+        <div>Python standard library · No API keys</div>
+        <div class="unknown-mark">Private 800-session performance remains unknown.</div>
       </div>
     </div>
   </section>
@@ -136,11 +161,15 @@
         <button class="scenario-tab active" role="tab" aria-selected="true" data-scenario="buying">🛒 Buying</button>
         <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="browsing">👀 Browsing</button>
         <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="intent_override">🔄 Intent Override</button>
-        <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="boundary">🔲 Boundary</button>
+        <button class="scenario-tab" role="tab" aria-selected="false" data-scenario="boundary">🔲 Boundary · Edge case</button>
       </div>
 
       <div class="case-selector" id="caseSelector" aria-label="Canonical case selector" hidden>
         <!-- Populated by JS when a scenario has multiple owner-frozen cases -->
+      </div>
+
+      <div class="rank-journey" id="rankJourney" aria-live="polite">
+        <!-- Target rank and Top-10 changes across every turn -->
       </div>
 
       <div class="override-summary" id="overrideSummary" aria-live="polite" hidden>
@@ -182,8 +211,9 @@
 
         <!-- Right: Results panel -->
         <div class="results-panel" id="resultsPanel" aria-live="polite">
-          <div style="font-size:0.75rem;color:var(--text-muted);text-transform:uppercase;font-weight:600;margin-bottom:0.25rem;">
-            Top-10 Recommendations
+          <div class="results-heading">
+            <span>Top-10 Recommendations</span>
+            <span id="recommendationDelta">Initial list</span>
           </div>
           <div id="top10List"></div>
           <div id="targetRankInfo" class="mt-1 text-sm"></div>
@@ -219,31 +249,40 @@
         <span class="evidence-badge competition">Competition Evidence</span>
       </div>
 
-      <div class="state-section mb-2">
-        <h4>Pipeline</h4>
-        <div class="text-sm" style="color:var(--text-secondary);line-height:1.8;">
-          Message → <span class="text-evidence">Intent Router</span> →
-          <span class="text-evidence">Versioned Constraint State</span> →
-          <span class="text-evidence">SQLite FTS5 Retrieval</span> →
-          <span class="text-evidence">Rule Reranking</span> →
-          <span class="text-evidence">Candidate-driven Clarification</span> →
-          Top-10 parent_asin
-        </div>
+      <div class="mechanism-context" id="mechanismContext" aria-live="polite">
+        <!-- Current replay case and turn -->
       </div>
 
-      <div class="mechanism-grid" id="mechanismGrid">
-        <!-- Populated by JS -->
+      <div class="mechanism-pipeline" id="mechanismPipeline" role="tablist" aria-label="Mechanism pipeline">
+        <!-- Interactive stages populated by JS -->
       </div>
 
-      <div class="card mt-2" style="border-color: var(--unknown-border);">
-        <div class="card-header">
-          <div class="card-title text-sm">Experiments We Did Not Ship</div>
+      <div class="mechanism-inspector">
+        <article class="mechanism-explanation" id="mechanismExplanation" aria-live="polite">
+          <!-- Input, decision, output, failure, source -->
+        </article>
+        <aside class="mechanism-evidence" id="mechanismEvidence" aria-live="polite">
+          <div class="mechanism-evidence-title" id="mechanismEvidenceTitle"></div>
+          <div class="mechanism-visual" id="mechanismVisual" role="img" aria-label="Mechanism visualization"></div>
+          <div class="mechanism-evidence-data" id="mechanismEvidenceData"></div>
+        </aside>
+      </div>
+
+      <div class="score-anatomy" id="scoreAnatomy" aria-label="Rule ranking score anatomy">
+        <!-- Ranking weights populated by JS -->
+      </div>
+
+      <details class="mechanism-negative mt-2">
+        <summary>
+          <span>Experiments we did not ship</span>
           <span class="evidence-badge unknown">Negative Result</span>
+        </summary>
+        <div class="drawer-content">
+          <div class="text-sm" style="color:var(--text-secondary);line-height:1.6;" id="negativeResults">
+            <!-- Populated by JS -->
+          </div>
         </div>
-        <div class="text-sm" style="color:var(--text-secondary);line-height:1.6;" id="negativeResults">
-          <!-- Populated by JS -->
-        </div>
-      </div>
+      </details>
     </div>
 
     <div class="tour-nav">
@@ -302,13 +341,18 @@
         </tbody>
       </table>
 
-      <div class="reproduce-drawer mt-2">
-        <h4 class="text-sm text-muted mb-1">REPRODUCE</h4>
-        <pre id="reproduceCmd"></pre>
-        <div class="text-sm text-muted mt-1" id="artifactInfo">
-          <!-- report artifact, hash, commit, generated_at -->
+      <details class="reproduce-drawer mt-2">
+        <summary>
+          <span>Reproduce & artifact provenance</span>
+          <span class="drawer-hint">Command · report hash · agent commit</span>
+        </summary>
+        <div class="drawer-content">
+          <pre id="reproduceCmd"></pre>
+          <div class="text-sm text-muted mt-1" id="artifactInfo">
+            <!-- report artifact, hash, commit, generated_at -->
+          </div>
         </div>
-      </div>
+      </details>
     </div>
 
     <div class="tour-nav">
@@ -352,7 +396,7 @@
         </div>
       </div>
 
-      <div style="text-align:center;margin:1rem 0;">
+      <div class="auction-action">
         <button class="btn-primary" id="btnRunAuction">Run Auction</button>
       </div>
 
@@ -414,16 +458,19 @@
         </span>
       </div>
 
-      <div class="card mt-2" style="border-color: var(--unknown-border);">
-        <div class="card-title text-sm mb-1">Limitations</div>
-        <ul class="text-sm" style="color:var(--text-secondary);line-height:1.8;padding-left:1.5rem;">
+      <details class="card mt-2 limitations-drawer" style="border-color: var(--unknown-border);">
+        <summary>
+          <span>Limitations</span>
+          <span class="drawer-hint">5 explicit claim boundaries</span>
+        </summary>
+        <ul class="text-sm drawer-content" style="color:var(--text-secondary);line-height:1.65;padding-left:1.5rem;">
           <li>Public-set gains fix generic error classes but do not substitute for the hidden 800-session validation.</li>
           <li>Popularity tiebreaker band (5.0) is tuned on public 200; a conservative band=3 (+0.03) is available if hidden set regresses.</li>
           <li>The optional Qwen layer improves vague-intent classification but is not required for reported scores.</li>
           <li>No dense/vector recall — proven unnecessary since recall is 100% saturated (200/200).</li>
           <li>Ad engine is demo-only with simulated inventory and budgets.</li>
         </ul>
-      </div>
+      </details>
 
       <div class="closeout-quote">
         What we ship: a deterministic, offline, reproducible scored Agent.<br>

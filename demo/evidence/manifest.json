@@ -1,9 +1,9 @@
 {
   "evidence_scope": "official_public_200",
-  "generated_at": "2026-08-31T02:44:56.058700+00:00",
+  "generated_at": "2026-08-31T03:58:13.293881+00:00",
   "catalog_sha256": "da979b05a68af864cb0dcf9ee6a81c010c7e66a57978ad286c7a2e005fc69a67",
   "evaluator_git_commit": "34078351e1c3615e5505a2e829600b56a542e462",
-  "agent_git_commit": "a4e7c7d1067d0bfcc1d2d37f712d8d0d6c2a1c21",
+  "agent_git_commit": "0b79368cedce078c7dcd646a28edfad2f157a539",
   "report_sha256": "192783ee88cb4f1db470f4a0e6117ef7d4649d8dff4c1e5abe987e6def1324cc",
   "report_file": "official_public_rules_v1_3.json",
   "metrics": {
@@ -102,55 +102,79 @@
   "canonical_cases_frozen": true,
   "canonical_cases": [
     {
-      "sample_id": "public_0030",
+      "sample_id": "public_0018",
       "scenario_type": "buying",
-      "role": "primary_video"
+      "role": "primary_video",
+      "label": "Answer unlocks the target",
+      "description": "Outside Top-10 on Turns 1–2; the material answer moves the target to Rank #1 on Turn 3."
     },
     {
-      "sample_id": "public_0004",
-      "scenario_type": "intent_override",
-      "role": "primary_video",
-      "label": "Replace one preference",
-      "description": "Remove adjustable, add polyester, target moves to Rank #1."
+      "sample_id": "public_0152",
+      "scenario_type": "buying",
+      "role": "secondary",
+      "label": "Rich preference bundle",
+      "description": "A detailed color and material answer brings a previously absent watch to Rank #1."
+    },
+    {
+      "sample_id": "public_0179",
+      "scenario_type": "buying",
+      "role": "secondary",
+      "label": "Four-turn refinement",
+      "description": "The target stays outside Top-10 for three turns, then the closure answer moves it to Rank #2."
+    },
+    {
+      "sample_id": "public_0049",
+      "scenario_type": "browsing",
+      "role": "primary_website",
+      "label": "Six-turn exploration",
+      "description": "Vague browsing becomes leather, brown, rubber, casual, and soft; the target enters at Rank #1 on Turn 6."
+    },
+    {
+      "sample_id": "public_0007",
+      "scenario_type": "browsing",
+      "role": "secondary",
+      "label": "Material clarification",
+      "description": "The target is absent for two turns; a polyester and spandex answer moves it to Rank #1."
     },
     {
       "sample_id": "public_0063",
       "scenario_type": "browsing",
-      "role": "primary_website"
+      "role": "secondary",
+      "label": "Fast clarification",
+      "description": "A vague shorts request becomes specific after one stretch-feature answer and reaches Rank #1."
     },
     {
-      "sample_id": "public_0050",
-      "scenario_type": "boundary",
-      "role": "primary_website"
+      "sample_id": "public_0003",
+      "scenario_type": "intent_override",
+      "role": "primary_video",
+      "label": "Reset, then recover",
+      "description": "Remove the earlier stainless-steel preference, continue refining, and bring the target from outside Top-10 to Rank #1 on Turn 5."
     },
     {
-      "sample_id": "public_0018",
-      "scenario_type": "buying",
-      "role": "secondary"
-    },
-    {
-      "sample_id": "public_0006",
-      "scenario_type": "browsing",
-      "role": "secondary"
-    },
-    {
-      "sample_id": "public_0080",
+      "sample_id": "public_0046",
       "scenario_type": "intent_override",
       "role": "secondary",
-      "label": "Retain the valid value",
-      "description": "Narrow cotton + polyester to cotton, preserving the valid material and reaching Rank #1."
+      "label": "Rank #5 to Rank #1",
+      "description": "Material evidence moves the target from #5 to #1; override then removes cotton and polyester while retaining wool."
     },
     {
       "sample_id": "public_0142",
       "scenario_type": "intent_override",
       "role": "secondary",
       "label": "Rewrite multiple slots",
-      "description": "Remove black, comfortable, and lightweight; add stainless steel and hypoallergenic; target reaches Rank #1."
+      "description": "Remove black, comfortable, and lightweight; add stainless steel and hypoallergenic; the scored target reaches Rank #1."
+    },
+    {
+      "sample_id": "public_0050",
+      "scenario_type": "boundary",
+      "role": "primary_website",
+      "label": "No-preference boundary",
+      "description": "An explicit no-preference answer is handled without losing the valid category state."
     }
   ],
   "canonical_approval": {
     "approved_at": "2026-08-31",
-    "approval_note": "Primary Buying remains public_0030. Override showcase freezes three complementary traces: simple replacement, selective retention, and multi-slot rewrite.",
+    "approval_note": "Ranking-first showcase: Buying, Browsing, and Intent Override each expose three official multi-turn traces. One-turn cases are removed from the primary recommendation story.",
     "source": "demo/canonical_cases.json"
   },
   "evaluator_command": "python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules",

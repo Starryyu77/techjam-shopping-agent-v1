@@ -55,6 +55,7 @@ class TourDeliveryMarkupTests(unittest.TestCase):
     def setUp(self):
         self.html = (_REPO_ROOT / "demo" / "static" / "tour.html").read_text(encoding="utf-8")
         self.js = (_REPO_ROOT / "demo" / "static" / "tour.js").read_text(encoding="utf-8")
+        self.css = (_REPO_ROOT / "demo" / "static" / "tour.css").read_text(encoding="utf-8")
 
     def test_closeout_internal_links_are_real_routes(self):
         self.assertIn('href="/report" id="linkReport"', self.html)
@@ -65,6 +66,16 @@ class TourDeliveryMarkupTests(unittest.TestCase):
     def test_tour_uses_frozen_canonical_cases(self):
         self.assertIn("manifest.canonical_cases", self.js)
         self.assertNotIn("Prefer multi-turn cases for richer visual", self.js)
+        for element_id in ["mechanismContext", "mechanismPipeline", "mechanismEvidence", "mechanismVisual", "mechanismEvidenceData", "scoreAnatomy"]:
+            self.assertIn(f'id="{element_id}"', self.html)
+        self.assertIn("mechanismDefinitions", self.js)
+        self.assertIn("renderMechanismDetail", self.js)
+        self.assertIn("renderMechanismVisual", self.js)
+        self.assertIn("candidate_pool_size", self.js)
+        self.assertIn("coverage × entropy", self.js)
+        self.assertIn("3 / (rank + 1)", self.js)
+        for visual_class in ["visual-route-map", "visual-state-flow", "visual-recall-funnel", "visual-rank-podium", "visual-question-flow"]:
+            self.assertIn(visual_class, self.js)
 
     def test_ad_invariant_renders_actual_before_and_after_lists(self):
         self.assertIn('id="organicBeforeList"', self.html)
@@ -75,8 +86,16 @@ class TourDeliveryMarkupTests(unittest.TestCase):
     def test_override_replay_supports_multiple_cases_and_full_state_summary(self):
         self.assertIn('id="caseSelector"', self.html)
         self.assertIn('id="overrideSummary"', self.html)
+        self.assertIn('id="rankJourney"', self.html)
+        self.assertIn('id="recommendationDelta"', self.html)
         self.assertIn("canonicalCasesByScenario", self.js)
         self.assertIn("renderOverrideSummary", self.js)
+        self.assertIn("renderRankJourney", self.js)
+        self.assertIn("renderRecommendationDelta", self.js)
+        self.assertIn("loadScenario(scenarioType, button.dataset.sampleId)", self.js)
+        self.assertNotIn("loadScenario('intent_override', button.dataset.sampleId)", self.js)
+        self.assertNotIn("#step2 .case-choice > span:not(.case-index) { display: none; }", self.css)
+        self.assertIn("Compact ranking readability at the default 1280×720 viewport", self.css)
         for label in ["Before override", "Removed", "Retained", "Added", "After override", "Rank progression"]:
             self.assertIn(label, self.js)
 

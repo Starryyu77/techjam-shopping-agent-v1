@@ -18,11 +18,75 @@ let currentTrace = null;
 let currentTurnIdx = 0;
 let currentCaseId = null;
 let autoPlayTimer = null;
+let currentMechanismIdx = 0;
 
 // Canonical cases: map scenario_type -> sample_id
 const canonicalCases = {};
 const canonicalCasesByScenario = {};
 const siteBaseUrl = new URL('.', document.currentScript.src);
+
+const mechanismDefinitions = [
+  {
+    id: 'route',
+    number: '01',
+    title: 'Intent Router',
+    short: 'Buying or Browsing?',
+    input: 'Raw user message + pending question context',
+    decision: 'Detect ITEM vs VAGUE intent and NEW / ANSWER / OVERRIDE / NOOP dialogue act. Concrete Buying locks constraints; vague Browsing asks before narrowing.',
+    output: 'domain_intent + dialogue_act + extracted clauses',
+    failure: 'Premature Buying classification filters a vague request before the user has expressed useful constraints.',
+    metric: 'Buying HR 0.988 · Browsing HR 1.000',
+    source: 'shopping_agent.py · RuleIntentParser',
+  },
+  {
+    id: 'state',
+    number: '02',
+    title: 'Versioned State',
+    short: 'Add, retain, or erase?',
+    input: 'Intent parse + previous ShoppingState',
+    decision: 'Apply hard, soft, and negative constraints. OVERRIDE erases superseded soft values before writing replacements instead of appending conflicts.',
+    output: 'New inspectable state + added / removed / retained diff',
+    failure: 'Append-only memory leaves contradictory preferences active and blocks the intended product.',
+    metric: 'Intent Override HR 1.000 across 30 public sessions',
+    source: 'shopping_agent.py · ShoppingState.apply',
+  },
+  {
+    id: 'recall',
+    number: '03',
+    title: 'SQLite FTS5 Recall',
+    short: 'Retrieve a broad pool',
+    input: 'Category + hard/soft values + retrieval evidence + profile fallback',
+    decision: 'Build a deduplicated OR query, retrieve a broad lexical pool, then remove rejected and negative-constraint products.',
+    output: 'Up to 50 policy candidates + requested Top-10',
+    failure: 'Narrow recall makes reranking irrelevant because the purchased product never reaches the candidate pool.',
+    metric: 'Public target recall saturated at 200 / 200',
+    source: 'shopping_agent.py · CatalogSearch.search',
+  },
+  {
+    id: 'rerank',
+    number: '04',
+    title: 'Rule Reranker',
+    short: 'Score matches transparently',
+    input: 'FTS5 candidates + constraint state + user profile',
+    decision: 'Start with 3 / (rank + 1), reward category and matched constraints, penalize missing hard attributes, then use popularity only inside near-tied score bands.',
+    output: 'Deterministic ordered Top-10 parent_asin list',
+    failure: 'Unbanded popularity can displace a clearly better constraint match; random ties bury relevant products.',
+    metric: 'TechnicalScore 0.826 → 0.867 with banded tie-breaking',
+    source: 'shopping_agent.py · CatalogSearch.search',
+  },
+  {
+    id: 'question',
+    number: '05',
+    title: 'Question Policy',
+    short: 'Ask only what separates candidates',
+    input: 'Current policy candidate pool + already known/asked attributes',
+    decision: 'For each remaining attribute, compute coverage × entropy. Ask the highest-information attribute only when its score clears 0.15.',
+    output: 'ask_attribute or null when the candidate set is focused',
+    failure: 'Fixed-order questions waste turns on attributes that do not separate the current products.',
+    metric: 'MTTC improved from 3.50 → 2.22',
+    source: 'shopping_agent.py · CandidateQuestionPolicy.choose',
+  },
+];
 
 // ---------------------------------------------------------------------------
 // Data loading
@@ -184,7 +248,7 @@ async function loadScenario(scenarioType, requestedSampleId) {
 function renderCaseSelector(scenarioType, activeSampleId) {
   const selector = document.getElementById('caseSelector');
   const cases = canonicalCasesByScenario[scenarioType] || [];
-  if (scenarioType !== 'intent_override' || cases.length <= 1) {
+  if (cases.length <= 1) {
     selector.hidden = true;
     selector.innerHTML = '';
     return;
@@ -204,7 +268,7 @@ function renderCaseSelector(scenarioType, activeSampleId) {
   selector.querySelectorAll('.case-choice').forEach(button => {
     button.addEventListener('click', () => {
       stopAutoPlay();
-      loadScenario('intent_override', button.dataset.sampleId);
+      loadScenario(scenarioType, button.dataset.sampleId);
     });
   });
 }
@@ -233,10 +297,6 @@ function renderOverrideSummary() {
   const removed = overrideTurn.state_diff.removed || {};
   const retained = overrideTurn.state_diff.retained || {};
   const added = overrideTurn.state_diff.added || {};
-  const rankProgression = currentTrace.turns.map(turn =>
-    'T' + turn.turn + ' ' + (turn.target_rank ? '#' + turn.target_rank : '—')
-  ).join(' → ');
-
   summary.hidden = false;
   step.classList.add('override-active');
   summary.innerHTML =
@@ -244,8 +304,7 @@ function renderOverrideSummary() {
     summaryCard('Removed', flattenDiffBucket(removed), 'removed') +
     summaryCard('Retained', flattenDiffBucket(retained), 'retained') +
     summaryCard('Added', flattenDiffBucket(added), 'added') +
-    summaryCard('After override', flattenStateSnapshot(after), 'after') +
-    summaryCard('Rank progression', [rankProgression, 'Target: ' + currentTrace.target_title], 'rank');
+    summaryCard('After override', flattenStateSnapshot(after), 'after');
 }
 
 function summaryCard(label, values, kind) {
@@ -281,6 +340,75 @@ function flattenDiffBucket(bucket) {
   return values;
 }
 
+function rawTargetRank(turn) {
+  const target = turn.top10.find(item => item.is_target);
+  return target ? target.rank : null;
+}
+
+function recommendationChange(turnIndex) {
+  if (!currentTrace || turnIndex <= 0) {
+    return { added: 10, retained: 0, moved: 0 };
+  }
+  const previous = currentTrace.turns[turnIndex - 1].top10;
+  const current = currentTrace.turns[turnIndex].top10;
+  const previousRanks = new Map(previous.map(item => [item.parent_asin, item.rank]));
+  const retained = current.filter(item => previousRanks.has(item.parent_asin));
+  return {
+    added: current.length - retained.length,
+    retained: retained.length,
+    moved: retained.filter(item => previousRanks.get(item.parent_asin) !== item.rank).length,
+  };
+}
+
+function rankPresentation(turn) {
+  const rawRank = rawTargetRank(turn);
+  if (turn.target_rank) {
+    return { label: 'Rank #' + turn.target_rank, note: 'Scored hit', kind: 'hit', rawRank };
+  }
+  if (rawRank) {
+    return { label: 'Preview #' + rawRank, note: 'Not scored yet', kind: 'preview', rawRank };
+  }
+  return { label: 'Outside Top-10', note: 'Keep refining', kind: 'miss', rawRank: null };
+}
+
+function renderRankJourney(activeIndex) {
+  const container = document.getElementById('rankJourney');
+  if (!currentTrace) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const nodes = currentTrace.turns.map((turn, index) => {
+    const rank = rankPresentation(turn);
+    const delta = recommendationChange(index);
+    const changeLabel = index === 0 ? 'Initial Top-10' : delta.added + ' new · ' + delta.moved + ' moved';
+    return '<div class="rank-node ' + rank.kind + (index === activeIndex ? ' active' : '') + '">' +
+      '<span class="rank-turn">T' + turn.turn + '</span>' +
+      '<strong>' + rank.label + '</strong>' +
+      '<small>' + changeLabel + '</small>' +
+      '</div>';
+  }).join('<span class="rank-arrow" aria-hidden="true">→</span>');
+
+  const activeTurn = currentTrace.turns[activeIndex];
+
+  container.innerHTML =
+    '<div class="rank-journey-target">' +
+      '<span>Recommendation impact · ' + escHtml(currentTrace.scenario_type.replace(/_/g, ' ')) + ' · ' + currentTrace.sample_id + '</span>' +
+      '<strong>' + escHtml(truncate(currentTrace.target_title, 68)) + '</strong>' +
+      '<em><b>User signal T' + activeTurn.turn + ':</b> ' + escHtml(truncate(activeTurn.user_message, 82)) + '</em>' +
+    '</div>' +
+    '<div class="rank-track" aria-label="Rank progression">' + nodes + '</div>';
+}
+
+function renderRecommendationDelta(turn, turnIndex) {
+  const delta = recommendationChange(turnIndex);
+  const rank = rankPresentation(turn);
+  const label = turnIndex === 0
+    ? 'Initial list · ' + rank.label
+    : delta.added + ' new · ' + delta.retained + ' retained · ' + delta.moved + ' reordered · ' + rank.label;
+  document.getElementById('recommendationDelta').textContent = label;
+}
+
 function renderReplayHeader() {
   const t = currentTrace;
   document.getElementById('replayHeader').innerHTML =
@@ -293,6 +421,7 @@ function renderReplayHeader() {
 function renderTurnTimeline() {
   const container = document.getElementById('turnTimeline');
   container.innerHTML = '';
+  container.classList.toggle('long-trace', currentTrace.turns.length > 4);
   for (const [idx, turn] of currentTrace.turns.entries()) {
     const card = document.createElement('button');
     card.className = 'turn-card' + (idx === 0 ? ' active' : '');
@@ -323,6 +452,7 @@ function updateTurnHighlight(idx) {
 function renderTurnDetail(idx) {
   const turn = currentTrace.turns[idx];
   updateTurnHighlight(idx);
+  renderRankJourney(idx);
 
   // Route indicator
   const intent = turn.intent.domain_intent;
@@ -341,13 +471,19 @@ function renderTurnDetail(idx) {
   document.getElementById('askAttribute').innerHTML = turn.ask_attribute
     ? '<span class="constraint-chip hard">' + turn.ask_attribute + '</span>'
     : '<span class="text-muted">—</span>';
+  document.getElementById('askAttribute').closest('.state-section').classList.toggle('is-empty', !turn.ask_attribute);
 
   // Top-10
-  renderTop10(turn);
+  renderTop10(turn, idx);
 
   // Update controls
   document.getElementById('replayPrev').disabled = idx === 0;
   document.getElementById('replayNext').disabled = idx >= currentTrace.turns.length - 1;
+
+  const mechanismPipeline = document.getElementById('mechanismPipeline');
+  if (mechanismPipeline && mechanismPipeline.children.length) {
+    renderMechanismDetail(currentMechanismIdx);
+  }
 }
 
 function renderConstraints(elementId, stateAfter, diff, diffField, chipClass) {
@@ -378,27 +514,41 @@ function renderConstraints(elementId, stateAfter, diff, diffField, chipClass) {
   }
 
   el.innerHTML = html.length ? html.join('') : '<span class="text-muted text-sm">—</span>';
+  el.closest('.state-section').classList.toggle('is-empty', html.length === 0);
 }
 
-function renderTop10(turn) {
+function renderTop10(turn, turnIndex) {
   const container = document.getElementById('top10List');
-  container.innerHTML = turn.top10.map(r =>
-    '<div class="result-item' + (r.is_target ? ' is-target' : '') + '">' +
+  const previousRanks = turnIndex > 0
+    ? new Map(currentTrace.turns[turnIndex - 1].top10.map(item => [item.parent_asin, item.rank]))
+    : new Map();
+  container.innerHTML = turn.top10.map(r => {
+    const previousRank = previousRanks.get(r.parent_asin);
+    let movement = turnIndex === 0 ? '' : previousRank == null ? 'NEW' : previousRank === r.rank ? '=' : previousRank > r.rank ? '↑' + (previousRank - r.rank) : '↓' + (r.rank - previousRank);
+    const scoredTarget = r.is_target && turn.target_rank === r.rank;
+    const previewTarget = r.is_target && !scoredTarget;
+    return '<div class="result-item' + (scoredTarget ? ' is-target' : '') + (previewTarget ? ' is-target-preview' : '') + '">' +
     '<span class="rank">#' + r.rank + '</span>' +
     '<div class="asin-title">' +
     '<span class="title">' + escHtml(truncate(r.title, 60)) + '</span>' +
-    '<span class="asin">' + r.parent_asin + (r.price != null ? ' · $' + r.price : '') + '</span>' +
+    '<span class="asin">' + r.parent_asin + (r.price != null ? ' · $' + r.price : '') +
+      (movement ? ' <span class="movement-badge">' + movement + '</span>' : '') + '</span>' +
     '</div>' +
-    (r.is_target ? '<span class="target-badge">★ Target</span>' : '') +
-    '</div>'
-  ).join('');
+    (scoredTarget ? '<span class="target-badge">★ Scored target</span>' : '') +
+    (previewTarget ? '<span class="target-badge preview">Public preview</span>' : '') +
+    '</div>';
+  }).join('');
 
   const info = document.getElementById('targetRankInfo');
   if (turn.target_rank) {
     info.innerHTML = '<span class="text-success">✓ Target hit at rank #' + turn.target_rank + '</span>';
+  } else if (rawTargetRank(turn)) {
+    info.innerHTML = '<span class="text-evidence">Public-label preview at rank #' + rawTargetRank(turn) + '</span>' +
+      '<br><span class="text-muted">Not an official hit until the override gate is satisfied.</span>';
   } else {
     info.innerHTML = '<span class="text-muted">Target not in Top-10 this turn</span>';
   }
+  renderRecommendationDelta(turn, turnIndex);
 }
 
 function bindReplay() {
@@ -471,70 +621,26 @@ function stopAutoPlay() {
 // Step 3: Mechanism cards
 // ---------------------------------------------------------------------------
 function renderMechanisms() {
-  const mechanisms = [
-    {
-      title: 'Dual-track Routing',
-      input: 'User message',
-      decision: 'Classify as Buying (concrete) vs Browsing (vague). Buying locks hard constraints early; Browsing asks first.',
-      output: 'domain_intent (ITEM / VAGUE) + dialogue_act',
-      failure: 'Browsing queries treated as Buying → premature filtering → missed target',
-      delta: 'Override HR: 1.000 (all 30 sessions)',
-      source: 'shopping_agent.py#RuleIntentParser',
-    },
-    {
-      title: 'Erase-and-Rewrite State Machine',
-      input: 'Intent parse result + current state',
-      decision: 'OVERRIDE act erases soft_preferences, then writes new slot. Not append-only.',
-      output: 'Updated constraint state (hard / soft / negative)',
-      failure: 'Append-only → conflicting constraints → target never enters Top-10',
-      delta: 'Intent Override HR: 0.967 → 1.000',
-      source: 'shopping_agent.py#ShoppingState.apply',
-    },
-    {
-      title: 'Candidate-driven Clarification',
-      input: 'Current candidate pool',
-      decision: 'Score each attribute by coverage × entropy. Ask the single most discriminative question.',
-      output: 'ask_attribute or null (stop asking)',
-      failure: 'Fixed-order questioning → wasted turns → high MTTC',
-      delta: 'MTTC: 3.50 → 2.22',
-      source: 'shopping_agent.py#CandidateQuestionPolicy',
-    },
-    {
-      title: 'Banded Popularity Tiebreaker',
-      input: 'Rule-scored candidates with near-tied scores',
-      decision: 'Candidates in the same score band ordered by log(review_count). Tiebreaker only — never displaces higher-score match.',
-      output: 'Final Top-10 ranking',
-      failure: 'Random tie ordering → target ranked below look-alikes → missed HR',
-      delta: 'TS: 0.826 → 0.867 (net +5 hits, 0 new misses)',
-      source: 'shopping_agent.py#CatalogSearch.search',
-    },
-  ];
-
-  const grid = document.getElementById('mechanismGrid');
-  grid.innerHTML = mechanisms.map(m =>
-    '<div class="mechanism-card" tabindex="0" role="button" aria-expanded="false">' +
-    '<div class="mc-title">' + m.title + '</div>' +
-    '<div class="text-sm text-muted">' + m.decision + '</div>' +
-    '<div class="mc-detail">' +
-    '<div class="mc-row"><span class="mc-label">Input</span><span>' + m.input + '</span></div>' +
-    '<div class="mc-row"><span class="mc-label">Output</span><span>' + m.output + '</span></div>' +
-    '<div class="mc-row"><span class="mc-label">Solves</span><span>' + m.failure + '</span></div>' +
-    '<div class="mc-row"><span class="mc-label">Metric Δ</span><span class="text-evidence">' + m.delta + '</span></div>' +
-    '<div class="mc-row"><span class="mc-label">Source</span><span class="mono text-sm">' + m.source + '</span></div>' +
-    '</div></div>'
+  const pipeline = document.getElementById('mechanismPipeline');
+  pipeline.innerHTML = mechanismDefinitions.map((mechanism, index) =>
+    '<button class="mechanism-stage' + (index === currentMechanismIdx ? ' active' : '') + '" ' +
+    'role="tab" aria-selected="' + (index === currentMechanismIdx) + '" data-mechanism="' + index + '">' +
+      '<span>' + mechanism.number + '</span>' +
+      '<strong>' + mechanism.title + '</strong>' +
+      '<small>' + mechanism.short + '</small>' +
+    '</button>' +
+    (index < mechanismDefinitions.length - 1 ? '<i aria-hidden="true">→</i>' : '')
   ).join('');
 
-  // Toggle expansion
-  grid.querySelectorAll('.mechanism-card').forEach(card => {
-    const toggle = () => {
-      const expanded = card.classList.toggle('expanded');
-      card.setAttribute('aria-expanded', expanded);
-    };
-    card.addEventListener('click', toggle);
-    card.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+  pipeline.querySelectorAll('.mechanism-stage').forEach(button => {
+    button.addEventListener('click', () => {
+      currentMechanismIdx = Number.parseInt(button.dataset.mechanism, 10);
+      renderMechanismDetail(currentMechanismIdx);
     });
   });
+
+  renderScoreAnatomy();
+  renderMechanismDetail(currentMechanismIdx);
 
   // Negative results
   document.getElementById('negativeResults').innerHTML =
@@ -545,6 +651,224 @@ function renderMechanisms() {
     '<p class="mt-1"><strong>Prompt self-evolution:</strong> Automated prompt optimization loop. ' +
     'Only measurable gain traced to trailing-newline sensitivity of the chat template. ' +
     'Seed prompt was already near-optimal. <strong>Did not ship a rewritten prompt.</strong></p>';
+}
+
+function renderMechanismContext() {
+  const container = document.getElementById('mechanismContext');
+  if (!currentTrace) {
+    container.innerHTML = '<span class="text-muted">Load a Replay case to inspect its live mechanism trace.</span>';
+    return;
+  }
+  const turn = currentTrace.turns[currentTurnIdx];
+  const rank = rankPresentation(turn);
+  container.innerHTML =
+    '<div class="mechanism-context-id">' +
+      '<span>Live official trace</span>' +
+      '<strong>' + currentTrace.sample_id + ' · Turn ' + turn.turn + ' / ' + currentTrace.turns.length + '</strong>' +
+    '</div>' +
+    '<div class="mechanism-context-message">' +
+      '<span>User signal</span>' +
+      '<strong>' + escHtml(truncate(turn.user_message, 118)) + '</strong>' +
+    '</div>' +
+    '<div class="mechanism-context-rank ' + rank.kind + '">' +
+      '<span>Recommendation impact</span>' +
+      '<strong>' + rank.label + '</strong>' +
+    '</div>';
+}
+
+function renderMechanismDetail(index) {
+  const mechanism = mechanismDefinitions[index] || mechanismDefinitions[0];
+  currentMechanismIdx = index;
+  renderMechanismContext();
+
+  document.querySelectorAll('.mechanism-stage').forEach((button, buttonIndex) => {
+    const active = buttonIndex === index;
+    button.classList.toggle('active', active);
+    button.setAttribute('aria-selected', active ? 'true' : 'false');
+  });
+
+  document.getElementById('mechanismExplanation').innerHTML =
+    '<div class="mechanism-kicker">' + mechanism.number + ' · Mechanism</div>' +
+    '<h3>' + mechanism.title + '</h3>' +
+    '<p class="mechanism-decision">' + mechanism.decision + '</p>' +
+    '<dl class="mechanism-contract">' +
+      '<div><dt>Input</dt><dd>' + mechanism.input + '</dd></div>' +
+      '<div><dt>Output</dt><dd>' + mechanism.output + '</dd></div>' +
+      '<div><dt>Failure prevented</dt><dd>' + mechanism.failure + '</dd></div>' +
+    '</dl>' +
+    '<div class="mechanism-proof"><span>' + mechanism.metric + '</span><code>' + mechanism.source + '</code></div>';
+
+  document.getElementById('mechanismEvidenceTitle').innerHTML =
+    'Live trace evidence <code>' + (currentTrace ? currentTrace.sample_id + ' · T' + currentTrace.turns[currentTurnIdx].turn : 'No trace') + '</code>';
+  const visual = document.getElementById('mechanismVisual');
+  visual.innerHTML = renderMechanismVisual(mechanism.id);
+  visual.setAttribute('aria-label', mechanism.title + ' visualization for the current official trace');
+  document.getElementById('mechanismEvidenceData').innerHTML = renderLiveMechanismEvidence(mechanism.id);
+}
+
+function evidenceStat(label, value, kind) {
+  return '<div class="evidence-stat ' + (kind || '') + '"><span>' + label + '</span><strong>' + escHtml(String(value)) + '</strong></div>';
+}
+
+function mechanismQueryTerms(turn) {
+  const terms = [];
+  const state = turn.state_after || {};
+  if (state.category) terms.push(state.category);
+  for (const field of ['hard_constraints', 'soft_preferences']) {
+    for (const values of Object.values(state[field] || {})) terms.push(...values);
+  }
+  return [...new Set(terms)].slice(0, 8);
+}
+
+function renderMechanismVisual(mechanismId) {
+  if (!currentTrace) return '<div class="visual-empty">Open Replay to load a trace</div>';
+  const turn = currentTrace.turns[currentTurnIdx];
+
+  if (mechanismId === 'route') {
+    const buying = turn.intent.domain_intent === 'ITEM';
+    return '<div class="visual-route-map">' +
+      '<div class="visual-source-node"><span>User</span><strong>Message</strong></div>' +
+      '<div class="visual-route-fork"><i></i><i></i></div>' +
+      '<div class="visual-route-lanes">' +
+        '<div class="visual-route-lane' + (buying ? ' active' : '') + '"><span>BUYING</span><strong>Lock constraints</strong></div>' +
+        '<div class="visual-route-lane' + (!buying ? ' active' : '') + '"><span>BROWSING</span><strong>Ask before filtering</strong></div>' +
+      '</div>' +
+      '<div class="visual-output-node"><span>Dialogue act</span><strong>' + escHtml(turn.intent.dialogue_act || '—') + '</strong></div>' +
+    '</div>';
+  }
+
+  if (mechanismId === 'state') {
+    const before = currentTurnIdx > 0 ? countStateValues(currentTrace.turns[currentTurnIdx - 1].state_after) : 0;
+    const after = countStateValues(turn.state_after);
+    const added = flattenDiffBucket(turn.state_diff.added || {});
+    const removed = flattenDiffBucket(turn.state_diff.removed || {});
+    const retained = flattenDiffBucket(turn.state_diff.retained || {});
+    return '<div class="visual-state-flow">' +
+      '<div class="visual-state-snapshot"><span>Before</span><strong>' + before + ' values</strong></div>' +
+      '<div class="visual-state-delta">' +
+        '<span class="added">+' + added.length + ' added</span>' +
+        '<span class="removed">−' + removed.length + ' removed</span>' +
+        '<span class="retained">=' + retained.length + ' retained</span>' +
+      '</div>' +
+      '<div class="visual-state-arrow">→</div>' +
+      '<div class="visual-state-snapshot after"><span>After</span><strong>' + after + ' values</strong></div>' +
+    '</div>';
+  }
+
+  if (mechanismId === 'recall') {
+    const termCount = mechanismQueryTerms(turn).length;
+    return '<div class="visual-recall-funnel">' +
+      '<div class="funnel-step catalog"><span>Frozen catalog</span><strong>50,000</strong></div>' +
+      '<div class="funnel-arrow">→</div>' +
+      '<div class="funnel-step query"><span>FTS5 OR terms</span><strong>' + termCount + '</strong></div>' +
+      '<div class="funnel-arrow">→</div>' +
+      '<div class="funnel-step pool"><span>Lexical pool</span><strong>Broad recall</strong></div>' +
+      '<div class="funnel-arrow">→</div>' +
+      '<div class="funnel-step visible"><span>Visible list</span><strong>' + turn.top10.length + '</strong></div>' +
+    '</div>';
+  }
+
+  if (mechanismId === 'rerank') {
+    return '<div class="visual-rank-podium">' + turn.top10.slice(0, 3).map(item =>
+      '<div class="podium-item rank-' + item.rank + (item.is_target ? ' target' : '') + '">' +
+        '<strong>#' + item.rank + '</strong><span>' + escHtml(truncate(item.title, 28)) + '</span><i></i>' +
+      '</div>'
+    ).join('') + '</div>';
+  }
+
+  const selected = turn.ask_attribute || 'STOP';
+  return '<div class="visual-question-flow">' +
+    '<div class="question-node"><span>Candidates</span><strong>' + (turn.candidate_pool_size || 0) + '</strong></div>' +
+    '<div class="question-arrow">→</div>' +
+    '<div class="question-node formula"><span>Score attributes</span><strong>coverage × entropy</strong></div>' +
+    '<div class="question-arrow">→</div>' +
+    '<div class="question-gate"><span>≥ 0.15?</span></div>' +
+    '<div class="question-arrow">→</div>' +
+    '<div class="question-node selected"><span>Ask</span><strong>' + escHtml(selected) + '</strong></div>' +
+  '</div>';
+}
+
+function renderLiveMechanismEvidence(mechanismId) {
+  if (!currentTrace) {
+    return '<p class="text-muted text-sm">Open Replay to load a trace.</p>';
+  }
+  const turn = currentTrace.turns[currentTurnIdx];
+
+  if (mechanismId === 'route') {
+    return '<div class="evidence-stat-grid">' +
+      evidenceStat('domain_intent', turn.intent.domain_intent || '—', 'evidence') +
+      evidenceStat('dialogue_act', turn.intent.dialogue_act || '—', 'evidence') +
+      evidenceStat('confidence', Number(turn.intent.confidence || 0).toFixed(2), '') +
+      evidenceStat('next question', turn.ask_attribute || 'stop asking', '') +
+      '</div>';
+  }
+
+  if (mechanismId === 'state') {
+    const added = flattenDiffBucket(turn.state_diff.added || {});
+    const removed = flattenDiffBucket(turn.state_diff.removed || {});
+    const retained = flattenDiffBucket(turn.state_diff.retained || {});
+    return '<div class="state-diff-evidence">' +
+      mechanismDiffColumn('Added', added, 'added') +
+      mechanismDiffColumn('Removed', removed, 'removed') +
+      mechanismDiffColumn('Retained', retained, 'retained') +
+      '</div>';
+  }
+
+  if (mechanismId === 'recall') {
+    const terms = mechanismQueryTerms(turn);
+    return '<div class="evidence-stat-grid">' +
+      evidenceStat('FTS5 terms', terms.length || 0, 'evidence') +
+      evidenceStat('visible candidates', turn.candidate_pool_size || 0, '') +
+      evidenceStat('returned list', turn.top10.length, '') +
+      evidenceStat('negative filter', Object.keys(turn.state_after.negative_constraints || {}).length ? 'active' : 'none', '') +
+      '</div>' +
+      '<div class="query-preview"><span>OR query preview</span><code>' + escHtml(terms.map(term => '"' + term + '"').join(' OR ') || 'No query terms') + '</code></div>';
+  }
+
+  if (mechanismId === 'rerank') {
+    return '<div class="query-preview"><span>Deterministic order</span><code>constraint score band → log1p(review_count) tie-break</code></div>';
+  }
+
+  const selected = turn.ask_attribute || 'none — candidate set is focused';
+  return '<div class="evidence-stat-grid">' +
+    evidenceStat('selected attribute', selected, 'evidence') +
+    evidenceStat('visible Top-10', turn.candidate_pool_size || 0, '') +
+    evidenceStat('known constraints', countStateValues(turn.state_after), '') +
+    evidenceStat('threshold', '0.15', '') +
+    '</div>' +
+    '<div class="query-preview"><span>Decision rule</span><code>max(coverage × entropy), excluding known and already-asked attributes</code></div>';
+}
+
+function mechanismDiffColumn(label, values, kind) {
+  const safe = values.length ? values : ['None'];
+  return '<div class="mechanism-diff-column ' + kind + '"><span>' + label + '</span>' +
+    safe.slice(0, 5).map(value => '<strong>' + escHtml(value) + '</strong>').join('') + '</div>';
+}
+
+function countStateValues(state) {
+  let count = state.category ? 1 : 0;
+  for (const field of ['hard_constraints', 'soft_preferences', 'negative_constraints']) {
+    for (const values of Object.values(state[field] || {})) count += values.length;
+  }
+  return count;
+}
+
+function renderScoreAnatomy() {
+  const weights = [
+    ['Recall rank', '3 / (rank + 1)', 'base'],
+    ['Category match', '+3.0', 'positive'],
+    ['Hard value', '+4.0', 'positive'],
+    ['Hard miss', '−3.0', 'negative'],
+    ['Soft value', '+1.5', 'positive'],
+    ['Profile tag', '+0.25', 'positive'],
+    ['Rating', '+0.03 × rating', 'positive'],
+    ['Popularity', 'tie-break only', 'tie'],
+  ];
+  document.getElementById('scoreAnatomy').innerHTML =
+    '<div class="score-anatomy-title"><span>Ranking score anatomy</span><small>Transparent weights from the shipped rules path</small></div>' +
+    '<div class="score-weight-list">' + weights.map(weight =>
+      '<div class="score-weight ' + weight[2] + '"><span>' + weight[0] + '</span><strong>' + weight[1] + '</strong></div>'
+    ).join('') + '</div>';
 }
 
 // ---------------------------------------------------------------------------
@@ -617,6 +941,7 @@ function renderAds() {
 
     const resultDiv = document.getElementById('auctionResult');
     resultDiv.style.display = 'block';
+    document.getElementById('step5').classList.add('auction-complete');
 
     const belowFloor = relB < floor;
     let winner;
