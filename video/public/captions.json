@@ -1,0 +1,290 @@
+[
+  {
+    "text": " Shopping search rarely fails for lack of keywords.",
+    "startMs": 220,
+    "endMs": 4720,
+    "timestampMs": 220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " It fails when people add constraints—or change course.",
+    "startMs": 5220,
+    "endMs": 9720,
+    "timestampMs": 5220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Append-only logic conflicts. We maintain explicit state.",
+    "startMs": 10220,
+    "endMs": 14720,
+    "timestampMs": 10220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Meet Shopping Copilot, spanning fifty thousand products.",
+    "startMs": 15220,
+    "endMs": 19720,
+    "timestampMs": 15220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The scored path runs offline, on CPU, without keys.",
+    "startMs": 20220,
+    "endMs": 24720,
+    "timestampMs": 20220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Public-set score: zero point eight six six five.",
+    "startMs": 25220,
+    "endMs": 29720,
+    "timestampMs": 25220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Fifty thousand frozen products. Ten turns maximum.",
+    "startMs": 30220,
+    "endMs": 34720,
+    "timestampMs": 30220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Two hundred public. Eight hundred private—and unknown.",
+    "startMs": 35220,
+    "endMs": 39720,
+    "timestampMs": 35220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Four cases: buying, browsing, override, and boundary.",
+    "startMs": 40220,
+    "endMs": 44720,
+    "timestampMs": 40220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Follow owner-approved public trace zero zero zero four.",
+    "startMs": 45220,
+    "endMs": 49720,
+    "timestampMs": 45220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The shopper wants a long-torso camisole with adjustable straps.",
+    "startMs": 50220,
+    "endMs": 54720,
+    "timestampMs": 50220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The router fixes the category and item intent.",
+    "startMs": 55220,
+    "endMs": 59720,
+    "timestampMs": 55220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Adjustable enters state as a soft preference.",
+    "startMs": 60220,
+    "endMs": 64720,
+    "timestampMs": 60220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Clarification targets what best separates remaining products.",
+    "startMs": 65220,
+    "endMs": 69720,
+    "timestampMs": 65220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The target is outside Top Ten; state remains visible.",
+    "startMs": 70220,
+    "endMs": 74720,
+    "timestampMs": 70220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Then the shopper overrides adjustable with polyester.",
+    "startMs": 75220,
+    "endMs": 79720,
+    "timestampMs": 75220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Append-only logic would keep both conflicting values.",
+    "startMs": 80220,
+    "endMs": 84720,
+    "timestampMs": 80220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Shopping Copilot marks adjustable as superseded.",
+    "startMs": 85220,
+    "endMs": 89720,
+    "timestampMs": 85220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The old preference leaves the active state.",
+    "startMs": 90220,
+    "endMs": 94720,
+    "timestampMs": 90220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Polyester enters; the valid category remains.",
+    "startMs": 95220,
+    "endMs": 99720,
+    "timestampMs": 95220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Ranking pivots. The target reaches Rank One.",
+    "startMs": 100220,
+    "endMs": 104720,
+    "timestampMs": 100220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " A bounded rewrite—not a destructive reset.",
+    "startMs": 105220,
+    "endMs": 109720,
+    "timestampMs": 105220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Messages become intent, action, and state changes.",
+    "startMs": 110220,
+    "endMs": 114720,
+    "timestampMs": 110220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " State drives SQLite F-T-S-five retrieval.",
+    "startMs": 115220,
+    "endMs": 119720,
+    "timestampMs": 115220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Transparent rules rerank and select clarification.",
+    "startMs": 120220,
+    "endMs": 124720,
+    "timestampMs": 120220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The evaluated path is deterministic and model-free.",
+    "startMs": 125220,
+    "endMs": 129720,
+    "timestampMs": 125220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Every public target entered the candidate pool.",
+    "startMs": 130220,
+    "endMs": 134720,
+    "timestampMs": 130220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " One hundred ninety-nine reached the final Top Ten.",
+    "startMs": 135220,
+    "endMs": 139720,
+    "timestampMs": 135220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Hit Rate: point nine nine five.",
+    "startMs": 140220,
+    "endMs": 144720,
+    "timestampMs": 140220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " M-R-R is point six four four; latency stays low.",
+    "startMs": 145220,
+    "endMs": 149720,
+    "timestampMs": 145220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Together: Technical Score point eight six six five.",
+    "startMs": 150220,
+    "endMs": 154720,
+    "timestampMs": 150220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The official starter scored point one zero six seven one.",
+    "startMs": 155220,
+    "endMs": 159720,
+    "timestampMs": 155220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Local cross-encoders reduced the composite score.",
+    "startMs": 160220,
+    "endMs": 164720,
+    "timestampMs": 160220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " So reliability won—not model size.",
+    "startMs": 165220,
+    "endMs": 169720,
+    "timestampMs": 165220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Demo-only sponsorship preserves organic order.",
+    "startMs": 170220,
+    "endMs": 174720,
+    "timestampMs": 170220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Code and evidence are public. Private results remain unknown.",
+    "startMs": 175220,
+    "endMs": 179720,
+    "timestampMs": 175220,
+    "confidence": 1,
+    "pageBreakAfter": true
+  }
+]

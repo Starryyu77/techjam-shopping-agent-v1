@@ -1,0 +1,290 @@
+[
+  {
+    "text": " 真实购物很少是一次干净的搜索。",
+    "startMs": 180,
+    "endMs": 4820,
+    "timestampMs": 180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 用户会补充条件、否定旧选择，也会含糊地描述商品。",
+    "startMs": 5180,
+    "endMs": 9820,
+    "timestampMs": 5180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 所以我们做了 Shopping Copilot。",
+    "startMs": 10180,
+    "endMs": 14820,
+    "timestampMs": 10180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 模型负责理解；系统负责记忆、检索、排序和解释。",
+    "startMs": 15180,
+    "endMs": 19820,
+    "timestampMs": 15180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 规则置信度不足时，本地 Qwen 识别意图和动作。",
+    "startMs": 20180,
+    "endMs": 24820,
+    "timestampMs": 20180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 它不会生成商品、分数或排名决策。",
+    "startMs": 25180,
+    "endMs": 29820,
+    "timestampMs": 25180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 一句含糊需求被转成结构化意图。",
+    "startMs": 30180,
+    "endMs": 34820,
+    "timestampMs": 30180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 商品请求 · 吊带类别 · “可调节”软偏好。",
+    "startMs": 35180,
+    "endMs": 39820,
+    "timestampMs": 35180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 自由文本到边界为止；版本化状态记录变化。",
+    "startMs": 40180,
+    "endMs": 44820,
+    "timestampMs": 40180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " SQLite FTS5 从五万个冻结商品中召回候选。",
+    "startMs": 45180,
+    "endMs": 49820,
+    "timestampMs": 45180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 透明规则重新排序候选。",
+    "startMs": 50180,
+    "endMs": 54820,
+    "timestampMs": 50180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 问题策略只追问最有区分度的一项。",
+    "startMs": 55180,
+    "endMs": 59820,
+    "timestampMs": 55180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 接着用户改变主意：不要可调，改成聚酯纤维。",
+    "startMs": 60180,
+    "endMs": 64820,
+    "timestampMs": 60180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 模型识别删除、增加和保留，而不是孤立关键词。",
+    "startMs": 65180,
+    "endMs": 69820,
+    "timestampMs": 65180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 版本二将“可调节”标为已失效，并加入聚酯纤维。",
+    "startMs": 70180,
+    "endMs": 74820,
+    "timestampMs": 70180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 这是有历史的有限改写，不是追加冲突或清空重来。",
+    "startMs": 75180,
+    "endMs": 79820,
+    "timestampMs": 75180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 更新状态再次驱动同一套检索和排序。",
+    "startMs": 80180,
+    "endMs": 84820,
+    "timestampMs": 80180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 不符合条件的退出，更好的匹配进入，榜单连续重组。",
+    "startMs": 85180,
+    "endMs": 89820,
+    "timestampMs": 85180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 冻结回放让目标商品升到第一名。",
+    "startMs": 90180,
+    "endMs": 94820,
+    "timestampMs": 90180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 类别与材质匹配，旧偏好已经移除。",
+    "startMs": 95180,
+    "endMs": 99820,
+    "timestampMs": 95180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 大模型只位于入口。",
+    "startMs": 100180,
+    "endMs": 104820,
+    "timestampMs": 100180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 多轮一致性来自可检查、可追溯的版本化状态。",
+    "startMs": 105180,
+    "endMs": 109820,
+    "timestampMs": 105180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 真实商业场景不只有核心任务。",
+    "startMs": 110180,
+    "endMs": 114820,
+    "timestampMs": 110180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 赞助供给、预算和相关性需要独立广告层。",
+    "startMs": 115180,
+    "endMs": 119820,
+    "timestampMs": 115180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 广告主独立配置关键词、出价和预算。",
+    "startMs": 120180,
+    "endMs": 124820,
+    "timestampMs": 120180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 这些数据不会进入用户状态、排名或官方评测。",
+    "startMs": 125180,
+    "endMs": 129820,
+    "timestampMs": 125180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 相关性门槛拒绝无关商品，即使它出价更高。",
+    "startMs": 130180,
+    "endMs": 134820,
+    "timestampMs": 130180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 合格候选按出价乘相关性竞价，预算消耗全程记录。",
+    "startMs": 135180,
+    "endMs": 139820,
+    "timestampMs": 135180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 胜出商品进入明确标注的赞助位。",
+    "startMs": 140180,
+    "endMs": 144820,
+    "timestampMs": 140180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 每一件自然商品仍保持完全相同的顺序。",
+    "startMs": 145180,
+    "endMs": 149820,
+    "timestampMs": 145180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 公开集 200 条：技术分 0.8665；私有表现仍然未知。",
+    "startMs": 150180,
+    "endMs": 154820,
+    "timestampMs": 150180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 大模型与广告属于评测合同之外的产品扩展。",
+    "startMs": 155180,
+    "endMs": 159820,
+    "timestampMs": 155180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 用户体验到的是对话，而不是指标面板。",
+    "startMs": 160180,
+    "endMs": 164820,
+    "timestampMs": 160180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 他们可以修改偏好、检查变化、理解排名并继续交流。",
+    "startMs": 165180,
+    "endMs": 169820,
+    "timestampMs": 165180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 本地模型可以润色回答，但不能改变事实或排名。",
+    "startMs": 170180,
+    "endMs": 174820,
+    "timestampMs": 170180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " 从模糊意图，到可解释推荐与透明广告。",
+    "startMs": 175180,
+    "endMs": 179820,
+    "timestampMs": 175180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  }
+]

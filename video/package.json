@@ -1,0 +1,41 @@
+{
+  "name": "shopping-copilot-cinematic-film",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "sync:evidence": "node scripts/sync-evidence.mjs",
+    "export:v3": "node scripts/export-v3-assets.mjs",
+    "voice:v3": ".venv/bin/python scripts/generate-voice-v3.py",
+    "music:v3": "python3 scripts/generate-music-v3.py",
+    "studio": "remotion studio src/index.ts --no-open",
+    "still": "remotion still src/index.ts ShoppingCopilotFilm out/smoke.png --frame=150",
+    "render": "remotion render src/index.ts ShoppingCopilotFilm out/shopping-copilot-cinematic-master.mp4 --codec=h264 --crf=18 --audio-codec=aac",
+    "still:v2": "remotion still src/index.ts ShoppingCopilotFilmV2 out/v2-smoke.png --frame=150",
+    "render:v2": "remotion render src/index.ts ShoppingCopilotFilmV2 out/shopping-copilot-cinematic-v2-master.mp4 --codec=h264 --crf=18 --audio-codec=aac",
+    "render:v2:subtitled": "remotion render src/index.ts ShoppingCopilotFilmV2 out/shopping-copilot-cinematic-v2-subtitled-master.mp4 --codec=h264 --crf=18 --audio-codec=aac",
+    "render:v2:bilingual": "remotion render src/index.ts ShoppingCopilotFilmV2Bilingual out/shopping-copilot-cinematic-v2-bilingual-master.mp4 --codec=h264 --crf=18 --audio-codec=aac",
+    "render:v3": "remotion render src/index.ts ShoppingCopilotFilmV3 out/shopping-copilot-v3-master.mp4 --codec=h264 --crf=18 --audio-codec=aac",
+    "release:v3": "node scripts/release-v3.mjs",
+    "release:v3:package": "node scripts/release-v3.mjs --package-only"
+  },
+  "dependencies": {
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/source-serif-4": "^5.3.0",
+    "@fontsource/noto-serif-sc": "^5.3.0",
+    "@remotion/captions": "4.0.518",
+    "@remotion/cli": "4.0.518",
+    "@remotion/media": "4.0.518",
+    "@remotion/transitions": "4.0.518",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.518"
+  },
+  "devDependencies": {
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "typescript": "5.9.3"
+  }
+}

@@ -1,0 +1,120 @@
+{
+  "voice": "en-GB-SoniaNeural",
+  "rate": "+30%",
+  "pitch": "-2Hz",
+  "edgeTtsVersion": "7.2.8",
+  "voicePlanSha256": "ee2cec4c0eca2deca63b3128719f75e4058dede0189eb65e3c4d7aed6b454507",
+  "outputSha256": "406cc2e836f439457d3bb48ed98e453347ca927b2a8aaf9b3293692e4fdd99ff",
+  "providerBoundary": "Remote Microsoft Edge Read Aloud service accessed via edge-tts; output may drift, so the final WAV is frozen as the release artifact.",
+  "usageBoundary": "Generated for the Shopping Copilot competition demo; verify upstream service terms before unrelated reuse.",
+  "segments": [
+    {
+      "id": "v3-01",
+      "rawDuration": 9.024,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-02",
+      "rawDuration": 9.504,
+      "speed": 1.0004,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-03",
+      "rawDuration": 8.352,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-04",
+      "rawDuration": 7.944,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-05",
+      "rawDuration": 9.168,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-06",
+      "rawDuration": 9.96,
+      "speed": 1.0484,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-07",
+      "rawDuration": 10.488,
+      "speed": 1.104,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-08",
+      "rawDuration": 9.432,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-09",
+      "rawDuration": 8.688,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-10",
+      "rawDuration": 8.352,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-11",
+      "rawDuration": 10.824,
+      "speed": 1.1394,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-12",
+      "rawDuration": 9.984,
+      "speed": 1.0509,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-13",
+      "rawDuration": 10.152,
+      "speed": 1.0686,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-14",
+      "rawDuration": 8.904,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-15",
+      "rawDuration": 9.168,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-16",
+      "rawDuration": 10.632,
+      "speed": 1.1192,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-17",
+      "rawDuration": 9.144,
+      "speed": 1.0,
+      "speechWindow": 9.5
+    },
+    {
+      "id": "v3-18",
+      "rawDuration": 10.296,
+      "speed": 1.0838,
+      "speechWindow": 9.5
+    }
+  ]
+}

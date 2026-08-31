@@ -1,0 +1,110 @@
+[
+  {
+    "id": "v3-01",
+    "start": 0,
+    "end": 10,
+    "narration": "Real shopping is rarely one clean search. People add constraints, reject earlier choices, and describe products vaguely—like the one from that video, only lighter and less formal."
+  },
+  {
+    "id": "v3-02",
+    "start": 10,
+    "end": 20,
+    "narration": "That is why we built Shopping Copilot: a conversational product that lets the model handle understanding while the system handles memory, retrieval, ranking, and explanation across the complete shopping journey."
+  },
+  {
+    "id": "v3-03",
+    "start": 20,
+    "end": 30,
+    "narration": "When rule confidence is low, our local Qwen model interprets the user's intent and dialogue action. It does not generate products, scores, or ranking decisions."
+  },
+  {
+    "id": "v3-04",
+    "start": 30,
+    "end": 40,
+    "narration": "A vague request for a longer layering top with adjustable straps becomes structured intent: an item request, a Tanks and Camis category, and one soft preference."
+  },
+  {
+    "id": "v3-05",
+    "start": 40,
+    "end": 50,
+    "narration": "Free text stops at the boundary. A versioned state records the category and preference, then SQLite FTS5 recalls candidates from fifty thousand frozen catalog products locally."
+  },
+  {
+    "id": "v3-06",
+    "start": 50,
+    "end": 60,
+    "narration": "Transparent rules rerank those candidates. When important attributes remain ambiguous, the question policy asks only the most discriminative follow-up, while keeping current state and uncertainty visible."
+  },
+  {
+    "id": "v3-07",
+    "start": 60,
+    "end": 70,
+    "narration": "Then the shopper changes direction: forget adjustable straps, use polyester, but keep the longer silhouette. The model identifies three actions—remove, add, and retain—not three unrelated keywords."
+  },
+  {
+    "id": "v3-08",
+    "start": 70,
+    "end": 80,
+    "narration": "Version two marks adjustable as superseded, adds polyester, and preserves the valid category. This is a bounded rewrite with history, not an append-only conflict or destructive reset."
+  },
+  {
+    "id": "v3-09",
+    "start": 80,
+    "end": 90,
+    "narration": "The updated state drives the same retrieval and ranking engine again. Products that violate the new request leave, better matches enter, and the list reorganizes continuously."
+  },
+  {
+    "id": "v3-10",
+    "start": 90,
+    "end": 100,
+    "narration": "The verified replay places the target at rank one because category and material now match and the old preference is gone. The change comes from state, not improvisation."
+  },
+  {
+    "id": "v3-11",
+    "start": 100,
+    "end": 110,
+    "narration": "Looking back, the large model sits only at the entrance, translating difficult language into structured actions. Multi-turn consistency comes from inspectable state that can add, remove, retain, and trace."
+  },
+  {
+    "id": "v3-12",
+    "start": 110,
+    "end": 120,
+    "narration": "To simulate real commerce, we asked what the product needs beyond task completion. Shopping includes sponsored supply, advertiser budgets, and relevance constraints, so we added a separate advertising layer."
+  },
+  {
+    "id": "v3-13",
+    "start": 120,
+    "end": 130,
+    "narration": "Advertisers configure target keywords, bids, and budgets on this independent track. Those values remain auditable and never enter user state, product ranking, or the official evaluation path."
+  },
+  {
+    "id": "v3-14",
+    "start": 130,
+    "end": 140,
+    "narration": "A relevance floor rejects off-topic inventory, even with a higher bid. Eligible products then compete by bid times relevance, with every impression and budget deduction recorded."
+  },
+  {
+    "id": "v3-15",
+    "start": 140,
+    "end": 150,
+    "narration": "The winner enters a clearly labeled sponsored position. Every organic product remains in exactly the same order, which makes the business mechanism visible without corrupting the recommendation task."
+  },
+  {
+    "id": "v3-16",
+    "start": 150,
+    "end": 160,
+    "narration": "Across two hundred official public sessions, Technical Score reaches zero point eight six six five; private performance remains unknown. The model and ads are product extensions outside this evaluation contract."
+  },
+  {
+    "id": "v3-17",
+    "start": 160,
+    "end": 170,
+    "narration": "What users experience is not a metric dashboard. They can keep talking, revise a preference, inspect what changed, understand why ranking moved, and see which question comes next."
+  },
+  {
+    "id": "v3-18",
+    "start": 170,
+    "end": 180,
+    "narration": "The same local model may polish the final reply, but cannot alter facts, state, or organic ranking. From vague intent to explainable recommendations and transparent ads, this is Shopping Copilot."
+  }
+]

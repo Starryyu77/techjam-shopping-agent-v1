@@ -1,0 +1,157 @@
+{
+  "generatedFrom": [
+    "demo/evidence/manifest.json",
+    "demo/evidence/metrics.json",
+    "demo/evidence/version_comparison.json",
+    "demo/evidence/scenarios/public_0004.json"
+  ],
+  "evidenceScope": "official_public_200",
+  "sampleCount": 200,
+  "claimBoundary": {
+    "public_200": "verified by official public-set evaluator",
+    "private_800": "unknown — performance not measured",
+    "score_label": "official public-set evaluator result",
+    "not_labels": [
+      "hidden-set score",
+      "final score",
+      "competition-ready score",
+      "private-set evidence"
+    ]
+  },
+  "metrics": {
+    "evidence_scope": "official_public_200",
+    "evaluator": "unmodified official local_evaluator.py",
+    "intent_backend": "rules",
+    "sample_count": 200,
+    "hit_rate_at_10": 0.995,
+    "mrr": 0.644355,
+    "mttc": 2.215,
+    "efficiency": 0.8785,
+    "technical_score": 0.866507,
+    "reported_token_usage": {
+      "prompt_tokens": 0,
+      "completion_tokens": 0,
+      "total_tokens": 0
+    },
+    "scenario_metrics": {
+      "boundary": {
+        "sample_count": 10,
+        "hit_rate_at_10": 1,
+        "mrr": 0.66,
+        "mttc": 1.9
+      },
+      "browsing": {
+        "sample_count": 80,
+        "hit_rate_at_10": 1,
+        "mrr": 0.627232,
+        "mttc": 2.1125
+      },
+      "buying": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.9875,
+        "mrr": 0.623204,
+        "mttc": 1.725
+      },
+      "intent_override": {
+        "sample_count": 30,
+        "hit_rate_at_10": 1,
+        "mrr": 0.741204,
+        "mttc": 3.9
+      }
+    },
+    "first_hit_turn_distribution": {
+      "1": 101,
+      "2": 5,
+      "3": 64,
+      "4": 20,
+      "5": 5,
+      "6": 4,
+      "miss": 1
+    },
+    "best_rank_distribution": {
+      "1": 97,
+      "2": 31,
+      "3": 20,
+      "4": 21,
+      "5": 6,
+      "6": 6,
+      "7": 6,
+      "8": 7,
+      "9": 2,
+      "10": 3,
+      "miss": 1
+    }
+  },
+  "starter": {
+    "version": "Official Weak BM25 Baseline",
+    "file": "docs/baseline_results.json",
+    "hit_rate_at_10": 0.125,
+    "mrr": 0.068034,
+    "mttc": 9.81,
+    "efficiency": 0.119,
+    "technical_score": 0.10671,
+    "scenario_metrics": {}
+  },
+  "submitted": {
+    "version": "Rules V1.3 (submitted)",
+    "file": "official_public_rules_v1_3.json",
+    "hit_rate_at_10": 0.995,
+    "mrr": 0.644355,
+    "mttc": 2.215,
+    "efficiency": 0.8785,
+    "technical_score": 0.866507,
+    "scenario_metrics": {
+      "boundary": {
+        "sample_count": 10,
+        "hit_rate_at_10": 1,
+        "mrr": 0.66,
+        "mttc": 1.9
+      },
+      "browsing": {
+        "sample_count": 80,
+        "hit_rate_at_10": 1,
+        "mrr": 0.627232,
+        "mttc": 2.1125
+      },
+      "buying": {
+        "sample_count": 80,
+        "hit_rate_at_10": 0.9875,
+        "mrr": 0.623204,
+        "mttc": 1.725
+      },
+      "intent_override": {
+        "sample_count": 30,
+        "hit_rate_at_10": 1,
+        "mrr": 0.741204,
+        "mttc": 3.9
+      }
+    }
+  },
+  "overrideCase": {
+    "sample_id": "public_0004",
+    "scenario_type": "intent_override",
+    "role": "primary_video",
+    "label": "Replace one preference",
+    "description": "Remove adjustable, add polyester, target moves to Rank #1."
+  },
+  "overrideTrace": {
+    "sampleId": "public_0004",
+    "scenarioType": "intent_override",
+    "category": "Tops & Tees Tanks & Camis",
+    "added": {
+      "soft_preferences": {
+        "material": [
+          "polyester"
+        ]
+      }
+    },
+    "removed": {
+      "soft_preferences": {
+        "feature": [
+          "adjustable"
+        ]
+      }
+    },
+    "targetRank": 1
+  }
+}

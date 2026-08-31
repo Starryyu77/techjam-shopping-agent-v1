@@ -1,0 +1,290 @@
+[
+  {
+    "text": " Real shopping is rarely one clean search.",
+    "startMs": 180,
+    "endMs": 4820,
+    "timestampMs": 180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " People add constraints, reject choices, and speak vaguely.",
+    "startMs": 5180,
+    "endMs": 9820,
+    "timestampMs": 5180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " That is why we built Shopping Copilot.",
+    "startMs": 10180,
+    "endMs": 14820,
+    "timestampMs": 10180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The model understands; the system remembers, retrieves, ranks, and explains.",
+    "startMs": 15180,
+    "endMs": 19820,
+    "timestampMs": 15180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " When rule confidence is low, local Qwen interprets intent and action.",
+    "startMs": 20180,
+    "endMs": 24820,
+    "timestampMs": 20180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " It does not generate products, scores, or ranking decisions.",
+    "startMs": 25180,
+    "endMs": 29820,
+    "timestampMs": 25180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " A vague request becomes structured intent.",
+    "startMs": 30180,
+    "endMs": 34820,
+    "timestampMs": 30180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Item request · Tanks and Camis · adjustable as a soft preference.",
+    "startMs": 35180,
+    "endMs": 39820,
+    "timestampMs": 35180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Free text stops at the boundary; versioned state records the change.",
+    "startMs": 40180,
+    "endMs": 44820,
+    "timestampMs": 40180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " SQLite FTS5 recalls candidates from fifty thousand frozen products.",
+    "startMs": 45180,
+    "endMs": 49820,
+    "timestampMs": 45180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Transparent rules rerank the recalled candidates.",
+    "startMs": 50180,
+    "endMs": 54820,
+    "timestampMs": 50180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The policy asks only the most discriminative follow-up.",
+    "startMs": 55180,
+    "endMs": 59820,
+    "timestampMs": 55180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Then the shopper changes direction: forget adjustable; use polyester.",
+    "startMs": 60180,
+    "endMs": 64820,
+    "timestampMs": 60180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The model identifies remove, add, and retain—not isolated keywords.",
+    "startMs": 65180,
+    "endMs": 69820,
+    "timestampMs": 65180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Version two marks adjustable as superseded and adds polyester.",
+    "startMs": 70180,
+    "endMs": 74820,
+    "timestampMs": 70180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " A bounded rewrite with history—not append-only conflict or reset.",
+    "startMs": 75180,
+    "endMs": 79820,
+    "timestampMs": 75180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The updated state drives the same retrieval and ranking engine.",
+    "startMs": 80180,
+    "endMs": 84820,
+    "timestampMs": 80180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Violating products leave; better matches enter; the list reorganizes.",
+    "startMs": 85180,
+    "endMs": 89820,
+    "timestampMs": 85180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The verified replay places the target at rank one.",
+    "startMs": 90180,
+    "endMs": 94820,
+    "timestampMs": 90180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Category and material match; the old preference is gone.",
+    "startMs": 95180,
+    "endMs": 99820,
+    "timestampMs": 95180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The large model sits only at the entrance.",
+    "startMs": 100180,
+    "endMs": 104820,
+    "timestampMs": 100180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Multi-turn consistency comes from inspectable, versioned state.",
+    "startMs": 105180,
+    "endMs": 109820,
+    "timestampMs": 105180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Real commerce needs more than task completion.",
+    "startMs": 110180,
+    "endMs": 114820,
+    "timestampMs": 110180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Sponsored supply, budgets, and relevance require a separate ad layer.",
+    "startMs": 115180,
+    "endMs": 119820,
+    "timestampMs": 115180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Advertisers configure keywords, bids, and budgets independently.",
+    "startMs": 120180,
+    "endMs": 124820,
+    "timestampMs": 120180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Those values never enter user state, ranking, or official evaluation.",
+    "startMs": 125180,
+    "endMs": 129820,
+    "timestampMs": 125180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " A relevance floor rejects off-topic inventory—even at a higher bid.",
+    "startMs": 130180,
+    "endMs": 134820,
+    "timestampMs": 130180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Eligible products compete by bid times relevance; spend is recorded.",
+    "startMs": 135180,
+    "endMs": 139820,
+    "timestampMs": 135180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The winner enters a clearly labeled sponsored position.",
+    "startMs": 140180,
+    "endMs": 144820,
+    "timestampMs": 140180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Every organic product remains in exactly the same order.",
+    "startMs": 145180,
+    "endMs": 149820,
+    "timestampMs": 145180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Public 200: Technical Score 0.8665; private performance remains unknown.",
+    "startMs": 150180,
+    "endMs": 154820,
+    "timestampMs": 150180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The model and ads are product extensions outside this evaluation contract.",
+    "startMs": 155180,
+    "endMs": 159820,
+    "timestampMs": 155180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " Users experience a conversation—not a metric dashboard.",
+    "startMs": 160180,
+    "endMs": 164820,
+    "timestampMs": 160180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " They can revise, inspect changes, understand ranking, and continue.",
+    "startMs": 165180,
+    "endMs": 169820,
+    "timestampMs": 165180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " The local model may polish replies, but cannot alter facts or ranking.",
+    "startMs": 170180,
+    "endMs": 174820,
+    "timestampMs": 170180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  },
+  {
+    "text": " From vague intent to explainable recommendations and transparent ads.",
+    "startMs": 175180,
+    "endMs": 179820,
+    "timestampMs": 175180,
+    "confidence": 1,
+    "pageBreakAfter": true
+  }
+]

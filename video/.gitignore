@@ -1,0 +1,10 @@
+node_modules/
+.venv/
+out/
+public/audio/beats/
+public/audio/narration.wav
+public/audio/ambient.wav
+public/v3/audio/*.wav
+public/v3/audio/voice-beats/
+.mypy_cache/
+review/
