@@ -16,6 +16,16 @@
   </a>
 </p>
 
+## 3 分钟 V3 演示视频
+
+[![Shopping Copilot V3：亮色编辑社交电商风格，中英双语字幕](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
+
+**[观看完整 3 分钟 V3 成片——英文配音 · 中英双语字幕 · 原创背景音乐](docs/assets/video/shopping-copilot-demo-v3.mp4)**
+
+[English subtitles](docs/assets/video/shopping-copilot-demo-v3.en.srt) ·
+[中文字幕](docs/assets/video/shopping-copilot-demo-v3.zh-CN.srt) ·
+[Cloudflare 在线播放](https://shopping-copilot-techjam.pages.dev/)
+
 ## 已验证的公开集结果
 
 以下结果来自未修改的官方评测器和 200 个带标签的 public development sessions：
@@ -166,7 +176,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**81 项测试全部通过**。
+当前预期结果：**87 项测试全部通过**。
 
 ## Evidence 复现
 

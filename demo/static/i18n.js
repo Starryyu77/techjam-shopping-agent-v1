@@ -47,6 +47,10 @@
     'sessions': '个会话',
     'Python standard library · No API keys': 'Python 标准库 · 无需 API Key',
     'Private 800-session performance remains unknown.': '私有 800 个会话的表现仍未知。',
+    'NEW · 3-MINUTE V3 FILM': '全新 · 3 分钟 V3 成片',
+    'Watch the complete product story.': '观看完整产品故事。',
+    'From vague social-commerce intent to versioned state, Rank #1, and transparent advertising — with English voice, bilingual burned-in subtitles, and an original score.': '从模糊的社交电商意图，到版本化状态、Rank #1 与透明广告——包含英文配音、中英双语内嵌字幕和原创配乐。',
+    'English subtitles': '英文字幕',
 
     // Step 1
     'Competition Data Contract': '比赛数据合同',

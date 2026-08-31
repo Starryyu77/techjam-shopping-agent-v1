@@ -31,6 +31,7 @@ if str(_REPO_ROOT) not in sys.path:
 from shopping_agent import RealWorldShoppingAgent  # noqa: E402
 
 _STATIC = Path(__file__).resolve().parent / "static"
+_MEDIA = _REPO_ROOT / "docs" / "assets" / "video"
 
 
 def _resolve_catalog(cli: str | None) -> Path:
@@ -448,6 +449,26 @@ def make_handler(demo: DemoState):
                 return self._send_file(_STATIC / "i18n.js", "application/javascript")
             if path == "/tour.css":
                 return self._send_file(_STATIC / "tour.css", "text/css")
+            if path.startswith("/media/"):
+                requested = path[len("/media/"):]
+                if not requested or ".." in requested or "/" in requested:
+                    return self._send_json({"error": "not found"}, 404)
+                source_name = (
+                    "shopping-copilot-demo-v3-web.mp4"
+                    if requested == "shopping-copilot-demo-v3.mp4"
+                    else requested
+                )
+                media_path = _MEDIA / source_name
+                content_types = {
+                    ".mp4": "video/mp4",
+                    ".jpg": "image/jpeg",
+                    ".srt": "text/plain; charset=utf-8",
+                    ".vtt": "text/vtt; charset=utf-8",
+                }
+                content_type = content_types.get(media_path.suffix)
+                if content_type and media_path.is_file():
+                    return self._send_file(media_path, content_type)
+                return self._send_json({"error": "not found"}, 404)
             if path == "/evidence":
                 tour = _STATIC / "tour.html"
                 if tour.is_file():

@@ -9,14 +9,21 @@ from pathlib import Path
 _REPO_ROOT = Path(__file__).resolve().parent.parent
 _STATIC = _REPO_ROOT / "demo" / "static"
 _EVIDENCE = _REPO_ROOT / "demo" / "evidence"
+_VIDEO_ASSETS = _REPO_ROOT / "docs" / "assets" / "video"
 _REPO_URL = "https://github.com/Starryyu77/techjam-shopping-agent-v1"
 _SOURCE_URL = _REPO_URL
 
 
 def build_static_site(output: Path) -> None:
     output = output.resolve()
-    if output == _REPO_ROOT or _REPO_ROOT in output.parents and output.name == "demo":
+    safe_repository_output = (_REPO_ROOT / "_site").resolve()
+    if output == _REPO_ROOT or (
+        _REPO_ROOT in output.parents and output != safe_repository_output
+    ) or output in _REPO_ROOT.parents:
         raise ValueError(f"Refusing unsafe static output path: {output}")
+    marker = output / ".shopping-copilot-static-build"
+    if output.exists() and output != safe_repository_output and not marker.is_file():
+        raise ValueError(f"Refusing to replace unmarked external directory: {output}")
     if output.exists():
         shutil.rmtree(output)
     output.mkdir(parents=True)
@@ -27,6 +34,12 @@ def build_static_site(output: Path) -> None:
         _STATIC / "tour.js",
         _STATIC / "i18n.js",
         _EVIDENCE / "manifest.json",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3-web.mp4",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3-poster.jpg",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3.en.srt",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3.zh-CN.srt",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3.en.vtt",
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3.zh-CN.vtt",
     ]
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
@@ -51,7 +64,22 @@ def build_static_site(output: Path) -> None:
     shutil.copy2(_STATIC / "tour.js", output / "tour.js")
     shutil.copy2(_STATIC / "i18n.js", output / "i18n.js")
     shutil.copytree(_EVIDENCE, output / "evidence")
+    media = output / "media"
+    media.mkdir()
+    shutil.copy2(
+        _VIDEO_ASSETS / "shopping-copilot-demo-v3-web.mp4",
+        media / "shopping-copilot-demo-v3.mp4",
+    )
+    for filename in [
+        "shopping-copilot-demo-v3-poster.jpg",
+        "shopping-copilot-demo-v3.en.srt",
+        "shopping-copilot-demo-v3.zh-CN.srt",
+        "shopping-copilot-demo-v3.en.vtt",
+        "shopping-copilot-demo-v3.zh-CN.vtt",
+    ]:
+        shutil.copy2(_VIDEO_ASSETS / filename, media / filename)
     (output / ".nojekyll").write_text("", encoding="utf-8")
+    (output / ".shopping-copilot-static-build").write_text("generated\n", encoding="utf-8")
 
 
 def main() -> None:

@@ -18,14 +18,14 @@ rules. It needs no network, API key, paid model, or GPU.
   </a>
 </p>
 
-## 3-minute demo film
+## 3-minute V3 demo film
 
-[![Shopping Copilot cinematic demo with English and Chinese subtitles](docs/assets/video/shopping-copilot-demo-preview.gif)](docs/assets/video/shopping-copilot-demo-bilingual.mp4)
+[![Shopping Copilot V3 — editorial social-commerce film with bilingual subtitles](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
 
-**[Watch the full 3-minute film — English voice · English / 中文字幕](docs/assets/video/shopping-copilot-demo-bilingual.mp4)**
+**[Watch the full 3-minute V3 film — English voice · English / 中文字幕 · original score](docs/assets/video/shopping-copilot-demo-v3.mp4)**
 
-[English subtitles](docs/assets/video/shopping-copilot-demo.en.srt) ·
-[中文字幕](docs/assets/video/shopping-copilot-demo.zh-CN.srt) ·
+[English subtitles](docs/assets/video/shopping-copilot-demo-v3.en.srt) ·
+[中文字幕](docs/assets/video/shopping-copilot-demo-v3.zh-CN.srt) ·
 [Live evidence tour](https://shopping-copilot-techjam.pages.dev/)
 
 ## Verified public-set result
@@ -193,7 +193,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **81 tests pass**.
+Current expected result: **87 tests pass**.
 
 ## Evidence reproduction
 

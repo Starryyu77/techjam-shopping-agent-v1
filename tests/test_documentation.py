@@ -26,6 +26,23 @@ class PublicDocumentationTests(unittest.TestCase):
         self.assertIn(url, self.readme_en)
         self.assertIn(url, self.readme_zh)
 
+    def test_v3_demo_video_is_linked_and_assets_exist(self):
+        assets = [
+            "shopping-copilot-demo-v3.mp4",
+            "shopping-copilot-demo-v3-preview.gif",
+            "shopping-copilot-demo-v3-poster.jpg",
+            "shopping-copilot-demo-v3.en.srt",
+            "shopping-copilot-demo-v3.zh-CN.srt",
+            "shopping-copilot-demo-v3.en.vtt",
+            "shopping-copilot-demo-v3.zh-CN.vtt",
+        ]
+        for asset in assets:
+            relative = f"docs/assets/video/{asset}"
+            self.assertTrue((ROOT / relative).is_file(), relative)
+        for text in [self.readme_en, self.readme_zh]:
+            self.assertIn("shopping-copilot-demo-v3.mp4", text)
+            self.assertIn("shopping-copilot-demo-v3-preview.gif", text)
+
     def test_official_baseline_score_is_consistent(self):
         docs = [
             "README.md",
@@ -43,7 +60,7 @@ class PublicDocumentationTests(unittest.TestCase):
     def test_current_test_count_is_not_stale(self):
         for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("81", text, relative)
+            self.assertIn("87", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 

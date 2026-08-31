@@ -4649,3 +4649,70 @@ body::after {
   .topbar .sub { display: none; }
   .language-toggle { margin-left: 0.1rem; }
 }
+/* V3 film: direct, playable Cloudflare-hosted deliverable. */
+.hero-film {
+  display: grid;
+  grid-template-columns: minmax(260px, 0.72fr) minmax(420px, 1.28fr);
+  gap: clamp(1.2rem, 3vw, 2.8rem);
+  align-items: center;
+  margin-top: 2.1rem;
+  padding: clamp(1rem, 2vw, 1.5rem);
+  border: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, rgba(37, 244, 238, 0.06), transparent 38%),
+    linear-gradient(315deg, rgba(254, 44, 85, 0.06), transparent 34%),
+    var(--bg-card);
+}
+
+.hero-film-copy { max-width: 31rem; }
+
+.hero-film-kicker {
+  color: var(--success);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+.hero-film h2 {
+  margin: 0.55rem 0 0.7rem;
+  font-size: clamp(1.75rem, 3vw, 2.8rem);
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+}
+
+.hero-film p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+
+.hero-film-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1rem;
+  margin-top: 1rem;
+}
+
+.hero-film-links a {
+  color: var(--text-primary);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.72rem;
+  text-decoration-color: var(--success);
+  text-underline-offset: 0.25rem;
+}
+
+.hero-film video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #0d0f10;
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.34);
+}
+
+@media (max-width: 900px) {
+  .hero-film { grid-template-columns: 1fr; }
+  .hero-film-copy { max-width: none; }
+}

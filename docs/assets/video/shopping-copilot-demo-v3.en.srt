@@ -1,0 +1,143 @@
+1
+00:00:00,180 --> 00:00:04,820
+Real shopping is rarely one clean search.
+
+2
+00:00:05,180 --> 00:00:09,820
+People add constraints, reject choices, and speak vaguely.
+
+3
+00:00:10,180 --> 00:00:14,820
+That is why we built Shopping Copilot.
+
+4
+00:00:15,180 --> 00:00:19,820
+The model understands; the system remembers, retrieves, ranks, and explains.
+
+5
+00:00:20,180 --> 00:00:24,820
+When rule confidence is low, local Qwen interprets intent and action.
+
+6
+00:00:25,180 --> 00:00:29,820
+It does not generate products, scores, or ranking decisions.
+
+7
+00:00:30,180 --> 00:00:34,820
+A vague request becomes structured intent.
+
+8
+00:00:35,180 --> 00:00:39,820
+Item request · Tanks and Camis · adjustable as a soft preference.
+
+9
+00:00:40,180 --> 00:00:44,820
+Free text stops at the boundary; versioned state records the change.
+
+10
+00:00:45,180 --> 00:00:49,820
+SQLite FTS5 recalls candidates from fifty thousand frozen products.
+
+11
+00:00:50,180 --> 00:00:54,820
+Transparent rules rerank the recalled candidates.
+
+12
+00:00:55,180 --> 00:00:59,820
+The policy asks only the most discriminative follow-up.
+
+13
+00:01:00,180 --> 00:01:04,820
+Then the shopper changes direction: forget adjustable; use polyester.
+
+14
+00:01:05,180 --> 00:01:09,820
+The model identifies remove, add, and retain—not isolated keywords.
+
+15
+00:01:10,180 --> 00:01:14,820
+Version two marks adjustable as superseded and adds polyester.
+
+16
+00:01:15,180 --> 00:01:19,820
+A bounded rewrite with history—not append-only conflict or reset.
+
+17
+00:01:20,180 --> 00:01:24,820
+The updated state drives the same retrieval and ranking engine.
+
+18
+00:01:25,180 --> 00:01:29,820
+Violating products leave; better matches enter; the list reorganizes.
+
+19
+00:01:30,180 --> 00:01:34,820
+The verified replay places the target at rank one.
+
+20
+00:01:35,180 --> 00:01:39,820
+Category and material match; the old preference is gone.
+
+21
+00:01:40,180 --> 00:01:44,820
+The large model sits only at the entrance.
+
+22
+00:01:45,180 --> 00:01:49,820
+Multi-turn consistency comes from inspectable, versioned state.
+
+23
+00:01:50,180 --> 00:01:54,820
+Real commerce needs more than task completion.
+
+24
+00:01:55,180 --> 00:01:59,820
+Sponsored supply, budgets, and relevance require a separate ad layer.
+
+25
+00:02:00,180 --> 00:02:04,820
+Advertisers configure keywords, bids, and budgets independently.
+
+26
+00:02:05,180 --> 00:02:09,820
+Those values never enter user state, ranking, or official evaluation.
+
+27
+00:02:10,180 --> 00:02:14,820
+A relevance floor rejects off-topic inventory—even at a higher bid.
+
+28
+00:02:15,180 --> 00:02:19,820
+Eligible products compete by bid times relevance; spend is recorded.
+
+29
+00:02:20,180 --> 00:02:24,820
+The winner enters a clearly labeled sponsored position.
+
+30
+00:02:25,180 --> 00:02:29,820
+Every organic product remains in exactly the same order.
+
+31
+00:02:30,180 --> 00:02:34,820
+Public 200: Technical Score 0.8665; private performance remains unknown.
+
+32
+00:02:35,180 --> 00:02:39,820
+The model and ads are product extensions outside this evaluation contract.
+
+33
+00:02:40,180 --> 00:02:44,820
+Users experience a conversation—not a metric dashboard.
+
+34
+00:02:45,180 --> 00:02:49,820
+They can revise, inspect changes, understand ranking, and continue.
+
+35
+00:02:50,180 --> 00:02:54,820
+The local model may polish replies, but cannot alter facts or ranking.
+
+36
+00:02:55,180 --> 00:02:59,820
+From vague intent to explainable recommendations and transparent ads.

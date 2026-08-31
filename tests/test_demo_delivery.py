@@ -35,6 +35,13 @@ class DemoRouteTests(unittest.TestCase):
         except urllib.error.HTTPError as exc:
             return exc.code, exc.read().decode("utf-8")
 
+    def _get_bytes(self, path: str) -> tuple[int, bytes, str]:
+        try:
+            with urllib.request.urlopen(self.base + path, timeout=3) as response:
+                return response.status, response.read(32), response.headers.get_content_type()
+        except urllib.error.HTTPError as exc:
+            return exc.code, exc.read(32), exc.headers.get_content_type()
+
     def test_evidence_route_is_not_broken(self):
         status, body = self._get("/evidence")
         self.assertEqual(status, 200)
@@ -59,6 +66,22 @@ class DemoRouteTests(unittest.TestCase):
         status, body = self._get("/reproduce")
         self.assertEqual(status, 200)
         self.assertIn("Conversational Shopping Copilot", body)
+
+    def test_v3_demo_poster_is_served_from_media_route(self):
+        status, body, content_type = self._get_bytes(
+            "/media/shopping-copilot-demo-v3-poster.jpg"
+        )
+        self.assertEqual(status, 200)
+        self.assertEqual(content_type, "image/jpeg")
+        self.assertTrue(body.startswith(b"\xff\xd8\xff"))
+
+    def test_v3_webvtt_subtitle_is_served_with_standard_mime(self):
+        status, body, content_type = self._get_bytes(
+            "/media/shopping-copilot-demo-v3.zh-CN.vtt"
+        )
+        self.assertEqual(status, 200)
+        self.assertEqual(content_type, "text/vtt")
+        self.assertTrue(body.startswith(b"WEBVTT"))
 
 
 class TourDeliveryMarkupTests(unittest.TestCase):
