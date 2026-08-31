@@ -34,36 +34,56 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 | **已验证评测结果** | **透明的 Demo-only 广告** |
 | [![官方弱 starter 与 Rules V1.3 对比](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![相关性广告竞价与自然顺序不变](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
-## Intent Override 多案例展示
+### Trace Microscope：检查真实机制
 
-Tour 现在包含 3 个由 owner 冻结的官方 public traces。它们共同说明，Override 不只是替换一个字符串：
+[![交互式流水线展示当前官方 trace、重排证据和排序权重](docs/assets/readme/mechanism-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
 
-| Public case | 模式 | 改口前 | 状态变化 | 改口后 | 结果 |
-| --- | --- | --- | --- | --- | --- |
-| `public_0004` | 替换单个偏好 | `feature=adjustable` | 删除 `adjustable`；新增 `material=polyester` | `material=polyester` | Turn 3 目标 **Rank #1** |
-| `public_0080` | 保留仍有效值 | `material=cotton, polyester` | 删除 `polyester`；保留 `cotton` | `material=cotton` | Turn 4 目标 **Rank #1** |
-| `public_0142` | 多槽位重写 | `color=black`；`comfortable`；`lightweight` | 删除 3 个旧值；新增 `stainless steel` 和 `hypoallergenic` | `material=stainless steel`；`feature=hypoallergenic` | Turn 4 目标 **Rank #1** |
+五个可点击阶段分别使用路由分叉图、状态迁移图、召回漏斗、Top-3 排名台和追问
+决策链，并全部读取 Replay 当前轮次。Score anatomy 会公开正式路径中的全部排序
+权重，并明确 popularity 只参与近似分数的 tie-break。
 
-| 保留仍有效偏好（`public_0080`） | 同时重写多个槽位（`public_0142`） |
+## 多轮推荐与排序证据
+
+Tour 现在展示 9 个由 owner 冻结的官方 public traces，覆盖 Buying、Browsing
+和 Intent Override。每个案例都能看到用户回答、状态变化、Top-10 新增/保留/重排、
+单个商品位次变化和目标商品排名轨迹。
+
+| 场景 | Public case | 对话与推荐变化 | 结果 |
+| --- | --- | --- | --- |
+| Buying | `public_0018` | 目标连续两轮不在 Top-10；材质回答替换 8/10 个结果 | Turn 3 **Rank #1** |
+| Buying | `public_0152` | 颜色与材质组合回答让目标手表首次进入列表 | Turn 3 **Rank #1** |
+| Buying | `public_0179` | 连续三轮细化，closure 回答再次改变列表 | Turn 4 **Rank #2** |
+| Browsing | `public_0049` | 六轮探索：leather → brown → rubber → casual → soft | 换入 9 个结果；Turn 6 **Rank #1** |
+| Browsing | `public_0007` | 模糊需求被澄清为 polyester + spandex | Turn 3 **Rank #1** |
+| Browsing | `public_0063` | 一个 stretch-feature 回答完成模糊需求澄清 | Turn 2 **Rank #1** |
+| Intent Override | `public_0003` | 删除 stainless steel，继续回答，再次重排 | 换入 9 个结果；Turn 5 **Rank #1** |
+| Intent Override | `public_0046` | Public preview 从 #5 到 #1；Override 删除 cotton/polyester、保留 wool | Turn 4 计分 **Rank #1** |
+| Intent Override | `public_0142` | 删除三个旧值，新增 stainless steel 与 hypoallergenic | Turn 4 计分 **Rank #1** |
+
+| Buying：回答替换 8/10 个结果 | Browsing：六轮到 Rank #1 | Override：清空旧偏好后恢复 |
+| --- | --- | --- |
+| [![Buying 回答让目标从 Top-10 外进入 Rank #1](docs/assets/readme/ranking-buying.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![六轮 Browsing 换入九个结果并到达 Rank #1](docs/assets/readme/ranking-browsing.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Override 删除旧偏好并在后续回答后到达 Rank #1](docs/assets/readme/ranking-override.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+
+| Preview #5 → #1 → 计分 #1（`public_0046`） | 多槽位重写（`public_0142`） |
 | --- | --- |
-| [![删除 polyester，同时保留 cotton](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![删除三个旧值，并写入两个替代值](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+| [![目标在 public preview 中提升，Override 后成为计分 hit](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![删除三个旧值并新增两个替代值](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
 
-点击任一案例卡片都能查看完整官方 session：用户消息、Agent 回答、逐轮状态差异、
-Top-10 推荐、目标商品身份和排名轨迹都保留可查，而不是压缩成预设动画。
+Replay 会严格区分 public label preview 和官方计分 hit。Override gate 尚未满足时，
+即使公开标签显示目标商品已在列表中，也只标记为 `Public preview`，不会称作
+`Scored target`。
 
 ```mermaid
 sequenceDiagram
     participant U as 用户
     participant S as 版本化状态
     participant R as 检索与重排
-    U->>S: 初始偏好
-    S->>R: 使用当前约束检索
-    U->>S: OVERRIDE，忽略之前偏好
-    S->>S: 删除被替换值
-    S->>S: 保留仍有效值
-    S->>S: 新增替代值
-    S->>R: 使用重写后的状态重新生成 Top-10
-    R-->>U: 目标商品到达 Rank #1
+    U->>S: 初始需求或模糊浏览请求
+    S->>R: 生成初始 Top-10
+    R-->>U: 目标在 Top-10 外，提出一个高价值问题
+    U->>S: 回答材质、功能或改口
+    S->>S: 新增、保留或删除约束
+    S->>R: 对 5 万商品重新排序
+    R-->>U: 展示新增/保留/位移商品，目标到达 Rank #1
 ```
 
 ## 项目展示的能力

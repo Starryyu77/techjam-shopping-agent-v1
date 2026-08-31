@@ -31,31 +31,36 @@ Use the four scenario tabs:
 
 | Tab | Canonical evidence | What to inspect |
 | --- | --- | --- |
-| Buying | `public_0030` | `material=polyester`, target Rank #1 |
-| Browsing | `public_0063` | clarification narrows a vague request |
-| Intent Override | `public_0004`, `public_0080`, `public_0142` | replace, selectively retain, and multi-slot rewrite; all targets Rank #1 |
+| Buying | `public_0018`, `public_0152`, `public_0179` | user answers move targets from outside Top-10 to Rank #1/#2 |
+| Browsing | `public_0049`, `public_0007`, `public_0063` | vague exploration progressively changes Top-10 and reaches Rank #1 |
+| Intent Override | `public_0003`, `public_0046`, `public_0142` | reset old state, continue answering, rerank, and separate preview from scored hit |
 | Boundary | `public_0050` | no-preference handling without state loss |
 
 Use Prev, Next, Auto, and Restart to move through a trace. Target labels are
 visible because these are labeled public sessions.
 
-For Intent Override, use the three case cards above the replay. The six-card
-summary makes the full transition explicit: `Before override`, `Removed`,
-`Retained`, `Added`, `After override`, and `Rank progression`. The short video
-path can stay on `public_0004`; reviewers who want stronger evidence can open
-the two four-turn cases without leaving Step 2.
+Buying, Browsing, and Intent Override each expose three case cards. For every
+turn, inspect the rank journey, `new / retained / reordered` Top-10 delta, and
+per-product `NEW / ↑ / ↓ / =` movement badge. Use `public_0018` as the short
+video path: the target is outside Top-10 for two turns, then the user's material
+answer replaces eight results and moves it to Rank #1. Use `public_0003` to show
+override recovery, and `public_0046` to explain public preview vs scored hit.
 
 ## Step 3 — Mechanism
 
-Expand the four mechanism cards:
+Use the Trace Microscope after selecting a Replay turn. The context bar should
+carry the same sample ID, turn, user signal, and recommendation impact.
 
-1. Dual-track routing
-2. Erase-and-rewrite state machine
-3. Candidate-driven clarification
-4. Banded popularity tiebreaker
+Click the five pipeline stages:
 
-Read `Experiments We Did Not Ship` for the cross-encoder and prompt-evolution
-negative results.
+1. **Intent Router** — route-fork graphic plus ITEM/VAGUE, dialogue act, confidence, next question.
+2. **Versioned State** — before/delta/after graphic plus added, removed, and retained constraints.
+3. **SQLite FTS5 Recall** — 50k-to-Top-10 funnel plus real query terms and negative filter.
+4. **Rule Reranker** — Top-3 podium plus transparent scoring weights.
+5. **Question Policy** — candidate-to-threshold decision chain plus selected `ask_attribute`.
+
+Open `Experiments We Did Not Ship` only for deeper review of the cross-encoder
+and prompt-evolution negative results.
 
 ## Step 4 — Evaluation
 

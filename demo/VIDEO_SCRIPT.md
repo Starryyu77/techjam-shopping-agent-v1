@@ -42,33 +42,40 @@ Suggested narration:
 ### 0:45–1:10 — Buying case
 
 - Open Replay → Buying.
-- Show canonical case `public_0030`.
-- Highlight `+ added material: polyester` and Target Rank #1.
+- Keep `public_0018` selected.
+- Advance Turn 1 → Turn 3 and point to the rank journey:
+  `Outside Top-10 → Outside Top-10 → Rank #1`.
+- Point to `8 new · 2 retained · 2 reordered` and the `NEW` badges.
 
-> “A concrete Buying request locks the explicit material constraint immediately,
-> retrieves ten catalog-valid products, and places the target first.”
+> “The first request is not enough: the purchased item is outside Top-10. After
+> the user's material answer, eight recommendations change and the target moves
+> directly to Rank #1.”
 
 ### 1:10–1:40 — Intent Override
 
 - Select `Intent Override`.
-- Keep Case 1 selected and advance `public_0004` from Turn 1 to Turn 3.
-- Point to `removed feature: adjustable`, `added material: polyester`, and Rank #1.
-- Briefly point to the Case 2 and Case 3 selectors as deeper official-public
-  evidence; do not open them in the three-minute cut.
+- Keep `public_0003` selected and use Auto to advance Turn 1 → Turn 5.
+- Point to the Turn 3 removal of `material: stainless steel`, then the Turn 5
+  `9 new · 1 retained · Rank #1` result.
+- Briefly point to `public_0046` for the `Preview #5 → Preview #1 → Scored #1`
+  distinction and `public_0142` for multi-slot rewrite.
 
 > “The difficult override scenario is erase-and-rewrite, not append-only state.
-> The superseded preference disappears while the replacement enters the state.
-> Two additional official traces show selective retention and multi-slot rewrite.”
+> The superseded preference disappears, the agent keeps asking useful questions,
+> and the final answer changes nine recommendations before the target reaches #1.”
 
 ### 1:40–2:05 — Mechanism
 
-- Open Mechanism.
-- Briefly cover intent routing, versioned state, FTS5 retrieval, rule reranking,
-  candidate-driven clarification, and the banded popularity tiebreaker.
-- Open `Experiments We Did Not Ship` to show the cross-encoder negative result.
+- Open Mechanism after the Buying target reaches Rank #1; the context bar should
+  remain on `public_0018 · Turn 3 / 3`.
+- Click `Versioned State` to show the added material values.
+- Click `Rule Reranker` to show the new Top-3 and score anatomy:
+  category +3, hard +4, soft +1.5, and popularity as tie-break only.
+- Point to `Question Policy` without opening the negative-results drawer.
 
-> “We built heavier alternatives, measured them, and kept the lightweight path
-> because it scored better on this task.”
+> “This is the shipped data path, not a conceptual architecture diagram. The
+> selected user answer updates state, FTS5 recalls candidates, transparent rules
+> rerank them, and the question policy asks only when candidates remain ambiguous.”
 
 ### 2:05–2:35 — Evaluation evidence
 

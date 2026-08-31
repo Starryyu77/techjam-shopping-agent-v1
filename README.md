@@ -38,39 +38,57 @@ not evidence about the organizer's 800 private sessions.
 | **Verified evaluation** | **Transparent demo-only ads** |
 | [![Official weak starter compared with Rules V1.3](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![Relevance-aware ad auction with preserved organic order](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
-## Intent Override showcase
+### Trace Microscope: inspect the shipped mechanism
 
-The Tour now includes three owner-frozen official-public traces. Together they
-show that override handling is more than replacing one string:
+[![Interactive pipeline showing the current official trace, reranking evidence, and score weights](docs/assets/readme/mechanism-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
 
-| Public case | Pattern | Before override | State transition | After override | Outcome |
-| --- | --- | --- | --- | --- | --- |
-| `public_0004` | Replace one preference | `feature=adjustable` | Remove `adjustable`; add `material=polyester` | `material=polyester` | Target **Rank #1** on Turn 3 |
-| `public_0080` | Retain the valid value | `material=cotton, polyester` | Remove `polyester`; retain `cotton` | `material=cotton` | Target **Rank #1** on Turn 4 |
-| `public_0142` | Rewrite multiple slots | `color=black`; `comfortable`; `lightweight` | Remove three superseded values; add `stainless steel` and `hypoallergenic` | `material=stainless steel`; `feature=hypoallergenic` | Target **Rank #1** on Turn 4 |
+The five interactive stages use different trace-backed visuals: a route fork,
+state transition, recall funnel, Top-3 podium, and question-decision chain. The
+score anatomy exposes every shipped ranking weight and keeps popularity as a
+near-tie signal only.
 
-| Retain a still-valid preference (`public_0080`) | Rewrite several slots together (`public_0142`) |
+## Multi-turn recommendation and ranking evidence
+
+The Tour exposes nine owner-frozen official-public traces across Buying,
+Browsing, and Intent Override. Each case shows the user answer, state update,
+Top-10 list delta, per-item movement, and target-rank progression.
+
+| Scenario | Public case | Dialogue and recommendation impact | Outcome |
+| --- | --- | --- | --- |
+| Buying | `public_0018` | Target outside Top-10 for two turns; material answer replaces 8/10 results | **Rank #1** on Turn 3 |
+| Buying | `public_0152` | Detailed color and material bundle introduces the target watch | **Rank #1** on Turn 3 |
+| Buying | `public_0179` | Three rounds of refinement before the closure answer changes the list | **Rank #2** on Turn 4 |
+| Browsing | `public_0049` | Six-turn exploration: leather → brown → rubber → casual → soft | 9 new results; **Rank #1** on Turn 6 |
+| Browsing | `public_0007` | Vague request becomes polyester + spandex | **Rank #1** on Turn 3 |
+| Browsing | `public_0063` | One stretch-feature clarification resolves a vague request | **Rank #1** on Turn 2 |
+| Intent Override | `public_0003` | Remove stainless steel, continue refining, then rerank | 9 new results; **Rank #1** on Turn 5 |
+| Intent Override | `public_0046` | Public preview moves #5 → #1; override removes cotton/polyester and retains wool | Scored **Rank #1** on Turn 4 |
+| Intent Override | `public_0142` | Remove three old values; add stainless steel and hypoallergenic | Scored **Rank #1** on Turn 4 |
+
+| Buying: answer changes 8/10 results | Browsing: six turns to Rank #1 | Override: reset and recover |
+| --- | --- | --- |
+| [![Buying answer moves the target from outside Top-10 to Rank #1](docs/assets/readme/ranking-buying.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Six-turn browsing session replaces nine results and reaches Rank #1](docs/assets/readme/ranking-browsing.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Override removes an old preference and later reaches Rank #1](docs/assets/readme/ranking-override.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+
+| Preview #5 → #1 → scored #1 (`public_0046`) | Multi-slot rewrite (`public_0142`) |
 | --- | --- |
-| [![Polyester is removed while cotton is retained](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Three old values are removed and two replacements are added](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+| [![Target rank improves in public preview before the override becomes a scored hit](docs/assets/readme/override-retain.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) | [![Three old values are removed and two replacements are added](docs/assets/readme/override-multislot.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
 
-Each selector card opens the complete official session: all user turns, agent
-responses, per-turn state diffs, Top-10 recommendations, target identity, and
-rank progression remain inspectable rather than being condensed into a staged
-animation.
+The Replay distinguishes a public-label preview from an official scored hit.
+Before the override gate is satisfied, a visible target is labelled `Public
+preview`, never `Scored target`.
 
 ```mermaid
 sequenceDiagram
     participant U as User
     participant S as Versioned state
     participant R as Retrieval and reranking
-    U->>S: Initial preference
-    S->>R: Search with current constraints
-    U->>S: OVERRIDE, ignore earlier preference
-    S->>S: Remove superseded values
-    S->>S: Retain still-valid values
-    S->>S: Add replacement values
-    S->>R: Rerun Top-10 with rewritten state
-    R-->>U: Target reaches Rank #1
+    U->>S: Initial or vague request
+    S->>R: Build initial Top-10
+    R-->>U: Target outside Top-10; ask one useful question
+    U->>S: Answer with material, feature, or override
+    S->>S: Add, retain, or remove constraints
+    S->>R: Rerank 50k catalog candidates
+    R-->>U: Show new/retained/moved items and target Rank #1
 ```
 
 ## What the project demonstrates
