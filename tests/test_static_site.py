@@ -26,6 +26,7 @@ class StaticSiteBuildTests(unittest.TestCase):
             "index.html",
             "tour.css",
             "tour.js",
+            "i18n.js",
             ".nojekyll",
             "evidence/manifest.json",
             "evidence/metrics.json",
@@ -43,6 +44,7 @@ class StaticSiteBuildTests(unittest.TestCase):
         html = (self.output / "index.html").read_text(encoding="utf-8")
         self.assertIn('href="./tour.css"', html)
         self.assertIn('src="./tour.js"', html)
+        self.assertIn('src="./i18n.js"', html)
         self.assertIn('href="./?step=4"', html)
         self.assertNotIn('href="/sandbox"', html)
         self.assertNotIn('href="/report"', html)

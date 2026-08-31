@@ -8,6 +8,11 @@
 The default page is a deterministic evidence walkthrough. It does not require
 typing and does not call the optional Qwen model.
 
+Use the `EN / 中文` control in the top-right corner to switch the complete Tour
+interface without reloading. `?lang=zh` and `?lang=en` create shareable language
+links; raw public-session messages, product titles, identifiers, and commands
+remain in their original evidence form.
+
 ## Step 0 — Results
 
 Confirm the Hero shows:

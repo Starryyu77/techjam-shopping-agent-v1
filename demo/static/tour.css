@@ -85,6 +85,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+html[lang='zh-CN'] body {
+  font-family: 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Avenir Next', sans-serif;
+}
+
+html[lang='zh-CN'] .card-title,
+html[lang='zh-CN'] .closeout-quote,
+html[lang='zh-CN'] .prompt-lab-header h3 {
+  font-family: 'Songti SC', STSong, 'Noto Serif CJK SC', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
 body::before,
 body::after {
   content: '';
@@ -4029,6 +4041,52 @@ body::after {
   border-radius: 0;
 }
 
+.language-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  min-height: 28px;
+  margin-left: 0.35rem;
+  padding: 0.22rem 0.48rem !important;
+  color: var(--text-muted) !important;
+  background: transparent !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: none !important;
+  font-family: 'SFMono-Regular', 'JetBrains Mono', Consolas, monospace;
+  font-size: 0.58rem !important;
+  letter-spacing: 0.06em !important;
+}
+
+.language-toggle i {
+  color: var(--border-light);
+  font-style: normal;
+}
+
+.language-toggle span {
+  position: relative;
+  transition: color var(--transition-fast);
+}
+
+.language-toggle span.active {
+  color: var(--text-primary);
+  font-weight: 700;
+}
+
+.language-toggle span.active::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -4px;
+  left: 0;
+  height: 1px;
+  background: var(--evidence-primary);
+}
+
+.language-toggle:hover {
+  color: var(--text-primary) !important;
+  border-color: var(--evidence-primary) !important;
+}
+
 .topbar-nav a:hover,
 .topbar-nav button:hover {
   color: var(--text-primary);
@@ -4589,4 +4647,5 @@ body::after {
   }
 
   .topbar .sub { display: none; }
+  .language-toggle { margin-left: 0.1rem; }
 }

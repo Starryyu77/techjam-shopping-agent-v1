@@ -25,6 +25,7 @@ def build_static_site(output: Path) -> None:
         _STATIC / "tour.html",
         _STATIC / "tour.css",
         _STATIC / "tour.js",
+        _STATIC / "i18n.js",
         _EVIDENCE / "manifest.json",
     ]
     missing = [str(path) for path in required if not path.is_file()]
@@ -35,6 +36,7 @@ def build_static_site(output: Path) -> None:
     replacements = {
         'href="/tour.css"': 'href="./tour.css"',
         'src="/tour.js"': 'src="./tour.js"',
+        'src="/i18n.js"': 'src="./i18n.js"',
         'href="/tour"': 'href="./"',
         'href="/evidence"': 'href="./?step=4"',
         '<a href="/sandbox">Sandbox</a>': f'<a href="{_SOURCE_URL}" target="_blank" rel="noopener">Source</a>',
@@ -47,6 +49,7 @@ def build_static_site(output: Path) -> None:
     (output / "index.html").write_text(html, encoding="utf-8")
     shutil.copy2(_STATIC / "tour.css", output / "tour.css")
     shutil.copy2(_STATIC / "tour.js", output / "tour.js")
+    shutil.copy2(_STATIC / "i18n.js", output / "i18n.js")
     shutil.copytree(_EVIDENCE, output / "evidence")
     (output / ".nojekyll").write_text("", encoding="utf-8")
 

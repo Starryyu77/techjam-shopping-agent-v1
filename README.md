@@ -7,6 +7,7 @@ Amazon Reviews 2023 `Clothing_Shoes_and_Jewelry` catalog.
 
 > **Try the judge-facing evidence tour:**
 > [shopping-copilot-techjam.pages.dev](https://shopping-copilot-techjam.pages.dev/)
+> · [中文界面](https://shopping-copilot-techjam.pages.dev/?lang=zh)
 
 The scored path uses the Python standard library, SQLite FTS5, and deterministic
 rules. It needs no network, API key, paid model, or GPU.
@@ -192,7 +193,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **79 tests pass**.
+Current expected result: **81 tests pass**.
 
 ## Evidence reproduction
 

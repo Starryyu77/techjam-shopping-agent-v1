@@ -444,6 +444,8 @@ def make_handler(demo: DemoState):
                 return self._send_file(_STATIC / "index.html", "text/html; charset=utf-8")
             if path == "/tour.js":
                 return self._send_file(_STATIC / "tour.js", "application/javascript")
+            if path == "/i18n.js":
+                return self._send_file(_STATIC / "i18n.js", "application/javascript")
             if path == "/tour.css":
                 return self._send_file(_STATIC / "tour.css", "text/css")
             if path == "/evidence":

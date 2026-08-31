@@ -45,6 +45,11 @@ class DemoRouteTests(unittest.TestCase):
         self.assertEqual(status, 200)
         self.assertIn("Shopping Copilot", body)
 
+    def test_i18n_asset_is_served(self):
+        status, body = self._get("/i18n.js")
+        self.assertEqual(status, 200)
+        self.assertIn("ShoppingCopilotI18n", body)
+
     def test_report_route_serves_the_technical_report(self):
         status, body = self._get("/report")
         self.assertEqual(status, 200)
@@ -108,6 +113,23 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertIn("Compact ranking readability at the default 1280×720 viewport", self.css)
         for label in ["Before override", "Removed", "Retained", "Added", "After override", "Rank progression"]:
             self.assertIn(label, self.js)
+
+    def test_bilingual_tour_contract_is_complete(self):
+        i18n_path = _REPO_ROOT / "demo" / "static" / "i18n.js"
+        self.assertTrue(i18n_path.is_file())
+        i18n = i18n_path.read_text(encoding="utf-8")
+        self.assertIn('id="languageToggle"', self.html)
+        self.assertIn('src="/i18n.js"', self.html)
+        self.assertIn("ShoppingCopilotI18n", i18n)
+        self.assertIn("shopping-copilot-language", i18n)
+        self.assertIn("URLSearchParams", i18n)
+        self.assertIn("MutationObserver", i18n)
+        for translated_label in [
+            "结果", "数据合同", "场景回放", "机制检查", "评测证据",
+            "透明广告", "交付物与局限", "提示词演化实验室",
+            "比赛证据", "私有 800 个会话",
+        ]:
+            self.assertIn(translated_label, i18n)
 
 
 if __name__ == "__main__":

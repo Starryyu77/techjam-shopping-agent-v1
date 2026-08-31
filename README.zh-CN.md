@@ -6,6 +6,7 @@
 
 > **在线体验评委证据导览：**
 > [shopping-copilot-techjam.pages.dev](https://shopping-copilot-techjam.pages.dev/)
+> · [中文界面](https://shopping-copilot-techjam.pages.dev/?lang=zh)
 
 正式打分路径只使用 Python 标准库、SQLite FTS5 和确定性规则，不需要网络、API Key、付费模型或 GPU。
 
@@ -165,7 +166,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**79 项测试全部通过**。
+当前预期结果：**81 项测试全部通过**。
 
 ## Evidence 复现
 
