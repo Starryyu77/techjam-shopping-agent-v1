@@ -9,6 +9,12 @@
 
 正式打分路径只使用 Python 标准库、SQLite FTS5 和确定性规则，不需要网络、API Key、付费模型或 GPU。
 
+<p align="center">
+  <a href="https://shopping-copilot-techjam.pages.dev/">
+    <img src="docs/assets/readme/hero.jpg" alt="Shopping Copilot 评委证据导览结果页" width="100%">
+  </a>
+</p>
+
 ## 已验证的公开集结果
 
 以下结果来自未修改的官方评测器和 200 个带标签的 public development sessions：
@@ -19,6 +25,14 @@
 | **Rules V1.3，提交路径** | **0.995** | **0.644355** | **2.215** | **0.8785** | **0.866507** |
 
 TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，不能代表主办方保留的 800 个 private sessions。
+
+## 实际页面
+
+| 比赛数据合同 | Intent Override 回放 |
+| --- | --- |
+| [![冻结目录、公开私有划分和场景比例](docs/assets/readme/data-contract.jpg)](https://shopping-copilot-techjam.pages.dev/?step=1) | [![删除旧偏好并写入新偏好，目标商品排名第一](docs/assets/readme/intent-override.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+| **已验证评测结果** | **透明的 Demo-only 广告** |
+| [![官方弱 starter 与 Rules V1.3 对比](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![相关性广告竞价与自然顺序不变](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
 ## 项目展示的能力
 
@@ -70,7 +84,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**74 项测试全部通过**。
+当前预期结果：**75 项测试全部通过**。
 
 ## Evidence 复现
 
@@ -85,17 +99,35 @@ python scripts/build_demo_evidence.py \
 
 ## 架构
 
-```text
-用户消息
-  → Buying / Browsing 意图分流
-  → 版本化约束状态
-  → SQLite FTS5 候选召回
-  → 规则重排 + 分带人气 tiebreaker
-  → 候选驱动追问
-  → message + ask_attribute + Top-10 parent_asin
+```mermaid
+flowchart LR
+    U[用户消息] --> R{意图分流}
+    R -->|Buying| B[锁定硬约束]
+    R -->|Browsing| C[提出高价值问题]
+    B --> S[版本化对话状态]
+    C --> S
+    S --> F[SQLite FTS5 召回]
+    F --> K[规则重排]
+    K --> P[分带人气 tiebreaker]
+    P --> D{追问还是推荐?}
+    D -->|追问| C
+    D -->|推荐| T[Top-10 parent_asin]
 ```
 
 官方评测器只调用 `submission/agent.py`。导购话术、广告位和旧版聊天 UI 都位于正式打分路径之外。
+
+### Evidence 交付链路
+
+```mermaid
+flowchart LR
+    O[官方 public kit] --> A[Rules Agent 回放]
+    A --> V{Fail-closed 验证}
+    V -->|不一致| X[停止构建]
+    V -->|通过| J[冻结 evidence JSON]
+    J --> G[Guided Evidence Tour]
+    J --> E[Evidence tests]
+    G --> P[Cloudflare 和 GitHub Pages]
+```
 
 ## 仓库结构
 

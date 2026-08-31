@@ -95,4 +95,4 @@ Canonical public cases 由 `demo/canonical_cases.json` 冻结；页面指标和 
 - 指标只能从 evidence JSON 读取。
 - 所有 ASIN 必须来自冻结 catalog。
 - 公开网站不依赖本地模型、API Key 或 Python API。
-- `python -m unittest discover -s tests -v` 当前应通过 74 项测试。
+- `python -m unittest discover -s tests -v` 当前应通过 75 项测试。

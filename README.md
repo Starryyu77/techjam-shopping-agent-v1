@@ -11,6 +11,12 @@ Amazon Reviews 2023 `Clothing_Shoes_and_Jewelry` catalog.
 The scored path uses the Python standard library, SQLite FTS5, and deterministic
 rules. It needs no network, API key, paid model, or GPU.
 
+<p align="center">
+  <a href="https://shopping-copilot-techjam.pages.dev/">
+    <img src="docs/assets/readme/hero.jpg" alt="Shopping Copilot Judge Tour result screen" width="100%">
+  </a>
+</p>
+
 ## Verified public-set result
 
 Measured with the unmodified official evaluator on the 200 labeled public
@@ -23,6 +29,14 @@ development sessions:
 
 That is about **8.1× the starter TechnicalScore**. These are public-set results,
 not evidence about the organizer's 800 private sessions.
+
+## See it in action
+
+| Competition data contract | Intent Override replay |
+| --- | --- |
+| [![Frozen catalog, public/private split, and scenario mix](docs/assets/readme/data-contract.jpg)](https://shopping-copilot-techjam.pages.dev/?step=1) | [![Erase-and-rewrite state transition with target at rank one](docs/assets/readme/intent-override.jpg)](https://shopping-copilot-techjam.pages.dev/?step=2) |
+| **Verified evaluation** | **Transparent demo-only ads** |
+| [![Official weak starter compared with Rules V1.3](docs/assets/readme/evaluation.jpg)](https://shopping-copilot-techjam.pages.dev/?step=4) | [![Relevance-aware ad auction with preserved organic order](docs/assets/readme/transparent-ads.jpg)](https://shopping-copilot-techjam.pages.dev/?step=5) |
 
 ## What the project demonstrates
 
@@ -82,7 +96,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **74 tests pass**.
+Current expected result: **75 tests pass**.
 
 ## Evidence reproduction
 
@@ -99,18 +113,36 @@ mismatches, missing hashes, non-public cases, or an unfrozen canonical-case set.
 
 ## Architecture
 
-```text
-user message
-  → Buying / Browsing intent router
-  → versioned constraint state
-  → SQLite FTS5 candidate retrieval
-  → rule reranking + banded popularity tiebreaker
-  → candidate-driven clarification
-  → message + ask_attribute + Top-10 parent_asin
+```mermaid
+flowchart LR
+    U[User message] --> R{Intent route}
+    R -->|Buying| B[Lock hard constraints]
+    R -->|Browsing| C[Ask a high-value question]
+    B --> S[Versioned dialogue state]
+    C --> S
+    S --> F[SQLite FTS5 recall]
+    F --> K[Rule reranking]
+    K --> P[Banded popularity tiebreaker]
+    P --> D{Ask or recommend?}
+    D -->|Ask| C
+    D -->|Recommend| T[Top-10 parent_asin]
 ```
 
 The official evaluator calls `submission/agent.py`. Demo narration, ad placement,
 and the legacy chat UI live outside that scored path.
+
+### Evidence delivery pipeline
+
+```mermaid
+flowchart LR
+    O[Official public kit] --> A[Rules Agent replay]
+    A --> V{Fail-closed validation}
+    V -->|Mismatch| X[Stop the build]
+    V -->|Pass| J[Frozen evidence JSON]
+    J --> G[Guided Evidence Tour]
+    J --> E[Evidence tests]
+    G --> P[Cloudflare and GitHub Pages]
+```
 
 ## Repository map
 

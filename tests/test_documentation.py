@@ -43,13 +43,28 @@ class PublicDocumentationTests(unittest.TestCase):
     def test_current_test_count_is_not_stale(self):
         for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("74", text, relative)
+            self.assertIn("75", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 
     def test_public_readme_has_no_machine_specific_windows_path(self):
         self.assertNotIn("D:\\TikTok-TechJam", self.readme_en)
         self.assertNotIn("D:\\TikTok-TechJam", self.readme_zh)
+
+    def test_visual_assets_and_mermaid_are_present(self):
+        assets = [
+            "hero.jpg",
+            "data-contract.jpg",
+            "intent-override.jpg",
+            "evaluation.jpg",
+            "transparent-ads.jpg",
+        ]
+        for text in [self.readme_en, self.readme_zh]:
+            self.assertGreaterEqual(text.count("```mermaid"), 2)
+            for asset in assets:
+                relative = f"docs/assets/readme/{asset}"
+                self.assertIn(relative, text)
+                self.assertTrue((ROOT / relative).is_file(), relative)
 
 
 if __name__ == "__main__":
