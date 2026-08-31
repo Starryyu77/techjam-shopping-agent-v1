@@ -1,0 +1,26 @@
+{
+  "round": 1,
+  "accepted": false,
+  "reasons": [
+    "optimizer returned the unchanged prompt"
+  ],
+  "roles": {
+    "target": {
+      "endpoint": "http://127.0.0.1:8080/v1",
+      "model": "qwen3-8b",
+      "timeout": 120.0
+    },
+    "optimizer": {
+      "endpoint": "http://127.0.0.1:8080/v1",
+      "model": "qwen3-8b",
+      "timeout": 120.0
+    },
+    "judge": null,
+    "self_judge": false
+  },
+  "candidate_sha256": "5a0791a2d83c",
+  "optimizer_usage": {
+    "prompt_tokens": 4624,
+    "completion_tokens": 632
+  }
+}

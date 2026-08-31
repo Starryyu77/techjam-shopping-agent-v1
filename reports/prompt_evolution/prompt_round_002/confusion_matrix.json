@@ -1,0 +1,41 @@
+{
+  "dev_before": {
+    "domain_intent": {
+      "VAGUE→ITEM": 9
+    },
+    "dialogue_act": {
+      "ANSWER→ADD": 9,
+      "ANSWER→NOOP": 1,
+      "NEW→ADD": 1,
+      "NEW→RESET": 3,
+      "REJECT→RESET": 2
+    },
+    "clarity_level": {
+      "L1→L2": 12,
+      "L1→L4": 1,
+      "L2→L1": 3,
+      "L2→L3": 3,
+      "L3→L2": 3,
+      "L4→L2": 2,
+      "L4→L3": 1
+    }
+  },
+  "dev_candidate": {},
+  "validation_before": {
+    "domain_intent": {
+      "VAGUE→ITEM": 2
+    },
+    "dialogue_act": {
+      "ANSWER→OVERRIDE": 2,
+      "NEW→ADD": 3,
+      "REJECT→RESET": 2
+    },
+    "clarity_level": {
+      "L1→L2": 7,
+      "L2→L1": 1,
+      "L2→L3": 1,
+      "L4→L3": 1
+    }
+  },
+  "validation_candidate": {}
+}

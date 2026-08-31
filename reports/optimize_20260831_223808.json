@@ -1,0 +1,56 @@
+{
+  "history": [
+    {
+      "round": 1,
+      "accepted": false,
+      "reasons": [
+        "candidate grew more than the 15% anti-overfit limit"
+      ],
+      "roles": {
+        "target": {
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "model": "qwen3-8b",
+          "timeout": 120.0
+        },
+        "optimizer": {
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "model": "qwen3-8b",
+          "timeout": 120.0
+        },
+        "judge": null,
+        "self_judge": false
+      },
+      "candidate_sha256": "90c4673f8733",
+      "optimizer_usage": {
+        "prompt_tokens": 4596,
+        "completion_tokens": 2400
+      }
+    },
+    {
+      "round": 2,
+      "accepted": false,
+      "reasons": [
+        "optimizer repeated candidate 90c4673f8733"
+      ],
+      "roles": {
+        "target": {
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "model": "qwen3-8b",
+          "timeout": 120.0
+        },
+        "optimizer": {
+          "endpoint": "http://127.0.0.1:8080/v1",
+          "model": "qwen3-8b",
+          "timeout": 120.0
+        },
+        "judge": null,
+        "self_judge": false
+      },
+      "candidate_sha256": "90c4673f8733",
+      "optimizer_usage": {
+        "prompt_tokens": 4650,
+        "completion_tokens": 2400
+      }
+    }
+  ]
+}

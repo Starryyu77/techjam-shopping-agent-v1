@@ -1,0 +1,26 @@
+{
+  "round": 2,
+  "accepted": false,
+  "reasons": [
+    "optimizer repeated candidate 5a0791a2d83c"
+  ],
+  "roles": {
+    "target": {
+      "endpoint": "http://127.0.0.1:8080/v1",
+      "model": "qwen3-8b",
+      "timeout": 120.0
+    },
+    "optimizer": {
+      "endpoint": "http://127.0.0.1:8080/v1",
+      "model": "qwen3-8b",
+      "timeout": 120.0
+    },
+    "judge": null,
+    "self_judge": false
+  },
+  "candidate_sha256": "5a0791a2d83c",
+  "optimizer_usage": {
+    "prompt_tokens": 4670,
+    "completion_tokens": 632
+  }
+}

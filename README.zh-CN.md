@@ -136,7 +136,60 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**78 项测试全部通过**。
+当前预期结果：安装可选商品目录 fixture 时，**96 项测试全部通过**。
+
+## 可选的方案 B 提示词自进化
+
+`prompt_lab.py` 是提示词评测与自动迭代的唯一正式入口。`exp_selfevolve/`
+仅保留为历史实验，不能作为验收或提交证据。
+仓库在 `prompt_data/` 内自带合成 Gold 候选集的 dev 和 validation；
+held-out 标签刻意不随仓库提交。
+
+只有一个本地端点时，target parser 与 optimizer 共用同一模型，确定性的
+Gold 指标仍然负责最终验收：
+
+```bash
+python prompt_lab.py optimize \
+  --backend model \
+  --endpoint http://127.0.0.1:8080/v1 \
+  --model qwen3-8b \
+  --rounds 3
+```
+
+也可以为三个角色分别提供本机端点：
+
+```bash
+python prompt_lab.py optimize \
+  --backend model \
+  --target-endpoint http://127.0.0.1:8080/v1 \
+  --target-model qwen3-8b \
+  --optimizer-endpoint http://127.0.0.1:8081/v1 \
+  --optimizer-model qwen3-8b \
+  --judge-endpoint http://127.0.0.1:8082/v1 \
+  --judge-model qwen3-8b \
+  --rounds 3
+```
+
+optimizer 只能看到脱敏的 dev bad cases。validation 只提供聚合的接受/拒绝
+指标，不能反馈给改写器。每轮都会在 `reports/prompt_evolution/` 保存提示词、
+diff、指标、混淆矩阵、语义评分、bad cases 和决策。任一关键指标退步都会拒绝
+候选。validation 一旦拒绝就立即停止，避免把这一位信号用于下一轮改写；
+dev/静态门槛连续拒绝两轮也会停止。送入模型前提示词统一用 `.strip()` 规范化。
+target 与 judge 同端点同模型时，本轮会标记为 `self_judge: true`。
+
+held-out test **尚未运行**，其标签也不在仓库中。只有提示词和评测代码都
+冻结后，才传入完整外部数据集；命令会写入一次性冻结清单，并拒绝第二次运行：
+
+```bash
+SYSTEM_SHA256=$(python prompt_lab.py fingerprint --backend model)
+python prompt_lab.py evaluate \
+  --backend model \
+  --endpoint http://127.0.0.1:8080/v1 \
+  --dataset /path/to/full-gold-dataset \
+  --split test \
+  --confirm-heldout FINAL-FROZEN \
+  --frozen-system-sha256 "$SYSTEM_SHA256"
+```
 
 ## Evidence 复现
 

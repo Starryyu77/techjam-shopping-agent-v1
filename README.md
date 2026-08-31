@@ -149,7 +149,65 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **78 tests pass**.
+Current expected result: **96 tests pass** when the optional catalog fixture is present.
+
+## Optional Scheme B prompt evolution
+
+`prompt_lab.py` is the only supported entry point for prompt evaluation and
+automatic iteration. `exp_selfevolve/` is retained only as a historical
+experiment and must not be used for acceptance or submission evidence.
+The repository bundles the synthetic Gold-candidate dev and validation splits
+under `prompt_data/`; held-out labels are deliberately excluded.
+
+With one local endpoint, the target parser and optimizer share the same model;
+the deterministic Gold metrics remain the acceptance gate:
+
+```bash
+python prompt_lab.py optimize \
+  --backend model \
+  --endpoint http://127.0.0.1:8080/v1 \
+  --model qwen3-8b \
+  --rounds 3
+```
+
+The three roles can instead use separate local endpoints:
+
+```bash
+python prompt_lab.py optimize \
+  --backend model \
+  --target-endpoint http://127.0.0.1:8080/v1 \
+  --target-model qwen3-8b \
+  --optimizer-endpoint http://127.0.0.1:8081/v1 \
+  --optimizer-model qwen3-8b \
+  --judge-endpoint http://127.0.0.1:8082/v1 \
+  --judge-model qwen3-8b \
+  --rounds 3
+```
+
+The optimizer sees only scrubbed dev bad cases. Validation contributes
+aggregate accept/reject metrics but is never fed back for rewriting. Every
+round keeps prompts, diffs, metrics, confusions, semantic scores, bad cases,
+and the decision under `reports/prompt_evolution/`. A candidate is rejected if
+any critical metric regresses. A validation rejection stops immediately so its
+signal cannot steer another rewrite; two consecutive dev/static rejections also
+stop the loop.
+Prompt text is normalized with `.strip()` before evaluation. If target and
+judge use the same endpoint and model, the round is marked `self_judge: true`.
+
+The held-out test has **not** been run. Its labels are not bundled. Supply the
+full external dataset only after the prompt and evaluation code are frozen;
+the command records a one-time freeze manifest and refuses a second run:
+
+```bash
+SYSTEM_SHA256=$(python prompt_lab.py fingerprint --backend model)
+python prompt_lab.py evaluate \
+  --backend model \
+  --endpoint http://127.0.0.1:8080/v1 \
+  --dataset /path/to/full-gold-dataset \
+  --split test \
+  --confirm-heldout FINAL-FROZEN \
+  --frozen-system-sha256 "$SYSTEM_SHA256"
+```
 
 ## Evidence reproduction
 

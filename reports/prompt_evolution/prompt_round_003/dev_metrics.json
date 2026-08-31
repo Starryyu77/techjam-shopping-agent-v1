@@ -1,0 +1,17 @@
+{
+  "before": {
+    "turns": 90,
+    "json_compliance": 1.0,
+    "domain_accuracy": 0.9,
+    "dialogue_act_accuracy": 0.8222222222222222,
+    "clarity_accuracy": 0.7111111111111111,
+    "slot_precision": 0.2857142857142857,
+    "slot_recall": 0.2608695652173913,
+    "slot_f1": 0.2727272727272727,
+    "rollout_state_exact": 0.1,
+    "no_mutation_preservation": 0.8888888888888888,
+    "selection_accuracy": 0.9166666666666666,
+    "composite": 0.6137373737373737
+  },
+  "candidate": {}
+}
