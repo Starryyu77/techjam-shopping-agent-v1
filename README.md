@@ -17,6 +17,16 @@ rules. It needs no network, API key, paid model, or GPU.
   </a>
 </p>
 
+## 3-minute demo film
+
+[![Shopping Copilot cinematic demo with English and Chinese subtitles](docs/assets/video/shopping-copilot-demo-preview.gif)](docs/assets/video/shopping-copilot-demo-bilingual.mp4)
+
+**[Watch the full 3-minute film — English voice · English / 中文字幕](docs/assets/video/shopping-copilot-demo-bilingual.mp4)**
+
+[English subtitles](docs/assets/video/shopping-copilot-demo.en.srt) ·
+[中文字幕](docs/assets/video/shopping-copilot-demo.zh-CN.srt) ·
+[Live evidence tour](https://shopping-copilot-techjam.pages.dev/)
+
 ## Verified public-set result
 
 Measured with the unmodified official evaluator on the 200 labeled public

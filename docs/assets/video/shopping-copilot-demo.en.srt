@@ -1,0 +1,143 @@
+1
+00:00:00,220 --> 00:00:04,720
+Shopping search rarely fails for lack of keywords.
+
+2
+00:00:05,220 --> 00:00:09,720
+It fails when people add constraints—or change course.
+
+3
+00:00:10,220 --> 00:00:14,720
+Append-only logic conflicts. We maintain explicit state.
+
+4
+00:00:15,220 --> 00:00:19,720
+Meet Shopping Copilot, spanning fifty thousand products.
+
+5
+00:00:20,220 --> 00:00:24,720
+The scored path runs offline, on CPU, without keys.
+
+6
+00:00:25,220 --> 00:00:29,720
+Public-set score: zero point eight six six five.
+
+7
+00:00:30,220 --> 00:00:34,720
+Fifty thousand frozen products. Ten turns maximum.
+
+8
+00:00:35,220 --> 00:00:39,720
+Two hundred public. Eight hundred private—and unknown.
+
+9
+00:00:40,220 --> 00:00:44,720
+Four cases: buying, browsing, override, and boundary.
+
+10
+00:00:45,220 --> 00:00:49,720
+Follow owner-approved public trace zero zero zero four.
+
+11
+00:00:50,220 --> 00:00:54,720
+The shopper wants a long-torso camisole with adjustable straps.
+
+12
+00:00:55,220 --> 00:00:59,720
+The router fixes the category and item intent.
+
+13
+00:01:00,220 --> 00:01:04,720
+Adjustable enters state as a soft preference.
+
+14
+00:01:05,220 --> 00:01:09,720
+Clarification targets what best separates remaining products.
+
+15
+00:01:10,220 --> 00:01:14,720
+The target is outside Top Ten; state remains visible.
+
+16
+00:01:15,220 --> 00:01:19,720
+Then the shopper overrides adjustable with polyester.
+
+17
+00:01:20,220 --> 00:01:24,720
+Append-only logic would keep both conflicting values.
+
+18
+00:01:25,220 --> 00:01:29,720
+Shopping Copilot marks adjustable as superseded.
+
+19
+00:01:30,220 --> 00:01:34,720
+The old preference leaves the active state.
+
+20
+00:01:35,220 --> 00:01:39,720
+Polyester enters; the valid category remains.
+
+21
+00:01:40,220 --> 00:01:44,720
+Ranking pivots. The target reaches Rank One.
+
+22
+00:01:45,220 --> 00:01:49,720
+A bounded rewrite—not a destructive reset.
+
+23
+00:01:50,220 --> 00:01:54,720
+Messages become intent, action, and state changes.
+
+24
+00:01:55,220 --> 00:01:59,720
+State drives SQLite F-T-S-five retrieval.
+
+25
+00:02:00,220 --> 00:02:04,720
+Transparent rules rerank and select clarification.
+
+26
+00:02:05,220 --> 00:02:09,720
+The evaluated path is deterministic and model-free.
+
+27
+00:02:10,220 --> 00:02:14,720
+Every public target entered the candidate pool.
+
+28
+00:02:15,220 --> 00:02:19,720
+One hundred ninety-nine reached the final Top Ten.
+
+29
+00:02:20,220 --> 00:02:24,720
+Hit Rate: point nine nine five.
+
+30
+00:02:25,220 --> 00:02:29,720
+M-R-R is point six four four; latency stays low.
+
+31
+00:02:30,220 --> 00:02:34,720
+Together: Technical Score point eight six six five.
+
+32
+00:02:35,220 --> 00:02:39,720
+The official starter scored point one zero six seven one.
+
+33
+00:02:40,220 --> 00:02:44,720
+Local cross-encoders reduced the composite score.
+
+34
+00:02:45,220 --> 00:02:49,720
+So reliability won—not model size.
+
+35
+00:02:50,220 --> 00:02:54,720
+Demo-only sponsorship preserves organic order.
+
+36
+00:02:55,220 --> 00:02:59,720
+Code and evidence are public. Private results remain unknown.
