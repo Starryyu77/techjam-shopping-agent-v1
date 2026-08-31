@@ -1,9 +1,9 @@
 {
   "evidence_scope": "official_public_200",
-  "generated_at": "2026-08-31T02:44:07.803654+00:00",
+  "generated_at": "2026-08-31T02:44:56.058700+00:00",
   "catalog_sha256": "da979b05a68af864cb0dcf9ee6a81c010c7e66a57978ad286c7a2e005fc69a67",
   "evaluator_git_commit": "34078351e1c3615e5505a2e829600b56a542e462",
-  "agent_git_commit": "b8bb7c455eec5af15e0d1d1009203cc955a26393",
+  "agent_git_commit": "a4e7c7d1067d0bfcc1d2d37f712d8d0d6c2a1c21",
   "report_sha256": "192783ee88cb4f1db470f4a0e6117ef7d4649d8dff4c1e5abe987e6def1324cc",
   "report_file": "official_public_rules_v1_3.json",
   "metrics": {
