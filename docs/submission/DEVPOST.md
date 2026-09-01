@@ -3,6 +3,7 @@
 > **From prompt to purchase:** conversation, self-iteration, and ranked commerce.
 
 **[Try the live Evidence Tour](https://shopping-copilot-techjam.pages.dev/)** ·
+**[Watch the public demo](https://youtu.be/iRec-9CM9D4)** ·
 **[View the public source code](https://github.com/Starryyu77/techjam-shopping-agent-v1)**
 
 ## Inspiration

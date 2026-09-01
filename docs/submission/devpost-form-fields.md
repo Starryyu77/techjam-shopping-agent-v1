@@ -77,8 +77,7 @@ uploaded directly; Devpost recommends, but does not require, a 3:2 gallery ratio
 Do not paste a local MP4 or GitHub file URL into this field. Devpost expects a
 public YouTube, Vimeo, Facebook Video, or Youku URL.
 
-**Current status:** public YouTube URL still required.
+**Public demo URL:** https://youtu.be/iRec-9CM9D4
 
-Replace this marker after upload:
-
-`<PASTE PUBLIC YOUTUBE URL HERE>`
+Use this URL in the Devpost video field. The repository MP4 remains a backup,
+but the YouTube URL is the canonical public submission video.

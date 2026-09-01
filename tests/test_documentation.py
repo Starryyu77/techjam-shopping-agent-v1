@@ -52,6 +52,16 @@ class PublicDocumentationTests(unittest.TestCase):
             self.assertIn("shopping-copilot-demo-v3.mp4", text)
             self.assertIn("shopping-copilot-demo-v3-preview.gif", text)
 
+    def test_public_youtube_demo_is_linked_without_placeholder(self):
+        youtube_url = "https://youtu.be/iRec-9CM9D4"
+        for text in [self.readme_en, self.readme_zh]:
+            self.assertIn(youtube_url, text)
+            self.assertNotIn("YouTube submission URL remains pending", text)
+            self.assertNotIn("YouTube 提交链接仍待补充", text)
+        submission_fields = (ROOT / "docs/submission/devpost-form-fields.md").read_text(encoding="utf-8")
+        self.assertIn(youtube_url, submission_fields)
+        self.assertNotIn("<PASTE PUBLIC YOUTUBE URL HERE>", submission_fields)
+
     def test_official_baseline_score_is_consistent(self):
         docs = [
             "README.md",

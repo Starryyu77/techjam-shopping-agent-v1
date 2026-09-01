@@ -23,7 +23,7 @@ rules. It needs no network, API key, paid model, or GPU.
 | If you are… | Start with | What you will get |
 | --- | --- | --- |
 | A judge | [3-minute Evidence Tour](https://shopping-copilot-techjam.pages.dev/) | Results → data contract → replay → mechanism → evaluation → ads → boundaries |
-| Reviewing the product story | [V3 demo film](docs/assets/video/shopping-copilot-demo-v3.mp4) | A deterministic, bilingual, three-minute walkthrough |
+| Reviewing the product story | [YouTube demo film](https://youtu.be/iRec-9CM9D4) | A public, bilingual, three-minute walkthrough |
 | Reproducing the score | [Quick start](#quick-start) | The exact rules-only evaluator command and expected metrics |
 | Inspecting implementation | [How every stage works](#how-every-stage-works) | Inputs, decisions, outputs, evidence, and source files for each stage |
 | Working with scripts | [Script guide](scripts/README.md) | Supported release commands separated from research diagnostics |
@@ -42,12 +42,13 @@ the website, the ad auction, the video, or the optional Qwen layer.
 
 ## 3-minute V3 demo film
 
-[![Shopping Copilot V3 — editorial social-commerce film with bilingual subtitles](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
+[![Shopping Copilot V3 — editorial social-commerce film with bilingual subtitles](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](https://youtu.be/iRec-9CM9D4)
 
-**[Watch the full 3-minute V3 film — English voice · English / 中文字幕 · original score](docs/assets/video/shopping-copilot-demo-v3.mp4)**
+**[Watch the public 3-minute demo on YouTube — English voice · English / 中文字幕 · original score](https://youtu.be/iRec-9CM9D4)**
 
 [English subtitles](docs/assets/video/shopping-copilot-demo-v3.en.srt) ·
 [中文字幕](docs/assets/video/shopping-copilot-demo-v3.zh-CN.srt) ·
+[Repository MP4 backup](docs/assets/video/shopping-copilot-demo-v3.mp4) ·
 [Live evidence tour](https://shopping-copilot-techjam.pages.dev/)
 
 ## Verified public-set result
@@ -364,7 +365,7 @@ flowchart LR
 - **Live Tour:** https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages fallback:** https://starryyu77.github.io/techjam-shopping-agent-v1/
 - **Source repository:** https://github.com/Starryyu77/techjam-shopping-agent-v1
-- **Demo video:** V3 film is published in this repository; the public YouTube submission URL remains pending
+- **Public YouTube demo:** https://youtu.be/iRec-9CM9D4
 
 ## License and upstream data
 

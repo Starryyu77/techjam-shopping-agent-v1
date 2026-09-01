@@ -22,4 +22,5 @@
 - [x] 三分钟 V3 演示影片、双语字幕、原创配乐与仓库发布资产
 - [x] 98 项单元、集成、evidence、脚本与文档一致性测试
 - [ ] 冻结后运行一次 held-out test
-- [ ] 补充最终公开 YouTube 与 Devpost 提交链接
+- [x] 补充最终公开 YouTube：https://youtu.be/iRec-9CM9D4
+- [ ] 补充最终 Devpost 提交链接

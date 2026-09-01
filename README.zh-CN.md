@@ -21,7 +21,7 @@
 | 你的角色 | 建议入口 | 可以看到什么 |
 | --- | --- | --- |
 | 评委 | [三分钟证据导览](https://shopping-copilot-techjam.pages.dev/?lang=zh) | 结果 → 数据合同 → 回放 → 机制 → 评测 → 广告 → 边界 |
-| 查看产品叙事 | [V3 演示影片](docs/assets/video/shopping-copilot-demo-v3.mp4) | 一条确定性、双语、三分钟的完整故事 |
+| 查看产品叙事 | [YouTube 演示影片](https://youtu.be/iRec-9CM9D4) | 一条公开、双语、三分钟的完整故事 |
 | 复现比赛分数 | [快速开始](#快速开始) | 正式 rules-only 评测命令和预期指标 |
 | 检查实现 | [每个环节如何工作](#每个环节如何工作) | 每一步的输入、决策、输出、证据和源码 |
 | 使用脚本 | [脚本指南](scripts/README.md) | 稳定发布命令与研究诊断脚本的明确分层 |
@@ -40,12 +40,13 @@
 
 ## 3 分钟 V3 演示视频
 
-[![Shopping Copilot V3：亮色编辑社交电商风格，中英双语字幕](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
+[![Shopping Copilot V3：亮色编辑社交电商风格，中英双语字幕](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](https://youtu.be/iRec-9CM9D4)
 
-**[观看完整 3 分钟 V3 成片——英文配音 · 中英双语字幕 · 原创背景音乐](docs/assets/video/shopping-copilot-demo-v3.mp4)**
+**[在 YouTube 观看公开 3 分钟演示——英文配音 · 中英双语字幕 · 原创背景音乐](https://youtu.be/iRec-9CM9D4)**
 
 [English subtitles](docs/assets/video/shopping-copilot-demo-v3.en.srt) ·
 [中文字幕](docs/assets/video/shopping-copilot-demo-v3.zh-CN.srt) ·
+[仓库 MP4 备份](docs/assets/video/shopping-copilot-demo-v3.mp4) ·
 [Cloudflare 在线播放](https://shopping-copilot-techjam.pages.dev/)
 
 ## 已验证的公开集结果
@@ -341,7 +342,7 @@ flowchart LR
 - **在线 Tour：**https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages 回退：**https://starryyu77.github.io/techjam-shopping-agent-v1/
 - **公开源码仓库：**https://github.com/Starryyu77/techjam-shopping-agent-v1
-- **Demo 视频：**V3 影片已发布在仓库中；公开 YouTube 提交链接仍待补充
+- **公开 YouTube Demo：**https://youtu.be/iRec-9CM9D4
 
 ## License 与上游数据
 

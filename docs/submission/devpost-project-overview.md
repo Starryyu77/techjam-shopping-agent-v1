@@ -4,6 +4,8 @@
 
 **Project name:** Surely — Conversational Shopping Copilot
 
+**Public demo video:** https://youtu.be/iRec-9CM9D4
+
 **Elevator pitch:** An e-commerce copilot that turns conversation into ranked
 products, with a self-iterating prompt lab that evaluates and refines intent
 understanding without fine-tuning.
