@@ -395,107 +395,113 @@ def select_catalog_samples(catalog_path: Path, n: int = 3) -> list[dict]:
 # ---------------------------------------------------------------------------
 
 def build_prompt_evolution_evidence() -> dict:
-    """Build a portable, source-backed view of the local Qwen prompt loop."""
-    experiment_root = _REPO_ROOT / "exp_selfevolve"
-    rounds_dir = experiment_root / "rounds"
-    golden_path = experiment_root / "golden_cases.json"
-    newline_report = _REPO_ROOT / "reports" / "gpu_selfevolve_newline_finding.txt"
-    required = [golden_path, newline_report, experiment_root / "self_evolve.py"]
-    required.extend(rounds_dir / f"round_{idx}.json" for idx in range(6))
+    """Build fail-closed Scheme B evidence from the independently checked snapshot."""
+    verified_path = _REPO_ROOT / "reports" / "scheme_b_prompt_evolution_verified.json"
+    v001_path = _REPO_ROOT / "prompts" / "system_prompt_v001.md"
+    v002_path = _REPO_ROOT / "prompts" / "system_prompt_v002.md"
+    required = [verified_path, v001_path, v002_path]
     missing = [str(path) for path in required if not path.is_file()]
     if missing:
-        _fail("Prompt evolution evidence source missing: " + ", ".join(missing))
+        _fail("Scheme B prompt evidence source missing: " + ", ".join(missing))
 
-    rounds = []
-    previous_prompt = None
-    for idx in range(6):
-        path = rounds_dir / f"round_{idx}.json"
-        data = json.loads(path.read_text(encoding="utf-8"))
-        prompt = data["prompt"]
-        if previous_prompt is None:
-            change_summary = "Seed prompt evaluated"
-        elif previous_prompt.rstrip("\n") == prompt and previous_prompt.endswith("\n"):
-            change_summary = "Trailing newline normalized"
-        elif previous_prompt == prompt:
-            change_summary = "Guarded prompt retained"
-        else:
-            change_summary = "Prompt rewritten from train bad cases"
-        rounds.append({
-            "round": data["round"],
-            "train_score": data["train"],
-            "test_score": data["test"],
-            "prompt_length": len(prompt),
-            "ends_with_newline": prompt.endswith("\n"),
-            "confusion": data.get("confusion", ""),
-            "change_summary": change_summary,
-        })
-        previous_prompt = prompt
+    report = json.loads(verified_path.read_text(encoding="utf-8"))
+    if report.get("experiment_id") != "scheme_b_v002":
+        _fail("Unexpected prompt experiment id")
+    if report.get("source_commit") != "59fce1276372550be9881c68f0680f76750a7e20":
+        _fail("Scheme B source commit is not frozen")
 
-    golden = json.loads(golden_path.read_text(encoding="utf-8"))
-    cases_by_name = {
-        item["name"]: {**item, "split": split}
-        for split, items in golden.items()
-        for item in items
+    prompt_paths = {"v001": v001_path, "v002": v002_path}
+    for version, path in prompt_paths.items():
+        expected = report["prompts"][version]["file_sha256"]
+        if sha256_file(path) != expected:
+            _fail(f"{version} prompt hash drift")
+    canonical_v002 = hashlib.sha256(
+        v002_path.read_text(encoding="utf-8").strip().encode("utf-8")
+    ).hexdigest()
+    if canonical_v002 != report["prompts"]["v002"]["canonical_sha256"]:
+        _fail("v002 canonical prompt hash drift")
+
+    weights = {
+        "domain_accuracy": 0.25,
+        "dialogue_act_accuracy": 0.25,
+        "slot_f1": 0.25,
+        "rollout_state_exact": 0.15,
+        "json_compliance": 0.10,
     }
-    simulation_focus = {
-        "ITEM-jacket-typo": "Preserve concrete shopping intent despite a product typo.",
-        "VAGUE-explore": "Keep exploratory language broad and ask before filtering.",
-        "OVERRIDE-direction": "Replace the earlier category direction instead of appending a conflict.",
-        "BENEFIT-redpacket": "Route promotion intent without polluting shopping constraints.",
-    }
-    simulation_cases = []
-    for name, focus in simulation_focus.items():
-        case = cases_by_name[name]
-        simulation_cases.append({
-            "id": name,
-            "split": case["split"],
-            "message": case["msg"],
-            "expected_domain_intent": case["di"],
-            "expected_dialogue_act": case["da"],
-            "iteration_focus": focus,
-            "simulation_label": "Deterministic walkthrough using a real golden-case contract",
-        })
+    before = report["metrics"]["v001"]
+    candidate = report["metrics"]["v002"]
+    for version, metrics in (("v001", before), ("v002", candidate)):
+        recomputed = sum(metrics[name] * weight for name, weight in weights.items())
+        if abs(recomputed - metrics["composite"]) > 1e-12:
+            _fail(f"{version} composite does not recompute")
+    for metric in report["protected_metrics"]:
+        if candidate[metric] + 1e-12 < before[metric]:
+            _fail(f"Scheme B protected metric regressed: {metric}")
+    if candidate["json_compliance"] != 1.0:
+        _fail("Scheme B JSON compliance is not saturated")
+    if report["gates"] != {
+        "dev": "accepted",
+        "validation": "accepted_opaque",
+        "heldout": "not_run",
+    }:
+        _fail("Scheme B gate boundary drift")
 
-    newline_scores = {}
-    for line in newline_report.read_text(encoding="utf-8").splitlines():
-        match = re.match(r"(seed_as_is|seed_stripped|r1_as_is|r1_plus_nl)\s+test=([0-9.]+)", line)
-        if match:
-            newline_scores[match.group(1)] = float(match.group(2))
-    if set(newline_scores) != {"seed_as_is", "seed_stripped", "r1_as_is", "r1_plus_nl"}:
-        _fail("Prompt evolution newline A/B report is incomplete")
-
-    best = max(rounds, key=lambda item: (item["test_score"], -item["round"]))
-    best_prompt_path = rounds_dir / "best_prompt.md"
+    metric_order = [
+        "composite",
+        "domain_accuracy",
+        "dialogue_act_accuracy",
+        "clarity_accuracy",
+        "slot_f1",
+        "rollout_state_exact",
+        "no_mutation_preservation",
+        "selection_accuracy",
+        "json_compliance",
+    ]
+    deltas = {name: candidate[name] - before[name] for name in metric_order}
     return {
-        "evidence_scope": "local_qwen_development_experiment",
-        "status": "continuous_iteration",
-        "model": "Qwen3-8B · localhost-only · zero fine-tuning",
+        "evidence_scope": "scheme_b_synthetic_dev_with_opaque_validation",
+        "status": report["status"],
+        "experiment_id": report["experiment_id"],
+        "source_branch": report["source_branch"],
+        "source_commit": report["source_commit"],
+        "model": report["model"],
+        "roles": report["roles"],
         "official_score_path": False,
-        "split": {"train": len(golden["train"]), "test": len(golden["test"])},
-        "score_formula": "0.6 × domain intent + 0.2 × dialogue act + 0.2 × structural validity",
-        "pipeline": ["Evaluate", "Mine bad cases", "Diagnose confusion", "Rewrite", "Guard", "Re-evaluate"],
-        "guardrails": [
-            "Abstract shared rules instead of enumerating cases",
-            "Separate train-only noise from test generalization signals",
-            "Keep already-passing dimensions unchanged",
-            "Reject rewrites below 85% length or missing required structural markers",
+        "split": report["split"],
+        "score_formula": report["score_formula"],
+        "protected_metrics": report["protected_metrics"],
+        "metric_order": metric_order,
+        "metrics": {"v001": before, "v002": candidate, "delta": deltas},
+        "relative_composite_gain": deltas["composite"] / before["composite"],
+        "confusions": report["confusions"],
+        "pipeline": [
+            "Scrub dev evidence",
+            "Codex writes candidate",
+            "Qwen target evaluates",
+            "Strict dev gate",
+            "Opaque validation gate",
+            "Promote v002",
         ],
-        "rounds": rounds,
-        "best_observed_round": best["round"],
-        "best_observed_test_score": best["test_score"],
-        "newline_ab": newline_scores,
-        "simulation_cases": simulation_cases,
+        "guardrails": [
+            "No validation text or metric feedback reaches the optimizer",
+            "Reject any protected-metric regression",
+            "Reject copied dev sentences, IDs, missing markers, or >15% length drift",
+            "Held-out labels remain unbundled and not run",
+        ],
+        "gates": report["gates"],
+        "prompts": report["prompts"],
+        "comparison_cases": report["comparison_cases"],
+        "claim_boundary": report["claim_boundary"],
+        "verification": report["verification"],
         "artifacts": {
-            "source": "exp_selfevolve/self_evolve.py",
-            "golden_cases": "exp_selfevolve/golden_cases.json",
-            "rounds": "exp_selfevolve/rounds/round_*.json",
-            "best_prompt": "exp_selfevolve/rounds/best_prompt.md",
-            "newline_report": "reports/gpu_selfevolve_newline_finding.txt",
-            "order_check": "reports/gpu_selfevolve_order_check.txt",
+            "verified_snapshot": "reports/scheme_b_prompt_evolution_verified.json",
+            "v001_prompt": "prompts/system_prompt_v001.md",
+            "v002_prompt": "prompts/system_prompt_v002.md",
+            "source_branch": "codex/scheme-b-prompt-evolution@59fce12",
         },
-        "source_sha256": sha256_file(experiment_root / "self_evolve.py"),
-        "golden_cases_sha256": sha256_file(golden_path),
-        "best_prompt_sha256": sha256_file(best_prompt_path),
+        "verified_snapshot_sha256": sha256_file(verified_path),
+        "v001_prompt_sha256": sha256_file(v001_path),
+        "v002_prompt_sha256": sha256_file(v002_path),
     }
 
 

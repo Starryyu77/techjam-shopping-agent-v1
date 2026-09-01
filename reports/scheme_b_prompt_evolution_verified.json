@@ -1,9 +1,23 @@
 {
-  "evidence_scope": "scheme_b_synthetic_dev_with_opaque_validation",
-  "status": "accepted_continuous_iteration",
   "experiment_id": "scheme_b_v002",
+  "status": "accepted_continuous_iteration",
   "source_branch": "codex/scheme-b-prompt-evolution",
   "source_commit": "59fce1276372550be9881c68f0680f76750a7e20",
+  "verification": {
+    "verified_at": "2026-09-01",
+    "level": "artifact_recomputed",
+    "model_inference_rerun": false,
+    "reason_model_not_rerun": "The original localhost Qwen endpoint at 127.0.0.1:8080 was not running on the verification host.",
+    "checks": [
+      "All saved composite values recompute exactly from the documented weights.",
+      "Domain, dialogue-act, and clarity accuracies recompute exactly from the saved confusion matrices over 90 dev turns.",
+      "Every protected metric is non-regressing; all non-saturated metrics improve and JSON compliance remains 1.0.",
+      "The accepted candidate, Codex-authored candidate, and promoted v002 prompt are byte-identical before canonical whitespace normalization.",
+      "The opaque validation artifact is accepted; held-out labels were not bundled or run.",
+      "The prompt-lab workflow and leakage gates pass all 22 branch tests.",
+      "A fresh 200-session official rules-only rerun reproduced HitRate@10 0.995, MRR 0.644355, MTTC 2.215, and TechnicalScore 0.866507."
+    ]
+  },
   "model": {
     "name": "Qwen3-8B Q4_K_M",
     "runtime": "llama.cpp OpenAI-compatible localhost endpoint",
@@ -17,17 +31,9 @@
     "self_optimizer": false,
     "self_judge": false
   },
-  "official_score_path": false,
   "split": {
-    "dev": {
-      "sessions": 18,
-      "turns": 90
-    },
-    "validation": {
-      "sessions": 6,
-      "turns": 30,
-      "feedback": "opaque accept/reject only"
-    },
+    "dev": {"sessions": 18, "turns": 90},
+    "validation": {"sessions": 6, "turns": 30, "feedback": "opaque accept/reject only"},
     "heldout": "not_run"
   },
   "score_formula": "0.25 domain + 0.25 dialogue act + 0.25 slot F1 + 0.15 rollout state exact + 0.10 JSON compliance",
@@ -40,17 +46,6 @@
     "json_compliance",
     "no_mutation_preservation",
     "selection_accuracy"
-  ],
-  "metric_order": [
-    "composite",
-    "domain_accuracy",
-    "dialogue_act_accuracy",
-    "clarity_accuracy",
-    "slot_f1",
-    "rollout_state_exact",
-    "no_mutation_preservation",
-    "selection_accuracy",
-    "json_compliance"
   ],
   "metrics": {
     "v001": {
@@ -80,20 +75,8 @@
       "no_mutation_preservation": 0.9444444444444444,
       "selection_accuracy": 1.0,
       "composite": 0.7190821256038646
-    },
-    "delta": {
-      "composite": 0.10534475186649095,
-      "domain_accuracy": 0.033333333333333326,
-      "dialogue_act_accuracy": 0.022222222222222254,
-      "clarity_accuracy": 0.11111111111111116,
-      "slot_f1": 0.2924901185770751,
-      "rollout_state_exact": 0.1222222222222222,
-      "no_mutation_preservation": 0.05555555555555558,
-      "selection_accuracy": 0.08333333333333337,
-      "json_compliance": 0.0
     }
   },
-  "relative_composite_gain": 0.17164467470017453,
   "confusions": {
     "v001": {
       "domain_errors": 9,
@@ -106,20 +89,6 @@
       "clarity_errors": 15
     }
   },
-  "pipeline": [
-    "Scrub dev evidence",
-    "Codex writes candidate",
-    "Qwen target evaluates",
-    "Strict dev gate",
-    "Opaque validation gate",
-    "Promote v002"
-  ],
-  "guardrails": [
-    "No validation text or metric feedback reaches the optimizer",
-    "Reject any protected-metric regression",
-    "Reject copied dev sentences, IDs, missing markers, or >15% length drift",
-    "Held-out labels remain unbundled and not run"
-  ],
   "gates": {
     "dev": "accepted",
     "validation": "accepted_opaque",
@@ -199,29 +168,5 @@
     "heldout_claim": false,
     "private_800_claim": false,
     "statement": "This is an intent-parser gain on a synthetic Gold-candidate dev set with one opaque validation acceptance. It is not an official retrieval-score or held-out claim."
-  },
-  "verification": {
-    "verified_at": "2026-09-01",
-    "level": "artifact_recomputed",
-    "model_inference_rerun": false,
-    "reason_model_not_rerun": "The original localhost Qwen endpoint at 127.0.0.1:8080 was not running on the verification host.",
-    "checks": [
-      "All saved composite values recompute exactly from the documented weights.",
-      "Domain, dialogue-act, and clarity accuracies recompute exactly from the saved confusion matrices over 90 dev turns.",
-      "Every protected metric is non-regressing; all non-saturated metrics improve and JSON compliance remains 1.0.",
-      "The accepted candidate, Codex-authored candidate, and promoted v002 prompt are byte-identical before canonical whitespace normalization.",
-      "The opaque validation artifact is accepted; held-out labels were not bundled or run.",
-      "The prompt-lab workflow and leakage gates pass all 22 branch tests.",
-      "A fresh 200-session official rules-only rerun reproduced HitRate@10 0.995, MRR 0.644355, MTTC 2.215, and TechnicalScore 0.866507."
-    ]
-  },
-  "artifacts": {
-    "verified_snapshot": "reports/scheme_b_prompt_evolution_verified.json",
-    "v001_prompt": "prompts/system_prompt_v001.md",
-    "v002_prompt": "prompts/system_prompt_v002.md",
-    "source_branch": "codex/scheme-b-prompt-evolution@59fce12"
-  },
-  "verified_snapshot_sha256": "6c4da8412b6d0d201d45dd01fcf5f0684ae561136848f350482f3418db9c2103",
-  "v001_prompt_sha256": "5c649123292788681f08639c0e2b81a063b7202170a06532386dbba1aca81201",
-  "v002_prompt_sha256": "9d191273468d7c202f2c7691fb3d1fe3aaec9cb3c632e64c46f2b2d96576adb4"
+  }
 }

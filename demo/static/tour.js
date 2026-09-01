@@ -655,7 +655,7 @@ function renderMechanisms() {
     '<strong>Decision: ship rules-only, keep experiment for transparency.</strong></p>';
 
   bindMechanismModeTabs();
-  renderPromptEvolutionLab();
+  renderSchemeBPromptLab();
 }
 
 function renderMechanismContext() {
@@ -893,57 +893,47 @@ function bindMechanismModeTabs() {
   });
 }
 
-function renderPromptEvolutionLab() {
+function renderSchemeBPromptLab() {
   if (!promptEvolution) return;
-  const rounds = promptEvolution.rounds;
+  const split = promptEvolution.split;
+  const before = promptEvolution.metrics.v001;
+  const candidate = promptEvolution.metrics.v002;
+  const delta = promptEvolution.metrics.delta;
   document.getElementById('promptLabBadges').innerHTML =
-    '<span>' + promptEvolution.model + '</span>' +
-    '<span>' + promptEvolution.split.train + ' train / ' + promptEvolution.split.test + ' test</span>' +
-    '<span>' + rounds.length + ' rounds</span>' +
-    '<span>Best observed ' + promptEvolution.best_observed_test_score.toFixed(1) + '</span>';
+    '<span>' + escHtml(promptEvolution.model.name) + '</span>' +
+    '<span>' + split.dev.sessions + ' dev sessions / ' + split.dev.turns + ' turns</span>' +
+    '<span>' + split.validation.sessions + ' validation · opaque gate</span>' +
+    '<span>Held-out ' + split.heldout.replace('_', ' ') + '</span>';
 
-  document.getElementById('promptRoundChart').innerHTML =
-    '<div class="prompt-chart-axis"><span>100</span><span>50</span><span>0</span></div>' +
-    '<div class="prompt-chart-bars">' + rounds.map(round =>
-      '<div class="prompt-round-bars">' +
-        '<div class="prompt-bar-pair">' +
-          '<i class="train" style="height:' + round.train_score + '%"><b>' + round.train_score.toFixed(1) + '</b></i>' +
-          '<i class="test" style="height:' + round.test_score + '%"><b>' + round.test_score.toFixed(1) + '</b></i>' +
-        '</div>' +
-        '<span>R' + round.round + '</span>' +
-      '</div>'
-    ).join('') + '</div>' +
-    '<div class="prompt-chart-legend"><span><i class="train"></i>Train</span><span><i class="test"></i>Test</span></div>';
+  const relativeGain = promptEvolution.relative_composite_gain * 100;
+  document.getElementById('promptScoreHero').innerHTML =
+    '<div class="scheme-score-version before"><span>v001 composite</span><strong>' + before.composite.toFixed(4) + '</strong></div>' +
+    '<div class="scheme-score-arrow" aria-hidden="true">→</div>' +
+    '<div class="scheme-score-version after"><span>v002 composite</span><strong>' + candidate.composite.toFixed(4) + '</strong></div>' +
+    '<div class="scheme-score-lift"><span>Absolute lift</span><strong>+' + delta.composite.toFixed(4) + '</strong><small>+' + relativeGain.toFixed(1) + '% relative</small></div>' +
+    '<div class="scheme-score-gates"><span class="accepted">DEV ACCEPTED</span><span class="accepted">VALIDATION ACCEPTED · OPAQUE</span><span class="untouched">HELD-OUT NOT RUN</span></div>';
 
-  document.getElementById('promptRoundSelector').innerHTML = rounds.map(round =>
-    '<button class="prompt-round-button' + (round.round === currentPromptRound ? ' active' : '') + '" data-round="' + round.round + '">Round ' + round.round + '</button>'
-  ).join('');
-  document.querySelectorAll('.prompt-round-button').forEach(button => {
-    button.addEventListener('click', () => renderPromptRound(Number.parseInt(button.dataset.round, 10)));
-  });
+  renderPromptMetrics();
 
-  document.getElementById('promptLoop').innerHTML = promptEvolution.pipeline.map((step, index) =>
-    '<div class="prompt-loop-step"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + escHtml(step) + '</strong></div>' +
+  document.getElementById('promptGateFlow').innerHTML = promptEvolution.pipeline.map((step, index) =>
+    '<div class="prompt-gate-step"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + escHtml(step) + '</strong>' +
+      '<small>' + (index === 3 ? 'all protected metrics non-regressing' : index === 4 ? 'accept / reject only; terminal' : '') + '</small></div>' +
     (index < promptEvolution.pipeline.length - 1 ? '<i>→</i>' : '')
   ).join('');
   document.getElementById('promptGuardList').innerHTML = promptEvolution.guardrails.map((guard, index) =>
     '<div><span>G' + (index + 1) + '</span><strong>' + escHtml(guard) + '</strong></div>'
   ).join('');
 
-  const sensitivity = promptEvolution.newline_ab;
-  document.getElementById('promptSensitivity').innerHTML =
-    '<div class="prompt-panel-title"><span>Sensitivity monitor</span><small>Controlled A/B · test score</small></div>' +
-    '<div class="sensitivity-bars">' +
-      sensitivityBar('Seed · as-is', sensitivity.seed_as_is, false) +
-      sensitivityBar('Seed · normalized', sensitivity.seed_stripped, true) +
-      sensitivityBar('Round 1 · as-is', sensitivity.r1_as_is, true) +
-      sensitivityBar('Round 1 · + newline', sensitivity.r1_plus_nl, false) +
-    '</div>' +
-    '<p>Whitespace sensitivity is tracked as a robustness signal for continued iteration.</p>';
+  document.getElementById('promptContractDiff').innerHTML =
+    '<div class="contract-diff-head"><span>Scenario</span><span>v001</span><span>v002</span></div>' +
+    promptEvolution.comparison_cases.map(item =>
+      '<div class="contract-diff-row"><strong>' + escHtml(item.message) + '</strong>' +
+      '<p>' + escHtml(item.v001) + '</p><p>' + escHtml(item.v002) + '</p></div>'
+    ).join('');
 
-  document.getElementById('promptCaseSelector').innerHTML = promptEvolution.simulation_cases.map((item, index) =>
+  document.getElementById('promptCaseSelector').innerHTML = promptEvolution.comparison_cases.map((item, index) =>
     '<button class="prompt-case-button' + (index === currentPromptCase ? ' active' : '') + '" data-case="' + index + '">' +
-      '<strong>' + escHtml(item.id.replace(/-/g, ' · ')) + '</strong><span>' + escHtml(item.split) + '</span></button>'
+      '<strong>' + escHtml(item.scenario) + '</strong><span>' + String(index + 1).padStart(2, '0') + '</span></button>'
   ).join('');
   document.querySelectorAll('.prompt-case-button').forEach(button => {
     button.addEventListener('click', () => {
@@ -953,52 +943,53 @@ function renderPromptEvolutionLab() {
   });
   document.getElementById('promptRunSimulation').addEventListener('click', startPromptSimulation);
 
-  renderPromptRound(currentPromptRound);
   renderPromptSimulation(currentPromptCase);
 }
 
-function sensitivityBar(label, value, highlighted) {
-  return '<div class="sensitivity-row' + (highlighted ? ' highlighted' : '') + '">' +
-    '<span>' + label + '</span><div><i style="width:' + value + '%"></i></div><strong>' + value.toFixed(1) + '</strong></div>';
-}
-
-function renderPromptRound(roundIndex) {
-  currentPromptRound = roundIndex;
-  const round = promptEvolution.rounds.find(item => item.round === roundIndex) || promptEvolution.rounds[0];
-  const previous = roundIndex > 0 ? promptEvolution.rounds.find(item => item.round === roundIndex - 1) : null;
-  const delta = previous ? round.test_score - previous.test_score : 0;
-  document.querySelectorAll('.prompt-round-button').forEach(button => {
-    button.classList.toggle('active', Number.parseInt(button.dataset.round, 10) === roundIndex);
-  });
-  document.getElementById('promptRoundDetail').innerHTML =
-    '<div class="prompt-panel-title"><span>Round ' + round.round + ' inspection</span><small>' + escHtml(round.change_summary) + '</small></div>' +
-    '<div class="round-score-grid">' +
-      '<div><span>Train</span><strong>' + round.train_score.toFixed(1) + '</strong></div>' +
-      '<div><span>Test</span><strong>' + round.test_score.toFixed(1) + '</strong></div>' +
-      '<div><span>Δ test</span><strong>' + (delta >= 0 ? '+' : '') + delta.toFixed(1) + '</strong></div>' +
-      '<div><span>Prompt</span><strong>' + round.prompt_length + ' chars</strong></div>' +
-    '</div>' +
-    '<div class="round-confusion"><span>Confusion signal</span><strong>' + escHtml(round.confusion) + '</strong></div>' +
-    '<div class="round-change"><span>Iteration action</span><strong>' + escHtml(round.change_summary) + '</strong><small>' +
-      (round.ends_with_newline ? 'Prompt ends with newline' : 'Prompt normalized without trailing newline') + '</small></div>';
+function renderPromptMetrics() {
+  const before = promptEvolution.metrics.v001;
+  const candidate = promptEvolution.metrics.v002;
+  const delta = promptEvolution.metrics.delta;
+  const labels = {
+    composite: 'Composite',
+    domain_accuracy: 'Domain accuracy',
+    dialogue_act_accuracy: 'Dialogue-act accuracy',
+    clarity_accuracy: 'Clarity accuracy',
+    slot_f1: 'Slot F1',
+    rollout_state_exact: 'Rollout state exact',
+    no_mutation_preservation: 'No-mutation preservation',
+    selection_accuracy: 'Selection accuracy',
+    json_compliance: 'JSON compliance',
+  };
+  document.getElementById('promptMetricComparison').innerHTML = promptEvolution.metric_order.map(metric =>
+    '<div class="scheme-metric-row"><span>' + labels[metric] + '</span>' +
+      '<div class="scheme-metric-bars"><i class="before" style="width:' + (before[metric] * 100) + '%"></i>' +
+      '<i class="after" style="width:' + (candidate[metric] * 100) + '%"></i></div>' +
+      '<strong>' + candidate[metric].toFixed(3) + '</strong></div>'
+  ).join('');
+  const featured = ['slot_f1', 'rollout_state_exact', 'selection_accuracy', 'json_compliance'];
+  document.getElementById('promptMetricTable').innerHTML = featured.map(metric =>
+    '<div><span>' + labels[metric] + '</span><small>' + before[metric].toFixed(3) + ' → ' + candidate[metric].toFixed(3) + '</small>' +
+      '<strong>' + (delta[metric] > 0 ? '+' : '') + delta[metric].toFixed(3) + '</strong></div>'
+  ).join('');
 }
 
 function renderPromptSimulation(caseIndex) {
   currentPromptCase = caseIndex;
-  const item = promptEvolution.simulation_cases[caseIndex] || promptEvolution.simulation_cases[0];
+  const item = promptEvolution.comparison_cases[caseIndex] || promptEvolution.comparison_cases[0];
   document.querySelectorAll('.prompt-case-button').forEach(button => {
     button.classList.toggle('active', Number.parseInt(button.dataset.case, 10) === caseIndex);
   });
   const steps = [
     ['Input', item.message],
-    ['Expected contract', item.expected_domain_intent + ' / ' + item.expected_dialogue_act],
-    ['Diagnose', item.iteration_focus],
-    ['Rewrite', 'Abstract a shared rule; do not enumerate this exact phrase'],
-    ['Guard', 'Check train/test split, length, and required output markers'],
-    ['Re-evaluate', 'Contract target remains ' + item.expected_domain_intent + ' / ' + item.expected_dialogue_act],
+    ['v001 contract', item.v001],
+    ['v002 contract', item.v002],
+    ['Dev gate', 'Composite improved and every protected metric was non-regressing'],
+    ['Validation gate', 'Accepted through one opaque, terminal accept/reject check'],
+    ['Promote', 'system_prompt_v002.md became the current optional LLM prompt'],
   ];
   document.getElementById('promptCaseFlow').innerHTML =
-    '<div class="prompt-simulation-label">' + escHtml(item.simulation_label) + '</div>' +
+    '<div class="prompt-simulation-label">Artifact-backed walkthrough · source branch ' + escHtml(promptEvolution.source_branch) + '@' + escHtml(promptEvolution.source_commit.slice(0, 7)) + '</div>' +
     '<div class="prompt-sim-steps">' + steps.map((step, index) =>
       '<div class="prompt-sim-step" data-sim-step="' + index + '"><span>' + String(index + 1).padStart(2, '0') + '</span><strong>' + step[0] + '</strong><p>' + escHtml(step[1]) + '</p></div>' +
       (index < steps.length - 1 ? '<i>→</i>' : '')

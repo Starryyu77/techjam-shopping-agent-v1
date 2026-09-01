@@ -58,36 +58,40 @@ state transition, recall funnel, Top-3 podium, and question-decision chain. The
 score anatomy exposes every shipped ranking weight and keeps popularity as a
 near-tie signal only.
 
-### Prompt Evolution Lab: inspect continuous LLM iteration
+### Prompt Evolution Lab: inspect accepted Scheme B evolution
 
-[![Six-round prompt evolution curve, sensitivity checks, and deterministic golden-case walkthrough](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
+[![Scheme B v001-to-v002 protected metrics, gates, and contract differences](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
 
-Switch Step 3 to **Prompt Evolution Lab** to inspect a real six-round,
-zero-fine-tuning Qwen3-8B experiment. The Lab visualizes the 23/12 golden-case
-split, train/test score curve, prompt-length and confusion signals, a controlled
-newline-sensitivity A/B, and the guardrails used before each candidate prompt is
-accepted. The best observed test score in this experiment moved from **86.7 to
-91.7**.
+Switch Step 3 to **Prompt Evolution Lab** to inspect the accepted Scheme B
+experiment from [`codex/scheme-b-prompt-evolution`](https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/codex/scheme-b-prompt-evolution).
+A Codex-authored candidate was evaluated by a zero-fine-tuning Qwen3-8B target
+on 18 synthetic dev sessions / 90 annotated turns. Composite improved from
+**0.6137 to 0.7191** (+0.1053 absolute, +17.2% relative). Slot F1 improved from
+0.2727 to 0.5652 and rollout-state exactness from 0.1000 to 0.2222; every other
+non-saturated protected metric improved, while JSON compliance remained 1.0.
 
-Four clickable cases then replay the iteration contract as a deterministic
-walkthrough: input → expected intent/dialogue act → diagnosis → generalized
-rewrite → guard check → re-evaluation. This makes the development loop tangible
-without presenting a prerecorded case as a live model response.
+The candidate passed one opaque validation gate over 6 sessions / 30 turns.
+Validation exposed only accept/reject and then terminated the run; held-out
+labels remain unbundled and were not run. Nine clickable examples show the
+v001/v002 contract differences, followed by an artifact-backed promotion
+walkthrough. They are not presented as live model responses.
 
 ```mermaid
 flowchart LR
-    G[Golden-case split] --> E[Evaluate current prompt]
-    E --> C[Inspect confusion signal]
-    C --> R[Generalize one rewrite]
-    R --> V{Guard checks}
-    V -->|Reject| R
-    V -->|Accept| T[Re-evaluate train and test]
-    T --> E
+    D[Scrubbed dev evidence] --> C[Codex candidate]
+    C --> Q[Qwen target evaluation]
+    Q --> G{Strict dev gate}
+    G -->|Reject| X[Keep v001]
+    G -->|Accept| V{Opaque validation}
+    V -->|Accept| P[Promote v002]
+    V -->|Reject| X
 ```
 
-This is an actively iterated experimental LLM layer. Its artifacts are included
-for technical transparency, while the official competition score remains tied
-to the deterministic submitted path.
+We independently recomputed the saved metric formulas, confusion-derived
+accuracies, prompt hashes, and non-regression gate. The original localhost Qwen
+service was not running on the verification host, so this is explicitly
+artifact-recomputed verification rather than a claimed model-inference rerun.
+The official competition score remains tied to the deterministic submitted path.
 
 ## Multi-turn recommendation and ranking evidence
 
@@ -147,8 +151,8 @@ sequenceDiagram
   next attribute.
 - **Evidence-first delivery:** the public website replays frozen official-public
   traces and never depends on a live LLM.
-- **Prompt self-evolution:** a local Qwen3-8B layer iterates against a protected
-  golden-case split with confusion-driven rewrites and explicit guard checks.
+- **Prompt self-evolution:** Scheme B separates a Codex optimizer, Qwen target,
+  strict dev gate, opaque validation, and untouched held-out labels.
 - **Demo-only commercial extension:** a clearly separated relevance-aware ad
   auction illustrates monetization without altering organic ordering.
 
@@ -193,7 +197,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **87 tests pass**.
+Current expected result: **89 tests pass**.
 
 ## Evidence reproduction
 
@@ -254,7 +258,7 @@ flowchart LR
 | `scripts/build_demo_evidence.py` | Evidence regeneration and validation |
 | `scripts/build_static_site.py` | Portable static deployment bundle |
 | `reports/` | Reproducible experiment and evaluator outputs |
-| `exp_selfevolve/` | Prompt self-evolution loop, golden cases, and six frozen rounds |
+| `reports/scheme_b_prompt_evolution_verified.json` | Recomputed Scheme B metrics, gates, hashes, and claim boundary |
 | `reranker.py` | Optional cross-encoder experiment, OFF by default |
 
 ## Claim and data boundaries
@@ -282,7 +286,7 @@ flowchart LR
 | [Development plan](PLANS.md) | Completed milestones and intentionally deferred work |
 | [Prompt iteration loop](docs/loop.md) | Leakage-safe prompt acceptance process |
 | [Engineering lessons](docs/loop-lessons.md) | Failure patterns and fixes |
-| [Intent prompt v001](prompts/system_prompt_v001.md) | Optional local-model parser contract |
+| [Current intent prompt v002](prompts/system_prompt_v002.md) | Scheme B prompt accepted by dev and one opaque validation gate |
 
 ## Deployment and links
 

@@ -53,32 +53,37 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 决策链，并全部读取 Replay 当前轮次。Score anatomy 会公开正式路径中的全部排序
 权重，并明确 popularity 只参与近似分数的 tie-break。
 
-### Prompt Evolution Lab：查看提示词持续迭代
+### Prompt Evolution Lab：查看已接受的方案 B 演化
 
-[![六轮提示词迭代曲线、敏感性检查和 golden-case 确定性回放](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
+[![方案 B v001 到 v002 的受保护指标、门禁与合同差异](docs/assets/readme/prompt-evolution-lab.jpg)](https://shopping-copilot-techjam.pages.dev/?step=3)
 
-在 Step 3 切换到 **Prompt Evolution Lab**，可以检查一组真实的六轮 Qwen3-8B
-零微调实验。页面会展示 23/12 golden-case 划分、train/test 曲线、prompt 长度与
-混淆信号、受控的换行敏感性 A/B，以及每次接受候选提示词前必须经过的 guardrails。
-这组实验中观测到的最佳 test score 从 **86.7 提升到 91.7**。
+在 Step 3 切换到 **Prompt Evolution Lab**，可以检查
+[`codex/scheme-b-prompt-evolution`](https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/codex/scheme-b-prompt-evolution)
+分支中已接受的方案 B 实验。Codex 编写候选提示词，零微调 Qwen3-8B 只作为目标模型，
+在 18 个合成 dev 会话 / 90 个标注轮次上评估。Composite 从 **0.6137 提升到
+0.7191**（绝对 +0.1053，相对 +17.2%）；Slot F1 从 0.2727 提升到 0.5652，
+rollout state exact 从 0.1000 提升到 0.2222。其余所有未饱和受保护指标均提高，
+JSON compliance 保持 1.0。
 
-页面还提供四个可点击案例，将迭代合同拆成可播放的确定性流程：输入 → 预期
-intent/dialogue act → 错误诊断 → 泛化改写 → 边界检查 → 重新评估。这样可以让评委
-看见完整研发闭环，同时不会把预录案例包装成实时模型输出。
+候选还通过了一次 6 会话 / 30 轮的 opaque validation 门禁。Validation 只返回
+接受/拒绝，随后立即终止；held-out 标签未打包也未运行。页面提供 9 组 v001/v002
+合同差异和一条可播放的产物支撑升级流程，不会把它包装成实时模型输出。
 
 ```mermaid
 flowchart LR
-    G[Golden-case 划分] --> E[评估当前提示词]
-    E --> C[检查混淆信号]
-    C --> R[泛化一条改写规则]
-    R --> V{Guard checks}
-    V -->|拒绝| R
-    V -->|接受| T[重新评估 train 与 test]
-    T --> E
+    D[清洗后的 dev 证据] --> C[Codex 候选提示词]
+    C --> Q[Qwen 目标模型评估]
+    Q --> G{严格 dev 门禁}
+    G -->|拒绝| X[保留 v001]
+    G -->|接受| V{不透明 validation}
+    V -->|接受| P[升级 v002]
+    V -->|拒绝| X
 ```
 
-这是仍在持续迭代的实验性 LLM layer。仓库与网站公开它的过程证据；比赛正式
-分数仍严格对应确定性的 submitted path。
+我们重新计算了保存指标的公式、由 confusion matrix 推导的准确率、提示词哈希与
+非退化门禁。原 localhost Qwen 服务在本次验证主机上未运行，因此结论明确标为
+artifact-recomputed，而不是声称重新执行了模型推理。比赛正式分数仍严格对应
+确定性的 submitted path。
 
 ## 多轮推荐与排序证据
 
@@ -176,7 +181,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**87 项测试全部通过**。
+当前预期结果：**89 项测试全部通过**。
 
 ## Evidence 复现
 

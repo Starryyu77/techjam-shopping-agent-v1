@@ -82,14 +82,10 @@ both query expansion and rerank scoring — never as a hard filter, respecting t
   the FTS5 query and is well under a second on CPU; the 50k index builds in
   memory at startup.
 - **Optional demo/dev layers (OFF for scoring, disclosed for transparency):**
-  - Localhost Qwen3-8B (fp16, Hugging Face Transformers) served via a stdlib
-    HTTP server on loopback only (127.0.0.1:8100). ~16 GB VRAM on an NVIDIA A10
-    (24 GB). Supports Qwen3's native `enable_thinking` toggle: intent parsing
-    runs with thinking OFF for speed (~1.7 s/turn); the optional narration layer
-    (§8.2) can enable thinking for higher quality (~2 s/turn). `<think>` blocks
-    are stripped before the response reaches the demo UI. No fine-tuning of any
-    kind — zero SFT/LoRA/RLHF; all behavior comes from prompt engineering and
-    the self-evolution methodology described in §8.3. Approximate cost: $0
+  - Scheme B used a localhost Qwen3-8B Q4_K_M target served by llama.cpp's
+    OpenAI-compatible endpoint (`127.0.0.1:8080`), with temperature 0 and no
+    fine-tuning. Codex authored the accepted candidate from scrubbed dev
+    evidence; Qwen did not optimize or judge itself. Approximate API cost: $0
     (local). **The scored/submitted path never loads, calls, or depends on this
     model.**
   - A bundled MiniLM cross-encoder reranker (~88 MB) for semantic reranking
@@ -180,7 +176,7 @@ retrieval and evaluation runs are reproducible from `reports/`.
 Everything in this section lives in a **demo-only layer** (`demo/server.py` and
 its static frontend) that the official evaluator never reaches. We re-ran the
 official evaluator after every change described here and it reproduced
-**TS = 0.8665** bit-for-bit; all 87 current unit/integration/evidence/documentation tests pass. The scored path remains
+**TS = 0.8665** bit-for-bit; all 89 current unit/integration/evidence/documentation tests pass. The scored path remains
 pure-rules, offline, stdlib-only.
 
 ### 6.1 Sponsored-ads engine (eCPM auction)
@@ -231,33 +227,34 @@ templates in the demo wrapper, never changing the scored agent.
 Controlled via `--narrate` (off by default). No fine-tuning; zero
 SFT/LoRA/RLHF.
 
-### 6.3 Prompt self-evolution framework (continuous iteration)
+### 6.3 Scheme B Codex-guided prompt evolution
 
-We built an automated prompt-optimization loop:
+Scheme B separates the optimizer, target, and acceptance gates:
 
-1. Evaluate a system prompt on a self-labeled golden-case set (23 train / 12
-   test, strict split).
-2. Score each case with a dual rule + LLM metric (0.6 · domain-intent accuracy
-   + 0.2 · dialogue-act accuracy + 0.2 · structural validity).
-3. Mine bad cases from the train set; have the LLM rewrite the system prompt
-   with anti-overfit guardrails (reject truncated or over-shortened rewrites
-   that drop below 85% of the original length or lose required structural
-   markers).
-4. Re-evaluate; iterate to convergence.
+1. Codex receives scrubbed dev metrics, confusion patterns, and representative
+   bad cases, then authors one complete candidate prompt.
+2. Static checks reject copied dev sentences, IDs, missing contract markers,
+   and prompt-length drift above 15%.
+3. Qwen3-8B acts only as the target over 18 synthetic dev sessions / 90
+   annotated turns.
+4. A strict gate requires composite improvement and no regression in domain,
+   dialogue act, clarity, slots, rollout state, JSON, no-mutation, or selection.
+5. Only then is validation read once. It reveals opaque accept/reject and ends
+   the run; held-out labels remain unbundled and were not run.
 
-**Honest result.** The framework's only measurable gain over the seed prompt
-traced entirely to **trailing-newline sensitivity** of the chat template: the
-seed prompt with a trailing \n scored 86.7 on test; without \n it scored 91.7;
-the rewriter's sole effective change was dropping that trailing newline. We
-confirmed this with a controlled experiment (3× deterministic runs, newline
-toggled in isolation). This result is now a robustness signal inside a
-continuously iterated experimental layer: every candidate rewrite is evaluated
-against the same protected split, structural checks, and sensitivity probes.
+**Measured result.** v001 composite rose from **0.613737 to 0.719082** (+0.105345
+absolute, +17.2% relative). Slot F1 rose 0.272727 → 0.565217 and rollout-state
+exactness 0.100000 → 0.222222. Domain, dialogue act, clarity, no-mutation, and
+selection all improved; JSON compliance remained saturated at 1.0. The opaque
+validation gate accepted v002.
 
-The official score path remains deterministic so competition evidence stays
-directly reproducible. The Qwen layer and its six frozen rounds remain
-inspectable as a separate technical capability instead of being blended into
-that score claim.
+We independently recomputed both composites from the documented weights,
+recomputed domain/dialogue/clarity accuracies from the saved confusion matrices,
+verified prompt hashes and non-regression, and ran all 22 Scheme B workflow
+tests. The original localhost Qwen endpoint was unavailable on the verification
+host, so this is artifact-recomputed verification rather than a fresh inference
+rerun. This remains intent-parser evidence, not an official retrieval-score,
+held-out, or private-800 claim.
 
 ### 6.4 TikTok Shop scenario framing
 

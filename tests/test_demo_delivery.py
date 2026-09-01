@@ -5,6 +5,7 @@ import threading
 import unittest
 import urllib.error
 import urllib.request
+import re
 from http.server import HTTPServer
 from pathlib import Path
 
@@ -101,13 +102,13 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertNotIn("Prefer multi-turn cases for richer visual", self.js)
         for element_id in ["mechanismContext", "mechanismPipeline", "mechanismEvidence", "mechanismVisual", "mechanismEvidenceData", "scoreAnatomy"]:
             self.assertIn(f'id="{element_id}"', self.html)
-        for element_id in ["mechanismModeTabs", "promptEvolutionLab", "promptRoundChart", "promptRoundSelector", "promptCaseSelector", "promptCaseFlow", "promptRunSimulation"]:
+        for element_id in ["mechanismModeTabs", "promptEvolutionLab", "promptMetricComparison", "promptMetricTable", "promptCaseSelector", "promptCaseFlow", "promptRunSimulation"]:
             self.assertIn(f'id="{element_id}"', self.html)
         self.assertIn("mechanismDefinitions", self.js)
         self.assertIn("renderMechanismDetail", self.js)
         self.assertIn("renderMechanismVisual", self.js)
-        self.assertIn("renderPromptEvolutionLab", self.js)
-        self.assertIn("renderPromptRound", self.js)
+        self.assertIn("renderSchemeBPromptLab", self.js)
+        self.assertIn("renderPromptMetrics", self.js)
         self.assertIn("renderPromptSimulation", self.js)
         self.assertIn("candidate_pool_size", self.js)
         self.assertIn("coverage × entropy", self.js)
@@ -153,6 +154,42 @@ class TourDeliveryMarkupTests(unittest.TestCase):
             "比赛证据", "私有 800 个会话",
         ]:
             self.assertIn(translated_label, i18n)
+
+    def test_scheme_b_prompt_lab_is_visible_and_traceable(self):
+        for element_id in [
+            "promptScoreHero", "promptMetricComparison", "promptMetricTable",
+            "promptGateFlow", "promptContractDiff",
+        ]:
+            self.assertIn(f'id="{element_id}"', self.html)
+        self.assertIn("renderSchemeBPromptLab", self.js)
+        self.assertIn("source_branch", self.js)
+        self.assertIn("heldout", self.js)
+
+    def test_dark_evidence_palette_meets_wcag_aa(self):
+        def color(name: str) -> tuple[int, int, int]:
+            match = re.search(rf"{re.escape(name)}:\s*(#[0-9a-fA-F]{{6}})", self.css)
+            self.assertIsNotNone(match, name)
+            value = match.group(1)
+            return tuple(int(value[index:index + 2], 16) for index in (1, 3, 5))
+
+        def luminance(rgb: tuple[int, int, int]) -> float:
+            channels = []
+            for component in rgb:
+                value = component / 255
+                channels.append(value / 12.92 if value <= 0.03928 else ((value + 0.055) / 1.055) ** 2.4)
+            return 0.2126 * channels[0] + 0.7152 * channels[1] + 0.0722 * channels[2]
+
+        def contrast(first: tuple[int, int, int], second: tuple[int, int, int]) -> float:
+            high, low = sorted((luminance(first), luminance(second)), reverse=True)
+            return (high + 0.05) / (low + 0.05)
+
+        dark_plate = color("--dark-plate")
+        for token in ["--dark-text-primary", "--dark-text-secondary", "--dark-text-muted"]:
+            self.assertGreaterEqual(contrast(color(token), dark_plate), 4.5, token)
+        self.assertIn(".rank-journey", self.css)
+        self.assertIn(".mechanism-context", self.css)
+        self.assertIn(".mechanism-pipeline", self.css)
+        self.assertIn(".score-anatomy", self.css)
 
 
 if __name__ == "__main__":

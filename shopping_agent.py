@@ -1402,7 +1402,7 @@ def load_current_prompt(project_root: Path | None = None) -> str:
     path = prompt_dir / name
     if not path.is_file():
         raise FileNotFoundError(path)
-    return path.read_text(encoding="utf-8")
+    return path.read_text(encoding="utf-8").strip()
 
 
 class RealWorldShoppingAgent:

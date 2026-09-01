@@ -315,41 +315,43 @@
       <div class="prompt-evolution-lab" id="promptEvolutionLab" hidden>
         <div class="prompt-lab-header">
           <div>
-            <span class="prompt-lab-kicker">Experimental LLM Layer · Continuous Iteration</span>
-            <h3>Prompt Evolution Lab</h3>
-            <p>Evaluate, diagnose, rewrite, guard, and re-evaluate a localhost Qwen intent prompt.</p>
+            <span class="prompt-lab-kicker">Scheme B · Accepted Continuous Iteration</span>
+            <h3>Prompt Evolution Lab · v002</h3>
+            <p>Codex-guided prompt evolution with a Qwen target, strict dev gate, opaque validation, and untouched held-out labels.</p>
           </div>
           <div class="prompt-lab-badges" id="promptLabBadges"></div>
         </div>
 
-        <div class="prompt-lab-overview">
+        <div class="prompt-score-hero" id="promptScoreHero" aria-label="Scheme B score improvement"></div>
+
+        <div class="prompt-lab-overview prompt-scheme-overview">
           <section class="prompt-chart-card">
-            <div class="prompt-panel-title"><span>Six-round evaluation</span><small>Train / test · direct labels</small></div>
-            <div class="prompt-round-chart" id="promptRoundChart" role="img" aria-label="Prompt evolution train and test scores by round"></div>
-            <div class="prompt-round-selector" id="promptRoundSelector" aria-label="Prompt evolution round selector"></div>
+            <div class="prompt-panel-title"><span>Protected metric comparison</span><small>v001 → v002 · 90 dev turns</small></div>
+            <div class="prompt-metric-comparison" id="promptMetricComparison" role="img" aria-label="Scheme B protected metric comparison"></div>
+            <div class="prompt-metric-table" id="promptMetricTable"></div>
           </section>
 
           <section class="prompt-loop-card">
-            <div class="prompt-panel-title"><span>Iteration loop</span><small>Guarded rewrite workflow</small></div>
-            <div class="prompt-loop" id="promptLoop"></div>
+            <div class="prompt-panel-title"><span>Leakage-safe promotion path</span><small>Codex optimizer · Qwen target</small></div>
+            <div class="prompt-gate-flow" id="promptGateFlow"></div>
             <div class="prompt-guard-list" id="promptGuardList"></div>
           </section>
         </div>
 
-        <div class="prompt-lab-detail">
-          <section class="prompt-round-detail" id="promptRoundDetail" aria-live="polite"></section>
-          <section class="prompt-sensitivity" id="promptSensitivity" aria-label="Prompt sensitivity comparison"></section>
-        </div>
+        <section class="prompt-contract-panel">
+          <div class="prompt-panel-title"><span>Behavior contract: v001 vs v002</span><small>Prompt-level rules · not live model output</small></div>
+          <div class="prompt-contract-diff" id="promptContractDiff"></div>
+        </section>
 
         <section class="prompt-simulation">
-          <div class="prompt-panel-title"><span>Golden-case simulator</span><small>Deterministic walkthrough · real case contracts</small><button id="promptRunSimulation">▶ Run walkthrough</button></div>
+          <div class="prompt-panel-title"><span>Promotion walkthrough</span><small>Artifact-backed · deterministic</small><button id="promptRunSimulation">▶ Run walkthrough</button></div>
           <div class="prompt-case-selector" id="promptCaseSelector"></div>
           <div class="prompt-case-flow" id="promptCaseFlow" aria-live="polite"></div>
         </section>
 
         <div class="prompt-lab-footer">
-          <span>Development experiment · separate from the official deterministic score path</span>
-          <a href="https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/main/exp_selfevolve" target="_blank" rel="noopener">Inspect source & rounds ↗</a>
+          <span>Intent-parser evidence only · official Rules V1.3 score unchanged · held-out not run</span>
+          <a href="https://github.com/Starryyu77/techjam-shopping-agent-v1/tree/codex/scheme-b-prompt-evolution" target="_blank" rel="noopener">Inspect Scheme B branch ↗</a>
         </div>
       </div>
     </div>

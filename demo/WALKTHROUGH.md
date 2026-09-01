@@ -66,12 +66,15 @@ Click the five pipeline stages:
 
 Switch the mode tab to **Prompt Evolution Lab** and inspect:
 
-1. Six real train/test rounds from the local Qwen3-8B experiment.
-2. The 23/12 golden-case split and confusion-driven iteration loop.
-3. Newline sensitivity A/B and prompt-length guardrails.
-4. Four clickable ITEM/VAGUE/OVERRIDE/BENEFIT contracts.
-5. `Run walkthrough`, which animates diagnosis, generalized rewrite, guard
-   checking, and re-evaluation. It is explicitly labelled deterministic.
+1. v001 composite 0.6137 → v002 0.7191 over 90 annotated dev turns.
+2. Nine protected metrics; every non-saturated metric improves and JSON stays 1.0.
+3. Codex optimizer → Qwen target → strict dev gate → opaque validation → v002.
+4. Nine v001/v002 behavior-contract comparisons.
+5. `Run walkthrough`, which animates the artifact-backed promotion path.
+
+The validation gate is accepted but opaque; held-out remains not run. The
+verification is artifact-recomputed because the original localhost Qwen service
+was unavailable on the verification host.
 
 Return to **Shipped Pipeline** for the official deterministic score path. Open
 `Experiments We Did Not Ship` only for deeper review of the cross-encoder.
