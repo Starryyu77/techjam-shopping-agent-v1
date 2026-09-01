@@ -5,7 +5,11 @@ import json
 import sys
 from pathlib import Path
 
-from official_agent import Agent
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from shopping_copilot.official_agent import Agent
 
 
 def _default_official_root() -> Path:
@@ -17,7 +21,7 @@ def _default_official_root() -> Path:
     env = os.environ.get("TECHJAM_OFFICIAL_ROOT")
     if env:
         return Path(env)
-    sibling = Path(__file__).resolve().parent.parent / "techjam-conversational-search"
+    sibling = REPO_ROOT.parent / "techjam-conversational-search"
     if (sibling / "evaluator" / "local_evaluator.py").is_file():
         return sibling
     return Path(r"D:\TikTok-TechJam\track4\techjam-conversational-search")

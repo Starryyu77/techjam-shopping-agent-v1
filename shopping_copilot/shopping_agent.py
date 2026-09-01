@@ -1394,7 +1394,7 @@ QUESTION_TEXT = {
 
 
 def load_current_prompt(project_root: Path | None = None) -> str:
-    root = project_root or Path(__file__).resolve().parent
+    root = project_root or Path(__file__).resolve().parent.parent
     prompt_dir = root / "prompts"
     name = (prompt_dir / "current.txt").read_text(encoding="utf-8").strip()
     if not name or Path(name).name != name:
@@ -1436,7 +1436,7 @@ class RealWorldShoppingAgent:
         self.intent_parser = intent_parser
         if reranker is None and use_reranker:
             try:
-                from reranker import CrossEncoderReranker
+                from shopping_copilot.reranker import CrossEncoderReranker
 
                 reranker = CrossEncoderReranker()
             except Exception:

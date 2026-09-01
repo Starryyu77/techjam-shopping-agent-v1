@@ -164,7 +164,7 @@ task, carefully engineered lightweight rules outperform a heavier semantic model
 
 ## 5. Evaluation methodology (leakage-safe)
 
-`prompt_lab.py` splits self-labeled gold candidates into dev / validation /
+`tools/prompt_lab.py` splits self-labeled gold candidates into dev / validation /
 held-out test. Prompt optimization sees only dev bad cases; validation only
 accepts or rejects a new prompt (composite must improve and safety metrics must
 not regress); the held-out test is read once, only after a final freeze. We never
@@ -176,7 +176,7 @@ retrieval and evaluation runs are reproducible from `reports/`.
 Everything in this section lives in a **demo-only layer** (`demo/server.py` and
 its static frontend) that the official evaluator never reaches. We re-ran the
 official evaluator after every change described here and it reproduced
-**TS = 0.8665** bit-for-bit; all 94 current unit/integration/evidence/documentation tests pass. The scored path remains
+**TS = 0.8665** bit-for-bit; all 98 current unit/integration/evidence/documentation tests pass. The scored path remains
 pure-rules, offline, stdlib-only.
 
 ### 6.1 Sponsored-ads engine (eCPM auction)

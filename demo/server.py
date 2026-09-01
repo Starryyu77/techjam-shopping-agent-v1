@@ -28,7 +28,7 @@ _REPO_ROOT = Path(__file__).resolve().parent.parent
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from shopping_agent import RealWorldShoppingAgent  # noqa: E402
+from shopping_copilot.shopping_agent import RealWorldShoppingAgent  # noqa: E402
 
 _STATIC = Path(__file__).resolve().parent / "static"
 _MEDIA = _REPO_ROOT / "docs" / "assets" / "video"
@@ -474,7 +474,7 @@ def make_handler(demo: DemoState):
                 if tour.is_file():
                     return self._send_file(tour, "text/html; charset=utf-8")
             if path == "/report":
-                return self._send_markdown_page(_REPO_ROOT / "REPORT.md", "Technical Report")
+                return self._send_markdown_page(_REPO_ROOT / "docs/technical/REPORT.md", "Technical Report")
             if path == "/reproduce":
                 return self._send_markdown_page(_REPO_ROOT / "README.md", "Reproduction Instructions")
             # --- Evidence JSON (frozen, read-only) ---

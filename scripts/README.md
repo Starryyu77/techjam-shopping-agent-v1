@@ -19,7 +19,7 @@ Run commands from the repository root. Unless a command accepts
 
 ```bash
 # 1. Verify the full development repository with the official evaluator.
-python evaluate_official.py \
+python tools/evaluate_official.py \
   --official-root ../techjam-conversational-search \
   --intent-backend rules \
   --output reports/official_public_rules.json
@@ -59,17 +59,17 @@ Canonical entry points outside this directory:
 
 | Entry point | Purpose |
 | --- | --- |
-| [`evaluate_official.py`](../evaluate_official.py) | Full repository evaluation with rules/model/hybrid switches |
-| [`prompt_lab.py`](../prompt_lab.py) | Scheme B prompt evaluation and iteration |
+| [`tools/evaluate_official.py`](../tools/evaluate_official.py) | Full repository evaluation with rules/model/hybrid switches |
+| [`tools/prompt_lab.py`](../tools/prompt_lab.py) | Scheme B prompt evaluation and iteration |
 | [`demo/server.py`](../demo/server.py) | Local Judge Tour and optional `/sandbox` |
-| [`chat.py`](../chat.py) | Interactive offline conversation CLI |
+| [`tools/chat.py`](../tools/chat.py) | Interactive offline conversation CLI |
 | [`video/package.json`](../video/package.json) | V3 film tests, render, and release commands; see [`video/README.md`](../video/README.md) |
 
 All supported Python entry points implement `--help`.
 
 ### Which evaluator should I run?
 
-- Use `evaluate_official.py` while developing. It exposes rules/model/hybrid and
+- Use `tools/evaluate_official.py` while developing. It exposes rules/model/hybrid and
   optional reranker switches but still delegates scoring to the unmodified
   official evaluator.
 - Use `scripts/run_submission_eval.py` before delivery. It imports
@@ -81,8 +81,8 @@ All supported Python entry points implement `--help`.
 ### Prompt evolution commands
 
 ```bash
-python prompt_lab.py evaluate --help
-python prompt_lab.py optimize --help
+python tools/prompt_lab.py evaluate --help
+python tools/prompt_lab.py optimize --help
 ```
 
 Scheme B uses scrubbed dev evidence, a strict non-regression gate, one opaque

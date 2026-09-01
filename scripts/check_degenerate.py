@@ -3,8 +3,8 @@ import sys, random
 from pathlib import Path
 OFFICIAL=Path("../techjam-conversational-search"); sys.path.insert(0,str(OFFICIAL)); sys.path.insert(0,".")
 from evaluator.local_evaluator import catalog_index, intent_card, coarse_category
-import shopping_agent as SA
-from shopping_agent import _terms, _text
+from shopping_copilot import shopping_agent as SA
+from shopping_copilot.shopping_agent import _terms, _text
 catalog=(OFFICIAL/"data"/"catalog.jsonl").resolve()
 catalog_ids,categories,products=catalog_index(catalog)
 cs=SA.CatalogSearch(str(catalog))

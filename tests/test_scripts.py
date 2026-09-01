@@ -25,9 +25,9 @@ class ScriptDocumentationTests(unittest.TestCase):
 
     def test_supported_python_entrypoints_have_help(self):
         commands = [
-            ["evaluate_official.py", "--help"],
+            ["tools/evaluate_official.py", "--help"],
             ["demo/server.py", "--help"],
-            ["prompt_lab.py", "--help"],
+            ["tools/prompt_lab.py", "--help"],
             ["scripts/build_demo_evidence.py", "--help"],
             ["scripts/build_static_site.py", "--help"],
             ["scripts/run_submission_eval.py", "--help"],

@@ -4,7 +4,7 @@ import math
 from pathlib import Path
 from typing import Any
 
-from shopping_agent import RealWorldShoppingAgent
+from shopping_copilot.shopping_agent import RealWorldShoppingAgent
 
 
 ALLOWED_ATTRIBUTES = {

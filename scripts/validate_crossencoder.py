@@ -3,7 +3,7 @@ import json, sys, time
 from pathlib import Path
 OFFICIAL=Path("../techjam-conversational-search"); sys.path.insert(0,str(OFFICIAL)); sys.path.insert(0,".")
 from evaluator.local_evaluator import catalog_index, coarse_category, materialize_hidden_fields
-import shopping_agent as SA
+from shopping_copilot import shopping_agent as SA
 import sqlite3, torch
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 

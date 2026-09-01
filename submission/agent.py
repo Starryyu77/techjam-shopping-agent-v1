@@ -23,7 +23,7 @@ import sys
 if str(_REPO_ROOT) not in sys.path:
     sys.path.insert(0, str(_REPO_ROOT))
 
-from official_agent import Agent as _OfficialAgent
+from shopping_copilot.official_agent import Agent as _OfficialAgent
 
 
 _DEFAULT_CATALOG = "data/catalog.jsonl"

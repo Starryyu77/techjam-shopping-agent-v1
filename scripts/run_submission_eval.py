@@ -1,6 +1,6 @@
 """Evaluate the minimal ``submission/`` package with the official public evaluator.
 
-This differs from ``evaluate_official.py``: it imports ``submission.agent.Agent``
+This differs from ``tools/evaluate_official.py``: it imports ``submission.agent.Agent``
 directly, so it verifies the exact package layout intended for delivery.
 """
 from __future__ import annotations

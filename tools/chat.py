@@ -2,9 +2,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 
-from shopping_agent import ModelUnavailable, RealWorldShoppingAgent
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from shopping_copilot.shopping_agent import ModelUnavailable, RealWorldShoppingAgent
 
 
 def _default_catalog() -> Path:
@@ -14,7 +19,7 @@ def _default_catalog() -> Path:
     if env:
         return Path(env)
     sibling = (
-        Path(__file__).resolve().parent.parent
+        REPO_ROOT.parent
         / "techjam-conversational-search"
         / "data"
         / "catalog.jsonl"

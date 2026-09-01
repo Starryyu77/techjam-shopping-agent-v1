@@ -6,7 +6,7 @@ sys.path.insert(0, "agent"); sys.path.insert(0, ".")
 os.environ["TECHJAM_CATALOG"] = "data/catalog.jsonl"
 from evaluator.local_evaluator import catalog_index, load_jsonl, behavior_for, MAX_TURNS, TOP_K
 from evaluator import local_evaluator as EV
-from official_agent import Agent as OfficialAgent
+from shopping_copilot.official_agent import Agent as OfficialAgent
 import random
 
 samples = load_jsonl("data/public_set.jsonl")

@@ -40,7 +40,7 @@ const mechanismDefinitions = [
     output: 'domain_intent + dialogue_act + extracted clauses',
     failure: 'Premature Buying classification filters a vague request before the user has expressed useful constraints.',
     metric: 'Buying HR 0.988 · Browsing HR 1.000',
-    source: 'shopping_agent.py · RuleIntentParser',
+    source: 'shopping_copilot/shopping_agent.py · RuleIntentParser',
   },
   {
     id: 'state',
@@ -52,7 +52,7 @@ const mechanismDefinitions = [
     output: 'New inspectable state + added / removed / retained diff',
     failure: 'Append-only memory leaves contradictory preferences active and blocks the intended product.',
     metric: 'Intent Override HR 1.000 across 30 public sessions',
-    source: 'shopping_agent.py · ShoppingState.apply',
+    source: 'shopping_copilot/shopping_agent.py · ShoppingState.apply',
   },
   {
     id: 'recall',
@@ -64,7 +64,7 @@ const mechanismDefinitions = [
     output: 'Up to 50 policy candidates + requested Top-10',
     failure: 'Narrow recall makes reranking irrelevant because the purchased product never reaches the candidate pool.',
     metric: 'Public target recall saturated at 200 / 200',
-    source: 'shopping_agent.py · CatalogSearch.search',
+    source: 'shopping_copilot/shopping_agent.py · CatalogSearch.search',
   },
   {
     id: 'rerank',
@@ -76,7 +76,7 @@ const mechanismDefinitions = [
     output: 'Deterministic ordered Top-10 parent_asin list',
     failure: 'Unbanded popularity can displace a clearly better constraint match; random ties bury relevant products.',
     metric: 'TechnicalScore 0.826 → 0.867 with banded tie-breaking',
-    source: 'shopping_agent.py · CatalogSearch.search',
+    source: 'shopping_copilot/shopping_agent.py · CatalogSearch.search',
   },
   {
     id: 'question',
@@ -88,7 +88,7 @@ const mechanismDefinitions = [
     output: 'ask_attribute or null when the candidate set is focused',
     failure: 'Fixed-order questions waste turns on attributes that do not separate the current products.',
     metric: 'MTTC improved from 3.50 → 2.22',
-    source: 'shopping_agent.py · CandidateQuestionPolicy.choose',
+    source: 'shopping_copilot/shopping_agent.py · CandidateQuestionPolicy.choose',
   },
 ];
 

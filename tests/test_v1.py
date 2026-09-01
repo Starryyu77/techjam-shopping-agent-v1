@@ -4,9 +4,9 @@ import json
 import unittest
 from pathlib import Path
 
-from chat import build_parser
-from official_agent import Agent as OfficialAgent
-from shopping_agent import (
+from tools.chat import build_parser
+from shopping_copilot.official_agent import Agent as OfficialAgent
+from shopping_copilot.shopping_agent import (
     CatalogSearch,
     LocalModelClient,
     PromptIntentParser,

@@ -12,7 +12,7 @@ from pathlib import Path
 from typing import Sequence
 
 
-_DEFAULT_MODEL_DIR = Path(__file__).resolve().parent / "models" / "ms-marco-MiniLM-L-6-v2"
+_DEFAULT_MODEL_DIR = Path(__file__).resolve().parent.parent / "models" / "ms-marco-MiniLM-L-6-v2"
 
 
 class CrossEncoderReranker:

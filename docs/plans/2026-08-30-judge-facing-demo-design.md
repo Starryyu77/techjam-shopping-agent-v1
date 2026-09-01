@@ -268,7 +268,7 @@ Message
 提供 `Reproduce` drawer：
 
 ```bash
-python evaluate_official.py \
+python tools/evaluate_official.py \
   --official-root ../techjam-conversational-search \
   --intent-backend rules
 ```

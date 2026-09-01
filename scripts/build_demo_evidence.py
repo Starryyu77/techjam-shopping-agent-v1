@@ -638,7 +638,7 @@ def main() -> None:
     )
 
     # Import agent
-    from official_agent import Agent
+    from shopping_copilot.official_agent import Agent
 
     # Load data
     print("  Loading catalog and dataset...")
@@ -802,7 +802,7 @@ def main() -> None:
             "approval_note": canonical_approval.get("approval_note", ""),
             "source": "demo/canonical_cases.json",
         },
-        "evaluator_command": "python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules",
+        "evaluator_command": "python tools/evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules",
         "reproduce_command": "python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search",
         "artifacts": [
             "demo/evidence/manifest.json",

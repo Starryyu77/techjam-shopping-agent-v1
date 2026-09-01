@@ -1,6 +1,6 @@
 # 产品功能说明书 — Shopping Copilot Judge Tour
 
-[English README](README.md) | [中文 README](README.zh-CN.md)
+[English README](../../README.md) | [中文 README](../../README.zh-CN.md)
 
 面向 TikTok TechJam 2026 Problem Statement 4 的交付与展示说明。
 
@@ -108,4 +108,4 @@ Mechanism 页面可在正式 rules pipeline 与 Prompt Evolution Lab 之间切�
 - 指标只能从 evidence JSON 读取。
 - 所有 ASIN 必须来自冻结 catalog。
 - 公开网站不依赖本地模型、API Key 或 Python API。
-- `python -m unittest discover -s tests -v` 当前应通过 94 项测试。
+- `python -m unittest discover -s tests -v` 当前应通过 98 项测试。

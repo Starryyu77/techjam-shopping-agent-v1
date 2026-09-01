@@ -67,9 +67,9 @@ not evidence about the organizer's 800 private sessions.
 
 | Stage | Input | What happens | Output / evidence | Main implementation |
 | --- | --- | --- | --- | --- |
-| **1. Contract** | Official catalog, session profile, user message, turn, `top_k` | Validate the evaluator contract and keep the catalog read-only | Contract-safe response fields; zero token usage on rules path | `submission/agent.py`, `official_agent.py` |
+| **1. Contract** | Official catalog, session profile, user message, turn, `top_k` | Validate the evaluator contract and keep the catalog read-only | Contract-safe response fields; zero token usage on rules path | `submission/agent.py`, `shopping_copilot/official_agent.py` |
 | **2. Intent routing** | Latest message + pending question | Classify Buying vs Browsing and dialogue act; Scheme B v002 is optional and localhost-only | `domain_intent`, `dialogue_act`, confidence, normalized clauses | `RuleIntentParser`, optional `prompts/system_prompt_v002.md` |
-| **3. Versioned state** | Parsed clauses + previous state | Add, retain, negate, reject, or erase-and-rewrite superseded preferences | Inspectable hard/soft/negative state diff | `ShoppingState.apply` in `shopping_agent.py` |
+| **3. Versioned state** | Parsed clauses + previous state | Add, retain, negate, reject, or erase-and-rewrite superseded preferences | Inspectable hard/soft/negative state diff | `ShoppingState.apply` in `shopping_copilot/shopping_agent.py` |
 | **4. Recall** | Category, constraints, retrieval evidence, safe profile tags | SQLite FTS5 builds a broad lexical candidate pool and removes rejected/negative matches | Up to 50 policy candidates; public target recall 200/200 | `CatalogSearch.search` |
 | **5. Reranking** | Recalled candidates + state | Reward exact category/constraint matches, penalize hard misses, then use popularity only inside near-tie bands | Deterministic ordered Top-10 `parent_asin` list | Rule scorer + banded tiebreaker |
 | **6. Ask or recommend** | Current policy candidate pool | Coverage × entropy chooses one useful attribute only when information gain is high enough | `ask_attribute` or a focused recommendation response | `CandidateQuestionPolicy.choose` |
@@ -219,7 +219,7 @@ Place the official participant kit next to this repository, or pass its path
 explicitly:
 
 ```bash
-python evaluate_official.py \
+python tools/evaluate_official.py \
   --official-root ../techjam-conversational-search \
   --intent-backend rules \
   --output reports/official_public_rules.json
@@ -232,7 +232,7 @@ python evaluate_official.py \
 python demo/server.py --port 8000
 
 # Interactive CLI, fully offline
-python chat.py --intent-backend rules
+python tools/chat.py --intent-backend rules
 ```
 
 Open `http://127.0.0.1:8000`.
@@ -243,7 +243,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **94 tests pass**.
+Current expected result: **98 tests pass**.
 
 ## Evidence reproduction
 
@@ -266,7 +266,7 @@ or dependency expectations for every top-level script.
 
 | Task | Command |
 | --- | --- |
-| Evaluate the development repository | `python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
+| Evaluate the development repository | `python tools/evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
 | Evaluate the exact `submission/` package | `python scripts/run_submission_eval.py --official-root ../techjam-conversational-search --output reports/submission_public_rules.json` |
 | Rebuild all website evidence | `python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search` |
 | Build the static deployment bundle | `python scripts/build_static_site.py` |
@@ -315,8 +315,11 @@ flowchart LR
 | Path | Purpose |
 | --- | --- |
 | `submission/agent.py` | Required official `Agent` interface |
-| `shopping_agent.py` | Intent, state machine, retrieval, ranking, question policy |
-| `evaluate_official.py` | Adapter for the unmodified official evaluator |
+| `shopping_copilot/` | Reusable Python package: state, retrieval, ranking, official adapter, optional reranker |
+| `tools/` | User-facing CLIs for evaluation, chat, and prompt experiments |
+| `docs/` | Product, technical, project, submission, prompt, and design documentation |
+| `shopping_copilot/shopping_agent.py` | Intent, state machine, retrieval, ranking, question policy |
+| `tools/evaluate_official.py` | Adapter for the unmodified official evaluator |
 | `demo/static/tour.*` | Judge-facing Guided Evidence Tour |
 | `demo/evidence/` | Shipped public evidence artifacts and 200 traces |
 | `demo/canonical_cases.json` | Source-controlled canonical-case freeze |
@@ -325,7 +328,7 @@ flowchart LR
 | `scripts/README.md` | Canonical script catalog, supported workflows, dependencies, and boundaries |
 | `reports/` | Reproducible experiment and evaluator outputs |
 | `reports/scheme_b_prompt_evolution_verified.json` | Recomputed Scheme B metrics, gates, hashes, and claim boundary |
-| `reranker.py` | Optional cross-encoder experiment, OFF by default |
+| `shopping_copilot/reranker.py` | Optional cross-encoder experiment, OFF by default |
 
 ## Claim and data boundaries
 
@@ -342,17 +345,18 @@ flowchart LR
 
 | Document | Audience |
 | --- | --- |
-| [Technical report](REPORT.md) | Architecture, experiments, results, limitations |
-| [Product brief, Chinese](PRODUCT.md) | Product and demo boundaries |
-| [Devpost draft](DEVPOST.md) | Submission narrative |
+| [Documentation index](docs/README.md) | Map of product, technical, submission, prompt, and design documents |
+| [Technical report](docs/technical/REPORT.md) | Architecture, experiments, results, limitations |
+| [Product brief, Chinese](docs/product/PRODUCT.md) | Product and demo boundaries |
+| [Devpost draft](docs/submission/DEVPOST.md) | Submission narrative |
 | [Judge Tour design](docs/plans/2026-08-30-judge-facing-demo-design.md) | Design and handoff specification |
 | [Demo walkthrough](demo/WALKTHROUGH.md) | Tour operation and evidence stations |
 | [Video script](demo/VIDEO_SCRIPT.md) | Three-minute recording plan |
 | [Submission package](submission/README.md) | Minimal evaluator-facing package |
 | [Script guide](scripts/README.md) | Supported release commands, diagnostics, dependencies, and operational boundaries |
-| [Development plan](PLANS.md) | Completed milestones and intentionally deferred work |
-| [Prompt iteration loop](docs/loop.md) | Leakage-safe prompt acceptance process |
-| [Engineering lessons](docs/loop-lessons.md) | Failure patterns and fixes |
+| [Development plan](docs/project/PLANS.md) | Completed milestones and intentionally deferred work |
+| [Prompt iteration loop](docs/prompt/loop.md) | Leakage-safe prompt acceptance process |
+| [Engineering lessons](docs/prompt/loop-lessons.md) | Failure patterns and fixes |
 | [Current intent prompt v002](prompts/system_prompt_v002.md) | Scheme B prompt accepted by dev and one opaque validation gate |
 
 ## Deployment and links

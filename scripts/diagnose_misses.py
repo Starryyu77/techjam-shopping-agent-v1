@@ -10,7 +10,7 @@ from evaluator.local_evaluator import (
     catalog_index, coarse_category, initial_message, customer_reply,
     materialize_hidden_fields, normalize_recommendations, MAX_TURNS, TOP_K,
 )
-from official_agent import Agent
+from shopping_copilot.official_agent import Agent
 
 MISSES = ["public_0020","public_0037","public_0087","public_0144","public_0161","public_0175"]
 

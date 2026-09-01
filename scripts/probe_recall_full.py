@@ -6,8 +6,8 @@ from evaluator.local_evaluator import (
     catalog_index, load_jsonl, materialize_hidden_fields, coarse_category,
     initial_message, customer_reply, normalize_recommendations, MAX_TURNS, TOP_K,
 )
-import shopping_agent as SA
-from official_agent import Agent
+from shopping_copilot import shopping_agent as SA
+from shopping_copilot.official_agent import Agent
 
 catalog = (OFFICIAL / "data" / "catalog.jsonl").resolve()
 samples = load_jsonl((OFFICIAL / "data" / "public_set.jsonl").resolve())
@@ -16,7 +16,7 @@ catalog_ids, categories, products = catalog_index(catalog)
 # Capture full recalled pool per current session (union over turns).
 POOL = {"asins": set()}
 _orig = SA.CatalogSearch.search
-from shopping_agent import _terms
+from shopping_copilot.shopping_agent import _terms
 def patched(self, state, profile, top_k):
     results, policy = _orig(self, state, profile, top_k)
     qv = self._query_values(state, profile)

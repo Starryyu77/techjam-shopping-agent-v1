@@ -53,7 +53,7 @@ def build_static_site(output: Path) -> None:
         'href="/tour"': 'href="./"',
         'href="/evidence"': 'href="./?step=4"',
         '<a href="/sandbox">Sandbox</a>': f'<a href="{_SOURCE_URL}" target="_blank" rel="noopener">Source</a>',
-        'href="/report"': f'href="{_REPO_URL}/blob/main/REPORT.md"',
+        'href="/report"': f'href="{_REPO_URL}/blob/main/docs/technical/REPORT.md"',
         'href="/reproduce"': f'href="{_SOURCE_URL}#quick-start"',
     }
     for source, target in replacements.items():

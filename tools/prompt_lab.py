@@ -3,11 +3,16 @@ from __future__ import annotations
 import argparse
 import json
 import re
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Any
 
-from shopping_agent import (
+REPO_ROOT = Path(__file__).resolve().parent.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.insert(0, str(REPO_ROOT))
+
+from shopping_copilot.shopping_agent import (
     HybridIntentParser,
     IntentResult,
     LocalModelClient,
@@ -19,7 +24,7 @@ from shopping_agent import (
 )
 
 
-ROOT = Path(__file__).resolve().parent
+ROOT = REPO_ROOT
 DEFAULT_DATASET = ROOT.parent / "真实购物对话数据集"
 
 

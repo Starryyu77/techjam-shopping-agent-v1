@@ -3,8 +3,8 @@ import json, sys, time
 from pathlib import Path
 OFFICIAL=Path("../techjam-conversational-search"); sys.path.insert(0,str(OFFICIAL)); sys.path.insert(0,".")
 from evaluator.local_evaluator import catalog_index, evaluate, load_jsonl
-from official_agent import Agent
-from reranker import CrossEncoderReranker
+from shopping_copilot.official_agent import Agent
+from shopping_copilot.reranker import CrossEncoderReranker
 
 catalog=(OFFICIAL/"data"/"catalog.jsonl").resolve()
 samples=load_jsonl((OFFICIAL/"data"/"public_set.jsonl").resolve())

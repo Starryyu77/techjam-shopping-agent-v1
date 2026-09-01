@@ -11,8 +11,8 @@ CASES = json.load(open(os.path.expanduser("~/shopagent/exp/selfevolve/golden_cas
 ENDPOINT = "http://127.0.0.1:8100/v1/chat/completions"
 SCHEMA_PATH = None  # use agent's INTENT_RESPONSE_SCHEMA
 
-import shopping_agent as SA
-from shopping_agent import ShoppingState, INTENT_RESPONSE_SCHEMA, DOMAIN_INTENTS, DIALOGUE_ACTS
+from shopping_copilot import shopping_agent as SA
+from shopping_copilot.shopping_agent import ShoppingState, INTENT_RESPONSE_SCHEMA, DOMAIN_INTENTS, DIALOGUE_ACTS
 
 def llm_chat(messages, schema=None, max_tokens=320):
     body={"messages":messages,"max_tokens":max_tokens}

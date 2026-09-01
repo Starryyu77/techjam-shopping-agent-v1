@@ -3,7 +3,7 @@ import json, sys
 from pathlib import Path
 OFFICIAL=Path("../techjam-conversational-search"); sys.path.insert(0,str(OFFICIAL)); sys.path.insert(0,".")
 from evaluator.local_evaluator import catalog_index, coarse_category
-import shopping_agent as SA
+from shopping_copilot import shopping_agent as SA
 import sqlite3
 catalog_path=OFFICIAL/"data"/"catalog.jsonl"
 catalog_ids,categories,products=catalog_index(catalog_path)

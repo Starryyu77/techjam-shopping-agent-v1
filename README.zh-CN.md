@@ -63,9 +63,9 @@ TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，�
 
 | 环节 | 输入 | 系统动作 | 输出 / 证据 | 主要实现 |
 | --- | --- | --- | --- | --- |
-| **1. 合同** | 官方目录、会话画像、用户消息、轮次、`top_k` | 校验 evaluator 合同并保持目录只读 | 合同安全的响应字段；rules 路径 token 为 0 | `submission/agent.py`、`official_agent.py` |
+| **1. 合同** | 官方目录、会话画像、用户消息、轮次、`top_k` | 校验 evaluator 合同并保持目录只读 | 合同安全的响应字段；rules 路径 token 为 0 | `submission/agent.py`、`shopping_copilot/official_agent.py` |
 | **2. 意图分流** | 最新消息 + 待回答问题 | 判断 Buying / Browsing 和 dialogue act；方案 B v002 仅为 localhost 可选层 | `domain_intent`、`dialogue_act`、置信度与规范化子句 | `RuleIntentParser`、可选 `prompts/system_prompt_v002.md` |
-| **3. 版本化状态** | 解析子句 + 上一轮状态 | 新增、保留、否定、拒绝，或删除并重写被替代偏好 | 可检查的 hard / soft / negative 状态差异 | `shopping_agent.py` 中的 `ShoppingState.apply` |
+| **3. 版本化状态** | 解析子句 + 上一轮状态 | 新增、保留、否定、拒绝，或删除并重写被替代偏好 | 可检查的 hard / soft / negative 状态差异 | `shopping_copilot/shopping_agent.py` 中的 `ShoppingState.apply` |
 | **4. 召回** | 品类、约束、检索证据、安全画像标签 | SQLite FTS5 构建广泛词法候选池，并排除拒绝/负向商品 | 最多 50 个策略候选；公开目标召回 200/200 | `CatalogSearch.search` |
 | **5. 重排** | 召回候选 + 对话状态 | 奖励品类/约束精确匹配、惩罚硬约束缺失，仅在近似同分区间使用人气 | 确定性 Top-10 `parent_asin` 列表 | 规则打分器 + 分带 tiebreaker |
 | **6. 追问或推荐** | 当前策略候选池 | 用覆盖度 × 信息熵选择一条真正有区分度的问题 | `ask_attribute` 或聚焦后的推荐回复 | `CandidateQuestionPolicy.choose` |
@@ -203,7 +203,7 @@ cd techjam-shopping-agent-v1
 将官方 participant kit 放在本仓库旁边，或显式指定路径：
 
 ```bash
-python evaluate_official.py \
+python tools/evaluate_official.py \
   --official-root ../techjam-conversational-search \
   --intent-backend rules \
   --output reports/official_public_rules.json
@@ -216,7 +216,7 @@ python evaluate_official.py \
 python demo/server.py --port 8000
 
 # 完全离线的命令行交互
-python chat.py --intent-backend rules
+python tools/chat.py --intent-backend rules
 ```
 
 浏览器打开 `http://127.0.0.1:8000`。
@@ -227,7 +227,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**94 项测试全部通过**。
+当前预期结果：**98 项测试全部通过**。
 
 ## Evidence 复现
 
@@ -247,7 +247,7 @@ python scripts/build_demo_evidence.py \
 
 | 任务 | 命令 |
 | --- | --- |
-| 评测完整开发仓库 | `python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
+| 评测完整开发仓库 | `python tools/evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
 | 评测最小 `submission/` 包 | `python scripts/run_submission_eval.py --official-root ../techjam-conversational-search --output reports/submission_public_rules.json` |
 | 重建全部网站证据 | `python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search` |
 | 构建静态部署包 | `python scripts/build_static_site.py` |
@@ -294,8 +294,11 @@ flowchart LR
 | 路径 | 用途 |
 | --- | --- |
 | `submission/agent.py` | 官方要求的 `Agent` 接口 |
-| `shopping_agent.py` | 意图、状态机、检索、排序与追问策略 |
-| `evaluate_official.py` | 连接未修改官方评测器的适配器 |
+| `shopping_copilot/` | 可复用 Python package：状态、检索、排序、官方适配器和可选重排器 |
+| `tools/` | 评测、聊天与提示词实验的用户 CLI |
+| `docs/` | 产品、技术、项目、提交、Prompt 与设计文档 |
+| `shopping_copilot/shopping_agent.py` | 意图、状态机、检索、排序与追问策略 |
+| `tools/evaluate_official.py` | 连接未修改官方评测器的适配器 |
 | `demo/static/tour.*` | 面向评委的 Guided Evidence Tour |
 | `demo/evidence/` | 公开 evidence artifacts 与 200 个 traces |
 | `demo/canonical_cases.json` | 纳入版本控制的 canonical case freeze |
@@ -304,7 +307,7 @@ flowchart LR
 | `scripts/README.md` | 脚本总索引、推荐流程、依赖与证据边界 |
 | `reports/` | 可复现实验与评测结果 |
 | `reports/scheme_b_prompt_evolution_verified.json` | 重新计算的方案 B 指标、门禁、哈希与声明边界 |
-| `reranker.py` | 默认关闭的 cross-encoder 实验 |
+| `shopping_copilot/reranker.py` | 默认关闭的 cross-encoder 实验 |
 
 ## 声明与数据边界
 
@@ -319,17 +322,18 @@ flowchart LR
 
 | 文档 | 用途 |
 | --- | --- |
-| [技术报告](REPORT.md) | 架构、实验、结果与限制 |
-| [产品说明](PRODUCT.md) | 产品定位和演示边界 |
-| [Devpost 草稿](DEVPOST.md) | 比赛提交叙事 |
+| [文档总索引](docs/README.md) | 产品、技术、提交、Prompt 与设计文档地图 |
+| [技术报告](docs/technical/REPORT.md) | 架构、实验、结果与限制 |
+| [产品说明](docs/product/PRODUCT.md) | 产品定位和演示边界 |
+| [Devpost 草稿](docs/submission/DEVPOST.md) | 比赛提交叙事 |
 | [Judge Tour 设计方案](docs/plans/2026-08-30-judge-facing-demo-design.md) | 设计与实现交接规格 |
 | [Demo 操作说明](demo/WALKTHROUGH.md) | Tour 流程和证据站点 |
 | [视频脚本](demo/VIDEO_SCRIPT.md) | 三分钟录制方案 |
 | [提交包说明](submission/README.md) | 最小 evaluator-facing 包 |
 | [脚本指南](scripts/README.md) | 稳定发布命令、诊断脚本、依赖与运行边界 |
-| [开发计划](PLANS.md) | 已完成里程碑和明确暂缓事项 |
-| [提示词迭代闭环](docs/loop.md) | 防泄漏的提示词验收流程 |
-| [工程经验](docs/loop-lessons.md) | 失败模式与修复记录 |
+| [开发计划](docs/project/PLANS.md) | 已完成里程碑和明确暂缓事项 |
+| [提示词迭代闭环](docs/prompt/loop.md) | 防泄漏的提示词验收流程 |
+| [工程经验](docs/prompt/loop-lessons.md) | 失败模式与修复记录 |
 | [当前意图提示词 v002](prompts/system_prompt_v002.md) | 通过 dev 与一次 opaque validation 门禁的方案 B 提示词 |
 
 ## 部署与链接

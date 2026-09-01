@@ -6,8 +6,8 @@ from evaluator.local_evaluator import (
     catalog_index, load_jsonl, materialize_hidden_fields, coarse_category,
     initial_message, customer_reply, normalize_recommendations, MAX_TURNS, TOP_K,
 )
-import shopping_agent as SA
-from official_agent import Agent
+from shopping_copilot import shopping_agent as SA
+from shopping_copilot.official_agent import Agent
 
 catalog = (OFFICIAL / "data" / "catalog.jsonl").resolve()
 samples = load_jsonl((OFFICIAL / "data" / "public_set.jsonl").resolve())

@@ -4,9 +4,9 @@ from pathlib import Path
 OFFICIAL=Path("../techjam-conversational-search"); sys.path.insert(0,str(OFFICIAL)); sys.path.insert(0,".")
 from evaluator.local_evaluator import (catalog_index, materialize_hidden_fields, coarse_category,
     initial_message, customer_reply, normalize_recommendations, MAX_TURNS, TOP_K)
-import shopping_agent as SA
-from shopping_agent import _terms
-from official_agent import Agent
+from shopping_copilot import shopping_agent as SA
+from shopping_copilot.shopping_agent import _terms
+from shopping_copilot.official_agent import Agent
 catalog=(OFFICIAL/"data"/"catalog.jsonl").resolve()
 catalog_ids,categories,products=catalog_index(catalog)
 all_asins=list(products.keys()); rng=random.Random(20260830); rng.shuffle(all_asins)

@@ -34,13 +34,13 @@ third-party packages, no network, no API keys.
 export TECHJAM_CATALOG=/path/to/techjam-conversational-search/data/catalog.jsonl
 
 # 2) Run the official public-set evaluator against this agent.
-python evaluate_official.py \
+python tools/evaluate_official.py \
     --official-root /path/to/techjam-conversational-search \
     --intent-backend rules \
     --output reports/official_public_rules.json
 
 # 3) Interactive multi-turn chat (offline, rules).
-python chat.py --intent-backend rules
+python tools/chat.py --intent-backend rules
 ```
 
 If the official repo is checked out as a sibling of this repo
@@ -74,20 +74,20 @@ results for the submitted rules path are deterministic across repeated public-se
 ## Verify
 
 ```bash
-python -m py_compile shopping_agent.py chat.py prompt_lab.py official_agent.py
-python -m unittest discover -s tests -v   # 94 current tests
+python -m py_compile shopping_copilot/shopping_agent.py tools/chat.py tools/prompt_lab.py shopping_copilot/official_agent.py
+python -m unittest discover -s tests -v   # 98 current tests
 ```
 
 ## What is inside
 
-- `shopping_agent.py` — dialogue state machine (hard/soft/negative slots, intent
+- `shopping_copilot/shopping_agent.py` — dialogue state machine (hard/soft/negative slots, intent
   override erase-and-rewrite), FTS5 hybrid retrieval + rule rerank, candidate
   question policy (coverage × entropy).
-- `official_agent.py` — adapter enforcing the official contract (`top_k=10`,
+- `shopping_copilot/official_agent.py` — adapter enforcing the official contract (`top_k=10`,
   `1<=turn<=10`, attribute whitelist, dedup, valid-id filtering).
-- `reranker.py` — optional bundled cross-encoder (default OFF; experiment).
-- `prompt_lab.py` — leakage-safe dev/validation prompt-iteration harness.
+- `shopping_copilot/reranker.py` — optional bundled cross-encoder (default OFF; experiment).
+- `tools/prompt_lab.py` — leakage-safe dev/validation prompt-iteration harness.
 - `reports/` — evaluation artifacts for every configuration.
-- `REPORT.md` — architecture, models, cost, limitations, team contributions.
+- `docs/technical/REPORT.md` — architecture, models, cost, limitations, team contributions.
 
-See `../REPORT.md` (repo root) for the full technical report.
+See [`../docs/technical/REPORT.md`](../docs/technical/REPORT.md) for the full technical report.

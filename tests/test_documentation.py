@@ -56,8 +56,8 @@ class PublicDocumentationTests(unittest.TestCase):
         docs = [
             "README.md",
             "README.zh-CN.md",
-            "REPORT.md",
-            "DEVPOST.md",
+            "docs/technical/REPORT.md",
+            "docs/submission/DEVPOST.md",
             "submission/README.md",
             "demo/VIDEO_SCRIPT.md",
         ]
@@ -67,9 +67,9 @@ class PublicDocumentationTests(unittest.TestCase):
             self.assertIn("0.10671", text, relative)
 
     def test_current_test_count_is_not_stale(self):
-        for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
+        for relative in ["README.md", "README.zh-CN.md", "docs/technical/REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("94", text, relative)
+            self.assertIn("98", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 
