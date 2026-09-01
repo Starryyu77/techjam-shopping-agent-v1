@@ -97,6 +97,11 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertNotIn('href="#" id="linkReport"', self.html)
         self.assertNotIn('href="#" id="linkReproduce"', self.html)
 
+    def test_direct_file_open_redirects_to_the_hosted_tour(self):
+        self.assertIn("window.location.protocol === 'file:'", self.html)
+        self.assertIn("https://shopping-copilot-techjam.pages.dev/", self.html)
+        self.assertIn("window.location.replace", self.html)
+
     def test_tour_uses_frozen_canonical_cases(self):
         self.assertIn("manifest.canonical_cases", self.js)
         self.assertNotIn("Prefer multi-turn cases for richer visual", self.js)

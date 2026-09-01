@@ -197,7 +197,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **89 tests pass**.
+Current expected result: **90 tests pass**.
 
 ## Evidence reproduction
 
