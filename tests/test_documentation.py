@@ -108,6 +108,21 @@ class PublicDocumentationTests(unittest.TestCase):
                 relative = f"docs/assets/readme/{asset}"
                 self.assertIn(relative, text)
                 self.assertTrue((ROOT / relative).is_file(), relative)
+        for name, text in [("README.md", self.readme_en), ("README.zh-CN.md", self.readme_zh)]:
+            in_mermaid = False
+            for line_number, line in enumerate(text.splitlines(), start=1):
+                if line == "```mermaid":
+                    in_mermaid = True
+                    continue
+                if in_mermaid and line == "```":
+                    in_mermaid = False
+                    continue
+                if in_mermaid:
+                    self.assertNotIn(
+                        ";",
+                        line,
+                        f"{name}:{line_number}: Mermaid treats semicolons as statement delimiters",
+                    )
 
     def test_override_showcase_is_detailed_in_both_languages(self):
         for text in [self.readme_en, self.readme_zh]:

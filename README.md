@@ -177,7 +177,7 @@ sequenceDiagram
     participant R as Retrieval and reranking
     U->>S: Initial or vague request
     S->>R: Build initial Top-10
-    R-->>U: Target outside Top-10; ask one useful question
+    R-->>U: Target outside Top-10, then ask one useful question
     U->>S: Answer with material, feature, or override
     S->>S: Add, retain, or remove constraints
     S->>R: Rerank 50k catalog candidates
