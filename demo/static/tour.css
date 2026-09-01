@@ -4988,3 +4988,28 @@ body::after {
   .hero-film { grid-template-columns: 1fr; }
   .hero-film-copy { max-width: none; }
 }
+
+/* Compact-height language access: the bilingual control remains independent
+   from the top bar, which the 1280×720 recording layout intentionally hides. */
+.language-toggle {
+  position: fixed;
+  top: 0.7rem;
+  right: 0.8rem;
+  z-index: 200;
+  margin: 0;
+  color: #fffaf0 !important;
+  background: rgba(17, 21, 20, 0.9) !important;
+  border-color: rgba(255, 250, 240, 0.45) !important;
+  backdrop-filter: blur(12px);
+}
+
+.language-toggle span.active { color: #ffffff; }
+
+.topbar-nav { margin-right: 4.9rem; }
+
+@media (max-width: 720px) {
+  .language-toggle {
+    top: 0.55rem;
+    right: 0.55rem;
+  }
+}

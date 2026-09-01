@@ -15,7 +15,7 @@ if (window.location.protocol === 'file:') {
   window.location.replace('https://shopping-copilot-techjam.pages.dev/' + (directQuery ? '?' + directQuery : ''));
 }
 </script>
-<link rel="stylesheet" href="/tour.css" />
+<link rel="stylesheet" href="./tour.css?v=20260901b" />
 </head>
 <body>
 
@@ -28,11 +28,11 @@ if (window.location.protocol === 'file:') {
     <a href="/tour">Tour</a>
     <a href="/evidence">Evidence</a>
     <a href="/sandbox">Sandbox</a>
-    <button class="language-toggle" id="languageToggle" type="button" aria-label="切换到中文" aria-pressed="false" data-i18n-ignore>
-      <span data-language="en">EN</span><i aria-hidden="true">/</i><span data-language="zh">中文</span>
-    </button>
   </nav>
 </header>
+<button class="language-toggle" id="languageToggle" type="button" aria-label="切换到中文" aria-pressed="false" data-i18n-ignore>
+  <span data-language="en">EN</span><i aria-hidden="true">/</i><span data-language="zh">中文</span>
+</button>
 
 <!-- Tour Progress -->
 <nav class="tour-progress" aria-label="Tour progress">
@@ -572,7 +572,7 @@ if (window.location.protocol === 'file:') {
 
 </div>
 
-<script src="/tour.js"></script>
-<script src="/i18n.js"></script>
+<script src="./tour.js?v=20260901b"></script>
+<script src="./i18n.js?v=20260901b"></script>
 </body>
 </html>

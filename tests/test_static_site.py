@@ -48,9 +48,9 @@ class StaticSiteBuildTests(unittest.TestCase):
 
     def test_index_uses_project_path_portable_assets(self):
         html = (self.output / "index.html").read_text(encoding="utf-8")
-        self.assertIn('href="./tour.css"', html)
-        self.assertIn('src="./tour.js"', html)
-        self.assertIn('src="./i18n.js"', html)
+        self.assertIn('href="./tour.css?v=', html)
+        self.assertIn('src="./tour.js?v=', html)
+        self.assertIn('src="./i18n.js?v=', html)
         self.assertIn('href="./?step=4"', html)
         self.assertNotIn('href="/sandbox"', html)
         self.assertNotIn('href="/report"', html)
