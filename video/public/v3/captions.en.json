@@ -176,7 +176,7 @@
     "pageBreakAfter": true
   },
   {
-    "text": " Real commerce needs more than task completion.",
+    "text": " An offline prompt loop fixes repeated intent errors.",
     "startMs": 110180,
     "endMs": 114820,
     "timestampMs": 110180,
@@ -184,7 +184,7 @@
     "pageBreakAfter": true
   },
   {
-    "text": " Sponsored supply, budgets, and relevance require a separate ad layer.",
+    "text": " On ninety dev turns, v002 improved every metric and passed an opaque gate.",
     "startMs": 115180,
     "endMs": 119820,
     "timestampMs": 115180,
@@ -192,7 +192,7 @@
     "pageBreakAfter": true
   },
   {
-    "text": " Advertisers configure keywords, bids, and budgets independently.",
+    "text": " To model real commerce, we added a separate advertising track.",
     "startMs": 120180,
     "endMs": 124820,
     "timestampMs": 120180,
@@ -200,7 +200,7 @@
     "pageBreakAfter": true
   },
   {
-    "text": " Those values never enter user state, ranking, or official evaluation.",
+    "text": " Keywords, bids, and budgets never enter state, organic ranking, or evaluation.",
     "startMs": 125180,
     "endMs": 129820,
     "timestampMs": 125180,

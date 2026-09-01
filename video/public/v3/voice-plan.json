@@ -69,13 +69,13 @@
     "id": "v3-12",
     "start": 110,
     "end": 120,
-    "narration": "To simulate real commerce, we asked what the product needs beyond task completion. Shopping includes sponsored supply, advertiser budgets, and relevance constraints, so we added a separate advertising layer."
+    "narration": "An offline prompt loop then fixes repeated intent errors. On the ninety-turn dev set, v002 improved every reported metric and passed one opaque validation gate."
   },
   {
     "id": "v3-13",
     "start": 120,
     "end": 130,
-    "narration": "Advertisers configure target keywords, bids, and budgets on this independent track. Those values remain auditable and never enter user state, product ranking, or the official evaluation path."
+    "narration": "To model real commerce, we added a separate advertising track. Advertisers configure keywords, bids, and budgets there; those values never enter user state, organic ranking, or official evaluation."
   },
   {
     "id": "v3-14",

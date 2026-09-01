@@ -46,3 +46,21 @@ test('V3 composition binds its own duration and FPS contract', async () => {
   assert.match(rootSource, /V3_FPS/);
   assert.match(rootSource, /id="ShoppingCopilotFilmV3"[\s\S]*durationInFrames=\{V3_DURATION_FRAMES\}[\s\S]*fps=\{V3_FPS\}/);
 });
+
+test('V3 tells the verified prompt-evolution story without overstating validation', async () => {
+  const storyboard = await readFile(new URL('../src/v3/storyboard-v3.mjs', import.meta.url), 'utf8');
+  assert.match(storyboard, /prompt-evolution/);
+  assert.match(storyboard, /ninety-turn dev set/i);
+  assert.match(storyboard, /opaque validation gate/i);
+  assert.doesNotMatch(storyboard, /held[- ]out (?:score|improved|gain)/i);
+});
+
+test('V3 motion language is mechanism-first rather than a fixed slide rail', async () => {
+  const film = await readFile(new URL('../src/v3/ShoppingCopilotFilmV3.tsx', import.meta.url), 'utf8');
+  assert.match(film, /MechanismWorld/);
+  assert.match(film, /PromptEvolutionScene/);
+  assert.match(film, /SharedProductCard/);
+  assert.match(film, /MotionPath/);
+  assert.doesNotMatch(film, /const EditorialRail/);
+  assert.doesNotMatch(film, /const SegmentScene/);
+});

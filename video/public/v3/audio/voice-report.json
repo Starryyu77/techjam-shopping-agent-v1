@@ -3,8 +3,8 @@
   "rate": "+30%",
   "pitch": "-2Hz",
   "edgeTtsVersion": "7.2.8",
-  "voicePlanSha256": "ee2cec4c0eca2deca63b3128719f75e4058dede0189eb65e3c4d7aed6b454507",
-  "outputSha256": "406cc2e836f439457d3bb48ed98e453347ca927b2a8aaf9b3293692e4fdd99ff",
+  "voicePlanSha256": "998c6200ef78f33592952e51302402305e9e833bc9bb9fa7e9297427d3e99557",
+  "outputSha256": "6edd8c843383dd7a9a3928d9f568ed2b327430ece44d5b7cd3d273f2d2213e27",
   "providerBoundary": "Remote Microsoft Edge Read Aloud service accessed via edge-tts; output may drift, so the final WAV is frozen as the release artifact.",
   "usageBoundary": "Generated for the Shopping Copilot competition demo; verify upstream service terms before unrelated reuse.",
   "segments": [
@@ -76,14 +76,14 @@
     },
     {
       "id": "v3-12",
-      "rawDuration": 9.984,
-      "speed": 1.0509,
+      "rawDuration": 9.0,
+      "speed": 1.0,
       "speechWindow": 9.5
     },
     {
       "id": "v3-13",
-      "rawDuration": 10.152,
-      "speed": 1.0686,
+      "rawDuration": 10.344,
+      "speed": 1.0888,
       "speechWindow": 9.5
     },
     {

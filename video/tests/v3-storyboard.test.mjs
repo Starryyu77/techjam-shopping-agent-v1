@@ -20,7 +20,7 @@ test('V3 is exactly eighteen contiguous ten-second narration segments', () => {
     assert.ok(countWords(segment.narration) <= 30);
     assert.match(segment.zh, /[\u3400-\u9fff]/);
   });
-  assert.equal(v3Segments.reduce((sum, segment) => sum + countWords(segment.narration), 0), 497);
+  assert.equal(v3Segments.reduce((sum, segment) => sum + countWords(segment.narration), 0), 494);
 });
 
 test('V3 keeps five-second subtitle pages aligned in English and Chinese', () => {

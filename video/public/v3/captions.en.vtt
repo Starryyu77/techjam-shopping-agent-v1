@@ -67,16 +67,16 @@ The large model sits only at the entrance.
 Multi-turn consistency comes from inspectable, versioned state.
 
 00:01:50.180 --> 00:01:54.820
-Real commerce needs more than task completion.
+An offline prompt loop fixes repeated intent errors.
 
 00:01:55.180 --> 00:01:59.820
-Sponsored supply, budgets, and relevance require a separate ad layer.
+On ninety dev turns, v002 improved every metric and passed an opaque gate.
 
 00:02:00.180 --> 00:02:04.820
-Advertisers configure keywords, bids, and budgets independently.
+To model real commerce, we added a separate advertising track.
 
 00:02:05.180 --> 00:02:09.820
-Those values never enter user state, ranking, or official evaluation.
+Keywords, bids, and budgets never enter state, organic ranking, or evaluation.
 
 00:02:10.180 --> 00:02:14.820
 A relevance floor rejects off-topic inventory—even at a higher bid.

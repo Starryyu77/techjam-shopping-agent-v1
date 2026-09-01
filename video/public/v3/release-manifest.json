@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-31T20:16:32.771Z",
+  "generatedAt": "2026-09-01T02:35:08.008Z",
   "packageOnly": true,
   "sourceComposition": "ShoppingCopilotFilmV3",
   "files": {
     "shopping-copilot-demo-v3.mp4": {
-      "bytes": 42344629,
-      "sha256": "880154c99ebb5a24c557f603eb116658964f24d6349874374b2879f662be7fac",
+      "bytes": 34415716,
+      "sha256": "a723e6a7ae454548aa233cedb8a9fda2cb02af2d79fa5d7a8172fd03196d912f",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -29,13 +29,13 @@
         ],
         "format": {
           "duration": "180.000000",
-          "size": "42344629"
+          "size": "34415716"
         }
       }
     },
     "shopping-copilot-demo-v3-web.mp4": {
-      "bytes": 13621940,
-      "sha256": "5d8b39a3ab28cb45aa63569eba0175ebdc031c92876d50b202562fba52ef5bf1",
+      "bytes": 11466888,
+      "sha256": "8344cb7bb9c79e873e550b61065eaa48c8e9e951e192c681c791026bbf674677",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -59,33 +59,33 @@
         ],
         "format": {
           "duration": "180.014000",
-          "size": "13621940"
+          "size": "11466888"
         }
       }
     },
     "shopping-copilot-demo-v3-preview.gif": {
-      "bytes": 2661347,
-      "sha256": "ab983466a64c6d72de6b625063fc331894791a8efcac2eadbab89af894d0ad01"
+      "bytes": 2998579,
+      "sha256": "77afe08cbe67a8ac769af45d135a7963077c19c925db922f2b2e79cb3b4f84ed"
     },
     "shopping-copilot-demo-v3-poster.jpg": {
-      "bytes": 215739,
-      "sha256": "cb4018a7dddf134ce4161b9ecc7435f22328e440749ec45faa13035e9700da60"
+      "bytes": 176140,
+      "sha256": "56fca6ddec7fab84b81e169a4f76a0a9c1d18fa953ec5359ff7045eb23ed084d"
     },
     "shopping-copilot-demo-v3.en.srt": {
-      "bytes": 3455,
-      "sha256": "ead21dd3dea5b3286376c094387fee676daa1e8c071abee25a804c738f2822b7"
+      "bytes": 3473,
+      "sha256": "dd3444248817626a169f7d397c1ebe1b9b68021d9581053d1356bb32fd8d8682"
     },
     "shopping-copilot-demo-v3.zh-CN.srt": {
-      "bytes": 3270,
-      "sha256": "0309871e1aeb82d92824dfdbd607d2c14bfe706474b0f1794bed577ac2f663ae"
+      "bytes": 3337,
+      "sha256": "4862bc22d3e732ebb87fc90e1ac5c96db895be1f424889cccc5c15f646d9f2b4"
     },
     "shopping-copilot-demo-v3.en.vtt": {
-      "bytes": 3364,
-      "sha256": "1e667c5bf35293805a7b3c363e79db35f9bc321a28d51e2c79cf2b210a6d7f7e"
+      "bytes": 3382,
+      "sha256": "10497af1ddd4340f4601c3e6c644a7bb8fd712174399323b5ea129c42e7fccbe"
     },
     "shopping-copilot-demo-v3.zh-CN.vtt": {
-      "bytes": 3179,
-      "sha256": "34ca6d46e59ce799af03bea20c52d607e43a8cc1978ea27ff434c986c39c2cea"
+      "bytes": 3246,
+      "sha256": "1cd2a8c247fac95cb0b57e9f18739bcca8bc5281321538c2ea7612bf4441d269"
     }
   }
 }
