@@ -9,7 +9,7 @@
 if (window.location.protocol === 'file:') {
   const directParams = new URLSearchParams(window.location.search);
   if (!directParams.has('lang')) {
-    directParams.set('lang', String(window.navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en');
+    directParams.set('lang', 'en');
   }
   const directQuery = directParams.toString();
   window.location.replace('https://shopping-copilot-techjam.pages.dev/' + (directQuery ? '?' + directQuery : ''));

@@ -150,9 +150,11 @@ class TourDeliveryMarkupTests(unittest.TestCase):
         self.assertIn('id="languageToggle"', self.html)
         self.assertIn('src="/i18n.js"', self.html)
         self.assertIn("ShoppingCopilotI18n", i18n)
-        self.assertIn("shopping-copilot-language", i18n)
         self.assertIn("URLSearchParams", i18n)
         self.assertIn("MutationObserver", i18n)
+        self.assertIn("return 'en';", i18n)
+        self.assertNotIn("window.localStorage.getItem", i18n)
+        self.assertNotIn("window.navigator.language", i18n)
         for translated_label in [
             "结果", "数据合同", "场景回放", "机制检查", "评测证据",
             "透明广告", "交付物与局限", "提示词演化实验室",

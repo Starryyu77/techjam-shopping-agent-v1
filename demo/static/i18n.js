@@ -8,7 +8,6 @@
 'use strict';
 
 (function createShoppingCopilotI18n() {
-  const STORAGE_KEY = 'shopping-copilot-language';
   const supported = new Set(['en', 'zh']);
   const textSource = new WeakMap();
   const attributeSource = new WeakMap();
@@ -701,7 +700,6 @@
       refreshToggle();
     });
     if (options.persist !== false) {
-      window.localStorage.setItem(STORAGE_KEY, currentLanguage);
       updateUrl(currentLanguage);
     }
     document.dispatchEvent(new CustomEvent('shoppingcopilot:languagechange', {
@@ -712,9 +710,7 @@
   function detectLanguage() {
     const query = new URLSearchParams(window.location.search).get('lang');
     if (supported.has(query)) return query;
-    const saved = window.localStorage.getItem(STORAGE_KEY);
-    if (supported.has(saved)) return saved;
-    return String(window.navigator.language || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+    return 'en';
   }
 
   function boot() {

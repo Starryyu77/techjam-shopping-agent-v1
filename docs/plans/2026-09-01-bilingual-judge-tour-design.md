@@ -16,11 +16,11 @@ the Tour or mixing localization logic into the evidence renderer.
 Language resolution order:
 
 1. explicit `?lang=zh` or `?lang=en`;
-2. saved `shopping-copilot-language` preference;
-3. browser language (`zh*` selects Chinese, otherwise English).
+2. English for a naked URL with no language parameter.
 
-Changing language updates `<html lang>`, the page title, local storage, and the
-shareable URL without reloading or resetting the current Tour step.
+Changing language updates `<html lang>`, the page title, and the shareable URL
+without reloading or resetting the current Tour step. The language is visible in
+the URL rather than hidden in browser storage.
 
 ## Evidence boundary
 
