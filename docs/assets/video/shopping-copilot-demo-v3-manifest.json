@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-09-01T02:35:08.008Z",
+  "generatedAt": "2026-09-01T03:25:59.472Z",
   "packageOnly": true,
-  "sourceComposition": "ShoppingCopilotFilmV3",
+  "sourceComposition": "ShoppingCopilotPurposefulV4",
   "files": {
     "shopping-copilot-demo-v3.mp4": {
-      "bytes": 34415716,
-      "sha256": "a723e6a7ae454548aa233cedb8a9fda2cb02af2d79fa5d7a8172fd03196d912f",
+      "bytes": 11374482,
+      "sha256": "4cf646e7bb30d5611a3d8f1555bcedb634b6c227b536c9a44d892258233c27ac",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -29,13 +29,13 @@
         ],
         "format": {
           "duration": "180.000000",
-          "size": "34415716"
+          "size": "11374482"
         }
       }
     },
     "shopping-copilot-demo-v3-web.mp4": {
-      "bytes": 11466888,
-      "sha256": "8344cb7bb9c79e873e550b61065eaa48c8e9e951e192c681c791026bbf674677",
+      "bytes": 6470654,
+      "sha256": "e48fac83b78e631345c41be93f40a430f697a4617df81f94bae235bdb62fc2f3",
       "probe": {
         "programs": [],
         "stream_groups": [],
@@ -59,17 +59,17 @@
         ],
         "format": {
           "duration": "180.014000",
-          "size": "11466888"
+          "size": "6470654"
         }
       }
     },
     "shopping-copilot-demo-v3-preview.gif": {
-      "bytes": 2998579,
-      "sha256": "77afe08cbe67a8ac769af45d135a7963077c19c925db922f2b2e79cb3b4f84ed"
+      "bytes": 736646,
+      "sha256": "b6b66129200704b21de164ede4e738fd97dc267293e909b435a158b68063a5ce"
     },
     "shopping-copilot-demo-v3-poster.jpg": {
-      "bytes": 176140,
-      "sha256": "56fca6ddec7fab84b81e169a4f76a0a9c1d18fa953ec5359ff7045eb23ed084d"
+      "bytes": 121770,
+      "sha256": "1c2b3b6cbba5fcbc4186e002408712612b8a903f30625f9c87e4cff1c7093667"
     },
     "shopping-copilot-demo-v3.en.srt": {
       "bytes": 3473,

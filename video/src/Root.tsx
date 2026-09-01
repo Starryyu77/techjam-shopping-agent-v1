@@ -10,6 +10,7 @@ import {
 } from './v3/StylePreview';
 import {ShoppingCopilotFilmV3} from './v3/ShoppingCopilotFilmV3';
 import {V3_DURATION_FRAMES, V3_FPS} from './v3/storyboard-v3.mjs';
+import {PurposefulFilm, PurposefulMotionPreview} from './v4/PurposefulMotionPreview';
 
 export const RemotionRoot: React.FC = () => {
   return (
@@ -75,6 +76,22 @@ export const RemotionRoot: React.FC = () => {
         component={ShoppingCopilotFilmV3}
         durationInFrames={V3_DURATION_FRAMES}
         fps={V3_FPS}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="PurposefulMotionPreview"
+        component={PurposefulMotionPreview}
+        durationInFrames={900}
+        fps={30}
+        width={1920}
+        height={1080}
+      />
+      <Composition
+        id="ShoppingCopilotPurposefulV4"
+        component={PurposefulFilm}
+        durationInFrames={5400}
+        fps={30}
         width={1920}
         height={1080}
       />

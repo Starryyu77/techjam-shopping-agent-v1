@@ -10,6 +10,7 @@ const outputRoot = path.join(videoRoot, 'out');
 const publicRoot = path.join(videoRoot, 'public', 'v3');
 const releaseRoot = path.join(repoRoot, 'docs', 'assets', 'video');
 const packageOnly = process.argv.includes('--package-only');
+const sourceComposition = process.env.SOURCE_COMPOSITION || 'ShoppingCopilotFilmV3';
 
 const run = (command, args, cwd = videoRoot) => {
   const result = spawnSync(command, args, {cwd, encoding: 'utf8', stdio: 'inherit'});
@@ -42,7 +43,7 @@ if (!packageOnly) {
   run('node', ['scripts/export-v3-assets.mjs']);
   run(path.join(videoRoot, '.venv', 'bin', 'python'), ['scripts/generate-voice-v3.py']);
   run('python3', ['scripts/generate-music-v3.py']);
-  run('npx', ['remotion', 'render', 'src/index.ts', 'ShoppingCopilotFilmV3', 'out/shopping-copilot-v3-master.mp4', '--codec=h264', '--crf=18', '--audio-codec=aac']);
+  run('npx', ['remotion', 'render', 'src/index.ts', sourceComposition, 'out/shopping-copilot-v3-master.mp4', '--codec=h264', '--crf=18', '--audio-codec=aac']);
   run('ffmpeg', [
     '-y', '-hide_banner', '-loglevel', 'error', '-i', 'out/shopping-copilot-v3-master.mp4', '-t', '180',
     '-map', '0:v:0', '-map', '0:a:0', '-vf', 'format=yuv420p', '-c:v', 'libx264', '-preset', 'slow', '-crf', '20',
@@ -105,7 +106,7 @@ if (files['shopping-copilot-demo-v3-web.mp4'].bytes >= 25 * 1024 * 1024) {
 const manifest = {
   generatedAt: new Date().toISOString(),
   packageOnly,
-  sourceComposition: 'ShoppingCopilotFilmV3',
+  sourceComposition,
   files,
 };
 const manifestText = `${JSON.stringify(manifest, null, 2)}\n`;
