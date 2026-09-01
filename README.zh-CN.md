@@ -228,7 +228,7 @@ python tools/chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**98 项测试全部通过**。
+当前预期结果：**99 项测试全部通过**。
 
 ## Evidence 复现
 

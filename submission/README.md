@@ -75,7 +75,7 @@ results for the submitted rules path are deterministic across repeated public-se
 
 ```bash
 python -m py_compile shopping_copilot/shopping_agent.py tools/chat.py tools/prompt_lab.py shopping_copilot/official_agent.py
-python -m unittest discover -s tests -v   # 98 current tests
+python -m unittest discover -s tests -v   # 99 current tests
 ```
 
 ## What is inside
