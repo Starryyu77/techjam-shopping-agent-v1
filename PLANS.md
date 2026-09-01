@@ -1,4 +1,4 @@
-# V1 状态
+# V1.3 交付状态
 
 - [x] 规则意图弱基线
 - [x] 多轮购物状态
@@ -16,7 +16,10 @@
 - [x] V1.2 保留官方完整细品类作为检索证据（Hit Rate@10 0.970）
 - [x] V1.3 分带人气 tiebreaker（Hit Rate@10 0.995 / TechnicalScore 0.866507）
 - [x] Judge-facing Guided Evidence Tour 与 200 个冻结 public traces
-- [x] 78 项单元、集成、evidence 与文档一致性测试
 - [x] Cloudflare Pages 与 GitHub Pages 公网部署
-- [ ] 提示词训练或自动迭代（按用户要求暂不执行）
+- [x] 方案 B Codex-guided 提示词演化，v002 通过严格 dev 与 opaque validation 门禁
+- [x] 中英文即时切换的 Editorial Social Commerce Judge Tour
+- [x] 三分钟 V3 演示影片、双语字幕、原创配乐与仓库发布资产
+- [x] 94 项单元、集成、evidence、脚本与文档一致性测试
 - [ ] 冻结后运行一次 held-out test
+- [ ] 补充最终公开 YouTube 与 Devpost 提交链接

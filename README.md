@@ -18,6 +18,28 @@ rules. It needs no network, API key, paid model, or GPU.
   </a>
 </p>
 
+## Start here
+
+| If you are… | Start with | What you will get |
+| --- | --- | --- |
+| A judge | [3-minute Evidence Tour](https://shopping-copilot-techjam.pages.dev/) | Results → data contract → replay → mechanism → evaluation → ads → boundaries |
+| Reviewing the product story | [V3 demo film](docs/assets/video/shopping-copilot-demo-v3.mp4) | A deterministic, bilingual, three-minute walkthrough |
+| Reproducing the score | [Quick start](#quick-start) | The exact rules-only evaluator command and expected metrics |
+| Inspecting implementation | [How every stage works](#how-every-stage-works) | Inputs, decisions, outputs, evidence, and source files for each stage |
+| Working with scripts | [Script guide](scripts/README.md) | Supported release commands separated from research diagnostics |
+| Auditing claims | [Claim and data boundaries](#claim-and-data-boundaries) | Public evidence, synthetic experiments, held-out, and private-set limits |
+
+## Three separate execution paths
+
+| Path | Entry point | Purpose | Part of the official score? |
+| --- | --- | --- | --- |
+| **Submitted Agent** | `submission/agent.py` | Rules, state, FTS5 recall, reranking, Top-10 output | **Yes** |
+| **Judge Evidence Tour** | `demo/static/` + `demo/evidence/` | Deterministic replay of frozen official-public traces | No |
+| **Optional development layers** | `/sandbox`, Scheme B Qwen, cross-encoder, ad auction | Product experiments and technical transparency | No |
+
+The boundaries are physical, not just copy: the official evaluator never calls
+the website, the ad auction, the video, or the optional Qwen layer.
+
 ## 3-minute V3 demo film
 
 [![Shopping Copilot V3 — editorial social-commerce film with bilingual subtitles](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
@@ -40,6 +62,30 @@ development sessions:
 
 That is about **8.1× the starter TechnicalScore**. These are public-set results,
 not evidence about the organizer's 800 private sessions.
+
+## How every stage works
+
+| Stage | Input | What happens | Output / evidence | Main implementation |
+| --- | --- | --- | --- | --- |
+| **1. Contract** | Official catalog, session profile, user message, turn, `top_k` | Validate the evaluator contract and keep the catalog read-only | Contract-safe response fields; zero token usage on rules path | `submission/agent.py`, `official_agent.py` |
+| **2. Intent routing** | Latest message + pending question | Classify Buying vs Browsing and dialogue act; Scheme B v002 is optional and localhost-only | `domain_intent`, `dialogue_act`, confidence, normalized clauses | `RuleIntentParser`, optional `prompts/system_prompt_v002.md` |
+| **3. Versioned state** | Parsed clauses + previous state | Add, retain, negate, reject, or erase-and-rewrite superseded preferences | Inspectable hard/soft/negative state diff | `ShoppingState.apply` in `shopping_agent.py` |
+| **4. Recall** | Category, constraints, retrieval evidence, safe profile tags | SQLite FTS5 builds a broad lexical candidate pool and removes rejected/negative matches | Up to 50 policy candidates; public target recall 200/200 | `CatalogSearch.search` |
+| **5. Reranking** | Recalled candidates + state | Reward exact category/constraint matches, penalize hard misses, then use popularity only inside near-tie bands | Deterministic ordered Top-10 `parent_asin` list | Rule scorer + banded tiebreaker |
+| **6. Ask or recommend** | Current policy candidate pool | Coverage × entropy chooses one useful attribute only when information gain is high enough | `ask_attribute` or a focused recommendation response | `CandidateQuestionPolicy.choose` |
+| **7. Evidence delivery** | Frozen official-public run artifacts | Validate IDs, metrics, hashes, case freeze, and organic-order invariants | 200 trace JSON files, bilingual Tour, report, video, reproducible static bundle | `scripts/build_demo_evidence.py`, `scripts/build_static_site.py` |
+
+```mermaid
+flowchart LR
+    U[User message] --> I{Intent route}
+    I --> S[Versioned state]
+    S --> F[SQLite FTS5 recall]
+    F --> R[Transparent rule rerank]
+    R --> Q{Ask or recommend?}
+    Q -->|Ask| U
+    Q -->|Recommend| T[Top-10 parent_asin]
+    T --> E[Frozen evidence + official evaluator]
+```
 
 ## See it in action
 
@@ -197,7 +243,7 @@ Open `http://127.0.0.1:8000`.
 python -m unittest discover -s tests -v
 ```
 
-Current expected result: **90 tests pass**.
+Current expected result: **94 tests pass**.
 
 ## Evidence reproduction
 
@@ -211,6 +257,25 @@ python scripts/build_demo_evidence.py \
 
 The builder fails closed on metric drift, invalid or duplicate ASINs, trace/report
 mismatches, missing hashes, non-public cases, or an unfrozen canonical-case set.
+
+## Script guide
+
+Use [`scripts/README.md`](scripts/README.md) as the canonical script index. It
+separates stable delivery commands from diagnostic snapshots and records runtime
+or dependency expectations for every top-level script.
+
+| Task | Command |
+| --- | --- |
+| Evaluate the development repository | `python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
+| Evaluate the exact `submission/` package | `python scripts/run_submission_eval.py --official-root ../techjam-conversational-search --output reports/submission_public_rules.json` |
+| Rebuild all website evidence | `python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search` |
+| Build the static deployment bundle | `python scripts/build_static_site.py` |
+| Run repository contracts | `python -m unittest discover -s tests -v` |
+| Inspect a command | `python <entrypoint> --help` |
+
+The remaining `scripts/` files are ranked as recall/ranking diagnostics,
+parameter sweeps, synthetic stress tests, or Windows Qwen utilities. They remain
+in place for provenance, but are not presented as the normal release path.
 
 ## Architecture
 
@@ -257,6 +322,7 @@ flowchart LR
 | `demo/canonical_cases.json` | Source-controlled canonical-case freeze |
 | `scripts/build_demo_evidence.py` | Evidence regeneration and validation |
 | `scripts/build_static_site.py` | Portable static deployment bundle |
+| `scripts/README.md` | Canonical script catalog, supported workflows, dependencies, and boundaries |
 | `reports/` | Reproducible experiment and evaluator outputs |
 | `reports/scheme_b_prompt_evolution_verified.json` | Recomputed Scheme B metrics, gates, hashes, and claim boundary |
 | `reranker.py` | Optional cross-encoder experiment, OFF by default |
@@ -283,6 +349,7 @@ flowchart LR
 | [Demo walkthrough](demo/WALKTHROUGH.md) | Tour operation and evidence stations |
 | [Video script](demo/VIDEO_SCRIPT.md) | Three-minute recording plan |
 | [Submission package](submission/README.md) | Minimal evaluator-facing package |
+| [Script guide](scripts/README.md) | Supported release commands, diagnostics, dependencies, and operational boundaries |
 | [Development plan](PLANS.md) | Completed milestones and intentionally deferred work |
 | [Prompt iteration loop](docs/loop.md) | Leakage-safe prompt acceptance process |
 | [Engineering lessons](docs/loop-lessons.md) | Failure patterns and fixes |
@@ -293,7 +360,7 @@ flowchart LR
 - **Live Tour:** https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages fallback:** https://starryyu77.github.io/techjam-shopping-agent-v1/
 - **Source repository:** https://github.com/Starryyu77/techjam-shopping-agent-v1
-- **Demo video:** pending final recording and public YouTube upload
+- **Demo video:** V3 film is published in this repository; the public YouTube submission URL remains pending
 
 ## License and upstream data
 

@@ -16,6 +16,28 @@
   </a>
 </p>
 
+## 从这里开始
+
+| 你的角色 | 建议入口 | 可以看到什么 |
+| --- | --- | --- |
+| 评委 | [三分钟证据导览](https://shopping-copilot-techjam.pages.dev/?lang=zh) | 结果 → 数据合同 → 回放 → 机制 → 评测 → 广告 → 边界 |
+| 查看产品叙事 | [V3 演示影片](docs/assets/video/shopping-copilot-demo-v3.mp4) | 一条确定性、双语、三分钟的完整故事 |
+| 复现比赛分数 | [快速开始](#快速开始) | 正式 rules-only 评测命令和预期指标 |
+| 检查实现 | [每个环节如何工作](#每个环节如何工作) | 每一步的输入、决策、输出、证据和源码 |
+| 使用脚本 | [脚本指南](scripts/README.md) | 稳定发布命令与研究诊断脚本的明确分层 |
+| 审核声明 | [声明与数据边界](#声明与数据边界) | 公开证据、合成实验、held-out 与 private 边界 |
+
+## 三条物理隔离的执行路径
+
+| 路径 | 入口 | 用途 | 是否参与官方计分 |
+| --- | --- | --- | --- |
+| **正式提交 Agent** | `submission/agent.py` | 规则、状态、FTS5 召回、重排与 Top-10 | **是** |
+| **评委证据 Tour** | `demo/static/` + `demo/evidence/` | 确定性回放冻结的官方公开集轨迹 | 否 |
+| **可选开发层** | `/sandbox`、方案 B Qwen、cross-encoder、广告竞价 | 产品实验与技术透明度展示 | 否 |
+
+这些不是文字上的声明，而是代码路径的物理隔离：官方 evaluator 不会调用网站、
+广告竞价、视频或可选 Qwen 层。
+
 ## 3 分钟 V3 演示视频
 
 [![Shopping Copilot V3：亮色编辑社交电商风格，中英双语字幕](docs/assets/video/shopping-copilot-demo-v3-preview.gif)](docs/assets/video/shopping-copilot-demo-v3.mp4)
@@ -36,6 +58,30 @@
 | **Rules V1.3，提交路径** | **0.995** | **0.644355** | **2.215** | **0.8785** | **0.866507** |
 
 TechnicalScore 约为 starter 的 **8.1 倍**。这些只是公开集结果，不能代表主办方保留的 800 个 private sessions。
+
+## 每个环节如何工作
+
+| 环节 | 输入 | 系统动作 | 输出 / 证据 | 主要实现 |
+| --- | --- | --- | --- | --- |
+| **1. 合同** | 官方目录、会话画像、用户消息、轮次、`top_k` | 校验 evaluator 合同并保持目录只读 | 合同安全的响应字段；rules 路径 token 为 0 | `submission/agent.py`、`official_agent.py` |
+| **2. 意图分流** | 最新消息 + 待回答问题 | 判断 Buying / Browsing 和 dialogue act；方案 B v002 仅为 localhost 可选层 | `domain_intent`、`dialogue_act`、置信度与规范化子句 | `RuleIntentParser`、可选 `prompts/system_prompt_v002.md` |
+| **3. 版本化状态** | 解析子句 + 上一轮状态 | 新增、保留、否定、拒绝，或删除并重写被替代偏好 | 可检查的 hard / soft / negative 状态差异 | `shopping_agent.py` 中的 `ShoppingState.apply` |
+| **4. 召回** | 品类、约束、检索证据、安全画像标签 | SQLite FTS5 构建广泛词法候选池，并排除拒绝/负向商品 | 最多 50 个策略候选；公开目标召回 200/200 | `CatalogSearch.search` |
+| **5. 重排** | 召回候选 + 对话状态 | 奖励品类/约束精确匹配、惩罚硬约束缺失，仅在近似同分区间使用人气 | 确定性 Top-10 `parent_asin` 列表 | 规则打分器 + 分带 tiebreaker |
+| **6. 追问或推荐** | 当前策略候选池 | 用覆盖度 × 信息熵选择一条真正有区分度的问题 | `ask_attribute` 或聚焦后的推荐回复 | `CandidateQuestionPolicy.choose` |
+| **7. 证据交付** | 冻结的官方公开集运行产物 | 校验 ID、指标、哈希、案例冻结与 organic 顺序不变量 | 200 份 trace JSON、双语 Tour、报告、视频与静态包 | `scripts/build_demo_evidence.py`、`scripts/build_static_site.py` |
+
+```mermaid
+flowchart LR
+    U[用户消息] --> I{意图分流}
+    I --> S[版本化状态]
+    S --> F[SQLite FTS5 召回]
+    F --> R[透明规则重排]
+    R --> Q{追问还是推荐?}
+    Q -->|追问| U
+    Q -->|推荐| T[Top-10 parent_asin]
+    T --> E[冻结证据 + 官方评测器]
+```
 
 ## 实际页面
 
@@ -181,7 +227,7 @@ python chat.py --intent-backend rules
 python -m unittest discover -s tests -v
 ```
 
-当前预期结果：**90 项测试全部通过**。
+当前预期结果：**94 项测试全部通过**。
 
 ## Evidence 复现
 
@@ -193,6 +239,23 @@ python scripts/build_demo_evidence.py \
 ```
 
 遇到指标漂移、非法或重复 ASIN、trace 与报告不一致、缺少 hash、非公开案例或 canonical cases 未冻结时，构建脚本会 fail closed。
+
+## 脚本指南
+
+[`scripts/README.md`](scripts/README.md) 是脚本的唯一索引：它区分稳定交付命令与
+诊断快照，并记录每个顶层脚本的运行条件、依赖和证据边界。
+
+| 任务 | 命令 |
+| --- | --- |
+| 评测完整开发仓库 | `python evaluate_official.py --official-root ../techjam-conversational-search --intent-backend rules --output reports/official_public_rules.json` |
+| 评测最小 `submission/` 包 | `python scripts/run_submission_eval.py --official-root ../techjam-conversational-search --output reports/submission_public_rules.json` |
+| 重建全部网站证据 | `python scripts/build_demo_evidence.py --official-root ../techjam-conversational-search` |
+| 构建静态部署包 | `python scripts/build_static_site.py` |
+| 运行仓库合同测试 | `python -m unittest discover -s tests -v` |
+| 查看命令帮助 | `python <entrypoint> --help` |
+
+其余 `scripts/` 文件被明确标记为召回/排序诊断、参数扫描、合成压力测试或 Windows
+Qwen 运维工具。它们为了实验溯源保留原位置，但不属于正常发布路径。
 
 ## 架构
 
@@ -238,8 +301,9 @@ flowchart LR
 | `demo/canonical_cases.json` | 纳入版本控制的 canonical case freeze |
 | `scripts/build_demo_evidence.py` | Evidence 重建与一致性验证 |
 | `scripts/build_static_site.py` | 可移植静态部署构建 |
+| `scripts/README.md` | 脚本总索引、推荐流程、依赖与证据边界 |
 | `reports/` | 可复现实验与评测结果 |
-| `exp_selfevolve/` | 提示词自迭代闭环、golden cases 与六轮冻结记录 |
+| `reports/scheme_b_prompt_evolution_verified.json` | 重新计算的方案 B 指标、门禁、哈希与声明边界 |
 | `reranker.py` | 默认关闭的 cross-encoder 实验 |
 
 ## 声明与数据边界
@@ -262,17 +326,18 @@ flowchart LR
 | [Demo 操作说明](demo/WALKTHROUGH.md) | Tour 流程和证据站点 |
 | [视频脚本](demo/VIDEO_SCRIPT.md) | 三分钟录制方案 |
 | [提交包说明](submission/README.md) | 最小 evaluator-facing 包 |
+| [脚本指南](scripts/README.md) | 稳定发布命令、诊断脚本、依赖与运行边界 |
 | [开发计划](PLANS.md) | 已完成里程碑和明确暂缓事项 |
 | [提示词迭代闭环](docs/loop.md) | 防泄漏的提示词验收流程 |
 | [工程经验](docs/loop-lessons.md) | 失败模式与修复记录 |
-| [意图提示词 v001](prompts/system_prompt_v001.md) | 可选本地模型解析契约 |
+| [当前意图提示词 v002](prompts/system_prompt_v002.md) | 通过 dev 与一次 opaque validation 门禁的方案 B 提示词 |
 
 ## 部署与链接
 
 - **在线 Tour：**https://shopping-copilot-techjam.pages.dev/
 - **GitHub Pages 回退：**https://starryyu77.github.io/techjam-shopping-agent-v1/
 - **公开源码仓库：**https://github.com/Starryyu77/techjam-shopping-agent-v1
-- **Demo 视频：**等待最终录制并上传公开 YouTube
+- **Demo 视频：**V3 影片已发布在仓库中；公开 YouTube 提交链接仍待补充
 
 ## License 与上游数据
 

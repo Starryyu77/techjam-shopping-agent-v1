@@ -65,7 +65,20 @@
 
 Canonical public cases 由 `demo/canonical_cases.json` 冻结；页面指标和 trace 由 `scripts/build_demo_evidence.py` 验证生成。
 
-## 5. Demo-only 广告扩展
+Mechanism 页面可在正式 rules pipeline 与 Prompt Evolution Lab 之间切换。Prompt Lab
+展示方案 B v001 → v002 的 9 项受保护指标、严格 dev 门禁、opaque validation、
+9 组行为合同差异和 held-out 未运行边界；它不改变正式比赛分数。
+
+## 5. 方案 B 提示词演化
+
+- Codex 只读取清洗后的 dev 失败模式并编写候选提示词。
+- Qwen3-8B 只作为 target，不负责优化或自我评分。
+- 候选必须提高 composite，且任何受保护指标都不能退化。
+- 只有通过 dev 才读取一次 validation；validation 只暴露接受/拒绝并立即终止。
+- v002 composite 从 0.6137 提升到 0.7191；JSON compliance 保持 1.0。
+- held-out 标签未打包、未运行；原 Qwen 服务不在复核主机，因此网站声明为 artifact-recomputed。
+
+## 6. Demo-only 广告扩展
 
 - eCPM = bid × BM25 relevance。
 - 相关性低于门槛时不展示。
@@ -75,24 +88,24 @@ Canonical public cases 由 `demo/canonical_cases.json` 冻结；页面指标和 
 
 广告出价、库存和预算均为模拟数据，官方 evaluator 不会调用这条路径。
 
-## 6. 自由输入的边界
+## 7. 自由输入的边界
 
 `/sandbox` 仅用于本地探索，不是公网主入口，不是官方 score evidence，也不进入主视频。
 
 可选 localhost Qwen3-8B 只用于意图或导购话术实验；失败时回退规则模板。正式提交路径完全不加载它。
 
-## 7. 真实、模拟与未知
+## 8. 真实、模拟与未知
 
 - **真实且已验证：**正式 Agent、官方 public-set 指标、200 个 public traces、catalog-valid Top-10。
 - **真实工程机制但仅用于 Demo：**BM25 广告相关性与 sponsored injection invariant。
 - **模拟：**广告主、出价、预算和广告库存。
 - **未知：**主办方 private 800-session 结果。
 
-## 8. 产品验收标准
+## 9. 产品验收标准
 
 - 首次进入不要求输入，一次点击开始 Tour。
 - Competition Evidence 与 Demo Only 视觉分层。
 - 指标只能从 evidence JSON 读取。
 - 所有 ASIN 必须来自冻结 catalog。
 - 公开网站不依赖本地模型、API Key 或 Python API。
-- `python -m unittest discover -s tests -v` 当前应通过 78 项测试。
+- `python -m unittest discover -s tests -v` 当前应通过 94 项测试。

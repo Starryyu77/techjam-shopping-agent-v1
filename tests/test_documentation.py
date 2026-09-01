@@ -26,6 +26,15 @@ class PublicDocumentationTests(unittest.TestCase):
         self.assertIn(url, self.readme_en)
         self.assertIn(url, self.readme_zh)
 
+    def test_readmes_explain_the_complete_system_and_script_entrypoints(self):
+        self.assertIn("How every stage works", self.readme_en)
+        self.assertIn("每个环节如何工作", self.readme_zh)
+        for text in [self.readme_en, self.readme_zh]:
+            self.assertIn("scripts/README.md", text)
+            self.assertIn("run_submission_eval.py", text)
+            self.assertIn("build_demo_evidence.py", text)
+            self.assertIn("build_static_site.py", text)
+
     def test_v3_demo_video_is_linked_and_assets_exist(self):
         assets = [
             "shopping-copilot-demo-v3.mp4",
@@ -60,7 +69,7 @@ class PublicDocumentationTests(unittest.TestCase):
     def test_current_test_count_is_not_stale(self):
         for relative in ["README.md", "README.zh-CN.md", "REPORT.md", "submission/README.md"]:
             text = (ROOT / relative).read_text(encoding="utf-8")
-            self.assertIn("90", text, relative)
+            self.assertIn("94", text, relative)
             self.assertNotIn("64 current", text, relative)
             self.assertNotIn("13 个最小测试", text, relative)
 
